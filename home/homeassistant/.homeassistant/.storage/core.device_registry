@@ -1,0 +1,25 @@
+{
+    "data": {
+        "devices": [
+            {
+                "config_entries": [
+                    "47d4b049b619498cbd3ba92d2f391091"
+                ],
+                "connections": [],
+                "id": "ab6c1b5b20f44f07bc0ca4d9e4406caf",
+                "identifiers": [
+                    [
+                        "cast",
+                        "3e58b8fb0db24fc90003c8777daa9bba"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast Ultra",
+                "name": "Salon",
+                "sw_version": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}
