@@ -69,8 +69,6 @@
           - wed
           - thu
           - fri
-          - sat
-          - sun
     action:
       - service: mqtt.publish
         data:
