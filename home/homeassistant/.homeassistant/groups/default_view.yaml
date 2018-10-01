@@ -1,7 +1,8 @@
 view: yes
 icon: mdi:home
 entities:
- - group.indoor_weather
- - binary_sensor.0x00158d00020b7b77
- - binary_sensor.0x00158d0001e0a7d3_occupancy
- - sensor.0x00158d0001e0a7d3_illuminance
+  - group.indoor_weather
+  - group.outdoor_weather
+  - binary_sensor.0x00158d00020b7b77
+  - binary_sensor.0x00158d0001e0a7d3_occupancy
+  - sensor.0x00158d0001e0a7d3_illuminance

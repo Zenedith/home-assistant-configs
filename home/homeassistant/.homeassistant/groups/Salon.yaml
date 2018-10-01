@@ -6,3 +6,4 @@ entities:
   - switch.kamera
   - switch.listwa_rtv
   - vacuum.zmietekv2
+  - group.dafang

@@ -10,7 +10,5 @@ group.sypialnia:
   order: 5
 group.other:
   order: 6
-group.weather:
-  order: 7
 group.automation:
-  order: 8
+  order: 7
