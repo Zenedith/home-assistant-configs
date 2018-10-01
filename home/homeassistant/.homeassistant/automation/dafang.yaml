@@ -1,5 +1,4 @@
-- id: dafang-motion-detected
-  alias: 'Motion detected'
+- alias: 'dafang motion detected'
   trigger:
     payload: 'ON'
     platform: mqtt

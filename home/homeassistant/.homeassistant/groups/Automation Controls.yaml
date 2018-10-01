@@ -1,0 +1,3 @@
+control: hidden
+entities:
+  - automation.power_state_on_ha_startup

@@ -1,5 +1,4 @@
-- id: lampka-jan-on
-  alias: "Lampka Jan on"
+- alias: "Lampka Jan on"
   trigger:
     platform: time
     at: '17:32:00'
@@ -8,8 +7,7 @@
       data:
         topic: "zigbee2mqtt/sonoff1/cmnd/POWER"
         payload: "ON"
-- id: lampka-jan-off
-  alias: "Lampka Jan off"
+- alias: "Lampka Jan off"
   trigger:
     platform: time
     at: '07:00:00'

@@ -1,5 +1,4 @@
-- id: listwa-rtv-off
-  alias: "Listwa RTV off"
+- alias: "Listwa RTV off"
   trigger:
     platform: time
     at: '02:00:00'
@@ -9,8 +8,7 @@
         topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
         payload: "OFF"
 
-- id: listwa-rtv-weekend-on
-  alias: "Listwa RTV (weekend) on"
+- alias: "Listwa RTV (weekend) on"
   trigger:
     platform: time
     at: '07:32:00'
@@ -35,8 +33,7 @@
 #      data:
 #        entity_id: light.yeelight_strip_7811dcda6e9e
 
-- id: ambient-tv-off
-  alias: "Ambinet tv off"
+- alias: "Ambinet tv off"
   trigger:
     platform: time
     at: '07:00:00'
@@ -46,8 +43,7 @@
       entity_id: light.yeelight_strip_7811dcda6e9e
       payload: ""
 
-- id: zmietek-start
-  alias: "Zmietek start"
+- alias: "Zmietek start"
   trigger:
     platform: time
     at: '11:00:00'
