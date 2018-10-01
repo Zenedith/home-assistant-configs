@@ -81,10 +81,8 @@ sun:
 # Cloud
 #cloud:
 
-#group: !include groups.yaml
+camera: !include cameras/dafang.yaml
 group: !include_dir_named groups
-#automation: !include automations.yaml
-#automation: !include automation/ha-start.yaml
 automation: !include_dir_merge_list automation
 script: !include scripts.yaml
 sensor: !include_dir_merge_list sensors
