@@ -1,0 +1,8 @@
+view: yes
+entities:
+  - binary_sensor.0x00158d000205b35f
+  - light.yeelight_strip_7811dcda6e9e
+  - media_player.salon
+  - switch.kamera
+  - switch.listwa_rtv
+  - vacuum.zmietekv2

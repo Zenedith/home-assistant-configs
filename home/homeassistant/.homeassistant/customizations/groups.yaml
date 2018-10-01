@@ -1,14 +1,16 @@
 group.default_view:
   order: 1
-group.kuchnia:
+group.salon:
   order: 2
-group.pokoj_janka:
+group.kuchnia:
   order: 3
-group.sypialnia:
+group.pokoj_janka:
   order: 4
-group.other:
+group.sypialnia:
   order: 5
-group.weather:
+group.other:
   order: 6
-group.automation:
+group.weather:
   order: 7
+group.automation:
+  order: 8
