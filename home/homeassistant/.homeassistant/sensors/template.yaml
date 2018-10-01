@@ -1,15 +1,15 @@
 - platform: template
   sensors:
     pokojjanka_motion_batt:
-      value_template: '{{ states.binary_sensor.0x00158d0001e5d112_illuminance.attributes.battery }}'
+      value_template: '{{ states.binary_sensor.0x00158d0001e5d112_illuminance.battery }}'
       friendly_name: 'Ruch (Pok\u00f3j Janka)'
       unit_of_measurement: '%'
     korytarz_motion_batt:
-      value_template: '{{ states.binary_sensor.0x00158d0001e0a7d3_illuminance.attributes.battery }}'
+      value_template: '{{ states.binary_sensor.0x00158d0001e0a7d3_illuminance.battery }}'
       friendly_name: 'Ruch (korytarz)'
       unit_of_measurement: '%'
     korytarz_humidity_batt:
-      value_template: '{{ states.sensor.0x00158d00022cc215_humidity.attributes.battery }}'
+      value_template: '{{ states.sensor.0x00158d00022cc215_humidity.battery }}'
       friendly_name: Wilgotnosc
       unit_of_measurement: '%'
 #    drzwi_wejsciowe_batt:
