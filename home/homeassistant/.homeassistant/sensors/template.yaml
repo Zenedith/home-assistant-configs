@@ -1,11 +1,11 @@
 - platform: template
   sensors:
     pokojjanka_motion_batt:
-      value_template: '{{ states.binary_sensor.0x00158d0001e5d112_illuminance.attributes.battery_level }}'
+      value_template: '{{ states.binary_sensor.0x00158d0001e5d112_illuminance.attributes.battery }}'
       friendly_name: 'Ruch (Pok\u00f3j Janka)'
       unit_of_measurement: '%'
     korytarz_motion_batt:
-      value_template: '{{ states.binary_sensor.0x00158d0001e0a7d3_illuminance.attributes.battery_level }}'
+      value_template: '{{ states.binary_sensor.0x00158d0001e0a7d3_illuminance.attributes.battery }}'
       friendly_name: 'Ruch (korytarz)'
       unit_of_measurement: '%'
     korytarz_humidity_batt:
