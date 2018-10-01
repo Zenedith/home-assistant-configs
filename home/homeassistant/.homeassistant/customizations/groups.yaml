@@ -1,0 +1,10 @@
+group.default_view:
+  order: 1
+group.kuchnia:
+  order: 2
+group.other:
+  order: 3
+group.weather:
+  order: 4
+group.automation:
+  order: 5
