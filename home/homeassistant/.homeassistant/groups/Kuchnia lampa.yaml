@@ -1,5 +1,6 @@
-view: yes
-entities:
+lampa_kuchnia:
+  name: Lampa kuchnia
+  entities:
   - light.yeelight_color2_7c49eb157b13
   - light.yeelight_color2_7c49ebb35a83
   - light.yeelight_color2_7c49eb1dbff7
