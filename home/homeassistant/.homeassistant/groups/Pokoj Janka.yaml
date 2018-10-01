@@ -4,3 +4,5 @@ entities:
   - light.yeelight_bedside_7c49eb284fda
   - sensor.0x00158d0001e5d112_illuminance
   - switch.lampka_u_jasia
+  - binary_sensor.0x00158d0001e5d112_occupancy
+  - binary_sensor.0x00158d000208e0c7
