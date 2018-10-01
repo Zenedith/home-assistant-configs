@@ -2,9 +2,13 @@ group.default_view:
   order: 1
 group.kuchnia:
   order: 2
-group.other:
+group.pokoj_janka:
   order: 3
-group.weather:
+group.sypialnia:
   order: 4
-group.automation:
+group.other:
   order: 5
+group.weather:
+  order: 6
+group.automation:
+  order: 7
