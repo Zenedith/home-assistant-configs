@@ -156,7 +156,7 @@ switch:
 climate:
   - platform: eq3btsmart
     devices:
-      sypialnia:
-        mac: '00:1A:22:0C:1A:F2'
       pokoj-janka:
+        mac: '00:1A:22:0C:1A:F2'
+      sypialnia:
         mac: '00:1A:22:0C:1A:EF'
