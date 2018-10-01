@@ -74,6 +74,9 @@ map:
 # Track the sun
 sun:
 
+ffmpeg:
+  ffmpeg_bin: /usr/bin/ffmpeg
+
 # Text to speech
 #tts:
 #  - platform: google

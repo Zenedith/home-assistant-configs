@@ -2,7 +2,7 @@
   trigger:
     payload: 'ON'
     platform: mqtt
-    topic: home/dafang/motion
+    topic: camera/dafang/motion
   action:
     service: notify.mypushbullet
     data:
