@@ -1,0 +1,11 @@
+  - id: 'dafang-motion-detected'
+    alias: 'Motion detected'
+    trigger:
+      payload: 'ON'
+      platform: mqtt
+      topic: home/dafang/motion
+    action:
+      service: mypushbullet
+      data:
+        title: "Motion"
+        message: "detected."

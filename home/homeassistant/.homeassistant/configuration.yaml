@@ -11,7 +11,8 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Warsaw
   # Customization file
-  customize: !include customize.yaml
+#  customize: !include customize.yaml
+  customize: !include_dir_merge_named customizations
 
 # Show links to resources in log and frontend
 #introduction:
@@ -73,19 +74,6 @@ map:
 # Track the sun
 sun:
 
-# Weather prediction
-sensor:
-  - platform: yr
-    name: Weather
-    forecast: 24
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - windSpeed
-      - pressure
-      - humidity
-
 # Text to speech
 #tts:
 #  - platform: google
@@ -93,9 +81,14 @@ sensor:
 # Cloud
 #cloud:
 
-group: !include groups.yaml
-automation: !include automations.yaml
+#group: !include groups.yaml
+group: !include_dir_named groups
+#automation: !include automations.yaml
+automation: !include_dir_list automation
 script: !include scripts.yaml
+sensor: !include_dir_merge_list sensors
+weblink: !include weblink.yaml
+switch: !include_dir_merge_list switches
 
 mqtt:
   discovery: true
@@ -114,44 +107,6 @@ notify:
   - name: mypushbullet
     platform: pushbullet
     api_key: !secret pushbullet_api_key
-
-switch:
-  - platform: mqtt
-    name: "Kamera"
-    state_topic: "basic/sonoff-basic-3/POWER"
-    command_topic: "basic/sonoff-basic-3/cmnd/POWER"
-    availability_topic: "basic/sonoff-basic-3/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: false
-  - platform: mqtt
-    name: "Listwa RTV"
-    state_topic: "zigbee2mqtt/sonoff2/POWER"
-    command_topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-    availability_topic: "zigbee2mqtt/sonoff2/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    state_on: "ON"
-    state_off: "OFF"
-    optimistic: false
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: false
-  - platform: mqtt
-    name: "Lampka u Jasia"
-    state_topic: "zigbee2mqtt/sonoff1/POWER"
-    command_topic: "zigbee2mqtt/sonoff1/cmnd/POWER"
-    availability_topic: "zigbee2mqtt/sonoff1/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: false
 
 climate:
   - platform: eq3btsmart

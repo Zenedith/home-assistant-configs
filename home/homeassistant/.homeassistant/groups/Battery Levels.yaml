@@ -1,0 +1,5 @@
+- sensor.pokojjanka_motion_batt
+- sensor.korytarz_motion_batt
+- sensor.korytarz_humidity_batt
+- sensor.drzwi_wejsciowe_batt
+- sensor.drzwi_balkonowe_batt
