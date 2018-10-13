@@ -13,10 +13,10 @@
     platform: time
     at: '14:32:00'
   action:
-  - service: mqtt.publish
-    data:
-      topic: zigbee2mqtt/sonoff2/cmnd/POWER
-      payload: ON
+    - service: mqtt.publish
+      data:
+        topic: zigbee2mqtt/sonoff2/cmnd/POWER
+        payload: ON
 
 - alias: Listwa RTV (weekend) on
   trigger:
@@ -34,10 +34,10 @@
         payload: ON
 
 - alias: Ambient tv on
-    trigger:
-      platform: time
-      at: '17:32:00'
-    action:
+  trigger:
+    platform: time
+    at: '17:32:00'
+  action:
     - service: light.turn_on
       data:
         entity_id: light.yeelight_strip_7811dcda6e9e
@@ -47,22 +47,21 @@
     platform: time
     at: '07:00:00'
   action:
-  - service: light.turn_off
-    data:
-      entity_id: light.yeelight_strip_7811dcda6e9e
-      payload: 
+    - service: light.turn_off
+      data:
+        entity_id: light.yeelight_strip_7811dcda6e9e
 
 - alias: Zmietek start
   trigger:
     platform: time
     at: '11:00:00'
   condition:
-  - condition: time
-    weekday:
-    - mon
-    - wed
-    - fri
+    - condition: time
+      weekday:
+      - mon
+      - wed
+      - fri
   action:
-  - service: vacuum.start
-    data:
-      entity_id: vacuum.zmietekv2
+    - service: vacuum.start
+      data:
+        entity_id: vacuum.zmietekv2
