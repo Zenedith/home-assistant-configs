@@ -1,24 +1,24 @@
-- alias: "Listwa RTV off"
+- alias: Listwa RTV off
   trigger:
     platform: time
     at: '02:00:00'
   action:
     - service: mqtt.publish
       data:
-        topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-        payload: "OFF"
+        topic: zigbee2mqtt/sonoff2/cmnd/POWER
+        payload: OFF
 
-- alias: "Listwa RTV on"
+- alias: Listwa RTV on
   trigger:
     platform: time
     at: '14:32:00'
   action:
   - service: mqtt.publish
     data:
-      topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-      payload: "ON"
+      topic: zigbee2mqtt/sonoff2/cmnd/POWER
+      payload: ON
 
-- alias: "Listwa RTV (weekend) on"
+- alias: Listwa RTV (weekend) on
   trigger:
     platform: time
     at: '07:32:00'
@@ -30,10 +30,10 @@
   action:
     - service: mqtt.publish
       data:
-        topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-        payload: "ON"
+        topic: zigbee2mqtt/sonoff2/cmnd/POWER
+        payload: ON
 
-- alias: "Ambient tv on"
+- alias: Ambient tv on
     trigger:
       platform: time
       at: '17:32:00'
@@ -42,7 +42,7 @@
       data:
         entity_id: light.yeelight_strip_7811dcda6e9e
 
-- alias: "Ambient tv off"
+- alias: Ambient tv off
   trigger:
     platform: time
     at: '07:00:00'
@@ -50,9 +50,9 @@
   - service: light.turn_off
     data:
       entity_id: light.yeelight_strip_7811dcda6e9e
-      payload: ""
+      payload: 
 
-- alias: "Zmietek start"
+- alias: Zmietek start
   trigger:
     platform: time
     at: '11:00:00'
