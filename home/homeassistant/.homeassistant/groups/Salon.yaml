@@ -1,4 +1,8 @@
 view: yes
 entities:
-  - group.salon_top
+  - binary_sensor.0x00158d000205b35f
+  - light.yeelight_strip_7811dcda6e9e
+  - media_player.salon
+  - vacuum.zmietekv2
+  - group.Salon_wlaczniki
   - group.dafang
