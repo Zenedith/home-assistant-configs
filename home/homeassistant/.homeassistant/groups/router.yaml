@@ -1,0 +1,8 @@
+- sensor.xiaomi_mi_r3g_wireless_router_packetssec_sent
+- sensor.xiaomi_mi_r3g_wireless_router_kbytesec_sent
+- sensor.xiaomi_mi_r3g_wireless_router_packets_sent
+- sensor.xiaomi_mi_r3g_wireless_router_packets_received
+- sensor.xiaomi_mi_r3g_wireless_router_kbytesec_received
+- sensor.xiaomi_mi_r3g_wireless_router_packetssec_received
+- sensor.xiaomi_mi_r3g_wireless_router_bytes_received
+- sensor.xiaomi_mi_r3g_wireless_router_bytes_sent
