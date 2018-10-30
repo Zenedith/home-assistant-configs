@@ -4,194 +4,317 @@
             {
                 "config_entry_id": "47d4b049b619498cbd3ba92d2f391091",
                 "device_id": "ab6c1b5b20f44f07bc0ca4d9e4406caf",
+                "disabled_by": null,
                 "entity_id": "media_player.salon",
                 "name": null,
                 "platform": "cast",
                 "unique_id": "3e58b8fb-0db2-4fc9-0003-c8777daa9bba"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.dafang_motion_sensor",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-motion-sensor"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_motion_detection",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-motion-detection"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_motion_send_mail",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-motion-send-mail"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_motion_tracking",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-motion-tracking"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_blue_led",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-blue-led"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_yellow_led",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-yellow-led"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_ir_led",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-ir-led"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_ir_filter",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-ir-filter"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_night_mode",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-night-mode"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_night_mode_auto",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-night-mode-auto"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_h264_rtsp_server",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-h264-rtsp-server"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.dafang_mjpeg_rtsp_server",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-mjpeg-rtsp-server"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.dafang_light_sensor",
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "34ce00e692bd-light-sensor"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d0001e0a7d3_occupancy",
                 "name": "Ruch (korytarz)",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e0a7d3_occupancy_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.0x00158d0001e0a7d3_illuminance",
                 "name": "Jasno\u015b\u0107 (Korytarz)",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e0a7d3_illuminance_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.0x00158d00022cc215_temperature",
                 "name": "Temperatura (Korytarz)",
                 "platform": "mqtt",
                 "unique_id": "0x00158d00022cc215_temperature_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.0x00158d00022cc215_humidity",
                 "name": "Wilgotno\u015b\u0107 (korytarz)",
                 "platform": "mqtt",
                 "unique_id": "0x00158d00022cc215_humidity_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.0x00158d00022cc215_pressure",
                 "name": "Ci\u015bnienie",
                 "platform": "mqtt",
                 "unique_id": "0x00158d00022cc215_pressure_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d0001e5d112_occupancy",
                 "name": "Ruch (Pok\u00f3j Janka)",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e5d112_occupancy_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.0x00158d0001e5d112_illuminance",
                 "name": "Jasno\u015b\u0107 (Pok\u00f3j Janka)",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e5d112_illuminance_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d000208e0c7",
                 "name": "Okno (Pok\u00f3j Janka)",
                 "platform": "mqtt",
                 "unique_id": "0x00158d000208e0c7_contact_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d00020b7b77",
                 "name": "Drzwi wej\u015bciowe",
                 "platform": "mqtt",
                 "unique_id": "0x00158d00020b7b77_contact_zigbee2mqtt"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d000205b35f",
                 "name": "Drzwi balkonowe",
                 "platform": "mqtt",
                 "unique_id": "0x00158d000205b35f_contact_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "camera.dafang_motion_snapshot",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "34ce00e692bd-motion-snapshot"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "cover.dafang_move_updown",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "34ce00e692bd-move-up-down"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "cover.dafang_move_leftright",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "34ce00e692bd-move-left-right"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packetssec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets/sec_sent"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_kbytesec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_kbyte/sec_sent"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packets_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets_sent"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packets_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets_received"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_kbytesec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_kbyte/sec_received"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packetssec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets/sec_received"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_bytes_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_bytes_received"
+            },
+            {
+                "config_entry_id": "0b623053fffc4a40947d00b09f4b1fc2",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_bytes_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_bytes_sent"
             }
         ]
     },
