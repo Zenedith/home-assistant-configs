@@ -249,7 +249,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packetssec_sent",
-                "name": null,
+                "name": "sent (pakiety/sec)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets/sec_sent"
             },
@@ -258,7 +258,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_kbytesec_sent",
-                "name": null,
+                "name": "sent (kb/s)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_kbyte/sec_sent"
             },
@@ -267,7 +267,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packets_sent",
-                "name": null,
+                "name": "sent (wszystkie pakiety)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets_sent"
             },
@@ -276,7 +276,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packets_received",
-                "name": null,
+                "name": "received (wszystkie pakiety)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets_received"
             },
@@ -285,7 +285,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_kbytesec_received",
-                "name": null,
+                "name": "received (kb/s)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_kbyte/sec_received"
             },
@@ -294,7 +294,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packetssec_received",
-                "name": null,
+                "name": "received (pakiety/sec)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets/sec_received"
             },
@@ -303,7 +303,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_bytes_received",
-                "name": null,
+                "name": "received (all bytes)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_bytes_received"
             },
@@ -312,7 +312,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_bytes_sent",
-                "name": null,
+                "name": "sent (all bytes)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_bytes_sent"
             }
