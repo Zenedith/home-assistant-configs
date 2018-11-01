@@ -11,7 +11,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Warsaw
   # Customization file
-#  customize: !include customize.yaml
+  #  customize: !include customize.yaml
   customize: !include_dir_merge_named customizations
 
 # Show links to resources in log and frontend
@@ -43,6 +43,22 @@ updater:
 discovery:
   ignore:
     - igd
+    - deconz
+    - homematicip_cloud
+    - zwave
+    - lifx
+    - openuv
+    - nest
+    - sonos
+    - hangouts
+    - hue
+    - unifi
+    - tradfri
+    - zone
+    - ifttt
+    - simplisafe
+    - smhi
+    - ios
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
