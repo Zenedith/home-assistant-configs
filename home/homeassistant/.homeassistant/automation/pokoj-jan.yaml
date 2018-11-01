@@ -1,7 +1,7 @@
 - alias: "Lampka Jan on"
   trigger:
     platform: time
-    at: '17:32:00'
+    at: '16:30:00'
   action:
     - service: mqtt.publish
       data:
@@ -10,7 +10,7 @@
 - alias: "Lampka Jan off"
   trigger:
     platform: time
-    at: '07:00:00'
+    at: '07:30:00'
   action:
     - service: mqtt.publish
       data:
