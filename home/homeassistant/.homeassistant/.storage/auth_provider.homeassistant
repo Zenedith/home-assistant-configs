@@ -1,0 +1,13 @@
+{
+    "data": {
+        "salt": "5aee2ea91269d41fb0acaa6d88e1bd2d4eff7ea482c76bbc4d5721fd2c4e976b",
+        "users": [
+            {
+                "password": "JDJiJDEyJDRydUpzL2VKcUdPUERrV0VxQm00Vi5WYXl2dUFKTS8vVHpUVjVZSGdCNVdUQnZ3dFczQ3pT",
+                "username": "zene"
+            }
+        ]
+    },
+    "key": "auth_provider.homeassistant",
+    "version": 1
+}
