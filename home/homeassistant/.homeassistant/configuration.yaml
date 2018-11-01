@@ -144,3 +144,9 @@ climate:
         mac: '00:1A:22:0C:1A:F2'
       sypialnia:
         mac: '00:1A:22:0C:1A:EF'
+
+device_tracker:
+  - platform: asuswrt
+    host: 192.168.1.1
+    username: !secret device_tracker_asus_username
+    password: !secret device_tracker_asus_password
