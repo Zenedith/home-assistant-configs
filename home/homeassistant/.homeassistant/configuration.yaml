@@ -43,22 +43,29 @@ updater:
 discovery:
   ignore:
     - igd
-    - deconz
-    - homematicip_cloud
-    - zwave
-    - lifx
-    - openuv
-    - nest
+    - apple_tv
+    - belkin_wemo
+    - bluesound
+    - bose_soundtouch
+    - denonavr
+    - frontier_silicon
+    - harmony
+    - ikea_tradfri
+    - logitech_mediaserver
+    - netgear_router
+    - openhome
+    - panasonic_viera
+    - philips_hue
+    - plex_mediaserver
+    - roku
+    - sabnzbd
+    - samsung_printer
     - sonos
-    - hangouts
-    - hue
-    - unifi
-    - tradfri
-    - zone
-    - ifttt
-    - simplisafe
-    - smhi
-    - ios
+    - songpal
+    - tellstick
+    - wink
+    - yamaha
+    - xiaomi_gw
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
