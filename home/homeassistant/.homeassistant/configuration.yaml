@@ -16,6 +16,14 @@ homeassistant:
 
 # Show links to resources in log and frontend
 #introduction:
+logger:
+  default: info
+  logs:
+    homeassistant.components.upnp: debug
+    homeassistant.components.sensor.upnp: debug
+    async_upnp_client: debug
+    async_upnp_client.igd: debug
+    async_upnp_client.traffic: debug
 
 # Enables the frontend
 frontend:
