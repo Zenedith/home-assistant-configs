@@ -245,7 +245,7 @@
                 "unique_id": "34ce00e692bd-move-left-right"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packetssec_sent",
@@ -254,7 +254,7 @@
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets/sec_sent"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_kbytesec_sent",
@@ -263,7 +263,7 @@
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_kbyte/sec_sent"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packets_sent",
@@ -272,7 +272,7 @@
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets_sent"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packets_received",
@@ -281,7 +281,7 @@
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets_received"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_kbytesec_received",
@@ -290,7 +290,7 @@
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_kbyte/sec_received"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_packetssec_received",
@@ -299,7 +299,7 @@
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_packets/sec_received"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_bytes_received",
@@ -308,7 +308,7 @@
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_bytes_received"
             },
             {
-                "config_entry_id": "e35adc41bade45d79e3da668192f95a1",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.xiaomi_mi_r3g_wireless_router_bytes_sent",

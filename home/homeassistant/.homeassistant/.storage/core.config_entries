@@ -18,20 +18,6 @@
                 "source": "import",
                 "title": "configuration.yaml",
                 "version": 1
-            },
-            {
-                "connection_class": "local_poll",
-                "data": {
-                    "port_mapping": true,
-                    "sensors": true,
-                    "ssdp_description": "http://192.168.1.1:20881/rootDesc.xml",
-                    "udn": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f"
-                },
-                "domain": "upnp",
-                "entry_id": "e35adc41bade45d79e3da668192f95a1",
-                "source": "discovery",
-                "title": "Xiaomi Mi R3G Wireless Router",
-                "version": 1
             }
         ]
     },
