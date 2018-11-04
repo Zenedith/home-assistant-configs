@@ -1,0 +1,5 @@
+- name: Allegro
+  latitude: !secret allegro_latitude
+  longitude: !secret allegro_longitude
+  radius: 250
+  icon: mdi:briefcase
