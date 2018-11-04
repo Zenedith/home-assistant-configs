@@ -4,9 +4,9 @@ sequence:
       topic: zigbee2mqtt/sonoff2/cmnd/POWER
       payload: OFF
   - service: light.turn_off
-      data:
-        entity_id: light.yeelight_strip_7811dcda6e9e
+    data:
+      entity_id: light.yeelight_strip_7811dcda6e9e
   - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/sonoff1/cmnd/POWER
-        payload: OFF
+    data:
+      topic: zigbee2mqtt/sonoff1/cmnd/POWER
+      payload: OFF

@@ -1,16 +1,5 @@
 sequence:
-  - service: mqtt.publish
-    data:
-      topic: zigbee2mqtt/sonoff2/cmnd/POWER
-      payload: OFF
-  - service: light.turn_off
-      data:
-        entity_id: light.yeelight_strip_7811dcda6e9e
-  - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/sonoff1/cmnd/POWER
-        payload: OFF
-  - service: mqtt.publish
-      data:
-        topic: basic/sonoff-basic-3/cmnd/POWER
-        payload: ON
+  - service: script.turn_on
+      entity_id: script.everything_off
+  - service: script.turn_on
+      entity_id: script.camera_on
