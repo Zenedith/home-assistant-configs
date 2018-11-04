@@ -10,3 +10,4 @@ entities:
   - sensor.0x00158d0001e0a7d3_illuminance
   - device_tracker.80b03dcda5eb
   - device_tracker.e49a79e25678
+  - input_select.presence_status

@@ -1,0 +1,7 @@
+guest_mode:
+  name: Guest Mode
+  icon: mdi:account-multiple
+just_returned_home:
+  name: Just Returned Home
+just_left:
+  name: Just Left
