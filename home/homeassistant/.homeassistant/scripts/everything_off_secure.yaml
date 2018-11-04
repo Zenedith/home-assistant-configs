@@ -1,0 +1,5 @@
+sequence:
+  - service: script.turn_on
+      entity_id: script.everything_off
+  - service: script.turn_on
+      entity_id: script.camera_on

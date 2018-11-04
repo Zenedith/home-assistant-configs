@@ -1,4 +1,4 @@
-- name: Szkola
+- name: Zespół Szkół Salezjańskich w Poznaniu
   latitude: !secret szkola_latitude
   longitude: !secret szkola_longitude
   radius: 250
