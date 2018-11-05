@@ -12,7 +12,7 @@ entities:
   - automation.lampka_jan_on
   - automation.gone_for_8_minutes
   - automation.home_for_8_minutes
-  - automation.left_home,
+  - automation.left_home
   - automation.left_home__set_status
   - automation.returned_home
   - automation.returned_home__set_status
