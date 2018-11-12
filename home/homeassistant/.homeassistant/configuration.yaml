@@ -41,31 +41,31 @@ updater:
 
 # Discover some devices automatically
 discovery:
-  ignore:
-    - igd
-    - apple_tv
-    - belkin_wemo
-    - bluesound
-    - bose_soundtouch
-    - denonavr
-    - frontier_silicon
-    - harmony
-    - ikea_tradfri
-    - logitech_mediaserver
-    - netgear_router
-    - openhome
-    - panasonic_viera
-    - philips_hue
-    - plex_mediaserver
-    - roku
-    - sabnzbd
-    - samsung_printer
-    - sonos
-    - songpal
-    - tellstick
-    - wink
-    - yamaha
-    - xiaomi_gw
+#  ignore:
+#    - igd
+#    - apple_tv
+#    - belkin_wemo
+#    - bluesound
+#    - bose_soundtouch
+#    - denonavr
+#    - frontier_silicon
+#    - harmony
+#    - ikea_tradfri
+#    - logitech_mediaserver
+#    - netgear_router
+#    - openhome
+#    - panasonic_viera
+#    - philips_hue
+#    - plex_mediaserver
+#    - roku
+#    - sabnzbd
+#    - samsung_printer
+#    - sonos
+#    - songpal
+#    - tellstick
+#    - wink
+#    - yamaha
+#    - xiaomi_gw
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
