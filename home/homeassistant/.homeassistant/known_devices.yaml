@@ -136,3 +136,99 @@ e49a79e25678:
   name: android-f988787d2a
   picture:
   track: false
+
+382b78036b75:
+  hide_if_away: true
+  icon:
+  mac: 38:2B:78:03:6B:75
+  name: 382b78036b75
+  picture:
+  track: false
+
+7811dc0eda6d:
+  hide_if_away: true
+  icon:
+  mac: 78:11:DC:0E:DA:6D
+  name: 7811dc0eda6d
+  picture:
+  track: false
+
+382b7803ffa6:
+  hide_if_away: true
+  icon:
+  mac: 38:2B:78:03:FF:A6
+  name: 382b7803ffa6
+  picture:
+  track: false
+
+0008c950b723:
+  hide_if_away: true
+  icon:
+  mac: 00:08:C9:50:B7:23
+  name: 0008c950b723
+  picture:
+  track: false
+
+382b78036d4c:
+  hide_if_away: true
+  icon:
+  mac: 38:2B:78:03:6D:4C
+  name: 382b78036d4c
+  picture:
+  track: false
+
+382b78036b2f:
+  hide_if_away: true
+  icon:
+  mac: 38:2B:78:03:6B:2F
+  name: 382b78036b2f
+  picture:
+  track: false
+
+74d435b7ab00:
+  hide_if_away: true
+  icon:
+  mac: 74:D4:35:B7:AB:00
+  name: 74d435b7ab00
+  picture:
+  track: false
+
+7811dcab824a:
+  hide_if_away: true
+  icon:
+  mac: 78:11:DC:AB:82:4A
+  name: 7811dcab824a
+  picture:
+  track: false
+
+7811dcab68e0:
+  hide_if_away: true
+  icon:
+  mac: 78:11:DC:AB:68:E0
+  name: 7811dcab68e0
+  picture:
+  track: false
+
+30055c9a3593:
+  hide_if_away: true
+  icon:
+  mac: 30:05:5C:9A:35:93
+  name: 30055c9a3593
+  picture:
+  track: false
+
+34ce00e692bd:
+  hide_if_away: true
+  icon:
+  mac: 34:CE:00:E6:92:BD
+  name: 34ce00e692bd
+  picture:
+  track: false
+
+0cfe4588e0ca:
+  hide_if_away: true
+  icon:
+  mac: 0C:FE:45:88:E0:CA
+  name: 0cfe4588e0ca
+  picture:
+  track: false

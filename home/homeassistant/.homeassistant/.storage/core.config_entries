@@ -18,6 +18,15 @@
                 "source": "import",
                 "title": "configuration.yaml",
                 "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {},
+                "domain": "ios",
+                "entry_id": "a8311c6bf4a74baa941a1f6d33556370",
+                "source": "user",
+                "title": "Home Assistant iOS",
+                "version": 1
             }
         ]
     },
