@@ -36,11 +36,14 @@
 - alias: Ambient tv on
   trigger:
     platform: time
-    at: '17:32:00'
+    at: '15:32:00'
   action:
     - service: light.turn_on
       data:
         entity_id: light.yeelight_strip_7811dcda6e9e
+    - service: light.turn_on
+      data:
+        entity_id: light.yeelight_strip_7811dce2d84e
 
 - alias: Ambient tv off
   trigger:
@@ -50,6 +53,9 @@
     - service: light.turn_off
       data:
         entity_id: light.yeelight_strip_7811dcda6e9e
+    - service: light.turn_on
+      data:
+        entity_id: light.yeelight_strip_7811dce2d84e
 
 - alias: Zmietek start
   trigger:

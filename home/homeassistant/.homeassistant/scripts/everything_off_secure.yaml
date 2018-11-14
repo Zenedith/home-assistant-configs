@@ -6,6 +6,9 @@ sequence:
   - service: light.turn_off
     data:
       entity_id: light.yeelight_strip_7811dcda6e9e
+  - service: light.turn_off
+    data:
+      entity_id: light.yeelight_strip_7811dce2d84e
   - service: mqtt.publish
     data:
       topic: zigbee2mqtt/sonoff1/cmnd/POWER
