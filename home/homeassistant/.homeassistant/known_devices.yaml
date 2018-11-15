@@ -232,3 +232,35 @@ e49a79e25678:
   name: 0cfe4588e0ca
   picture:
   track: false
+
+7811dce2d84e:
+  hide_if_away: true
+  icon:
+  mac: 78:11:DC:E2:D8:4E
+  name: 7811dce2d84e
+  picture:
+  track: false
+
+d85d4c9de147:
+  hide_if_away: true
+  icon:
+  mac: D8:5D:4C:9D:E1:47
+  name: d85d4c9de147
+  picture:
+  track: false
+
+807d3a1824d5:
+  hide_if_away: true
+  icon:
+  mac: 80:7D:3A:18:24:D5
+  name: 807d3a1824d5
+  picture:
+  track: false
+
+807d3a3274ff:
+  hide_if_away: true
+  icon:
+  mac: 80:7D:3A:32:74:FF
+  name: 807d3a3274ff
+  picture:
+  track: false

@@ -315,6 +315,15 @@
                 "name": "sent (all bytes)",
                 "platform": "upnp",
                 "unique_id": "uuid:75802409-bccb-40e7-8e6c-7811dc49992f_bytes_sent"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d00021508b4",
+                "name": "Zmywarka",
+                "platform": "mqtt",
+                "unique_id": "0x00158d00021508b4_water_leak_zigbee2mqtt"
             }
         ]
     },
