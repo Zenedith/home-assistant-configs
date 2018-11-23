@@ -10,3 +10,5 @@
   state_closed: "close"
   retain: false
   optimistic: false
+  availability_topic: "shellies/announce"
+  payload_available: '{"id":"shellyswitch-32B580"}'
