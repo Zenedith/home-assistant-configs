@@ -9,8 +9,8 @@
 - switch.dafang_motion_tracking
 - camera.dafang_motion_snapshot
 - binary_sensor.dafang_motion_sensor
-- cover.dafang_move_leftright
-- cover.dafang_move_updown
+#- cover.dafang_move_leftright
+#- cover.dafang_move_updown
 - script.everything_off_secure
 - weblink.dafang_admin
 - weblink.dafang_rtsp_url
