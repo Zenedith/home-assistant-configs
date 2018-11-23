@@ -1,4 +1,4 @@
 view: yes
 entities:
   - climate.sypialnia
-  - light.yeelight_ceiling_7811dcab68e0
+  - group.roller
