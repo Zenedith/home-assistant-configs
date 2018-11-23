@@ -1,0 +1,11 @@
+- platform: mqtt
+  name: "Sypialnia"
+#  state_topic: "shellies/shelly1-XXXXXX/relay/0"
+  state_topic: "shellies/shellyswitch-32B580/roller/0"
+#  command_topic: "shellies/shelly1-XXXXXX/relay/0/command"
+  command_topic: "shellies/shellyswitch-32B580/roller/0/command"
+  qos: 2
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+  optimistic: false

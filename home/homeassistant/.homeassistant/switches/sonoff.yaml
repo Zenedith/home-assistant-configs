@@ -23,14 +23,14 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
-- platform: mqtt
-  name: "Lampka u Jasia"
-  state_topic: "zigbee2mqtt/sonoff1/POWER"
-  command_topic: "zigbee2mqtt/sonoff1/cmnd/POWER"
-  availability_topic: "zigbee2mqtt/sonoff1/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
+#- platform: mqtt
+#  name: "Lampka u Jasia"
+#  state_topic: "zigbee2mqtt/sonoff1/POWER"
+#  command_topic: "zigbee2mqtt/sonoff1/cmnd/POWER"
+#  availability_topic: "zigbee2mqtt/sonoff1/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
