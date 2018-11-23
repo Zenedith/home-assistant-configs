@@ -264,3 +264,35 @@ d85d4c9de147:
   name: 807d3a3274ff
   picture:
   track: false
+
+c49ded568da7:
+  hide_if_away: true
+  icon:
+  mac: C4:9D:ED:56:8D:A7
+  name: c49ded568da7
+  picture:
+  track: false
+
+8c8590830a1e:
+  hide_if_away: true
+  icon:
+  mac: 8C:85:90:83:0A:1E
+  name: 8c8590830a1e
+  picture:
+  track: false
+
+08669880fc5d:
+  hide_if_away: true
+  icon:
+  mac: 08:66:98:80:FC:5D
+  name: 08669880fc5d
+  picture:
+  track: false
+
+84f3eb32b580:
+  hide_if_away: true
+  icon:
+  mac: 84:F3:EB:32:B5:80
+  name: 84f3eb32b580
+  picture:
+  track: false
