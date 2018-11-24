@@ -3,7 +3,7 @@
         "entities": [
             {
                 "config_entry_id": "47d4b049b619498cbd3ba92d2f391091",
-                "device_id": "ab6c1b5b20f44f07bc0ca4d9e4406caf",
+                "device_id": "b5f9d0db4eac484eac8ef12d8357724d",
                 "disabled_by": null,
                 "entity_id": "media_player.salon",
                 "name": null,
@@ -132,7 +132,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d0001e0a7d3_occupancy",
-                "name": "Ruch (korytarz)",
+                "name": "Ruch",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e0a7d3_occupancy_zigbee2mqtt"
             },
@@ -141,7 +141,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.0x00158d0001e0a7d3_illuminance",
-                "name": "Jasno\u015b\u0107 (Korytarz)",
+                "name": "Jasno\u015b\u0107",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e0a7d3_illuminance_zigbee2mqtt"
             },
@@ -177,7 +177,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d0001e5d112_occupancy",
-                "name": "Ruch (Pok\u00f3j Janka)",
+                "name": "Ruch",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e5d112_occupancy_zigbee2mqtt"
             },
@@ -186,7 +186,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.0x00158d0001e5d112_illuminance",
-                "name": "Jasno\u015b\u0107 (Pok\u00f3j Janka)",
+                "name": "Jasno\u015b\u0107",
                 "platform": "mqtt",
                 "unique_id": "0x00158d0001e5d112_illuminance_zigbee2mqtt"
             },
@@ -195,7 +195,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "binary_sensor.0x00158d000208e0c7",
-                "name": "Okno (Pok\u00f3j Janka)",
+                "name": "Okno",
                 "platform": "mqtt",
                 "unique_id": "0x00158d000208e0c7_contact_zigbee2mqtt"
             },

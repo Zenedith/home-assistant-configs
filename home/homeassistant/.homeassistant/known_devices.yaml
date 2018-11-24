@@ -296,3 +296,19 @@ c49ded568da7:
   name: 84f3eb32b580
   picture:
   track: false
+
+7c49ebb70c4a:
+  hide_if_away: true
+  icon:
+  mac: 7C:49:EB:B7:0C:4A
+  name: 7c49ebb70c4a
+  picture:
+  track: false
+
+7c49ebb76a3d:
+  hide_if_away: true
+  icon:
+  mac: 7C:49:EB:B7:6A:3D
+  name: 7c49ebb76a3d
+  picture:
+  track: false
