@@ -1,0 +1,10 @@
+- alias: 'dafang motion detected'
+  trigger:
+    payload: 'ON'
+    platform: mqtt
+    topic: camera/dafang/motion
+  action:
+    service: notify.mypushbullet
+    data:
+      title: "Motion"
+      message: "detected."

@@ -1,0 +1,13 @@
+#sensor.stairs_motion_batt:
+#  friendly_name: Stairs Motion
+#  icon: mdi:battery
+#  templates:
+#    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+#sensor.front_door_batt:
+#  icon: mdi:battery
+#  templates:
+#    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+#sensor.kids_bathroom_motion_batt:
+#  icon: mdi:battery
+#  templates:
+#    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';

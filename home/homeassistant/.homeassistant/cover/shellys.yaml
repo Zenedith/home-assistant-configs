@@ -1,0 +1,14 @@
+- platform: mqtt
+  name: "Sypialnia"
+  state_topic: "shellies/shellyswitch-32B580/roller/0"
+  command_topic: "shellies/shellyswitch-32B580/roller/0/command"
+  qos: 2
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_open: "open"
+  state_closed: "close"
+  retain: false
+  optimistic: false
+  availability_topic: "shellies/announce"
+  payload_available: '{"id":"shellyswitch-32B580"}'

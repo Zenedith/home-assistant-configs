@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 52.4046033
-  longitude: 16.8606243
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 100
   # metric for Metric, imperial for Imperial
@@ -11,10 +11,13 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Warsaw
   # Customization file
-  customize: !include customize.yaml
+  #  customize: !include customize.yaml
+  customize: !include_dir_merge_named customizations
 
 # Show links to resources in log and frontend
 #introduction:
+logger:
+  default: info
 
 # Enables the frontend
 frontend:
@@ -38,6 +41,31 @@ updater:
 
 # Discover some devices automatically
 discovery:
+  ignore:
+#    - igd
+    - apple_tv
+    - belkin_wemo
+    - bluesound
+    - bose_soundtouch
+    - denonavr
+    - frontier_silicon
+    - harmony
+    - ikea_tradfri
+    - logitech_mediaserver
+    - netgear_router
+    - openhome
+    - panasonic_viera
+    - philips_hue
+    - plex_mediaserver
+    - roku
+    - sabnzbd
+    - samsung_printer
+    - sonos
+    - songpal
+    - tellstick
+    - wink
+    - yamaha
+    - xiaomi_gw
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
@@ -69,22 +97,13 @@ logbook:
 
 # Enables a map showing the location of tracked devices
 map:
+zone: !include_dir_merge_list zones
 
 # Track the sun
 sun:
 
-# Weather prediction
-sensor:
-  - platform: yr
-    name: Weather
-    forecast: 24
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - windSpeed
-      - pressure
-      - humidity
+ffmpeg:
+  ffmpeg_bin: /usr/bin/ffmpeg
 
 # Text to speech
 #tts:
@@ -93,9 +112,18 @@ sensor:
 # Cloud
 #cloud:
 
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
+camera: !include cameras/dafang.yaml
+group: !include_dir_named groups
+automation: !include_dir_merge_list automation
+#automation: !include_dir_list automation
+#automation: !include_dir_* automation
+script: !include_dir_named scripts
+sensor: !include_dir_merge_list sensors
+weblink: !include weblink.yaml
+switch: !include_dir_merge_list switches
+cover: !include cover/shellys.yaml
+input_boolean: !include input_boolean.yaml
+input_select: !include_dir_merge_named input_selects
 
 mqtt:
   discovery: true
@@ -115,44 +143,6 @@ notify:
     platform: pushbullet
     api_key: !secret pushbullet_api_key
 
-switch:
-  - platform: mqtt
-    name: "Kamera"
-    state_topic: "basic/sonoff-basic-3/POWER"
-    command_topic: "basic/sonoff-basic-3/cmnd/POWER"
-    availability_topic: "basic/sonoff-basic-3/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: false
-  - platform: mqtt
-    name: "Listwa RTV"
-    state_topic: "zigbee2mqtt/sonoff2/POWER"
-    command_topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-    availability_topic: "zigbee2mqtt/sonoff2/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    state_on: "ON"
-    state_off: "OFF"
-    optimistic: false
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: false
-  - platform: mqtt
-    name: "Lampka u Jasia"
-    state_topic: "zigbee2mqtt/sonoff1/POWER"
-    command_topic: "zigbee2mqtt/sonoff1/cmnd/POWER"
-    availability_topic: "zigbee2mqtt/sonoff1/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: false
-
 climate:
   - platform: eq3btsmart
     devices:
@@ -160,3 +150,13 @@ climate:
         mac: '00:1A:22:0C:1A:F2'
       sypialnia:
         mac: '00:1A:22:0C:1A:EF'
+
+device_tracker:
+  - platform: asuswrt
+    host: 192.168.1.1
+    username: !secret device_tracker_asus_username
+    password: !secret device_tracker_asus_password
+    interval_seconds: 60
+    new_device_defaults:
+      track_new_devices: false
+      hide_if_away: true

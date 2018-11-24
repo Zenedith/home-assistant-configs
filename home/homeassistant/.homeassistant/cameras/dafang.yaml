@@ -1,0 +1,3 @@
+- platform: ffmpeg
+  name: dafang
+  input: -rtsp_transport tcp -i rtsp://dafang:8554/unicast

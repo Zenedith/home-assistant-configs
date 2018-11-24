@@ -1,0 +1,7 @@
+entities:
+  - name: Router Admin
+    url: http://MI-R3G
+  - name: Dafang Admin
+    url: http://dafang
+  - name: Dafang rtsp url
+    url: rtsp://dafang:8554/unicast

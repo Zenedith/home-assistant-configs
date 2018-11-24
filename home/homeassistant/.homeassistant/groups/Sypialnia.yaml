@@ -1,0 +1,4 @@
+view: yes
+entities:
+  - climate.sypialnia
+  - cover.sypialnia
