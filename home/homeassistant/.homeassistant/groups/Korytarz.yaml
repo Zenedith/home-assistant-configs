@@ -1,0 +1,4 @@
+view: yes
+entities:
+  - binary_sensor.0x00158d000205b35f
+  - group.korytarz_lampy

@@ -12,3 +12,5 @@ light.yeelight_bedside_7c49eb284fda:
   friendly_name: bedside
 light.yeelight_ceiling_7811dcab68e0:
   friendly_name: Lampa Łazienka
+light.yeelight_ceiling_7811dcab824a:
+  friendly_name: Lampa korytarz

@@ -1,16 +1,18 @@
 group.default_view:
   order: 1
-group.salon:
+group.korytarz:
   order: 2
-group.kuchnia:
+group.salon:
   order: 3
-group.pokoj_janka:
+group.kuchnia:
   order: 4
-group.sypialnia:
+group.pokoj_janka:
   order: 5
-group.łazienka:
+group.sypialnia:
   order: 6
-group.other:
+group.łazienka:
   order: 7
-group.automation:
+group.other:
   order: 8
+group.automation:
+  order: 9
