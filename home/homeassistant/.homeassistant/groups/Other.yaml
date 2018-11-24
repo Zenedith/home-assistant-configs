@@ -1,4 +1,0 @@
-view: yes
-entities:
-  - group.battery_levels
-  - group.internet

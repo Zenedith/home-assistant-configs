@@ -3,6 +3,7 @@ icon: mdi:home
 entities:
   - group.indoor_weather
   - group.outdoor_weather
+  - group.internet
   - device_tracker.80b03dcda5eb
   - device_tracker.e49a79e25678
   - input_select.presence_status
