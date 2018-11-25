@@ -1,0 +1,32 @@
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/0x00158d00022cc215"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "°C"
+  device_class: "temperature"
+  value_template: "{{ value_json.temperature }}"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/0x00158d00022cc215"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "humidity"
+  value_template: "{{ value_json.humidity }}"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/0x00158d00022cc215"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "hPa"
+  device_class: "pressure"
+  value_template: "{{ value_json.pressure }}"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"
