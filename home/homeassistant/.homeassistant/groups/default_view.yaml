@@ -10,3 +10,4 @@ entities:
   - script.camera_on
   - script.everything_off
   - script.everything_off_secure
+  - group.zigbee_group
