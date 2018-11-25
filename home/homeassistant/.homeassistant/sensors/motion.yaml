@@ -1,4 +1,5 @@
 - platform: "mqtt"
+  name: "0x00158d0001e0a7d3_illuminance"
   state_topic: "zigbee2mqtt/0x00158d0001e0a7d3"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "lx"
@@ -9,6 +10,7 @@
   - "battery"
   - "voltage"
 - platform: "mqtt"
+  name: "0x00158d0001e55705_illuminance"
   state_topic: "zigbee2mqtt/0x00158d0001e55705"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "lx"
