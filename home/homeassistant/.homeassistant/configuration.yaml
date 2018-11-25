@@ -116,6 +116,7 @@ group: !include_dir_named groups
 automation: !include_dir_merge_list automation
 script: !include_dir_named scripts
 sensor: !include_dir_merge_list sensors
+binary_sensor: !include_dir_merge_list binary_sensors
 weblink: !include weblink.yaml
 switch: !include_dir_merge_list switches
 cover: !include cover/shellys.yaml
