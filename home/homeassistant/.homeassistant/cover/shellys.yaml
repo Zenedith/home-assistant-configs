@@ -12,3 +12,17 @@
   optimistic: false
   availability_topic: "shellies/announce"
   payload_available: '{"id":"shellyswitch-32B580"}'
+- platform: mqtt
+  name: "Pokoj Janka"
+  state_topic: "shellies/shellyswitch-5B28DA/roller/0"
+  command_topic: "shellies/shellyswitch-5B28DA/roller/0/command"
+  qos: 2
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_open: "open"
+  state_closed: "close"
+  retain: false
+  optimistic: false
+  availability_topic: "shellies/announce"
+  payload_available: '{"id":"shellyswitch-5B28DA"}'

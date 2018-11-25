@@ -5,3 +5,4 @@ entities:
   - sensor.0x00158d0001e5d112_illuminance
   - binary_sensor.0x00158d0001e5d112_occupancy
   - binary_sensor.0x00158d000208e0c7
+  - cover.pokoj_janka
