@@ -2,3 +2,4 @@ view: yes
 entities:
   - climate.sypialnia
   - cover.sypialnia
+  - group.sypialnia_przelaczniki

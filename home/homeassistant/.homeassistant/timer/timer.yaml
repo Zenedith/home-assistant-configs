@@ -1,0 +1,11 @@
+lazienka:
+  duration: '00:03:00'
+sypialnia:
+  duration: '00:05:00'
+pokoj_janka:
+  duration: '00:05:00'
+korytarz:
+  duration: '00:05:00'
+zigbee_permit_join:
+  name: Time remaining
+  duration: '00:10:00'

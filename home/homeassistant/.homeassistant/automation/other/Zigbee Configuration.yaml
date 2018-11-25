@@ -1,4 +1,4 @@
-  - id: enable_zigbee_join
+  - id: 'Enable zigbee join'
     alias: Enable Zigbee joining
     hide_entity: true
     trigger:
@@ -13,7 +13,8 @@
     - service: timer.start
       data:
         entity_id: timer.zigbee_permit_join
-  - id: disable_zigbee_join
+
+  - id: 'Disable zigbee join'
     alias: Disable Zigbee joining
     trigger:
     - entity_id: input_boolean.zigbee_permit_join
@@ -28,7 +29,8 @@
         entity_id: timer.zigbee_permit_join
       service: timer.cancel
     hide_entity: true
-  - id: disable_zigbee_join_timer
+
+  - id: 'Disable zigbee join timer'
     alias: Disable Zigbee joining by timer
     hide_entity: true
     trigger:
@@ -44,3 +46,7 @@
     - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.zigbee_permit_join
+    - service: notify.mypushbullet
+      data:
+        title: "Zigbee"
+        message: "Permit join is disabled"

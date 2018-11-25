@@ -1,0 +1,64 @@
+- alias: "Światło Jan on"
+  trigger:
+    platform: time
+    at: '16:00:00'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.yeelight_bedside_7c49eb284fda
+  - service: switch.turn_on
+    data:
+      entity_id: switch.swiato_pokoj_janka
+  - service: notify.mypushbullet
+    data:
+      title: "Pokój janka"
+      message: "Światło on"
+
+- alias: "Bedside Jan off"
+  trigger:
+    platform: time
+    at: '07:30:00'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.yeelight_bedside_7c49eb284fda
+
+- alias: "Lampa Jan off"
+  trigger:
+    platform: time
+    at: '22:30:00'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.swiato_pokoj_janka
+
+- alias: 'Włącz światło w łazience gdy otwarte drzwi'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d0001e5d112_occupancy, binary_sensor.0x00158d0001e5d112_occupancy_2
+      to: 'on'
+  condition:
+    - condition: time
+      after: '15:00:00'
+      before: '22:00:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.swiato_pokoj_janka
+    - service: timer.cancel
+      data:
+        entity_id: timer.pokoj_janka
+    - service: timer.start
+      data:
+        entity_id: timer.pokoj_janka
+
+- alias: 'Wyłącz światło w łazience po upływie czasu'
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.pokoj_janka
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.swiato_pokoj_janka

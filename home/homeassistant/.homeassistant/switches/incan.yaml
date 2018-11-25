@@ -1,0 +1,39 @@
+- platform: mqtt
+  name: "Światło toaleta"
+  state_topic: "incan/incan1/POWER1"
+  command_topic: "incan/incan1/cmnd/POWER1"
+  availability_topic: "incan/incan1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Światło Pokój Janka"
+  state_topic: "incan/incan2/POWER1"
+  command_topic: "incan/incan2/cmnd/POWER1"
+  availability_topic: "incan/incan2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+  optimistic: false
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Światło Pokój Janka2"
+  state_topic: "incan/incan2/POWER2"
+  command_topic: "incan/incan2/cmnd/POWER2"
+  availability_topic: "incan/incan2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+  optimistic: false
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false

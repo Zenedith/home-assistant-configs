@@ -1,42 +1,39 @@
-- alias: Listwa RTV off
+- alias: 'Listwa RTV off'
   trigger:
     platform: time
     at: '02:00:00'
   action:
-    - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/sonoff2/cmnd/POWER
-        payload: OFF
+  - service: switch.turn_off
+    data:
+      entity_id: switch.switch.listwa_rtv
 
-- alias: Listwa RTV on
+- alias: 'Listwa RTV on'
   trigger:
     platform: time
-    at: '14:32:00'
+    at: '15:30:00'
   action:
-    - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/sonoff2/cmnd/POWER
-        payload: ON
+  - service: switch.turn_on
+    data:
+      entity_id: switch.switch.listwa_rtv
 
-- alias: Listwa RTV (weekend) on
+- alias: 'Listwa RTV (weekend) on'
   trigger:
     platform: time
     at: '07:32:00'
-  condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
+#  condition:
+#    - condition: time
+#      weekday:
+#        - sat
+#        - sun
   action:
-    - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/sonoff2/cmnd/POWER
-        payload: ON
+  - service: switch.turn_on
+    data:
+      entity_id: switch.switch.listwa_rtv
 
-- alias: Ambient tv on
+- alias: 'Ambient tv on'
   trigger:
     platform: time
-    at: '15:32:00'
+    at: '15:30:00'
   action:
     - service: light.turn_on
       data:
@@ -44,8 +41,12 @@
     - service: light.turn_on
       data:
         entity_id: light.yeelight_strip_7811dce2d84e
+    - service: notify.mypushbullet
+      data:
+        title: "Salon"
+        message: "Ambient on"
 
-- alias: Ambient tv off
+- alias: 'Ambient tv off'
   trigger:
     platform: time
     at: '07:05:00'
@@ -57,17 +58,21 @@
       data:
         entity_id: light.yeelight_strip_7811dce2d84e
 
-- alias: Zmietek start
+- alias: 'Zmietek start'
   trigger:
     platform: time
     at: '11:00:00'
-  condition:
-    - condition: time
-      weekday:
-      - mon
-      - wed
-      - fri
+#  condition:
+#    - condition: time
+#      weekday:
+#      - mon
+#      - wed
+#      - fri
   action:
     - service: vacuum.start
       data:
         entity_id: vacuum.zmietekv2
+    - service: notify.mypushbullet
+      data:
+        title: "Salon"
+        message: "Zmietek start"

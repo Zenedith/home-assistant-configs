@@ -1,0 +1,12 @@
+- platform: "mqtt"
+  name: "0x00158d00021508b4"
+  state_topic: "zigbee2mqtt/0x00158d00021508b4"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: true
+  payload_off: false
+  value_template: "{{ value_json.water_leak }}"
+  device_class: "moisture"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"

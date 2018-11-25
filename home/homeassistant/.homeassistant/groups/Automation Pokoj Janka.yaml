@@ -1,0 +1,5 @@
+  - automation.lampa_jan_off
+  - automation.swiato_jan_on
+  - automation.wyacz_swiato_w_pokoju_janka_po_upywie_czasu
+  - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
+

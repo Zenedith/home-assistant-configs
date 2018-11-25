@@ -112,10 +112,12 @@ ffmpeg:
 #cloud:
 
 camera: !include cameras/dafang.yaml
+timer: !include timer/timer.yaml
 group: !include_dir_named groups
 automation: !include_dir_merge_list automation
 script: !include_dir_named scripts
 sensor: !include_dir_merge_list sensors
+binary_sensor: !include_dir_merge_list binary_sensors
 weblink: !include weblink.yaml
 switch: !include_dir_merge_list switches
 cover: !include cover/shellys.yaml
@@ -123,6 +125,7 @@ input_boolean: !include input_boolean.yaml
 input_select: !include_dir_merge_named input_selects
 
 mqtt:
+  discovery: true
   broker: !secret mqtt_broker
   port: !secret mqtt_port
   username: !secret mqtt_username
@@ -147,6 +150,11 @@ climate:
       sypialnia:
         mac: '00:1A:22:0C:1A:EF'
 
+asuswrt:
+  host: 192.168.1.1
+  username: !secret device_tracker_asus_username
+  password: !secret device_tracker_asus_password
+
 device_tracker:
   - platform: asuswrt
     host: 192.168.1.1
@@ -156,8 +164,3 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
       hide_if_away: true
-
-timer:
-  zigbee_permit_join:
-    name: Time remaining
-    duration: 600

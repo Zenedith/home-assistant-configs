@@ -1,0 +1,71 @@
+- alias: 'Włącz światło w korytarzu gdy ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d000237ad9d_occupancy
+      to: 'on'
+  condition:
+    - condition: time
+      after: '14:00:00'
+      before: '23:59:59'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.korytarz_lampy
+    - service: timer.cancel
+      data:
+        entity_id: timer.korytarz
+    - service: timer.start
+      data:
+        entity_id: timer.korytarz
+
+- alias: 'Wyłącz światło w korytarzu po upływie czasu'
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.korytarz
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: group.korytarz_lampy
+
+- alias: 'Otwarcie drzwi wejściowych'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x00158d00020b7b77_2
+    to: 'on'
+  condition:
+    - condition: time
+      after: '05:00:00'
+      before: '23:59:59'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Korytarz'
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Drzwi wejściowe zostały otwarte.
+    - service: light.turn_on
+      data:
+        entity_id: group.korytarz_lampy
+    - service: timer.cancel
+      data:
+        entity_id: timer.korytarz
+    - service: timer.start
+      data:
+        entity_id: timer.korytarz
+
+- alias: 'Wygaszanie światła korytarz'
+  trigger:
+    platform: time
+    minutes: '/1'
+    seconds: 00
+  condition:
+  - condition: time
+    after: '21:00:00'
+    before: '23:59:00'
+  action:
+  - service: light.turn_on
+    entity_id: light.yeelight_ceiling4_7c49ebb70c4a,light.yeelight_color2_7c49ebb76a3d
+    data_template:
+      brightness: '{{states.light.yeelight_ceiling4_7c49ebb70c4a.attributes.brightness|int - 10}}'
