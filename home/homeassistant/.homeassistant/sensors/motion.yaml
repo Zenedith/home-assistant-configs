@@ -8,3 +8,13 @@
   - "linkquality"
   - "battery"
   - "voltage"
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/0x00158d0001e55705"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "lx"
+  device_class: "illuminance"
+  value_template: "{{ value_json.illuminance }}"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"
