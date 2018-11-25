@@ -1,4 +1,5 @@
 - platform: "mqtt"
+  name: "0x00158d00022cc215_temperature"
   state_topic: "zigbee2mqtt/0x00158d00022cc215"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "°C"
@@ -10,6 +11,7 @@
   - "voltage"
 
 - platform: "mqtt"
+  name: "0x00158d00022cc215_humidity"
   state_topic: "zigbee2mqtt/0x00158d00022cc215"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -21,6 +23,7 @@
   - "voltage"
 
 - platform: "mqtt"
+  name: "0x00158d00022cc215_pressure"
   state_topic: "zigbee2mqtt/0x00158d00022cc215"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "hPa"
