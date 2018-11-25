@@ -2,7 +2,7 @@ view: yes
 entities:
   - climate.pokojjanka
   - group.pokoj_janka_przelaczniki
-  - sensor.0x00158d0001e5d112_illuminance
-  - binary_sensor.0x00158d0001e5d112_occupancy
+  - sensor.0x00158d0001e5d112_illuminance_2
+  - binary_sensor.0x00158d0001e5d112_occupancy_2
   - binary_sensor.0x00158d000208e0c7
   - cover.pokoj_janka
