@@ -1,4 +1,5 @@
 - platform: "mqtt"
+  name: "0x00158d00021508b4"
   state_topic: "zigbee2mqtt/0x00158d00021508b4"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: true
