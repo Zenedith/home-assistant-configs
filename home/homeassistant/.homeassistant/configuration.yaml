@@ -123,7 +123,6 @@ input_boolean: !include input_boolean.yaml
 input_select: !include_dir_merge_named input_selects
 
 mqtt:
-  discovery: true
   broker: !secret mqtt_broker
   port: !secret mqtt_port
   username: !secret mqtt_username
@@ -157,3 +156,8 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
       hide_if_away: true
+
+timer:
+  zigbee_permit_join:
+    name: Time remaining
+    duration: 600
