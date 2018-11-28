@@ -16,3 +16,33 @@ light.yeelight_ceiling4_7c49ebb70c4a:
   friendly_name: Lampa korytarz
 light.yeelight_color2_7c49ebb76a3d:
   friendly_name: Lampa korytarz (drzwi)
+sensor.0x00158d000237ad9d_illuminance:
+  friendly_name: Naświetlenie
+binary_sensor.0x00158d000237ad9d_occupancy:
+  friendly_name: Ruch
+sensor.0x00158d00022cc215_temperature_2:
+  friendly_name: Temperatura
+sensor.0x00158d00022cc215_humidity_2:
+  friendly_name: Wilgotność
+sensor.0x00158d00022cc215_pressure_2:
+  friendly_name: Ciśnienie
+binary_sensor.0x00158d00020b7b77_2:
+  friendly_name: Drzwi
+binary_sensor.0x00158d0001e0a7d3_occupancy:
+  friendly_name: Naświetlenie
+sensor.0x00158d0001e0a7d3_illuminance:
+  friendly_name: Ruch
+sensor.0x00158d0001e5d112_illuminance_2:
+  friendly_name: Naświetlenie
+binary_sensor.0x00158d0001e5d112_occupancy_2:
+  friendly_name: Ruch
+binary_sensor.0x00158d000208e0c7_2:
+  friendly_name: Okno
+binary_sensor.0x00158d00021508b4:
+  friendly_name: Zlew
+binary_sensor.0x00158d000205b35f_2:
+  friendly_name: Drzwi balkonowe
+binary_sensor.0x00158d0001e55705_occupancy:
+  friendly_name: Naświetlenie
+sensor.0x00158d0001e55705_illuminance:
+  friendly_name: Ruch
