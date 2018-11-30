@@ -15,21 +15,11 @@
       data:
         topic: "basic/sonoff-basic-3/cmnd/POWER"
         payload: ""
-
-- alias: "Wszyscy wychodza"
-  trigger:
-    platform: homeassistant
-    event: start
-  action:
-  - service: mqtt.publish
-    data:
-      topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-      payload: ""
-  - service: mqtt.publish
-    data:
-      topic: "zigbee2mqtt/sonoff1/cmnd/POWER"
-      payload: ""
-  - service: mqtt.publish
-    data:
-      topic: "basic/sonoff-basic-3/cmnd/POWER"
-      payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan1/cmnd/POWER1"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan2/cmnd/POWER1"
+        payload: ""
