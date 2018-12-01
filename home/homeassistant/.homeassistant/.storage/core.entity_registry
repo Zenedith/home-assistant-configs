@@ -324,6 +324,42 @@
                 "name": "Zmywarka",
                 "platform": "mqtt",
                 "unique_id": "0x00158d00021508b4_water_leak_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001e55705_occupancy_2",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001e55705_occupancy_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d000237ad9d_occupancy_2",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d000237ad9d_occupancy_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001e55705_illuminance_2",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001e55705_illuminance_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "a82eb70eb6fe4906bf2d93fff27c0503",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d000237ad9d_illuminance_2",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d000237ad9d_illuminance_zigbee2mqtt"
             }
         ]
     },
