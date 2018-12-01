@@ -21,5 +21,5 @@
         payload: ""
     - service: mqtt.publish
       data:
-        topic: "incan/incan2/cmnd/POWER1"
+        topic: "incan/incan2/cmnd/POWER2"
         payload: ""
