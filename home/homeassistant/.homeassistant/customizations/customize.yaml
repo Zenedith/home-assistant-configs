@@ -19,7 +19,7 @@ light.yeelight_color2_7c49ebb76a3d:
 sensor.0x00158d000237ad9d_illuminance:
   friendly_name: Naświetlenie
 binary_sensor.0x00158d000237ad9d_occupancy:
-  friendly_name: Ruch
+  friendly_name: Ruch1
 sensor.0x00158d00022cc215_temperature_2:
   friendly_name: Temperatura
 sensor.0x00158d00022cc215_humidity_2:
@@ -29,13 +29,13 @@ sensor.0x00158d00022cc215_pressure_2:
 binary_sensor.0x00158d00020b7b77_2:
   friendly_name: Drzwi
 binary_sensor.0x00158d0001e0a7d3_occupancy:
-  friendly_name: Ruch
+  friendly_name: Ruch2
 sensor.0x00158d0001e0a7d3_illuminance:
   friendly_name: Naświetlenie
 sensor.0x00158d0001e5d112_illuminance_2:
   friendly_name: Naświetlenie
 binary_sensor.0x00158d0001e5d112_occupancy_2:
-  friendly_name: Ruch
+  friendly_name: Ruch3
 binary_sensor.0x00158d000208e0c7_2:
   friendly_name: Okno
 binary_sensor.0x00158d00021508b4:
@@ -43,6 +43,6 @@ binary_sensor.0x00158d00021508b4:
 binary_sensor.0x00158d000205b35f_2:
   friendly_name: Drzwi balkonowe
 binary_sensor.0x00158d0001e55705_occupancy:
-  friendly_name: Ruch
+  friendly_name: Ruch4
 sensor.0x00158d0001e55705_illuminance:
   friendly_name: Naświetlenie
