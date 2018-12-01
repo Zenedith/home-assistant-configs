@@ -1,4 +1,2 @@
-- sensor.xiaomi_mi_r3g_wireless_router_kbytesec_sent
-- sensor.xiaomi_mi_r3g_wireless_router_packetssec_sent
-- sensor.xiaomi_mi_r3g_wireless_router_packets_sent
-#- sensor.xiaomi_mi_r3g_wireless_router_bytes_received
+- sensor.asuswrt_upload
+- sensor.asuswrt_upload_speed
