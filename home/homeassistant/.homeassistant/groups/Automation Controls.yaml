@@ -8,7 +8,7 @@ entities:
   - automation.listwa_rtv_off
   - automation.listwa_rtv_weekend_on
   - automation.zmietek_start
-  - automation.swiatlo_jan_on
+  - automation.swiato_jan_on
   - automation.bedside_jan_off
   - automation.lampa_jan_off
   - automation.gone_for_8_minutes
