@@ -1,4 +1,4 @@
-- alias: "Lampka Jan on"
+- alias: "Światło Jan on"
   trigger:
     platform: time
     at: '16:00:00'
@@ -6,7 +6,10 @@
     - service: light.turn_on
       data:
         entity_id: light.yeelight_bedside_7c49eb284fda
-- alias: "Lampka Jan off"
+    - service: switch.turn_on
+      data:
+        entity_id: switch.swiato_pokoj_janka
+- alias: "Bedside Jan off"
   trigger:
     platform: time
     at: '07:30:00'
@@ -14,3 +17,11 @@
     - service: light.turn_off
       data:
         entity_id: light.yeelight_bedside_7c49eb284fda
+- alias: "Lampa Jan off"
+  trigger:
+    platform: time
+    at: '22:30:00'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.swiato_pokoj_janka

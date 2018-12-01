@@ -10,7 +10,7 @@
   payload_not_available: "Offline"
   retain: false
 - platform: mqtt
-  name: "Światło Pokój Janka1"
+  name: "Światło Pokój Janka"
   state_topic: "incan/incan2/POWER1"
   command_topic: "incan/incan2/cmnd/POWER1"
   availability_topic: "incan/incan2/LWT"
