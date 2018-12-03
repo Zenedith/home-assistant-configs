@@ -1,0 +1,35 @@
+- alias: 'Listwa sypialnia off'
+  trigger:
+    platform: time
+    at: '03:00:00'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.listwa_sypialnia
+
+- alias: 'Listwa sypialnia on'
+  trigger:
+    platform: time
+    at: '20:00:00'
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.listwa_sypialnia
+  - service: notify.mypushbullet
+    data:
+      title: "Listwa sypialnia"
+      message: "Enabled"
+
+- alias: 'Listwa sypialnia (weekend) on'
+  trigger:
+    platform: time
+    at: '08:00:00'
+  condition:
+  - condition: time
+    weekday:
+    - sat
+    - sun
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.listwa_sypialnia
