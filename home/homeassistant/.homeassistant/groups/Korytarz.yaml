@@ -1,9 +1,10 @@
 view: yes
 entities:
   - group.indoor_weather
-  - sensor.0x00158d00022cc215_temperature_2
-  - sensor.0x00158d00022cc215_humidity_2
-  - sensor.0x00158d00022cc215_pressure_2
+#  - sensor.0x00158d00022cc215_temperature_2
+#  - sensor.0x00158d00022cc215_humidity_2
+#  - sensor.0x00158d00022cc215_pressure_2
+  - group.indoor_weather
   - binary_sensor.0x00158d00020b7b77_2
   - binary_sensor.0x00158d0001e0a7d3_occupancy
   - sensor.0x00158d0001e0a7d3_illuminance
