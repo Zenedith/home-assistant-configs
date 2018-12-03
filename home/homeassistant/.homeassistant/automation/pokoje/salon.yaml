@@ -20,11 +20,11 @@
   trigger:
     platform: time
     at: '07:32:00'
-  condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
+#  condition:
+#    - condition: time
+#      weekday:
+#        - sat
+#        - sun
   action:
   - service: switch.turn_on
     data:
@@ -62,12 +62,12 @@
   trigger:
     platform: time
     at: '11:00:00'
-  condition:
-    - condition: time
-      weekday:
-      - mon
-      - wed
-      - fri
+#  condition:
+#    - condition: time
+#      weekday:
+#      - mon
+#      - wed
+#      - fri
   action:
     - service: vacuum.start
       data:
