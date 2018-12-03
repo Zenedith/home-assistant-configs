@@ -18,6 +18,6 @@
     event_data:
       entity_id: timer.korytarz
   action:
-    - service: light.turn_on
+    - service: light.turn_off
       data:
         entity_id: group.korytarz_lampy
