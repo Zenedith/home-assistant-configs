@@ -1,8 +1,15 @@
-- alias: 'Włącz światło w korytarzu gdy ruch i otwarte drzwi'
+- alias: 'Włącz światło w korytarzu gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d000237ad9d_occupancy, binary_sensor.0x00158d00020b7b77_2
+      entity_id: binary_sensor.0x00158d000237ad9d_occupancy
       to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: sun
+        before: sunrise
   action:
     - service: light.turn_on
       data:
@@ -21,3 +28,26 @@
     - service: light.turn_off
       data:
         entity_id: group.korytarz_lampy
+
+- alias: 'Otwarcie drzwi wejściowych'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x00158d00020b7b77_2
+    to: 'on'
+  condition:
+    condition: time
+    after: '05:00:00'
+    before: '24:00:00'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Korytarz'
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Drzwi wejściowe zostały otwarte.
+    - service: light.turn_on
+      data:
+        entity_id: group.korytarz_lampy
+    - service: timer.start
+      data:
+        entity_id: timer.korytarz

@@ -31,3 +31,13 @@
       data:
         topic: "incan/incan2/cmnd/POWER2"
         payload: ""
+
+- alias: "Update notifications"
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'New Home Assistant Release'
+        message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
