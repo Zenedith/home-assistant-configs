@@ -112,6 +112,7 @@ ffmpeg:
 #cloud:
 
 camera: !include cameras/dafang.yaml
+timer: !include timer/timer.yaml
 group: !include_dir_named groups
 automation: !include_dir_merge_list automation
 script: !include_dir_named scripts
@@ -163,8 +164,3 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
       hide_if_away: true
-
-timer:
-  zigbee_permit_join:
-    name: Time remaining
-    duration: 600
