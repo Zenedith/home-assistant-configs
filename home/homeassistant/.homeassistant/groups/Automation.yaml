@@ -1,4 +1,6 @@
 view: yes
 icon: mdi:robot
 entities:
- - group.automation_controls
+ - group.automation_listwy
+ - group.automation_korytarz
+ - group.automation_salon
