@@ -24,11 +24,11 @@
   trigger:
     platform: time
     at: '08:00:00'
-#  condition:
-#    - condition: time
-#      weekday:
-#      - sat
-#      - sun
+  condition:
+    - condition: time
+      weekday:
+      - sat
+      - sun
   action:
     - service: switch.turn_off
       data:
@@ -39,13 +39,13 @@
     - platform: state
       entity_id: binary_sensor.0x00158d0001e5d112_occupancy, binary_sensor.0x00158d0001e5d112_occupancy_2
       to: 'on'
-#  condition:
-#    condition: or
-#    conditions:
-#      - condition: sun
-#        after: sunset
-#      - condition: sun
-#        before: sunrise
+  condition:
+    condition: or
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: sun
+        before: sunrise
   action:
     - service: light.turn_on
       data:
