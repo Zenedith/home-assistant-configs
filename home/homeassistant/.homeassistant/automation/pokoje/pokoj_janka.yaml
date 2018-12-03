@@ -1,0 +1,23 @@
+- alias: 'Włącz światło w pokoju Janka gdy ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d0001e5d112_occupancy_2
+      to: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: switch.swiato_pokoj_janka
+    - service: timer.start
+      data:
+        entity_id: timer.pokoj_janka
+
+- alias: 'Wyłącz światło w pokoju Janka po upływie czasu'
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.pokoj_janka
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: switch.swiato_pokoj_janka

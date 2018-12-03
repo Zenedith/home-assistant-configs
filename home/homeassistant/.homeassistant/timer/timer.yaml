@@ -1,5 +1,7 @@
+pokoj_janka:
+  duration: '00:05:00'
 korytarz:
-  duration: '00:10:00'
+  duration: '00:05:00'
 zigbee_permit_join:
   name: Time remaining
   duration: '00:10:00'
