@@ -3,10 +3,10 @@
     - platform: state
       entity_id: group.all_devices
       to: 'not_home'
-  condition:
-    - condition: state
-      entity_id: input_boolean.just_returned_home
-      state: 'off'
+#  condition:
+#    - condition: state
+#      entity_id: input_boolean.just_returned_home
+#      state: 'off'
   action:
     - service: input_boolean.turn_on
       data:
