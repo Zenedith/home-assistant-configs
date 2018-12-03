@@ -1,6 +1,5 @@
-timer:
-  korytarz:
+- korytarz:
     duration: '00:10:00'
-  zigbee_permit_join:
+- zigbee_permit_join:
     name: Time remaining
     duration: '00:10:00'
