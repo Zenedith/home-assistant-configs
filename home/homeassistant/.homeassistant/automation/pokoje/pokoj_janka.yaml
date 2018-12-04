@@ -11,6 +11,9 @@
     - service: switch.turn_on
       data:
         entity_id: switch.swiato_pokoj_janka
+    - service: timer.cancel
+      data:
+        entity_id: timer.pokoj_janka
     - service: timer.start
       data:
         entity_id: timer.pokoj_janka
