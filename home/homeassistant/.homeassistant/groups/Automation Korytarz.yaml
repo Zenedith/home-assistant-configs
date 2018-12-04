@@ -1,9 +1,3 @@
-  - automation.gone_for_8_minutes
-  - automation.home_for_8_minutes
-  - automation.left_home
-  - automation.left_home__set_status
-  - automation.returned_home
-  - automation.returned_home__set_status
   - automation.wszyscy_wychodza
   - automation.wyacz_swiato_w_korytarzu_po_upywie_czasu
   - automation.wacz_swiato_w_korytarzu_gdy_ruch
