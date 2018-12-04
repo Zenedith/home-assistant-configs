@@ -1,4 +1,4 @@
-- alias: 'Włącz światło w pokoju Janka gdy ruch'
+- alias: 'Włącz światło w łazience gdy otwarte drzwi'
   trigger:
     - platform: state
       entity_id: binary_sensor.0x00158d0001e5d112_occupancy, binary_sensor.0x00158d0001e5d112_occupancy_2
@@ -8,20 +8,20 @@
       after: '15:00:00'
       before: '22:00:00'
   action:
-    - service: light.turn_on
+    - service: switch.turn_on
       data:
         entity_id: switch.swiato_pokoj_janka
     - service: timer.start
       data:
         entity_id: timer.pokoj_janka
 
-- alias: 'Wyłącz światło w pokoju Janka po upływie czasu'
+- alias: 'Wyłącz światło w łazience po upływie czasu'
   trigger:
     platform: event
     event_type: timer.finished
     event_data:
       entity_id: timer.pokoj_janka
   action:
-    - service: light.turn_off
+    - service: switch.turn_off
       data:
         entity_id: switch.swiato_pokoj_janka

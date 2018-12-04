@@ -48,3 +48,5 @@ binary_sensor.0x00158d0001e55705_occupancy:
   friendly_name: Ruch4
 sensor.0x00158d0001e55705_illuminance:
   friendly_name: Naświetlenie
+binary_sensor.0x00158d00024e42b5:
+  friendly_name: Drzwi łazienka
