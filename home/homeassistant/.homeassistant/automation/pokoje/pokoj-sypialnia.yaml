@@ -50,6 +50,9 @@
     - service: light.turn_on
       data:
         entity_id: light.yeelight_ceiling_7811dcab824a
+    - service: timer.cancel
+      data:
+        entity_id: timer.sypialnia
     - service: timer.start
       data:
         entity_id: timer.sypialnia
