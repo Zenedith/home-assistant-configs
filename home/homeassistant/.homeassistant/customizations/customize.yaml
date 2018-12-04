@@ -22,11 +22,11 @@ sensor.0x00158d000237ad9d_illuminance:
   friendly_name: Naświetlenie
 binary_sensor.0x00158d000237ad9d_occupancy:
   friendly_name: Ruch1
-sensor.0x00158d00022cc215_temperature_2:
+sensor.0x00158d00022cc215_temperature:
   friendly_name: Temperatura
-sensor.0x00158d00022cc215_humidity_2:
+sensor.0x00158d00022cc215_humidity:
   friendly_name: Wilgotność
-sensor.0x00158d00022cc215_pressure_2:
+sensor.0x00158d00022cc215_pressure:
   friendly_name: Ciśnienie
 binary_sensor.0x00158d00020b7b77_2:
   friendly_name: Drzwi
