@@ -66,6 +66,6 @@
     before: '21:00:00'
   action:
   - service: light.turn_on
-    entity_id: group.korytarz_lampy
+    entity_id: light.yeelight_ceiling4_7c49ebb70c4a,light.yeelight_color2_7c49ebb76a3d
     data_template:
-      brightness: '{{states.light.yeelight_ceiling4_7c49ebb70c4a.attributes.brightness - 10}}'
+      brightness: '{{states.light.yeelight_ceiling4_7c49ebb70c4a.attributes.brightness|int - 10}}'
