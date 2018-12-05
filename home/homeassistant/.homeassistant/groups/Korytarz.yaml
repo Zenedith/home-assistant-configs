@@ -6,4 +6,3 @@ entities:
   - binary_sensor.0x00158d000237ad9d_occupancy
   - sensor.0x00158d000237ad9d_illuminance
   - group.korytarz_lampy
-  - timer.korytarz
