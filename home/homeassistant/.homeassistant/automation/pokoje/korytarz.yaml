@@ -4,12 +4,9 @@
       entity_id: binary_sensor.0x00158d000237ad9d_occupancy
       to: 'on'
   condition:
-    condition: or
-    conditions:
-      - condition: sun
-        after: sunset
-      - condition: sun
-        before: sunrise
+    - condition: time
+      after: '14:00:00'
+      before: '23:59:59'
   action:
     - service: light.turn_on
       data:
@@ -57,3 +54,17 @@
     - service: timer.start
       data:
         entity_id: timer.korytarz
+
+- alias: 'Wygaszanie światła korytarz'
+  trigger:
+    platform: time
+    minutes: '/1'
+    seconds: 00
+  condition:
+  - condition: time
+    after: '20:00:00'
+    before: '21:00:00'
+- service: light.turn_on
+    entity_id: group.korytarz_lampy
+    data_template:
+      brightness: '{{states.light.yeelight_ceiling4_7c49ebb70c4a.attributes.brightness - 10}}'
