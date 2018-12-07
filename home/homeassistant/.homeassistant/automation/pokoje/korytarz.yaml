@@ -55,7 +55,7 @@
       data:
         entity_id: timer.korytarz
 
-- alias: 'Wygaszanie światła korytarz 1 (state on)'
+- alias: 'Wygaszanie światła korytarz'
   trigger:
     platform: time
     minutes: '/1'
@@ -72,22 +72,3 @@
     entity_id: light.yeelight_color2_7c49ebb76a3d
     data_template:
       brightness: '{{states.light.yeelight_color2_7c49ebb76a3d.attributes.brightness|int - 10}}'
-
-- alias: 'Wygaszanie światła korytarz 2 (state on)'
-  trigger:
-    platform: time
-    minutes: '/1'
-    seconds: 00
-  condition:
-    - condition: state
-      entity_id: light.yeelight_ceiling4_7c49ebb70c4a
-      state: 'on'
-    - condition: time
-      after: '21:00:00'
-      before: '23:59:00'
-  action:
-    - service: light.turn_on
-      entity_id: light.yeelight_ceiling4_7c49ebb70c4a
-      data_template:
-        brightness: '{{states.light.yeelight_ceiling4_7c49ebb70c4a.attributes.brightness|int - 10}}'
-        color_temp: 258
