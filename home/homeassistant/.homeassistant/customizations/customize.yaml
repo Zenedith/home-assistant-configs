@@ -14,8 +14,10 @@ light.yeelight_ceiling_7811dcab824a:
   friendly_name: Lampa Sypialnia
 light.yeelight_ceiling_7811dcab68e0:
   friendly_name: Lampa Łazienka
+  icon: mdi:toilet
 light.yeelight_ceiling4_7c49ebb70c4a:
   friendly_name: Lampa korytarz
+  supported_features: 3
 light.yeelight_color2_7c49ebb76a3d:
   friendly_name: Lampa korytarz (drzwi)
 sensor.0x00158d000237ad9d_illuminance:
