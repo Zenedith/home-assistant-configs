@@ -32,7 +32,7 @@
     data:
       entity_id: switch.swiato_pokoj_janka
 
-- alias: 'Włącz światło w łazience gdy otwarte drzwi'
+- alias: 'Włącz światło w pokoju Janka gdy otwarte drzwi'
   trigger:
     - platform: state
       entity_id: binary_sensor.0x00158d0001e5d112_occupancy, binary_sensor.0x00158d0001e5d112_occupancy_2
@@ -52,7 +52,7 @@
       data:
         entity_id: timer.pokoj_janka
 
-- alias: 'Wyłącz światło w łazience po upływie czasu'
+- alias: 'Wyłącz światło w pokoju Janka po upływie czasu'
   trigger:
     platform: event
     event_type: timer.finished

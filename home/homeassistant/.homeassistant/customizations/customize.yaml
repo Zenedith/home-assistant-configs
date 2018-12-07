@@ -21,9 +21,9 @@ light.yeelight_ceiling4_7c49ebb70c4a:
 light.yeelight_color2_7c49ebb76a3d:
   friendly_name: Lampa korytarz (drzwi)
 sensor.0x00158d000237ad9d_illuminance:
-  friendly_name: Naświetlenie
+  friendly_name: Naświetlenie Korytarz
 binary_sensor.0x00158d000237ad9d_occupancy:
-  friendly_name: Ruch1
+  friendly_name: Ruch Korytarz
 sensor.0x00158d00022cc215_temperature:
   friendly_name: Temperatura
 sensor.0x00158d00022cc215_humidity:
@@ -33,13 +33,13 @@ sensor.0x00158d00022cc215_pressure:
 binary_sensor.0x00158d00020b7b77_2:
   friendly_name: Drzwi
 binary_sensor.0x00158d0001e0a7d3_occupancy:
-  friendly_name: Ruch2
+  friendly_name: Ruch Łazienka
 sensor.0x00158d0001e0a7d3_illuminance:
-  friendly_name: Naświetlenie
+  friendly_name: Naświetlenie Łazienka
 sensor.0x00158d0001e5d112_illuminance_2:
-  friendly_name: Naświetlenie
+  friendly_name: Naświetlenie u Janka
 binary_sensor.0x00158d0001e5d112_occupancy:
-  friendly_name: Ruch3
+  friendly_name: Ruch u Janka
 binary_sensor.0x00158d000208e0c7_2:
   friendly_name: Okno
 binary_sensor.0x00158d00021508b4:

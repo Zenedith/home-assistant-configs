@@ -37,7 +37,7 @@
 - alias: 'Włącz światło w sypialni gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e5d112_occupancy, binary_sensor.0x00158d0001e5d112_occupancy_2
+      entity_id: binary_sensor.0x00158d0001e55705_occupancy, binary_sensor.0x00158d0001e55705_occupancy_2
       to: 'on'
   condition:
     condition: or
