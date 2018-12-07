@@ -2,3 +2,5 @@
 - light.yeelight_strip_7811dce2d84e
 - switch.listwa_rtv
 - switch.kamera
+- switch.moonlight
+- input_boolean.moonlight_mode
