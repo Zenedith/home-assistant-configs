@@ -5,7 +5,7 @@ mqtt:
   base_topic: zigbee2mqtt
   server: 'mqtt://192.168.1.162:1883'
 serial:
-  port: /dev/ttyACM0
+  port: /dev/ttyAMA0
   disable_led: true
 advanced:
   log_level: debug
