@@ -32,5 +32,5 @@ devices:
     friendly_name: 'salon_drzwi_balkonowe'
     retain: false
   '0x00158d000237ad9d':
-    friendly_name: '0x00158d000237ad9d'
+    friendly_name: 'korytarz_ruch'
     retain: false
