@@ -3,10 +3,6 @@
     - platform: state
       entity_id: binary_sensor.0x00158d000237ad9d_occupancy
       to: 'on'
-  condition:
-    - condition: time
-      after: '05:00:00'
-      before: '23:59:59'
   action:
     - service: light.turn_on
       data:
