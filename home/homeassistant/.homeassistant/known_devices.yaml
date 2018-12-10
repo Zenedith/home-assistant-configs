@@ -320,3 +320,11 @@ c49ded568da7:
   name: 807d3a5b28da
   picture:
   track: false
+
+404e3690c87a:
+  hide_if_away: true
+  icon:
+  mac: 40:4E:36:90:C8:7A
+  name: 404e3690c87a
+  picture:
+  track: false
