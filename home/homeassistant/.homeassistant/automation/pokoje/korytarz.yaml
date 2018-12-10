@@ -68,3 +68,17 @@
     entity_id: light.yeelight_color2_7c49ebb76a3d
     data_template:
       brightness: '{{states.light.yeelight_color2_7c49ebb76a3d.attributes.brightness|int - 10}}'
+
+- alias: "Chillout mode"
+  trigger:
+    - platform: state
+      entity_id: input_boolean.jasiu_chillout
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.just_left
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.moonlight

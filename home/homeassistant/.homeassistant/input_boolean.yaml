@@ -12,3 +12,5 @@ zigbee_permit_join:
 moonlight_mode:
   name: Ceiling Light moonlight indicator
   icon: mdi:weather-night
+jasiu_chillout:
+  name: Jasiu Chillout
