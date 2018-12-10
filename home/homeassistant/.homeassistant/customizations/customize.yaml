@@ -44,7 +44,7 @@ binary_sensor.0x00158d000208e0c7_2:
   friendly_name: Okno
 binary_sensor.0x00158d00021508b4:
   friendly_name: Zmywarka
-binary_sensor.0x00158d000205b35f_2:
+binary_sensor.0x00158d000205b35f:
   friendly_name: Drzwi balkonowe
 binary_sensor.0x00158d0001e55705_occupancy:
   friendly_name: Ruch w sypialni

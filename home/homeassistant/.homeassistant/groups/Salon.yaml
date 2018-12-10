@@ -1,6 +1,6 @@
 view: yes
 entities:
-  - binary_sensor.0x00158d000205b35f_2
+  - binary_sensor.0x00158d000205b35f
   - media_player.salon
   - vacuum.zmietekv2
   - group.salon_przelaczniki
