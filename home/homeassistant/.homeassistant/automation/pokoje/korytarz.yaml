@@ -82,3 +82,9 @@
     - service: switch.turn_on
       data:
         entity_id: switch.moonlight
+    - service: light.turn_on
+      entity_id: light.yeelight_color2_7c49ebb76a3d
+      data_template:
+        brightness: 10
+    - service: light.turn_off
+      entity_id: light.yeelight_color2_7c49ebb76a3d
