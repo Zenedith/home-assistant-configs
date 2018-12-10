@@ -312,3 +312,11 @@ c49ded568da7:
   name: 7c49ebb76a3d
   picture:
   track: false
+
+807d3a5b28da:
+  hide_if_away: true
+  icon:
+  mac: 80:7D:3A:5B:28:DA
+  name: 807d3a5b28da
+  picture:
+  track: false

@@ -3,36 +3,44 @@ permit_join: true
 include_device_information: true
 mqtt:
   base_topic: zigbee2mqtt
-  server: mqtt://192.168.1.162:1883
+  server: 'mqtt://192.168.1.162:1883'
+  user: zigbee2mqtt
+  password: matekzene
 serial:
   port: /dev/ttyAMA0
   disable_led: true
 advanced:
   log_level: debug
 devices:
-  0x00158d0001e0a7d3:
+  '6066005681940435':
     friendly_name: lazienka_ruch
     retain: false
-  0x00158d00022cc215:
+  '6066005686927893':
     friendly_name: korytarz_temperature
     retain: false
-  0x00158d0001e5d112:
+  '6066005682278674':
     friendly_name: pokoj_janka
     retain: false
-  0x00158d000208e0c7:
+  '6066005684576455':
     friendly_name: pokoj_janka_okno
     retain: false
-  0x00158d00020b7b77:
+  '6066005684747127':
     friendly_name: korzytarz_drzwi_wejsciowe
     retain: false
-  0x00158d0001e55705:
+  '6066005682247429':
     friendly_name: sypialnia_ruch
     retain: false
-  0x00158d000205b35f:
+  '6066005684368223':
     friendly_name: salon_drzwi_balkonowe
     retain: false
-  0x00158d000237ad9d:
+  '6066005687643549':
     friendly_name: korytarz_ruch
     retain: false
-  0x00158d00024e42b5:
+  '6066005689123509':
     friendly_name: lazienka__drzwi
+  '0x00158d000205b35f':
+    friendly_name: '0x00158d000205b35f'
+    retain: false
+  '0x00158d0002b52fd0':
+    friendly_name: toaleta_drzwi
+    retain: false
