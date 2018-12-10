@@ -6,9 +6,6 @@
   - service: light.turn_on
     data:
       entity_id: light.yeelight_bedside_7c49eb284fda
-  - service: switch.turn_on
-    data:
-      entity_id: switch.swiato_pokoj_janka
   - service: notify.mypushbullet
     data:
       title: "Pokój janka"
