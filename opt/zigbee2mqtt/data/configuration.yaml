@@ -11,10 +11,10 @@ advanced:
   log_level: debug
 devices:
   '0x00158d0001e0a7d3':
-    friendly_name: 'lazienka_ruch'
+    friendly_name: lazienka_ruch
     retain: false
   '0x00158d00022cc215':
-    friendly_name: 'korytarz_temperature'
+    friendly_name: korytarz_temperature
     retain: false
   '0x00158d0001e5d112':
     friendly_name: 'pokoj_janka'
