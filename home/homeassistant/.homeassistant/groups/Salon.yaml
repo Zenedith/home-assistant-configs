@@ -4,4 +4,5 @@ entities:
   - media_player.salon
   - vacuum.zmietekv2
   - group.salon_przelaczniki
+  - group.salon_lampy
   - group.dafang

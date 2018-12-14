@@ -52,3 +52,11 @@ sensor.0x00158d0001e55705_illuminance:
   friendly_name: Naświetlenie w sypialni
 binary_sensor.0x00158d00024e42b5:
   friendly_name: Drzwi łazienka
+light.yeelight_color2_04cf8c763997:
+  friendly_name: Salon 1
+light.yeelight_color2_04cf8c7bf2b3:
+  friendly_name: Salon 2
+light.yeelight_color2_04cf8c84a3ce:
+  friendly_name: Salon 3
+light.yeelight_color2_04cf8c7cc549:
+  friendly_name: Salon 4
