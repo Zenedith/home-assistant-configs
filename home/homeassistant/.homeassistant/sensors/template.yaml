@@ -1,0 +1,22 @@
+- platform: template
+  sensors:
+    lazienka_ruch_batt:
+      value_template: '{{ sensor.0x00158d0001e0a7d3_illuminance.battery }}'
+      friendly_name: 'Łazienka ruch'
+      unit_of_measurement: '%'
+    sypialnia_ruch_batt:
+      value_template: '{{ sensor.0x00158d0001e55705_illuminance.battery }}'
+      friendly_name: 'Sypialnia ruch'
+      unit_of_measurement: '%'
+    pokoj_janka_ruch_batt:
+      value_template: '{{ sensor.0x00158d0001e5d112_illuminance.battery }}'
+      friendly_name: 'Pokój Janka ruch'
+      unit_of_measurement: '%'
+    korytarz_temp_batt:
+      value_template: '{{ sensor.0x00158d00022cc215_temperature.battery }}'
+      friendly_name: 'Korytarz temperatura'
+      unit_of_measurement: '%'
+    korytarz_ruch_batt:
+      value_template: '{{ sensor.0x00158d000237ad9d_illuminance.battery }}'
+      friendly_name: 'Korytarz ruch'
+      unit_of_measurement: '%'

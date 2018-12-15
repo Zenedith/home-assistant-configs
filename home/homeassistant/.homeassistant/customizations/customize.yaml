@@ -30,17 +30,17 @@ sensor.0x00158d00022cc215_humidity:
   friendly_name: Wilgotność
 sensor.0x00158d00022cc215_pressure:
   friendly_name: Ciśnienie
-binary_sensor.0x00158d00020b7b77_2:
+binary_sensor.0x00158d00020b7b77:
   friendly_name: Drzwi
 binary_sensor.0x00158d0001e0a7d3_occupancy:
   friendly_name: Ruch Łazienka
 sensor.0x00158d0001e0a7d3_illuminance:
   friendly_name: Naświetlenie Łazienka
-sensor.0x00158d0001e5d112_illuminance_2:
+sensor.0x00158d0001e5d112_illuminance:
   friendly_name: Naświetlenie u Janka
 binary_sensor.0x00158d0001e5d112_occupancy:
   friendly_name: Ruch u Janka
-binary_sensor.0x00158d000208e0c7_2:
+binary_sensor.0x00158d000208e0c7:
   friendly_name: Okno
 binary_sensor.0x00158d00021508b4:
   friendly_name: Zmywarka

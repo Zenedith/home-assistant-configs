@@ -1,6 +1,6 @@
 view: yes
 entities:
-  - binary_sensor.0x00158d00020b7b77_2
+  - binary_sensor.0x00158d00020b7b77
   - binary_sensor.0x00158d000237ad9d_occupancy
   - sensor.0x00158d000237ad9d_illuminance
   - group.korytarz_lampy

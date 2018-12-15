@@ -5,7 +5,6 @@ cards:
     title: Korytarz
     show_header_toggle: true
     entities:
-      - automation.wszyscy_wychodza
       - automation.wyacz_swiato_w_korytarzu_po_upywie_czasu
       - automation.wacz_swiato_w_korytarzu_gdy_ruch
       - automation.wygaszanie_swiata_korytarz

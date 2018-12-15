@@ -11,7 +11,7 @@
   - "battery"
   - "voltage"
 - platform: "mqtt"
-  name: "0x00158d00020b7b77_2"
+  name: "0x00158d00020b7b77"
   state_topic: "zigbee2mqtt/0x00158d00020b7b77"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false
@@ -23,7 +23,7 @@
   - "battery"
   - "voltage"
 - platform: "mqtt"
-  name: "0x00158d000208e0c7_2"
+  name: "0x00158d000208e0c7"
   state_topic: "zigbee2mqtt/0x00158d000208e0c7"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false

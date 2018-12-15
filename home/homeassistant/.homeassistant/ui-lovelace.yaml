@@ -1,12 +1,6 @@
-title: Bulock Home
+title: Zene Home
 views:
   - !include lovelace/default_view.yaml
   - !include lovelace/other_view.yaml
   - !include lovelace/weather_view.yaml
   - !include lovelace/automation_view.yaml
-
-resources:
-  - url: /local/lovelace/mini-media-player/mini-media-player.js?v=0.8.7
-    type: module
-  - url: /local/lovelace/lovelace-slider-entity-row/slider-entity-row.js?v=1
-    type: js

@@ -28,7 +28,7 @@
 - alias: 'Otwarcie drzwi wejściowych'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x00158d00020b7b77_2
+    entity_id: binary_sensor.0x00158d00020b7b77
     to: 'on'
   condition:
     - condition: time
