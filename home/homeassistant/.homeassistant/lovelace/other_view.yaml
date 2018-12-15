@@ -1,0 +1,20 @@
+title: Other
+cards:
+  - type: entities
+    title: Battery Levels
+    show_header_toggle: true
+    entities:
+      - entity: binary_sensor.toaleta_drzwi_batt
+        name: Toaleta drzwi
+        icon: mdi:battery
+      - entity: sensor.0x00158d0001e55705_batt
+        name: Sypialnia
+        icon: mdi:battery
+
+  - type: entities
+    title: Internet
+    show_header_toggle: true
+    entities:
+      - entity: sensor.speedtest_ping
+        name: Ping
+        icon: mdi:pulse

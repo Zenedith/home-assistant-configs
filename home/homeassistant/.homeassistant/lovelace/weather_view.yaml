@@ -1,0 +1,26 @@
+title: Weather
+icon: mdi:weather-cloudy
+cards:
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## Indoors
+    - type: sensor
+      entity: sensor.0x00158d00022cc215_temperature
+    - type: sensor
+      entity: sensor.0x00158d00022cc215_humidity
+      line_color: "#3498db"
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## Outdoors
+    - type: weather-forecast
+      entity: weather.main_floor
+    - type: picture-entity
+      title: Radar
+      entity: camera.meteo
+      camera_image: camera.meteo
+      show_info: true
+      tap_action: dialog

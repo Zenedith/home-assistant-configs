@@ -14,6 +14,5 @@ group.azienka:
   order: 7
 group.toaleta:
   order: 8
-group.other:
+group.automation:
   order: 9
-

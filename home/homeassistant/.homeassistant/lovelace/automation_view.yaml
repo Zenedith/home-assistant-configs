@@ -1,0 +1,53 @@
+title: Automation
+icon: mdi:robot
+cards:
+  - type: entities
+    title: Korytarz
+    show_header_toggle: true
+    entities:
+      - automation.wszyscy_wychodza
+      - automation.wyacz_swiato_w_korytarzu_po_upywie_czasu
+      - automation.wacz_swiato_w_korytarzu_gdy_ruch
+      - automation.wygaszanie_swiata_korytarz
+  - type: entities
+    title: Listwy
+    show_header_toggle: true
+    entities:
+      - automation.listwa_rtv_weekend_on
+      - automation.listwa_rtv_off
+      - automation.listwa_rtv_on
+      - automation.listwa_sypialnia_weekend_on
+      - automation.listwa_sypialnia_off
+      - automation.listwa_sypialnia_on
+  - type: entities
+    title: Pokój Janka
+    show_header_toggle: true
+    entities:
+      - automation.lampa_jan_off
+      - automation.swiato_jan_on
+      - automation.wyacz_swiato_w_pokoju_janka_po_upywie_czasu
+      - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
+  - type: entities
+    title: Salon
+    show_header_toggle: true
+    entities:
+      - automation.ambient_tv_on
+      - automation.ambient_tv_off
+      - automation.dafang_motion_detected
+      - automation.listwa_rtv_on
+      - automation.listwa_rtv_off
+      - automation.listwa_rtv_weekend_on
+      - automation.zmietek_start
+  - type: entities
+    title: Sypialnia
+    show_header_toggle: true
+    entities:
+      - automation.wyacz_swiato_w_sypialni_po_upywie_czasu
+      - automation.wacz_swiato_w_sypialni_gdy_ruch
+  - type: entities
+    title: Łazienka
+    show_header_toggle: true
+    entities:
+      - automation.wyacz_swiato_w_azience_po_upywie_czasu
+      - automation.wacz_swiato_w_azience_gdy_otwarte_drzwi
+
