@@ -17,8 +17,6 @@ cards:
       content: >
         ## Outdoors
     - type: entities
-        title: Korytarz
-        show_header_toggle: true
         entities:
           - sun.sun
           - sensor.dark_sky_humidity
