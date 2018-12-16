@@ -18,13 +18,13 @@ cards:
         ## Outdoors
     - type: entities
         entities:
-          - sun.sun
-          - sensor.dark_sky_humidity
-          - sensor.dark_sky_temperature
-          - sensor.dark_sky_apparent_temperature
-          - sensor.dark_sky_precip_probability
-          - sensor.dark_sky_summary
-          - sensor.dark_sky_wind_speed
+          - entity: sun.sun
+          - entity: sensor.dark_sky_humidity
+          - entity: sensor.dark_sky_temperature
+          - entity: sensor.dark_sky_apparent_temperature
+          - entity: sensor.dark_sky_precip_probability
+          - entity: sensor.dark_sky_summary
+          - entity: sensor.dark_sky_wind_speed
     - type: picture-entity
       title: Meteo
       entity: camera.meteo
