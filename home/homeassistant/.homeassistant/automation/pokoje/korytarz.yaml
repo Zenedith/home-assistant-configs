@@ -90,6 +90,7 @@
     - platform: state
       entity_id: input_boolean.jasiu_chillout
       to: 'off'
+  action:
     - service: switch.turn_on
       data:
         entity_id: switch.moonlight
