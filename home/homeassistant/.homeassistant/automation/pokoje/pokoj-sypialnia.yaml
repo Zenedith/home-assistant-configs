@@ -67,3 +67,13 @@
     - service: light.turn_off
       data:
         entity_id: light.yeelight_ceiling_7811dcab824a
+
+- alias: 'Wyzeruj timer w sypialni gdy światło zgaszone'
+  trigger:
+    - platform: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      to: 'off'
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.sypialnia

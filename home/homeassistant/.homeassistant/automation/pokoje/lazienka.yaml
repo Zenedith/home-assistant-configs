@@ -24,3 +24,13 @@
     - service: light.turn_off
       data:
         entity_id: light.yeelight_ceiling_7811dcab68e0
+
+- alias: 'Wyzeruj timer w łazience gdy światło zgaszone'
+  trigger:
+    - platform: state
+      entity_id: light.yeelight_ceiling_7811dcab68e0
+      to: 'off'
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.lazienka

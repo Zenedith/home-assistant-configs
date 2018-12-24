@@ -1,3 +1,21 @@
+- alias: 'Choinka off'
+  trigger:
+    platform: time
+    at: '02:00:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.choinka
+
+- alias: 'Choinka on'
+  trigger:
+    platform: time
+    at: '15:30:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.choinka
+
 - alias: 'Listwa RTV off'
   trigger:
     platform: time
@@ -5,7 +23,7 @@
   action:
   - service: switch.turn_off
     data:
-      entity_id: switch.switch.listwa_rtv
+      entity_id: switch.listwa_rtv
 
 - alias: 'Listwa RTV off (for sure)'
   trigger:
@@ -14,7 +32,7 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.switch.listwa_rtv
+        entity_id: switch.listwa_rtv
 
 - alias: 'Listwa RTV on'
   trigger:
@@ -23,7 +41,7 @@
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.switch.listwa_rtv
+      entity_id: switch.listwa_rtv
 
 - alias: 'Listwa RTV (weekend) on'
   trigger:
@@ -37,7 +55,7 @@
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.switch.listwa_rtv
+      entity_id: switch.listwa_rtv
 
 - alias: 'Ambient tv on'
   trigger:

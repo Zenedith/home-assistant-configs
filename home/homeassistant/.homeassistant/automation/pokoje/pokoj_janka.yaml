@@ -62,3 +62,13 @@
     - service: switch.turn_off
       data:
         entity_id: switch.swiato_pokoj_janka
+
+- alias: 'Wyzeruj timer w pokoju Janka gdy światło zgaszone'
+  trigger:
+    - platform: state
+      entity_id: switch.swiato_pokoj_janka
+      to: 'off'
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.pokoj_janka
