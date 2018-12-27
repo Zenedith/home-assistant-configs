@@ -1,14 +1,14 @@
 title: Sypialnia
 cards:
   - type: entities
-      title: Sypialnia
-      show_header_toggle: true
-      entities:
-        - entity: climate.sypialnia
-        - entity: cover.sypialnia
-        - entity: binary_sensor.0x00158d0001e55705_occupancy
-        - entity: sensor.0x00158d0001e55705_illuminance
-        - entity: timer.sypialnia
+    title: Sypialnia
+    show_header_toggle: true
+    entities:
+      - entity: climate.sypialnia
+      - entity: cover.sypialnia
+      - entity: binary_sensor.0x00158d0001e55705_occupancy
+      - entity: sensor.0x00158d0001e55705_illuminance
+      - entity: timer.sypialnia
   - type: entities
     title: Sypialnia lampy
     show_header_toggle: true
