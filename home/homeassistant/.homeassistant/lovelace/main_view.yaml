@@ -61,12 +61,12 @@ cards:
       - entity: binary_sensor.0x00158d00021508b4
         name: Zmywarka
   - type: entities
-      title: Kuchnia Lampy
-      show_header_toggle: true
-      entities:
-        - entity: light.yeelight_color2_7c49eb157b13
-        - entity: light.yeelight_color2_7c49ebb35a83
-        - entity: light.yeelight_color2_7c49eb1dbff7
+    title: Kuchnia Lampy
+    show_header_toggle: true
+    entities:
+      - entity: light.yeelight_color2_7c49eb157b13
+      - entity: light.yeelight_color2_7c49ebb35a83
+      - entity: light.yeelight_color2_7c49eb1dbff7
   - type: entities
     title: Korytarz
     show_header_toggle: false
@@ -81,11 +81,11 @@ cards:
       - entity: switch.moonlight
       - entity: input_boolean.moonlight_mode
   - type: entities
-      title: Korytarz Lampy
-      show_header_toggle: true
-      entities:
-        - entity: light.yeelight_ceiling4_7c49ebb70c4a
-        - entity: light.yeelight_color2_7c49ebb76a3d
+    title: Korytarz Lampy
+    show_header_toggle: true
+    entities:
+      - entity: light.yeelight_ceiling4_7c49ebb70c4a
+      - entity: light.yeelight_color2_7c49ebb76a3d
   - type: entities
     title: Pokój Janka
     show_header_toggle: true
@@ -125,7 +125,7 @@ cards:
       - entity: binary_sensor.0x00158d00024e42b5
       - entity: binary_sensor.0x00158d0001e0a7d3_occupancy
       - entity: sensor.0x00158d0001e0a7d3_illuminance
-      - entity: - timer.lazienka
+      - entity: timer.lazienka
   - type: entities
     title: Łazienka lampy
     show_header_toggle: true
