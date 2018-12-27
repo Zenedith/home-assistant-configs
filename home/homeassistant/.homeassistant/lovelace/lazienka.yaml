@@ -1,0 +1,20 @@
+title: Łazienka i toaleta
+cards:
+  - type: entities
+    title: Łazienka
+    show_header_toggle: true
+    entities:
+      - entity: binary_sensor.0x00158d00024e42b5
+      - entity: binary_sensor.0x00158d0001e0a7d3_occupancy
+      - entity: sensor.0x00158d0001e0a7d3_illuminance
+      - entity: timer.lazienka
+  - type: entities
+    title: Łazienka lampy
+    show_header_toggle: true
+    entities:
+      - entity: light.yeelight_ceiling_7811dcab68e0
+  - type: entities
+    title: Toaleta
+    show_header_toggle: true
+    entities:
+      - entity: binary_sensor.toaleta_drzwi

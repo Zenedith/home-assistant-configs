@@ -1,0 +1,68 @@
+title: Salon i kuchnia
+cards:
+  - type: entities
+    entities:
+      - entity: binary_sensor.0x00158d000205b35f
+        name: Drzwi balkonowe
+      - vacuum.zmietekv2
+  - type: entities
+    title: Salon
+    show_header_toggle: true
+    entities:
+      - entity: switch.listwa_rtv
+        name: Listwa RTV
+      - entity: switch.kamera
+        name: Kamera
+      - entity: media_player.kd75xf9005
+        name: TV
+        group: true
+  - type: entities
+    title: Salon Lampy
+    show_header_toggle: true
+    entities:
+      - entity: light.yeelight_color2_04cf8c763997
+      - entity: light.yeelight_color2_04cf8c7bf2b3
+      - entity: light.yeelight_color2_04cf8c84a3ce
+      - entity: light.yeelight_color2_04cf8c7cc549
+  - type: entities
+    title: Choinka
+    show_header_toggle: true
+    entities:
+      - entity: switch.choinka
+        icon: mdi:pine-tree
+        name: Choinka
+      - entity: light.yeelight_strip_7811dcda6e9e
+        name: Choinka ambient
+  - type: entities
+    title: Dafang
+    show_header_toggle: false
+    entities:
+      - entity: camera.dafang
+      - entity: switch.dafang_h264_rtsp_server
+      - entity: sensor.dafang
+      - entity: device_tracker.dafang
+      - entity: sensor.dafang_light_sensor
+      - entity: switch.dafang_night_mode
+      - entity: switch.dafang_night_mode_auto
+      - entity: switch.dafang_motion_detection
+      - entity: switch.dafang_motion_tracking
+      - entity: camera.dafang_motion_snapshot
+      - entity: binary_sensor.dafang_motion_sensor
+      - entity: cover.dafang_move_leftright
+      - entity: cover.dafang_move_updown
+      - entity: script.everything_off_secure
+      - entity: weblink.dafang_admin
+      - entity: weblink.dafang_rtsp_url
+  - type: entities
+    title: Kuchnia
+    show_header_toggle: true
+    entities:
+      - entity: binary_sensor.0x00158d00021508b4
+        name: Zmywarka
+  - type: entities
+    title: Kuchnia Lampy
+    show_header_toggle: true
+    entities:
+      - entity: light.yeelight_color2_7c49eb157b13
+      - entity: light.yeelight_color2_7c49ebb35a83
+      - entity: light.yeelight_color2_7c49eb1dbff7
