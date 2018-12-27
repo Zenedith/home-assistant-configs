@@ -5,6 +5,9 @@ cards:
       - entity: binary_sensor.0x00158d000205b35f
         name: Drzwi balkonowe
       - vacuum.zmietekv2
+      - entity: media_player.kd75xf9005
+        name: TV
+        group: true
   - type: entities
     title: Salon
     show_header_toggle: true
@@ -13,17 +16,18 @@ cards:
         name: Listwa RTV
       - entity: switch.kamera
         name: Kamera
-      - entity: media_player.kd75xf9005
-        name: TV
-        group: true
   - type: entities
     title: Salon Lampy
     show_header_toggle: true
     entities:
       - entity: light.yeelight_color2_04cf8c763997
+        group: true
       - entity: light.yeelight_color2_04cf8c7bf2b3
+        group: true
       - entity: light.yeelight_color2_04cf8c84a3ce
+        group: true
       - entity: light.yeelight_color2_04cf8c7cc549
+        group: true
   - type: entities
     title: Choinka
     show_header_toggle: true
@@ -55,7 +59,7 @@ cards:
       - entity: weblink.dafang_rtsp_url
   - type: entities
     title: Kuchnia
-    show_header_toggle: true
+    show_header_toggle: false
     entities:
       - entity: binary_sensor.0x00158d00021508b4
         name: Zmywarka
