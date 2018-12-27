@@ -5,9 +5,11 @@ cards:
     title: Korytarz
     show_header_toggle: true
     entities:
+      - automation.otwarcie_drzwi_wejsciowych
       - automation.wyacz_swiato_w_korytarzu_po_upywie_czasu
       - automation.wacz_swiato_w_korytarzu_gdy_ruch
       - automation.wygaszanie_swiata_korytarz
+      - automation.update_notifications
   - type: entities
     title: Listwy
     show_header_toggle: true
@@ -22,10 +24,12 @@ cards:
     title: Pokój Janka
     show_header_toggle: true
     entities:
+      - automation.bedside_jan_off
       - automation.lampa_jan_off
       - automation.swiato_jan_on
       - automation.wyacz_swiato_w_pokoju_janka_po_upywie_czasu
       - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
+      - automation.wyzeruj_timer_w_pokoju_janka_gdy_swiato_zgaszone
   - type: entities
     title: Salon
     show_header_toggle: true
@@ -36,6 +40,8 @@ cards:
       - automation.listwa_rtv_on
       - automation.listwa_rtv_off
       - automation.listwa_rtv_weekend_on
+      - automation.choinka_on
+      - automation.choinka_off
       - automation.zmietek_start
   - type: entities
     title: Sypialnia
@@ -43,10 +49,12 @@ cards:
     entities:
       - automation.wyacz_swiato_w_sypialni_po_upywie_czasu
       - automation.wacz_swiato_w_sypialni_gdy_ruch
+      - automation.wyzeruj_timer_w_sypialni_gdy_swiato_zgaszone
   - type: entities
     title: Łazienka
     show_header_toggle: true
     entities:
       - automation.wyacz_swiato_w_azience_po_upywie_czasu
       - automation.wacz_swiato_w_azience_gdy_otwarte_drzwi
+      - automation.wyzeruj_timer_w_azience_gdy_swiato_zgaszone
 

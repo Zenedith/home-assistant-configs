@@ -10,6 +10,7 @@ cards:
       entity: sensor.0x00158d00022cc215_temperature
     - type: sensor
       entity: sensor.0x00158d00022cc215_humidity
+      icon: mdi:water-percent
       line_color: "#3498db"
   - type: vertical-stack
     cards:

@@ -30,8 +30,8 @@ frontend:
 config:
 zeroconf:
 
-#lovelace:
-#  mode: yaml
+lovelace:
+  mode: yaml
 
 #customizer:
 #  custom_ui: local
