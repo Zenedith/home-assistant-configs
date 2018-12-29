@@ -15,18 +15,19 @@ cards:
     show_header_toggle: true
     entities:
       - entity: switch.listwa_rtv
-        name: Listwa RTV
       - entity: switch.kamera
-        name: Kamera
   - type: entities
-    title: Choinka
+    title: Ambient
     show_header_toggle: true
     entities:
-      - entity: switch.choinka
-        icon: mdi:pine-tree
-        name: Choinka
       - entity: light.yeelight_strip_7811dcda6e9e
-        name: Choinka ambient
+        name: Obraz
+      - entity: light.yeelight_strip_7811dce2d84e
+        - name: Regał
+  - type: entity-button
+    entity: switch.choinka
+    icon: mdi:pine-tree
+    name: Choinka
   - type: media-control
     entity: media_player.kd75xf9005
     name: TV
