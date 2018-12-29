@@ -11,11 +11,14 @@ cards:
       - entity: binary_sensor.0x00158d00021508b4
         name: Zmywarka
   - type: entities
-    title: Salon
+    title: Listwy
     show_header_toggle: true
     entities:
       - entity: switch.listwa_rtv
       - entity: switch.kamera
+      - entity: switch.choinka
+        icon: mdi:pine-tree
+        name: Choinka
   - type: entities
     title: Ambient
     show_header_toggle: true
@@ -24,10 +27,6 @@ cards:
         name: Obraz
       - entity: light.yeelight_strip_7811dce2d84e
         name: Regał
-  - type: entity-button
-    entity: switch.choinka
-    icon: mdi:pine-tree
-    name: Choinka
   - type: media-control
     entity: media_player.kd75xf9005
     name: TV

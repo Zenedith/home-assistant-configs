@@ -6,14 +6,18 @@ cards:
       - entity: binary_sensor.0x00158d0001e55705_occupancy
       - entity: sensor.0x00158d0001e55705_illuminance
       - entity: timer.sypialnia
+  - type: light
+    entity: light.yeelight_ceiling_7811dcab824a
   - type: vertical-stack
     cards:
       - type: thermostat
         entity: climate.sypialnia
   - type: entities
-    title: Sypialnia lampy
+    title: Listwa
     show_header_toggle: true
     entities:
-      - entity: cover.sypialnia
       - entity: switch.listwa_sypialnia
-      - entity: light.yeelight_ceiling_7811dcab824a
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - entity: cover.sypialnia
