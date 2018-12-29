@@ -10,9 +10,6 @@ cards:
       - vacuum.zmietekv2
       - entity: binary_sensor.0x00158d00021508b4
         name: Zmywarka
-  - type: media-control
-    entity: media_player.kd75xf9005
-    name: TV
   - type: entities
     title: Salon
     show_header_toggle: true
@@ -21,6 +18,18 @@ cards:
         name: Listwa RTV
       - entity: switch.kamera
         name: Kamera
+  - type: entities
+    title: Choinka
+    show_header_toggle: true
+    entities:
+      - entity: switch.choinka
+        icon: mdi:pine-tree
+        name: Choinka
+      - entity: light.yeelight_strip_7811dcda6e9e
+        name: Choinka ambient
+  - type: media-control
+    entity: media_player.kd75xf9005
+    name: TV
   - type: entities
     title: Salon Lampy
     show_header_toggle: true
@@ -33,15 +42,6 @@ cards:
         group: true
       - entity: light.yeelight_color2_04cf8c7cc549
         group: true
-  - type: entities
-    title: Choinka
-    show_header_toggle: true
-    entities:
-      - entity: switch.choinka
-        icon: mdi:pine-tree
-        name: Choinka
-      - entity: light.yeelight_strip_7811dcda6e9e
-        name: Choinka ambient
   - type: conditional
     conditions:
       - entity: switch.kamera

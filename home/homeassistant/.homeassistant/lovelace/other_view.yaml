@@ -27,6 +27,5 @@ cards:
       - entity: sensor.speedtest_ping
         name: Ping
         icon: mdi:pulse
-      - weblink.router_admin
       - type: weblink
         url: http://MI-R3G

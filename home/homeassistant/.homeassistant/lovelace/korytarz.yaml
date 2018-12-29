@@ -1,16 +1,19 @@
 title: Korytarz
 cards:
-  - type: entities
-    title: Korytarz
-    show_header_toggle: false
+  - type: glance
+    columns: 4
+    card:
+      title: Korytarz
     entities:
       - entity: binary_sensor.0x00158d00020b7b77
-        name: Drzwi wejściowe
       - entity: binary_sensor.0x00158d000237ad9d_occupancy
-        name: Ruch
       - entity: sensor.0x00158d000237ad9d_illuminance
-        name: Naświetlenie
       - entity: timer.korytarz
+  - type: glance
+    columns: 4
+    card:
+      title: Moonlight
+    entities:
       - entity: switch.moonlight
       - entity: input_boolean.moonlight_mode
   - type: entities

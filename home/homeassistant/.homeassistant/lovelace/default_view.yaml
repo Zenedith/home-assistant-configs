@@ -6,8 +6,7 @@ cards:
     entities:
       - device_tracker.80b03dcda5eb
       - device_tracker.e49a79e25678
-      - entity: input_select.presence_status
-        tap_action: toggle
+      - input_select.presence_status
 
   - type: glance
     columns: 3
