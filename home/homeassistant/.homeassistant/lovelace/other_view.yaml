@@ -8,7 +8,7 @@ cards:
     name: Korytrz temperatura
   - type: gauge
     entity: sensor.sypialnia_ruch_batt
-    name: Sypialnia
+    name: Sypialnia ruch
   - type: gauge
     entity: sensor.lazienka_ruch_batt
     name: Łazienka ruch
@@ -17,7 +17,7 @@ cards:
     name: Korytarz ruch
   - type: gauge
     entity: sensor.pokoj_janka_ruch_batt
-    name: Pokój janka drzwi
+    name: Pokój janka ruch
 
   - type: entities
     title: Internet
