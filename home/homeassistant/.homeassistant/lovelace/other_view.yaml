@@ -1,5 +1,12 @@
 title: Other
 cards:
+  - type: gauge
+    entity: sensor.korytarz_temp_batt
+    name: Korytrz temperatura
+  - type: gauge
+    entity: sensor.sypialnia_ruch_batt
+    name: Sypialnia
+
   - type: entities
     title: Battery Levels
     show_header_toggle: false
