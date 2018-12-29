@@ -1,18 +1,18 @@
 title: Salon i kuchnia
 cards:
   - type: glance
-      columns: 3
-      card:
-        title: Salon
-      entities:
-        - entity: binary_sensor.0x00158d000205b35f
-          name: Drzwi balkonowe
-        - vacuum.zmietekv2
-        - entity: binary_sensor.0x00158d00021508b4
-          name: Zmywarka
+    columns: 3
+    card:
+      title: Salon
+    entities:
+      - entity: binary_sensor.0x00158d000205b35f
+        name: Drzwi balkonowe
+      - vacuum.zmietekv2
+      - entity: binary_sensor.0x00158d00021508b4
+        name: Zmywarka
   - type: media-control
-      entity: media_player.kd75xf9005
-      name: TV
+    entity: media_player.kd75xf9005
+    name: TV
   - type: entities
     title: Salon
     show_header_toggle: true
