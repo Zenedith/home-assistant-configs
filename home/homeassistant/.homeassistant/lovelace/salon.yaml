@@ -41,7 +41,6 @@ cards:
     conditions:
       - entity: switch.kamera
         state: "on"
-      - camera.dafang
     card:
       type: entities
       entities:
@@ -59,7 +58,8 @@ cards:
         - cover.dafang_move_leftright
         - cover.dafang_move_updown
         - script.everything_off_secure
-        - weblink.dafang_admin
+        - type: weblink
+          url: weblink.dafang_admin
         - weblink.dafang_rtsp_url
   - type: entities
     title: Kuchnia
