@@ -1,11 +1,13 @@
 title: Sypialnia
 cards:
+  - type: vertical-stack
+    cards:
+      - type: thermostat
+        entity: climate.sypialnia
   - type: entities
     title: Sypialnia
     show_header_toggle: true
     entities:
-      - type: thermostat
-        entity: climate.sypialnia
       - entity: cover.sypialnia
       - entity: binary_sensor.0x00158d0001e55705_occupancy
       - entity: sensor.0x00158d0001e55705_illuminance

@@ -1,11 +1,13 @@
 title: Pokój Janka
 cards:
+  - type: vertical-stack
+    cards:
+      - type: thermostat
+        entity: climate.pokojjanka
   - type: entities
     title: Pokój Janka
     show_header_toggle: true
     entities:
-      - type: thermostat
-        entity: climate.pokojjanka
       - entity: timer.pokoj_janka
       - entity: sensor.0x00158d0001e5d112_illuminance
       - entity: binary_sensor.0x00158d0001e5d112_occupancy
