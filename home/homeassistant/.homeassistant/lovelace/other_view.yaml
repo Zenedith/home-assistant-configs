@@ -19,18 +19,21 @@ cards:
     entity: sensor.pokoj_janka_ruch_batt
     name: Pokój janka ruch
   - type: gauge
-    entity: sensor.x_contact_batt
-    name: x
-  - type: gauge
-    entity: sensor.drzwi_wejsciowe_contact_batt
-  - type: gauge
-    entity: sensor.okno_janka_contact_batt
-  - type: gauge
-    entity: sensor.zmywarka_batt
-  - type: gauge
-    entity: sensor.drzwi_balkonowe_contact_batt
-  - type: gauge
-    entity: sensor.drzwi_lazienkowe_contact_batt
+    entity: sensor.zmietekv2_batt
+    name: Zmietek
+#  - type: gauge
+#    entity: sensor.x_contact_batt
+#    name: x
+#  - type: gauge
+#    entity: sensor.drzwi_wejsciowe_contact_batt
+#  - type: gauge
+#    entity: sensor.okno_janka_contact_batt
+#  - type: gauge
+#    entity: sensor.zmywarka_batt
+#  - type: gauge
+#    entity: sensor.drzwi_balkonowe_contact_batt
+#  - type: gauge
+#    entity: sensor.drzwi_lazienkowe_contact_batt
 
   - type: entities
     title: Internet
