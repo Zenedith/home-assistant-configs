@@ -328,3 +328,51 @@ c49ded568da7:
   name: 404e3690c87a
   picture:
   track: false
+
+38c9864b2bfb:
+  hide_if_away: true
+  icon:
+  mac: 38:C9:86:4B:2B:FB
+  name: 38c9864b2bfb
+  picture:
+  track: false
+
+cc988b4c4bc4:
+  hide_if_away: true
+  icon:
+  mac: CC:98:8B:4C:4B:C4
+  name: cc988b4c4bc4
+  picture:
+  track: false
+
+04cf8c84a3ce:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:84:A3:CE
+  name: 04cf8c84a3ce
+  picture:
+  track: false
+
+04cf8c763997:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:76:39:97
+  name: 04cf8c763997
+  picture:
+  track: false
+
+04cf8c7cc549:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:7C:C5:49
+  name: 04cf8c7cc549
+  picture:
+  track: false
+
+04cf8c7bf2b3:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:7B:F2:B3
+  name: 04cf8c7bf2b3
+  picture:
+  track: false
