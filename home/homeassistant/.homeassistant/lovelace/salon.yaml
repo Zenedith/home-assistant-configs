@@ -41,6 +41,7 @@ cards:
     conditions:
       - entity: switch.kamera
         state: "on"
+      - camera.dafang
     card:
       type: entities
       entities:
