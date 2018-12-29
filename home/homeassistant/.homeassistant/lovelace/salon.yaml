@@ -1,13 +1,18 @@
 title: Salon i kuchnia
 cards:
-  - type: entities
-    entities:
-      - entity: binary_sensor.0x00158d000205b35f
-        name: Drzwi balkonowe
-      - vacuum.zmietekv2
-      - entity: media_player.kd75xf9005
-        name: TV
-        group: true
+  - type: glance
+      columns: 3
+      card:
+        title: Zigbee
+      entities:
+        - entity: binary_sensor.0x00158d000205b35f
+          name: Drzwi balkonowe
+        - vacuum.zmietekv2
+        - entity: binary_sensor.0x00158d00021508b4
+          name: Zmywarka
+  - type: media-control
+      entity: media_player.kd75xf9005
+      name: TV
   - type: entities
     title: Salon
     show_header_toggle: true
@@ -62,12 +67,6 @@ cards:
           url: http://dafang
         - type: weblink
           url: rtsp://dafang:8554/unicast
-  - type: entities
-    title: Kuchnia
-    show_header_toggle: false
-    entities:
-      - entity: binary_sensor.0x00158d00021508b4
-        name: Zmywarka
   - type: entities
     title: Kuchnia Lampy
     show_header_toggle: true
