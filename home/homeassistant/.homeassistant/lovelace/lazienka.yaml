@@ -1,19 +1,19 @@
 title: Łazienka i toaleta
 cards:
   - type: glance
-      columns: 4
-      card:
-        title: Łazienka
-      entities:
-        - entity: binary_sensor.0x00158d00024e42b5
-        - entity: binary_sensor.0x00158d0001e0a7d3_occupancy
-        - entity: sensor.0x00158d0001e0a7d3_illuminance
-        - entity: timer.lazienka
+    columns: 4
+    card:
+      title: Łazienka
+    entities:
+      - entity: binary_sensor.0x00158d00024e42b5
+      - entity: binary_sensor.0x00158d0001e0a7d3_occupancy
+      - entity: sensor.0x00158d0001e0a7d3_illuminance
+      - entity: timer.lazienka
   - type: light
     entity: light.yeelight_ceiling_7811dcab68e0
   - type: glance
-      columns: 1
-      card:
-        title: Toaleta
-      entities:
-        - entity: binary_sensor.toaleta_drzwi
+    columns: 1
+    card:
+      title: Toaleta
+    entities:
+      - entity: binary_sensor.toaleta_drzwi
