@@ -3,7 +3,7 @@ cards:
   - type: glance
       columns: 3
       card:
-        title: Zigbee
+        title: Salon
       entities:
         - entity: binary_sensor.0x00158d000205b35f
           name: Drzwi balkonowe

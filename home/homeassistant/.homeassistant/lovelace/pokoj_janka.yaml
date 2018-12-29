@@ -15,12 +15,12 @@ cards:
     title: Pokój Janka
     show_header_toggle: true
     entities:
-
       - entity: cover.pokoj_janka
+  - type: light
+    entity: light.yeelight_bedside_7c49eb284fda
   - type: entities
     title: Pokój Janka lampy
     show_header_toggle: true
     entities:
-      - entity: light.yeelight_bedside_7c49eb284fda
       - entity: switch.swiato_pokoj_janka
       - entity: input_boolean.jasiu_chillout
