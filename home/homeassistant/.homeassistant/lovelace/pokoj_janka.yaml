@@ -5,12 +5,12 @@ cards:
       - type: thermostat
         entity: climate.pokojjanka
   - type: glance
-      columns: 4
-      entities:
-        - entity: timer.pokoj_janka
-        - entity: sensor.0x00158d0001e5d112_illuminance
-        - entity: binary_sensor.0x00158d0001e5d112_occupancy
-        - entity: binary_sensor.0x00158d000208e0c7
+    columns: 4
+    entities:
+      - entity: timer.pokoj_janka
+      - entity: sensor.0x00158d0001e5d112_illuminance
+      - entity: binary_sensor.0x00158d0001e5d112_occupancy
+      - entity: binary_sensor.0x00158d000208e0c7
   - type: entities
     title: Pokój Janka
     show_header_toggle: true
