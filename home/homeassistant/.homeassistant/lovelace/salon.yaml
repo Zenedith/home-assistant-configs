@@ -59,8 +59,9 @@ cards:
         - cover.dafang_move_updown
         - script.everything_off_secure
         - type: weblink
-          url: weblink.dafang_admin
-        - weblink.dafang_rtsp_url
+          url: http://dafang
+        - type: weblink
+          url: rtsp://dafang:8554/unicast
   - type: entities
     title: Kuchnia
     show_header_toggle: false

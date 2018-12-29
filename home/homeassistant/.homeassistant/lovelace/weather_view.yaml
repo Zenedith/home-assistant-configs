@@ -8,12 +8,15 @@ cards:
         ## Indoors
     - type: sensor
       entity: sensor.0x00158d00022cc215_temperature
+      graph: line
     - type: sensor
       entity: sensor.0x00158d00022cc215_humidity
+      graph: line
       icon: mdi:water-percent
       line_color: "#3498db"
     - type: sensor
       entity: sensor.0x00158d00022cc215_pressure
+      graph: line
   - type: vertical-stack
     cards:
     - type: markdown

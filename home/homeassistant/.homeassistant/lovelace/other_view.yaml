@@ -29,4 +29,4 @@ cards:
         icon: mdi:pulse
       - weblink.router_admin
       - type: weblink
-        url: weblink.router_admin
+        url: http://MI-R3G
