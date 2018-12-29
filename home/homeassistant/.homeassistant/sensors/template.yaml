@@ -20,3 +20,27 @@
       value_template: "{{ state_attr('sensor.0x00158d000237ad9d_illuminance', 'battery') }}"
       friendly_name: 'Korytarz ruch'
       unit_of_measurement: '%'
+    x_contact_batt:
+      value_template: "{{ state_attr('sensor.0x00158d0002b52fd0', 'battery') }}"
+      friendly_name: 'Okno'
+      unit_of_measurement: '%'
+    drzwi_wejsciowe_contact_batt:
+      value_template: "{{ state_attr('sensor.0x00158d00020b7b77', 'battery') }}"
+      friendly_name: 'Drzwi wejściowe'
+      unit_of_measurement: '%'
+    okno_janka_contact_batt:
+      value_template: "{{ state_attr('sensor.0x00158d000208e0c7', 'battery') }}"
+      friendly_name: 'Okno u Janka'
+      unit_of_measurement: '%'
+    zmywarka_batt:
+      value_template: "{{ state_attr('sensor.0x00158d00021508b4', 'battery') }}"
+      friendly_name: 'Zmywarka'
+      unit_of_measurement: '%'
+    drzwi_balkonowe_contact_batt:
+      value_template: "{{ state_attr('sensor.0x00158d000205b35f', 'battery') }}"
+      friendly_name: 'Drzwi balkonowe'
+      unit_of_measurement: '%'
+    drzwi_lazienkowe_contact_batt:
+      value_template: "{{ state_attr('sensor.0x00158d00024e42b5', 'battery') }}"
+      friendly_name: 'Drzwi łazienka'
+      unit_of_measurement: '%'

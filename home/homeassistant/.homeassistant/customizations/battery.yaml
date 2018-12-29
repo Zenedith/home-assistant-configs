@@ -13,3 +13,18 @@ sensor.sypialnia_ruch_batt:
 sensor.korytarz_ruch_batt:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.drzwi_wejsciowe_contact_batt:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.okno_janka_contact_batt:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.zmywarka_batt:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.drzwi_balkonowe_contact_batt:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.drzwi_lazienkowe_contact_batt:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';

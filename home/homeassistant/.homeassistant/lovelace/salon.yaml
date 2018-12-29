@@ -23,7 +23,7 @@ cards:
       - entity: light.yeelight_strip_7811dcda6e9e
         name: Obraz
       - entity: light.yeelight_strip_7811dce2d84e
-        - name: Regał
+        name: Regał
   - type: entity-button
     entity: switch.choinka
     icon: mdi:pine-tree
