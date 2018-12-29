@@ -12,20 +12,15 @@ cards:
       entity: sensor.0x00158d00022cc215_humidity
       icon: mdi:water-percent
       line_color: "#3498db"
+    - type: sensor
+      entity: sensor.0x00158d00022cc215_pressure
   - type: vertical-stack
     cards:
     - type: markdown
       content: >
         ## Outdoors
-#    - type: entities
-#        entities:
-#          - entity: sun.sun
-#          - entity: sensor.dark_sky_humidity
-#          - entity: sensor.dark_sky_temperature
-#          - entity: sensor.dark_sky_apparent_temperature
-#          - entity: sensor.dark_sky_precip_probability
-#          - entity: sensor.dark_sky_summary
-#          - entity: sensor.dark_sky_wind_speed
+    - type: weather-forecast
+      entity: weather.dark_sky
     - type: picture-entity
       title: Meteo
       entity: camera.meteo
