@@ -24,9 +24,6 @@ cards:
         ## Outdoors
     - type: weather-forecast
       entity: weather.dark_sky
-    - type: picture-entity
-      title: Meteo
-      entity: camera.meteo
-      camera_image: camera.meteo
-      show_info: true
-      tap_action: dialog
+    - type: iframe
+      url: http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate=2018121518&row=400&col=180&lang=pl
+      aspect_ratio: 75%
