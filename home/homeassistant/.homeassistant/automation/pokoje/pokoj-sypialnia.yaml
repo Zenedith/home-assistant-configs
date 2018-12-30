@@ -49,7 +49,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_ceiling_7811dcab824a
+        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
     - service: timer.cancel
       data:
         entity_id: timer.sypialnia
@@ -66,12 +66,12 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_ceiling_7811dcab824a
+        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
 
 - alias: 'Wyzeruj timer w sypialni gdy światło zgaszone'
   trigger:
     - platform: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
       to: 'off'
   action:
     - service: timer.cancel

@@ -58,16 +58,16 @@
     seconds: 00
   condition:
   - condition: state
-    entity_id: light.yeelight_color2_7c49ebb76a3d
+    entity_id: light.yeelight_ceiling_7811dcab824a
     state: 'on'
   - condition: time
     after: '21:00:00'
     before: '23:59:00'
   action:
   - service: light.turn_on
-    entity_id: light.yeelight_color2_7c49ebb76a3d
+    entity_id: light.yeelight_ceiling_7811dcab824a
     data_template:
-      brightness: '{{states.light.yeelight_color2_7c49ebb76a3d.attributes.brightness|int - 10}}'
+      brightness: '{{states.light.yeelight_ceiling_7811dcab824a.attributes.brightness|int - 10}}'
 
 - alias: 'Chillout mode on'
   trigger:
@@ -79,11 +79,11 @@
       data:
         entity_id: switch.moonlight
     - service: light.turn_on
-      entity_id: light.yeelight_color2_7c49ebb76a3d
+      entity_id: light.yeelight_ceiling_7811dcab824a
       data_template:
         brightness: 10
     - service: light.turn_off
-      entity_id: light.yeelight_color2_7c49ebb76a3d
+      entity_id: light.yeelight_ceiling_7811dcab824a
 
 - alias: 'Chillout mode off'
   trigger:
@@ -95,6 +95,6 @@
       data:
         entity_id: switch.moonlight
     - service: light.turn_on
-      entity_id: light.yeelight_color2_7c49ebb76a3d
+      entity_id: light.yeelight_ceiling_7811dcab824a
       data_template:
         brightness: 254

@@ -10,7 +10,7 @@ light.yeelight_strip_7811dce2d84e:
   friendly_name: Ambient Regał
 light.yeelight_bedside_7c49eb284fda:
   friendly_name: bedside
-light.yeelight_ceiling_7811dcab824a:
+light.yeelight_ceiling3_04cf8c78d9f7:
   friendly_name: Lampa Sypialnia
 light.yeelight_ceiling_7811dcab68e0:
   friendly_name: Lampa Łazienka
@@ -18,8 +18,6 @@ light.yeelight_ceiling_7811dcab68e0:
 light.yeelight_ceiling4_7c49ebb70c4a:
   friendly_name: Lampa korytarz
   supported_features: 3
-light.yeelight_color2_7c49ebb76a3d:
-  friendly_name: Lampa korytarz (drzwi)
 sensor.0x00158d000237ad9d_illuminance:
   friendly_name: Naświetlenie Korytarz
 binary_sensor.0x00158d000237ad9d_occupancy:
@@ -60,3 +58,5 @@ light.yeelight_color2_04cf8c84a3ce:
   friendly_name: Salon 3
 light.yeelight_color2_04cf8c7cc549:
   friendly_name: Salon 4
+light.yeelight_color2_7c49ebb76a3d:
+  friendly_name: Salon 5

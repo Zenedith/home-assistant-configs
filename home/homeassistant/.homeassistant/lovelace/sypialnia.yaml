@@ -7,7 +7,7 @@ cards:
       - entity: sensor.0x00158d0001e55705_illuminance
       - entity: timer.sypialnia
   - type: light
-    entity: light.yeelight_ceiling_7811dcab824a
+    entity: light.yeelight_ceiling3_04cf8c78d9f7
   - type: vertical-stack
     cards:
       - type: thermostat
