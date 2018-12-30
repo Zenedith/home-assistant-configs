@@ -14,8 +14,8 @@ cards:
   - type: light
     entity: light.yeelight_ceiling_7811dcab824a
   - type: glance
-      columns: 4
-      card:
-        title: Moonlight
-      entities:
-        - entity: input_boolean.moonlight_mode
+    columns: 4
+    card:
+      title: Moonlight
+    entities:
+      - entity: input_boolean.moonlight_mode
