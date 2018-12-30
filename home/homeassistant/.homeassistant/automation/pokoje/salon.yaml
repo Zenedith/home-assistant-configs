@@ -16,6 +16,20 @@
       data:
         entity_id: switch.choinka
 
+- alias: 'Choinka (weekend) on'
+  trigger:
+    platform: time
+    at: '07:32:00'
+  condition:
+    - condition: time
+      weekday:
+        - sat
+        - sun
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.choinka
+
 - alias: 'Listwa RTV off'
   trigger:
     platform: time
