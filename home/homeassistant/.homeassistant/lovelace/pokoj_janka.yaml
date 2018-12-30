@@ -23,5 +23,4 @@ cards:
     title: Roleta
     show_header_toggle: false
     entities:
-      - entity: cover.salon
-      - entity: cover.kuchnia
+      - entity: cover.pokoj_janka

@@ -46,7 +46,8 @@ cards:
     show_header_toggle: false
     title: Rolety
     entities:
-      - entity: cover.sypial
+      - entity: cover.salon
+      - entity: cover.kuchnia
   - type: conditional
     conditions:
       - entity: switch.kamera
