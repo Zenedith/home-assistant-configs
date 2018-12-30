@@ -1,14 +1,14 @@
-- platform: mqtt
-  name: "Światło toaleta"
-  state_topic: "incan/incan1/POWER1"
-  command_topic: "incan/incan1/cmnd/POWER1"
-  availability_topic: "incan/incan1/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
+#- platform: mqtt
+#  name: "Incan1"
+#  state_topic: "incan/incan1/POWER1"
+#  command_topic: "incan/incan1/cmnd/POWER1"
+#  availability_topic: "incan/incan1/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
 - platform: mqtt
   name: "Światło Pokój Janka"
   state_topic: "incan/incan2/POWER1"
@@ -37,3 +37,59 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
+#- platform: mqtt
+#  name: "Incan3_1"
+#  state_topic: "incan/incan3/POWER1"
+#  command_topic: "incan/incan3/cmnd/POWER1"
+#  availability_topic: "incan/incan3/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  state_on: "ON"
+#  state_off: "OFF"
+#  optimistic: false
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
+#- platform: mqtt
+#  name: "Incan3_2"
+#  state_topic: "incan/incan3/POWER2"
+#  command_topic: "incan/incan3/cmnd/POWER2"
+#  availability_topic: "incan/incan3/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  state_on: "ON"
+#  state_off: "OFF"
+#  optimistic: false
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
+#- platform: mqtt
+#  name: "Incan4_1"
+#  state_topic: "incan/incan4/POWER1"
+#  command_topic: "incan/incan4/cmnd/POWER1"
+#  availability_topic: "incan/incan4/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  state_on: "ON"
+#  state_off: "OFF"
+#  optimistic: false
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
+#- platform: mqtt
+#  name: "Incan4_2"
+#  state_topic: "incan/incan4/POWER2"
+#  command_topic: "incan/incan4/cmnd/POWER2"
+#  availability_topic: "incan/incan4/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  state_on: "ON"
+#  state_off: "OFF"
+#  optimistic: false
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false

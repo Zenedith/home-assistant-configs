@@ -1,3 +1,35 @@
+- alias: 'Jan RTV off'
+  trigger:
+    platform: time
+    at: '00:00:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.rtv_jan
+
+- alias: 'Jan RTV on'
+  trigger:
+    platform: time
+    at: '15:30:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.rtv_jan
+
+- alias: 'Jan RTV (weekend) on'
+  trigger:
+    platform: time
+    at: '07:32:00'
+  condition:
+    - condition: time
+      weekday:
+        - sat
+        - sun
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.rtv_jan
+
 - alias: "Światło Jan on"
   trigger:
     platform: time

@@ -10,10 +10,11 @@ cards:
   - type: light
     entity: light.yeelight_bedside_7c49eb284fda
   - type: entities
-    title: Pokój Janka lampy
+    title: Przełączniki
     show_header_toggle: true
     entities:
       - entity: switch.swiato_pokoj_janka
+      - entity: switch.rtv_jan
       - entity: input_boolean.jasiu_chillout
   - type: vertical-stack
     cards:

@@ -21,6 +21,10 @@
         payload: ""
     - service: mqtt.publish
       data:
+        topic: "zigbee2mqtt/sonoff5/cmnd/POWER"
+        payload: ""
+    - service: mqtt.publish
+      data:
         topic: "zigbee2mqtt/powr2_1/cmnd/POWER"
         payload: ""
     - service: mqtt.publish
@@ -38,6 +42,22 @@
     - service: mqtt.publish
       data:
         topic: "incan/incan2/cmnd/POWER2"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan3/cmnd/POWER1"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan3/cmnd/POWER2"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan4/cmnd/POWER1"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan4/cmnd/POWER2"
         payload: ""
 
 - alias: "Update notifications"
