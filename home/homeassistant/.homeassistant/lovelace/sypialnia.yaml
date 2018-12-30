@@ -19,5 +19,6 @@ cards:
       - entity: switch.listwa_sypialnia
   - type: entities
     show_header_toggle: false
+    title: Roleta
     entities:
       - entity: cover.sypialnia

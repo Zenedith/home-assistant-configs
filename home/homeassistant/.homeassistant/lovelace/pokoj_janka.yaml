@@ -20,6 +20,8 @@ cards:
       - type: thermostat
         entity: climate.pokojjanka
   - type: entities
+    title: Roleta
     show_header_toggle: false
     entities:
-      - entity: cover.pokoj_janka
+      - entity: cover.salon
+      - entity: cover.kuchnia

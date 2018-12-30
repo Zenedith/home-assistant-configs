@@ -42,6 +42,11 @@ cards:
         group: true
       - entity: light.yeelight_color2_04cf8c7cc549
         group: true
+  - type: entities
+    show_header_toggle: false
+    title: Rolety
+    entities:
+      - entity: cover.sypial
   - type: conditional
     conditions:
       - entity: switch.kamera

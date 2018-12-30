@@ -26,3 +26,31 @@
   optimistic: false
   availability_topic: "shellies/announce"
   payload_available: '{"id":"shellyswitch-5B28DA"}'
+- platform: mqtt
+  name: "Salon"
+  state_topic: "shellies/shellyswitch-13530/roller/0"
+  command_topic: "shellies/shellyswitch-13530/roller/0/command"
+  qos: 2
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_open: "open"
+  state_closed: "close"
+  retain: false
+  optimistic: false
+  availability_topic: "shellies/announce"
+  payload_available: '{"id":"shellyswitch-13530"}'
+- platform: mqtt
+  name: "Kuchnia"
+  state_topic: "shellies/shellyswitch-55A0C/roller/0"
+  command_topic: "shellies/shellyswitch-55A0C/roller/0/command"
+  qos: 2
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_open: "open"
+  state_closed: "close"
+  retain: false
+  optimistic: false
+  availability_topic: "shellies/announce"
+  payload_available: '{"id":"shellyswitch-55A0C"}'
