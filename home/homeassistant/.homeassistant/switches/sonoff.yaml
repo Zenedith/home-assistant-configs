@@ -46,3 +46,15 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
+
+- platform: mqtt
+  name: "Pralka"
+  state_topic: "zigbee2mqtt/powr2_1/POWER"
+  command_topic: "zigbee2mqtt/powr2_1/cmnd/POWER"
+  availability_topic: "zigbee2mqtt/powr2_1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false

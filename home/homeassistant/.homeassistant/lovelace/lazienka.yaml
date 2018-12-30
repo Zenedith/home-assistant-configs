@@ -11,6 +11,11 @@ cards:
       - entity: timer.lazienka
   - type: light
     entity: light.yeelight_ceiling_7811dcab68e0
+  - type: entities
+      title: Pralka
+      show_header_toggle: true
+      entities:
+        - entity: switch.pralka
   - type: glance
     columns: 1
     card:
