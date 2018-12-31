@@ -2,13 +2,13 @@ title: Automation
 icon: mdi:robot
 cards:
   - type: entities
-      title: Weekend
-      show_header_toggle: true
-      entities:
-        - automation.listwa_rtv_weekend_on
-        - automation.listwa_sypialnia_weekend_on
-        - automation.jan_rtv_weekend_on
-        - automation.choinka_weekend_on
+    title: Weekend
+    show_header_toggle: true
+    entities:
+      - automation.listwa_rtv_weekend_on
+      - automation.listwa_sypialnia_weekend_on
+      - automation.jan_rtv_weekend_on
+      - automation.choinka_weekend_on
   - type: entities
     title: Korytarz
     show_header_toggle: true
