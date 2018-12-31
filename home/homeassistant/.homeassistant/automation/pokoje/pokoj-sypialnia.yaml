@@ -37,15 +37,16 @@
 - alias: 'Włącz światło w sypialni gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e55705_occupancy, binary_sensor.0x00158d0001e55705_occupancy
+      entity_id: binary_sensor.0x00158d0001e55705_occupancy
       to: 'on'
   condition:
-    condition: or
     conditions:
-      - condition: sun
-        after: sunset
-      - condition: sun
-        before: sunrise
+      - condition: time
+        after: '15:00:00'
+        before: '23:59:00'
+      - condition: state
+        entity_id: input_boolean.sypialnia_chillout
+        state: 'off'
   action:
     - service: light.turn_on
       data:

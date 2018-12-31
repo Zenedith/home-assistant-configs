@@ -2,6 +2,14 @@ title: Automation
 icon: mdi:robot
 cards:
   - type: entities
+      title: Weekend
+      show_header_toggle: true
+      entities:
+        - automation.listwa_rtv_weekend_on
+        - automation.listwa_sypialnia_weekend_on
+        - automation.jan_rtv_weekend_on
+        - automation.choinka_weekend_on
+  - type: entities
     title: Korytarz
     show_header_toggle: true
     entities:
@@ -11,22 +19,15 @@ cards:
       - automation.wygaszanie_swiata_korytarz
       - automation.update_notifications
   - type: entities
-    title: Listwy
-    show_header_toggle: true
-    entities:
-      - automation.listwa_rtv_weekend_on
-      - automation.listwa_rtv_off
-      - automation.listwa_rtv_on
-      - automation.listwa_sypialnia_weekend_on
-      - automation.listwa_sypialnia_off
-      - automation.listwa_sypialnia_on
-  - type: entities
     title: Pokój Janka
     show_header_toggle: true
     entities:
+      - automation.jan_rtv_off
+      - automation.jan_rtv_on
+      - automation.jan_rtv_weekend_on
+      - automation.bedside_jan_on
       - automation.bedside_jan_off
       - automation.lampa_jan_off
-      - automation.swiato_jan_on
       - automation.wyacz_swiato_w_pokoju_janka_po_upywie_czasu
       - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
       - automation.wyzeruj_timer_w_pokoju_janka_gdy_swiato_zgaszone
@@ -42,6 +43,7 @@ cards:
       - automation.listwa_rtv_weekend_on
       - automation.choinka_on
       - automation.choinka_off
+      - automation.choinka_weekend_on
       - automation.zmietek_start
   - type: entities
     title: Sypialnia

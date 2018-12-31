@@ -30,7 +30,7 @@
       data:
         entity_id: switch.rtv_jan
 
-- alias: "Światło Jan on"
+- alias: "Bedside Jan on"
   trigger:
     platform: time
     at: '16:00:00'
@@ -64,7 +64,7 @@
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e5d112_occupancy, binary_sensor.0x00158d0001e5d112_occupancy
+      entity_id: binary_sensor.0x00158d0001e5d112_occupancy
       to: 'on'
   condition:
     - condition: time
