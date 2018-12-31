@@ -40,13 +40,12 @@
       entity_id: binary_sensor.0x00158d0001e55705_occupancy
       to: 'on'
   condition:
-    conditions:
-      - condition: time
-        after: '15:00:00'
-        before: '23:59:00'
-      - condition: state
-        entity_id: input_boolean.sypialnia_chillout
-        state: 'off'
+    - condition: time
+      after: '15:00:00'
+      before: '23:59:00'
+    - condition: state
+      entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
   action:
     - service: light.turn_on
       data:
