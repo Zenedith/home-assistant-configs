@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: "Swiatło Pokoj Janka M"
+  name: "Swiatło Pokoj Janka"
   state_topic: "shellies/shellyswitch-55A0C8/relay/0"
   command_topic: "shellies/shellyswitch-55A0C8/relay/0/command"
   availability_topic: "shellies/shellyswitch-55A0C8/online"
