@@ -12,6 +12,9 @@ homeassistant:
   time_zone: Europe/Warsaw
   # Customization file
   #  customize: !include customize.yaml
+  customize_glob:
+    "*.*":
+      custom_ui_state_card: state-card-custom-ui
   customize: !include_dir_merge_named customizations
 
 # Show links to resources in log and frontend
@@ -21,10 +24,17 @@ logger:
 
 # Enables the frontend
 frontend:
+  javascript_version: latest
 
 # Enables configuration UI
 config:
 zeroconf:
+
+lovelace:
+  mode: yaml
+
+#customizer:
+#  custom_ui: local
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
@@ -75,10 +85,10 @@ history:
     domains:
       - automation
       - weblink
-      - updater
 
 recorder:
-  purge_keep_days: 5
+  purge_interval: 3
+  purge_keep_days: 90
   db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
   exclude:
     domains:
@@ -123,6 +133,8 @@ switch: !include_dir_merge_list switches
 cover: !include cover/shellys.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include_dir_merge_named input_selects
+weather: !include weather/darksky.yaml
+light: !include_dir_merge_list lights
 
 mqtt:
   discovery: true

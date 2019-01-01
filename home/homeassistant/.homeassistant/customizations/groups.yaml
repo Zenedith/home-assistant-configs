@@ -10,8 +10,9 @@ group.pokoj_janka:
   order: 5
 group.sypialnia:
   order: 6
-group.łazienka:
+group.azienka:
   order: 7
-group.other:
+group.toaleta:
   order: 8
-
+group.automation:
+  order: 9

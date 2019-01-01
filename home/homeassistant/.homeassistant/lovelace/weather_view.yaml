@@ -1,0 +1,29 @@
+title: Weather
+icon: mdi:weather-cloudy
+cards:
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## Indoors
+    - type: sensor
+      entity: sensor.0x00158d00022cc215_temperature
+      graph: line
+    - type: sensor
+      entity: sensor.0x00158d00022cc215_humidity
+      graph: line
+      icon: mdi:water-percent
+      line_color: "#3498db"
+    - type: sensor
+      entity: sensor.0x00158d00022cc215_pressure
+      graph: line
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## Outdoors
+    - type: weather-forecast
+      entity: weather.dark_sky
+    - type: iframe
+      url: http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
+      aspect_ratio: 75%

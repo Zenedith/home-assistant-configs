@@ -5,48 +5,60 @@ light.yeelight_color2_7c49ebb35a83:
 light.yeelight_color2_7c49eb1dbff7:
   friendly_name: Lampa kuchnia 3
 light.yeelight_strip_7811dcda6e9e:
-  friendly_name: Ambient TV
+  friendly_name: Ambient Choinka
 light.yeelight_strip_7811dce2d84e:
   friendly_name: Ambient Regał
 light.yeelight_bedside_7c49eb284fda:
   friendly_name: bedside
-light.yeelight_ceiling_7811dcab824a:
+light.yeelight_ceiling3_04cf8c78d9f7:
   friendly_name: Lampa Sypialnia
 light.yeelight_ceiling_7811dcab68e0:
   friendly_name: Lampa Łazienka
+  icon: mdi:toilet
 light.yeelight_ceiling4_7c49ebb70c4a:
   friendly_name: Lampa korytarz
-light.yeelight_color2_7c49ebb76a3d:
-  friendly_name: Lampa korytarz (drzwi)
+  supported_features: 3
 sensor.0x00158d000237ad9d_illuminance:
-  friendly_name: Naświetlenie
+  friendly_name: Naświetlenie Korytarz
 binary_sensor.0x00158d000237ad9d_occupancy:
-  friendly_name: Ruch1
+  friendly_name: Ruch Korytarz
 sensor.0x00158d00022cc215_temperature:
   friendly_name: Temperatura
 sensor.0x00158d00022cc215_humidity:
   friendly_name: Wilgotność
 sensor.0x00158d00022cc215_pressure:
   friendly_name: Ciśnienie
-binary_sensor.0x00158d00020b7b77_2:
+binary_sensor.0x00158d00020b7b77:
   friendly_name: Drzwi
 binary_sensor.0x00158d0001e0a7d3_occupancy:
-  friendly_name: Ruch2
+  friendly_name: Ruch Łazienka
 sensor.0x00158d0001e0a7d3_illuminance:
-  friendly_name: Naświetlenie
-sensor.0x00158d0001e5d112_illuminance_2:
-  friendly_name: Naświetlenie
+  friendly_name: Naświetlenie Łazienka
+sensor.0x00158d0001e5d112_illuminance:
+  friendly_name: Naświetlenie u Janka
 binary_sensor.0x00158d0001e5d112_occupancy:
-  friendly_name: Ruch3
-binary_sensor.0x00158d000208e0c7_2:
+  friendly_name: Ruch u Janka
+binary_sensor.0x00158d000208e0c7:
   friendly_name: Okno
 binary_sensor.0x00158d00021508b4:
   friendly_name: Zmywarka
-binary_sensor.0x00158d000205b35f_2:
+binary_sensor.0x00158d000205b35f:
   friendly_name: Drzwi balkonowe
 binary_sensor.0x00158d0001e55705_occupancy:
-  friendly_name: Ruch4
+  friendly_name: Ruch w sypialni
 sensor.0x00158d0001e55705_illuminance:
-  friendly_name: Naświetlenie
+  friendly_name: Naświetlenie w sypialni
 binary_sensor.0x00158d00024e42b5:
   friendly_name: Drzwi łazienka
+light.yeelight_color2_04cf8c763997:
+  friendly_name: Salon 1
+light.yeelight_color2_04cf8c7bf2b3:
+  friendly_name: Salon 2
+light.yeelight_color2_04cf8c84a3ce:
+  friendly_name: Salon 3
+light.yeelight_color2_04cf8c7cc549:
+  friendly_name: Salon 4
+light.yeelight_color2_7c49ebb76a3d:
+  friendly_name: Salon 5
+light.yeelight_ceiling_7811dcab824a:
+  friendly_name: Lampa korytarz (drzwi)

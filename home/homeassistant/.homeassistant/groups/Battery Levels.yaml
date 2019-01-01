@@ -1,6 +1,5 @@
-#- sensor.pokojjanka_motion_batt
-#- sensor.korytarz_motion_batt
-#- sensor.korytarz_humidity_batt
-#- sensor.drzwi_wejsciowe_batt
-#- sensor.drzwi_balkonowe_batt
-#
+- sensor.korytarz_temp_batt
+- sensor.lazienka_ruch_batt
+- sensor.pokoj_janka_ruch_batt
+- sensor.sypialnia_ruch_batt
+- sensor.korytarz_ruch_batt

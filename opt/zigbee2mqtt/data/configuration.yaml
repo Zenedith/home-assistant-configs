@@ -1,30 +1,43 @@
 homeassistant: true
-permit_join: true
+permit_join: false
 include_device_information: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: 'mqtt://192.168.1.162:1883'
 serial:
-  port: /dev/ttyACM0
+  port: /dev/ttyAMA0
   disable_led: true
 advanced:
   log_level: debug
 devices:
+  '0x00158d00024e42b5':
+    friendly_name: '0x00158d00024e42b5'
+    retain: false
+  '0x00158d000237ad9d':
+    friendly_name: '0x00158d000237ad9d'
+    retain: false
+    occupancy_timeout: 20
+  '0x00158d0001e55705':
+    friendly_name: '0x00158d0001e55705'
+    retain: false
+    occupancy_timeout: 20
   '0x00158d0001e0a7d3':
     friendly_name: '0x00158d0001e0a7d3'
     retain: false
+    occupancy_timeout: 20
+  '0x00158d0001e5d112':
+    friendly_name: '0x00158d0001e5d112'
+    retain: false
+    occupancy_timeout: 20
   '0x00158d00022cc215':
     friendly_name: '0x00158d00022cc215'
     retain: false
-  '0x00158d0001e5d112':
-    friendly_name: '0x00158d0001e5d112'
+  '0x00158d000205b35f':
+    friendly_name: '0x00158d000205b35f'
     retain: false
   '0x00158d000208e0c7':
     friendly_name: '0x00158d000208e0c7'
     retain: false
   '0x00158d00020b7b77':
     friendly_name: '0x00158d00020b7b77'
-    retain: false
-  '0x00158d0001e55705':
-    friendly_name: '0x00158d0001e55705'
-    retain: false
-  '0x00158d000205b35f':
-    friendly_name: '0x00158d000205b35f'
     retain: false

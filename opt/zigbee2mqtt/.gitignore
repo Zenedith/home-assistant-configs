@@ -1,0 +1,15 @@
+\.*
+zigbee2mqtt/LICENSE
+zigbee2mqtt/README.md
+zigbee2mqtt/architecture.png
+zigbee2mqtt/docker/
+zigbee2mqtt/docs/
+zigbee2mqtt/header.png
+zigbee2mqtt/index.js
+zigbee2mqtt/lib/
+zigbee2mqtt/npm-shrinkwrap.json
+zigbee2mqtt/package.json
+zigbee2mqtt/support/
+zigbee2mqtt/test/
+zigbee2mqtt/update.sh
+zigbee2mqtt/yarn.lock

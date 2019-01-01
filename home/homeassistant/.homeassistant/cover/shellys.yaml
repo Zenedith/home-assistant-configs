@@ -10,8 +10,9 @@
   state_closed: "close"
   retain: false
   optimistic: false
-  availability_topic: "shellies/announce"
-  payload_available: '{"id":"shellyswitch-32B580"}'
+  availability_topic: "shellies/shellyswitch-32B580/online"
+  payload_available: "true"
+  payload_not_available: "false"
 - platform: mqtt
   name: "Pokoj Janka"
   state_topic: "shellies/shellyswitch-5B28DA/roller/0"
@@ -24,5 +25,35 @@
   state_closed: "close"
   retain: false
   optimistic: false
-  availability_topic: "shellies/announce"
-  payload_available: '{"id":"shellyswitch-5B28DA"}'
+  availability_topic: "shellies/shellyswitch-5B28DA/online"
+  payload_available: "true"
+  payload_not_available: "false"
+- platform: mqtt
+  name: "Kuchnia"
+  state_topic: "shellies/shellyswitch-135303/roller/0"
+  command_topic: "shellies/shellyswitch-135303/roller/0/command"
+  qos: 2
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_open: "open"
+  state_closed: "close"
+  retain: false
+  optimistic: false
+  availability_topic: "shellies/shellyswitch-135303/online"
+  payload_available: "true"
+  payload_not_available: "false"
+#- platform: mqtt
+#  name: "Salon"
+#  state_topic: "shellies/shellyswitch-55A0C8/roller/0"
+#  command_topic: "shellies/shellyswitch-55A0C8/roller/0/command"
+#  qos: 2
+#  payload_open: "open"
+#  payload_close: "close"
+#  payload_stop: "stop"
+#  state_open: "open"
+#  state_closed: "close"
+#  retain: false
+#  optimistic: false
+#  availability_topic: "shellies/announce"
+#  payload_available: '{"id":"shellyswitch-55A0C8"}'

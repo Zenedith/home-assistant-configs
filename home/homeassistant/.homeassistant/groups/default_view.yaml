@@ -10,3 +10,4 @@ entities:
   - script.everything_off
   - script.everything_off_secure
   - group.zigbee_group
+  - group.battery_levels

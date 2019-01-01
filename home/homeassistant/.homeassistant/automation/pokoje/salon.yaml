@@ -1,3 +1,35 @@
+- alias: 'Choinka off'
+  trigger:
+    platform: time
+    at: '02:00:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.choinka
+
+- alias: 'Choinka on'
+  trigger:
+    platform: time
+    at: '15:30:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.choinka
+
+- alias: 'Choinka (weekend) on'
+  trigger:
+    platform: time
+    at: '07:32:00'
+  condition:
+    - condition: time
+      weekday:
+        - sat
+        - sun
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.choinka
+
 - alias: 'Listwa RTV off'
   trigger:
     platform: time
@@ -5,7 +37,16 @@
   action:
   - service: switch.turn_off
     data:
-      entity_id: switch.switch.listwa_rtv
+      entity_id: switch.listwa_rtv
+
+- alias: 'Listwa RTV off (for sure)'
+  trigger:
+    platform: time
+    at: '07:30:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_rtv
 
 - alias: 'Listwa RTV on'
   trigger:
@@ -14,21 +55,21 @@
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.switch.listwa_rtv
+      entity_id: switch.listwa_rtv
 
 - alias: 'Listwa RTV (weekend) on'
   trigger:
     platform: time
     at: '07:32:00'
-#  condition:
-#    - condition: time
-#      weekday:
-#        - sat
-#        - sun
+  condition:
+    - condition: time
+      weekday:
+        - sat
+        - sun
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.switch.listwa_rtv
+      entity_id: switch.listwa_rtv
 
 - alias: 'Ambient tv on'
   trigger:
@@ -62,12 +103,12 @@
   trigger:
     platform: time
     at: '11:00:00'
-#  condition:
-#    - condition: time
-#      weekday:
-#      - mon
-#      - wed
-#      - fri
+  condition:
+    - condition: time
+      weekday:
+      - mon
+      - wed
+      - fri
   action:
     - service: vacuum.start
       data:
