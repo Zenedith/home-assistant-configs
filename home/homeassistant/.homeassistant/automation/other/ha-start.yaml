@@ -59,6 +59,22 @@
       data:
         topic: "incan/incan4/cmnd/POWER2"
         payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-32B580/online"
+        payload: "true"
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-5B28DA/online"
+        payload: "true"
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-135303/online"
+        payload: "true"
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-55A0C8/online"
+        payload: "true"
 
 - alias: "Update notifications"
   trigger:
