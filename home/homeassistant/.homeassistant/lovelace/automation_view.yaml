@@ -2,10 +2,10 @@ title: Automation
 icon: mdi:robot
 cards:
   - type: entities
-      title: Weekend
-      show_header_toggle: true
-      entities:
-      - automation.power_state_on_ha_startup
+    title: Weekend
+    show_header_toggle: true
+    entities:
+    - automation.power_state_on_ha_startup
   - type: entities
     title: Weekend
     show_header_toggle: true
