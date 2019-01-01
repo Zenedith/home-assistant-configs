@@ -63,3 +63,4 @@ log*.txt
 .storage/auth
 .storage/auth_provider.homeassistant
 secrets.yaml
+\.*

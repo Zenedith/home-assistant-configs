@@ -1,0 +1,21 @@
+title: Korytarz
+cards:
+  - type: glance
+    columns: 4
+    card:
+      title: Korytarz
+    entities:
+      - entity: binary_sensor.0x00158d00020b7b77
+      - entity: binary_sensor.0x00158d000237ad9d_occupancy
+      - entity: sensor.0x00158d000237ad9d_illuminance
+      - entity: timer.korytarz
+  - type: light
+    entity: light.yeelight_ceiling4_7c49ebb70c4a
+  - type: light
+    entity: light.yeelight_ceiling_7811dcab824a
+  - type: glance
+    columns: 4
+    card:
+      title: Moonlight
+    entities:
+      - entity: input_boolean.moonlight_mode

@@ -3,10 +3,6 @@
     - platform: state
       entity_id: binary_sensor.0x00158d000237ad9d_occupancy
       to: 'on'
-  condition:
-    - condition: time
-      after: '14:00:00'
-      before: '23:59:59'
   action:
     - service: light.turn_on
       data:
@@ -32,7 +28,7 @@
 - alias: 'Otwarcie drzwi wejściowych'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x00158d00020b7b77_2
+    entity_id: binary_sensor.0x00158d00020b7b77
     to: 'on'
   condition:
     - condition: time
@@ -61,11 +57,44 @@
     minutes: '/1'
     seconds: 00
   condition:
+  - condition: state
+    entity_id: light.yeelight_ceiling_7811dcab824a
+    state: 'on'
   - condition: time
     after: '21:00:00'
     before: '23:59:00'
   action:
   - service: light.turn_on
-    entity_id: light.yeelight_ceiling4_7c49ebb70c4a,light.yeelight_color2_7c49ebb76a3d
+    entity_id: light.yeelight_ceiling_7811dcab824a
     data_template:
-      brightness: '{{states.light.yeelight_ceiling4_7c49ebb70c4a.attributes.brightness|int - 10}}'
+      brightness: '{{states.light.yeelight_ceiling_7811dcab824a.attributes.brightness|int - 10}}'
+
+- alias: 'Chillout mode on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.jasiu_chillout
+      to: 'on'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.moonlight
+    - service: light.turn_on
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      data_template:
+        brightness: 10
+    - service: light.turn_off
+      entity_id: light.yeelight_ceiling_7811dcab824a
+
+- alias: 'Chillout mode off'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.jasiu_chillout
+      to: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.moonlight
+    - service: light.turn_on
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      data_template:
+        brightness: 254

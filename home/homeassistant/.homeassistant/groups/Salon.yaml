@@ -1,9 +1,8 @@
 view: yes
 entities:
-  - binary_sensor.0x00158d000205b35f_2
-  - binary_sensor.0x00158d0001e55705_occupancy
-  - sensor.0x00158d0001e55705_illuminance
-  - media_player.salon
+  - binary_sensor.0x00158d000205b35f
+  - media_player.kd75xf9005
   - vacuum.zmietekv2
   - group.salon_przelaczniki
+  - group.salon_lampy
   - group.dafang

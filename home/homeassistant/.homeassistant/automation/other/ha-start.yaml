@@ -17,6 +17,18 @@
         payload: ""
     - service: mqtt.publish
       data:
+        topic: "zigbee2mqtt/sonoff4/cmnd/POWER"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "zigbee2mqtt/sonoff5/cmnd/POWER"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "zigbee2mqtt/powr2_1/cmnd/POWER"
+        payload: ""
+    - service: mqtt.publish
+      data:
         topic: "incan/incan1/cmnd/POWER1"
         payload: ""
     - service: mqtt.publish
@@ -31,6 +43,38 @@
       data:
         topic: "incan/incan2/cmnd/POWER2"
         payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan3/cmnd/POWER1"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan3/cmnd/POWER2"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan4/cmnd/POWER1"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "incan/incan4/cmnd/POWER2"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-32B580/online"
+        payload: "true"
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-5B28DA/online"
+        payload: "true"
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-135303/online"
+        payload: "true"
+    - service: mqtt.publish
+      data:
+        topic: "shellies/shellyswitch-55A0C8/online"
+        payload: "true"
 
 - alias: "Update notifications"
   trigger:

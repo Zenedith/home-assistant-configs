@@ -1,3 +1,6 @@
 view: yes
 entities:
+  - binary_sensor.0x00158d00024e42b5
+  - binary_sensor.0x00158d0001e0a7d3_occupancy
+  - sensor.0x00158d0001e0a7d3_illuminance
   - group.azienka_przelaczniki

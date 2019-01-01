@@ -37,19 +37,19 @@
 - alias: 'Włącz światło w sypialni gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e5d112_occupancy, binary_sensor.0x00158d0001e5d112_occupancy_2
+      entity_id: binary_sensor.0x00158d0001e55705_occupancy
       to: 'on'
   condition:
-    condition: or
-    conditions:
-      - condition: sun
-        after: sunset
-      - condition: sun
-        before: sunrise
+    - condition: time
+      after: '15:00:00'
+      before: '23:59:00'
+    - condition: state
+      entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_ceiling_7811dcab824a
+        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
     - service: timer.cancel
       data:
         entity_id: timer.sypialnia
@@ -66,4 +66,14 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_ceiling_7811dcab824a
+        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+
+- alias: 'Wyzeruj timer w sypialni gdy światło zgaszone'
+  trigger:
+    - platform: state
+      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      to: 'off'
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.sypialnia

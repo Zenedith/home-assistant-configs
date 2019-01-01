@@ -1,0 +1,24 @@
+- platform: template
+  switches:
+    moonlight:
+      friendly_name: Moonlight
+      value_template: "{{ is_state('light.yeelight_ceiling4_7c49ebb70c4a','on') and is_state('input_boolean.moonlight_mode', 'on') }}"
+      turn_on:
+        - service: light.yeelight_set_mode
+          data:
+            entity_id: light.yeelight_ceiling4_7c49ebb70c4a
+            mode: moonlight
+        - service: input_boolean.turn_on
+          data:
+            entity_id: input_boolean.moonlight_mode
+      turn_off:
+        - service: light.yeelight_set_mode
+          data:
+            entity_id: light.yeelight_ceiling4_7c49ebb70c4a
+            mode: normal
+        - service: input_boolean.turn_off
+          data:
+            entity_id: input_boolean.moonlight_mode
+        - service: light.turn_off
+          data:
+            entity_id: light.yeelight_ceiling4_7c49ebb70c4a
