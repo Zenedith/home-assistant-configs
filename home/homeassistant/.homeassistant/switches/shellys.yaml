@@ -2,10 +2,12 @@
   name: "Swiato Pokoj Janka"
   state_topic: "shellies/shellyswitch-55A0C8/relay/0"
   command_topic: "shellies/shellyswitch-55A0C8/relay/0"
-  availability_topic: "shellies/shellyswitch-55A0C8/online"
+#  availability_topic: "shellies/shellyswitch-55A0C8/online"
+#  payload_available: "true"
+  availability_topic: "shellies/announce"
+  payload_available: '{"id":"shellyswitch-55A0C8"}'
   qos: 1
   payload_on: "on"
   payload_off: "off"
-  payload_available: "true"
   payload_not_available: "false"
   retain: false
