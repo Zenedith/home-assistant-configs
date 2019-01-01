@@ -115,11 +115,11 @@ ffmpeg:
   ffmpeg_bin: /usr/bin/ffmpeg
 
 # Text to speech
-#tts:
-#  - platform: google
+tts:
+  - platform: google
 
 # Cloud
-#cloud:
+cloud:
 
 camera: !include cameras/dafang.yaml
 timer: !include timer/timer.yaml
