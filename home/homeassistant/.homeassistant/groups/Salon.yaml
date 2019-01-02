@@ -1,7 +1,8 @@
 view: yes
 entities:
   - binary_sensor.0x00158d000205b35f
-  - media_player.kd75xf9005
+  - media_player.tv
+  - media_player.google_home_mini
   - vacuum.zmietekv2
   - group.salon_przelaczniki
   - group.salon_lampy

@@ -28,8 +28,11 @@ cards:
       - entity: light.yeelight_strip_7811dce2d84e
         name: Regał
   - type: media-control
-    entity: media_player.kd75xf9005
+    entity: media_player.tv
     name: TV
+  - type: media-control
+    entity: media_player.google_home_mini
+    name: Google home mini
   - type: entities
     title: Salon Lampy
     show_header_toggle: true
