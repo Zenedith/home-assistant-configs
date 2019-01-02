@@ -13,9 +13,9 @@
     - service: timer.start
       data:
         entity_id: timer.lazienka
-    - service: tts.google_say
-      data:
-        message: 'Uhmm, somebody need to make something big'
+#    - service: tts.google_say
+#      data:
+#        message: 'Uhmm, somebody need to make something big'
 
 - alias: 'Wyłącz światło w łazience po upływie czasu'
   trigger:
