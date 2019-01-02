@@ -40,6 +40,10 @@ lovelace:
 # http:
 #   base_url: example.duckdns.org:8123
 
+http:
+  ssl_certificate: !secret ssl_certificate_path
+  ssl_key: !secret ssl_key_path
+
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -118,9 +122,7 @@ ffmpeg:
 tts:
   - platform: google
 
-# Cloud
-cloud:
-
+#cloud: !include cloud.yaml
 camera: !include cameras/dafang.yaml
 timer: !include timer/timer.yaml
 group: !include_dir_named groups
