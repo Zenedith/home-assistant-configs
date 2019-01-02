@@ -122,7 +122,6 @@ ffmpeg:
 tts:
   - platform: google
 
-#cloud: !include cloud.yaml
 camera: !include cameras/dafang.yaml
 timer: !include timer/timer.yaml
 group: !include_dir_named groups
@@ -178,3 +177,14 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
       hide_if_away: true
+
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_assistant_api_key
+  exposed_domains:
+    - switch
+    - light
+    - vacuum
+    - climate
+    - cover
+    - media_player
