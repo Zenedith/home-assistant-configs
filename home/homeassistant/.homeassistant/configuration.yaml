@@ -188,3 +188,30 @@ google_assistant:
     - climate
     - cover
     - media_player
+  entity_config:
+    - cover.dafang_move_leftright
+      expose: false
+    - cover.dafang_move_updown
+      expose: false
+    - switch.dafang_blue_led
+      expose: false
+    - switch.dafang_h264_rtsp_server
+      expose: false
+    - switch.dafang_ir_filter
+      expose: false
+    - switch.dafang_ir_led
+      expose: false
+    - switch.dafang_mjpeg_rtsp_server
+      expose: false
+    - switch.dafang_motion_detection
+      expose: false
+    - switch.dafang_motion_send_mail
+      expose: false
+    - switch.dafang_motion_tracking
+      expose: false
+    - switch.dafang_night_mode
+      expose: false
+    - switch.dafang_night_mode_auto
+      expose: false
+    - switch.dafang_yellow_led
+      expose: false
