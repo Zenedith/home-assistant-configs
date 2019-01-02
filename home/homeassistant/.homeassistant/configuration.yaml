@@ -36,11 +36,8 @@ lovelace:
 #customizer:
 #  custom_ui: local
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
-
 http:
+  base_url: !secret base_url
   ssl_certificate: !secret ssl_certificate_path
   ssl_key: !secret ssl_key_path
 
@@ -121,6 +118,11 @@ ffmpeg:
 # Text to speech
 tts:
   - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+    base_url: !secret base_url
+
 
 camera: !include cameras/dafang.yaml
 timer: !include timer/timer.yaml
