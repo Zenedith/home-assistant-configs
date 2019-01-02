@@ -13,6 +13,10 @@
     - service: timer.start
       data:
         entity_id: timer.korytarz
+    - service: tts.google_say
+      data:
+        message: 'Movement in korytarz'
+
 
 - alias: 'Wyłącz światło w korytarzu po upływie czasu'
   trigger:
@@ -24,6 +28,9 @@
     - service: light.turn_off
       data:
         entity_id: group.korytarz_lampy
+    - service: tts.google_say
+      data:
+        message: 'Nobody here, going sleep'
 
 - alias: 'Otwarcie drzwi wejściowych'
   trigger:
