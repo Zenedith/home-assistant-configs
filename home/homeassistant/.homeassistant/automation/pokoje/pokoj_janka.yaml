@@ -33,24 +33,24 @@
 - alias: "Bedside Jan on"
   trigger:
     platform: time
-    at: '16:00:00'
+    at: '15:30:00'
   action:
-  - service: light.turn_on
-    data:
-      entity_id: light.yeelight_bedside_7c49eb284fda
-  - service: notify.mypushbullet
-    data:
-      title: "Pokój janka"
-      message: "Światło on"
+    - service: light.turn_on
+      data:
+        entity_id: light.yeelight_bedside_7c49eb284fda
+    - service: notify.mypushbullet
+      data_template:
+        title: "Pokój janka bedside on"
+        message: "Bedside on"
 
 - alias: "Bedside Jan off"
   trigger:
     platform: time
     at: '07:30:00'
   action:
-  - service: light.turn_off
-    data:
-      entity_id: light.yeelight_bedside_7c49eb284fda
+    - service: light.turn_off
+      data:
+        entity_id: light.yeelight_bedside_7c49eb284fda
 
 - alias: "Lampa Jan off"
   trigger:

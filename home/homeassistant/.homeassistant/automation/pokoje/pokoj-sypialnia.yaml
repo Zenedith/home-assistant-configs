@@ -4,7 +4,7 @@
     at: '03:00:00'
   action:
     - service: notify.mypushbullet
-      data:
+      data_template:
         title: "Salon"
         message: "Listwa sypialnia za 5 minut się wyłączy"
 
@@ -26,7 +26,7 @@
       data:
         entity_id: switch.listwa_sypialnia
     - service: notify.mypushbullet
-      data:
+      data_template:
         title: "Sypialnia"
         message: "Listwa enabled"
 

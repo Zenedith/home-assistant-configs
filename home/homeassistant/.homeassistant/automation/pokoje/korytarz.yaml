@@ -44,7 +44,7 @@
   action:
     - service: notify.mypushbullet
       data_template:
-        title: 'Korytarz'
+        title: 'Korytarz drzwi'
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
           Drzwi wejściowe zostały otwarte.
@@ -107,8 +107,8 @@
     - service: light.turn_off
       entity_id: light.yeelight_ceiling4_7c49ebb70c4a
     - service: notify.mypushbullet
-      data:
-        title: "Korytarz"
+      data_template:
+        title: "Korytarz chillout mode on"
         message: "Chillout mode on"
 
 - alias: 'Chillout mode off'
@@ -118,8 +118,8 @@
       to: 'off'
   action:
     - service: notify.mypushbullet
-      data:
-        title: "Korytarz"
+      data_template:
+        title: "Korytarz chillout mode off"
         message: "Chillout mode off"
     - service: light.turn_on
       entity_id: light.yeelight_ceiling_7811dcab824a

@@ -5,6 +5,8 @@
     topic: camera/dafang/motion
   action:
     service: notify.mypushbullet
-    data:
-      title: "Security"
-      message: "Motion detected."
+    data_template:
+      title: 'Security kamera'
+      message: |
+        {{now().strftime("%a %b %d %H:%M:%S %p")}}
+        Wykryto ruch.

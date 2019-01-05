@@ -47,6 +47,6 @@
       data:
         entity_id: input_boolean.zigbee_permit_join
     - service: notify.mypushbullet
-      data:
+      data_template:
         title: "Zigbee"
         message: "Permit join is disabled"
