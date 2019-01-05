@@ -1,0 +1,17 @@
+- alias: 'Jasiu chillout on'
+  trigger:
+    platform: time
+    at: '21:30:00'
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.jasiu_chillout
+
+- alias: 'Jasiu chillout off'
+  trigger:
+    platform: time
+    at: '06:01:00'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.jasiu_chillout

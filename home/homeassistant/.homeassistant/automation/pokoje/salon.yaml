@@ -15,6 +15,10 @@
     - service: switch.turn_on
       data:
         entity_id: switch.choinka
+    - service: notify.mypushbullet
+      data:
+        title: "Salon"
+        message: "Choinka on"
 
 - alias: 'Choinka (weekend) on'
   trigger:
@@ -30,10 +34,20 @@
       data:
         entity_id: switch.choinka
 
-- alias: 'Listwa RTV off'
+- alias: 'Listwa RTV notification'
   trigger:
     platform: time
     at: '02:00:00'
+  action:
+    - service: notify.mypushbullet
+      data:
+        title: "Salon"
+        message: "Listwa RTV za 5 minut się wyłączy"
+
+- alias: 'Listwa RTV off'
+  trigger:
+    platform: time
+    at: '02:05:00'
   action:
   - service: switch.turn_off
     data:
@@ -90,7 +104,7 @@
 - alias: 'Ambient tv off'
   trigger:
     platform: time
-    at: '07:05:00'
+    at: '02:04:00'
   action:
     - service: light.turn_off
       data:
