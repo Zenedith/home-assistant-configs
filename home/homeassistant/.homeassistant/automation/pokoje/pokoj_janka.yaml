@@ -57,7 +57,7 @@
     platform: time
     at: '22:30:00'
   action:
-  - service: switch.turn_off
+  - service: light.turn_off
     data:
       entity_id: light.swiato_pokoj_janka
 
@@ -74,7 +74,7 @@
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
   action:
-    - service: switch.turn_on
+    - service: light.turn_on
       data:
         entity_id: light.swiato_pokoj_janka
     - service: timer.cancel
@@ -91,7 +91,7 @@
     event_data:
       entity_id: timer.pokoj_janka
   action:
-    - service: switch.turn_off
+    - service: light.turn_off
       data:
         entity_id: light.swiato_pokoj_janka
 
