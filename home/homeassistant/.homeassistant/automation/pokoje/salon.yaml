@@ -60,19 +60,19 @@
   action:
     - service: notify.mypushbullet
       data_template:
-        title: "Salon Listwa RTV off"
+        title: "Salon listwa RTV off"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Listwa RTV za 5 minut się wyłączy
+          Salon listwa RTV za 5 minut się wyłączy
 
 - alias: 'Listwa RTV off'
   trigger:
     platform: time
     at: '02:05:00'
   action:
-  - service: switch.turn_off
-    data:
-      entity_id: switch.listwa_rtv
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_rtv
 
 - alias: 'Listwa RTV off (for sure)'
   trigger:
@@ -88,9 +88,15 @@
     platform: time
     at: '15:30:00'
   action:
-  - service: switch.turn_on
-    data:
-      entity_id: switch.listwa_rtv
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_rtv
+    - service: notify.mypushbullet
+      data_template:
+        title: "Salon listwa RTV on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Salon listwa RTV on
 
 - alias: 'Listwa RTV (weekend) on'
   trigger:
@@ -102,9 +108,15 @@
         - sat
         - sun
   action:
-  - service: switch.turn_on
-    data:
-      entity_id: switch.listwa_rtv
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_rtv
+    - service: notify.mypushbullet
+      data_template:
+        title: "Salon listwa RTV on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Salon listwa RTV on
 
 - alias: 'Ambient tv on'
   trigger:

@@ -1,7 +1,23 @@
-- alias: 'Jan RTV off'
+- alias: 'Jan RTV notification'
   trigger:
     platform: time
     at: '00:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.rtv_jan
+      state: 'on'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "Listwa RTV Jan off"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Listwa RTV Jan za 5 minut się wyłączy
+
+- alias: 'Jan RTV off'
+  trigger:
+    platform: time
+    at: '00:05:00'
   action:
     - service: switch.turn_off
       data:
@@ -15,6 +31,12 @@
     - service: switch.turn_on
       data:
         entity_id: switch.rtv_jan
+    - service: notify.mypushbullet
+      data_template:
+        title: "Listwa RTV Jan on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Listwa RTV Jan on
 
 - alias: 'Jan RTV (weekend) on'
   trigger:
@@ -29,6 +51,12 @@
     - service: switch.turn_on
       data:
         entity_id: switch.rtv_jan
+    - service: notify.mypushbullet
+      data_template:
+        title: "Listwa RTV Jan on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Listwa RTV Jan on
 
 - alias: "Bedside Jan on"
   trigger:
@@ -43,7 +71,7 @@
         title: "Pokój janka bedside on"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Bedside on
+          Bedside Jan on
 
 - alias: "Bedside Jan off"
   trigger:

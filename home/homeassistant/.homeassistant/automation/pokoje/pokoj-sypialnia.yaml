@@ -36,7 +36,7 @@
         title: "Sypialnia listwa on"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Listwa on
+          Listwa sypialnia on
 
 - alias: 'Listwa sypialnia (weekend) on'
   trigger:
@@ -51,6 +51,12 @@
     - service: switch.turn_off
       data:
         entity_id: switch.listwa_sypialnia
+    - service: notify.mypushbullet
+      data_template:
+        title: "Sypialnia listwa on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Listwa sypialnia on
 
 - alias: 'Włącz światło w sypialni gdy ruch'
   trigger:
