@@ -1,4 +1,4 @@
-- alias: 'Jasiu chillout on'
+- alias: 'Auto Jasiu chillout on'
   trigger:
     platform: time
     at: '21:30:00'
@@ -7,7 +7,7 @@
       data:
         entity_id: input_boolean.jasiu_chillout
 
-- alias: 'Jasiu chillout off'
+- alias: 'Auto Jasiu chillout off'
   trigger:
     platform: time
     at: '06:01:00'
