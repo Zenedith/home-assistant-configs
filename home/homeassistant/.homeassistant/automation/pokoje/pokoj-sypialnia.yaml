@@ -2,11 +2,17 @@
   trigger:
     platform: time
     at: '03:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_sypialnia
+      state: 'on'
   action:
     - service: notify.mypushbullet
       data_template:
         title: "Salon listwa sypialnia off"
-        message: "Listwa sypialnia za 5 minut się wyłączy"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Listwa sypialnia za 5 minut się wyłączy
 
 - alias: 'Listwa sypialnia off'
   trigger:
@@ -28,7 +34,9 @@
     - service: notify.mypushbullet
       data_template:
         title: "Sypialnia listwa on"
-        message: "Listwa on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Listwa on
 
 - alias: 'Listwa sypialnia (weekend) on'
   trigger:

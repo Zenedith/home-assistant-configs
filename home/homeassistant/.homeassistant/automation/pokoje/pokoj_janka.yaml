@@ -41,7 +41,9 @@
     - service: notify.mypushbullet
       data_template:
         title: "Pokój janka bedside on"
-        message: "Bedside on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Bedside on
 
 - alias: "Bedside Jan off"
   trigger:

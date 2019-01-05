@@ -7,7 +7,9 @@
     - service: notify.mypushbullet
       data_template:
         title: "Salon drzwi balkonowe"
-        message: "Odnotowano wyjście na fajkę"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Odnotowano wyjście na fajkę
 
 - alias: 'Choinka off'
   trigger:
@@ -29,7 +31,9 @@
     - service: notify.mypushbullet
       data_template:
         title: "Salon choinka on"
-        message: "Choinka on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Choinka on
 
 - alias: 'Choinka (weekend) on'
   trigger:
@@ -49,11 +53,17 @@
   trigger:
     platform: time
     at: '02:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_rtv
+      state: 'on'
   action:
     - service: notify.mypushbullet
       data_template:
         title: "Salon Listwa RTV off"
-        message: "Listwa RTV za 5 minut się wyłączy"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Listwa RTV za 5 minut się wyłączy
 
 - alias: 'Listwa RTV off'
   trigger:
@@ -110,7 +120,9 @@
     - service: notify.mypushbullet
       data_template:
         title: "Salon ambient on"
-        message: "Ambient on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Ambient on
 
 - alias: 'Ambient tv off'
   trigger:
@@ -141,4 +153,6 @@
     - service: notify.mypushbullet
       data_template:
         title: "Salon zmietek start"
-        message: "Zmietek start"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Zmietek start

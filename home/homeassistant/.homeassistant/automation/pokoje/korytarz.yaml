@@ -109,7 +109,9 @@
     - service: notify.mypushbullet
       data_template:
         title: "Korytarz chillout mode on"
-        message: "Chillout mode on"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Chillout mode on
 
 - alias: 'Chillout mode off'
   trigger:
@@ -120,7 +122,9 @@
     - service: notify.mypushbullet
       data_template:
         title: "Korytarz chillout mode off"
-        message: "Chillout mode off"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Chillout mode off
     - service: light.turn_on
       entity_id: light.yeelight_ceiling_7811dcab824a
       data_template:
