@@ -3,11 +3,11 @@
     - platform: state
       entity_id: binary_sensor.0x00158d000205b35f
       to: 'on'
-    action:
-      - service: notify.mypushbullet
-        data_template:
-          title: "Salon drzwi balkonowe"
-          message: "Odnotowano wyjście na fajkę"
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "Salon drzwi balkonowe"
+        message: "Odnotowano wyjście na fajkę"
 
 - alias: 'Choinka off'
   trigger:
