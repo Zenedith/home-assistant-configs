@@ -28,7 +28,7 @@
         entity_id: switch.choinka
     - service: notify.mypushbullet
       data_template:
-        title: "Salon"
+        title: "Salon choinka on"
         message: "Choinka on"
 
 - alias: 'Choinka (weekend) on'
@@ -52,7 +52,7 @@
   action:
     - service: notify.mypushbullet
       data_template:
-        title: "Salon"
+        title: "Salon Listwa RTV off"
         message: "Listwa RTV za 5 minut się wyłączy"
 
 - alias: 'Listwa RTV off'
@@ -140,5 +140,5 @@
         entity_id: vacuum.zmietekv2
     - service: notify.mypushbullet
       data_template:
-        title: "Salon"
+        title: "Salon zmietek start"
         message: "Zmietek start"
