@@ -2,10 +2,13 @@ title: Automation
 icon: mdi:robot
 cards:
   - type: entities
-    title: Weekend
+    title: Common
     show_header_toggle: true
     entities:
-    - automation.power_state_on_ha_startup
+      - automation.power_state_on_ha_startup
+      - automation.jan_rtv_notification
+      - automation.listwa_rtv_notification
+      - automation.listwa_sypialnia_notification
   - type: entities
     title: Weekend
     show_header_toggle: true
@@ -36,6 +39,10 @@ cards:
       - automation.wyacz_swiato_w_pokoju_janka_po_upywie_czasu
       - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
       - automation.wyzeruj_timer_w_pokoju_janka_gdy_swiato_zgaszone
+      - automation.auto_jasiu_chillout_off
+      - automation.auto_jasiu_chillout_on
+      - automation.chillout_mode_off
+      - automation.chillout_mode_on
   - type: entities
     title: Salon
     show_header_toggle: true
@@ -50,6 +57,7 @@ cards:
       - automation.choinka_off
       - automation.choinka_weekend_on
       - automation.zmietek_start
+      - automation.drzwi_balkonowe_otwarte
   - type: entities
     title: Sypialnia
     show_header_toggle: true
