@@ -52,10 +52,8 @@ cards:
       - automation.dafang_motion_detected
       - automation.listwa_rtv_on
       - automation.listwa_rtv_off
-      - automation.listwa_rtv_weekend_on
       - automation.choinka_on
       - automation.choinka_off
-      - automation.choinka_weekend_on
       - automation.zmietek_start
       - automation.drzwi_balkonowe_otwarte
   - type: entities
@@ -65,6 +63,8 @@ cards:
       - automation.wyacz_swiato_w_sypialni_po_upywie_czasu
       - automation.wacz_swiato_w_sypialni_gdy_ruch
       - automation.wyzeruj_timer_w_sypialni_gdy_swiato_zgaszone
+      - automation.listwa_sypialnia_on
+      - automation.listwa_sypialnia_off
   - type: entities
     title: Łazienka
     show_header_toggle: true

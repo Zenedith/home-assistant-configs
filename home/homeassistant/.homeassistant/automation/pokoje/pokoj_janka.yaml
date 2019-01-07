@@ -12,7 +12,7 @@
         title: "Listwa RTV Jan off"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Listwa RTV Jan za 5 minut się wyłączy
+          Listwa za 5 minut się wyłączy
 
 - alias: 'Jan RTV off'
   trigger:
@@ -36,7 +36,7 @@
         title: "Listwa RTV Jan on"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Listwa RTV Jan on
+          Listwa on
 
 - alias: 'Jan RTV (weekend) on'
   trigger:
@@ -56,7 +56,7 @@
         title: "Listwa RTV Jan on"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Listwa RTV Jan on
+          Listwa on
 
 - alias: "Bedside Jan on"
   trigger:
@@ -71,7 +71,7 @@
         title: "Pokój janka bedside on"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Bedside Jan on
+          Bedside on
 
 - alias: "Bedside Jan off"
   trigger:

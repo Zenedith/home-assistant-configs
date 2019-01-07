@@ -63,7 +63,7 @@
         title: "Salon listwa RTV off"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Salon listwa RTV za 5 minut się wyłączy
+          Listwa za 5 minut się wyłączy
 
 - alias: 'Listwa RTV off'
   trigger:
@@ -93,10 +93,10 @@
         entity_id: switch.listwa_rtv
     - service: notify.mypushbullet
       data_template:
-        title: "Salon listwa RTV on"
+        title: "Listwa RTV salon on"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Salon listwa RTV on
+          Listwa on
 
 - alias: 'Listwa RTV (weekend) on'
   trigger:
@@ -113,10 +113,10 @@
         entity_id: switch.listwa_rtv
     - service: notify.mypushbullet
       data_template:
-        title: "Salon listwa RTV on"
+        title: "Listwa RTV salon on"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Salon listwa RTV on
+          Listwa on
 
 - alias: 'Ambient tv on'
   trigger:
@@ -129,12 +129,6 @@
     - service: light.turn_on
       data:
         entity_id: light.yeelight_strip_7811dce2d84e
-    - service: notify.mypushbullet
-      data_template:
-        title: "Salon ambient on"
-        message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Ambient on
 
 - alias: 'Ambient tv off'
   trigger:
@@ -164,7 +158,7 @@
         entity_id: vacuum.zmietekv2
     - service: notify.mypushbullet
       data_template:
-        title: "Salon zmietek start"
+        title: "Zmietek start"
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
           Zmietek start

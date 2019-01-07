@@ -86,4 +86,4 @@
         title: 'New Home Assistant Release'
         message: |
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Home Assistant  {{ states.updater.updater.state }}  is now available.
+          Home Assistant {{ states.updater.updater.state }} is now available.
