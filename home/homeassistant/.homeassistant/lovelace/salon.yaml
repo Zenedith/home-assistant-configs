@@ -63,6 +63,7 @@ cards:
           state: "on"
     card:
       type: picture-entity
+      entity: camera.dafang
       camera_image: camera.dafang
   - type: conditional
     conditions:
