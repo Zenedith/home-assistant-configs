@@ -18,6 +18,8 @@ cards:
     title: All
     show_header_toggle: true
     entities:
+      - script.everything_off
+      - script.everything_off_secure
       - group.all_switches
       - group.all_lights
       - group.all_automations
