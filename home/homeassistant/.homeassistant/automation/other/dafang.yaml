@@ -12,5 +12,5 @@
     data_template:
       title: '!! Security kamera !!'
       message: |
-        {{now().strftime("%a %b %d %H:%M:%S %p")}}
+        {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
         Wykryto ruch.

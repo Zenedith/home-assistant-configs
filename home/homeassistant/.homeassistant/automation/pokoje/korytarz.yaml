@@ -46,7 +46,7 @@
       data_template:
         title: 'Korytarz drzwi'
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Drzwi wejściowe zostały otwarte.
     - service: light.turn_on
       data:
@@ -106,7 +106,7 @@
       data_template:
         title: "Korytarz chillout mode on"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Chillout mode on
 
 - alias: 'Chillout mode off'
@@ -119,7 +119,7 @@
       data_template:
         title: "Korytarz chillout mode off"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Chillout mode off
     - service: light.turn_on
       entity_id: light.yeelight_ceiling_7811dcab824a

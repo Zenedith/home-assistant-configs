@@ -85,5 +85,5 @@
       data_template:
         title: 'New Home Assistant Release'
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Home Assistant {{ states.updater.updater.state }} is now available.

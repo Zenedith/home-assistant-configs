@@ -11,7 +11,7 @@
       data_template:
         title: "Listwa RTV Jan off"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa za 5 minut się wyłączy
 
 - alias: 'Jan RTV off'
@@ -35,7 +35,7 @@
       data_template:
         title: "Pokój janka bedside on"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Bedside on
 
 - alias: "Bedside Jan off"

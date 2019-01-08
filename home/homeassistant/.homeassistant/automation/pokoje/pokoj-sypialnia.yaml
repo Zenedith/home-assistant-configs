@@ -11,7 +11,7 @@
       data_template:
         title: "Listwa sypialnia off"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa za 5 minut się wyłączy
 
 - alias: 'Listwa sypialnia off'
@@ -35,7 +35,7 @@
       data_template:
         title: "Sypialnia listwa on"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa on
 
 - alias: 'Listwa sypialnia (weekend) on'
@@ -55,7 +55,7 @@
       data_template:
         title: "Listwa sypialnia on"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa on
 
 - alias: 'Włącz światło w sypialni gdy ruch'

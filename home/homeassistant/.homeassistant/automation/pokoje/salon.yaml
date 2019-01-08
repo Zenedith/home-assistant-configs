@@ -8,7 +8,7 @@
       data_template:
         title: "Salon drzwi balkonowe"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Odnotowano wyjście na fajkę
 
 - alias: 'Zalanie kuchni'
@@ -21,7 +21,7 @@
       data_template:
         title: "!! Zalanie kuchni !!"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Zalanie kuchni!!!
 
 - alias: 'Choinka off'
@@ -45,7 +45,7 @@
       data_template:
         title: "Salon choinka on"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Choinka on
 
 - alias: 'Choinka (weekend) on'
@@ -75,7 +75,7 @@
       data_template:
         title: "Salon listwa RTV off"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa za 5 minut się wyłączy
 
 - alias: 'Listwa RTV off'
@@ -108,7 +108,7 @@
       data_template:
         title: "Listwa RTV salon on"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa on
 
 - alias: 'Listwa RTV (weekend) on'
@@ -128,7 +128,7 @@
       data_template:
         title: "Listwa RTV salon on"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa on
 
 - alias: 'Ambient tv on'
@@ -173,5 +173,5 @@
       data_template:
         title: "Zmietek start"
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Zmietek start
