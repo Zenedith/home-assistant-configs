@@ -36,7 +36,7 @@
 - alias: 'Choinka on'
   trigger:
     platform: time
-    at: '15:30:00'
+    at: '16:00:00'
   action:
     - service: switch.turn_on
       data:
@@ -99,7 +99,7 @@
 - alias: 'Listwa RTV on'
   trigger:
     platform: time
-    at: '15:30:00'
+    at: '16:30:00'
   action:
     - service: switch.turn_on
       data:
@@ -134,7 +134,7 @@
 - alias: 'Ambient tv on'
   trigger:
     platform: time
-    at: '15:30:00'
+    at: '16:10:00'
   action:
     - service: light.turn_on
       data:

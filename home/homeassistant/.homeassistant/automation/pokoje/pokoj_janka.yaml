@@ -23,45 +23,10 @@
       data:
         entity_id: switch.rtv_jan
 
-- alias: 'Jan RTV on'
-  trigger:
-    platform: time
-    at: '15:30:00'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.rtv_jan
-    - service: notify.mypushbullet
-      data_template:
-        title: "Listwa RTV Jan on"
-        message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Listwa on
-
-- alias: 'Jan RTV (weekend) on'
-  trigger:
-    platform: time
-    at: '07:32:00'
-  condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.rtv_jan
-    - service: notify.mypushbullet
-      data_template:
-        title: "Listwa RTV Jan on"
-        message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
-          Listwa on
-
 - alias: "Bedside Jan on"
   trigger:
     platform: time
-    at: '15:30:00'
+    at: '16:10:00'
   action:
     - service: light.turn_on
       data:

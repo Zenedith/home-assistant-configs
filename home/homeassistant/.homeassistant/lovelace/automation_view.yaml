@@ -15,7 +15,6 @@ cards:
     entities:
       - automation.listwa_rtv_weekend_on
       - automation.listwa_sypialnia_weekend_on
-      - automation.jan_rtv_weekend_on
       - automation.choinka_weekend_on
   - type: entities
     title: Korytarz
@@ -31,8 +30,6 @@ cards:
     show_header_toggle: false
     entities:
       - automation.jan_rtv_off
-      - automation.jan_rtv_on
-      - automation.jan_rtv_weekend_on
       - automation.bedside_jan_on
       - automation.bedside_jan_off
       - automation.lampa_jan_off
