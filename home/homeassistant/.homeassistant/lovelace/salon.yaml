@@ -5,11 +5,9 @@ cards:
     card:
       title: Salon
     entities:
-      - entity: binary_sensor.0x00158d000205b35f
-        name: Drzwi balkonowe
       - vacuum.zmietekv2
+      - entity: binary_sensor.0x00158d000205b35f
       - entity: binary_sensor.0x00158d00021508b4
-        name: Zmywarka
   - type: entities
     title: Listwy
     show_header_toggle: true
@@ -18,7 +16,7 @@ cards:
       - entity: switch.kamera
       - entity: switch.choinka
         icon: mdi:pine-tree
-        name: Choinka
+        name: Listwa choinka
   - type: entities
     title: Ambient
     show_header_toggle: true

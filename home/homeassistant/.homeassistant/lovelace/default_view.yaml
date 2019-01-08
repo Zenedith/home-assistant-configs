@@ -7,13 +7,13 @@ cards:
       - device_tracker.80b03dcda5eb
       - device_tracker.e49a79e25678
       - input_select.presence_status
-      - timer.zigbee_permit_join
   - type: entities
     columns: 3
     title: Zigbee
     entities:
       - input_boolean.zigbee_permit_join
       - sensor.bridge_state
+      - timer.zigbee_permit_join
   - type: entities
     title: All
     show_header_toggle: true

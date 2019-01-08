@@ -11,6 +11,19 @@
           {{now().strftime("%a %b %d %H:%M:%S %p")}}
           Odnotowano wyjście na fajkę
 
+- alias: 'Zalanie kuchni'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d00021508b4
+      to: 'on'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "!! Zalanie kuchni !!"
+        message: |
+          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          Zalanie kuchni!!!
+
 - alias: 'Choinka off'
   trigger:
     platform: time

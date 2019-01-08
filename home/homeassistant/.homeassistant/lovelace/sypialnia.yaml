@@ -5,19 +5,18 @@ cards:
     entities:
       - entity: binary_sensor.0x00158d0001e55705_occupancy
       - entity: sensor.0x00158d0001e55705_illuminance
-      - entity: timer.sypialnia
-  - type: light
-    entity: light.yeelight_ceiling3_04cf8c78d9f7
-  - type: vertical-stack
-    cards:
-      - type: thermostat
-        entity: climate.sypialnia
   - type: entities
     title: Listwa
     show_header_toggle: true
     entities:
       - entity: switch.listwa_sypialnia
       - entity: input_boolean.sypialnia_chillout
+  - type: light
+    entity: light.yeelight_ceiling3_04cf8c78d9f7
+  - type: vertical-stack
+    cards:
+      - type: thermostat
+        entity: climate.sypialnia
   - type: entities
     show_header_toggle: false
     title: Roleta
