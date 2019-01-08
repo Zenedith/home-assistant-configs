@@ -59,8 +59,8 @@ cards:
       - entity: light.yeelight_color2_7c49eb1dbff7
   - type: conditional
     conditions:
-        - entity: switch.kamera
-          state: "on"
+      - entity: switch.kamera
+        state: "on"
     card:
       type: picture-entity
       entity: camera.dafang
