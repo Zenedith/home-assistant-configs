@@ -25,15 +25,6 @@ cards:
         name: Obraz
       - entity: light.yeelight_strip_7811dce2d84e
         name: Regał
-  - type: media-control
-    entity: media_player.tv
-    name: TV
-  - type: media-control
-    entity: media_player.playstation_4
-    name: Playstaion 4
-  - type: media-control
-    entity: media_player.sony_bravia_tv
-    name: Sony Bravia
 #  - type: media-control
 #    entity: media_player.google_home_mini
 #    name: Google home mini

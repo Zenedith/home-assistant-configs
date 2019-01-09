@@ -146,7 +146,6 @@ media_player: !include_dir_merge_list media_player
 #shell_command:
 #  rename_snapshots_dafang: 'bash /home/homeassistant/.homeassistant/bash_scripts/renameSnapshotsDafang.sh'
 
-rest_command: !include rest_commands.yaml
 media_extractor:
   default_query: best
 

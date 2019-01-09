@@ -28,7 +28,8 @@ cards:
     title: All
     show_header_toggle: true
     entities:
-      - media_player.playstation_4
       - media_player.sony_bravia_tv
+      - media_player.playstation_4
+      - media_player.tv
       - switch.tvp1
       - switch.tvp2

@@ -4,7 +4,11 @@
       friendly_name: 'TVP 1'
       value_template: "{{ is_state('media_player.tv', 'playing') }}"
       turn_on:
-        service: rest_command.tvp1
+        - service: media_extractor.play_media
+          entity_id: media_player.tv
+          data:
+            media_content_id: !secret tvp1_url
+            media_content_type: tvshow
       turn_off:
         service: media_player.tv
         entity_id: media_player.tv
@@ -12,7 +16,11 @@
       friendly_name: 'TVP 2'
       value_template: "{{ is_state('media_player.tv', 'playing') }}"
       turn_on:
-        service: rest_command.tvp2
+        - service: media_extractor.play_media
+          entity_id: media_player.tv
+          data:
+            media_content_id: !secret tvp2_url
+            media_content_type: tvshow
       turn_off:
         service: media_player.tv
         entity_id: media_player.tv
