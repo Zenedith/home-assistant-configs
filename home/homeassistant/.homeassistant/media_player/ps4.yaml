@@ -1,7 +1,10 @@
 - platform: ps4
-  host: !secret ps4_host
+  host: !secret ps4_ip_address
+#  host: !secret ps4_host
 #  ps4_ip: !secret ps4_ip_address
   name: PlayStation 4
+  filename: '/home/homeassistant/.homeassistant/.ps4-wake.credentials.json'
+  credentials_filename: '/home/homeassistant/.homeassistant/.ps4-wake.credentials.json'
   games_filename: '/home/homeassistant/.homeassistant/ps4/ps4-games.json'
   imagemap_json: '/home/homeassistant/.homeassistant/ps4/games.json'
   local_store: ''
