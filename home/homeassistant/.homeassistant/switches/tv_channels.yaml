@@ -1,0 +1,18 @@
+- platform: template
+  switches:
+    tvp1:
+      friendly_name: 'TVP 1'
+      value_template: "{{ is_state('media_player.tv', 'playing') }}"
+      turn_on:
+        service: rest_command.tvp1
+      turn_off:
+        service: media_player.tv
+        entity_id: media_player.tv
+    tvp2:
+      friendly_name: 'TVP 2'
+      value_template: "{{ is_state('media_player.tv', 'playing') }}"
+      turn_on:
+        service: rest_command.tvp2
+      turn_off:
+        service: media_player.tv
+        entity_id: media_player.tv

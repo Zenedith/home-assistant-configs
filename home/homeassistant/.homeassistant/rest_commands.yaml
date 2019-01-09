@@ -1,0 +1,4 @@
+tvp1:
+  url: !secret tvp1_url
+tvp2:
+  url: !secret tvp2_url

@@ -65,14 +65,16 @@ cards:
       type: picture-entity
       entity: camera.dafang
       camera_image: camera.dafang
-  - type: conditional
-    conditions:
-      - entity: switch.kamera
-        state: "on"
-    card:
-      type: picture-entity
-      entity: camera.dafang_motion_snapshot
-      camera_image: camera.dafang_motion_snapshot
+#  - type: conditional
+#    conditions:
+#      - entity: switch.kamera
+#        state: "on"
+#    card:
+#      type: picture-entity
+#      entity: camera.dafang_motion_snapshot
+#      camera_image: camera.dafang_motion_snapshot
+#      entity: camera.dafang
+#      camera_image: camera.dafang_latest
   - type: conditional
     conditions:
       - entity: switch.kamera
