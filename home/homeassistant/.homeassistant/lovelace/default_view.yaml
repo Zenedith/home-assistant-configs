@@ -24,3 +24,10 @@ cards:
       - group.all_lights
       - group.all_automations
       - group.all_covers
+  - type: entities
+      title: All
+      show_header_toggle: true
+      entities:
+        - media_player.playstation_4
+        - switch.tvp1
+        - switch.tvp2
