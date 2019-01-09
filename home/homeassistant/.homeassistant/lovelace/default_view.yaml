@@ -29,5 +29,6 @@ cards:
     show_header_toggle: true
     entities:
       - media_player.playstation_4
+      - media_player.sony_bravia_tv
       - switch.tvp1
       - switch.tvp2

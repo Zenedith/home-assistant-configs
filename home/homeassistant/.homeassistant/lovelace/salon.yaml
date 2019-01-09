@@ -31,6 +31,9 @@ cards:
   - type: media-control
     entity: media_player.playstation_4
     name: Playstaion 4
+  - type: media-control
+    entity: media_player.sony_bravia_tv
+    name: Sony Bravia
 #  - type: media-control
 #    entity: media_player.google_home_mini
 #    name: Google home mini
