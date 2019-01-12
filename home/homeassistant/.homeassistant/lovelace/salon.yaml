@@ -47,6 +47,8 @@ cards:
     title: Rolety
     entities:
       - entity: cover.kuchnia
+      - type: weblink
+        url: http://shellyswitch-135303
   - type: entities
     title: Kuchnia Lampy
     show_header_toggle: true

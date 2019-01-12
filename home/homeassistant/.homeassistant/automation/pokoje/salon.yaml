@@ -1,15 +1,15 @@
-- alias: 'Drzwi balkonowe otwarte'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.0x00158d000205b35f
-      to: 'on'
-  action:
-    - service: notify.mypushbullet
-      data_template:
-        title: "Salon drzwi balkonowe"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Odnotowano wyjście na fajkę
+#- alias: 'Drzwi balkonowe otwarte'
+#  trigger:
+#    - platform: state
+#      entity_id: binary_sensor.0x00158d000205b35f
+#      to: 'on'
+#  action:
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: "Salon drzwi balkonowe"
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Odnotowano wyjście na fajkę
 
 - alias: 'Zalanie kuchni'
   trigger:
@@ -37,6 +37,10 @@
   trigger:
     platform: time
     at: '16:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.choinka
+      state: 'off'
   action:
     - service: switch.turn_on
       data:
@@ -57,10 +61,19 @@
       weekday:
         - sat
         - sun
+    - condition: state
+      entity_id: switch.choinka
+      state: 'off'
   action:
     - service: switch.turn_on
       data:
         entity_id: switch.choinka
+    - service: notify.mypushbullet
+      data_template:
+        title: "Salon choinka on"
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Choinka on
 
 - alias: 'Listwa RTV notification'
   trigger:
@@ -100,6 +113,10 @@
   trigger:
     platform: time
     at: '16:30:00'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_rtv
+      state: 'off'
   action:
     - service: switch.turn_on
       data:
@@ -120,6 +137,9 @@
       weekday:
         - sat
         - sun
+    - condition: state
+      entity_id: switch.listwa_rtv
+      state: 'off'
   action:
     - service: switch.turn_on
       data:

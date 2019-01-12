@@ -27,6 +27,10 @@
   trigger:
     platform: time
     at: '20:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_sypialnia
+      state: 'off'
   action:
     - service: switch.turn_on
       data:
@@ -47,6 +51,9 @@
       weekday:
       - sat
       - sun
+    - condition: state
+      entity_id: switch.listwa_sypialnia
+      state: 'off'
   action:
     - service: switch.turn_off
       data:

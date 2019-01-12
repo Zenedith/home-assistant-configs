@@ -14,6 +14,7 @@
       data:
         entity_id: timer.korytarz
 #    - service: tts.google_say
+#      entity_id: media_player.tv
 #      data:
 #        message: 'Movement in korytarz'
 
@@ -29,6 +30,7 @@
       data:
         entity_id: group.korytarz_lampy
 #    - service: tts.google_say
+#      entity_id: media_player.tv
 #      data:
 #        message: 'Nobody here, going sleep'
 
@@ -41,6 +43,9 @@
     - condition: time
       after: '05:00:00'
       before: '23:59:59'
+    - condition: state
+      entity_id: group.mobiledevices
+      state: not_home
   action:
     - service: notify.mypushbullet
       data_template:
@@ -102,25 +107,12 @@
       data:
         entity_id: light.yeelight_ceiling4_7c49ebb70c4a
         mode: moonlight
-    - service: notify.mypushbullet
-      data_template:
-        title: "Korytarz chillout mode on"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Chillout mode on
-
 - alias: 'Chillout mode off'
   trigger:
     - platform: state
       entity_id: input_boolean.jasiu_chillout
       to: 'off'
   action:
-    - service: notify.mypushbullet
-      data_template:
-        title: "Korytarz chillout mode off"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Chillout mode off
     - service: light.turn_on
       entity_id: light.yeelight_ceiling_7811dcab824a
       data_template:

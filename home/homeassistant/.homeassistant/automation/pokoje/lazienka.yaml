@@ -14,6 +14,7 @@
       data:
         entity_id: timer.lazienka
 #    - service: tts.google_say
+#      entity_id: media_player.tv
 #      data:
 #        message: 'Uhmm, somebody need to make something big'
 

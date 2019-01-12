@@ -26,7 +26,11 @@
 - alias: "Bedside Jan on"
   trigger:
     platform: time
-    at: '16:10:00'
+    at: '15:30:00'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_bedside_7c49eb284fda
+      state: 'off'
   action:
     - service: light.turn_on
       data:

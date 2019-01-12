@@ -27,3 +27,5 @@ cards:
     show_header_toggle: false
     entities:
       - entity: cover.pokoj_janka
+      - type: weblink
+        url: http://shellyswitch-55a0c8
