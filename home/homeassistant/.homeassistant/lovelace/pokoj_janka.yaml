@@ -16,7 +16,7 @@ cards:
   - type: light
     entity: light.yeelight_bedside_7c49eb284fda
   - type: light
-    entity: light.swiato_pokoj_janka
+    entity: light.swiatlo_pokoj_janka
 
   - type: vertical-stack
     cards:

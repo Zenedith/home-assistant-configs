@@ -58,7 +58,7 @@
   action:
   - service: light.turn_off
     data:
-      entity_id: light.swiato_pokoj_janka
+      entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
   trigger:
@@ -75,7 +75,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.swiato_pokoj_janka
+        entity_id: light.swiatlo_pokoj_janka
     - service: timer.cancel
       data:
         entity_id: timer.pokoj_janka
@@ -92,12 +92,12 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.swiato_pokoj_janka
+        entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Wyzeruj timer w pokoju Janka gdy światło zgaszone'
   trigger:
     - platform: state
-      entity_id: light.swiato_pokoj_janka
+      entity_id: light.swiatlo_pokoj_janka
       to: 'off'
   action:
     - service: timer.cancel
