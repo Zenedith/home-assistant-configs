@@ -17,11 +17,10 @@ cards:
     entity: light.yeelight_bedside_7c49eb284fda
   - type: light
     entity: light.swiatlo_pokoj_janka
-
   - type: vertical-stack
     cards:
       - type: thermostat
-        entity: climate.pokojjanka
+        entity: climate.pokoj_janka
   - type: entities
     title: Roleta
     show_header_toggle: false

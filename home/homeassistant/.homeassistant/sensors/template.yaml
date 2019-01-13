@@ -1,7 +1,7 @@
 - platform: template
   sensors:
-    climate_pokojjanka_batt:
-      value_template: "{% if state_attr('climate.pokojjanka', 'low_battery') == True -%}5{%- else -%}100{%- endif %}"
+    climate_pokoj_janka_batt:
+      value_template: "{% if state_attr('climate.pokoj_janka', 'low_battery') == True -%}5{%- else -%}100{%- endif %}"
       friendly_name: 'Pokój Janka grzejnik'
       unit_of_measurement: '%'
     climate_sypialnia_batt:

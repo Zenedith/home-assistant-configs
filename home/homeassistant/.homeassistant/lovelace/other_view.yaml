@@ -4,7 +4,7 @@ cards:
     content: >
       ## Battery Levels
   - type: gauge
-    entity: sensor.climate_pokojjanka_batt
+    entity: sensor.climate_pokoj_janka_batt
     name: Pokój janka grzejnik
   - type: gauge
     entity: sensor.climate_sypialnia_batt

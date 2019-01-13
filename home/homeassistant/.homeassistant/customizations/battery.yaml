@@ -16,7 +16,7 @@ sensor.korytarz_ruch_batt:
 sensor.drzwi_wejsciowe_contact_batt:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.climate_pokojjanka_batt:
+sensor.climate_pokoj_janka_batt:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
 sensor.climate_sypialnia_batt:
