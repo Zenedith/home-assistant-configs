@@ -1,7 +1,7 @@
 - alias: "Returned home - Set status"
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.mobiledevices
       to: 'home'
   condition:
     - condition: state

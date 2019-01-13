@@ -1,7 +1,7 @@
 - alias: "Left home"
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.mobiledevices
       to: 'not_home'
   condition:
     - condition: time
