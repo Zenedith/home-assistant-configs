@@ -1,4 +1,0 @@
-view: yes
-entities:
-  - group.kuchnia_lampa
-  - binary_sensor.0x00158d00021508b4

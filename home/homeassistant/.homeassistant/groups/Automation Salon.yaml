@@ -1,7 +1,0 @@
-  - automation.ambient_tv_on
-  - automation.ambient_tv_off
-  - automation.dafang_motion_detected
-  - automation.listwa_rtv_on
-  - automation.listwa_rtv_off
-  - automation.listwa_rtv_weekend_on
-  - automation.zmietek_start
