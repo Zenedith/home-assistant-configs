@@ -62,3 +62,5 @@ light.yeelight_color2_7c49ebb76a3d:
   friendly_name: Salon 5
 light.yeelight_ceiling_7811dcab824a:
   friendly_name: Lampa korytarz (drzwi)
+binary_sensor.0x00158d0002b52fd0:
+  friendly_name: Drzwi toaleta
