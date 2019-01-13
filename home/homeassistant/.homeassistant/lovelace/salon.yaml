@@ -43,19 +43,19 @@ cards:
       - entity: light.yeelight_color2_7c49ebb76a3d
         group: true
   - type: entities
-    show_header_toggle: false
-    title: Rolety
-    entities:
-      - entity: cover.kuchnia
-      - type: weblink
-        url: http://shellyswitch-135303
-  - type: entities
     title: Kuchnia Lampy
     show_header_toggle: true
     entities:
       - entity: light.yeelight_color2_7c49eb157b13
       - entity: light.yeelight_color2_7c49ebb35a83
       - entity: light.yeelight_color2_7c49eb1dbff7
+  - type: entities
+    show_header_toggle: false
+    title: Rolety
+    entities:
+      - entity: cover.kuchnia
+      - type: weblink
+        url: http://shellyswitch-135303
   - type: conditional
     conditions:
       - entity: switch.kamera

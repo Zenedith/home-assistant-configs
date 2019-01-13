@@ -5,7 +5,7 @@ cards:
     title: Common
     show_header_toggle: false
     entities:
-      - automation.power_state_on_ha_startup
+      - automation.power_state_on_ha_start_up
       - automation.jan_rtv_notification
       - automation.listwa_rtv_notification
       - automation.listwa_sypialnia_notification
@@ -21,8 +21,8 @@ cards:
     show_header_toggle: false
     entities:
       - automation.otwarcie_drzwi_wejsciowych
-      - automation.wyacz_swiato_w_korytarzu_po_upywie_czasu
-      - automation.wacz_swiato_w_korytarzu_gdy_ruch
+      - automation.wlyacz_swiato_w_korytarzu_po_upywie_czasu
+      - automation.wlacz_swiato_w_korytarzu_gdy_ruch
       - automation.wygaszanie_swiata_korytarz
       - automation.update_notifications
   - type: entities
@@ -33,7 +33,7 @@ cards:
       - automation.bedside_jan_on
       - automation.bedside_jan_off
       - automation.lampa_jan_off
-      - automation.wyacz_swiato_w_pokoju_janka_po_upywie_czasu
+      - automation.wylacz_swiato_w_pokoju_janka_po_upywie_czasu
       - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
       - automation.wyzeruj_timer_w_pokoju_janka_gdy_swiato_zgaszone
       - automation.auto_chillout_off
@@ -58,8 +58,8 @@ cards:
     title: Sypialnia
     show_header_toggle: false
     entities:
-      - automation.wyacz_swiato_w_sypialni_po_upywie_czasu
-      - automation.wacz_swiato_w_sypialni_gdy_ruch
+      - automation.wylacz_swiato_w_sypialni_po_upywie_czasu
+      - automation.wlacz_swiato_w_sypialni_gdy_ruch
       - automation.wyzeruj_timer_w_sypialni_gdy_swiato_zgaszone
       - automation.listwa_sypialnia_on
       - automation.listwa_sypialnia_off
@@ -67,7 +67,7 @@ cards:
     title: Łazienka
     show_header_toggle: false
     entities:
-      - automation.wyacz_swiato_w_azience_po_upywie_czasu
-      - automation.wacz_swiato_w_azience_gdy_otwarte_drzwi
+      - automation.wylacz_swiato_w_azience_po_upywie_czasu
+      - automation.wlacz_swiato_w_azience_gdy_otwarte_drzwi
       - automation.wyzeruj_timer_w_azience_gdy_swiato_zgaszone
 
