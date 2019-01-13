@@ -21,9 +21,9 @@ cards:
     show_header_toggle: false
     entities:
       - automation.otwarcie_drzwi_wejsciowych
-      - automation.wlyacz_swiatlo_w_korytarzu_po_uplywie_czasu
+      - automation.wylacz_swiatlo_w_korytarzu_po_uplywie_czasu
       - automation.wlacz_swiatlo_w_korytarzu_gdy_ruch
-      - automation.wygaszanie_swiata_korytarz
+      - automation.wygaszanie_swiatla_korytarz
       - automation.update_notifications
   - type: entities
     title: Pokój Janka
@@ -34,7 +34,7 @@ cards:
       - automation.bedside_jan_off
       - automation.lampa_jan_off
       - automation.wylacz_swiatlo_w_pokoju_janka_po_uplywie_czasu
-      - automation.wacz_swiatlo_w_pokoju_janka_gdy_ruch
+      - automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
       - automation.wyzeruj_timer_w_pokoju_janka_gdy_swiatlo_zgaszone
       - automation.auto_chillout_off
       - automation.auto_chillout_on
