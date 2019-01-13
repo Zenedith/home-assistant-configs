@@ -2,6 +2,7 @@
   name: "Sypialnia"
   state_topic: "shellies/shellyswitch-32B580/roller/0"
   command_topic: "shellies/shellyswitch-32B580/roller/0/command"
+  position_topic: "shellies/shellyswitch-32B580/roller/0/pos"
   qos: 2
   payload_open: "open"
   payload_close: "close"
@@ -13,10 +14,13 @@
   availability_topic: "shellies/shellyswitch-32B580/online"
   payload_available: "true"
   payload_not_available: "false"
+  position_open: 100
+  position_closed: 0
 - platform: mqtt
   name: "Pokoj Janka"
   state_topic: "shellies/shellyswitch-5B28DA/roller/0"
   command_topic: "shellies/shellyswitch-5B28DA/roller/0/command"
+  position_topic: "shellies/shellyswitch-5B28DA/roller/0/pos"
   qos: 2
   payload_open: "open"
   payload_close: "close"
@@ -28,10 +32,13 @@
   availability_topic: "shellies/shellyswitch-5B28DA/online"
   payload_available: "true"
   payload_not_available: "false"
+  position_open: 100
+  position_closed: 0
 - platform: mqtt
   name: "Kuchnia"
   state_topic: "shellies/shellyswitch-135303/roller/0"
   command_topic: "shellies/shellyswitch-135303/roller/0/command"
+  position_topic: "shellies/shellyswitch-135303/roller/0/pos"
   qos: 2
   payload_open: "open"
   payload_close: "close"
@@ -43,10 +50,13 @@
   availability_topic: "shellies/shellyswitch-135303/online"
   payload_available: "true"
   payload_not_available: "false"
+  position_open: 100
+  position_closed: 0
 #- platform: mqtt
 #  name: "Salon"
 #  state_topic: "shellies/shellyswitch-55A0C8/roller/0"
 #  command_topic: "shellies/shellyswitch-55A0C8/roller/0/command"
+#  position_topic: "shellies/shellyswitch-55A0C8/roller/0/pos"
 #  qos: 2
 #  payload_open: "open"
 #  payload_close: "close"
@@ -57,3 +67,5 @@
 #  optimistic: false
 #  availability_topic: "shellies/announce"
 #  payload_available: '{"id":"shellyswitch-55A0C8"}'
+#  position_open: 100
+#  position_closed: 0
