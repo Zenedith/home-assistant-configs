@@ -21,7 +21,7 @@ cards:
     show_header_toggle: false
     entities:
       - automation.otwarcie_drzwi_wejsciowych
-      - automation.wlyacz_swiato_w_korytarzu_po_upywie_czasu
+      - automation.wlyacz_swiato_w_korytarzu_po_uplywie_czasu
       - automation.wlacz_swiato_w_korytarzu_gdy_ruch
       - automation.wygaszanie_swiata_korytarz
       - automation.update_notifications
@@ -33,7 +33,7 @@ cards:
       - automation.bedside_jan_on
       - automation.bedside_jan_off
       - automation.lampa_jan_off
-      - automation.wylacz_swiato_w_pokoju_janka_po_upywie_czasu
+      - automation.wylacz_swiato_w_pokoju_janka_po_uplywie_czasu
       - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
       - automation.wyzeruj_timer_w_pokoju_janka_gdy_swiato_zgaszone
       - automation.auto_chillout_off
@@ -52,13 +52,12 @@ cards:
       - automation.choinka_on
       - automation.choinka_off
       - automation.zmietek_start
-      - automation.drzwi_balkonowe_otwarte
       - automation.zalanie_kuchni
   - type: entities
     title: Sypialnia
     show_header_toggle: false
     entities:
-      - automation.wylacz_swiato_w_sypialni_po_upywie_czasu
+      - automation.wylacz_swiato_w_sypialni_po_uplywie_czasu
       - automation.wlacz_swiato_w_sypialni_gdy_ruch
       - automation.wyzeruj_timer_w_sypialni_gdy_swiato_zgaszone
       - automation.listwa_sypialnia_on
@@ -67,7 +66,7 @@ cards:
     title: Łazienka
     show_header_toggle: false
     entities:
-      - automation.wylacz_swiato_w_azience_po_upywie_czasu
+      - automation.wylacz_swiato_w_azience_po_uplywie_czasu
       - automation.wlacz_swiato_w_azience_gdy_otwarte_drzwi
       - automation.wyzeruj_timer_w_azience_gdy_swiato_zgaszone
 
