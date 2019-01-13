@@ -13,6 +13,10 @@
     - service: timer.start
       data:
         entity_id: timer.zigbee_permit_join
+    - service: notify.mypushbullet
+      data_template:
+        title: "Zigbee"
+        message: "Permit join is enabled"
 
   - id: 'Disable zigbee join'
     alias: Disable Zigbee joining

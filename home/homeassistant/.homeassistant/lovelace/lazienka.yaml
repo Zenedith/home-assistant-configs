@@ -21,4 +21,4 @@ cards:
     card:
       title: Toaleta
     entities:
-      - entity: binary_sensor.toaleta_drzwi
+      - entity: binary_sensor.0x00158d0002b52fd0
