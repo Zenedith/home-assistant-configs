@@ -376,3 +376,75 @@ cc988b4c4bc4:
   name: 04cf8c7bf2b3
   picture:
   track: false
+
+20dfb922a8f2:
+  hide_if_away: true
+  icon:
+  mac: 20:DF:B9:22:A8:F2
+  name: 20dfb922a8f2
+  picture:
+  track: false
+
+807d3a181a65:
+  hide_if_away: true
+  icon:
+  mac: 80:7D:3A:18:1A:65
+  name: 807d3a181a65
+  picture:
+  track: false
+
+cc50e355a0c8:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:55:A0:C8
+  name: cc50e355a0c8
+  picture:
+  track: false
+
+cc50e3135303:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:13:53:03
+  name: cc50e3135303
+  picture:
+  track: false
+
+2816a8d513b9:
+  hide_if_away: true
+  icon:
+  mac: 28:16:A8:D5:13:B9
+  name: 2816a8d513b9
+  picture:
+  track: false
+
+f4f5d81fb952:
+  hide_if_away: true
+  icon:
+  mac: F4:F5:D8:1F:B9:52
+  name: f4f5d81fb952
+  picture:
+  track: false
+
+7811dce2cf7d:
+  hide_if_away: true
+  icon:
+  mac: 78:11:DC:E2:CF:7D
+  name: 7811dce2cf7d
+  picture:
+  track: false
+
+04cf8c78d9f7:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:78:D9:F7
+  name: 04cf8c78d9f7
+  picture:
+  track: false
+
+54_e6_fc_c0_0a_7f:
+  hide_if_away: true
+  icon:
+  mac: 54:E6:FC:C0:0A:7F
+  name: 54 e6 fc c0 0a 7f
+  picture:
+  track: false
