@@ -293,7 +293,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 84:F3:EB:32:B5:80
-  name: 84f3eb32b580
+  name: shellyswitch-32B580
   picture:
   track: false
 
@@ -301,7 +301,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 7C:49:EB:B7:0C:4A
-  name: 7c49ebb70c4a
+  name: yeelink-light-ceiling4_mibt99294824
   picture:
   track: false
 
@@ -309,7 +309,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 7C:49:EB:B7:6A:3D
-  name: 7c49ebb76a3d
+  name: yeelink-light-color2_miio99318875
   picture:
   track: false
 
@@ -317,7 +317,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 80:7D:3A:5B:28:DA
-  name: 807d3a5b28da
+  name: shellyswitch-5B28DA
   picture:
   track: false
 
@@ -341,7 +341,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: CC:98:8B:4C:4B:C4
-  name: cc988b4c4bc4
+  name: sony-bravia
   picture:
   track: false
 
@@ -349,7 +349,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:84:A3:CE
-  name: 04cf8c84a3ce
+  name: yeelink-light-color2_miio131151008
   picture:
   track: false
 
@@ -357,7 +357,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:76:39:97
-  name: 04cf8c763997
+  name: yeelink-light-color2_miio130206313
   picture:
   track: false
 
@@ -365,7 +365,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:7C:C5:49
-  name: 04cf8c7cc549
+  name: yeelink-light-color2_miio130635291
   picture:
   track: false
 
@@ -373,7 +373,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:7B:F2:B3
-  name: 04cf8c7bf2b3
+  name: yeelink-light-color2_miio130581381
   picture:
   track: false
 
@@ -389,7 +389,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 80:7D:3A:18:1A:65
-  name: 807d3a181a65
+  name: sonoff5-6757
   picture:
   track: false
 
@@ -397,7 +397,7 @@ cc50e355a0c8:
   hide_if_away: true
   icon:
   mac: CC:50:E3:55:A0:C8
-  name: cc50e355a0c8
+  name: shellyswitch-55A0C8
   picture:
   track: false
 
@@ -405,7 +405,7 @@ cc50e3135303:
   hide_if_away: true
   icon:
   mac: CC:50:E3:13:53:03
-  name: cc50e3135303
+  name: shellyswitch-135303
   picture:
   track: false
 
@@ -413,7 +413,7 @@ cc50e3135303:
   hide_if_away: true
   icon:
   mac: 28:16:A8:D5:13:B9
-  name: 2816a8d513b9
+  name: XBOXONEPOZ
   picture:
   track: false
 
@@ -421,7 +421,7 @@ f4f5d81fb952:
   hide_if_away: true
   icon:
   mac: F4:F5:D8:1F:B9:52
-  name: f4f5d81fb952
+  name: Chromecast-Ultra
   picture:
   track: false
 
@@ -437,7 +437,7 @@ f4f5d81fb952:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:78:D9:F7
-  name: 04cf8c78d9f7
+  name: yeelink-light-ceiling3_mibt13037844
   picture:
   track: false
 
