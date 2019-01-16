@@ -9,7 +9,7 @@
   action:
     - service: notify.mypushbullet
       data_template:
-        title: "Listwa RTV Jan off"
+        title: 'Listwa RTV Jan off'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa za 5 minut się wyłączy
@@ -23,7 +23,7 @@
       data:
         entity_id: switch.rtv_jan
 
-- alias: "Bedside Jan on"
+- alias: 'Bedside Jan on'
   trigger:
     platform: time
     at: '15:30:00'
@@ -37,12 +37,12 @@
         entity_id: light.yeelight_bedside_7c49eb284fda
     - service: notify.mypushbullet
       data_template:
-        title: "Pokój janka bedside on"
+        title: 'Pokój janka bedside on'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Bedside on
 
-- alias: "Bedside Jan off"
+- alias: 'Bedside Jan off'
   trigger:
     platform: time
     at: '07:30:00'
@@ -51,7 +51,7 @@
       data:
         entity_id: light.yeelight_bedside_7c49eb284fda
 
-- alias: "Lampa Jan off"
+- alias: 'Lampa Jan off'
   trigger:
     platform: time
     at: '22:30:00'
@@ -68,14 +68,31 @@
   condition:
     - condition: time
       after: '15:00:00'
-      before: '21:00:00'
+      before: '23:59:59'
     - condition: state
       entity_id: input_boolean.jasiu_chillout
+      state: 'off'
+    - condition: state
+      entity_id: light.swiatlo_pokoj_janka
       state: 'off'
   action:
     - service: light.turn_on
       data:
         entity_id: light.swiatlo_pokoj_janka
+
+- alias: 'Włącz timer w pokoju Janka gdy ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d0001e5d112_occupancy
+      to: 'on'
+  condition:
+    - condition: time
+      after: '15:00:00'
+      before: '23:59:59'
+    - condition: state
+      entity_id: input_boolean.jasiu_chillout
+      state: 'off'
+  action:
     - service: timer.cancel
       data:
         entity_id: timer.pokoj_janka
@@ -95,6 +112,7 @@
         entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Wyzeruj timer w pokoju Janka gdy światło zgaszone'
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: light.swiatlo_pokoj_janka

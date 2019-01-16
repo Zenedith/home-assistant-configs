@@ -11,6 +11,7 @@ cards:
     entities:
       - entity: switch.listwa_sypialnia
       - entity: input_boolean.sypialnia_chillout
+      - entity: input_boolean.sypialnia_korki
   - type: light
     entity: light.yeelight_ceiling3_04cf8c78d9f7
   - type: vertical-stack

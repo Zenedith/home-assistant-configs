@@ -3,10 +3,27 @@
     - platform: state
       entity_id: binary_sensor.0x00158d000237ad9d_occupancy
       to: 'on'
+    - platform: state
+      entity_id: binary_sensor.0x00158d00020b7b77
+      to: 'on'
   action:
     - service: light.turn_on
       data:
         entity_id: group.korytarz_lampy
+#    - service: tts.google_say
+#      entity_id: media_player.tv
+#      data:
+#        message: 'Movement in korytarz'
+
+- alias: 'Włącz timer w korytarzu gdy ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d000237ad9d_occupancy
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.0x00158d00020b7b77
+      to: 'on'
+  action:
     - service: timer.cancel
       data:
         entity_id: timer.korytarz
@@ -53,42 +70,14 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Drzwi wejściowe zostały otwarte.
-    - service: light.turn_on
-      data:
-        entity_id: group.korytarz_lampy
-    - service: timer.cancel
-      data:
-        entity_id: timer.korytarz
-    - service: timer.start
-      data:
-        entity_id: timer.korytarz
-
-- alias: 'Wygaszanie światła korytarz'
-  trigger:
-    platform: time
-    minutes: '/1'
-    seconds: 00
-  condition:
-  - condition: state
-    entity_id: light.yeelight_ceiling_7811dcab824a
-    state: 'on'
-  - condition: time
-    after: '20:00:00'
-    before: '20:30:00'
-  action:
-  - service: light.turn_on
-    entity_id: light.yeelight_ceiling_7811dcab824a
-    data_template:
-      brightness: '{{states.light.yeelight_ceiling_7811dcab824a.attributes.brightness|int - 10}}'
-  - service: light.turn_on
-    entity_id: light.yeelight_ceiling4_7c49ebb70c4a
-    data_template:
-      brightness: '{{states.light.yeelight_ceiling4_7c49ebb70c4a.attributes.brightness|int - 10}}'
 
 - alias: 'Chillout mode on'
   trigger:
     - platform: state
       entity_id: input_boolean.jasiu_chillout
+      to: 'on'
+    - platform: state
+      entity_id: input_boolean.sypialnia_chillout
       to: 'on'
   action:
     - service: light.turn_on
@@ -107,10 +96,17 @@
       data:
         entity_id: light.yeelight_ceiling4_7c49ebb70c4a
         mode: moonlight
+    - service: light.turn_off
+      data:
+        entity_id: group.korytarz_lampy
+
 - alias: 'Chillout mode off'
   trigger:
     - platform: state
       entity_id: input_boolean.jasiu_chillout
+      to: 'off'
+    - platform: state
+      entity_id: input_boolean.sypialnia_chillout
       to: 'off'
   action:
     - service: light.turn_on
@@ -129,3 +125,6 @@
       data:
         entity_id: light.yeelight_ceiling4_7c49ebb70c4a
         mode: normal
+    - service: light.turn_off
+      data:
+        entity_id: group.korytarz_lampy

@@ -15,4 +15,6 @@ jasiu_chillout:
 sypialnia_chillout:
   name: Sypilnia Chillout
   icon: mdi:weather-night
-
+sypialnia_korki:
+  name: Korepetycje
+  icon: mdi:speak

@@ -1,4 +1,4 @@
-- alias: 'Auto chillout on'
+- alias: 'Auto chillout Jas on'
   trigger:
     platform: time
     at: '21:30:00'
@@ -6,6 +6,12 @@
     - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.jasiu_chillout
+
+- alias: 'Auto chillout Sypialnia on'
+  trigger:
+    platform: time
+    at: '23:30:00'
+  action:
     - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.sypialnia_chillout
