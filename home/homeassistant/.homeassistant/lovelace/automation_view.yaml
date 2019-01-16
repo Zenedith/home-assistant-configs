@@ -5,6 +5,7 @@ cards:
     title: Common
     show_header_toggle: false
     entities:
+      - automation.update_notifications
       - automation.power_state_on_ha_start_up
       - automation.jan_rtv_notification
       - automation.listwa_rtv_notification
@@ -24,7 +25,6 @@ cards:
       - automation.wylacz_swiatlo_w_korytarzu_po_uplywie_czasu
       - automation.wlacz_swiatlo_w_korytarzu_gdy_ruch
       - automation.wlacz_timer_w_korytarzu_gdy_ruch
-      - automation.update_notifications
   - type: entities
     title: Pokój Janka
     show_header_toggle: false
@@ -53,6 +53,7 @@ cards:
       - automation.choinka_on
       - automation.choinka_off
       - automation.zmietek_start
+      - automation.zmietek_docked
       - automation.zalanie_kuchni
   - type: entities
     title: Sypialnia
@@ -70,4 +71,3 @@ cards:
       - automation.wylacz_swiatlo_w_lazience_po_uplywie_czasu
       - automation.wlacz_swiatlo_w_lazience_gdy_otwarte_drzwi_lub_ruch
       - automation.wlacz_timer_w_lazience_gdy_otwarte_drzwi_lub_ruch
-
