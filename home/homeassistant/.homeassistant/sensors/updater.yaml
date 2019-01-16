@@ -1,0 +1,5 @@
+- platform: rest
+  resource: https://pypi.org/pypi/homeassistant/json
+  name: Home assistant version
+  value_template: '{{ value_json.info.version }}'
+  scan_interval: 3600

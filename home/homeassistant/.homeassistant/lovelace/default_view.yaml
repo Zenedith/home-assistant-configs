@@ -2,11 +2,12 @@ title: default_view
 icon: mdi:home
 cards:
   - type: glance
-    columns: 3
+    columns: 4
     entities:
       - device_tracker.80b03dcda5eb
       - device_tracker.e49a79e25678
       - input_select.presence_status
+      - sensor.home_assistant_version
   - type: entities
     columns: 3
     title: Zigbee
