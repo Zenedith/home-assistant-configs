@@ -1,22 +1,29 @@
-- alias: 'Włącz światło w łazience gdy otwarte drzwi'
+- alias: 'Włącz światło w łazience gdy otwarte drzwi lub ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d00024e42b5,binary_sensor.0x00158d0001e0a7d3_occupancy
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab68e0
+      state: 'off'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.yeelight_ceiling_7811dcab68e0
+
+- alias: 'Włącz timer w łazience gdy otwarte drzwi lub ruch'
   trigger:
     - platform: state
       entity_id: binary_sensor.0x00158d00024e42b5,binary_sensor.0x00158d0001e0a7d3_occupancy
       to: 'on'
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.yeelight_ceiling_7811dcab68e0
     - service: timer.cancel
       data:
         entity_id: timer.lazienka
     - service: timer.start
       data:
         entity_id: timer.lazienka
-#    - service: tts.google_say
-#      entity_id: media_player.tv
-#      data:
-#        message: 'Uhmm, somebody need to make something big'
 
 - alias: 'Wyłącz światło w łazience po upływie czasu'
   trigger:
@@ -30,6 +37,7 @@
         entity_id: light.yeelight_ceiling_7811dcab68e0
 
 - alias: 'Wyzeruj timer w łazience gdy światło zgaszone'
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: light.yeelight_ceiling_7811dcab68e0

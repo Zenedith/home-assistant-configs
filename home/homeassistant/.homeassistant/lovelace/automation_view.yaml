@@ -68,6 +68,6 @@ cards:
     show_header_toggle: false
     entities:
       - automation.wylacz_swiatlo_w_lazience_po_uplywie_czasu
-      - automation.wlacz_swiatlo_w_lazience_gdy_otwarte_drzwi
-      - automation.wyzeruj_timer_w_lazience_gdy_swiatlo_zgaszone
+      - automation.wlacz_swiatlo_w_lazience_gdy_otwarte_drzwi_lub_ruch
+      - automation.wlacz_timer_w_lazience_gdy_otwarte_drzwi_lub_ruch
 
