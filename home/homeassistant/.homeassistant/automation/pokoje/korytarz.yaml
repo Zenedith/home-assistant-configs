@@ -6,6 +6,10 @@
     - platform: state
       entity_id: binary_sensor.0x00158d00020b7b77
       to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'off'
   action:
     - service: light.turn_on
       data:
@@ -30,11 +34,6 @@
     - service: timer.start
       data:
         entity_id: timer.korytarz
-#    - service: tts.google_say
-#      entity_id: media_player.tv
-#      data:
-#        message: 'Movement in korytarz'
-
 
 - alias: 'Wyłącz światło w korytarzu po upływie czasu'
   trigger:
@@ -42,6 +41,10 @@
     event_type: timer.finished
     event_data:
       entity_id: timer.korytarz
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'on'
   action:
     - service: light.turn_off
       data:
