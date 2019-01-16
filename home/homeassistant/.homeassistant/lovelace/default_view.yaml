@@ -2,7 +2,7 @@ title: default_view
 icon: mdi:home
 cards:
   - type: glance
-    columns: 4
+    columns: 3
     entities:
       - device_tracker.80b03dcda5eb
       - device_tracker.e49a79e25678
@@ -22,8 +22,6 @@ cards:
       - script.everything_off_secure
       - group.all_switches
       - group.all_lights
-      - group.all_automations
-      - group.all_covers
   - type: entities
     title: All
     show_header_toggle: true
@@ -31,5 +29,3 @@ cards:
       - media_player.sony_bravia_tv
       - media_player.playstation_4
       - media_player.tv
-      - switch.tvp1
-      - switch.tvp2

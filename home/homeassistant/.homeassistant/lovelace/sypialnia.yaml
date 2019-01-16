@@ -1,7 +1,7 @@
 title: Sypialnia
 cards:
   - type: glance
-    columns: 3
+    columns: 2
     entities:
       - entity: binary_sensor.0x00158d0001e55705_occupancy
       - entity: sensor.0x00158d0001e55705_illuminance

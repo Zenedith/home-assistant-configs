@@ -1,7 +1,7 @@
 title: Korytarz
 cards:
   - type: glance
-    columns: 4
+    columns: 3
     card:
       title: Korytarz
     entities:
