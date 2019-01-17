@@ -16,7 +16,7 @@ cards:
       - sensor.bridge_state
       - timer.zigbee_permit_join
   - type: entities
-    title: All
+    title: Security
     show_header_toggle: true
     entities:
       - script.everything_off
@@ -24,7 +24,7 @@ cards:
       - group.all_switches
       - group.all_lights
   - type: entities
-    title: All
+    title: Media
     show_header_toggle: true
     entities:
       - media_player.sony_bravia_tv
