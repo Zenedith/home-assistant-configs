@@ -1,34 +1,34 @@
 title: Other
 cards:
   - type: vertical-stack
-      cards:
-        - type: markdown
-          content: >
-            ## Battery Levels
-        - type: gauge
-          entity: sensor.climate_pokoj_janka_batt
-          name: Pokój janka grzejnik
-        - type: gauge
-          entity: sensor.climate_sypialnia_batt
-          name: Sypialnia grzejnik
-        - type: gauge
-          entity: sensor.korytarz_temp_batt
-          name: Korytrz temperatura
-        - type: gauge
-          entity: sensor.sypialnia_ruch_batt
-          name: Sypialnia ruch
-        - type: gauge
-          entity: sensor.lazienka_ruch_batt
-          name: Łazienka ruch
-        - type: gauge
-          entity: sensor.korytarz_ruch_batt
-          name: Korytarz ruch
-        - type: gauge
-          entity: sensor.pokoj_janka_ruch_batt
-          name: Pokój janka ruch
-        - type: gauge
-          entity: sensor.zmietekv2_batt
-          name: Zmietek
+    cards:
+      - type: markdown
+        content: >
+          ## Battery Levels
+      - type: gauge
+        entity: sensor.climate_pokoj_janka_batt
+        name: Pokój janka grzejnik
+      - type: gauge
+        entity: sensor.climate_sypialnia_batt
+        name: Sypialnia grzejnik
+      - type: gauge
+        entity: sensor.korytarz_temp_batt
+        name: Korytrz temperatura
+      - type: gauge
+        entity: sensor.sypialnia_ruch_batt
+        name: Sypialnia ruch
+      - type: gauge
+        entity: sensor.lazienka_ruch_batt
+        name: Łazienka ruch
+      - type: gauge
+        entity: sensor.korytarz_ruch_batt
+        name: Korytarz ruch
+      - type: gauge
+        entity: sensor.pokoj_janka_ruch_batt
+        name: Pokój janka ruch
+      - type: gauge
+        entity: sensor.zmietekv2_batt
+        name: Zmietek
 
   - type: vertical-stack
     cards:
