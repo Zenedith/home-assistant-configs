@@ -46,7 +46,11 @@ cards:
     cards:
       - type: sensor
         entity: sensor.asuswrt_download_speed
+        icon: mdi:arrow-down-bold
         graph: line
+        unit: Mbit/s
       - type: sensor
         entity: sensor.asuswrt_upload_speed
+        icon: mdi:arrow-up-bold
         graph: line
+        unit: Mbit/s
