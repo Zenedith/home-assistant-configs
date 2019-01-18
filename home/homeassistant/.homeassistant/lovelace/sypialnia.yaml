@@ -1,27 +1,34 @@
 title: Sypialnia
 cards:
-  - type: glance
-    columns: 2
-    entities:
-      - entity: binary_sensor.0x00158d0001e55705_occupancy
-      - entity: sensor.0x00158d0001e55705_illuminance
-  - type: entities
-    title: Listwa
-    show_header_toggle: true
-    entities:
-      - entity: switch.listwa_sypialnia
-      - entity: input_boolean.sypialnia_chillout
-      - entity: input_boolean.sypialnia_korki
-  - type: light
-    entity: light.yeelight_ceiling3_04cf8c78d9f7
+  - type: vertical-stack
+    cards:
+      - type: glance
+        columns: 2
+        entities:
+          - entity: binary_sensor.0x00158d0001e55705_occupancy
+          - entity: sensor.0x00158d0001e55705_illuminance
+      - type: entities
+        title: Listwa
+        show_header_toggle: true
+        entities:
+          - entity: switch.listwa_sypialnia
+          - entity: input_boolean.sypialnia_chillout
+          - entity: input_boolean.sypialnia_korki
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Lampy
+      - type: light
+        entity: light.yeelight_ceiling3_04cf8c78d9f7
   - type: vertical-stack
     cards:
       - type: thermostat
         entity: climate.sypialnia
-  - type: entities
-    show_header_toggle: false
-    title: Roleta
-    entities:
-      - entity: cover.sypialnia
-      - type: weblink
-        url: http://shellyswitch-32B580
+      - type: entities
+        show_header_toggle: false
+        title: Roleta
+        entities:
+          - entity: cover.sypialnia
+          - type: weblink
+            url: http://shellyswitch-32B580

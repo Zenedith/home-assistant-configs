@@ -1,24 +1,34 @@
 title: Łazienka i toaleta
 cards:
-  - type: glance
-    columns: 4
-    card:
-      title: Łazienka
-    entities:
-      - entity: binary_sensor.0x00158d00024e42b5
-      - entity: binary_sensor.0x00158d0001e0a7d3_occupancy
-      - entity: sensor.0x00158d0001e0a7d3_illuminance
-      - entity: timer.lazienka
-  - type: light
-    entity: light.yeelight_ceiling_7811dcab68e0
-  - type: entities
-    title: Pralka
-    show_header_toggle: true
-    entities:
-      - entity: switch.pralka
-  - type: glance
-    columns: 1
-    card:
-      title: Toaleta
-    entities:
-      - entity: binary_sensor.0x00158d0002b52fd0
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Łazienka
+      - type: glance
+        columns: 4
+        card:
+          title: Łazienka
+        entities:
+          - entity: binary_sensor.0x00158d00024e42b5
+          - entity: binary_sensor.0x00158d0001e0a7d3_occupancy
+          - entity: sensor.0x00158d0001e0a7d3_illuminance
+          - entity: timer.lazienka
+      - type: light
+        entity: light.yeelight_ceiling_7811dcab68e0
+      - type: entities
+        title: Pralka
+        show_header_toggle: false
+        entities:
+          - entity: switch.pralka
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: >
+          ## Toaleta
+      - type: glance
+        columns: 1
+        card:
+          title: Toaleta
+        entities:
+          - entity: binary_sensor.0x00158d0002b52fd0

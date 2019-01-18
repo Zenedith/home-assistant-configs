@@ -32,8 +32,21 @@ cards:
 
   - type: vertical-stack
     cards:
+    - type: markdown
+      content: >
+        ## Internet
+      - type: sensor
+        entity: sensor.asuswrt_download_speed
+        icon: mdi:arrow-down-bold
+        graph: line
+        unit: Mbit/s
+      - type: sensor
+        entity: sensor.asuswrt_upload_speed
+        icon: mdi:arrow-up-bold
+        graph: line
+        unit: Mbit/s
+
       - type: entities
-        title: Internet
         show_header_toggle: false
         entities:
           - entity: sensor.speedtest_ping
@@ -45,14 +58,3 @@ cards:
             icon: mdi:arrow-up-bold
           - type: weblink
             url: http://MI-R3G
-
-      - type: sensor
-        entity: sensor.asuswrt_download_speed
-        icon: mdi:arrow-down-bold
-        graph: line
-        unit: Mbit/s
-      - type: sensor
-        entity: sensor.asuswrt_upload_speed
-        icon: mdi:arrow-up-bold
-        graph: line
-        unit: Mbit/s
