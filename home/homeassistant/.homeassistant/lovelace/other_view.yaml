@@ -43,10 +43,10 @@ cards:
         url: http://MI-R3G
 
   - type: vertical-stack
-      cards:
-        - type: sensor
-          entity: sensor.asuswrt_download_speed
-          graph: line
-        - type: sensor
-          entity: sensor.asuswrt_upload_speed
-          graph: line
+    cards:
+      - type: sensor
+        entity: sensor.asuswrt_download_speed
+        graph: line
+      - type: sensor
+        entity: sensor.asuswrt_upload_speed
+        graph: line
