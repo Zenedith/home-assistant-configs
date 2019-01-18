@@ -32,9 +32,9 @@ cards:
 
   - type: vertical-stack
     cards:
-    - type: markdown
-      content: >
-        ## Internet
+      - type: markdown
+        content: >
+          ## Internet
       - type: sensor
         entity: sensor.asuswrt_download_speed
         icon: mdi:arrow-down-bold
