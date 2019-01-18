@@ -222,3 +222,4 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Zmietek po {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minut sprzątania {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 zatrzymał się z powodu błędu.
+          {{ state_attr('vacuum.zmietekv2', 'error') }}
