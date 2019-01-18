@@ -152,3 +152,6 @@
       data:
         entity_id: light.yeelight_ceiling3_04cf8c78d9f7
         mode: normal
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_sypialnia
