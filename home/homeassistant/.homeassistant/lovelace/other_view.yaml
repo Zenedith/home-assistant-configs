@@ -1,49 +1,51 @@
 title: Other
 cards:
-  - type: markdown
-    content: >
-      ## Battery Levels
-  - type: gauge
-    entity: sensor.climate_pokoj_janka_batt
-    name: Pokój janka grzejnik
-  - type: gauge
-    entity: sensor.climate_sypialnia_batt
-    name: Sypialnia grzejnik
-  - type: gauge
-    entity: sensor.korytarz_temp_batt
-    name: Korytrz temperatura
-  - type: gauge
-    entity: sensor.sypialnia_ruch_batt
-    name: Sypialnia ruch
-  - type: gauge
-    entity: sensor.lazienka_ruch_batt
-    name: Łazienka ruch
-  - type: gauge
-    entity: sensor.korytarz_ruch_batt
-    name: Korytarz ruch
-  - type: gauge
-    entity: sensor.pokoj_janka_ruch_batt
-    name: Pokój janka ruch
-  - type: gauge
-    entity: sensor.zmietekv2_batt
-    name: Zmietek
-
-  - type: entities
-    title: Internet
-    show_header_toggle: false
-    entities:
-      - entity: sensor.speedtest_ping
-        name: Ping
-        icon: mdi:pulse
-      - entity: sensor.asuswrt_download
-        icon: mdi:arrow-down-bold
-      - entity: sensor.asuswrt_upload
-        icon: mdi:arrow-up-bold
-      - type: weblink
-        url: http://MI-R3G
+  - type: vertical-stack
+      cards:
+        - type: markdown
+          content: >
+            ## Battery Levels
+        - type: gauge
+          entity: sensor.climate_pokoj_janka_batt
+          name: Pokój janka grzejnik
+        - type: gauge
+          entity: sensor.climate_sypialnia_batt
+          name: Sypialnia grzejnik
+        - type: gauge
+          entity: sensor.korytarz_temp_batt
+          name: Korytrz temperatura
+        - type: gauge
+          entity: sensor.sypialnia_ruch_batt
+          name: Sypialnia ruch
+        - type: gauge
+          entity: sensor.lazienka_ruch_batt
+          name: Łazienka ruch
+        - type: gauge
+          entity: sensor.korytarz_ruch_batt
+          name: Korytarz ruch
+        - type: gauge
+          entity: sensor.pokoj_janka_ruch_batt
+          name: Pokój janka ruch
+        - type: gauge
+          entity: sensor.zmietekv2_batt
+          name: Zmietek
 
   - type: vertical-stack
     cards:
+      - type: entities
+        title: Internet
+        show_header_toggle: false
+        entities:
+          - entity: sensor.speedtest_ping
+            name: Ping
+            icon: mdi:pulse
+          - entity: sensor.asuswrt_download
+            icon: mdi:arrow-down-bold
+          - entity: sensor.asuswrt_upload
+            icon: mdi:arrow-up-bold
+          - type: weblink
+            url: http://MI-R3G
+
       - type: sensor
         entity: sensor.asuswrt_download_speed
         icon: mdi:arrow-down-bold
