@@ -121,3 +121,37 @@
     - service: timer.cancel
       data:
         entity_id: timer.pokoj_janka
+
+- alias: 'Przykręć ogrzewanie przy otwartym oknie w pokoju Janka'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x00158d000208e0c7
+    to: 'on'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.pokoj_janka
+        away_mode: 'on'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w pokóju Janka'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w pokóju Janka
+
+- alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x00158d000208e0c7
+    to: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.pokoj_janka
+        away_mode: 'off'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w pokóju Janka'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w pokóju Janka
