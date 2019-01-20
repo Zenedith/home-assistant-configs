@@ -155,3 +155,17 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przywrócone w pokóju Janka
+
+- alias: 'Zgaś światło w pokoju Janka gdy chillout mode on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.jasiu_chillout
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.swiatlo_pokoj_janka
+      state: 'on'
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.swiatlo_pokoj_janka

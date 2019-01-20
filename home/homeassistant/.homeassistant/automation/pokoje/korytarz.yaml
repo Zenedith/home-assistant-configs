@@ -82,26 +82,12 @@
     - platform: state
       entity_id: input_boolean.sypialnia_chillout
       to: 'on'
-  action:
-    - service: light.turn_on
+  condition:
+    - condition: state
       entity_id: light.yeelight_ceiling_7811dcab824a
-      data_template:
-        brightness: 10
-    - service: light.yeelight_set_mode
-      data:
-        entity_id: light.yeelight_ceiling_7811dcab824a
-        mode: moonlight
-    - service: light.turn_on
-      entity_id: light.yeelight_ceiling4_7c49ebb70c4a
-      data_template:
-        brightness: 10
-    - service: light.yeelight_set_mode
-      data:
-        entity_id: light.yeelight_ceiling4_7c49ebb70c4a
-        mode: moonlight
-    - service: light.turn_off
-      data:
-        entity_id: group.korytarz_lampy
+      state: 'on'
+  action:
+    - service: script.moonlight_korytarz_on
 
 - alias: 'Chillout mode off'
   trigger:
@@ -111,23 +97,45 @@
     - platform: state
       entity_id: input_boolean.sypialnia_chillout
       to: 'off'
-  action:
-    - service: light.turn_on
+  condition:
+    - condition: state
       entity_id: light.yeelight_ceiling_7811dcab824a
-      data_template:
-        brightness: 254
-    - service: light.yeelight_set_mode
-      data:
-        entity_id: light.yeelight_ceiling_7811dcab824a
-        mode: normal
-    - service: light.turn_on
-      entity_id: light.yeelight_ceiling4_7c49ebb70c4a
-      data_template:
-        brightness: 254
-    - service: light.yeelight_set_mode
-      data:
-        entity_id: light.yeelight_ceiling4_7c49ebb70c4a
-        mode: normal
-    - service: light.turn_off
-      data:
-        entity_id: group.korytarz_lampy
+      state: 'on'
+  action:
+    - service: script.moonlight_korytarz_off
+
+- alias: 'Chillout mode on when first time lights turn on'
+  trigger:
+    - platform: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      to: 'on'
+  condition:
+    - condition: template
+      value_template: "{{ state_attr('light.yeelight_ceiling_7811dcab824a', 'brightness') > 100 }}"
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_boolean.sypialnia_chillout
+          state: 'on'
+        - condition: state
+          entity_id: input_boolean.jasiu_chillout
+          state: 'on'
+  action:
+    - service: script.moonlight_korytarz_on
+
+- alias: 'Chillout mode off when first time lights turn on'
+  trigger:
+    - platform: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.jasiu_chillout
+      state: 'off'
+    - condition: template
+      value_template: "{{ state_attr('light.yeelight_ceiling_7811dcab824a', 'brightness') < 100 }}"
+  action:
+    - service: script.moonlight_korytarz_off

@@ -155,3 +155,17 @@
     - service: switch.turn_on
       data:
         entity_id: switch.listwa_sypialnia
+
+- alias: 'Zgaś światło w sypialni gdy chillout mode on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.sypialnia_chillout
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      state: 'on'
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
