@@ -12,6 +12,10 @@ cards:
           - entity: sensor.0x00158d000237ad9d_illuminance
   - type: vertical-stack
     cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: input_boolean.moonlight_korytarz
       - type: markdown
         content: >
           ## Lampy

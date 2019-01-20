@@ -139,3 +139,27 @@
       value_template: "{{ state_attr('light.yeelight_ceiling_7811dcab824a', 'brightness') < 100 }}"
   action:
     - service: script.moonlight_korytarz_off
+
+- alias: 'Moonlight switch on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.moonlight_korytarz
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'on'
+  action:
+    - service: script.moonlight_korytarz_on
+
+- alias: 'Moonlight switch off'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.moonlight_korytarz
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'on'
+  action:
+    - service: script.moonlight_korytarz_off

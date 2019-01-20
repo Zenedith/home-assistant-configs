@@ -15,3 +15,6 @@ sequence:
     data:
       entity_id: light.yeelight_ceiling4_7c49ebb70c4a
       mode: normal
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.moonlight_korytarz

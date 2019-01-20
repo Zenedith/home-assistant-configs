@@ -25,6 +25,15 @@ cards:
       - automation.wylacz_swiatlo_w_korytarzu_po_uplywie_czasu
       - automation.wlacz_swiatlo_w_korytarzu_gdy_ruch
       - automation.wlacz_timer_w_korytarzu_gdy_ruch
+      - automation.auto_chillout_off
+      - automation.auto_chillout_jas_on
+      - automation.auto_chillout_sypialnia_on
+      - automation.chillout_mode_off
+      - automation.chillout_mode_on
+      - automation.chillout_mode_off_when_first_time_lights_turn_on
+      - automation.chillout_mode_on_when_first_time_lights_turn_on
+      - automation.moonlight_switch_on
+      - automation.moonlight_switch_off
   - type: entities
     title: Pokój Janka
     show_header_toggle: false
@@ -36,11 +45,6 @@ cards:
       - automation.wylacz_swiatlo_w_pokoju_janka_po_uplywie_czasu
       - automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
       - automation.wlacz_timer_w_pokoju_janka_gdy_ruch
-      - automation.auto_chillout_off
-      - automation.auto_chillout_jas_on
-      - automation.auto_chillout_sypialnia_on
-      - automation.chillout_mode_off
-      - automation.chillout_mode_on
   - type: entities
     title: Salon
     show_header_toggle: false

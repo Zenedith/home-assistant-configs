@@ -9,7 +9,7 @@ cards:
           - entity: sensor.0x00158d0001e55705_illuminance
       - type: entities
         title: Listwa
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: switch.listwa_sypialnia
           - entity: input_boolean.sypialnia_chillout
