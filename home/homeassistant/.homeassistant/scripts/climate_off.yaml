@@ -1,0 +1,9 @@
+sequence:
+  - service: climate.set_away_mode
+    entity_id: climate.pokoj_janka
+    data:
+      away_mode: true
+  - service: climate.set_away_mode
+    data:
+      entity_id: climate.sypialnia
+      away_mode: true

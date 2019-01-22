@@ -73,6 +73,8 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Drzwi wejściowe zostały otwarte.
+          Przywracam ogrzewanie.
+    - service: script.climate_off
 
 - alias: 'Chillout mode on'
   trigger:

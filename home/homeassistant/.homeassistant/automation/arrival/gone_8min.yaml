@@ -1,8 +1,8 @@
-- alias: "Gone for 8 minutes"
+- alias: 'Gone for 8 minutes'
   trigger:
     - platform: state
       entity_id: group.mobiledevices
-      to: 'not_home'
+      to: not_home
       for:
         minutes: 8
   action:

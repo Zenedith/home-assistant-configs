@@ -1,0 +1,7 @@
+- alias: 'Everything off when gone'
+  trigger:
+    - platform: state
+      entity_id: input_select.presence_status
+      to: 'Away'
+  action:
+    - service: script.everything_off
