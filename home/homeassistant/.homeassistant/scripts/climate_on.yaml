@@ -1,7 +1,7 @@
 sequence:
   - service: climate.set_away_mode
-    entity_id: climate.pokoj_janka
     data:
+      entity_id: climate.pokoj_janka
       away_mode: false
   - service: climate.set_away_mode
     data:
