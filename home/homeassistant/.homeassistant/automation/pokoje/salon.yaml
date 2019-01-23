@@ -208,7 +208,7 @@
         title: 'Zmietek zakończył sprzątanie'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Zmietek zakończył sprzątanie w {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minut powierchni {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 z poziomem baterii {{ state_attr('vacuum.zmietekv2', 'battery_level') }} %.
+          Zmietek zakończył sprzątanie w {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minuty, powierchnię {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 z poziomem baterii {{ state_attr('vacuum.zmietekv2', 'battery_level') }} %.
 
 - alias: 'Zmietek error'
   trigger:
@@ -221,5 +221,5 @@
         title: 'Zmietek napotkał problem'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Zmietek po {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minut sprzątania {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 zatrzymał się z powodu błędu.
+          Zmietek po {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minutach sprzątania {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 zatrzymał się z powodu błędu.
           {{ state_attr('vacuum.zmietekv2', 'error') }}

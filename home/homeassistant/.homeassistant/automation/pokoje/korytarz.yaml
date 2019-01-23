@@ -73,8 +73,11 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Drzwi wejściowe zostały otwarte.
-          Przywracam ogrzewanie.
-    - service: script.climate_off
+          Przywracam ogrzewanie i włączam bedside u Janka.
+    - service: script.climate_on
+    - service: light.turn_on
+      data:
+        entity_id: light.yeelight_bedside_7c49eb284fda
 
 - alias: 'Chillout mode on'
   trigger:
