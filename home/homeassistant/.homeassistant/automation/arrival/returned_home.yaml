@@ -6,6 +6,10 @@
     - platform: state
       entity_id: device_tracker.e49a79e25678
       to: home
+  condition:
+    - condition: time
+      after: '06:00:00'
+      before: '03:00:00'
   action:
     - service: input_boolean.turn_off
       data:
@@ -14,3 +18,7 @@
       data:
         entity_id: input_select.presence_status
         option: Just Returned
+    - service: script.climate_on
+    - service: light.turn_on
+      data:
+        entity_id: light.yeelight_bedside_7c49eb284fda
