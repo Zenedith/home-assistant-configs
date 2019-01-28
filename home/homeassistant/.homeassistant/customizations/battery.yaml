@@ -1,24 +1,33 @@
 sensor.korytarz_temp_batt:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.lazienka_ruch_batt:
+sensor.0x00158d0001e0a7d3_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.pokoj_janka_ruch_batt:
+sensor.0x00158d0001e5d112_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.sypialnia_ruch_batt:
+sensor.0x00158d0001e55705_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.korytarz_ruch_batt:
+sensor.0x00158d000237ad9d_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.drzwi_wejsciowe_contact_batt:
+sensor.0x00158d00020b7b77_battery:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.0x00158d000205b35f_battery:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.0x00158d00024e42b5_battery:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.0x00158d0002b52fd0_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
 sensor.climate_pokoj_janka_batt:
   templates:
-    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+    icon_color: if (state > 10) return 'rgb(0,255,0)'; else return 'rgb(255,0,0)';
 sensor.climate_sypialnia_batt:
   templates:
-    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+    icon_color: if (state > 10) return 'rgb(0,255,0)'; else return 'rgb(255,0,0)';

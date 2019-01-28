@@ -44,17 +44,32 @@ cards:
         entity: sensor.korytarz_temp_batt
         name: Korytrz temperatura
       - type: gauge
-        entity: sensor.sypialnia_ruch_batt
+        entity: sensor.0x00158d000205b35f_battery
+        name: Drzwi balkonowe
+      - type: gauge
+        entity: sensor.0x00158d0001e55705_battery
         name: Sypialnia ruch
       - type: gauge
-        entity: sensor.lazienka_ruch_batt
+        entity: sensor.0x00158d0001e0a7d3_battery
         name: Łazienka ruch
       - type: gauge
-        entity: sensor.korytarz_ruch_batt
+        entity: sensor.0x00158d000237ad9d_battery
         name: Korytarz ruch
       - type: gauge
-        entity: sensor.pokoj_janka_ruch_batt
+        entity: sensor.0x00158d000208e0c7_battery
+        name: Pokój janka okno
+      - type: gauge
+        entity: sensor.0x00158d0001e5d112_battery
         name: Pokój janka ruch
+      - type: gauge
+        entity: sensor.0x00158d00020b7b77_battery
+        name: Drzwi wejściowe
+      - type: gauge
+        entity: sensor.0x00158d00024e42b5_battery
+        name: Drzwi łazienka
+      - type: gauge
+        entity: sensor.0x00158d0002b52fd0_battery
+        name: Drzwi toaleta
       - type: gauge
         entity: sensor.zmietekv2_batt
         name: Zmietek
