@@ -11,6 +11,9 @@
       for:
         minutes: 8
   condition:
+    - condition: time
+      after: '06:00:00'
+      before: '23:59:59'
     - condition: state
       entity_id: input_boolean.just_left
       state: 'off'
