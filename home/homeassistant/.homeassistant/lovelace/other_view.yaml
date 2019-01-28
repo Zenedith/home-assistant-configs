@@ -35,41 +35,106 @@ cards:
         content: >
           ## Battery Levels
       - type: gauge
+        unit: '%'
         entity: sensor.climate_pokoj_janka_batt
         name: Pokój janka grzejnik
+        severity:
+          green: 90
+          yellow: 45
+          red: 4
       - type: gauge
+        unit: '%'
         entity: sensor.climate_sypialnia_batt
         name: Sypialnia grzejnik
+        severity:
+          green: 90
+          yellow: 45
+          red: 4
       - type: gauge
+        unit: '%'
         entity: sensor.korytarz_temp_batt
         name: Korytrz temperatura
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d000205b35f_battery
         name: Drzwi balkonowe
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d0001e55705_battery
         name: Sypialnia ruch
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d0001e0a7d3_battery
         name: Łazienka ruch
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d000237ad9d_battery
         name: Korytarz ruch
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d000208e0c7_battery
         name: Pokój janka okno
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d0001e5d112_battery
         name: Pokój janka ruch
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d00020b7b77_battery
         name: Drzwi wejściowe
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d00024e42b5_battery
         name: Drzwi łazienka
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.0x00158d0002b52fd0_battery
         name: Drzwi toaleta
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
       - type: gauge
+        unit: '%'
         entity: sensor.zmietekv2_batt
         name: Zmietek
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
