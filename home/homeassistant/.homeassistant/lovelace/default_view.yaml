@@ -10,6 +10,9 @@ cards:
           - device_tracker.e49a79e25678
           - input_select.presence_status
           - sensor.home_assistant_version
+          - tap_action:
+            action: navigate
+            navigation_path: https://www.home-assistant.io/blog/
       - type: entities
         title: Media
         show_header_toggle: false
