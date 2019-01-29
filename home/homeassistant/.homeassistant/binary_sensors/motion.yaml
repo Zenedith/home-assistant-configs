@@ -6,7 +6,7 @@
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
   device_class: "motion"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -18,7 +18,7 @@
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
   device_class: "motion"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -30,7 +30,7 @@
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
   device_class: "motion"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -42,7 +42,7 @@
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
   device_class: "motion"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"

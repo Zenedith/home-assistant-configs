@@ -6,7 +6,7 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -18,7 +18,7 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -30,7 +30,7 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -42,7 +42,7 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -54,7 +54,7 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
-  json_attributes:
+  json_attributes_topic:
     - "linkquality"
     - "battery"
     - "voltage"

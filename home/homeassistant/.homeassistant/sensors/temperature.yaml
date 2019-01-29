@@ -5,7 +5,7 @@
   unit_of_measurement: "°C"
   device_class: "temperature"
   value_template: "{{ value_json.temperature }}"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -17,7 +17,7 @@
   unit_of_measurement: "%"
   device_class: "humidity"
   value_template: "{{ value_json.humidity }}"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -29,7 +29,7 @@
   unit_of_measurement: "hPa"
   device_class: "pressure"
   value_template: "{{ value_json.pressure }}"
-  json_attributes:
+  json_attributes_topic:
   - "linkquality"
   - "battery"
   - "voltage"
