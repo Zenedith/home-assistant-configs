@@ -10,20 +10,19 @@ cards:
           - device_tracker.e49a79e25678
           - input_select.presence_status
           - sensor.home_assistant_version
+      - type: markdown
+        content: >
+          ## Media player
+      - type: media-control
+        entity: media_player.sony_bravia_tv
+      - type: media-control
+        entity: media_player.playstation_4
+      - type: media-control
+        entity: media_player.tv
+      - type: media-control
+        entity: media_player.salon
       - type: media-control
         entity: media_player.spotify
-      - type: entities
-        title: Media
-        show_header_toggle: false
-        entities:
-          - media_player.sony_bravia_tv
-          - media_player.playstation_4
-          - media_player.tv
-          - media_player.salon
-          - media_player.spotify
-    #  - type: media-control
-    #    entity: media_player.google_home_mini
-    #    name: Google home mini
   - type: vertical-stack
     cards:
       - type: entities

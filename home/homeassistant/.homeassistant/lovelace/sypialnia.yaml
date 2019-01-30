@@ -3,8 +3,9 @@ cards:
   - type: vertical-stack
     cards:
       - type: glance
-        columns: 2
+        columns: 3
         entities:
+          - entity: input_boolean.sypialnia_chillout
           - entity: binary_sensor.0x00158d0001e55705_occupancy
           - entity: sensor.0x00158d0001e55705_illuminance
       - type: entities
