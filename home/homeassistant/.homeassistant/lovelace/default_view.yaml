@@ -9,10 +9,9 @@ cards:
           - device_tracker.80b03dcda5eb
           - device_tracker.e49a79e25678
           - input_select.presence_status
-          - entity: sensor.home_assistant_version
-            tap_action:
-              action: navigate
-              navigation_path: https://www.home-assistant.io/blog/
+          - sensor.home_assistant_version
+      - type: media-control
+        entity: media_player.spotify
       - type: entities
         title: Media
         show_header_toggle: false
