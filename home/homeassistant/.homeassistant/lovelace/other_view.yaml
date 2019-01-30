@@ -6,7 +6,7 @@ cards:
         content: >
           ## Internet
       - type: weblink
-      url: https://www.home-assistant.io/blog/
+        url: https://www.home-assistant.io/blog/
 #      - type: sensor
 #        entity: sensor.asuswrt_download_speed
 #        icon: mdi:arrow-down-bold
