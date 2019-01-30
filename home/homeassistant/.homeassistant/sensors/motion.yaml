@@ -5,7 +5,7 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes_topic:
+  json_attributes:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -16,7 +16,7 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes_topic:
+  json_attributes:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -27,7 +27,7 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes_topic:
+  json_attributes:
   - "linkquality"
   - "battery"
   - "voltage"
@@ -39,7 +39,7 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes_topic:
+  json_attributes:
   - "linkquality"
   - "battery"
   - "voltage"
