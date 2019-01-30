@@ -23,6 +23,14 @@ cards:
         entity: media_player.salon
       - type: media-control
         entity: media_player.spotify
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - input_select.spotify_playlist
+          - input_select.spotify_source
+          - script.spotify_music
+          - input_number.spotify_volume
+          - input_boolean.spotify_shuffle
   - type: vertical-stack
     cards:
       - type: entities
