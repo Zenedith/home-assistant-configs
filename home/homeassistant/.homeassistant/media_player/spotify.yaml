@@ -2,4 +2,4 @@
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
   aliases:
-    a942d5d01a5083e225a29b432faf15da54d7860c: 'Chromecast TV'
+    a942d5d01a5083e225a29b432faf15da54d7860c: 'tv'
