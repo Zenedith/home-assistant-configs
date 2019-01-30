@@ -1,8 +1,3 @@
-#media_player:
-#  - platform: spotify
-#    client_id: !secret spotify_client_id
-#    client_secret: !secret spotify_client_secret
-
 group:
   home_spotify_player:
     name: Spotify Player
@@ -55,17 +50,47 @@ input_select:
   spotify_playlist:
     name: 'Playlist:'
     options:
-      - Muzyka do pracy
-      - Zimowy power
-      - Songs to Sing in the Car
+      - 'Muzyka do pracy'
+      - 'Zimowy power'
+      - 'Songs to Sing in the Car'
       - '#throwback #party - Samuel Jarosiński'
       - '#party #hard - Samuel Jarosiński'
-      - Rammstein - Best of
-      - Mixed Rock
-      - filmowa
-      - Good Feeling
-      - Nightair
-      - Streetbangers
+      - 'Rammstein - Best of'
+      - 'Mixed Rock'
+      - 'filmowa'
+      - 'Good Feeling'
+      - 'Nightair'
+      - 'Streetbangers'
+      - 'Cinematic Chill-Out'
+      - 'From a Smokey Bar'
+      - 'Piano in the Background'
+      - 'Productive morning'
+      - 'Morning motivation'
+      - 'Morning stroll'
+      - 'Soft pop hits'
+      - 'Deep focus'
+      - 'Peaceful piano'
+      - 'Wake up happy'
+      - 'Feeling good'
+      - 'Comfort zone'
+      - 'Wake up and smell the coffee'
+      - 'Have a great day'
+      - 'Confidence boost'
+      - 'Soulful morning'
+      - 'Another one fights the dust'
+      - 'Lounge soft house'
+      - 'Cocktails'
+      - 'Happy beats'
+      - 'Soul coffee'
+      - 'Just smile'
+      - 'Soft morning'
+      - 'Smooth morning'
+      - 'The stress buster'
+      - 'Sweet songs for sunny days'
+      - 'Seize the day'
+      - 'My list'
+      - 'Feel good dinner'
+      - 'Soulful dinner'
     icon: mdi:spotify
   spotify_source:
     name: 'Source:'
@@ -105,6 +130,37 @@ script:
             {% elif is_state("input_select.spotify_playlist", "Good Feeling") %} spotify:user:1143893613:playlist:0rHdZMqeSR4XVvPf6QmFM4
             {% elif is_state("input_select.spotify_playlist", "Nightair") %} spotify:user:1143893613:playlist:2C4xXSYKJp0CYwIyWhODpD
             {% elif is_state("input_select.spotify_playlist", "Streetbangers") %} spotify:user:1143893613:playlist:1JzR2qe9P3EOjgSyVNJ80R
+            {% elif is_state("input_select.spotify_playlist", "Morning Commute") %} spotify:user:spotify:playlist:37i9dQZF1DX2MyUCsl25eb
+            {% elif is_state("input_select.spotify_playlist", "Cinematic Chill-Out") %} spotify:user:spotify:playlist:37i9dQZF1DWVFJtzvDHN4L
+            {% elif is_state("input_select.spotify_playlist", "From a Smokey Bar") %} spotify:user:spotify:playlist:37i9dQZF1DWTlzJXLRpd4a
+            {% elif is_state("input_select.spotify_playlist", "Piano in the Background") %} spotify:user:spotify:playlist:37i9dQZF1DX7K31D69s4M1
+            {% elif is_state("input_select.spotify_playlist", "Productive morning") %} spotify:user:spotify:playlist:37i9dQZF1DX6T5dWVv97mp
+            {% elif is_state("input_select.spotify_playlist", "Morning motivation") %} spotify:user:spotify:playlist:37i9dQZF1DXc5e2bJhV6pu
+            {% elif is_state("input_select.spotify_playlist", "Morning stroll") %} spotify:user:spotify:playlist:37i9dQZF1DWWLToO3EeTtX
+            {% elif is_state("input_select.spotify_playlist", "Soft pop hits") %} spotify:user:spotify:playlist:37i9dQZF1DWTwnEm1IYyoj
+            {% elif is_state("input_select.spotify_playlist", "Deep focus") %} spotify:user:spotify:playlist:37i9dQZF1DWZeKCadgRdKQ
+            {% elif is_state("input_select.spotify_playlist", "Peaceful piano") %} spotify:user:spotify:playlist:37i9dQZF1DX4sWSpwq3LiO
+            {% elif is_state("input_select.spotify_playlist", "Wake up happy") %} spotify:user:spotify:playlist:37i9dQZF1DX0UrRvztWcAU
+            {% elif is_state("input_select.spotify_playlist", "Feeling good") %} spotify:user:spotify:playlist:37i9dQZF1DX9XIFQuFvzM4
+            {% elif is_state("input_select.spotify_playlist", "Comfort zone") %} spotify:user:spotify:playlist:37i9dQZF1DWYWddJiPzbvb
+            {% elif is_state("input_select.spotify_playlist", "Wake up and smell the coffee") %} spotify:user:spotify:playlist:37i9dQZF1DXcxacyAXkQDu
+            {% elif is_state("input_select.spotify_playlist", "Have a great day") %} spotify:user:spotify:playlist:37i9dQZF1DX7KNKjOK0o75
+            {% elif is_state("input_select.spotify_playlist", "Confidence boost") %} spotify:user:spotify:playlist:37i9dQZF1DX4fpCWaHOned
+            {% elif is_state("input_select.spotify_playlist", "Soulful morning") %} spotify:user:spotify:playlist:37i9dQZF1DX8Md3JnnrexB
+            {% elif is_state("input_select.spotify_playlist", "Another one fights the dust") %} spotify:user:spotify:playlist:37i9dQZF1DXcI5whHzonSg
+            {% elif is_state("input_select.spotify_playlist", "Lounge soft house") %} spotify:user:spotify:playlist:37i9dQZF1DX82pCGH5USnM
+            {% elif is_state("input_select.spotify_playlist", "Cocktails") %} spotify:user:spotify:playlist:37i9dQZF1DWWzhxZzVxMP3
+            {% elif is_state("input_select.spotify_playlist", "Happy beats") %} spotify:user:spotify:playlist:37i9dQZF1DWSf2RDTDayIx
+            {% elif is_state("input_select.spotify_playlist", "Soul coffee") %} spotify:user:spotify:playlist:37i9dQZF1DXaXDsfv6nvZ5
+            {% elif is_state("input_select.spotify_playlist", "Just smile") %} spotify:user:spotify:playlist:37i9dQZF1DWVu0D7Y8cYcs
+            {% elif is_state("input_select.spotify_playlist", "Soft morning") %} spotify:user:spotify:playlist:37i9dQZF1DXb5Mq0JeBbIw
+            {% elif is_state("input_select.spotify_playlist", "Smooth morning") %} spotify:user:spotify:playlist:37i9dQZF1DX6FpuSJJgdDF
+            {% elif is_state("input_select.spotify_playlist", "The stress buster") %} spotify:user:spotify:playlist:37i9dQZF1DWUvQoIOFMFUT
+            {% elif is_state("input_select.spotify_playlist", "Sweet songs for sunny days") %} spotify:user:spotify:playlist:37i9dQZF1DX1BzILRveYHb
+            {% elif is_state("input_select.spotify_playlist", "Seize the day") %} spotify:album:4B4nVmQZWZ44Y4yzLDa5n1
+            {% elif is_state("input_select.spotify_playlist", "My list") %} spotify:user:dawnlord:playlist:6YrwtfevNdgc44vI2HiO5j
+            {% elif is_state("input_select.spotify_playlist", "Feel good dinner") %} spotify:user:spotify:playlist:37i9dQZF1DXbm6HfkbMtFZ
+            {% elif is_state("input_select.spotify_playlist", "Soulful dinner") %} spotify:user:spotify:playlist:37i9dQZF1DWZheHO7xislj
             {% endif %}
 
 automation:
