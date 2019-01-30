@@ -179,11 +179,11 @@ asuswrt:
   host: 192.168.1.1
   username: !secret device_tracker_asus_username
   password: !secret device_tracker_asus_password
-#  sensors:
-#    - upload
-#    - download
-#    - upload_speed
-#    - download_speed
+  sensors:
+    - upload
+    - download
+    - upload_speed
+    - download_speed
 
 device_tracker:
   - platform: asuswrt
