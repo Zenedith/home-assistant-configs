@@ -1,0 +1,178 @@
+#media_player:
+#  - platform: spotify
+#    client_id: !secret spotify_client_id
+#    client_secret: !secret spotify_client_secret
+
+group:
+  home_spotify_player:
+    name: Spotify Player
+    entities:
+      - media_player.spotify
+
+  home_spotify_controls:
+    name: Spotify Controls
+    control: hidden
+    entities:
+      - input_select.spotify_playlist
+      - input_select.spotify_source
+      - script.spotify_music
+      - input_number.spotify_volume
+      - input_boolean.spotify_shuffle
+
+homeassistant:
+  customize:
+    script.spotify_music:
+      friendly_name: 'Play'
+      icon: mdi:play
+
+sensor:
+  - platform: template
+    sensors:
+      spotify_volume:
+        friendly_name: "Spotify Volume"
+        value_template: "{{ states.media_player.spotify.attributes.volume_level }}"
+  - platform: template
+    sensors:
+      spotify_shuffle:
+        friendly_name: "Spotify Shuffle"
+        value_template: "{{ states.media_player.spotify.attributes.shuffle }}"
+  - platform: template
+    sensors:
+      spotify_source:
+        friendly_name: "Spotify Source"
+        value_template: "{{ states.media_player.spotify.attributes.source }}"
+
+input_number:
+  spotify_volume:
+    name: Volume
+    icon: mdi:volume-high
+    initial: 100
+    min: 0
+    max: 100
+    step: 1
+
+input_select:
+  spotify_playlist:
+    name: 'Playlist:'
+    options:
+      - Muzyka do pracy
+      - Zimowy power
+      - Songs to Sing in the Car
+      - '#throwback #party - Samuel Jarosiński'
+      - '#party #hard - Samuel Jarosiński'
+      - Rammstein - Best of
+      - Mixed Rock
+      - filmowa
+      - Good Feeling
+      - Nightair
+      - Streetbangers
+    icon: mdi:spotify
+  spotify_source:
+    name: 'Source:'
+    options:
+      - tv
+    initial: tv
+    icon: mdi:speaker-wireless
+
+input_boolean:
+  spotify_shuffle:
+    name: Shuffle
+    icon: mdi:shuffle-variant
+
+script:
+  spotify_music:
+    alias: "Play selected spotify playlist"
+    sequence:
+      - service: media_player.select_source
+        data_template:
+          entity_id: media_player.spotify
+          source: >
+            {% if is_state("input_select.spotify_source", "tv") %} tv
+            {% endif %}
+      - service: media_player.play_media
+        data_template:
+          entity_id: media_player.spotify
+          media_content_type: playlist
+          media_content_id: >
+            {% if is_state("input_select.spotify_playlist", "Muzyka do pracy") %} spotify:user:spotify:playlist:37i9dQZF1DX4WKDmViNbrh
+            {% elif is_state("input_select.spotify_playlist", "Zimowy power") %} spotify:user:spotify:playlist:37i9dQZF1DXdmgtdl82XHM
+            {% elif is_state("input_select.spotify_playlist", "Songs to Sing in the Car") %} spotify:user:spotify:playlist:37i9dQZF1DWWMOmoXKqHTD
+            {% elif is_state("input_select.spotify_playlist", "#throwback #party - Samuel Jarosiński") %} spotify:user:1167044577:playlist:2cIeVeyYXI6nrQdNl1PJVp
+            {% elif is_state("input_select.spotify_playlist", "#party #hard - Samuel Jarosiński") %} spotify:user:1167044577:playlist:1X4K8PfZlX2hsEfTsCofZM
+            {% elif is_state("input_select.spotify_playlist", "Rammstein - Best of") %} spotify:user:facerlp:playlist:7u2DUW2FQjh1LnTRsAGnO2
+            {% elif is_state("input_select.spotify_playlist", "Mixed Rock") %} spotify:user:1143893613:playlist:2ECMyR5ovezJBGQDnL3w23
+            {% elif is_state("input_select.spotify_playlist", "filmowa") %} spotify:user:zenedith:playlist:2igRDJONj69kaIlHJO4LtQ
+            {% elif is_state("input_select.spotify_playlist", "Good Feeling") %} spotify:user:1143893613:playlist:0rHdZMqeSR4XVvPf6QmFM4
+            {% elif is_state("input_select.spotify_playlist", "Nightair") %} spotify:user:1143893613:playlist:2C4xXSYKJp0CYwIyWhODpD
+            {% elif is_state("input_select.spotify_playlist", "Streetbangers") %} spotify:user:1143893613:playlist:1JzR2qe9P3EOjgSyVNJ80R
+            {% endif %}
+
+automation:
+  - alias: 'Spotify Volume (Set)'
+    trigger:
+      platform: state
+      entity_id: input_number.spotify_volume
+    action:
+      service: media_player.volume_set
+      data_template:
+        entity_id: media_player.spotify
+        volume_level: '{{  states.input_number.spotify_volume.state | int / 100  }}'
+
+  - alias: 'Spotify Volume (Sync)'
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.spotify_volume
+    action:
+      - delay:
+          seconds: 5
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.spotify_volume
+          value: '{{  states.sensor.spotify_volume.state | float | round(2) * 100  }}'
+
+  - alias: 'Spotify Shuffle (Set)'
+    trigger:
+      platform: state
+      entity_id: input_boolean.spotify_shuffle
+    action:
+      service: media_player.shuffle_set
+      data_template:
+        entity_id: media_player.spotify
+        shuffle: >
+          {% if is_state('input_boolean.spotify_shuffle', 'off') %}
+          false
+          {% elif is_state('input_boolean.spotify_shuffle', 'on') %}
+          true
+          {% endif %}
+
+  - alias: 'Spotify Shuffle (Sync)'
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.spotify_shuffle
+    action:
+      - delay:
+          seconds: 5
+      - service_template: >
+          {% if states.sensor.spotify_shuffle.state == 'False' %}
+            input_boolean.turn_off
+          {% else %}
+            input_boolean.turn_on
+          {% endif %}
+        data:
+          entity_id: input_boolean.spotify_shuffle
+
+  - alias: 'Spotify Source (Sync)'
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.spotify_source
+    action:
+      service: input_select.select_option
+      entity_id: input_select.spotify_source
+      data_template:
+        option: '{{  states.sensor.spotify_source.state  }}'
