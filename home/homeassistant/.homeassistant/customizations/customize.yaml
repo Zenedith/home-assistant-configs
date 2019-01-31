@@ -18,65 +18,69 @@ light.yeelight_ceiling_7811dcab68e0:
 light.yeelight_ceiling4_7c49ebb70c4a:
   friendly_name: Lampa korytarz
   supported_features: 3
-sensor.0x00158d000237ad9d_illuminance:
+sensor.korytarz_motion_illuminance:
   friendly_name: Naświetlenie Korytarz
-sensor.0x00158d000237ad9d_battery:
+sensor.korytarz_motion_battery:
   friendly_name: Ruch Korytarz bateria
-binary_sensor.0x00158d000237ad9d_occupancy:
+binary_sensor.korytarz_motion_occupancy:
   friendly_name: Ruch Korytarz
-sensor.0x00158d00022cc215_temperature:
+sensor.korytarz_temp_temperature:
   friendly_name: Temperatura Korytarz
-sensor.0x00158d00022cc215_humidity:
+sensor.korytarz_temp_humidity:
   friendly_name: Wilgotność Korytarz
-sensor.0x00158d00022cc215_pressure:
+sensor.korytarz_temp_pressure:
   friendly_name: Ciśnienie Korytarz
-sensor.0x00158d000272fe71_temperature:
+sensor.kuchnia_temp_temperature:
   friendly_name: Temperatura Kuchnia
-sensor.0x00158d000272fe71_humidity:
+sensor.kuchnia_temp_humidity:
   friendly_name: Wilgotność Kuchnia
-sensor.0x00158d000272fe71_pressure:
+sensor.kuchnia_temp_pressure:
   friendly_name: Ciśnienie Kuchnia
-binary_sensor.0x00158d00020b7b77:
+binary_sensor.drzwi_wejsciowe_contact:
   friendly_name: Drzwi wejściowe
-sensor.0x00158d00020b7b77_battery:
+sensor.drzwi_wejsciowe_contact_battery:
   friendly_name: Drzwi wejściowe bateria
-binary_sensor.0x00158d0001e0a7d3_occupancy:
+binary_sensor.lazienka_motion_occupancy:
   friendly_name: Ruch Łazienka
-sensor.0x00158d0001e0a7d3_battery:
+sensor.lazienka_motion_battery:
   friendly_name: Ruch Łazienka bateria
-sensor.0x00158d0001e0a7d3_illuminance:
+sensor.lazienka_motion_illuminance:
   friendly_name: Naświetlenie Łazienka
-sensor.0x00158d0001e5d112_illuminance:
+sensor.janek_motion_illuminance:
   friendly_name: Naświetlenie u Janka
-sensor.0x00158d0001e5d112_battery:
+sensor.janek_motion_battery:
   friendly_name: Naświetlenie u Janka bateria
-binary_sensor.0x00158d0001e5d112_occupancy:
+binary_sensor.janek_motion_occupancy:
   friendly_name: Ruch u Janka
-binary_sensor.0x00158d000208e0c7:
+binary_sensor.okno_janek_contact:
   friendly_name: Okno u Janka
-sensor.0x00158d000208e0c7_battery:
+sensor.okno_janek_contact_battery:
   friendly_name: Okno u Janka bateria
-binary_sensor.0x00158d0002bfd324:
+binary_sensor.okno_sypialnia_contact:
   friendly_name: Okno Sypialnia
-sensor.0x00158d0002bfd324_battery:
+sensor.okno_sypialnia_contact_battery:
   friendly_name: Okno Sypialnia bateria
-binary_sensor.0x00158d00021508b4:
-  friendly_name: Zmywarka
-binary_sensor.0x00158d0001bb388f:
-  friendly_name: Pralka
+binary_sensor.kuchnia_leak_water_leak:
+  friendly_name: Zalanie kuchnia
+sensor.kuchnia_leak_battery:
+  friendly_name: Zalanie kuchnia bateria
+binary_sensor.lazienka_leak_water_leak:
+  friendly_name: Zalanie łazienka
+sensor.lazienka_leak_battery:
+  friendly_name: Zalanie łazienka bateria
 binary_sensor.drzwi_balkonowe_contact:
   friendly_name: Drzwi balkonowe
 sensor.drzwi_balkonowe_contact_battery:
   friendly_name: Drzwi balkonowe bateria
-binary_sensor.0x00158d0001e55705_occupancy:
+binary_sensor.sypialnia_motion_occupancy:
   friendly_name: Ruch w sypialni
-sensor.0x00158d0001e55705_battery:
+sensor.sypialnia_motion_battery:
   friendly_name: Ruch w sypialni bateria
-sensor.0x00158d0001e55705_illuminance:
+sensor.sypialnia_motion_illuminance:
   friendly_name: Naświetlenie w sypialni
-binary_sensor.0x00158d00024e42b5:
+binary_sensor.drzwi_lazienka_contact:
   friendly_name: Drzwi łazienka
-sensor.0x00158d00024e42b5_battery:
+sensor.drzwi_lazienka_contact_battery:
   friendly_name: Drzwi łazienka bateria
 light.yeelight_color2_04cf8c763997:
   friendly_name: Salon 1
@@ -90,7 +94,7 @@ light.yeelight_color2_7c49ebb76a3d:
   friendly_name: Salon 5
 light.yeelight_ceiling_7811dcab824a:
   friendly_name: Lampa korytarz (drzwi)
-binary_sensor.0x00158d0002b52fd0:
+binary_sensor.drzwi_toaleta_contact:
   friendly_name: Drzwi toaleta
-sensor.0x00158d0002b52fd0_battery:
+sensor.drzwi_toaleta_contact_battery:
   friendly_name: Drzwi toaleta bateria

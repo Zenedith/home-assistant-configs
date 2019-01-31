@@ -5,9 +5,9 @@ cards:
       - type: glance
         columns: 3
         entities:
-          - entity: binary_sensor.0x00158d0001e55705_occupancy
-          - entity: sensor.0x00158d0001e55705_illuminance
-          - entity: binary_sensor.0x00158d0002bfd324
+          - entity: binary_sensor.sypialnia_motion_occupancy
+          - entity: sensor.sypialnia_motion_illuminance
+          - entity: binary_sensor.okno_sypialnia_contact
       - type: entities
         title: Listwa
         show_header_toggle: false

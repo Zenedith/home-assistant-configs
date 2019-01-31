@@ -7,22 +7,22 @@ cards:
       content: >
         ## Indoors
     - type: sensor
-      entity: sensor.0x00158d00022cc215_temperature
+      entity: sensor.korytarz_temp_temperature
       graph: line
     - type: sensor
-      entity: sensor.0x00158d00022cc215_humidity
+      entity: sensor.korytarz_temp_humidity
       graph: line
     - type: sensor
-      entity: sensor.0x00158d00022cc215_pressure
+      entity: sensor.korytarz_temp_pressure
       graph: line
     - type: sensor
-      entity: sensor.0x00158d000272fe71_temperature
+      entity: sensor.kuchnia_temp_temperature
       graph: line
     - type: sensor
-      entity: sensor.0x00158d000272fe71_humidity
+      entity: sensor.kuchnia_temp_humidity
       graph: line
     - type: sensor
-      entity: sensor.0x00158d000272fe71_pressure
+      entity: sensor.kuchnia_temp_pressure
       graph: line
   - type: vertical-stack
     cards:

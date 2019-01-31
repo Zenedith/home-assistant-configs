@@ -68,7 +68,7 @@
 - alias: 'Włącz światło w sypialni gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e55705_occupancy
+      entity_id: binary_sensor.sypialnia_motion_occupancy
       to: 'on'
   condition:
     - condition: time
@@ -88,7 +88,7 @@
 - alias: 'Włącz timer w sypialni gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e55705_occupancy
+      entity_id: binary_sensor.sypialnia_motion_occupancy
       to: 'on'
   condition:
     - condition: time
@@ -173,7 +173,7 @@
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x00158d0002bfd324
+    entity_id: binary_sensor.okno_sypialnia_contact
     to: 'on'
   action:
     - service: climate.set_away_mode
@@ -190,7 +190,7 @@
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x00158d0002bfd324
+    entity_id: binary_sensor.okno_sypialnia_contact
     to: 'off'
   action:
     - service: climate.set_away_mode

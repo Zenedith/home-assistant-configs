@@ -7,10 +7,10 @@ cards:
         card:
           title: Salon
         entities:
-          - sensor.0x00158d000272fe71_temperature
-          - vacuum.zmietekv2
+          - entity: sensor.kuchnia_temp_temperature
           - entity: binary_sensor.drzwi_balkonowe_contact
-          - entity: binary_sensor.0x00158d00021508b4
+          - entity: binary_sensor.kuchnia_leak_water_leak
+          - vacuum.zmietekv2
       - type: entities
         title: Listwy
         show_header_toggle: true

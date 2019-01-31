@@ -1,5 +1,5 @@
 - platform: "mqtt"
-  name: "0x00158d0001e0a7d3_illuminance"
+  name: "lazienka_motion_illuminance"
   state_topic: "zigbee2mqtt/0x00158d0001e0a7d3"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "lx"
@@ -7,7 +7,7 @@
   value_template: "{{ value_json.illuminance }}"
 
 - platform: "mqtt"
-  name: "0x00158d0001e55705_illuminance"
+  name: "sypialnia_motion_illuminance"
   state_topic: "zigbee2mqtt/0x00158d0001e55705"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "lx"
@@ -15,7 +15,7 @@
   value_template: "{{ value_json.illuminance }}"
 
 - platform: "mqtt"
-  name: "0x00158d0001e5d112_illuminance"
+  name: "janek_motion_illuminance"
   state_topic: "zigbee2mqtt/0x00158d0001e5d112"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "lx"
@@ -23,7 +23,7 @@
   value_template: "{{ value_json.illuminance }}"
 
 - platform: "mqtt"
-  name: "0x00158d000237ad9d_illuminance"
+  name: "korytarz_motion_illuminance"
   state_topic: "zigbee2mqtt/0x00158d000237ad9d"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "lx"
@@ -31,7 +31,7 @@
   value_template: "{{ value_json.illuminance }}"
 
 - platform: "mqtt"
-  name: "0x00158d0001e0a7d3_battery"
+  name: "lazienka_motion_battery"
   state_topic: "zigbee2mqtt/0x00158d0001e0a7d3"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -39,7 +39,7 @@
   value_template: "{{ value_json.battery }}"
 
 - platform: "mqtt"
-  name: "0x00158d0001e55705_battery"
+  name: "sypialnia_motion_battery"
   state_topic: "zigbee2mqtt/0x00158d0001e55705"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -47,7 +47,7 @@
   value_template: "{{ value_json.battery }}"
 
 - platform: "mqtt"
-  name: "0x00158d0001e5d112_battery"
+  name: "janek_motion_battery"
   state_topic: "zigbee2mqtt/0x00158d0001e5d112"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -55,7 +55,7 @@
   value_template: "{{ value_json.battery }}"
 
 - platform: "mqtt"
-  name: "0x00158d000237ad9d_battery"
+  name: "korytarz_motion_battery"
   state_topic: "zigbee2mqtt/0x00158d000237ad9d"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"

@@ -14,7 +14,7 @@
 - alias: 'Zalanie kuchni'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d00021508b4
+      entity_id: binary_sensor.kuchnia_leak_water_leak
       to: 'on'
   action:
     - service: notify.mypushbullet

@@ -1,5 +1,5 @@
 - platform: "mqtt"
-  name: "0x00158d00021508b4"
+  name: "kuchnia_leak_water_leak"
   state_topic: "zigbee2mqtt/0x00158d00021508b4"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: true
@@ -8,7 +8,7 @@
   device_class: "moisture"
 
 - platform: "mqtt"
-  name: "0x00158d0001bb388f"
+  name: "lazienka_leak_water_leak"
   state_topic: "zigbee2mqtt/0x00158d0001bb388f"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: true

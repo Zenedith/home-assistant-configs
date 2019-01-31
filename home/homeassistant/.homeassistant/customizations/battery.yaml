@@ -1,34 +1,43 @@
-sensor.0x00158d00022cc215_battery:
+sensor.korytarz_temp_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d000272fe71_battery:
+sensor.kuchnia_temp_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d0001e0a7d3_battery:
+sensor.lazienka_motion_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d0001e5d112_battery:
+sensor.janek_motion_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d0001e55705_battery:
+sensor.sypialnia_motion_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d000237ad9d_battery:
+sensor.korytarz_motion_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d00020b7b77_battery:
+sensor.okno_janek_contact_battery:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.okno_sypialnia_contact_battery:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.drzwi_wejsciowe_contact_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
 sensor.drzwi_balkonowe_contact_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d00024e42b5_battery:
+sensor.drzwi_lazienka_contact_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d0002b52fd0_battery:
+sensor.drzwi_toaleta_contact_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d0001bb388f_battery:
+sensor.kuchnia_leak_battery:
+  templates:
+    icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
+sensor.lazienka_leak_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
 sensor.climate_pokoj_janka_batt:

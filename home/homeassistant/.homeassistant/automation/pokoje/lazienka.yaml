@@ -1,7 +1,7 @@
 - alias: 'Włącz światło w łazience gdy otwarte drzwi lub ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d00024e42b5,binary_sensor.0x00158d0001e0a7d3_occupancy
+      entity_id: binary_sensor.drzwi_lazienka_contact,binary_sensor.lazienka_motion_occupancy
       to: 'on'
   condition:
     - condition: state
@@ -15,7 +15,7 @@
 - alias: 'Włącz timer w łazience gdy otwarte drzwi lub ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d00024e42b5,binary_sensor.0x00158d0001e0a7d3_occupancy
+      entity_id: binary_sensor.drzwi_lazienka_contact,binary_sensor.lazienka_motion_occupancy
       to: 'on'
   action:
     - service: timer.cancel
@@ -50,7 +50,7 @@
 - alias: 'Zalanie łazienki'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001bb388f
+      entity_id: binary_sensor.lazienka_leak_water_leak
       to: 'on'
   action:
     - service: notify.mypushbullet

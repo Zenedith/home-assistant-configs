@@ -54,7 +54,7 @@ cards:
           red: 4
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d000272fe71_battery
+        entity: sensor.kuchnia_temp_battery
         name: Kuchnia temperatura
         severity:
           green: 90
@@ -62,7 +62,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d00022cc215_battery
+        entity: sensor.korytarz_temp_battery
         name:  Korytrz temperatura
         severity:
           green: 90
@@ -78,7 +78,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d0001e55705_battery
+        entity: sensor.sypialnia_motion_battery
         name: Sypialnia ruch
         severity:
           green: 90
@@ -86,7 +86,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d0001e0a7d3_battery
+        entity: sensor.lazienka_motion_battery
         name: Łazienka ruch
         severity:
           green: 90
@@ -94,7 +94,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d000237ad9d_battery
+        entity: sensor.korytarz_motion_battery
         name: Korytarz ruch
         severity:
           green: 90
@@ -102,7 +102,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d000208e0c7_battery
+        entity: sensor.okno_janek_contact_battery
         name: Pokój janka okno
         severity:
           green: 90
@@ -110,7 +110,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d0002bfd324_battery
+        entity: sensor.okno_sypialnia_contact_battery
         name: Sypialnia okno
         severity:
           green: 90
@@ -118,7 +118,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d0001e5d112_battery
+        entity: sensor.janek_motion_battery
         name: Pokój janka ruch
         severity:
           green: 90
@@ -126,7 +126,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d00020b7b77_battery
+        entity: sensor.drzwi_wejsciowe_contact_battery
         name: Drzwi wejściowe
         severity:
           green: 90
@@ -134,7 +134,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d00024e42b5_battery
+        entity: sensor.drzwi_lazienka_contact_battery
         name: Drzwi łazienka
         severity:
           green: 90
@@ -142,7 +142,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d0002b52fd0_battery
+        entity: sensor.drzwi_toaleta_contact_battery
         name: Drzwi toaleta
         severity:
           green: 90
@@ -150,7 +150,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d00021508b4_battery
+        entity: sensor.kuchnia_leak_battery
         name: Zalanie zmywarka
         severity:
           green: 90
@@ -158,7 +158,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d0001bb388f_battery
+        entity: sensor.lazienka_leak_battery
         name: Zalanie pralka
         severity:
           green: 90

@@ -5,9 +5,9 @@ cards:
       - type: glance
         columns: 3
         entities:
-          - entity: sensor.0x00158d0001e5d112_illuminance
-          - entity: binary_sensor.0x00158d0001e5d112_occupancy
-          - entity: binary_sensor.0x00158d000208e0c7
+          - entity: binary_sensor.okno_janek_contact
+          - entity: sensor.janek_motion_illuminance
+          - entity: binary_sensor.janek_motion_occupancy
       - type: entities
         title: Przełączniki
         show_header_toggle: false

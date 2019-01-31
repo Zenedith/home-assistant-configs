@@ -1,10 +1,10 @@
 - alias: 'Włącz światło w korytarzu gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d000237ad9d_occupancy
+      entity_id: binary_sensor.korytarz_motion_occupancy
       to: 'on'
     - platform: state
-      entity_id: binary_sensor.0x00158d00020b7b77
+      entity_id: binary_sensor.drzwi_wejsciowe_contact
       to: 'on'
   condition:
     - condition: state
@@ -22,10 +22,10 @@
 - alias: 'Włącz timer w korytarzu gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d000237ad9d_occupancy
+      entity_id: binary_sensor.korytarz_motion_occupancy
       to: 'on'
     - platform: state
-      entity_id: binary_sensor.0x00158d00020b7b77
+      entity_id: binary_sensor.drzwi_wejsciowe_contact
       to: 'on'
   action:
     - service: timer.cancel
@@ -57,7 +57,7 @@
 - alias: 'Otwarcie drzwi wejściowych'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x00158d00020b7b77
+    entity_id: binary_sensor.drzwi_wejsciowe_contact
     to: 'on'
   condition:
     - condition: time
