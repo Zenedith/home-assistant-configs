@@ -25,11 +25,17 @@ sensor.0x00158d000237ad9d_battery:
 binary_sensor.0x00158d000237ad9d_occupancy:
   friendly_name: Ruch Korytarz
 sensor.0x00158d00022cc215_temperature:
-  friendly_name: Temperatura
+  friendly_name: Temperatura Korytarz
 sensor.0x00158d00022cc215_humidity:
-  friendly_name: Wilgotność
+  friendly_name: Wilgotność Korytarz
 sensor.0x00158d00022cc215_pressure:
-  friendly_name: Ciśnienie
+  friendly_name: Ciśnienie Korytarz
+sensor.0x00158d000272fe71_temperature:
+  friendly_name: Temperatura Kuchnia
+sensor.0x00158d000272fe71_humidity:
+  friendly_name: Wilgotność Kuchnia
+sensor.0x00158d000272fe71_pressure:
+  friendly_name: Ciśnienie Kuchnia
 binary_sensor.0x00158d00020b7b77:
   friendly_name: Drzwi wejściowe
 sensor.0x00158d00020b7b77_battery:

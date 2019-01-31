@@ -62,6 +62,14 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
+        entity: sensor.kuchnia_temp_batt
+        name: Korytrz temperatura
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
+      - type: gauge
+        unit: '%'
         entity: sensor.0x00158d000205b35f_battery
         name: Drzwi balkonowe
         severity:

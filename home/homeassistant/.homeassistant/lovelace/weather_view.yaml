@@ -15,6 +15,15 @@ cards:
     - type: sensor
       entity: sensor.0x00158d00022cc215_pressure
       graph: line
+    - type: sensor
+      entity: sensor.0x00158d000272fe71_temperature
+      graph: line
+    - type: sensor
+      entity: sensor.0x00158d000272fe71_humidity
+      graph: line
+    - type: sensor
+      entity: sensor.0x00158d000272fe71_pressure
+      graph: line
   - type: vertical-stack
     cards:
     - type: markdown

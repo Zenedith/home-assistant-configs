@@ -3,7 +3,7 @@ cards:
   - type: vertical-stack
     cards:
       - type: glance
-        columns: 3
+        columns: 4
         card:
           title: Korytarz
         entities:
