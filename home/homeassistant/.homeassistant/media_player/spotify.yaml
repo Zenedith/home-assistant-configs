@@ -3,3 +3,4 @@
   client_secret: !secret spotify_client_secret
   aliases:
     a942d5d01a5083e225a29b432faf15da54d7860c: 'tv'
+    393541ef3c59f18e65aa849b8bd55a68ac12b7f1: 'Zenedith-macbook'
