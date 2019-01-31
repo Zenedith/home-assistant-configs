@@ -1,5 +1,4 @@
 homeassistant: true
-permit_join: false
 include_device_information: true
 mqtt:
   base_topic: zigbee2mqtt
@@ -43,4 +42,7 @@ devices:
     retain: false
   '0x00158d0002b52fd0':
     friendly_name: '0x00158d0002b52fd0'
+    retain: false
+  '0x00158d000272fe71':
+    friendly_name: '0x00158d000272fe71'
     retain: false
