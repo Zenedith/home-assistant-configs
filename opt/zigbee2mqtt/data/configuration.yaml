@@ -1,4 +1,4 @@
-homeassistant: true
+homeassistant: false
 include_device_information: true
 mqtt:
   base_topic: zigbee2mqtt
@@ -11,6 +11,8 @@ device_options:
   temperature_precision: 1
 advanced:
   log_level: debug
+  elapsed: true
+  availability_timeout: 60
 devices:
   '0x00158d00024e42b5':
     friendly_name: '0x00158d00024e42b5'
