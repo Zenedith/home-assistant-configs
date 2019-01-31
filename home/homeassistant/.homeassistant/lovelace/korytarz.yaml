@@ -7,8 +7,8 @@ cards:
         card:
           title: Korytarz
         entities:
-          - entity: binary_sensor.drzwi_wejsciowe_contact
           - entity: sensor.korytarz_temp_temperature
+          - entity: binary_sensor.drzwi_wejsciowe_contact
           - entity: binary_sensor.korytarz_motion_occupancy
           - entity: sensor.korytarz_motion_illuminance
   - type: vertical-stack

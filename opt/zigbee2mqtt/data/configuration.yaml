@@ -11,6 +11,7 @@ device_options:
   temperature_precision: 1
 advanced:
   log_level: debug
+  rtscts: false
   elapsed: true
   availability_timeout: 60
 devices:
