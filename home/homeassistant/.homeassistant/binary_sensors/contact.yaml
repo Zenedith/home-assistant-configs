@@ -1,29 +1,29 @@
 - platform: "mqtt"
-  name: "0x00158d000205b35f"
+  name: "drzwi_balkonowe_contact"
   state_topic: "zigbee2mqtt/0x00158d000205b35f"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
-
-- platform: "mqtt"
-  name: "0x00158d000205b35f"
-  state_topic: "zigbee2mqtt/0x00158d000205b35f"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: false
-  payload_off: true
-  value_template: "{{ value_json.contact }}"
-  device_class: "door"
-
-- platform: "mqtt"
-  name: "0x00158d000205b35f"
-  state_topic: "zigbee2mqtt/0x00158d000205b35f"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: false
-  payload_off: true
-  value_template: "{{ value_json.contact }}"
-  device_class: "door"
+#
+#- platform: "mqtt"
+#  name: "0x00158d000205b35f"
+#  state_topic: "zigbee2mqtt/0x00158d000205b35f"
+#  availability_topic: "zigbee2mqtt/bridge/state"
+#  payload_on: false
+#  payload_off: true
+#  value_template: "{{ value_json.contact }}"
+#  device_class: "door"
+#
+#- platform: "mqtt"
+#  name: "0x00158d000205b35f"
+#  state_topic: "zigbee2mqtt/0x00158d000205b35f"
+#  availability_topic: "zigbee2mqtt/bridge/state"
+#  payload_on: false
+#  payload_off: true
+#  value_template: "{{ value_json.contact }}"
+#  device_class: "door"
 
 - platform: "mqtt"
   name: "0x00158d00020b7b77"

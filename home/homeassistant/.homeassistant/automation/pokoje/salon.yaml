@@ -1,7 +1,7 @@
 #- alias: 'Drzwi balkonowe otwarte'
 #  trigger:
 #    - platform: state
-#      entity_id: binary_sensor.0x00158d000205b35f
+#      entity_id: binary_sensor.drzwi_balkonowe_contact
 #      to: 'on'
 #  action:
 #    - service: notify.mypushbullet

@@ -9,7 +9,7 @@ cards:
         entities:
           - sensor.0x00158d000272fe71_temperature
           - vacuum.zmietekv2
-          - entity: binary_sensor.0x00158d000205b35f
+          - entity: binary_sensor.drzwi_balkonowe_contact
           - entity: binary_sensor.0x00158d00021508b4
       - type: entities
         title: Listwy

@@ -1,5 +1,5 @@
 - platform: "mqtt"
-  name: "0x00158d00021508b4"
+  name: "0x00158d00021508b4_battery"
   state_topic: "zigbee2mqtt/0x00158d00021508b4"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -7,7 +7,7 @@
   value_template: "{{ value_json.battery }}"
 
 - platform: "mqtt"
-  name: "0x00158d0001bb388f"
+  name: "0x00158d0001bb388f_battery"
   state_topic: "zigbee2mqtt/0x00158d0001bb388f"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"

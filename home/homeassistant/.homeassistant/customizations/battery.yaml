@@ -19,7 +19,7 @@ sensor.0x00158d000237ad9d_battery:
 sensor.0x00158d00020b7b77_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.0x00158d000205b35f_battery:
+sensor.drzwi_balkonowe_contact_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
 sensor.0x00158d00024e42b5_battery:

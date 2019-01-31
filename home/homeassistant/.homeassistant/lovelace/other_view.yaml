@@ -70,7 +70,7 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.0x00158d000205b35f_battery
+        entity: sensor.drzwi_balkonowe_contact_battery
         name: Drzwi balkonowe
         severity:
           green: 90
