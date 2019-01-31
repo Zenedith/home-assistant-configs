@@ -31,10 +31,6 @@ panel_iframe:
     title: 'Zigbee Map'
     url: '/local/zigbee2mqtt_networkmap/map.html'
     icon: 'mdi:graphql'
-  networkmap2:
-    title: 'Zigbee Map2'
-    url: '/zigbee2mqtt_networkmap/map.html'
-    icon: 'mdi:graphql'
 
 # Enables the frontend
 frontend:

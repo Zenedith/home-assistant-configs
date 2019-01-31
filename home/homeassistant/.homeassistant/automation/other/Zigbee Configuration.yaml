@@ -54,3 +54,13 @@
       data_template:
         title: "Zigbee"
         message: "Permit join is disabled"
+
+  - id: 'Zigbee Map Update'
+    alias: 'Zigbee Map Update'
+    hide_entity: true
+    trigger:
+      platform: time_pattern
+      minutes: "/30"
+      seconds: 0
+    action:
+      service: zigbee2mqtt_networkmap.update
