@@ -1,7 +1,7 @@
-sensor.korytarz_temp_batt:
+sensor.0x00158d00022cc215_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
-sensor.kuchnia_temp_batt:
+sensor.0x00158d000272fe71_battery:
   templates:
     icon_color: if (state > 40) return 'rgb(0,255,0)'; else if (state > 15) return 'rgb(255,255,0)'; else return 'rgb(255,0,0)';
 sensor.0x00158d0001e0a7d3_battery:

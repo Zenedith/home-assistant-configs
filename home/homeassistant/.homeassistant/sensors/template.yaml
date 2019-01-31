@@ -8,14 +8,6 @@
       value_template: "{% if state_attr('climate.sypialnia', 'low_battery') == True -%}5{%- else -%}100{%- endif %}"
       friendly_name: 'Sypialnia grzejnik'
       unit_of_measurement: '%'
-    korytarz_temp_batt:
-      value_template: "{{ state_attr('sensor.0x00158d00022cc215_temperature', 'battery') }}"
-      friendly_name: 'Korytarz temperatura'
-      unit_of_measurement: '%'
-    kuchnia_temp_batt:
-      value_template: "{{ state_attr('sensor.0x00158d000272fe71_temperature', 'battery') }}"
-      friendly_name: 'Kuchnia temperatura'
-      unit_of_measurement: '%'
     zmietekv2_batt:
       value_template: "{{ state_attr('vacuum.zmietekv2', 'battery_level') }}"
       friendly_name: 'Zmietek'

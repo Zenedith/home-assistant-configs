@@ -5,10 +5,7 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes:
-  - "linkquality"
-  - "battery"
-  - "voltage"
+
 - platform: "mqtt"
   name: "0x00158d0001e55705_illuminance"
   state_topic: "zigbee2mqtt/0x00158d0001e55705"
@@ -16,10 +13,7 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes:
-  - "linkquality"
-  - "battery"
-  - "voltage"
+
 - platform: "mqtt"
   name: "0x00158d0001e5d112_illuminance"
   state_topic: "zigbee2mqtt/0x00158d0001e5d112"
@@ -27,10 +21,6 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes:
-  - "linkquality"
-  - "battery"
-  - "voltage"
 
 - platform: "mqtt"
   name: "0x00158d000237ad9d_illuminance"
@@ -39,7 +29,35 @@
   unit_of_measurement: "lx"
   device_class: "illuminance"
   value_template: "{{ value_json.illuminance }}"
-  json_attributes:
-  - "linkquality"
-  - "battery"
-  - "voltage"
+
+- platform: "mqtt"
+  name: "0x00158d0001e0a7d3_battery"
+  state_topic: "zigbee2mqtt/0x00158d0001e0a7d3"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
+
+- platform: "mqtt"
+  name: "0x00158d0001e55705_battery"
+  state_topic: "zigbee2mqtt/0x00158d0001e55705"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
+
+- platform: "mqtt"
+  name: "0x00158d0001e5d112_battery"
+  state_topic: "zigbee2mqtt/0x00158d0001e5d112"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
+
+- platform: "mqtt"
+  name: "0x00158d000237ad9d_battery"
+  state_topic: "zigbee2mqtt/0x00158d000237ad9d"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"

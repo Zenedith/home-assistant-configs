@@ -54,16 +54,16 @@ cards:
           red: 4
       - type: gauge
         unit: '%'
-        entity: sensor.korytarz_temp_batt
-        name: Korytrz temperatura
+        entity: sensor.0x00158d000272fe71_battery
+        name: Kuchnia temperatura
         severity:
           green: 90
           yellow: 45
           red: 15
       - type: gauge
         unit: '%'
-        entity: sensor.kuchnia_temp_batt
-        name: Kuchnia temperatura
+        entity: sensor.0x00158d00022cc215_battery
+        name:  Korytrz temperatura
         severity:
           green: 90
           yellow: 45
