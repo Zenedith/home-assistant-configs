@@ -2,15 +2,14 @@
   name: "0x00158d00021508b4"
   state_topic: "zigbee2mqtt/0x00158d00021508b4"
   availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.water_leak }}"
-  device_class: "moisture"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
+
 - platform: "mqtt"
   name: "0x00158d0001bb388f"
   state_topic: "zigbee2mqtt/0x00158d0001bb388f"
   availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.water_leak }}"
-  device_class: "moisture"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"

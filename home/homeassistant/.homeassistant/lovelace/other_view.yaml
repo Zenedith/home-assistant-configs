@@ -63,7 +63,7 @@ cards:
       - type: gauge
         unit: '%'
         entity: sensor.kuchnia_temp_batt
-        name: Korytrz temperatura
+        name: Kuchnia temperatura
         severity:
           green: 90
           yellow: 45
@@ -144,6 +144,22 @@ cards:
         unit: '%'
         entity: sensor.0x00158d0002b52fd0_battery
         name: Drzwi toaleta
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
+      - type: gauge
+        unit: '%'
+        entity: sensor.0x00158d00021508b4_battery
+        name: Zalanie zmywarka
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
+      - type: gauge
+        unit: '%'
+        entity: sensor.0x00158d0001bb388f_battery
+        name: Zalanie pralka
         severity:
           green: 90
           yellow: 45

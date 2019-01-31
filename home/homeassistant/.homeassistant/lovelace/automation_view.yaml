@@ -45,6 +45,8 @@ cards:
       - automation.wylacz_swiatlo_w_pokoju_janka_po_uplywie_czasu
       - automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
       - automation.wlacz_timer_w_pokoju_janka_gdy_ruch
+      - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_pokoju_janka
+      - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
   - type: entities
     title: Salon
     show_header_toggle: false
@@ -68,6 +70,8 @@ cards:
       - automation.wlacz_timer_w_sypialni_gdy_ruch
       - automation.listwa_sypialnia_on
       - automation.listwa_sypialnia_off
+      - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_sypialni
+      - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
   - type: entities
     title: Łazienka
     show_header_toggle: false
