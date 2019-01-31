@@ -23,6 +23,19 @@ homeassistant:
 logger:
   default: info
 
+webhook:
+zigbee2mqtt_networkmap:
+
+panel_iframe:
+  networkmap:
+    title: 'Zigbee Map'
+    url: '/local/zigbee2mqtt_networkmap/map.html'
+    icon: 'mdi:graphql'
+  networkmap2:
+    title: 'Zigbee Map2'
+    url: '/zigbee2mqtt_networkmap/map.html'
+    icon: 'mdi:graphql'
+
 # Enables the frontend
 frontend:
   javascript_version: latest
