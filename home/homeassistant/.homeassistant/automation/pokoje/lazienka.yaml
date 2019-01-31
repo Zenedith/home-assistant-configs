@@ -46,3 +46,16 @@
     - service: timer.cancel
       data:
         entity_id: timer.lazienka
+
+- alias: 'Zalanie łazienki'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.0x00158d0001bb388f
+      to: 'on'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "!! Zalanie łazienki !!"
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Zalanie łazienki!!!

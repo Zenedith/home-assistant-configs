@@ -13,7 +13,7 @@ cards:
           - entity: binary_sensor.0x00158d00024e42b5
           - entity: binary_sensor.0x00158d0001e0a7d3_occupancy
           - entity: sensor.0x00158d0001e0a7d3_illuminance
-          - entity: timer.lazienka
+          - entity: binary_sensor.0x00158d0001bb388f
       - type: light
         entity: light.yeelight_ceiling_7811dcab68e0
       - type: entities
