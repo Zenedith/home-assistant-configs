@@ -57,6 +57,7 @@
 
   - id: 'Zigbee Map Update'
     alias: 'Zigbee Map Update'
+    initial_state: 'on'
     hide_entity: true
     trigger:
       platform: time_pattern
@@ -64,3 +65,26 @@
       seconds: 0
     action:
       service: zigbee2mqtt_networkmap.update
+
+  - id: 'Zigbee2mqtt Log Level'
+    alias: Zigbee2mqtt Log Level
+    initial_state: 'on'
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: input_select.zigbee2mqtt_log_level
+        to: debug
+      - platform: state
+        entity_id: input_select.zigbee2mqtt_log_level
+        to: warn
+      - platform: state
+        entity_id: input_select.zigbee2mqtt_log_level
+        to: error
+      - platform: state
+        entity_id: input_select.zigbee2mqtt_log_level
+        to: info
+    action:
+      - service: mqtt.publish
+        data:
+          payload_template: '{{ states(''input_select.zigbee2mqtt_log_level'') }}'
+          topic: zigbee2mqtt/bridge/config/log_level

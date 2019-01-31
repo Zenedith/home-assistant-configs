@@ -48,3 +48,4 @@ cards:
           - input_boolean.zigbee_permit_join
           - sensor.bridge_state
           - timer.zigbee_permit_join
+          - input_select.zigbee2mqtt_log_level
