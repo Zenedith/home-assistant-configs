@@ -69,3 +69,5 @@ devices:
   '0x00158d00021508b4':
     friendly_name: '0x00158d00021508b4'
     retain: false
+    qos: 1
+
