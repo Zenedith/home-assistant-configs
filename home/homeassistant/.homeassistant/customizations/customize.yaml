@@ -56,6 +56,10 @@ binary_sensor.0x00158d000208e0c7:
   friendly_name: Okno u Janka
 sensor.0x00158d000208e0c7_battery:
   friendly_name: Okno u Janka bateria
+binary_sensor.0x00158d0002bfd324:
+  friendly_name: Okno Sypialnia
+sensor.0x00158d0002bfd324_battery:
+  friendly_name: Okno Sypialnia bateria
 binary_sensor.0x00158d00021508b4:
   friendly_name: Zmywarka
 binary_sensor.0x00158d000205b35f:

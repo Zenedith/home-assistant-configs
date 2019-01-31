@@ -110,6 +110,14 @@ cards:
           red: 15
       - type: gauge
         unit: '%'
+        entity: sensor.0x00158d0002bfd324_battery
+        name: Sypialnia okno
+        severity:
+          green: 90
+          yellow: 45
+          red: 15
+      - type: gauge
+        unit: '%'
         entity: sensor.0x00158d0001e5d112_battery
         name: Pokój janka ruch
         severity:

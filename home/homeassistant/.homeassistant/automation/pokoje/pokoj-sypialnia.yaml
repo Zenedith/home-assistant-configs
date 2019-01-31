@@ -169,3 +169,37 @@
     - service: light.turn_off
       data:
         entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+
+- alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x00158d0002bfd324
+    to: 'on'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.sypialnia
+        away_mode: 'on'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w sypialni'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w sypialni
+
+- alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x00158d0002bfd324
+    to: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.sypialnia
+        away_mode: 'off'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w sypialni'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w sypialni
