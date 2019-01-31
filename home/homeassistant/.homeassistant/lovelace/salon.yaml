@@ -3,10 +3,11 @@ cards:
   - type: vertical-stack
     cards:
       - type: glance
-        columns: 3
+        columns: 4
         card:
           title: Salon
         entities:
+          - sensor.0x00158d000272fe71_temperature
           - vacuum.zmietekv2
           - entity: binary_sensor.0x00158d000205b35f
           - entity: binary_sensor.0x00158d00021508b4
