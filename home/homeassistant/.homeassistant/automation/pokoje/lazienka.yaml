@@ -59,3 +59,38 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Zalanie łazienki!!!
+
+- alias: 'Włącz timer w toalecie gdy otwarte drzwi'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.drzwi_toaleta_contact
+      to: 'on'
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.toaleta
+    - service: timer.start
+      data:
+        entity_id: timer.toaleta
+
+- alias: 'Wyłącz światło w toalecie po upływie czasu'
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.toaleta
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.swiatlo_toaleta
+
+- alias: 'Wyzeruj timer w toalecie gdy światło zgaszone'
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: light.swiatlo_toaleta
+      to: 'off'
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.toaleta

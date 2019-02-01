@@ -9,3 +9,14 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+- platform: mqtt
+  name: "Swiatło Toaleta"
+  state_topic: "shellies/shelly1-25A3EB/relay/0"
+  command_topic: "shellies/shelly1-25A3EB/relay/0/command"
+  availability_topic: "shellies/shelly1-25A3EB/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
