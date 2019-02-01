@@ -33,4 +33,4 @@ cards:
         entities:
           - entity: binary_sensor.drzwi_toaleta_contact
       - type: light
-          entity: light.swiatlo_toaleta
+        entity: light.swiatlo_toaleta
