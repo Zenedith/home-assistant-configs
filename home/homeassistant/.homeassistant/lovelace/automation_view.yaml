@@ -79,3 +79,6 @@ cards:
       - automation.wylacz_swiatlo_w_lazience_po_uplywie_czasu
       - automation.wlacz_swiatlo_w_lazience_gdy_otwarte_drzwi_lub_ruch
       - automation.wlacz_timer_w_lazience_gdy_otwarte_drzwi_lub_ruch
+      - automation.wlacz_timer_w_toalecie_gdy_otwarte_drzwi
+      - automation.wlacz_swiatlo_w_toalecie_gdy_otwarte_drzwi
+      - automation.wylacz_swiatlo_w_toalecie_po_uplywie_czasu
