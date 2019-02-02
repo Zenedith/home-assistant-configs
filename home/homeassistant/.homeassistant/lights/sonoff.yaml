@@ -1,0 +1,55 @@
+- platform: mqtt
+  name: "Swiatło Pokoj Janka"
+  state_topic: "shellies/shelly_1/POWER"
+  command_topic: "shellies/shelly_1/cmnd/POWER"
+  availability_topic: "shellies/shelly_1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Swiatło TODO2"
+  state_topic: "shellies/shelly_2/POWER"
+  command_topic: "shellies/shelly_2/cmnd/POWER"
+  availability_topic: "shellies/shelly_2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Swiatło TODO3"
+  state_topic: "shellies/shelly_3/POWER"
+  command_topic: "shellies/shelly_3/cmnd/POWER"
+  availability_topic: "shellies/shelly_3/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Swiatło Sypialnia"
+  state_topic: "shellies/shelly_4/POWER"
+  command_topic: "shellies/shelly_4/cmnd/POWER"
+  availability_topic: "shellies/shelly_4/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Swiatło TODO5"
+  state_topic: "shellies/shelly_5/POWER"
+  command_topic: "shellies/shelly_5/cmnd/POWER"
+  availability_topic: "shellies/shelly_5/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
