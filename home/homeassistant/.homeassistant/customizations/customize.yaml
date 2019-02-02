@@ -11,6 +11,8 @@ light.yeelight_strip_7811dce2d84e:
 light.yeelight_bedside_7c49eb284fda:
   friendly_name: bedside
 light.yeelight_ceiling3_04cf8c78d9f7:
+  friendly_name: Yeelight Sypialnia
+light.swiatlo_sypialnia:
   friendly_name: Lampa Sypialnia
 light.yeelight_ceiling_7811dcab68e0:
   friendly_name: Lampa Łazienka
