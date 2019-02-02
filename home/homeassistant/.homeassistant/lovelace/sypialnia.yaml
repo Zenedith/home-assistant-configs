@@ -21,7 +21,14 @@ cards:
         content: >
           ## Lampy
       - type: light
-        entity: light.yeelight_ceiling3_04cf8c78d9f7
+        entity: light.swiatlo_sypialnia
+      - type: conditional
+        conditions:
+          - entity: light.swiatlo_sypialnia
+            state: "on"
+        card:
+          - type: light
+            entity: light.yeelight_ceiling3_04cf8c78d9f7
   - type: vertical-stack
     cards:
       - type: thermostat

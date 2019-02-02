@@ -79,6 +79,26 @@
       data:
         topic: 'shellies/shelly1-25A3EB/online'
         payload: 'true'
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_1/online'
+        payload: 'true'
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_2/online'
+        payload: 'true'
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_3/online'
+        payload: 'true'
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_4/online'
+        payload: 'true'
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_5/online'
+        payload: 'true'
 
 - alias: 'Update notifications'
   trigger:

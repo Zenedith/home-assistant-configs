@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: "Swiatło Pokoj Janka"
+  name: "Swiatło TODO1"
   state_topic: "shellies/shellyswitch-55A0C8/relay/0"
   command_topic: "shellies/shellyswitch-55A0C8/relay/0/command"
   availability_topic: "shellies/shellyswitch-55A0C8/online"
@@ -14,6 +14,61 @@
   state_topic: "shellies/shelly1-25A3EB/relay/0"
   command_topic: "shellies/shelly1-25A3EB/relay/0/command"
   availability_topic: "shellies/shelly1-25A3EB/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Swiatło Pokoj Janka"
+  state_topic: "shellies/shelly_1/relay/0"
+  command_topic: "shellies/shelly_1/relay/0/command"
+  availability_topic: "shellies/shelly_1/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Swiatło TODO2"
+  state_topic: "shellies/shelly_2/relay/0"
+  command_topic: "shellies/shelly_2/relay/0/command"
+  availability_topic: "shellies/shelly_2/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Swiatło TODO3"
+  state_topic: "shellies/shelly_3/relay/0"
+  command_topic: "shellies/shelly_3/relay/0/command"
+  availability_topic: "shellies/shelly_3/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Swiatło Sypialnia"
+  state_topic: "shellies/shelly_4/relay/0"
+  command_topic: "shellies/shelly_4/relay/0/command"
+  availability_topic: "shellies/shelly_4/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Swiatło TODO5"
+  state_topic: "shellies/shelly_5/relay/0"
+  command_topic: "shellies/shelly_5/relay/0/command"
+  availability_topic: "shellies/shelly_5/online"
   payload_available: "true"
   payload_not_available: "false"
   qos: 1
