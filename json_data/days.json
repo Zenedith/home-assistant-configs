@@ -1,0 +1,25 @@
+{
+  "MAJOR_POL": {
+    "static": {
+      "1/1": "New Year's Day",
+      "30/1": "Martinita Day",
+      "31/1": "John Day",
+      "14/2": "Valentine's Day",
+      "15/2": "Zene Birthday",
+      "23/2": "Paulina Birthday",
+      "17/3": "St. Patrick's Day",
+	  "26/5": "Mother's Day",
+	  "28/5": "John Birthday",
+	  "12/10": "anniversary",
+      "31/10": "Halloween",
+      "20/11": "Kate Birthday",
+      "25/11": "Kate Day",
+      "24/12": "Christmas Eve",
+      "25/12": "Christmas Day",
+      "31/12": "New Year's Eve"
+    },
+    "dynamic": {
+      "19/4/2019": "Good Friday",
+    }
+  }
+}
