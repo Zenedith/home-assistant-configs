@@ -11,6 +11,7 @@ cards:
           - input_select.presence_status
           - sensor.home_assistant_version
           - sensor.sonoff_firmware_version
+          - sensor.holiday
       - type: markdown
         content: >
           ## Media player
