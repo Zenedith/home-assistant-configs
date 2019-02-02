@@ -78,9 +78,12 @@
       entity_id: input_boolean.sypialnia_chillout
       state: 'off'
     - condition: state
-      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      entity_id: light.swiatlo_sypialnia
       state: 'off'
   action:
+    - service: light.turn_on
+      data:
+        entity_id: light.swiatlo_sypialnia
     - service: light.turn_on
       data:
         entity_id: light.yeelight_ceiling3_04cf8c78d9f7
@@ -124,13 +127,16 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        entity_id: light.swiatlo_sypialnia
 
 - alias: 'Wyzeruj timer w sypialni gdy światło zgaszone'
   hide_entity: true
   trigger:
     - platform: state
       entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      to: 'off'
+    - platform: state
+      entity_id: light.swiatlo_sypialnia
       to: 'off'
   action:
     - service: timer.cancel
@@ -144,6 +150,8 @@
       entity_id: input_boolean.sypialnia_korki
       to: 'on'
   action:
+    - service: light.turn_on
+      entity_id: light.swiatlo_sypialnia
     - service: light.turn_on
       entity_id: light.yeelight_ceiling3_04cf8c78d9f7
       data_template:
@@ -163,12 +171,12 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      entity_id: light.swiatlo_sypialnia
       state: 'on'
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        entity_id: light.swiatlo_sypialnia
 
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
   trigger:
