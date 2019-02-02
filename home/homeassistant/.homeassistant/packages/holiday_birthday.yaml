@@ -19,7 +19,7 @@ sensor:
 ####################################################
 
   - platform: rest
-    resource: https://raw.githubusercontent.com/Zenedith/home-assistant-configs/google_home/homeassistant/json_data/days.json
+    resource: https://raw.githubusercontent.com/Zenedith/home-assistant-configs/google_home/home/homeassistant/json_data/days.json
     name: Holiday
     scan_interval: 14400
     value_template: >
