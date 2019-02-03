@@ -1,19 +1,19 @@
-#switch:
-#  - platform: broadlink
-#    friendly_name: broadlink
-#    timeout: 15
-#    host: 192.168.1.163
-#    mac: '78:0F:77:D9:23:FA'
-#    type: rm_mini
-#    switches:
-#      denon_power:
-#        friendly_name: "Denon power"
-#        command_on: "JgBQAAgbCF8IGggbBz0KGQsXCRoIXwg9Bz0GHAgABcgKGAg8CD0IGghfCTwLOgg8CD0IGweBCgAFowkaBz0IGgg9CzoJPAg9Bj4IgQkaCxcHAA0FAAAAAAAAAAA="
-#        command_off: "JgCAAAgaCF8JGQo7CF8IGwhfCD0IPAYcCAAFyAkZCDwHPggaCD0HGwt/CDwJPAhfBz0IAAWlCBsHPQgaBz4JXgccCD0IPAmABxwHGwcABcgIPAgbBxsHYAgbCjsIPAg9BxsIGwldCD0IAAWkCV4IPQkaCF8JGgY+CIEIPAkaBxsIAA0FAAAAAAAAAAA="
-#      denon_volume:
-#        friendly_name: "Denon volume"
-#        command_on: "JgBSAAgaCl0JGgleCRkIGwgaCYAIPQc9BxwJAAXGCBoHPgk8CBoJGgY+CTsHPggaCjsJGgmACQAFpAgaCV4JPAg8CzoJGgY+CD0JPAU/CBoJGgcADQUAAAAAAAA="
-#        command_off: "JgBMAAgaC1wIGwg8CV8IGgiBCjoIPQgaCwAFxAwXBz4KOwgaCV4IgAsYCzoJGQk8CD0KAAWiDBcKOgccCD0IGgpdC1wIPAt/ChgIGwYADQUAAAAAAAAAAAAAAAA="
+switch:
+  - platform: broadlink
+    friendly_name: broadlink
+    timeout: 15
+    host: 192.168.1.163
+    mac: '78:0F:77:D9:23:FA'
+    type: rm_mini
+    switches:
+      denon_power:
+        friendly_name: "Denon power"
+        command_on: "JgBOAAoZCl0IGghfCD0IGgdgCDsKPQYcCAAFxwcbBz4IPQgaCBsGPgiBCD0IPQgbBj4GPggABaUIGwk7BhwIPQc9CD0IPQk8CYAIGwcbBgANBQAAAAAAAAAAAAA="
+        command_off: "JgCOAAgaCl0IGgk8CV8IGghfCjoGPwcbCgAFxQgbBj4LOgccCjoHHAp/CDwLOgsXBj8HPQsABaIKGAc+CRoJOwsYBz4GHAc+CjoHggkaBhwKAAWjChgKOwgaCRoJGgg8CBoIPQY+Cl0KGApeCTsGAAWmCxgHPgoYBh0GHApdChgKGQYcCjwIOwc+CRoIGggADQUAAAAAAAAAAAAA"
+      denon_volume:
+        friendly_name: "Denon volume"
+        command_on: "JgC6AAkZCF8IGghfChkLFwgbCIEIPQc9BxsIAAXICRkJOwg9BxwHXwo7CzoIGgk8CBsHPQc9CQAFpAoZBz0HGwo7CD0JPAkZCjsIPAt+CxgLFwcABcgIPAoZBxsJPAo7CD0GPggbChgIGghfCD0JAAWjC1wLGAcbBxsJXgccCV4JPAo6CDwKOwoABaMJGQleCBsGHAcbCYEIPAk8CTwHPQsABgkIPAk8CRoIPAccCD0IPAiBCD0JGQgbCAANBQAAAAAAAAAAAAAAAAAA"
+        command_off: "JgAgAQgaCF8IGgkaBxsJXgkZCYEIPAY/BhwIAAXHCBsIPAk8CBoJPAcbCYEIGgg9CBoHPgY+CQAFpAkZBz0IGwg9CBoJPAcbCV4JPAmACBoHHAgABccIPAccCBoIXwkaCIEIPQgaCF8IPAcABaYJXggaBxwIGgleCRoIGgc+CIEIPAk8CAAFpQgaCTwGHAgaBxwHPQpeCDwJGgYcCD0JOwoABegGHAg8CjsJGQccBz4JPAg8CTwIPAleCRkKAAWjCV4IGgo7CTwGHAk8CV4IGgk8CIEIAAXHCV4JGQo7CTwGHQgaCIEIPApdCgAFxQwXBj4KOwkaCl0KOgY/BxsKOwgaCzoHPQsABaIIGgtcCTwJGgo7BhwIGgc+Bj4LfggaCwANBQAAAAAAAAAA"
 
 input_boolean:
   broadlink_denon_receiver:
@@ -38,7 +38,7 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - "JgBQAAgbCF8IGggbBz0KGQsXCRoIXwg9Bz0GHAgABcgKGAg8CD0IGghfCTwLOgg8CD0IGweBCgAFowkaBz0IGgg9CzoJPAg9Bj4IgQkaCxcHAA0FAAAAAAAAAAA="
+            - "JgBOAAoZCl0IGghfCD0IGgdgCDsKPQYcCAAFxwcbBz4IPQgaCBsGPgiBCD0IPQgbBj4GPggABaUIGwk7BhwIPQc9CD0IPQk8CYAIGwcbBgANBQAAAAAAAAAAAAA="
 
   - alias: Denon Receiver Off
     trigger:
@@ -49,7 +49,7 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - "JgCAAAgaCF8JGQo7CF8IGwhfCD0IPAYcCAAFyAkZCDwHPggaCD0HGwt/CDwJPAhfBz0IAAWlCBsHPQgaBz4JXgccCD0IPAmABxwHGwcABcgIPAgbBxsHYAgbCjsIPAg9BxsIGwldCD0IAAWkCV4IPQkaCF8JGgY+CIEIPAkaBxsIAA0FAAAAAAAAAAA="
+            - "JgCOAAgaCl0IGgk8CV8IGghfCjoGPwcbCgAFxQgbBj4LOgccCjoHHAp/CDwLOgsXBj8HPQsABaIKGAc+CRoJOwsYBz4GHAc+CjoHggkaBhwKAAWjChgKOwgaCRoJGgg8CBoIPQY+Cl0KGApeCTsGAAWmCxgHPgoYBh0GHApdChgKGQYcCjwIOwc+CRoIGggADQUAAAAAAAAAAAAA"
 
   - alias: Select Denon Input TV
     trigger:
@@ -60,7 +60,7 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - "JgBSAAcbCToJGwkaCV4KGAYdCDwKOwg8CTwHGwkABcYJGgc9CzoJGgpdCDwGHQg8Cl0IGgs6Bz4LAAWhCRoHYAo7CDwKGQYcCDwHHAcbC34IGwoADQUAAAAAAAA="
+            - "JgB8AAkaCV4IGgs6CF8IGgs6CjsGPwgaCQAFxAkcCDwKOwgaC34LXAk8Cl0IGgc+CDwLAAWiCRkHPggaCTwJGgleCTwIGgmACBoHHAgABccJPAYcCBsIXwg8Cl0MfQgbC1wIPAYABacKXQgaBxwHGwo7CD0IPQhfCDwJPAgADQUAAAAAAAAAAAAAAAA="
 
   - alias: Select Denon Input Tuner
     trigger:
@@ -71,4 +71,4 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - "JgCAAAgaCV4IGwhfCF8IGgg9CTsKOwcbCQAFxgoZCDwJPAgaCV8IXwg8CV4IGgo7Bz0KAAWjCRkKOwgaCTwJPAhfCD0IGgiBCBoHHAcABcgJOwoZBxsJPAc+CV4IPQU/CBoIXwg9CQAFowpdCBsGHAccCF8IPAgbBhwIXwg8CjsIAA0FAAAAAAAAAAA="
+            - "JgCAAAgaCV4JGghfCF8IGgg9CDwKOwgaCQAFxgoZCDwKOwkaCV4JXgg8CToJGwgbBj4HPggABaQJGgg9CBoIPQg7CV8IPQgaCYEIGggbBgAFyQg8CBsGHAg9CDwJXgk8Bj8IGghfCDwIAAWlCl0KGAgbBhwJXgk8CD0IXwg8CjsIAA0FAAAAAAAAAAA="
