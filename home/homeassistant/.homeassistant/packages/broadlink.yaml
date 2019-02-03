@@ -23,9 +23,10 @@ input_boolean:
 input_select:
   broadlink_denon_input:
     name: Denon Input
+    initial: TV
     options:
-      - TV
-      - Tuner
+      - 'TV'
+      - 'Tuner'
 
 automation:
   - alias: Denon Receiver On
@@ -51,8 +52,8 @@ automation:
   - alias: Select Denon Input TV
     trigger:
       - platform: state
-        entity_id: input_select.denon_input
-        to: "TV"
+        entity_id: input_select.broadlink_denon_input
+        to: 'TV'
     action:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
@@ -61,8 +62,8 @@ automation:
   - alias: Select Denon Input Tuner
     trigger:
       - platform: state
-        entity_id: input_select.denon_input
-        to: "Tuner"
+        entity_id: input_select.broadlink_denon_input
+        to: 'Tuner'
     action:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
