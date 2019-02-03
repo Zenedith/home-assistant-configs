@@ -15,6 +15,14 @@ cards:
       - type: markdown
         content: >
           ## Media player
+      - type: entities
+        title: Broadlink
+        show_header_toggle: false
+        entities:
+          - input_boolean.broadlink_denon_receiver
+          - input_select.broadlink_denon_input
+          - switch.denon_power
+          - switch.denon_volume
       - type: media-control
         entity: media_player.sony_bravia_tv
       - type: media-control
