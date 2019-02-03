@@ -9,7 +9,7 @@ switch:
       denon_power:
         friendly_name: "Denon power"
         command_on: 'JgBQAAgbCF8IGggbBz0KGQsXCRoIXwg9Bz0GHAgABcgKGAg8CD0IGghfCTwLOgg8CD0IGweBCgAFowkaBz0IGgg9CzoJPAg9Bj4IgQkaCxcHAA0FAAAAAAAAAAA='
-        command_off: ''
+        command_off: 'JgCAAAgaCF8JGQo7CF8IGwhfCD0IPAYcCAAFyAkZCDwHPggaCD0HGwt/CDwJPAhfBz0IAAWlCBsHPQgaBz4JXgccCD0IPAmABxwHGwcABcgIPAgbBxsHYAgbCjsIPAg9BxsIGwldCD0IAAWkCV4IPQkaCF8JGgY+CIEIPAkaBxsIAA0FAAAAAAAAAAA='
       denon_volume:
         friendly_name: "Denon volume"
         command_on: 'JgBSAAgaCl0JGgleCRkIGwgaCYAIPQc9BxwJAAXGCBoHPgk8CBoJGgY+CTsHPggaCjsJGgmACQAFpAgaCV4JPAg8CzoJGgY+CD0JPAU/CBoJGgcADQUAAAAAAAA='
@@ -46,7 +46,7 @@ automation:
     action:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
-          packet: 'JgBQAAgbCF8IGggbBz0KGQsXCRoIXwg9Bz0GHAgABcgKGAg8CD0IGghfCTwLOgg8CD0IGweBCgAFowkaBz0IGgg9CzoJPAg9Bj4IgQkaCxcHAA0FAAAAAAAAAAA='
+          packet: 'JgCAAAgaCF8JGQo7CF8IGwhfCD0IPAYcCAAFyAkZCDwHPggaCD0HGwt/CDwJPAhfBz0IAAWlCBsHPQgaBz4JXgccCD0IPAmABxwHGwcABcgIPAgbBxsHYAgbCjsIPAg9BxsIGwldCD0IAAWkCV4IPQkaCF8JGgY+CIEIPAkaBxsIAA0FAAAAAAAAAAA='
 
   - alias: Select Denon Input TV
     trigger:
