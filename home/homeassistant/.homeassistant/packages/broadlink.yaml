@@ -38,7 +38,7 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - JgBQAAgbCF8IGggbBz0KGQsXCRoIXwg9Bz0GHAgABcgKGAg8CD0IGghfCTwLOgg8CD0IGweBCgAFowkaBz0IGgg9CzoJPAg9Bj4IgQkaCxcHAA0FAAAAAAAAAAA=
+            - "JgBQAAgbCF8IGggbBz0KGQsXCRoIXwg9Bz0GHAgABcgKGAg8CD0IGghfCTwLOgg8CD0IGweBCgAFowkaBz0IGgg9CzoJPAg9Bj4IgQkaCxcHAA0FAAAAAAAAAAA="
 
   - alias: Denon Receiver Off
     trigger:
@@ -49,7 +49,7 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - JgCAAAgaCF8JGQo7CF8IGwhfCD0IPAYcCAAFyAkZCDwHPggaCD0HGwt/CDwJPAhfBz0IAAWlCBsHPQgaBz4JXgccCD0IPAmABxwHGwcABcgIPAgbBxsHYAgbCjsIPAg9BxsIGwldCD0IAAWkCV4IPQkaCF8JGgY+CIEIPAkaBxsIAA0FAAAAAAAAAAA=
+            - "JgCAAAgaCF8JGQo7CF8IGwhfCD0IPAYcCAAFyAkZCDwHPggaCD0HGwt/CDwJPAhfBz0IAAWlCBsHPQgaBz4JXgccCD0IPAmABxwHGwcABcgIPAgbBxsHYAgbCjsIPAg9BxsIGwldCD0IAAWkCV4IPQkaCF8JGgY+CIEIPAkaBxsIAA0FAAAAAAAAAAA="
 
   - alias: Select Denon Input TV
     trigger:
@@ -60,7 +60,7 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - JgBSAAcbCToJGwkaCV4KGAYdCDwKOwg8CTwHGwkABcYJGgc9CzoJGgpdCDwGHQg8Cl0IGgs6Bz4LAAWhCRoHYAo7CDwKGQYcCDwHHAcbC34IGwoADQUAAAAAAAA=
+            - "JgBSAAcbCToJGwkaCV4KGAYdCDwKOwg8CTwHGwkABcYJGgc9CzoJGgpdCDwGHQg8Cl0IGgs6Bz4LAAWhCRoHYAo7CDwKGQYcCDwHHAcbC34IGwoADQUAAAAAAAA="
 
   - alias: Select Denon Input Tuner
     trigger:
@@ -71,4 +71,4 @@ automation:
       - service: switch.broadlink_send_packet_192_168_1_163
         data:
           packet:
-            - JgCAAAgaCV4IGwhfCF8IGgg9CTsKOwcbCQAFxgoZCDwJPAgaCV8IXwg8CV4IGgo7Bz0KAAWjCRkKOwgaCTwJPAhfCD0IGgiBCBoHHAcABcgJOwoZBxsJPAc+CV4IPQU/CBoIXwg9CQAFowpdCBsGHAccCF8IPAgbBhwIXwg8CjsIAA0FAAAAAAAAAAA=
+            - "JgCAAAgaCV4IGwhfCF8IGgg9CTsKOwcbCQAFxgoZCDwJPAgaCV8IXwg8CV4IGgo7Bz0KAAWjCRkKOwgaCTwJPAhfCD0IGgiBCBoHHAcABcgJOwoZBxsJPAc+CV4IPQU/CBoIXwg9CQAFowpdCBsGHAccCF8IPAgbBhwIXwg8CjsIAA0FAAAAAAAAAAA="
