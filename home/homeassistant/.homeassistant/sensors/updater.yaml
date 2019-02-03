@@ -6,5 +6,5 @@
 
 - platform: command_line
   name: Sonoff Firmware Version
-  command: 'sh curl -s https://github.com/arendst/Sonoff-Tasmota/releases/latest | cut -d\" -f2 | rev | cut -d/ -f1 | rev 2>/local/versionsonoffhtml.err'
+  command: 'curl -s https://github.com/arendst/Sonoff-Tasmota/releases/latest | cut -d\" -f2 | rev | cut -d/ -f1 | rev 2>/local/versionsonoffhtml.err'
   scan_interval: 21600
