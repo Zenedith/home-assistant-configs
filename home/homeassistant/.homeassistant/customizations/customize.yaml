@@ -110,3 +110,12 @@ sensor.vacuum_filter:
   icon: mdi:filter
 sensor.vacuum_cleaning_count:
   icon: mdi:counter
+sensor.speedtest_ping:
+  friendly_name: Ping
+  icon: mdi:pulse
+sensor.asuswrt_download_speed:
+  friendly_name: Download
+  icon: mdi:arrow-down-bold
+sensor.asuswrt_upload_speed:
+  friendly_name: Upload
+  icon: mdi:arrow-up-bold
