@@ -119,7 +119,7 @@ cards:
         card:
           type: picture-elements
 #          title: Motion Sensors
-          image: /local/lovelace/security/motion_3.jpg
+          image: /local/lovelace/security/motion_2.jpg
           elements:
             - type: state-icon
               entity: binary_sensor.lazienka_motion_occupancy
@@ -144,11 +144,11 @@ cards:
               style: {color: white, left: 75%, top: 92%}
             - type: state-icon
               entity: binary_sensor.korytarz_motion_occupancy
-              style: {color: white, left: 50%, top: 45%}
+              style: {color: white, left: 50%, top: 8%}
             - type: state-label
               entity: binary_sensor.korytarz_motion_occupancy
               prefix: 'Korytarz: '
-              style: {color: white, left: 50%, top: 55%}
+              style: {color: white, left: 50%, top: 18%}
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
