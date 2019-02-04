@@ -37,3 +37,4 @@ views:
   - !include lovelace/weather_view.yaml
   - !include lovelace/security_view.yaml
   - !include lovelace/automation_view.yaml
+  - !include lovelace/system_status_view.yaml

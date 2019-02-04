@@ -1,0 +1,55 @@
+sensor:
+  - platform: uptime
+    name: Time Online
+    unit_of_measurement: hours
+
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: processor_use
+      - type: memory_use_percent
+      - type: last_boot
+
+  - platform: command_line
+    name: CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ (value | multiply(0.001)) | round(1) }}'
+
+  - platform: filesize
+    file_paths:
+      - /config/home-assistant_v2.db
+      - /config/home-assistant.log
+
+automation:
+  - alias: homeassistant_start
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - service: shell_command.ha_start
+
+  - alias: Disk Use Percent Alarm
+    initial_state: 'on'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.disk_use_percent
+      above: 80
+    action:
+      - service: notify.mypushbullet
+        data:
+          title: 'HA Server'
+          message: 'Warning - disk use percent is {{states.sensor.disk_use_percent.state}} %'
+          
+  - alias: CPU Use Alarm
+    initial_state: 'on'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.processor_use
+      above: 85
+    action:
+      - service: notify.mypushbullet
+        data:
+          title: 'HA Server'
+          message: 'Warning - HA Server Processor {{states.sensor.processor_use.state}}%'
