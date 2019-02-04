@@ -14,9 +14,6 @@ cards:
       entity: sensor.korytarz_temp_humidity
       graph: line
     - type: sensor
-      entity: sensor.korytarz_temp_pressure
-      graph: line
-    - type: sensor
       entity: sensor.kuchnia_temp_temperature
       graph: line
     - type: sensor

@@ -28,6 +28,7 @@ title: Zene Home
 views:
   - !include lovelace/default_view.yaml
   - !include lovelace/salon.yaml
+  - !include lovelace/salon_view.yaml
   - !include lovelace/korytarz.yaml
   - !include lovelace/pokoj_janka.yaml
   - !include lovelace/sypialnia.yaml
