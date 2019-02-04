@@ -100,3 +100,13 @@ binary_sensor.drzwi_toaleta_contact:
   friendly_name: Drzwi
 sensor.drzwi_toaleta_contact_battery:
   friendly_name: Drzwi toaleta bateria
+sensor.vacuum_cleaning_time:
+  icon: mdi:clock-outline
+sensor.vacuum_main_brush:
+  icon: mdi:blender
+sensor.vacuum_side_brush:
+  icon: mdi:blender
+sensor.vacuum_filter:
+  icon: mdi:filter
+sensor.vacuum_cleaning_count:
+  icon: mdi:counter
