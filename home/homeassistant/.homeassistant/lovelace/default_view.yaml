@@ -24,7 +24,7 @@ cards:
           - type: custom:card-modder
             card:
               type: picture-elements
-              image: /local/lovelace/home/kate.jpg
+              image: /local/lovelace/home/kate2.jpg
               elements:
                 - type: state-label
                   entity: device_tracker.e49a79e25678
