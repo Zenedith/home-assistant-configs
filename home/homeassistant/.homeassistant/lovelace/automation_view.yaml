@@ -1,5 +1,6 @@
 title: Automation
 icon: mdi:robot
+background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: entities
     title: Common
