@@ -6,7 +6,7 @@ cards:
     cards:
       - type: custom:card-modder
         card:
-          title: Kamera
+#          title: Kamera
           type: picture-elements
           image: /local/lovelace/security/alarm_3.jpg
           elements:
@@ -56,7 +56,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-elements
-          title: Drzwi
+#          title: Drzwi
           image: /local/lovelace/security/door_3.png
           elements:
             - type: state-icon
@@ -68,11 +68,11 @@ cards:
               style: {color: white, left: 15%, top: 92%}
             - type: state-icon
               entity: binary_sensor.drzwi_balkonowe_contact
-              style: {color: white, left: 38%, top: 82%}
+              style: {color: white, left: 60%, top: 88%}
             - type: state-label
               entity: binary_sensor.drzwi_balkonowe_contact
               prefix: 'Balkonowe: '
-              style: {color: white, left: 38%, top: 92%}
+              style: {color: white, left: 77%, top: 89%}
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -86,7 +86,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-elements
-          title: Okna
+#          title: Okna
           image: /local/lovelace/security/window_2.jpg
           elements:
             - type: state-icon
@@ -98,11 +98,11 @@ cards:
               style: {color: white, left: 25%, top: 92%}
             - type: state-icon
               entity: binary_sensor.okno_sypialnia_contact
-              style: {color: white, left: 50%, top: 8%}
+              style: {color: white, left: 60%, top: 88%}
             - type: state-label
               entity: binary_sensor.okno_sypialnia_contact
               prefix: 'Sypialnia: '
-              style: {color: white, left: 50%, top: 18%}
+              style: {color: white, left: 77%, top: 89%}
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -118,7 +118,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-elements
-          title: Motion Sensors
+#          title: Motion Sensors
           image: /local/lovelace/security/motion_3.jpg
           elements:
             - type: state-icon
@@ -137,11 +137,11 @@ cards:
               style: {color: white, left: 50%, top: 92%}
             - type: state-icon
               entity: binary_sensor.janek_motion_occupancy
-              style: {color: white, left: 25%, top: 45%}
+              style: {color: white, left: 75%, top: 82%}
             - type: state-label
               entity: binary_sensor.janek_motion_occupancy
               prefix: 'Janek: '
-              style: {color: white, left: 25%, top: 55%}
+              style: {color: white, left: 75%, top: 92%}
             - type: state-icon
               entity: binary_sensor.korytarz_motion_occupancy
               style: {color: white, left: 50%, top: 45%}
@@ -161,7 +161,7 @@ cards:
 
       - card:
           type: picture-elements
-          title: Zalanie
+#          title: Zalanie
           image: /local/lovelace/security/leak_2.png
           elements:
             - type: state-icon
