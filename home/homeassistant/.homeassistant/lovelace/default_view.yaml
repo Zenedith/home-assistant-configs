@@ -9,7 +9,7 @@ cards:
           - type: custom:card-modder
             card:
               type: picture-elements
-              image: /local/lovelace/home/james_10.jpg
+              image: /local/lovelace/home/zene.jpg
               elements:
                 - type: state-label
                   entity: device_tracker.80b03dcda5eb
@@ -24,7 +24,7 @@ cards:
           - type: custom:card-modder
             card:
               type: picture-elements
-              image: /local/lovelace/home/tina_4.jpg
+              image: /local/lovelace/home/kate.jpg
               elements:
                 - type: state-label
                   entity: device_tracker.e49a79e25678
