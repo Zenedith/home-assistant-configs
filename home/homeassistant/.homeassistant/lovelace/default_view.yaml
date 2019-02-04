@@ -40,8 +40,6 @@ cards:
       - type: glance
         columns: 2
         entities:
-          - device_tracker.80b03dcda5eb
-          - device_tracker.e49a79e25678
           - input_select.presence_status
           - sensor.home_assistant_version
           - sensor.sonoff_firmware_version

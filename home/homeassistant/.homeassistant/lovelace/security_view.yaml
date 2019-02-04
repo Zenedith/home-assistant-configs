@@ -1,0 +1,189 @@
+title: Security
+icon: mdi:security-home
+background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:card-modder
+        card:
+          title: Kamera
+          type: picture-elements
+          image: /local/lovelace/security/alarm_3.jpg
+          elements:
+            - type: state-icon
+              entity: switch.kamera
+              style: {color: white, left: 15%, top: 88%}
+            - type: state-label
+              entity: switch.kamera
+              prefix: 'Alarm: '
+              style: {color: white, left: 32%, top: 88%}
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+  #      - type: custom:card-modder
+  #        card:
+  #          type: picture-elements
+  #          #title: Smoke Detectors
+  #          image: /local/lovelace/security/smoke_4.jpg
+  #          elements:
+  #            - type: state-icon
+  #              entity: binary_sensor.smoke_sensor_158d0001b8ddc7
+  #              style: {color: white, left: 15%, top: 88%}
+  #            - type: state-label
+  #              entity: binary_sensor.smoke_sensor_158d0001b8ddc7
+  #              prefix: 'Downstairs: '
+  #              style: {color: white, left: 32%, top: 89%}
+  #
+  #        style:
+  #          background-image: url("/local/lovelace/cardbackK.png")
+  #          background-repeat: no-repeat
+  #          background-color: rgba(50,50,50,0.3)
+  #          background-size: 100% 68px
+  #          border-radius: 20px
+  #          border: solid 1px rgba(100,100,100,0.3)
+  #          box-shadow: 3px 3px rgba(0,0,0,0.4)
+  #          overflow: hidden
+
+  - type: vertical-stack
+    cards:
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          title: Drzwi
+          image: /local/lovelace/security/door_3.png
+          elements:
+            - type: state-icon
+              entity: binary_sensor.drzwi_wejsciowe_contact
+              style: {color: white, left: 15%, top: 82%}
+            - type: state-label
+              entity: binary_sensor.drzwi_wejsciowe_contact
+              prefix: 'Wejściowe: '
+              style: {color: white, left: 15%, top: 92%}
+            - type: state-icon
+              entity: binary_sensor.drzwi_balkonowe_contact
+              style: {color: white, left: 38%, top: 82%}
+            - type: state-label
+              entity: binary_sensor.drzwi_balkonowe_contact
+              prefix: 'Balkonowe: '
+              style: {color: white, left: 38%, top: 92%}
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          title: Okna
+          image: /local/lovelace/security/window_2.jpg
+          elements:
+            - type: state-icon
+              entity: binary_sensor.okno_janek_contact
+              style: {color: white, left: 25%, top: 82%}
+            - type: state-label
+              entity: binary_sensor.okno_janek_contact
+              prefix: 'Janek: '
+              style: {color: white, left: 25%, top: 92%}
+            - type: state-icon
+              entity: binary_sensor.okno_sypialnia_contact
+              style: {color: white, left: 50%, top: 8%}
+            - type: state-label
+              entity: binary_sensor.okno_sypialnia_contact
+              prefix: 'Sypialnia: '
+              style: {color: white, left: 50%, top: 18%}
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+  - type: vertical-stack
+    cards:
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          title: Motion Sensors
+          image: /local/lovelace/security/motion_3.jpg
+          elements:
+            - type: state-icon
+              entity: binary_sensor.lazienka_motion_occupancy
+              style: {color: white, left: 25%, top: 82%}
+            - type: state-label
+              entity: binary_sensor.lazienka_motion_occupancy
+              prefix: 'Łazienka: '
+              style: {color: white, left: 25%, top: 92%}
+            - type: state-icon
+              entity: binary_sensor.sypialnia_motion_occupancy
+              style: {color: white, left: 50%, top: 82%}
+            - type: state-label
+              entity: binary_sensor.sypialnia_motion_occupancy
+              prefix: 'Sypialnia: '
+              style: {color: white, left: 50%, top: 92%}
+            - type: state-icon
+              entity: binary_sensor.janek_motion_occupancy
+              style: {color: white, left: 25%, top: 45%}
+            - type: state-label
+              entity: binary_sensor.janek_motion_occupancy
+              prefix: 'Janek: '
+              style: {color: white, left: 25%, top: 55%}
+            - type: state-icon
+              entity: binary_sensor.korytarz_motion_occupancy
+              style: {color: white, left: 50%, top: 45%}
+            - type: state-label
+              entity: binary_sensor.korytarz_motion_occupancy
+              prefix: 'Korytarz: '
+              style: {color: white, left: 50%, top: 55%}
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+      - card:
+          type: picture-elements
+          title: Zalanie
+          image: /local/lovelace/security/leak_2.png
+          elements:
+            - type: state-icon
+              entity: binary_sensor.kuchnia_leak_water_leak
+              style: {color: white, left: 15%, top: 88%}
+            - type: state-label
+              entity: binary_sensor.kuchnia_leak_water_leak
+              prefix: 'Kuchnia: '
+              style: {color: white, left: 32%, top: 89%}
+            - type: state-icon
+              entity: binary_sensor.lazienka_leak_water_leak
+              style: {color: white, left: 60%, top: 88%}
+            - type: state-label
+              entity: binary_sensor.lazienka_leak_water_leak
+              prefix: 'Łazienka: '
+              style: {color: white, left: 77%, top: 89%}
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden

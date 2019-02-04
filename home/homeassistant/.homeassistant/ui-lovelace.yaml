@@ -34,4 +34,5 @@ views:
   - !include lovelace/lazienka.yaml
   - !include lovelace/other_view.yaml
   - !include lovelace/weather_view.yaml
+  - !include lovelace/security_view.yaml
   - !include lovelace/automation_view.yaml
