@@ -24,9 +24,7 @@ cards:
             name: Ping
             icon: mdi:pulse
           - entity: sensor.asuswrt_download
-            icon: mdi:arrow-down-bold
           - entity: sensor.asuswrt_upload
-            icon: mdi:arrow-up-bold
           - type: weblink
             url: http://MI-R3G
           - type: weblink

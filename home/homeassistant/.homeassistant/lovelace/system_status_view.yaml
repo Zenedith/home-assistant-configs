@@ -2,9 +2,42 @@ icon: mdi:settings
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 name: System Status
 cards:
-
   - type: vertical-stack
     cards:
+      - type: custom:card-modder
+          card:
+            type: custom:mini-graph-card
+            entity: sensor.asuswrt_download_speed
+            height: 65
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            line_color: '#3498db'
+          style:
+            background-image: url("/local/lovelace/cardbackK.png")
+            background-repeat: no-repeat
+            background-color: rgba(50,50,50,0.3)
+            background-size: 100% 200px
+            border-radius: 20px
+            border: solid 1px rgba(100,100,100,0.3)
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+      - type: custom:card-modder
+        card:
+          type: custom:mini-graph-card
+          entity: sensor.asuswrt_upload_speed
+          height: 65
+          line_width: 2
+          font_size: 70
+          hours_to_show: 168
+          line_color: '#3498db'
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
       - type: custom:card-modder
         card:
           type: picture-elements
@@ -21,17 +54,17 @@ cards:
               style: {color: white, left: 20%, top: 93%, font-size: 115%, font-weight: bold}
 
             - type: state-icon
-              entity: sensor.asuswrt_download_speed
+              entity: sensor.asuswrt_download
               style: {color: white, left: 50%, top: 85%}
             - type: state-label
-              entity: sensor.asuswrt_download_speed
+              entity: sensor.asuswrt_download
               style: {color: white, left: 50%, top: 93%, font-size: 115%, font-weight: bold}
 
             - type: state-icon
-              entity: sensor.asuswrt_upload_speed
+              entity: sensor.asuswrt_upload
               style: {color: white, left: 75%, top: 85%}
             - type: state-label
-              entity: sensor.asuswrt_upload_speed
+              entity: sensor.asuswrt_upload
               style: {color: white, left: 75%, top: 93%, font-size: 115%, font-weight: bold}
         style:
           border-radius: 20px

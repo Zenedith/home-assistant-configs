@@ -119,3 +119,9 @@ sensor.asuswrt_download_speed:
 sensor.asuswrt_upload_speed:
   friendly_name: Upload
   icon: mdi:arrow-up-bold
+sensor.asuswrt_download:
+  friendly_name: Download
+  icon: mdi:arrow-down-bold
+sensor.asuswrt_upload:
+  friendly_name: Upload
+  icon: mdi:arrow-up-bold
