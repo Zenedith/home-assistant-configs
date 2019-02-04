@@ -74,6 +74,20 @@
       data:
         entity_id: light.swiatlo_toaleta
 
+- alias: 'Wyłącz światło w toalecie przy wyjściu'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.drzwi_toaleta_contact
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.swiatlo_toaleta
+      state: 'on'
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.swiatlo_toaleta
+
 - alias: 'Włącz timer w toalecie gdy otwarte drzwi'
   trigger:
     - platform: state
