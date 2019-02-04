@@ -17,10 +17,10 @@ sensor:
     unit_of_measurement: "°C"
     value_template: '{{ (value | multiply(0.001)) | round(1) }}'
 
-  - platform: filesize
-    file_paths:
-      - /config/home-assistant_v2.db
-      - /config/home-assistant.log
+#  - platform: filesize
+#    file_paths:
+#      - /config/home-assistant_v2.db
+#      - /config/home-assistant.log
 
 automation:
   - alias: homeassistant_start

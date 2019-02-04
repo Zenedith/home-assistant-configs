@@ -153,8 +153,8 @@ tts:
     time_memory: 300
     base_url: !secret base_url
 
-whitelist_external_dirs:
-  - /config
+#whitelist_external_dirs:
+#  - /config
 
 camera: !include cameras/dafang.yaml
 timer: !include timer/timer.yaml
