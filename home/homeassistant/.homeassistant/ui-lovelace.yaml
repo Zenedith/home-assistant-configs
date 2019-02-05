@@ -23,6 +23,8 @@ resources:
     type: module
   - url: /local/custom_ui/monster-card.js?v=0.2.3
     type: js
+  - url: /local/custom_ui/kiosk.jsv=1.0.0
+    type: js
 
 title: Zene Home
 views:
