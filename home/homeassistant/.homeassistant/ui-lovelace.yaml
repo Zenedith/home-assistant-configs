@@ -11,7 +11,7 @@ resources:
     type: module
   - url: /local/custom_ui/slider-entity-row.js?v=d6da75
     type: js
-  - url: /local/custom_ui/card-tools.js?v=6ce5d0
+  - url: /local/custom_ui/card-tools.js?v=0.3
     type: js
   - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=0.2.7
     type: js

@@ -209,3 +209,49 @@ cards:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+  - type: vertical-stack
+    cards:
+      - type: conditional
+        conditions:
+          - entity: switch.kamera
+            state: "on"
+        card:
+          type: picture-entity
+          entity: camera.dafang
+          camera_image: camera.dafang
+      - type: conditional
+        conditions:
+          - entity: switch.kamera
+            state: "on"
+        card:
+          - type: custom:surveillance-card
+              thumb_interval: 15
+              update_interval: 2
+              cameras:
+                - entity: camera.dafang
+                  motion_entity: binary_sensor.dafang_motion_sensor
+      - type: conditional
+        conditions:
+          - entity: switch.kamera
+            state: "on"
+        card:
+          type: entities
+          entities:
+            - camera.dafang
+            - switch.dafang_h264_rtsp_server
+            - sensor.dafang
+            - device_tracker.dafang
+            - sensor.dafang_light_sensor
+            - switch.dafang_night_mode
+            - switch.dafang_night_mode_auto
+            - switch.dafang_motion_detection
+            - switch.dafang_motion_tracking
+            - camera.dafang_motion_snapshot
+            - binary_sensor.dafang_motion_sensor
+            - cover.dafang_move_leftright
+            - cover.dafang_move_updown
+            - type: weblink
+              url: http://dafang
+            - type: weblink
+              url: rtsp://dafang:8554/unicast
