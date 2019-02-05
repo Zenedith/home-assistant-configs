@@ -4,30 +4,37 @@ background: center / cover no-repeat url("/local/lovelace/background-15.gif") fi
 cards:
   - type: vertical-stack
     cards:
-      - type: custom:card-modder
-        card:
-#          title: Kamera
-          type: picture-elements
-          image: /local/lovelace/security/alarm_3.jpg
-          elements:
-            - type: state-icon
-              entity: switch.kamera
-              style: {color: white, left: 15%, top: 88%}
-            - type: state-label
-              entity: switch.kamera
-              prefix: 'Alarm: '
-              style: {color: white, left: 32%, top: 88%}
-              tap_action:
-                action: toggle
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 68px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-          overflow: hidden
+      - type: horizontal-stack
+        cards:
+          - type: custom:card-modder
+            card:
+              type: picture-elements
+              image: /local/lovelace/home/zene.jpg
+              elements:
+                - type: state-label
+                  entity: device_tracker.80b03dcda5eb
+                  prefix: 'Zene -- '
+                  style: {color: white, left: 30%, top: 90%}
+            style:
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+              overflow: hidden
+
+          - type: custom:card-modder
+            card:
+              type: picture-elements
+              image: /local/lovelace/home/kate2.jpg
+              elements:
+                - type: state-label
+                  entity: device_tracker.e49a79e25678
+                  prefix: 'Kate -- '
+                  style: {color: white, left: 27%, top: 89%}
+            style:
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+              overflow: hidden
 
   #      - type: custom:card-modder
   #        card:
@@ -193,6 +200,30 @@ cards:
 
   - type: vertical-stack
     cards:
+      - type: custom:card-modder
+        card:
+#          title: Kamera
+          type: picture-elements
+          image: /local/lovelace/security/alarm_3.jpg
+          elements:
+            - type: state-icon
+              entity: switch.kamera
+              style: {color: white, left: 15%, top: 88%}
+            - type: state-label
+              entity: switch.kamera
+              prefix: 'Alarm: '
+              style: {color: white, left: 32%, top: 88%}
+              tap_action:
+                action: toggle
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
       - type: custom:card-modder
         card:
           type: entities
