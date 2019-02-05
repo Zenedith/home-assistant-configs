@@ -17,6 +17,8 @@ cards:
               entity: switch.kamera
               prefix: 'Alarm: '
               style: {color: white, left: 32%, top: 88%}
+              tap_action:
+                action: toggle
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
