@@ -227,7 +227,7 @@ cards:
           - entity: switch.kamera
             state: "on"
         card:
-          - type: custom:surveillance-card
+           type: custom:surveillance-card
             thumb_interval: 15
             update_interval: 2
             cameras:
