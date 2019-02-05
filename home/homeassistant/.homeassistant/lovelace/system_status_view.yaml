@@ -115,3 +115,24 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
           overflow: hidden
+
+  - type: vertical-stack
+    cards:
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Zigbee
+          show_header_toggle: false
+          entities:
+            - input_boolean.zigbee_permit_join
+            - sensor.bridge_state
+            - timer.zigbee_permit_join
+            - input_select.zigbee2mqtt_log_level
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
