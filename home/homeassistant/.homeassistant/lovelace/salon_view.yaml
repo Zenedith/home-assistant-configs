@@ -81,7 +81,7 @@ cards:
           name: Obraz
           tap_action:
             action: toggle
-          image: /local/lovelace/downstairs/pc-light_2.jpg
+          image: /local/lovelace/downstairs/outside-lights_1.jpg
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
@@ -103,6 +103,19 @@ cards:
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: switch.choinka
+          name: Choinka
+          tap_action:
+            action: toggle
+          image: /local/lovelace/downstairs/xmas-lights_1.jpg
+        style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -246,7 +259,6 @@ cards:
       - type: custom:card-modder
         card:
           type: entities
-          title: Broadlink
           show_header_toggle: false
           entities:
             - input_boolean.broadlink_denon_receiver
