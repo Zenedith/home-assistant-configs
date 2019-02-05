@@ -3,8 +3,6 @@ resources:
     type: js
   - url: /local/custom_ui/mini-media-player-bundle.js?v=0.9.8
     type: module
-  - url: /local/custom_ui/tracker-card.js?v=0.1.5
-    type: js
   - url: /local/custom_ui/surveillance-card.js?v=0.0.1
     type: module
   - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.1.0
@@ -17,13 +15,7 @@ resources:
     type: js
   - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=0.2.7
     type: js
-  - url: /local/custom_ui/waze-card.js?v=1.1.1
-    type: js
-  - url: /local/custom_ui/circle-sensor-card.js?v=1.2.0
-    type: module
-  - url: /local/custom_ui/monster-card.js?v=0.2.3
-    type: js
-  - url: /local/custom_ui/kiosk.jsv=1.0.0
+  - url: /local/custom_ui/kiosk.js?v=1.0.0
     type: js
 
 title: Zene Home
