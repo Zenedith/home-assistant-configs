@@ -5,35 +5,6 @@ cards:
     cards:
       - type: markdown
         content: >
-          ## Internet
-      - type: sensor
-        entity: sensor.asuswrt_download_speed
-        icon: mdi:arrow-down-bold
-        graph: line
-        unit: Mbit/s
-      - type: sensor
-        entity: sensor.asuswrt_upload_speed
-        icon: mdi:arrow-up-bold
-        graph: line
-        unit: Mbit/s
-
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - entity: sensor.speedtest_ping
-            name: Ping
-            icon: mdi:pulse
-          - entity: sensor.asuswrt_download
-          - entity: sensor.asuswrt_upload
-          - type: weblink
-            url: http://MI-R3G
-          - type: weblink
-            url: https://www.home-assistant.io/blog/
-
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
           ## Battery Levels
       - type: gauge
         unit: '%'
