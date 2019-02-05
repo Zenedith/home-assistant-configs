@@ -226,11 +226,11 @@ cards:
             state: "on"
         card:
           - type: custom:surveillance-card
-              thumb_interval: 15
-              update_interval: 2
-              cameras:
-                - entity: camera.dafang
-                  motion_entity: binary_sensor.dafang_motion_sensor
+            thumb_interval: 15
+            update_interval: 2
+            cameras:
+              - entity: camera.dafang
+                motion_entity: binary_sensor.dafang_motion_sensor
       - type: conditional
         conditions:
           - entity: switch.kamera
