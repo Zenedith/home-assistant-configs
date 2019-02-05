@@ -3,8 +3,6 @@ resources:
     type: js
   - url: /local/custom_ui/mini-media-player-bundle.js?v=0.9.8
     type: module
-  - url: /local/custom_ui/surveillance-card.js?v=0.0.1
-    type: module
   - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.1.0
     type: module
   - url: /local/custom_ui/card-modder.js?v=0.3
