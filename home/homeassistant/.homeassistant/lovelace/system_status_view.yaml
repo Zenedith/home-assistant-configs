@@ -21,6 +21,7 @@ cards:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
+
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
@@ -38,6 +39,7 @@ cards:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
+
       - type: custom:card-modder
         card:
           type: picture-elements
@@ -72,6 +74,8 @@ cards:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
           overflow: hidden
 
+  - type: vertical-stack
+    cards:
       - type: custom:card-modder
         card:
           type: picture-elements
@@ -115,6 +119,24 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
           overflow: hidden
+
+      - type: custom:card-modder
+        card:
+          type: glance
+          columns: 2
+          entities:
+            - input_select.presence_status
+            - sensor.home_assistant_version
+            - sensor.sonoff_firmware_version
+            - sensor.holiday
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
   - type: vertical-stack
     cards:
