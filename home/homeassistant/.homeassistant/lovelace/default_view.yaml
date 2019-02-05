@@ -73,19 +73,32 @@ cards:
           - input_boolean.spotify_shuffle
   - type: vertical-stack
     cards:
-      - type: entities
-        title: Security
-        show_header_toggle: false
-        entities:
-          - script.everything_off
-          - script.everything_off_secure
-          - group.all_switches
-          - group.all_lights
-      - type: entities
-        title: Zigbee
-        show_header_toggle: false
-        entities:
-          - input_boolean.zigbee_permit_join
-          - sensor.bridge_state
-          - timer.zigbee_permit_join
-          - input_select.zigbee2mqtt_log_level
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Security
+          show_header_toggle: false
+          entities:
+            - script.everything_off
+            - script.everything_off_secure
+            - group.all_switches
+            - group.all_lights
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Zigbee
+          show_header_toggle: false
+          entities:
+            - input_boolean.zigbee_permit_join
+            - sensor.bridge_state
+            - timer.zigbee_permit_join
+            - input_select.zigbee2mqtt_log_level
