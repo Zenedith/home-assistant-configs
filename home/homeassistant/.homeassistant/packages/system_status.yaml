@@ -17,19 +17,7 @@ sensor:
     unit_of_measurement: "°C"
     value_template: '{{ (value | multiply(0.001)) | round(1) }}'
 
-#  - platform: filesize
-#    file_paths:
-#      - /config/home-assistant_v2.db
-#      - /config/home-assistant.log
-
 automation:
-  - alias: homeassistant_start
-    trigger:
-      - platform: homeassistant
-        event: start
-    action:
-      - service: shell_command.ha_start
-
   - alias: Disk Use Percent Alarm
     initial_state: 'on'
     trigger:

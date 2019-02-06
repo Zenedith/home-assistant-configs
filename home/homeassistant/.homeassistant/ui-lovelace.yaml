@@ -1,5 +1,5 @@
 resources:
-  - url: /local/tracker-card.js?v=0
+  - url: /local/custom_ui/tracker-card.js?v=0
     type: js
   - url: /local/custom_ui/dark-sky-weather-card.js?v=4
     type: js
