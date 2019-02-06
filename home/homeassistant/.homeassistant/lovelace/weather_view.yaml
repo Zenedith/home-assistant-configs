@@ -69,4 +69,4 @@ cards:
       entity: weather.dark_sky
     - type: iframe
       url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
-      aspect_ratio: 25%
+      aspect_ratio: 200%
