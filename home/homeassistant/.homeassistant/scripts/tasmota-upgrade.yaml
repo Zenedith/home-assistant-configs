@@ -39,3 +39,23 @@ sequence:
       data:
         topic: 'incan/incan4/cmnd/upgrade'
         payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_1/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_2/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_3/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_4/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly_5/cmnd/upgrade'
+        payload: "1"
