@@ -1,0 +1,41 @@
+sequence:
+   - service: mqtt.publish
+      data:
+        topic: 'zigbee2mqtt/sonoff2/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'zigbee2mqtt/sonoff1/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'basic/sonoff-basic-3/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'zigbee2mqtt/sonoff4/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'zigbee2mqtt/sonoff5/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'zigbee2mqtt/powr2_1/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'incan/incan1/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'incan/incan2/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'incan/incan3/cmnd/upgrade'
+        payload: "1"
+    - service: mqtt.publish
+      data:
+        topic: 'incan/incan4/cmnd/upgrade'
+        payload: "1"

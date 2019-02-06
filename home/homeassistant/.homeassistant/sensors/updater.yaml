@@ -4,7 +4,12 @@
   value_template: '{{ value_json.info.version }}'
   scan_interval: 3600
 
-- platform: command_line
-  name: Sonoff Firmware Version
-  command: 'curl -s https://github.com/arendst/Sonoff-Tasmota/releases/latest | cut -d\" -f2 | rev | cut -d/ -f1 | rev 2>/local/versionsonoffhtml.err'
+- platform: rest
   scan_interval: 21600
+  name: Sonoff Firmware Version
+  resource: https://api.github.com/repos/arendst/Sonoff-Tasmota/releases/latest
+  value_template: '{{ value_json.tag_name }}'
+  headers:
+    Accept: application/vnd.github.v3+json
+    Content-Type: application/json
+    User-Agent: Home Assistant REST sensor

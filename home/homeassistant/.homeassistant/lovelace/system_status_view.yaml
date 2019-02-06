@@ -144,7 +144,9 @@ cards:
           entities:
             - input_select.presence_status
             - sensor.home_assistant_version
-            - sensor.sonoff_firmware_version
+            - entity: sensor.sonoff_firmware_version
+              tap_action:
+                action: script.tasmota-upgrade
             - sensor.holiday
         style:
           background-image: url("/local/lovelace/cardbackK.png")
