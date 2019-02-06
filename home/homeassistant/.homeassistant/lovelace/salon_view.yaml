@@ -2,6 +2,19 @@ title: Salon i kuchnia
 icon: mdi:sofa
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
+  - type: custom:compact-custom-header
+    header: true
+    menu: true
+    notification: false
+    voice: false
+    options: true
+    tabs: true
+    clock: notification
+    clock_format: 24
+    disable: false
+    background_image: true
+    dir: /local/custom_ui/compact-custom-header/
+
   - type: vertical-stack
     cards:
       - type: custom:card-modder

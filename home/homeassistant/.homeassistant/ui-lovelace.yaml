@@ -13,7 +13,7 @@ resources:
     type: js
   - url: /local/custom_ui/card-tools.js?v=0.3
     type: js
-  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=0.2.7
+  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=0.2.9
     type: js
   - url: /local/custom_ui/kiosk.js?v=1.0.0
     type: js
