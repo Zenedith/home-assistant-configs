@@ -448,3 +448,67 @@ f4f5d81fb952:
   name: 54 e6 fc c0 0a 7f
   picture:
   track: false
+
+sonoff_3493:
+  hide_if_away: true
+  icon:
+  mac: 3C:71:BF:2C:6D:A5
+  name: sonoff-3493
+  picture:
+  track: false
+
+sonoff_7733:
+  hide_if_away: true
+  icon:
+  mac: 3C:71:BF:2B:DE:35
+  name: sonoff-7733
+  picture:
+  track: false
+
+sonoff_2592:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:AA:20
+  name: sonoff-2592
+  picture:
+  track: false
+
+sonoff_2887:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:AB:47
+  name: sonoff-2887
+  picture:
+  track: false
+
+sonoff_0378:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:A1:7A
+  name: sonoff-0378
+  picture:
+  track: false
+
+shelly1_25a3eb:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:A3:EB
+  name: shelly1-25A3EB
+  picture:
+  track: false
+
+rmmini_d9_23_fa:
+  hide_if_away: true
+  icon:
+  mac: 78:0F:77:D9:23:FA
+  name: RMMINI-d9-23-fa
+  picture:
+  track: false
+
+android_a1f6fccb13ac9f1d:
+  hide_if_away: true
+  icon:
+  mac: AC:22:0B:A6:28:ED
+  name: android-a1f6fccb13ac9f1d
+  picture:
+  track: false
