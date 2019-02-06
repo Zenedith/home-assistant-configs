@@ -1,10 +1,12 @@
 resources:
+  - url: /local/tracker-card.js?v=0
+    type: js
   - url: /local/custom_ui/dark-sky-weather-card.js?v=4
     type: js
   - url: /local/custom_ui/mini-media-player-bundle.js?v=0.9.8
     type: module
-  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.1.0
-    type: modulew
+  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.2.1
+    type: module
   - url: /local/custom_ui/card-modder.js?v=0.3
     type: module
   - url: /local/custom_ui/slider-entity-row.js?v=d6da75
