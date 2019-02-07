@@ -166,6 +166,7 @@ cards:
           type: glance
           columns: 2
           entities:
+            - sensor.holiday
             - input_select.presence_status
             - sensor.home_assistant_version
             - sensor.sonoff_firmware_version
@@ -176,7 +177,6 @@ cards:
             - sensor.listwa_sypialnia_version
             - sensor.choinka_version
             - sensor.rtv_jan_version
-            - sensor.holiday
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
