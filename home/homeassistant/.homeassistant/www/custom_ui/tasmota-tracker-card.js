@@ -108,6 +108,8 @@ class TasmotaTrackerCard extends HTMLElement {
     const config = this._config;
     const root = this.shadowRoot;
     const card = root.lastChild;
+
+    console.log(hass.states[config.current_version])
     const current_version = hass.states[config.current_version].state;
     this.myhass = hass;
     this.handlers = this.handlers || [];
@@ -122,7 +124,7 @@ class TasmotaTrackerCard extends HTMLElement {
       if (hass.states[sensor]) {
 //        const list = this._filterCards(hass.states[sensor].attributes);
         const sensor_version = hass.states[sensor].state;
-        const name = hass.states[sensor].name;
+        const name = hass.states[sensor].attributes.friendly_name;
         console.log(hass.states[sensor])
 //        const repo = hass.states[sensor].attributes.repo;
 
