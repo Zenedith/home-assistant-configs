@@ -136,30 +136,30 @@ cards:
           color: "#999999"
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
-      - type: custom:card-modder
-        card:
-          type: custom:tasmota-tracker-card
-          sensors:
-            - sensor.swiatlo_pokoj_janka_version
-            - sensor.swiatlo_sypialnia_version
-            - sensor.kamera_version
-            - sensor.listwa_rtv_version
-            - sensor.listwa_sypialnia_version
-            - sensor.choinka_version
-            - sensor.rtv_jan_version
-#            - sensor.pralka_version
-          check_script: tasmota-update-check
-          upgrade_script: tasmota-upgrade
-          current_version: sensor.sonoff_firmware_version
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 525px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          color: "#999999"
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
+#      - type: custom:card-modder
+#        card:
+#          type: custom:tasmota-tracker-card
+#          sensors:
+#            - sensor.swiatlo_pokoj_janka_version
+#            - sensor.swiatlo_sypialnia_version
+#            - sensor.kamera_version
+#            - sensor.listwa_rtv_version
+#            - sensor.listwa_sypialnia_version
+#            - sensor.choinka_version
+#            - sensor.rtv_jan_version
+##            - sensor.pralka_version
+#          check_script: tasmota_update_check
+#          upgrade_script: tasmota_upgrade
+#          current_version: sensor.sonoff_firmware_version
+#        style:
+#          background-image: url("/local/lovelace/cardbackK.png")
+#          background-repeat: no-repeat
+#          background-color: rgba(50,50,50,0.3)
+#          background-size: 100% 525px
+#          border-radius: 20px
+#          border: solid 1px rgba(100,100,100,0.3)
+#          color: "#999999"
+#          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: custom:card-modder
         card:
@@ -169,6 +169,13 @@ cards:
             - input_select.presence_status
             - sensor.home_assistant_version
             - sensor.sonoff_firmware_version
+            - sensor.swiatlo_pokoj_janka_version
+            - sensor.swiatlo_sypialnia_version
+            - sensor.kamera_version
+            - sensor.listwa_rtv_version
+            - sensor.listwa_sypialnia_version
+            - sensor.choinka_version
+            - sensor.rtv_jan_version
             - sensor.holiday
         style:
           background-image: url("/local/lovelace/cardbackK.png")

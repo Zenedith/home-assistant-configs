@@ -3,4 +3,4 @@
     platform: time
     at: '12:00:00'
   action:
-    - service: script.tasmota-update-check
+    - service: script.tasmota_update_check
