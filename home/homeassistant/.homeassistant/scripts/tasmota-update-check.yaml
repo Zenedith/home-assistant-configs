@@ -1,61 +1,61 @@
 sequence:
-   - service: mqtt.publish
-      data:
-        topic: 'zigbee2mqtt/sonoff2/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'zigbee2mqtt/sonoff1/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'basic/sonoff-basic-3/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'zigbee2mqtt/sonoff4/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'zigbee2mqtt/sonoff5/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'zigbee2mqtt/powr2_1/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'incan/incan1/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'incan/incan2/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'incan/incan3/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'incan/incan4/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'shellies/shelly_1/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'shellies/shelly_2/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'shellies/shelly_3/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'shellies/shelly_4/cmnd/status'
-        payload: "2"
-    - service: mqtt.publish
-      data:
-        topic: 'shellies/shelly_5/cmnd/status'
-        payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'zigbee2mqtt/sonoff2/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'zigbee2mqtt/sonoff1/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'basic/sonoff-basic-3/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'zigbee2mqtt/sonoff4/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'zigbee2mqtt/sonoff5/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'zigbee2mqtt/powr2_1/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'incan/incan1/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'incan/incan2/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'incan/incan3/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'incan/incan4/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'shellies/shelly_1/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'shellies/shelly_2/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'shellies/shelly_3/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'shellies/shelly_4/cmnd/status'
+      payload: "2"
+  - service: mqtt.publish
+    data:
+      topic: 'shellies/shelly_5/cmnd/status'
+      payload: "2"
