@@ -1,4 +1,4 @@
-class TasmotasensorCard extends HTMLElement {
+class TasmotaTrackerCard extends HTMLElement {
 
   constructor() {
     super();
@@ -155,4 +155,4 @@ class TasmotasensorCard extends HTMLElement {
     return 1;
   }
 }
-customElements.define('tasmota-sensor-card', TasmotasensorCard);
+customElements.define('tasmota-tracker-card', TasmotaTrackerCard);
