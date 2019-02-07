@@ -123,6 +123,7 @@ class TasmotaTrackerCard extends HTMLElement {
 //        const list = this._filterCards(hass.states[sensor].attributes);
         const sensor_version = hass.states[sensor].state;
         const name = hass.states[sensor].name;
+        console.log(hass.states[sensor])
 //        const repo = hass.states[sensor].attributes.repo;
 
         const updated_content = `
