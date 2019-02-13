@@ -1,7 +1,13 @@
 customElements.whenDefined('card-tools').then(() => {
 class CardModder extends cardTools.litElement() {
 
-  setConfig(config) {
+  static get properties() {
+    return {
+      card: {},
+    };
+  }
+
+  async setConfig(config) {
     cardTools.checkVersion(0.3);
 
     if(!config || !config.card) {
@@ -10,32 +16,68 @@ class CardModder extends cardTools.litElement() {
     if(Array.isArray(config.card)) {
       throw new Error("It says 'card', not 'cardS'. Remove the dash.");
     }
-    this._config = config;
-    this.card = cardTools.createCard(config.card);
+
     this.templated = [];
-    this.attempts = 0;
+    this.attempts = 5;
+
+    if (config.entities)
+      config.card.entities = config.entities;
+
+    this.card = cardTools.createCard(config.card);
+    if(this._hass)
+      this.card.hass = this._hass;
+
+    if(this._config)
+      this._cardMod();
+
+    this._config = config;
   }
 
+  createRenderRoot() {
+    return this;
+  }
   render() {
     return cardTools.litHtml()`
     <div id="root">${this.card}</div>
     `;
   }
 
-  firstUpdated() {
+  async firstUpdated() {
     this._cardMod();
   }
 
-  _cardMod() {
+  async _cardMod() {
     if(!this._config.style) return;
 
+    let root = this.card;
     let target = null;
-    target = target || this.card.querySelector("ha-card");
-    target = target || this.card.shadowRoot && this.card.shadowRoot.querySelector("ha-card");
-    target = target || this.card.firstChild && this.card.firstChild.shadowRoot && this.card.firstChild.shadowRoot.querySelector("ha-card");
-    if(!target && !this.attempts) // Try twice
+    while(!target) {
+      await root.updateComplete;
+      if(root.querySelector("ha-card")) {
+        target = root.querySelector("ha-card");
+        continue;
+      }
+      if(root.card) {
+        root = root.card;
+        continue;
+      }
+      if(root.shadowRoot) {
+        root = root.shadowRoot;
+        continue;
+      }
+      if(root.querySelector("#root")) {
+        root = root.querySelector("#root");
+        continue;
+      }
+      if(root.firstElementChild) {
+        root = root.firstElementChild;
+        continue;
+      }
+      break;
+    }
+    if(!target && this.attempts) // Try again
       setTimeout(() => this._cardMod(), 100);
-    this.attempts++;
+    this.attempts--;
     target = target || this.card;
 
     for(var k in this._config.style) {
@@ -50,6 +92,7 @@ class CardModder extends cardTools.litElement() {
   }
 
   set hass(hass) {
+    this._hass = hass;
     if(this.card) this.card.hass = hass;
     if(this.templated)
       this.templated.forEach((k) => {

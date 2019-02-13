@@ -7,11 +7,11 @@ resources:
     type: js
   - url: /local/custom_ui/mini-media-player-bundle.js?v=1.0.0
     type: module
-  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.2.1
+  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.2.3
     type: module
-  - url: /local/custom_ui/card-modder.js?v=0.3
+  - url: /local/custom_ui/card-modder.js?v=ab8158
     type: module
-  - url: /local/custom_ui/card-tools.js?v=0.3
+  - url: /local/custom_ui/card-tools.js?v=297fcc
     type: js
   - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=0.2.9
     type: js
