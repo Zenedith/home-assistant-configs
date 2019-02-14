@@ -4,7 +4,13 @@ cards:
   - type: horizontal-stack
     cards:
       - type: vertical-stack
-        cards:mperature
+        cards:
+          - type: glance
+            columns: 4
+            card:
+              title: Korytarz
+            entities:
+              - entity: sensor.korytarz_temp_temperature
               - entity: binary_sensor.drzwi_wejsciowe_contact
               - entity: binary_sensor.korytarz_motion_occupancy
               - entity: sensor.korytarz_motion_illuminance
