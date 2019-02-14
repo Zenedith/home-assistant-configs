@@ -16,8 +16,7 @@ cards:
           height: 65
           line_width: 2
           font_size: 70
-          hours_to_show: 168
-          line_color: '#e74c3c'
+          hours_to_show: 24
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -36,7 +35,25 @@ cards:
           height: 65
           line_width: 2
           font_size: 70
-          hours_to_show: 168
+          hours_to_show: 24
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: custom:mini-graph-card
+          entities:
+            - sensor.kuchnia_temp_pressure
+          height: 65
+          line_width: 2
+          font_size: 70
+          hours_to_show: 24
           line_color: '#e74c3c'
         style:
           background-image: url("/local/lovelace/cardbackK.png")
@@ -47,9 +64,6 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
-      - type: sensor
-        entity: sensor.kuchnia_temp_pressure
-        graph: line
   - type: vertical-stack
     cards:
       - type: markdown
