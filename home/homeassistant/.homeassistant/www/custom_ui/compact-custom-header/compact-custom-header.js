@@ -1,9 +1,4 @@
-//import "./compact-custom-header-editor.js?v=1.0.0b2";
-
-// Insert the main script in head, run, remove.
-const script = document.createElement('script');
-script.src = card_dir + 'compact-custom-header-editor.js?v=1.0.0b2';
-document.head.appendChild(script).parentNode.removeChild(script);
+import "./compact-custom-header-editor.js?v=1.0.0b2";
 
 const LitElement = Object.getPrototypeOf(
   customElements.get("ha-panel-lovelace")
