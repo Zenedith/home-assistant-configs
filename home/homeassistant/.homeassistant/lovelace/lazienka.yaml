@@ -1,37 +1,39 @@
 title: Łazienka i toaleta
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
-      - type: markdown
-        content: >
-          ## Łazienka
-      - type: glance
-        columns: 4
-        card:
-          title: Łazienka
-        entities:
-          - entity: binary_sensor.drzwi_lazienka_contact
-          - entity: binary_sensor.lazienka_motion_occupancy
-          - entity: sensor.lazienka_motion_illuminance
-          - entity: binary_sensor.lazienka_leak_water_leak
-      - type: light
-        entity: light.yeelight_ceiling_7811dcab68e0
-      - type: entities
-        title: Pralka
-        show_header_toggle: false
-        entities:
-          - entity: switch.pralka
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
-          ## Toaleta
-      - type: glance
-        columns: 1
-        card:
-          title: Toaleta
-        entities:
-          - entity: binary_sensor.drzwi_toaleta_contact
-      - type: light
-        entity: light.swiatlo_toaleta
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ## Łazienka
+          - type: glance
+            columns: 4
+            card:
+              title: Łazienka
+            entities:
+              - entity: binary_sensor.drzwi_lazienka_contact
+              - entity: binary_sensor.lazienka_motion_occupancy
+              - entity: sensor.lazienka_motion_illuminance
+              - entity: binary_sensor.lazienka_leak_water_leak
+          - type: light
+            entity: light.yeelight_ceiling_7811dcab68e0
+          - type: entities
+            title: Pralka
+            show_header_toggle: false
+            entities:
+              - entity: switch.pralka
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ## Toaleta
+          - type: glance
+            columns: 1
+            card:
+              title: Toaleta
+            entities:
+              - entity: binary_sensor.drzwi_toaleta_contact
+          - type: light
+            entity: light.swiatlo_toaleta

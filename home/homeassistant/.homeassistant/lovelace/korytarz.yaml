@@ -1,27 +1,23 @@
 title: Korytarz
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
-      - type: glance
-        columns: 4
-        card:
-          title: Korytarz
-        entities:
-          - entity: sensor.korytarz_temp_temperature
-          - entity: binary_sensor.drzwi_wejsciowe_contact
-          - entity: binary_sensor.korytarz_motion_occupancy
-          - entity: sensor.korytarz_motion_illuminance
-  - type: vertical-stack
-    cards:
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - entity: input_boolean.moonlight_korytarz
-      - type: markdown
-        content: >
-          ## Lampy
-      - type: light
-        entity: light.yeelight_ceiling4_7c49ebb70c4a
-      - type: light
-        entity: light.yeelight_ceiling_7811dcab824a
+      - type: vertical-stack
+        cards:mperature
+              - entity: binary_sensor.drzwi_wejsciowe_contact
+              - entity: binary_sensor.korytarz_motion_occupancy
+              - entity: sensor.korytarz_motion_illuminance
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - entity: input_boolean.moonlight_korytarz
+          - type: markdown
+            content: >
+              ## Lampy
+          - type: light
+            entity: light.yeelight_ceiling4_7c49ebb70c4a
+          - type: light
+            entity: light.yeelight_ceiling_7811dcab824a

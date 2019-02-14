@@ -1,37 +1,39 @@
 title: Pokój Janka
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
-      - type: glance
-        columns: 3
-        entities:
-          - entity: binary_sensor.okno_janek_contact
-          - entity: sensor.janek_motion_illuminance
-          - entity: binary_sensor.janek_motion_occupancy
-      - type: entities
-        title: Przełączniki
-        show_header_toggle: false
-        entities:
-          - entity: switch.rtv_jan
-          - entity: input_boolean.jasiu_chillout
-  - type: vertical-stack
-    cards:
-      - type: markdown
-        content: >
-          ## Lampy
-      - type: light
-        entity: light.yeelight_bedside_7c49eb284fda
-      - type: light
-        entity: light.swiatlo_pokoj_janka
-  - type: vertical-stack
-    cards:
-      - type: thermostat
-        entity: climate.pokoj_janka
-      - type: entities
-        title: Roleta
-        show_header_toggle: false
-        entities:
-          - entity: cover.pokoj_janka
-          - type: weblink
-            url: http://shellyswitch-5B28DA
+      - type: vertical-stack
+        cards:
+          - type: glance
+            columns: 3
+            entities:
+              - entity: binary_sensor.okno_janek_contact
+              - entity: sensor.janek_motion_illuminance
+              - entity: binary_sensor.janek_motion_occupancy
+          - type: entities
+            title: Przełączniki
+            show_header_toggle: false
+            entities:
+              - entity: switch.rtv_jan
+              - entity: input_boolean.jasiu_chillout
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ## Lampy
+          - type: light
+            entity: light.yeelight_bedside_7c49eb284fda
+          - type: light
+            entity: light.swiatlo_pokoj_janka
+      - type: vertical-stack
+        cards:
+          - type: thermostat
+            entity: climate.pokoj_janka
+          - type: entities
+            title: Roleta
+            show_header_toggle: false
+            entities:
+              - entity: cover.pokoj_janka
+              - type: weblink
+                url: http://shellyswitch-5B28DA
