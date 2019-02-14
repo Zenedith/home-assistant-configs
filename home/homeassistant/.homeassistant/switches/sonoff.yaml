@@ -35,7 +35,7 @@
   payload_not_available: "Offline"
   retain: false
 - platform: mqtt
-  name: "Choinka"
+  name: "Zmietek"
   state_topic: "zigbee2mqtt/sonoff4/POWER"
   command_topic: "zigbee2mqtt/sonoff4/cmnd/POWER"
   availability_topic: "zigbee2mqtt/sonoff4/LWT"

@@ -47,18 +47,18 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
-      - type: custom:card-modder
-        card:
-          type: picture-entity
-          entity: group.kuchnia_lampa
-          name: Dining
-          tap_action:
-            action: toggle
-          image: /local/lovelace/downstairs/dining-light_2.jpg
-        style:
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
+#      - type: custom:card-modder
+#        card:
+#          type: picture-entity
+#          entity: group.kuchnia_lampa
+#          name: Dining
+#          tap_action:
+#            action: toggle
+#          image: /local/lovelace/downstairs/dining-light_2.jpg
+#        style:
+#          border-radius: 20px
+#          border: solid 1px rgba(100,100,100,0.3)
+#          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: custom:card-modder
         card:
@@ -135,19 +135,6 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: picture-entity
-          entity: switch.choinka
-          name: Choinka
-          tap_action:
-            action: toggle
-          image: /local/lovelace/downstairs/xmas-lights_1.jpg
-        style:
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-
-      - type: custom:card-modder
-        card:
           type: picture-elements
           image: /local/lovelace/appliances/robovac_4.jpg
           elements:
@@ -172,7 +159,7 @@ cards:
               tap_action:
                 action: call-service
                 entity: vacuum.zmietekv2
-                service: vacuum.start_pause
+                service: vacuum.start
               style: {color: white, left: 40%, top: 81%, --paper-item-icon-color: rgb(115, 122, 130)}
     
             - type: icon

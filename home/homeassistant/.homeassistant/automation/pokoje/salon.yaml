@@ -24,57 +24,6 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Zalanie kuchni!!!
 
-- alias: 'Choinka off'
-  trigger:
-    platform: time
-    at: '02:00:00'
-  action:
-    - service: switch.turn_off
-      data:
-        entity_id: switch.choinka
-
-- alias: 'Choinka on'
-  trigger:
-    platform: time
-    at: '16:00:00'
-  condition:
-    - condition: state
-      entity_id: switch.choinka
-      state: 'off'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.choinka
-    - service: notify.mypushbullet
-      data_template:
-        title: "Salon choinka on"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Choinka on
-
-- alias: 'Choinka (weekend) on'
-  trigger:
-    platform: time
-    at: '07:32:00'
-  condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
-    - condition: state
-      entity_id: switch.choinka
-      state: 'off'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.choinka
-    - service: notify.mypushbullet
-      data_template:
-        title: "Salon choinka on"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Choinka on
-
 - alias: 'Listwa RTV notification'
   trigger:
     platform: time
@@ -226,3 +175,23 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Zmietek po {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minutach sprzątania {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 zatrzymał się z powodu błędu.
           {{ state_attr('vacuum.zmietekv2', 'error') }}
+
+- alias: 'Włącz ładowanie zmietka po sprzątaniu'
+  trigger:
+    - platform: state
+      entity_id: sensor.vacuum_status
+      to: 'Returning home'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.zmietek
+
+- alias: 'Wyłącz ładowanie zmietka przy 100% baterii'
+  trigger:
+    - platform: state
+      entity_id: sensor.vacuum_battery
+      to: '100'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.zmietek

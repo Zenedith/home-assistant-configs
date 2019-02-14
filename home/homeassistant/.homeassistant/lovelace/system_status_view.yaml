@@ -129,7 +129,7 @@ cards:
             - sensor.kamera_version
             - sensor.listwa_rtv_version
             - sensor.listwa_sypialnia_version
-            - sensor.choinka_version
+            - sensor.zmietek_version
             - sensor.rtv_jan_version
 #            - sensor.pralka_version
           check_script: tasmota_update_check
@@ -152,15 +152,6 @@ cards:
           entities:
             - sensor.holiday
             - input_select.presence_status
-#            - sensor.home_assistant_version
-#            - sensor.sonoff_firmware_version
-#            - sensor.swiatlo_pokoj_janka_version
-#            - sensor.swiatlo_sypialnia_version
-#            - sensor.kamera_version
-#            - sensor.listwa_rtv_version
-#            - sensor.listwa_sypialnia_version
-#            - sensor.choinka_version
-#            - sensor.rtv_jan_version
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

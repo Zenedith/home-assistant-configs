@@ -31,7 +31,7 @@
   state_topic: "zigbee2mqtt/sonoff1/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
-  name: "Choinka Version"
+  name: "Zmietek Version"
   state_topic: "zigbee2mqtt/sonoff4/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
