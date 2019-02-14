@@ -9,8 +9,6 @@ cards:
     voice: false
     options: true
     tabs: true
-    clock: notification
-    clock_format: 24
     disable: false
     background_image: true
     dir: /local/custom_ui/compact-custom-header/
