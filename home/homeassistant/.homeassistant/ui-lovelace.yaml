@@ -1,19 +1,19 @@
 resources:
-  - url: /local/custom_ui/tracker-card.js?v=0.3.0
+  - url: /local/custom_ui/tracker-card.js?v=0.3.2
     type: js
   - url: /local/custom_ui/tasmota-tracker-card.js?v=0.0.5
     type: js
   - url: /local/custom_ui/dark-sky-weather-card.js?v=4
     type: js
-  - url: /local/custom_ui/mini-media-player-bundle.js?v=1.0.0
+  - url: /local/custom_ui/mini-media-player-bundle.js?v=1.0.1
     type: module
-  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.2.3
+  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.2.4
     type: module
-  - url: /local/custom_ui/card-modder.js?v=ab8158
+  - url: /local/custom_ui/card-modder.js?v=201cad
     type: module
   - url: /local/custom_ui/card-tools.js?v=297fcc
     type: js
-  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=0.2.9
+  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=1.0.0b1
     type: js
   - url: /local/custom_ui/kiosk.js?v=1.0.0
     type: js
