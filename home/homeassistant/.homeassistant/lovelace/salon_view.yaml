@@ -20,7 +20,8 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
-          entity: sensor.kuchnia_temp_temperature
+          entities:
+            - sensor.kuchnia_temp_temperature
           height: 65
           line_width: 2
           font_size: 70
@@ -105,7 +106,8 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
-          entity: sensor.kuchnia_temp_humidity
+          entities:
+            - sensor.kuchnia_temp_humidity
           height: 65
           line_width: 2
           font_size: 70

@@ -4,69 +4,97 @@ background: center / cover no-repeat url("/local/lovelace/background-15.gif") fi
 cards:
   - type: vertical-stack
     cards:
-    - type: markdown
-      content: >
-        ## Indoors
-    - type: sensor
-      entity: sensor.korytarz_temp_temperature
-      graph: line
-    - type: sensor
-      entity: sensor.korytarz_temp_humidity
-      graph: line
-    - type: sensor
-      entity: sensor.kuchnia_temp_temperature
-      graph: line
-    - type: sensor
-      entity: sensor.kuchnia_temp_humidity
-      graph: line
-    - type: sensor
-      entity: sensor.kuchnia_temp_pressure
-      graph: line
+      - type: markdown
+        content: >
+          ## Indoors
+      - type: custom:card-modder
+        card:
+          type: custom:mini-graph-card
+          entities:
+            - sensor.korytarz_temp_temperature
+            - sensor.kuchnia_temp_temperature
+          height: 65
+          line_width: 2
+          font_size: 70
+          hours_to_show: 168
+          line_color: '#e74c3c'
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: custom:mini-graph-card
+          entities:
+            - sensor.korytarz_temp_humidity
+            - sensor.kuchnia_temp_humidity
+          height: 65
+          line_width: 2
+          font_size: 70
+          hours_to_show: 168
+          line_color: '#e74c3c'
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: sensor
+        entity: sensor.kuchnia_temp_pressure
+        graph: line
   - type: vertical-stack
     cards:
-    - type: markdown
-      content: >
-        ## Outdoors
-    - type: vertical-stack
-      cards:
-        - type: custom:card-modder
-          card:
-            type: custom:dark-sky-weather-card
-            entity_sun: sun.sun
-            entity_daily_summary: sensor.dark_sky_daily_summary
-            entity_current_conditions: sensor.dark_sky_icon
-            entity_humidity: sensor.dark_sky_humidity
-            entity_pressure: sensor.dark_sky_pressure
-            entity_temperature: sensor.dark_sky_temperature
-            entity_visibility: sensor.dark_sky_visibility
-            entity_wind_bearing: sensor.dark_sky_wind_bearing
-            entity_wind_speed: sensor.dark_sky_wind_speed
-            entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
-            entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
-            entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
-            entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
-            entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
-            entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1
-            entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2
-            entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3
-            entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4
-            entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5
-            entity_forecast_icon_1: sensor.dark_sky_icon_1
-            entity_forecast_icon_2: sensor.dark_sky_icon_2
-            entity_forecast_icon_3: sensor.dark_sky_icon_3
-            entity_forecast_icon_4: sensor.dark_sky_icon_4
-            entity_forecast_icon_5: sensor.dark_sky_icon_5
-          style:
-            background-image: url("/local/lovelace/cardbackK.png")
-            background-repeat: no-repeat
-            background-color: rgba(50,50,50,0.3)
-            background-size: 100% 400px
-            border-radius: 20px
-            border: solid 1px rgba(100,100,100,0.3)
-            color: "#999999"
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-    - type: weather-forecast
-      entity: weather.dark_sky
-    - type: iframe
-      url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
-      aspect_ratio: 140%
+      - type: markdown
+        content: >
+          ## Outdoors
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            card:
+              type: custom:dark-sky-weather-card
+              entity_sun: sun.sun
+              entity_daily_summary: sensor.dark_sky_daily_summary
+              entity_current_conditions: sensor.dark_sky_icon
+              entity_humidity: sensor.dark_sky_humidity
+              entity_pressure: sensor.dark_sky_pressure
+              entity_temperature: sensor.dark_sky_temperature
+              entity_visibility: sensor.dark_sky_visibility
+              entity_wind_bearing: sensor.dark_sky_wind_bearing
+              entity_wind_speed: sensor.dark_sky_wind_speed
+              entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
+              entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
+              entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
+              entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
+              entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
+              entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1
+              entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2
+              entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3
+              entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4
+              entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5
+              entity_forecast_icon_1: sensor.dark_sky_icon_1
+              entity_forecast_icon_2: sensor.dark_sky_icon_2
+              entity_forecast_icon_3: sensor.dark_sky_icon_3
+              entity_forecast_icon_4: sensor.dark_sky_icon_4
+              entity_forecast_icon_5: sensor.dark_sky_icon_5
+            style:
+              background-image: url("/local/lovelace/cardbackK.png")
+              background-repeat: no-repeat
+              background-color: rgba(50,50,50,0.3)
+              background-size: 100% 400px
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              color: "#999999"
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+      - type: weather-forecast
+        entity: weather.dark_sky
+      - type: iframe
+        url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
+        aspect_ratio: 140%
