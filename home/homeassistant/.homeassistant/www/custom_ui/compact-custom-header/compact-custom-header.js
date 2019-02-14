@@ -1,4 +1,9 @@
-import "./compact-custom-header-editor.js?v=1.0.0b2";
+//import "./compact-custom-header-editor.js?v=1.0.0b2";
+
+// Insert the main script in head, run, remove.
+const script = document.createElement('script');
+script.src = card_dir + 'compact-custom-header-editor.js?v=1.0.0b2';
+document.head.appendChild(script).parentNode.removeChild(script);
 
 const LitElement = Object.getPrototypeOf(
   customElements.get("ha-panel-lovelace")
@@ -194,7 +199,7 @@ if (!customElements.get("compact-custom-header")) {
       const buttons = this.getButtonElements(root);
       const tabContainer = root.querySelector("paper-tabs");
       const tabs = Array.from(tabContainer.querySelectorAll("paper-tab"));
-      const hidden_tabs = this.cchConfig.hide_tabs 
+      const hidden_tabs = this.cchConfig.hide_tabs
         ? JSON.parse("[" + this.cchConfig.hide_tabs + "]")
         : [];
       if (!this.editMode) this.hideCard();
