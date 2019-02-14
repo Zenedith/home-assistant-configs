@@ -27,17 +27,17 @@ sensor.korytarz_motion_battery:
 binary_sensor.korytarz_motion_occupancy:
   friendly_name: Ruch
 sensor.korytarz_temp_temperature:
-  friendly_name: Temperatura
+  friendly_name: Korytarz
 sensor.korytarz_temp_humidity:
-  friendly_name: Wilgotność
+  friendly_name: Korytarz
 sensor.korytarz_temp_pressure:
-  friendly_name: Ciśnienie
+  friendly_name: Korytarz
 sensor.kuchnia_temp_temperature:
-  friendly_name: Temperatura
+  friendly_name: Kuchnia
 sensor.kuchnia_temp_humidity:
-  friendly_name: Wilgotność
+  friendly_name: Kuchnia
 sensor.kuchnia_temp_pressure:
-  friendly_name: Ciśnienie
+  friendly_name: Kuchnia
 binary_sensor.drzwi_wejsciowe_contact:
   friendly_name: Drzwi
 sensor.drzwi_wejsciowe_contact_battery:
