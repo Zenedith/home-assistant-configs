@@ -3,15 +3,14 @@ icon: mdi:sofa
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: custom:compact-custom-header
+    main_config: true
+    menu: overflow
+    voice: hide
     header: true
-    menu: true
-    notification: true
-    voice: false
-    options: true
-    tabs: true
+    notification: overflow
+    options: show
     disable: false
     background_image: true
-    dir: /local/custom_ui/compact-custom-header/
 
   - type: vertical-stack
     cards:
