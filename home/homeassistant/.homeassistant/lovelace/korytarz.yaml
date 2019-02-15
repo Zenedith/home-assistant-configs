@@ -2,7 +2,7 @@ title: Korytarz
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 panel: true
 cards:
-  - type: custom:layout-card
+  - type: horizontal-stack
     cards:
       - type: vertical-stack
         cards:
