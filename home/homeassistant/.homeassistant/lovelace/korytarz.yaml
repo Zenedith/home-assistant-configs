@@ -14,12 +14,12 @@ cards:
               - entity: binary_sensor.drzwi_wejsciowe_contact
               - entity: binary_sensor.korytarz_motion_occupancy
               - entity: sensor.korytarz_motion_illuminance
-      - type: vertical-stack
-        cards:
           - type: entities
             show_header_toggle: false
             entities:
               - entity: input_boolean.moonlight_korytarz
+      - type: vertical-stack
+        cards:
           - type: markdown
             content: >
               ## Lampy

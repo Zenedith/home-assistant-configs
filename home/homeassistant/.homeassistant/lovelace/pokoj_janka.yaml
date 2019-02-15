@@ -30,6 +30,7 @@ cards:
         cards:
           - type: thermostat
             entity: climate.pokoj_janka
+            name: ""
           - type: entities
             title: Roleta
             show_header_toggle: false

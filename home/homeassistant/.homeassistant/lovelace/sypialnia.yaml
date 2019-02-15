@@ -36,6 +36,7 @@ cards:
         cards:
           - type: thermostat
             entity: climate.sypialnia
+            name: ""
           - type: entities
             show_header_toggle: false
             title: Roleta
