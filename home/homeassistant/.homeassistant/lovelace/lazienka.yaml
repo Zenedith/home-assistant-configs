@@ -20,11 +20,11 @@ cards:
               - entity: binary_sensor.lazienka_leak_water_leak
           - type: light
             entity: light.yeelight_ceiling_7811dcab68e0
-          - type: entities
-            title: Pralka
-            show_header_toggle: false
-            entities:
-              - entity: switch.pralka
+#          - type: entities
+#            title: Pralka
+#            show_header_toggle: false
+#            entities:
+#              - entity: switch.pralka
       - type: vertical-stack
         cards:
           - type: markdown
