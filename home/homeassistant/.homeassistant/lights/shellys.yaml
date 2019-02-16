@@ -5,7 +5,7 @@
   availability_topic: "shellies/shellyswitch-55A0C8/online"
   payload_available: "true"
   payload_not_available: "false"
-  qos: 1
+  qos: 2
   payload_on: "on"
   payload_off: "off"
   retain: false
@@ -16,7 +16,7 @@
   availability_topic: "shellies/shellyswitch-55A0C8/online"
   payload_available: "true"
   payload_not_available: "false"
-  qos: 1
+  qos: 2
   payload_on: "on"
   payload_off: "off"
   retain: false
