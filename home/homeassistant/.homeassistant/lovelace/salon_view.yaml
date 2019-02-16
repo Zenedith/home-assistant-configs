@@ -17,7 +17,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: switch.swiatlo_kuchnia_szafki
+          entity: light.swiatlo_kuchnia_szafki
           name: Lights
           tap_action:
             action: toggle
@@ -30,7 +30,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: switch.swiatlo_kuchnia_stol
+          entity: light.swiatlo_kuchnia_stol
           name: Dining
           tap_action:
             action: toggle
