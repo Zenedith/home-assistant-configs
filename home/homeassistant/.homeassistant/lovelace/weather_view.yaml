@@ -83,8 +83,18 @@ cards:
               border-radius: 20px
               border: solid 1px rgba(100,100,100,0.3)
               box-shadow: 3px 3px rgba(0,0,0,0.4)
-          - type: weather-forecast
-            entity: weather.dark_sky
+          - type: custom:card-modder
+            card:
+              type: weather-forecast
+              entity: weather.dark_sky
+            style:
+              background-image: url("/local/lovelace/cardbackK.png")
+              background-repeat: no-repeat
+              background-color: rgba(50,50,50,0.3)
+              background-size: 100% 200px
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: vertical-stack
         cards:
@@ -106,6 +116,16 @@ cards:
               border-radius: 20px
               border: solid 1px rgba(100,100,100,0.3)
               box-shadow: 3px 3px rgba(0,0,0,0.4)
-          - type: iframe
-            url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
-            aspect_ratio: 140%
+          - type: custom:card-modder
+            card:
+              type: iframe
+              url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
+              aspect_ratio: 140%
+            style:
+              background-image: url("/local/lovelace/cardbackK.png")
+              background-repeat: no-repeat
+              background-color: rgba(50,50,50,0.3)
+              background-size: 100% 200px
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              box-shadow: 3px 3px rgba(0,0,0,0.4)

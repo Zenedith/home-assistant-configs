@@ -21,9 +21,6 @@ cards:
               - entity: input_boolean.moonlight_korytarz
       - type: vertical-stack
         cards:
-          - type: markdown
-            content: >
-              ## Lampy
           - type: light
             entity: light.yeelight_ceiling4_7c49ebb70c4a
           - type: light

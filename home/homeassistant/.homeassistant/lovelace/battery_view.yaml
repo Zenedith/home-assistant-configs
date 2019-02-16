@@ -1,11 +1,9 @@
-title: Other
+title: Battery Levels
+icon: mdi:battery
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: vertical-stack
     cards:
-      - type: markdown
-        content: >
-          ## Battery Levels
       - type: gauge
         unit: '%'
         entity: sensor.climate_pokoj_janka_batt

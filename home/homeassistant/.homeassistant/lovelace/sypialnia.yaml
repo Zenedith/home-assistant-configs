@@ -21,9 +21,6 @@ cards:
               - entity: input_boolean.sypialnia_korki
       - type: vertical-stack
         cards:
-          - type: markdown
-            content: >
-              ## Lampy
           - type: light
             entity: light.swiatlo_sypialnia
           - type: conditional
@@ -37,7 +34,6 @@ cards:
         cards:
           - type: thermostat
             entity: climate.sypialnia
-            name: ""
           - type: entities
             show_header_toggle: false
             title: Roleta

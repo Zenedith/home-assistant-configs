@@ -29,3 +29,4 @@ views:
   - !include lovelace/security_view.yaml
   - !include lovelace/automation_view.yaml
   - !include lovelace/system_status_view.yaml
+  - !include lovelace/battery_view.yaml
