@@ -45,8 +45,6 @@ cards:
                   style: {color: white, left: 50%, top: 85%}
                 - type: state-label
                   entity: sensor.asuswrt_download
-                  unit: "Gb"
-                  unit_of_measurement: "Gb"
                   style: {color: white, left: 50%, top: 93%, font-size: 90%, font-weight: bold}
 
                 - type: state-icon
@@ -54,8 +52,6 @@ cards:
                   style: {color: white, left: 75%, top: 85%}
                 - type: state-label
                   entity: sensor.asuswrt_upload
-                  unit: "Gb"
-                  unit_of_measurement: "Gb"
                   style: {color: white, left: 75%, top: 93%, font-size: 90%, font-weight: bold}
             style:
               border-radius: 20px
