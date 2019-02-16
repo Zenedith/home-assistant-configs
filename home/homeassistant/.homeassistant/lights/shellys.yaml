@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: "Swiatło TODO1"
+  name: "Światło Kuchnia Stół"
   state_topic: "shellies/shellyswitch-55A0C8/relay/0"
   command_topic: "shellies/shellyswitch-55A0C8/relay/0/command"
   availability_topic: "shellies/shellyswitch-55A0C8/online"
@@ -10,7 +10,18 @@
   payload_off: "off"
   retain: false
 - platform: mqtt
-  name: "Swiatło Toaleta"
+  name: "Światło Kuchnia Szafki"
+  state_topic: "shellies/shellyswitch-55A0C8/relay/1"
+  command_topic: "shellies/shellyswitch-55A0C8/relay/1/command"
+  availability_topic: "shellies/shellyswitch-55A0C8/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Światło Toaleta"
   state_topic: "shellies/shelly1-25A3EB/relay/0"
   command_topic: "shellies/shelly1-25A3EB/relay/0/command"
   availability_topic: "shellies/shelly1-25A3EB/online"
