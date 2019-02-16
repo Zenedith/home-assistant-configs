@@ -31,7 +31,6 @@ cards:
             card:
               type: picture-elements
               image: /local/lovelace/settings/isp_4.png
-              #title: Internet
               elements:
                 - type: state-icon
                   entity: sensor.speedtest_ping
@@ -39,22 +38,21 @@ cards:
 
                 - type: state-label
                   entity: sensor.speedtest_ping
-                  prefix: 'Internet : '
-                  style: {color: white, left: 20%, top: 93%, font-size: 115%, font-weight: bold}
+                  style: {color: white, left: 20%, top: 93%, font-size: 90%, font-weight: bold}
 
                 - type: state-icon
                   entity: sensor.asuswrt_download
                   style: {color: white, left: 50%, top: 85%}
                 - type: state-label
                   entity: sensor.asuswrt_download
-                  style: {color: white, left: 50%, top: 93%, font-size: 115%, font-weight: bold}
+                  style: {color: white, left: 50%, top: 93%, font-size: 90%, font-weight: bold}
 
                 - type: state-icon
                   entity: sensor.asuswrt_upload
                   style: {color: white, left: 75%, top: 85%}
                 - type: state-label
                   entity: sensor.asuswrt_upload
-                  style: {color: white, left: 75%, top: 93%, font-size: 115%, font-weight: bold}
+                  style: {color: white, left: 75%, top: 93%, font-size: 90%, font-weight: bold}
             style:
               border-radius: 20px
               border: solid 1px rgba(100,100,100,0.3)
