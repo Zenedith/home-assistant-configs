@@ -36,6 +36,8 @@ class CardModder extends cardTools.litElement() {
       this._cardMod();
 
     this._config = config;
+
+    window.addEventListener("location-changed", () => this.hass = this._hass);
   }
 
   createRenderRoot() {
@@ -67,6 +69,10 @@ class CardModder extends cardTools.litElement() {
         styles = root.querySelector("style");
       if(root.querySelector("ha-card")) {
         target = root.querySelector("ha-card");
+        continue;
+      }
+      if(root.querySelector("vertical-stack-in-card")) {
+        target = root.querySelector("vertical-stack-in-card");
         continue;
       }
       if(root.card) {

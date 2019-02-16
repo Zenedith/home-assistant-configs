@@ -9,11 +9,11 @@ resources:
     type: module
   - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.2.4
     type: module
-  - url: /local/custom_ui/card-modder.js?v=201cad
+  - url: /local/custom_ui/card-modder.js?v=f3d96f
     type: module
-  - url: /local/custom_ui/card-tools.js?v=297fcc
+  - url: /local/custom_ui/card-tools.js?v=97d985
     type: js
-  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=0.99.0b1
+  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=1.0.0b4
     type: module
   - url: /local/custom_ui/kiosk.js?v=1.0.0
     type: js
