@@ -21,7 +21,8 @@ cards:
           name: Lights
           tap_action:
             action: toggle
-          image: /local/lovelace/downstairs/living-room-lights_1.jpg
+#          image: /local/lovelace/downstairs/living-room-lights_1.jpg
+          image: /local/lovelace/salon/salon800.jpg
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
@@ -34,7 +35,8 @@ cards:
           name: Dining
           tap_action:
             action: toggle
-          image: /local/lovelace/downstairs/dining-light_2.jpg
+#          image: /local/lovelace/downstairs/dining-light_2.jpg
+          image: /local/lovelace/salon/dining800.jpg
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
@@ -47,7 +49,8 @@ cards:
           name: Kitchen
           tap_action:
             action: toggle
-          image: /local/lovelace/downstairs/kitchen-light_2.jpg
+#          image: /local/lovelace/downstairs/kitchen-light_2.jpg
+          image: /local/lovelace/salon/kuchnia800.jpg
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
