@@ -1,10 +1,4 @@
 - platform: rest
-  resource: https://pypi.org/pypi/homeassistant/json
-  name: Home assistant version
-  value_template: '{{ value_json.info.version }}'
-  scan_interval: 3600
-
-- platform: rest
   scan_interval: 10
   name: Sonoff Firmware Version
   resource: https://api.github.com/repos/arendst/Sonoff-Tasmota/releases/latest

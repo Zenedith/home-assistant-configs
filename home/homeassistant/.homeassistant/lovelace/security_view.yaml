@@ -16,7 +16,6 @@ cards:
                   elements:
                     - type: state-label
                       entity: device_tracker.80b03dcda5eb
-                      prefix: 'Zene -- '
                       style: {color: white, left: 30%, top: 90%, font-size: 90%}
                 style:
                   border-radius: 20px
@@ -31,7 +30,6 @@ cards:
                   elements:
                     - type: state-label
                       entity: device_tracker.e49a79e25678
-                      prefix: 'Kate -- '
                       style: {color: white, left: 27%, top: 89%, font-size: 90%}
                 style:
                   border-radius: 20px

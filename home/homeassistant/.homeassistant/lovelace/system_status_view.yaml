@@ -45,6 +45,7 @@ cards:
                   style: {color: white, left: 50%, top: 85%}
                 - type: state-label
                   entity: sensor.asuswrt_download
+                  unit: 'Gb'
                   style: {color: white, left: 50%, top: 93%, font-size: 90%, font-weight: bold}
 
                 - type: state-icon
@@ -52,6 +53,7 @@ cards:
                   style: {color: white, left: 75%, top: 85%}
                 - type: state-label
                   entity: sensor.asuswrt_upload
+                  unit: 'Gb'
                   style: {color: white, left: 75%, top: 93%, font-size: 90%, font-weight: bold}
             style:
               border-radius: 20px
@@ -76,7 +78,6 @@ cards:
                   style: {color: white, left: 29%, top: 84%}
                 - type: state-label
                   entity: sensor.disk_use_percent_home
-                  prefix: 'Disk '
                   style: {color: white, left: 20%, top: 93%, font-size: 90%, font-weight: bold}
 
                 - type: state-icon
