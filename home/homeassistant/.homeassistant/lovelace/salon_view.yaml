@@ -17,7 +17,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.swiatlo_kuchnia_szafki
+          entity: group.salon_lampy
           name: Lights
           tap_action:
             action: toggle
@@ -43,7 +43,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: group.kuchnia_lampa
+          entity: light.swiatlo_kuchnia_szafki
           name: Kitchen
           tap_action:
             action: toggle
