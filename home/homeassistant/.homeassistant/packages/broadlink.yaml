@@ -20,6 +20,10 @@ input_boolean:
     name: Denon
     icon: mdi:surround-sound
 
+  broadlink_tv_receiver:
+    name: Tv
+    icon: mdi:television
+
 #input_select:
 #  broadlink_denon_input:
 #    name: Denon Input
@@ -50,6 +54,16 @@ automation:
         data:
           packet:
             - "JgCIAAsXCjwJGAsYChkKGAs6CxgKGAsYCjsKOwo7ChgLGAoABaALGAo7CxcLGAoYCzoMFws6DDkMOQwXChgLGAo7CzoLAAWfCxcLOgsYCxcLGAsYCjoLGAsYChgLOgs6CzoLGAsXCwAFnwwXCzoMFwoYCxgKOwsXCzoLOgs6CxgLGAoYCzoLOgsADQU="
+
+  - alias: Tv Receiver
+    trigger:
+      - platform: state
+        entity_id: input_boolean.broadlink_tv_receiver
+    action:
+      - service: switch.broadlink_send_packet_192_168_1_163
+        data:
+          packet:
+            - "JgBwAFESKRIVEikSFhIpEhUSFRIpEhYSFRIWERYAA1BQEikSFhEqERYSKRIVEhYSKRIVEhUSFhIVAANQURIpEhUSKRIWEikSFRIVEikSFhIVEhUSFgADT1ASKRIWEikSFRIpEhUSFhIpEhUSFRIWEhUADQUAAAAAAAAAAA=="
 
 #  - alias: Select Denon Input TV
 #    trigger:

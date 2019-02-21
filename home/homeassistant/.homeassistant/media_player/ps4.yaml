@@ -6,5 +6,4 @@
   filename: '/home/homeassistant/.homeassistant/.ps4-wake.credentials.json'
   credentials_filename: '/home/homeassistant/.homeassistant/.ps4-wake.credentials.json'
   games_filename: '/home/homeassistant/.homeassistant/ps4/ps4-games.json'
-  imagemap_json: '/home/homeassistant/.homeassistant/ps4/games.json'
   local_store: ''
