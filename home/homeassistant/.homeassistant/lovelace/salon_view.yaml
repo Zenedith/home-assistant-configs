@@ -246,6 +246,7 @@ cards:
           type: entities
           show_header_toggle: false
           entities:
+            - input_boolean.broadlink_tv_receiver
             - input_boolean.broadlink_denon_receiver
             - switch.denon_volume
         style:

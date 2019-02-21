@@ -125,3 +125,5 @@ sensor.asuswrt_download:
 sensor.asuswrt_upload:
   friendly_name: Upload
   icon: mdi:arrow-up-bold
+switch.denon_volume:
+  icon: mdi:speaker
