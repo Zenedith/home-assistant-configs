@@ -300,6 +300,26 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-media-player
+          entity: media_player.xbox_one_poz
+          artwork: cover
+          power_color: true
+          show_source: true
+          show_progress: false
+          group: true
+          #background: /local/lovelace/downstairs/evening-tv_3.jpg
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100%
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+      - type: custom:card-modder
+        card:
+          type: custom:mini-media-player
           entity: media_player.tv
           artwork: cover
           power_color: true

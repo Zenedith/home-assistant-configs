@@ -23,6 +23,11 @@ from homeassistant.components.media_player.const import (
     SUPPORT_VOLUME_STEP, SUPPORT_VOLUME_MUTE, SUPPORT_PLAY,
     MEDIA_TYPE_MUSIC, MEDIA_TYPE_VIDEO, MEDIA_TYPE_TVSHOW, MEDIA_TYPE_CHANNEL)
 
+from homeassistant.const import (
+    STATE_IDLE, STATE_OFF, STATE_PAUSED, STATE_PLAYING, STATE_UNKNOWN, STATE_ON,
+    CONF_HOST, CONF_PORT, CONF_SSL, CONF_NAME, CONF_DEVICE, CONF_AUTHENTICATION,
+    CONF_IP_ADDRESS)
+
 import homeassistant.util.dt as dt_util
 import homeassistant.helpers.config_validation as cv
 

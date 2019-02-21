@@ -65,3 +65,4 @@ log*.txt
 secrets.yaml
 \.*
 source.js
+/custom_components/xboxone/tokens.json
