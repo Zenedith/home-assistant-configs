@@ -512,3 +512,19 @@ android_a1f6fccb13ac9f1d:
   name: android-a1f6fccb13ac9f1d
   picture:
   track: false
+
+android_4944093bed6ea74:
+  hide_if_away: true
+  icon:
+  mac: 08:60:6E:9F:6D:FF
+  name: android-4944093bed6ea74
+  picture:
+  track: false
+
+20_4e_7f_77_f9_ba:
+  hide_if_away: true
+  icon:
+  mac: 20:4E:7F:77:F9:BA
+  name: 20 4e 7f 77 f9 ba
+  picture:
+  track: false

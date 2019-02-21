@@ -3,6 +3,8 @@ include_device_information: true
 mqtt:
   base_topic: zigbee2mqtt
   server: 'mqtt://192.168.1.162:1883'
+  user: zigbee2mqtt
+  password: matekzene
 serial:
   port: /dev/ttyAMA0
   disable_led: true
