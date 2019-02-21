@@ -8,21 +8,21 @@ switch:
     switches:
       denon_volume:
         friendly_name: "Denon volume"
-        command_on: "JgAeAwkaCT0IGgkaCRoIOwsaCRoJGgg9CT0JPQg9CRoIGwgAA3kIAAJFCRoIPQkaCRoJGggbCD0JPQg9CRoIGwgbCBoJPQg9CgAFGwgAAS0IGwg9CRoIGwgaCT0IGwgbCBoJPQg9CT0IPggaCRoJAAXGCBoJPQgbCBsIGgkaCT0IPQk9CBsIGgkaCRoIPQk9CAAGUQkaCT0IGgkaCRoIPggaCRoJGgg9CT0IPgg9CRoIGwgABcYJGgg9CRoJGggbCBoJPQg+CD0JGggbCBoJGgk9CD0JAAZRCBsIPQkaCBsIGwg9CRoIGwgaCT0IPQk9CD4IGgkaCQAFxggaCT0IGwgaCRoJGgg+CD0JPQgaCRoJGggbCD0JPQgAAZcJAASxCRoIPggaCRoJGgg9CRoJGggbCD0JPQg9CT0IGwgbCAAFxgoZCD0JGgkaCBsIGwg9CT0IPQkaCBsIGgkaCT0IPQkABlEIGwg9CRoIGwgaCT0IGwgbCBoJPQg9CT0IPggaCRoJAAXFCRoJPQgbCBoJGgkaCD0JPQg+CBoJGgkaCBsIPQk9CAAGUQkaCT0IGgkaCRoIPggaCRoJGgg9CT0IPgg9CRoIGwhPCQAFbggbCD0JGgkaCBsIGgk9CD4IPQkaCBsIGgkaCT0IPQkABlEIGgk9CBsIGwgaCT0IGwgaCRoJPQg9CT0IPQkaCRoIAAXHCBoJPQgbCBoJGgkaCD4IPQk9CBoJGgkaCBsIPQk9CAAGUQkaCD4IGgkaCRoIPggaCRoIGwg9CT0IPQk9CBsIGwgABcYIGwg9CRoIGwgbCBoJPQg9CT0JGggbCBoJGgk4DT0JAAZRCBsIPQkaCBsIGgk9CBsIGwgaCT0IPQk9CD0JGgkaCQAFxQkaCT0IGwgaCRoJGgg+CD0IPggaCRoJGggbCD0JPQoABk8JGgg9CRoJGggbCD0JGgkaCBsIPQk9CD0JPQgbCBoJAAXGCBoJPQkaCRoIGwgaCT0IPgg9CRoIGwgaCRoJPQg9CQAGMgkWCBsIPQkaCBsIGgk9CBsIGwgaCT0IPQk9CD4IGgkaCQANBQAAAAAAAAAAAAA="
-        command_off: "JgC0AggAC50HAAFDCQACiQkAAokJAAYOCRoJPQgbCBoJGgkaCD4IGgkaCD4IPQk9CD0JGggbCAAFxgkaCD4IGgkaCRoIPQkaCT0IPQkaCRoIGwgaCT0IPggABlEJGgg9CRoJGggbCBsIPQgbCBsIPQk9CD0JPQgbCBoJAAXGCBsIPQkaCRoIGwg9CRoIPgg9CBsIGwgaCRoJPQg9CQAGUQgbCD0JGggbCBoJGgk9CBsIGgk9CD0JPQg+CBoJGgkABBcJAAGlCRoJPQgbCBoJGgk9CBsIPQg+CBoJGgkaCBsIPQk9CAAFngirCRoJPQgbCBoJGgkaCD0JGgkaCD4IPQk9CD0JGggbCAAFxgkaCD4IGgkaCRoIPQkaCT0IPQkaCRoIGwgaCT0IPggAAe0KAARaCRoIPQkaCRoIGwgbCD0IGwgbCD0JPQg9CT0IGwgaCQAFxggbCD0JGggbCBsIPQkaCD0JPQgbCBsIGgkaCT0IPQkABlEIGwg9CBsIGwgaCRoJPQgbCBoJPQg9CT0IPggaCRoJAALyBwACzAkaCT0IGwgaCRoJPQgbCD0IPggaCRoJGggbCD0JPQgABlEJGgk9CBsIGgkaCRoIPQkaCRoIPgg9CT0IPQkaCBsIAASCCgABOgkaCD4IGgkaCRoIPQkaCT0IPQkaCBsIGwgaCT0IPggABlEIGwg9CRoJGggbCBoJPQgbCBsIPQk9CD0JPQgbCBoJAANECQACeQgbCD0JGggbCBsIPQkaCD0JPQgbCBsIGgkaCT0IPQkABPcJAAFRCBsIPQgbCBsIGgkaCToLGwgaCT0IPQk9CD4IGgkaCAAFxgsYCT0IGwgaCRoJPQgaCT0IPggaCRoJGggbCD0JPQgABlEJGgg+CBoJGgkaCBsIPQkaCRoIPQk9CD0JPQgbCBsIAA0FAAAAAA=="
+        command_on: "JgBUAFASFhIpEhUSFhIpEhUSFRIpEhYSFRIVEhYAA2NQEhYSKRIVEhUSKRIWEhUSKRIWERYSFRIWAANkUBIWEikSFRIVEikSFhIVEikSFRIWEhUSFQANBQAAAAA="
+        command_off: "JgBwAFESKRIpEhUSFRIpEhYSFRIpEhYRFhIVEhYAA09REikSKRIVEhUSKRIWEhUSKRIWERYSFRIWAANPURIpEikSFRIWEikSFRIVEikSFhIVEhYRFgADUVASKRIpEhYRFhIpEhUSFhIpEhUSFRIWEhUADQUAAAAAAAAAAA=="
 
 input_boolean:
   broadlink_denon_receiver:
     name: Denon
     icon: mdi:surround-sound
 
-input_select:
-  broadlink_denon_input:
-    name: Denon Input
-    initial: TV
-    options:
-      - 'TV'
-      - 'Tuner'
+#input_select:
+#  broadlink_denon_input:
+#    name: Denon Input
+#    initial: TV
+#    options:
+#      - 'TV'
+#      - 'Tuner'
 
 automation:
   - alias: Denon Receiver On
@@ -47,24 +47,24 @@ automation:
           packet:
             - "JgCIAAsXCjwJGAsYChkKGAs6CxgKGAsYCjsKOwo7ChgLGAoABaALGAo7CxcLGAoYCzoMFws6DDkMOQwXChgLGAo7CzoLAAWfCxcLOgsYCxcLGAsYCjoLGAsYChgLOgs6CzoLGAsXCwAFnwwXCzoMFwoYCxgKOwsXCzoLOgs6CxgLGAoYCzoLOgsADQU="
 
-  - alias: Select Denon Input TV
-    trigger:
-      - platform: state
-        entity_id: input_select.broadlink_denon_input
-        to: 'TV'
-    action:
-      - service: switch.broadlink_send_packet_192_168_1_163
-        data:
-          packet:
-            - "JgB8AAkaCV4IGgs6CF8IGgs6CjsGPwgaCQAFxAkcCDwKOwgaC34LXAk8Cl0IGgc+CDwLAAWiCRkHPggaCTwJGgleCTwIGgmACBoHHAgABccJPAYcCBsIXwg8Cl0MfQgbC1wIPAYABacKXQgaBxwHGwo7CD0IPQhfCDwJPAgADQUAAAAAAAAAAAAAAAA="
-
-  - alias: Select Denon Input Tuner
-    trigger:
-      - platform: state
-        entity_id: input_select.broadlink_denon_input
-        to: 'Tuner'
-    action:
-      - service: switch.broadlink_send_packet_192_168_1_163
-        data:
-          packet:
-            - "JgCAAAgaCV4JGghfCF8IGgg9CDwKOwgaCQAFxgoZCDwKOwkaCV4JXgg8CToJGwgbBj4HPggABaQJGgg9CBoIPQg7CV8IPQgaCYEIGggbBgAFyQg8CBsGHAg9CDwJXgk8Bj8IGghfCDwIAAWlCl0KGAgbBhwJXgk8CD0IXwg8CjsIAA0FAAAAAAAAAAA="
+#  - alias: Select Denon Input TV
+#    trigger:
+#      - platform: state
+#        entity_id: input_select.broadlink_denon_input
+#        to: 'TV'
+#    action:
+#      - service: switch.broadlink_send_packet_192_168_1_163
+#        data:
+#          packet:
+#            - "JgB8AAkaCV4IGgs6CF8IGgs6CjsGPwgaCQAFxAkcCDwKOwgaC34LXAk8Cl0IGgc+CDwLAAWiCRkHPggaCTwJGgleCTwIGgmACBoHHAgABccJPAYcCBsIXwg8Cl0MfQgbC1wIPAYABacKXQgaBxwHGwo7CD0IPQhfCDwJPAgADQUAAAAAAAAAAAAAAAA="
+#
+#  - alias: Select Denon Input Tuner
+#    trigger:
+#      - platform: state
+#        entity_id: input_select.broadlink_denon_input
+#        to: 'Tuner'
+#    action:
+#      - service: switch.broadlink_send_packet_192_168_1_163
+#        data:
+#          packet:
+#            - "JgCAAAgaCV4JGghfCF8IGgg9CDwKOwgaCQAFxgoZCDwKOwkaCV4JXgg8CToJGwgbBj4HPggABaQJGgg9CBoIPQg7CV8IPQgaCYEIGggbBgAFyQg8CBsGHAg9CDwJXgk8Bj8IGghfCDwIAAWlCl0KGAgbBhwJXgk8CD0IXwg8CjsIAA0FAAAAAAAAAAA="
