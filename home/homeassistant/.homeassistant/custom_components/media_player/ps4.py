@@ -9,23 +9,19 @@ import voluptuous as vol
 import homeassistant.util as util
 from homeassistant.components.media_player import (
     PLATFORM_SCHEMA,
-    MEDIA_TYPE_CHANNEL,
-    SUPPORT_TURN_ON,
+    MediaPlayerDevice,
+    ENTITY_IMAGE_URL
+)
+from homeassistant.components.media_player.const import (
+    MEDIA_TYPE_CHANNEL, SUPPORT_TURN_ON,
     SUPPORT_TURN_OFF,
     SUPPORT_STOP,
-    SUPPORT_SELECT_SOURCE,
-    ENTITY_IMAGE_URL,
-    MediaPlayerDevice
+    SUPPORT_SELECT_SOURCE
 )
 from homeassistant.const import (
-    STATE_IDLE,
+    CONF_FILENAME, CONF_HOST, CONF_NAME, STATE_IDLE, STATE_OFF, STATE_PLAYING,
     STATE_UNKNOWN,
-    STATE_OFF,
-    STATE_PLAYING,
-    CONF_NAME,
-    CONF_HOST
 )
-
 from homeassistant.helpers import config_validation as cv
 from homeassistant.util.json import load_json, save_json
 
@@ -40,7 +36,7 @@ _CONFIGURING = {}
 _LOGGER = logging.getLogger(__name__)
 
 SUPPORT_PS4 = SUPPORT_TURN_OFF | SUPPORT_TURN_ON | \
-    SUPPORT_STOP | SUPPORT_SELECT_SOURCE
+              SUPPORT_STOP | SUPPORT_SELECT_SOURCE
 
 DEFAULT_NAME = 'Playstation 4'
 ICON = 'mdi:playstation'
@@ -223,7 +219,7 @@ class PS4Device(MediaPlayerDevice):
             if data.get('running-app-titleid'):
                 if data.get('running-app-titleid') not in self._games.keys():
                     game = {data.get('running-app-titleid'):
-                            data.get('running-app-name')}
+                                data.get('running-app-name')}
                     self._games.update(game)
                     self._save_games()
 
@@ -310,8 +306,8 @@ class PS4Device(MediaPlayerDevice):
             if 'attributes' in item:
                 game = item['attributes']
                 if 'game-content-type' in game and \
-                   game['game-content-type'] in \
-                   ['App', 'Game', 'Full Game', 'PSN Game']:
+                        game['game-content-type'] in \
+                        ['App', 'Game', 'Full Game', 'PSN Game']:
                     if 'thumbnail-url-base' in game:
                         _LOGGER.debug("Found cover art for %s, %s %s",
                                       self._media_content_id,
@@ -337,7 +333,7 @@ class PS4Device(MediaPlayerDevice):
             return None
 
         filename = "/local/%s/%s.jpg" % \
-            (self._local_store, self._media_content_id)
+                   (self._local_store, self._media_content_id)
         return filename
 
     @property
