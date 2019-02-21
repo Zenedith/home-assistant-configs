@@ -8,13 +8,24 @@ import voluptuous as vol
 
 import homeassistant.util as util
 from homeassistant.components.media_player import (
-    ENTITY_IMAGE_URL, MEDIA_TYPE_CHANNEL, MediaPlayerDevice, PLATFORM_SCHEMA,
-    SUPPORT_SELECT_SOURCE, SUPPORT_STOP, SUPPORT_TURN_OFF, SUPPORT_TURN_ON,
+    PLATFORM_SCHEMA,
+    MEDIA_TYPE_CHANNEL,
+    SUPPORT_TURN_ON,
+    SUPPORT_TURN_OFF,
+    SUPPORT_STOP,
+    SUPPORT_SELECT_SOURCE,
+    ENTITY_IMAGE_URL,
+    MediaPlayerDevice
 )
 from homeassistant.const import (
-    CONF_FILENAME, CONF_HOST, CONF_NAME, STATE_IDLE, STATE_OFF, STATE_PLAYING,
+    STATE_IDLE,
     STATE_UNKNOWN,
+    STATE_OFF,
+    STATE_PLAYING,
+    CONF_NAME,
+    CONF_HOST
 )
+
 from homeassistant.helpers import config_validation as cv
 from homeassistant.util.json import load_json, save_json
 
