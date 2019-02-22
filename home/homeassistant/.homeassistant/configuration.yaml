@@ -171,12 +171,15 @@ input_select: !include_dir_merge_named input_selects
 weather: !include weather/darksky.yaml
 light: !include_dir_merge_list lights
 media_player: !include_dir_merge_list media_player
+person: !include person/person.yaml
 
 #shell_command:
 #  rename_snapshots_dafang: 'bash /home/homeassistant/.homeassistant/bash_scripts/renameSnapshotsDafang.sh'
 
-media_extractor:
-  default_query: best
+#media_extractor:
+#  default_query: best
+
+default_config:
 
 mqtt:
   discovery: true
@@ -223,6 +226,10 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
       hide_if_away: true
+  - platform: ping
+    hosts:
+      ping_zene: 192.168.1.30
+      ping_kate: 192.168.1.68
 
 google_assistant:
   project_id: !secret google_assistant_project_id

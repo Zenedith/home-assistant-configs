@@ -1,0 +1,13 @@
+- name: Zene
+  id: zene
+  user_id: 11131e2d17ec4e3f95298a5eab4141de
+  device_trackers:
+    - device_tracker.80b03dcda5eb
+    - device_tracker.ping_zene
+
+- name: Zene
+  id: kate
+  user_id: d61a43e625774673bdfeaa2d3886bdfb
+  device_trackers:
+    - device_tracker.e49a79e25678
+    - device_tracker.ping_kate
