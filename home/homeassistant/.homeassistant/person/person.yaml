@@ -5,7 +5,7 @@
     - device_tracker.80b03dcda5eb
     - device_tracker.ping_zene
 
-- name: Zene
+- name: Kate
   id: kate
   user_id: d61a43e625774673bdfeaa2d3886bdfb
   device_trackers:

@@ -15,7 +15,7 @@ cards:
                   image: /local/lovelace/home/zene.jpg
                   elements:
                     - type: state-label
-                      entity: device_tracker.80b03dcda5eb
+                      entity: person.zene
                       style: {color: white, left: 30%, top: 90%, font-size: 90%}
                 style:
                   border-radius: 20px
@@ -29,7 +29,7 @@ cards:
                   image: /local/lovelace/home/kate2.jpg
                   elements:
                     - type: state-label
-                      entity: device_tracker.e49a79e25678
+                      entity: person.kate
                       style: {color: white, left: 27%, top: 89%, font-size: 90%}
                 style:
                   border-radius: 20px
