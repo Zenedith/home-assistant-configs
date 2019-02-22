@@ -1,4 +1,0 @@
-- platform: speedtestdotnet
-  server_id: 15317
-  monitored_conditions:
-    - ping

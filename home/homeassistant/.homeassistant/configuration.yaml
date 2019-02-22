@@ -181,6 +181,11 @@ person: !include person/person.yaml
 
 default_config:
 
+speedtestdotnet:
+  server_id: 7202
+  monitored_conditions:
+    - ping
+
 mqtt:
   discovery: true
   broker: !secret mqtt_broker
