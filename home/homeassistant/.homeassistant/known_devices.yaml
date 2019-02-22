@@ -528,3 +528,11 @@ android_4944093bed6ea74:
   name: 20 4e 7f 77 f9 ba
   picture:
   track: false
+
+android_f481f0d623e67c4f:
+  hide_if_away: true
+  icon:
+  mac: 1C:B0:94:A7:9B:CD
+  name: android-f481f0d623e67c4f
+  picture:
+  track: false
