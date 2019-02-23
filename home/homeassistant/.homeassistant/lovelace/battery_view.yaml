@@ -8,8 +8,8 @@ cards:
       title: Battery warning
       show_header_toggle: false
     filter:
-      include:
-        - domain: sensor
+#      include:
+#        - domain: sensor
       exclude:
         - state: "< 80"
     entities:
