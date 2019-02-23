@@ -11,7 +11,7 @@ cards:
 #      include:
 #        - domain: sensor
       exclude:
-        - state: "< 80"
+        - state: "> 80"
     entities:
       - type: gauge
         unit: '%'
