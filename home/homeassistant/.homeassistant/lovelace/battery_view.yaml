@@ -5,7 +5,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.climate_pokoj_janka_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -18,7 +18,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.climate_sypialnia_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -31,7 +31,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.kuchnia_temp_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -44,7 +44,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.korytarz_temp_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -57,7 +57,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.drzwi_balkonowe_contact_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -70,7 +70,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.sypialnia_motion_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -83,7 +83,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.lazienka_motion_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -96,7 +96,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.korytarz_motion_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -109,7 +109,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.okno_janek_contact_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -122,7 +122,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.okno_sypialnia_contact_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -135,7 +135,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.janek_motion_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -148,7 +148,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.drzwi_wejsciowe_contact_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -161,7 +161,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.drzwi_lazienka_contact_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -174,7 +174,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.drzwi_toaleta_contact_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -187,7 +187,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.kuchnia_leak_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -200,7 +200,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.lazienka_leak_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
@@ -213,7 +213,7 @@ cards:
   - type: conditional
     conditions:
       - entity: sensor.zmietekv2_battery
-        state: "< 90"
+        state_not: "100"
     card:
       type: gauge
       unit: '%'
