@@ -4,7 +4,7 @@ background: center / cover no-repeat url("/local/lovelace/background-15.gif") fi
 cards:
   - type: custom:auto-entities
     card:
-      type: entities
+      type: gauge
       title: Battery warning (< 80%)
       show_header_toggle: false
     filter:
