@@ -6,9 +6,12 @@ cards:
     card:
       type: entities
       title: Battery warning
+      show_header_toggle: false
     filter:
+      include:
+        - domain: sensor
       exclude:
-        - state: "> 80"
+        - state: "< 80"
     entities:
       - type: gauge
         unit: '%'
