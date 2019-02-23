@@ -1,6 +1,6 @@
 resources:
-  - url: /local/custom_ui/tracker-card.js?v=1.2.5
-    type: js
+  - url: /local/custom_ui/tracker-card.js?track=true
+    type: module
   - url: /local/custom_ui/tasmota-tracker-card.js?v=0.0.9
     type: js
   - url: /local/custom_ui/dark-sky-weather-card.js?v=4
