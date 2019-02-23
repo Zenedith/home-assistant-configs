@@ -9,10 +9,15 @@ zigbee_permit_join:
   name: Allow devices to join
   initial: off
   icon: mdi:cellphone-wireless
-moonlight_mode:
-  name: Ceiling Light moonlight indicator
-  icon: mdi:weather-night
 jasiu_chillout:
   name: Jasiu Chillout
+  icon: mdi:weather-night
 sypialnia_chillout:
   name: Sypilnia Chillout
+  icon: mdi:weather-night
+sypialnia_korki:
+  name: Korepetycje
+  icon: mdi:voice
+moonlight_korytarz:
+  name: Moonlight korytarz
+  icon: mdi:weather-night

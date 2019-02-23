@@ -1,8 +1,0 @@
-view: yes
-entities:
-  - climate.sypialnia
-  - binary_sensor.0x00158d0001e55705_occupancy
-  - sensor.0x00158d0001e55705_illuminance
-  - timer.sypialnia
-  - cover.sypialnia
-  - group.sypialnia_przelaczniki

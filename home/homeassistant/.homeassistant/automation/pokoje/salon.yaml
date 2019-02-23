@@ -1,43 +1,53 @@
-- alias: 'Choinka off'
+#- alias: 'Drzwi balkonowe otwarte'
+#  trigger:
+#    - platform: state
+#      entity_id: binary_sensor.drzwi_balkonowe_contact
+#      to: 'on'
+#  action:
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: "Salon drzwi balkonowe"
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Odnotowano wyjście na fajkę
+
+- alias: 'Zalanie kuchni'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kuchnia_leak_water_leak
+      to: 'on'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "!! Zalanie kuchni !!"
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Zalanie kuchni!!!
+
+- alias: 'Listwa RTV notification'
   trigger:
     platform: time
     at: '02:00:00'
-  action:
-    - service: switch.turn_off
-      data:
-        entity_id: switch.choinka
-
-- alias: 'Choinka on'
-  trigger:
-    platform: time
-    at: '15:30:00'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.choinka
-
-- alias: 'Choinka (weekend) on'
-  trigger:
-    platform: time
-    at: '07:32:00'
   condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
+    - condition: state
+      entity_id: switch.listwa_rtv
+      state: 'on'
   action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.choinka
+    - service: notify.mypushbullet
+      data_template:
+        title: "Salon listwa RTV off"
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Listwa za 5 minut się wyłączy
 
 - alias: 'Listwa RTV off'
   trigger:
     platform: time
-    at: '02:00:00'
+    at: '02:05:00'
   action:
-  - service: switch.turn_off
-    data:
-      entity_id: switch.listwa_rtv
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_rtv
 
 - alias: 'Listwa RTV off (for sure)'
   trigger:
@@ -51,11 +61,21 @@
 - alias: 'Listwa RTV on'
   trigger:
     platform: time
-    at: '15:30:00'
-  action:
-  - service: switch.turn_on
-    data:
+    at: '16:30:00'
+  condition:
+    - condition: state
       entity_id: switch.listwa_rtv
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_rtv
+    - service: notify.mypushbullet
+      data_template:
+        title: "Listwa RTV salon on"
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Listwa on
 
 - alias: 'Listwa RTV (weekend) on'
   trigger:
@@ -66,15 +86,24 @@
       weekday:
         - sat
         - sun
-  action:
-  - service: switch.turn_on
-    data:
+    - condition: state
       entity_id: switch.listwa_rtv
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_rtv
+    - service: notify.mypushbullet
+      data_template:
+        title: "Listwa RTV salon on"
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Listwa on
 
 - alias: 'Ambient tv on'
   trigger:
     platform: time
-    at: '15:30:00'
+    at: '16:10:00'
   action:
     - service: light.turn_on
       data:
@@ -82,15 +111,11 @@
     - service: light.turn_on
       data:
         entity_id: light.yeelight_strip_7811dce2d84e
-    - service: notify.mypushbullet
-      data:
-        title: "Salon"
-        message: "Ambient on"
 
 - alias: 'Ambient tv off'
   trigger:
     platform: time
-    at: '07:05:00'
+    at: '02:04:00'
   action:
     - service: light.turn_off
       data:
@@ -109,11 +134,64 @@
       - mon
       - wed
       - fri
+    - condition: state
+      entity_id: vacuum.zmietekv2
+      state: 'docked'
   action:
     - service: vacuum.start
       data:
         entity_id: vacuum.zmietekv2
     - service: notify.mypushbullet
+      data_template:
+        title: 'Zmietek start'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Zmietek start
+
+- alias: 'Zmietek docked'
+  trigger:
+    - platform: state
+      entity_id: vacuum.zmietekv2
+      from: 'returning'
+      to: 'docked'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Zmietek zakończył sprzątanie'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Zmietek zakończył sprzątanie po {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minutach, powierchnię {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 z poziomem baterii {{ state_attr('vacuum.zmietekv2', 'battery_level') }} %.
+
+- alias: 'Zmietek error'
+  trigger:
+    - platform: state
+      entity_id: vacuum.zmietekv2
+      to: 'error'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Zmietek napotkał problem'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Zmietek po {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minutach sprzątania {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 zatrzymał się z powodu błędu.
+          {{ state_attr('vacuum.zmietekv2', 'error') }}
+
+- alias: 'Włącz ładowanie zmietka po sprzątaniu'
+  trigger:
+    - platform: state
+      entity_id: sensor.vacuum_status
+      to: 'Returning home'
+  action:
+    - service: switch.turn_on
       data:
-        title: "Salon"
-        message: "Zmietek start"
+        entity_id: switch.zmietek
+
+- alias: 'Wyłącz ładowanie zmietka przy 100% baterii'
+  trigger:
+    - platform: state
+      entity_id: sensor.vacuum_battery
+      to: '100'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.zmietek

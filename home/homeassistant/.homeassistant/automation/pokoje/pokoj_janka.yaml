@@ -1,82 +1,98 @@
-- alias: 'Jan RTV off'
+- alias: 'Jan RTV notification'
   trigger:
     platform: time
     at: '00:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.rtv_jan
+      state: 'on'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Listwa RTV Jan off'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Listwa za 5 minut się wyłączy
+
+- alias: 'Jan RTV off'
+  trigger:
+    platform: time
+    at: '00:05:00'
   action:
     - service: switch.turn_off
       data:
         entity_id: switch.rtv_jan
 
-- alias: 'Jan RTV on'
+- alias: 'Bedside Jan on'
   trigger:
     platform: time
-    at: '15:30:00'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.rtv_jan
-
-- alias: 'Jan RTV (weekend) on'
-  trigger:
-    platform: time
-    at: '07:32:00'
+    at: '16:30:00'
   condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
+    - condition: state
+      entity_id: light.yeelight_bedside_7c49eb284fda
+      state: 'off'
   action:
-    - service: switch.turn_on
+    - service: light.turn_on
       data:
-        entity_id: switch.rtv_jan
+        entity_id: light.yeelight_bedside_7c49eb284fda
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Pokój janka bedside on'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Bedside on
 
-- alias: "Bedside Jan on"
+- alias: 'Bedside Jan off'
   trigger:
     platform: time
-    at: '16:00:00'
+    at: '08:00:00'
   action:
-  - service: light.turn_on
-    data:
-      entity_id: light.yeelight_bedside_7c49eb284fda
-  - service: notify.mypushbullet
-    data:
-      title: "Pokój janka"
-      message: "Światło on"
+    - service: light.turn_off
+      data:
+        entity_id: light.yeelight_bedside_7c49eb284fda
 
-- alias: "Bedside Jan off"
-  trigger:
-    platform: time
-    at: '07:30:00'
-  action:
-  - service: light.turn_off
-    data:
-      entity_id: light.yeelight_bedside_7c49eb284fda
-
-- alias: "Lampa Jan off"
+- alias: 'Lampa Jan off'
   trigger:
     platform: time
     at: '22:30:00'
   action:
-  - service: switch.turn_off
+  - service: light.turn_off
     data:
-      entity_id: switch.swiato_pokoj_janka
+      entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e5d112_occupancy
+      entity_id: binary_sensor.janek_motion_occupancy
       to: 'on'
   condition:
     - condition: time
       after: '15:00:00'
-      before: '21:00:00'
+      before: '23:59:59'
+    - condition: state
+      entity_id: input_boolean.jasiu_chillout
+      state: 'off'
+    - condition: state
+      entity_id: light.swiatlo_pokoj_janka
+      state: 'off'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.swiatlo_pokoj_janka
+
+- alias: 'Włącz timer w pokoju Janka gdy ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.janek_motion_occupancy
+      to: 'on'
+  condition:
+    - condition: time
+      after: '15:00:00'
+      before: '23:59:59'
     - condition: state
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
   action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.swiato_pokoj_janka
     - service: timer.cancel
       data:
         entity_id: timer.pokoj_janka
@@ -91,16 +107,65 @@
     event_data:
       entity_id: timer.pokoj_janka
   action:
-    - service: switch.turn_off
+    - service: light.turn_off
       data:
-        entity_id: switch.swiato_pokoj_janka
+        entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Wyzeruj timer w pokoju Janka gdy światło zgaszone'
+  hide_entity: true
   trigger:
     - platform: state
-      entity_id: switch.swiato_pokoj_janka
+      entity_id: light.swiatlo_pokoj_janka
       to: 'off'
   action:
     - service: timer.cancel
       data:
         entity_id: timer.pokoj_janka
+
+- alias: 'Przykręć ogrzewanie przy otwartym oknie w pokoju Janka'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.okno_janek_contact
+    to: 'on'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.pokoj_janka
+        away_mode: 'on'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w pokóju Janka'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w pokóju Janka
+
+- alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.okno_janek_contact
+    to: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.pokoj_janka
+        away_mode: 'off'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w pokóju Janka'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w pokóju Janka
+
+- alias: 'Zgaś światło w pokoju Janka gdy chillout mode on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.jasiu_chillout
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.swiatlo_pokoj_janka
+      state: 'on'
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.swiatlo_pokoj_janka

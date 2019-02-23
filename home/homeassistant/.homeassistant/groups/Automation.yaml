@@ -1,9 +1,0 @@
-view: yes
-icon: mdi:robot
-entities:
- - group.automation_listwy
- - group.automation_korytarz
- - group.automation_salon
- - group.automation_pokoj_janka
- - group.automation_sypialnia
- - group.automation_azienka

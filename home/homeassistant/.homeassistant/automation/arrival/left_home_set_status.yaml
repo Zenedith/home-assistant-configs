@@ -1,9 +1,12 @@
-- alias: "Left home - Set status"
+- alias: 'Left home - Set status'
   trigger:
     - platform: state
-      entity_id: group.all_devices
-      to: 'not_home'
+      entity_id: group.mobiledevices
+      to: not_home
   condition:
+    - condition: time
+      after: '06:00:00'
+      before: '23:59:59'
     - condition: state
       entity_id: input_boolean.just_returned_home
       state: 'off'

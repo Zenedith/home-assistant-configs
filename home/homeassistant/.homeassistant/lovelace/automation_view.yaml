@@ -1,67 +1,87 @@
 title: Automation
 icon: mdi:robot
+panel: true
+background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: entities
-    title: Weekend
-    show_header_toggle: true
-    entities:
-    - automation.power_state_on_ha_startup
-  - type: entities
-    title: Weekend
-    show_header_toggle: true
-    entities:
-      - automation.listwa_rtv_weekend_on
-      - automation.listwa_sypialnia_weekend_on
-      - automation.jan_rtv_weekend_on
-      - automation.choinka_weekend_on
-  - type: entities
-    title: Korytarz
-    show_header_toggle: true
-    entities:
-      - automation.otwarcie_drzwi_wejsciowych
-      - automation.wyacz_swiato_w_korytarzu_po_upywie_czasu
-      - automation.wacz_swiato_w_korytarzu_gdy_ruch
-      - automation.wygaszanie_swiata_korytarz
-      - automation.update_notifications
-  - type: entities
-    title: Pokój Janka
-    show_header_toggle: true
-    entities:
-      - automation.jan_rtv_off
-      - automation.jan_rtv_on
-      - automation.jan_rtv_weekend_on
-      - automation.bedside_jan_on
-      - automation.bedside_jan_off
-      - automation.lampa_jan_off
-      - automation.wyacz_swiato_w_pokoju_janka_po_upywie_czasu
-      - automation.wacz_swiato_w_pokoju_janka_gdy_ruch
-      - automation.wyzeruj_timer_w_pokoju_janka_gdy_swiato_zgaszone
-  - type: entities
-    title: Salon
-    show_header_toggle: true
-    entities:
-      - automation.ambient_tv_on
-      - automation.ambient_tv_off
-      - automation.dafang_motion_detected
-      - automation.listwa_rtv_on
-      - automation.listwa_rtv_off
-      - automation.listwa_rtv_weekend_on
-      - automation.choinka_on
-      - automation.choinka_off
-      - automation.choinka_weekend_on
-      - automation.zmietek_start
-  - type: entities
-    title: Sypialnia
-    show_header_toggle: true
-    entities:
-      - automation.wyacz_swiato_w_sypialni_po_upywie_czasu
-      - automation.wacz_swiato_w_sypialni_gdy_ruch
-      - automation.wyzeruj_timer_w_sypialni_gdy_swiato_zgaszone
-  - type: entities
-    title: Łazienka
-    show_header_toggle: true
-    entities:
-      - automation.wyacz_swiato_w_azience_po_upywie_czasu
-      - automation.wacz_swiato_w_azience_gdy_otwarte_drzwi
-      - automation.wyzeruj_timer_w_azience_gdy_swiato_zgaszone
-
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Common
+        show_header_toggle: false
+        entities:
+          - automation.update_notifications
+          - automation.power_state_on_ha_start_up
+          - automation.jan_rtv_notification
+          - automation.listwa_rtv_notification
+          - automation.listwa_sypialnia_notification
+      - type: entities
+        title: Weekend
+        show_header_toggle: false
+        entities:
+          - automation.listwa_rtv_weekend_on
+          - automation.listwa_sypialnia_weekend_on
+      - type: entities
+        title: Korytarz
+        show_header_toggle: false
+        entities:
+          - automation.otwarcie_drzwi_wejsciowych
+          - automation.wylacz_swiatlo_w_korytarzu_po_uplywie_czasu
+          - automation.wlacz_swiatlo_w_korytarzu_gdy_ruch
+          - automation.wlacz_timer_w_korytarzu_gdy_ruch
+          - automation.auto_chillout_off
+          - automation.auto_chillout_jas_on
+          - automation.auto_chillout_sypialnia_on
+          - automation.chillout_mode_off
+          - automation.chillout_mode_on
+          - automation.chillout_mode_off_when_first_time_lights_turn_on
+          - automation.chillout_mode_on_when_first_time_lights_turn_on
+          - automation.moonlight_switch_on
+          - automation.moonlight_switch_off
+      - type: entities
+        title: Pokój Janka
+        show_header_toggle: false
+        entities:
+          - automation.jan_rtv_off
+          - automation.bedside_jan_on
+          - automation.bedside_jan_off
+          - automation.lampa_jan_off
+          - automation.wylacz_swiatlo_w_pokoju_janka_po_uplywie_czasu
+          - automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
+          - automation.wlacz_timer_w_pokoju_janka_gdy_ruch
+          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_pokoju_janka
+          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
+      - type: entities
+        title: Salon
+        show_header_toggle: false
+        entities:
+          - automation.ambient_tv_on
+          - automation.ambient_tv_off
+          - automation.dafang_motion_detected
+          - automation.listwa_rtv_on
+          - automation.listwa_rtv_off
+          - automation.zmietek_start
+          - automation.zmietek_docked
+          - automation.zalanie_kuchni
+          - automation.wlacz_ladowanie_zmietka_po_sprzataniu
+          - automation.wylacz_ladowanie_zmietka_przy_100_baterii
+      - type: entities
+        title: Sypialnia
+        show_header_toggle: false
+        entities:
+          - automation.wylacz_swiatlo_w_sypialni_po_uplywie_czasu
+          - automation.wlacz_swiatlo_w_sypialni_gdy_ruch
+          - automation.wlacz_timer_w_sypialni_gdy_ruch
+          - automation.listwa_sypialnia_on
+          - automation.listwa_sypialnia_off
+          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_sypialni
+          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
+      - type: entities
+        title: Łazienka
+        show_header_toggle: false
+        entities:
+          - automation.wylacz_swiatlo_w_lazience_po_uplywie_czasu
+          - automation.wlacz_swiatlo_w_lazience_gdy_otwarte_drzwi_lub_ruch
+          - automation.wlacz_timer_w_lazience_gdy_otwarte_drzwi_lub_ruch
+          - automation.wlacz_timer_w_toalecie_gdy_otwarte_drzwi
+          - automation.wlacz_swiatlo_w_toalecie_gdy_otwarte_drzwi
+          - automation.wylacz_swiatlo_w_toalecie_po_uplywie_czasu

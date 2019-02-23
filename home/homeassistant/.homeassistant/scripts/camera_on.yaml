@@ -1,5 +1,4 @@
 sequence:
-  - service: mqtt.publish
+  - service: switch.turn_on
     data:
-      topic: basic/sonoff-basic-3/cmnd/POWER
-      payload: ON
+      entity_id: switch.kamera

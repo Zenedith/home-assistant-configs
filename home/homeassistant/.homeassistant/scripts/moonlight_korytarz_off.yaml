@@ -1,0 +1,20 @@
+sequence:
+  - service: light.turn_on
+    entity_id: light.yeelight_ceiling_7811dcab824a
+    data_template:
+      brightness: 254
+  - service: light.yeelight_set_mode
+    data:
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      mode: normal
+  - service: light.turn_on
+    entity_id: light.yeelight_ceiling4_7c49ebb70c4a
+    data_template:
+      brightness: 254
+  - service: light.yeelight_set_mode
+    data:
+      entity_id: light.yeelight_ceiling4_7c49ebb70c4a
+      mode: normal
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.moonlight_korytarz

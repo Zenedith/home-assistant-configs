@@ -16,15 +16,29 @@ homeassistant:
     "*.*":
       custom_ui_state_card: state-card-custom-ui
   customize: !include_dir_merge_named customizations
+  packages: !include_dir_named packages
 
 # Show links to resources in log and frontend
 #introduction:
 logger:
   default: info
 
+webhook:
+zigbee2mqtt_networkmap:
+
+panel_iframe:
+  networkmap:
+    title: 'Zigbee Map'
+    url: '/local/zigbee2mqtt_networkmap/map.html'
+    icon: 'mdi:graphql'
+
 # Enables the frontend
 frontend:
   javascript_version: latest
+  extra_html_url:
+    - /local/custom_ui/fontawesome/hass-fontawesome-solid.html
+    - /local/custom_ui/fontawesome/hass-fontawesome-regular.html
+    - /local/custom_ui/fontawesome/hass-fontawesome-brands.html
 
 # Enables configuration UI
 config:
@@ -36,9 +50,10 @@ lovelace:
 #customizer:
 #  custom_ui: local
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
+http:
+  base_url: !secret base_url
+  ssl_certificate: !secret ssl_certificate_path
+  ssl_key: !secret ssl_key_path
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -48,6 +63,22 @@ lovelace:
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
+
+custom_updater:
+  show_installable: false
+  hide_sensor: false
+  track:
+    - components
+    - cards
+    - python_scripts
+  component_urls:
+  #- https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+    - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
+    - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
+
 
 # Discover some devices automatically
 discovery:
@@ -117,9 +148,13 @@ ffmpeg:
 # Text to speech
 tts:
   - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+    base_url: !secret base_url
 
-# Cloud
-cloud:
+#whitelist_external_dirs:
+#  - /config
 
 camera: !include cameras/dafang.yaml
 timer: !include timer/timer.yaml
@@ -135,6 +170,21 @@ input_boolean: !include input_boolean.yaml
 input_select: !include_dir_merge_named input_selects
 weather: !include weather/darksky.yaml
 light: !include_dir_merge_list lights
+media_player: !include_dir_merge_list media_player
+person: !include person/person.yaml
+
+#shell_command:
+#  rename_snapshots_dafang: 'bash /home/homeassistant/.homeassistant/bash_scripts/renameSnapshotsDafang.sh'
+
+#media_extractor:
+#  default_query: best
+
+default_config:
+
+speedtestdotnet:
+  server_id: 7202
+  monitored_conditions:
+    - ping
 
 mqtt:
   discovery: true
@@ -166,6 +216,11 @@ asuswrt:
   host: 192.168.1.1
   username: !secret device_tracker_asus_username
   password: !secret device_tracker_asus_password
+  sensors:
+    - upload
+    - download
+    - upload_speed
+    - download_speed
 
 device_tracker:
   - platform: asuswrt
@@ -176,3 +231,45 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
       hide_if_away: true
+  - platform: ping
+    hosts:
+      ping_zene: 192.168.1.30
+      ping_kate: 192.168.1.68
+
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_assistant_api_key
+  exposed_domains:
+    - switch
+    - light
+    - vacuum
+    - climate
+    - cover
+    - media_player
+  entity_config:
+    cover.dafang_move_leftright:
+      expose: false
+    cover.dafang_move_updown:
+      expose: false
+    switch.dafang_blue_led:
+      expose: false
+    switch.dafang_h264_rtsp_server:
+      expose: false
+    switch.dafang_ir_filter:
+      expose: false
+    switch.dafang_ir_led:
+      expose: false
+    switch.dafang_mjpeg_rtsp_server:
+      expose: false
+    switch.dafang_motion_detection:
+      expose: false
+    switch.dafang_motion_send_mail:
+      expose: false
+    switch.dafang_motion_tracking:
+      expose: false
+    switch.dafang_night_mode:
+      expose: false
+    switch.dafang_night_mode_auto:
+      expose: false
+    switch.dafang_yellow_led:
+      expose: false

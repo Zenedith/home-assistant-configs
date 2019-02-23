@@ -1,10 +1,19 @@
-- alias: "Home for 8 minutes"
+- alias: 'Home for 8 minutes'
   trigger:
     - platform: state
-      entity_id: group.all_devices
-      to: 'home'
+      entity_id: device_tracker.80b03dcda5eb
+      to: home
       for:
         minutes: 8
+    - platform: state
+      entity_id: device_tracker.e49a79e25678
+      to: home
+      for:
+        minutes: 8
+  condition:
+    - condition: time
+      after: '06:00:00'
+      before: '23:59:59'
   action:
     - service: input_boolean.turn_off
       data:

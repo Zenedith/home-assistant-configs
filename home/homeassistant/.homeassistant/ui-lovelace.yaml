@@ -1,11 +1,32 @@
+resources:
+  - url: /local/custom_ui/tracker-card.js?v=1.2.2
+    type: js
+  - url: /local/custom_ui/tasmota-tracker-card.js?v=0.0.9
+    type: js
+  - url: /local/custom_ui/dark-sky-weather-card.js?v=4
+    type: js
+  - url: /local/custom_ui/mini-media-player-bundle.js?v=1.0.2
+    type: module
+  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.3.0
+    type: module
+  - url: /local/custom_ui/card-modder.js?v=f3d96f
+    type: module
+  - url: /local/custom_ui/card-tools.js?v=deb8e3
+    type: js
+  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=1.0.1b0
+    type: module
+  - url: /local/custom_ui/kiosk.js?v=1.0.0
+    type: js
+
 title: Zene Home
 views:
-  - !include lovelace/default_view.yaml
-  - !include lovelace/salon.yaml
+  - !include lovelace/salon_view.yaml
   - !include lovelace/korytarz.yaml
   - !include lovelace/pokoj_janka.yaml
   - !include lovelace/sypialnia.yaml
   - !include lovelace/lazienka.yaml
-  - !include lovelace/other_view.yaml
   - !include lovelace/weather_view.yaml
+  - !include lovelace/security_view.yaml
   - !include lovelace/automation_view.yaml
+  - !include lovelace/system_status_view.yaml
+  - !include lovelace/battery_view.yaml
