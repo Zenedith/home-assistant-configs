@@ -187,7 +187,7 @@ speedtestdotnet:
     - ping
 
 mqtt:
-  discovery: true
+  discovery: false
   broker: !secret mqtt_broker
   port: !secret mqtt_port
   username: !secret mqtt_username
