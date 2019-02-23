@@ -182,6 +182,7 @@
   trigger:
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
+    from: 'off'
     to: 'on'
   action:
     - service: climate.set_away_mode
