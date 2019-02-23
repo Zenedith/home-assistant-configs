@@ -17,6 +17,8 @@ resources:
     type: module
   - url: /local/custom_ui/kiosk.js?v=1.0.0
     type: js
+  - url: /local/custom_ui/auto-entities?v=be13234
+    type: js
 
 title: Zene Home
 views:
