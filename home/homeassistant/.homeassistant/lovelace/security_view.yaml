@@ -1,5 +1,5 @@
 title: Security
-icon: mdi:security-home
+icon: mdi:security
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 panel: true
 cards:
