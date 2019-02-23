@@ -59,3 +59,7 @@ sequence:
     data:
       topic: 'shellies/shelly_5/cmnd/upgrade'
       payload: "1"
+  - service: mqtt.publish
+    data:
+      topic: 'basic/sonoff-rtv-jan/cmnd/upgrade'
+      payload: "1"
