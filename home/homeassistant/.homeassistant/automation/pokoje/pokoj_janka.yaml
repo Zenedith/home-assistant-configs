@@ -126,8 +126,11 @@
   trigger:
     platform: state
     entity_id: binary_sensor.okno_janek_contact
-    from: 'off'
     to: 'on'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.okno_janek_contact
+      state: 'off'
   action:
     - service: climate.set_away_mode
       data:
