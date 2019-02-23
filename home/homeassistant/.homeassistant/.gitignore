@@ -64,3 +64,5 @@ log*.txt
 .storage/auth_provider.homeassistant
 secrets.yaml
 \.*
+source.js
+/custom_components/xboxone/tokens.json

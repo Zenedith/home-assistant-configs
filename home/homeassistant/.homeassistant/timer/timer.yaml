@@ -1,11 +1,13 @@
 lazienka:
-  duration: '00:03:00'
+  duration: '00:04:00'
+toaleta:
+  duration: '00:15:00'
 sypialnia:
   duration: '00:05:00'
 pokoj_janka:
-  duration: '00:05:00'
+  duration: '00:10:00'
 korytarz:
-  duration: '00:05:00'
+  duration: '00:03:00'
 zigbee_permit_join:
-  name: Time remaining
+  name: Zigbee permit join time remaining
   duration: '00:10:00'

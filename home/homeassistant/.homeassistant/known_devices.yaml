@@ -293,7 +293,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 84:F3:EB:32:B5:80
-  name: 84f3eb32b580
+  name: shellyswitch-32B580
   picture:
   track: false
 
@@ -301,7 +301,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 7C:49:EB:B7:0C:4A
-  name: 7c49ebb70c4a
+  name: yeelink-light-ceiling4_mibt99294824
   picture:
   track: false
 
@@ -309,7 +309,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 7C:49:EB:B7:6A:3D
-  name: 7c49ebb76a3d
+  name: yeelink-light-color2_miio99318875
   picture:
   track: false
 
@@ -317,7 +317,7 @@ c49ded568da7:
   hide_if_away: true
   icon:
   mac: 80:7D:3A:5B:28:DA
-  name: 807d3a5b28da
+  name: shellyswitch-5B28DA
   picture:
   track: false
 
@@ -341,7 +341,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: CC:98:8B:4C:4B:C4
-  name: cc988b4c4bc4
+  name: sony-bravia
   picture:
   track: false
 
@@ -349,7 +349,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:84:A3:CE
-  name: 04cf8c84a3ce
+  name: yeelink-light-color2_miio131151008
   picture:
   track: false
 
@@ -357,7 +357,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:76:39:97
-  name: 04cf8c763997
+  name: yeelink-light-color2_miio130206313
   picture:
   track: false
 
@@ -365,7 +365,7 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:7C:C5:49
-  name: 04cf8c7cc549
+  name: yeelink-light-color2_miio130635291
   picture:
   track: false
 
@@ -373,6 +373,190 @@ cc988b4c4bc4:
   hide_if_away: true
   icon:
   mac: 04:CF:8C:7B:F2:B3
-  name: 04cf8c7bf2b3
+  name: yeelink-light-color2_miio130581381
+  picture:
+  track: false
+
+20dfb922a8f2:
+  hide_if_away: true
+  icon:
+  mac: 20:DF:B9:22:A8:F2
+  name: 20dfb922a8f2
+  picture:
+  track: false
+
+807d3a181a65:
+  hide_if_away: true
+  icon:
+  mac: 80:7D:3A:18:1A:65
+  name: sonoff5-6757
+  picture:
+  track: false
+
+cc50e355a0c8:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:55:A0:C8
+  name: shellyswitch-55A0C8
+  picture:
+  track: false
+
+cc50e3135303:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:13:53:03
+  name: shellyswitch-135303
+  picture:
+  track: false
+
+2816a8d513b9:
+  hide_if_away: true
+  icon:
+  mac: 28:16:A8:D5:13:B9
+  name: XBOXONEPOZ
+  picture:
+  track: false
+
+f4f5d81fb952:
+  hide_if_away: true
+  icon:
+  mac: F4:F5:D8:1F:B9:52
+  name: Chromecast-Ultra
+  picture:
+  track: false
+
+7811dce2cf7d:
+  hide_if_away: true
+  icon:
+  mac: 78:11:DC:E2:CF:7D
+  name: 7811dce2cf7d
+  picture:
+  track: false
+
+04cf8c78d9f7:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:78:D9:F7
+  name: yeelink-light-ceiling3_mibt13037844
+  picture:
+  track: false
+
+54_e6_fc_c0_0a_7f:
+  hide_if_away: true
+  icon:
+  mac: 54:E6:FC:C0:0A:7F
+  name: 54 e6 fc c0 0a 7f
+  picture:
+  track: false
+
+sonoff_3493:
+  hide_if_away: true
+  icon:
+  mac: 3C:71:BF:2C:6D:A5
+  name: sonoff-3493
+  picture:
+  track: false
+
+sonoff_7733:
+  hide_if_away: true
+  icon:
+  mac: 3C:71:BF:2B:DE:35
+  name: sonoff-7733
+  picture:
+  track: false
+
+sonoff_2592:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:AA:20
+  name: sonoff-2592
+  picture:
+  track: false
+
+sonoff_2887:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:AB:47
+  name: sonoff-2887
+  picture:
+  track: false
+
+sonoff_0378:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:A1:7A
+  name: sonoff-0378
+  picture:
+  track: false
+
+shelly1_25a3eb:
+  hide_if_away: true
+  icon:
+  mac: CC:50:E3:25:A3:EB
+  name: shelly1-25A3EB
+  picture:
+  track: false
+
+rmmini_d9_23_fa:
+  hide_if_away: true
+  icon:
+  mac: 78:0F:77:D9:23:FA
+  name: RMMINI-d9-23-fa
+  picture:
+  track: false
+
+android_a1f6fccb13ac9f1d:
+  hide_if_away: true
+  icon:
+  mac: AC:22:0B:A6:28:ED
+  name: android-a1f6fccb13ac9f1d
+  picture:
+  track: false
+
+android_4944093bed6ea74:
+  hide_if_away: true
+  icon:
+  mac: 08:60:6E:9F:6D:FF
+  name: android-4944093bed6ea74
+  picture:
+  track: false
+
+20_4e_7f_77_f9_ba:
+  hide_if_away: true
+  icon:
+  mac: 20:4E:7F:77:F9:BA
+  name: 20 4e 7f 77 f9 ba
+  picture:
+  track: false
+
+android_f481f0d623e67c4f:
+  hide_if_away: true
+  icon:
+  mac: 1C:B0:94:A7:9B:CD
+  name: android-f481f0d623e67c4f
+  picture:
+  track: false
+
+ping_kate:
+  hide_if_away: true
+  icon:
+  mac:
+  name: ping kate
+  picture:
+  track: false
+
+ping_zene:
+  hide_if_away: true
+  icon:
+  mac:
+  name: ping zene
+  picture:
+  track: false
+
+sonoff_basic_2_2706:
+  hide_if_away: true
+  icon:
+  mac: DC:4F:22:0E:4A:92
+  name: sonoff-basic-2-2706
   picture:
   track: false

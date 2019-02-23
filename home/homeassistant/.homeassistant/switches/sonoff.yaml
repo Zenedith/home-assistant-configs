@@ -35,7 +35,7 @@
   payload_not_available: "Offline"
   retain: false
 - platform: mqtt
-  name: "Choinka"
+  name: "Zmietek"
   state_topic: "zigbee2mqtt/sonoff4/POWER"
   command_topic: "zigbee2mqtt/sonoff4/cmnd/POWER"
   availability_topic: "zigbee2mqtt/sonoff4/LWT"
@@ -47,6 +47,17 @@
   retain: false
 - platform: mqtt
   name: "Rtv Jan"
+  state_topic: "basic/sonoff-rtv-jan/POWER"
+  command_topic: "basic/sonoff-rtv-jan/cmnd/POWER"
+  availability_topic: "basic/sonoff-rtv-jan/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Sonoff5"
   state_topic: "zigbee2mqtt/sonoff5/POWER"
   command_topic: "zigbee2mqtt/sonoff5/cmnd/POWER"
   availability_topic: "zigbee2mqtt/sonoff5/LWT"

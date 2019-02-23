@@ -1,7 +1,0 @@
-#- platform: command_line
-#  switches:
-#    playstation4:
-#      command_on: 'sudo ps4-waker'
-#      command_off: 'sudo ps4-waker standby'
-#      command_state: '/bin/nc -z -w 5 ps4 9295'
-#      friendly_name: "Playstation 4"

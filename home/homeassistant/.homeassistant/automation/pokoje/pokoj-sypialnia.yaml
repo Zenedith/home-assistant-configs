@@ -1,7 +1,23 @@
-- alias: 'Listwa sypialnia off'
+- alias: 'Listwa sypialnia notification'
   trigger:
     platform: time
     at: '03:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_sypialnia
+      state: 'on'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Listwa sypialnia off'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Listwa za 5 minut się wyłączy
+
+- alias: 'Listwa sypialnia off'
+  trigger:
+    platform: time
+    at: '03:05:00'
   action:
     - service: switch.turn_off
       data:
@@ -11,14 +27,20 @@
   trigger:
     platform: time
     at: '20:00:00'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_sypialnia
+      state: 'off'
   action:
     - service: switch.turn_on
       data:
         entity_id: switch.listwa_sypialnia
     - service: notify.mypushbullet
-      data:
-        title: "Listwa sypialnia"
-        message: "Enabled"
+      data_template:
+        title: 'Sypialnia listwa on'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Listwa on
 
 - alias: 'Listwa sypialnia (weekend) on'
   trigger:
@@ -29,27 +51,59 @@
       weekday:
       - sat
       - sun
+    - condition: state
+      entity_id: switch.listwa_sypialnia
+      state: 'off'
   action:
     - service: switch.turn_off
       data:
         entity_id: switch.listwa_sypialnia
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Listwa sypialnia on'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Listwa on
 
 - alias: 'Włącz światło w sypialni gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d0001e55705_occupancy
+      entity_id: binary_sensor.sypialnia_motion_occupancy
       to: 'on'
   condition:
     - condition: time
       after: '15:00:00'
-      before: '23:59:00'
+      before: '23:59:59'
     - condition: state
       entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
+    - condition: state
+      entity_id: light.swiatlo_sypialnia
       state: 'off'
   action:
     - service: light.turn_on
       data:
+        entity_id: light.swiatlo_sypialnia
+    - service: light.turn_on
+      data:
         entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+
+- alias: 'Włącz timer w sypialni gdy ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.sypialnia_motion_occupancy
+      to: 'on'
+  condition:
+    - condition: time
+      after: '15:00:00'
+      before: '23:59:59'
+    - condition: state
+      entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.sypialnia_korki
+      state: 'off'
+  action:
     - service: timer.cancel
       data:
         entity_id: timer.sypialnia
@@ -63,17 +117,97 @@
     event_type: timer.finished
     event_data:
       entity_id: timer.sypialnia
+  condition:
+    - condition: state
+      entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.sypialnia_korki
+      state: 'off'
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        entity_id: light.swiatlo_sypialnia
 
 - alias: 'Wyzeruj timer w sypialni gdy światło zgaszone'
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      to: 'off'
+    - platform: state
+      entity_id: light.swiatlo_sypialnia
       to: 'off'
   action:
     - service: timer.cancel
       data:
         entity_id: timer.sypialnia
+
+- alias: 'Korki mode on'
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.sypialnia_korki
+      to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.swiatlo_sypialnia
+    - service: light.turn_on
+      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      data_template:
+        brightness: 254
+    - service: light.yeelight_set_mode
+      data:
+        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        mode: normal
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_sypialnia
+
+- alias: 'Zgaś światło w sypialni gdy chillout mode on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.sypialnia_chillout
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.swiatlo_sypialnia
+      state: 'on'
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.swiatlo_sypialnia
+
+- alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.okno_sypialnia_contact
+    to: 'on'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.sypialnia
+        away_mode: 'on'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w sypialni'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w sypialni
+
+- alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.okno_sypialnia_contact
+    to: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.sypialnia
+        away_mode: 'off'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w sypialni'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w sypialni

@@ -1,15 +1,8 @@
 sequence:
-  - service: mqtt.publish
+  - service: switch.turn_off
     data:
-      topic: zigbee2mqtt/sonoff2/cmnd/POWER
-      payload: OFF
+      entity_id: group.all_switches
   - service: light.turn_off
     data:
-      entity_id: light.yeelight_strip_7811dcda6e9e
-  - service: light.turn_off
-    data:
-      entity_id: light.yeelight_strip_7811dce2d84e
-  - service: mqtt.publish
-    data:
-      topic: zigbee2mqtt/sonoff1/cmnd/POWER
-      payload: OFF
+      entity_id: group.all_lights
+  - service: script.climate_off

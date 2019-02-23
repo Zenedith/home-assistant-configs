@@ -1,62 +1,107 @@
 {
     "0x00158d0001e0a7d3": {
         "illuminance": 3,
-        "linkquality": 49,
+        "linkquality": 0,
         "occupancy": false,
         "battery": 100,
-        "voltage": 3055
+        "voltage": 3055,
+        "elapsed": 20005
     },
     "0x00158d00022cc215": {
-        "temperature": 24.5,
-        "linkquality": 83,
-        "humidity": 37.2,
-        "pressure": 988.49,
+        "temperature": 24.9,
+        "linkquality": 72,
+        "humidity": 40.51,
+        "pressure": 1005.2,
         "battery": 100,
-        "voltage": 3035
+        "voltage": 3045,
+        "elapsed": 3023235
     },
     "0x00158d0001e5d112": {
         "illuminance": 0,
-        "linkquality": 54,
+        "linkquality": 41,
         "occupancy": false,
         "battery": 100,
-        "voltage": 3045
+        "voltage": 3025,
+        "elapsed": 20000
     },
     "0x00158d000208e0c7": {
         "contact": true,
-        "linkquality": 101,
-        "battery": 99,
-        "voltage": 3025
+        "linkquality": 67,
+        "battery": 100,
+        "voltage": 3035,
+        "elapsed": 3013691
     },
     "0x00158d00020b7b77": {
-        "battery": 99,
+        "battery": 100,
         "voltage": 3025,
-        "linkquality": 15,
-        "contact": true
+        "linkquality": 13,
+        "contact": true,
+        "elapsed": 7177
     },
     "0x00158d000205b35f": {
         "contact": true,
-        "linkquality": 33,
+        "linkquality": 31,
         "battery": 100,
-        "voltage": 3035
+        "voltage": 3035,
+        "elapsed": 3012662
     },
     "0x00158d000237ad9d": {
-        "illuminance": 15,
-        "linkquality": 36,
+        "illuminance": 14,
+        "linkquality": 49,
         "occupancy": false,
         "battery": 100,
-        "voltage": 3035
+        "voltage": 3035,
+        "elapsed": 20007
     },
     "0x00158d0001e55705": {
-        "illuminance": 56,
-        "linkquality": 70,
+        "illuminance": 0,
+        "linkquality": 85,
         "occupancy": false,
-        "battery": 99,
-        "voltage": 3015
+        "battery": 100,
+        "voltage": 3025,
+        "elapsed": 1110144
     },
     "0x00158d00024e42b5": {
         "contact": true,
-        "linkquality": 59,
+        "linkquality": 78,
         "battery": 100,
-        "voltage": 3125
+        "voltage": 3025,
+        "elapsed": 52257
+    },
+    "0x00158d0002b52fd0": {
+        "battery": 97,
+        "voltage": 2995,
+        "linkquality": 39,
+        "contact": true,
+        "elapsed": 3011588
+    },
+    "0x00158d000272fe71": {
+        "temperature": 23.9,
+        "linkquality": 0,
+        "humidity": 44.79,
+        "pressure": 1005.3,
+        "battery": 86,
+        "voltage": 2975,
+        "elapsed": 1775807
+    },
+    "0x00158d0002bfd324": {
+        "contact": true,
+        "linkquality": 96,
+        "battery": 86,
+        "voltage": 2975,
+        "elapsed": 3006984
+    },
+    "0x00158d0001bb388f": {
+        "water_leak": false,
+        "linkquality": 0,
+        "battery": 100,
+        "voltage": 3025,
+        "elapsed": 3010544
+    },
+    "0x00158d00021508b4": {
+        "battery": 100,
+        "voltage": 3015,
+        "linkquality": 0,
+        "elapsed": 3010000
     }
 }

@@ -3,8 +3,14 @@
     payload: 'ON'
     platform: mqtt
     topic: camera/dafang/motion
+  condition:
+    - condition: state
+      entity_id: group.mobiledevices
+      state: not_home
   action:
     service: notify.mypushbullet
-    data:
-      title: "Security"
-      message: "Motion detected."
+    data_template:
+      title: '!! Security kamera !!'
+      message: |
+        {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+        Wykryto ruch.

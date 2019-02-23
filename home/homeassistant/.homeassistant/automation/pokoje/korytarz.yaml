@@ -1,12 +1,33 @@
 - alias: 'Włącz światło w korytarzu gdy ruch'
   trigger:
     - platform: state
-      entity_id: binary_sensor.0x00158d000237ad9d_occupancy
+      entity_id: binary_sensor.korytarz_motion_occupancy
       to: 'on'
+    - platform: state
+      entity_id: binary_sensor.drzwi_wejsciowe_contact
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'off'
   action:
     - service: light.turn_on
       data:
         entity_id: group.korytarz_lampy
+#    - service: tts.google_say
+#      entity_id: media_player.tv
+#      data:
+#        message: 'Movement in korytarz'
+
+- alias: 'Włącz timer w korytarzu gdy ruch'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.korytarz_motion_occupancy
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.drzwi_wejsciowe_contact
+      to: 'on'
+  action:
     - service: timer.cancel
       data:
         entity_id: timer.korytarz
@@ -20,81 +41,125 @@
     event_type: timer.finished
     event_data:
       entity_id: timer.korytarz
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'on'
   action:
     - service: light.turn_off
       data:
         entity_id: group.korytarz_lampy
+#    - service: tts.google_say
+#      entity_id: media_player.tv
+#      data:
+#        message: 'Nobody here, going sleep'
 
 - alias: 'Otwarcie drzwi wejściowych'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x00158d00020b7b77
+    entity_id: binary_sensor.drzwi_wejsciowe_contact
     to: 'on'
   condition:
     - condition: time
       after: '05:00:00'
       before: '23:59:59'
+    - condition: state
+      entity_id: group.mobiledevices
+      state: not_home
   action:
     - service: notify.mypushbullet
       data_template:
-        title: 'Korytarz'
+        title: 'Korytarz drzwi'
         message: |
-          {{now().strftime("%a %b %d %H:%M:%S %p")}}
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Drzwi wejściowe zostały otwarte.
-    - service: light.turn_on
-      data:
-        entity_id: group.korytarz_lampy
-    - service: timer.cancel
-      data:
-        entity_id: timer.korytarz
-    - service: timer.start
-      data:
-        entity_id: timer.korytarz
-
-- alias: 'Wygaszanie światła korytarz'
-  trigger:
-    platform: time
-    minutes: '/1'
-    seconds: 00
-  condition:
-  - condition: state
-    entity_id: light.yeelight_ceiling_7811dcab824a
-    state: 'on'
-  - condition: time
-    after: '21:00:00'
-    before: '23:59:00'
-  action:
-  - service: light.turn_on
-    entity_id: light.yeelight_ceiling_7811dcab824a
-    data_template:
-      brightness: '{{states.light.yeelight_ceiling_7811dcab824a.attributes.brightness|int - 10}}'
 
 - alias: 'Chillout mode on'
   trigger:
     - platform: state
       entity_id: input_boolean.jasiu_chillout
       to: 'on'
+    - platform: state
+      entity_id: input_boolean.sypialnia_chillout
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'on'
   action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.moonlight
-    - service: light.turn_on
-      entity_id: light.yeelight_ceiling_7811dcab824a
-      data_template:
-        brightness: 10
-    - service: light.turn_off
-      entity_id: light.yeelight_ceiling_7811dcab824a
+    - service: script.moonlight_korytarz_on
 
 - alias: 'Chillout mode off'
   trigger:
     - platform: state
       entity_id: input_boolean.jasiu_chillout
       to: 'off'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.moonlight
-    - service: light.turn_on
+    - platform: state
+      entity_id: input_boolean.sypialnia_chillout
+      to: 'off'
+  condition:
+    - condition: state
       entity_id: light.yeelight_ceiling_7811dcab824a
-      data_template:
-        brightness: 254
+      state: 'on'
+  action:
+    - service: script.moonlight_korytarz_off
+
+- alias: 'Chillout mode on when first time lights turn on'
+  trigger:
+    - platform: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      to: 'on'
+  condition:
+    - condition: template
+      value_template: "{{ state_attr('light.yeelight_ceiling_7811dcab824a', 'brightness') > 100 }}"
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_boolean.sypialnia_chillout
+          state: 'on'
+        - condition: state
+          entity_id: input_boolean.jasiu_chillout
+          state: 'on'
+  action:
+    - service: script.moonlight_korytarz_on
+
+- alias: 'Chillout mode off when first time lights turn on'
+  trigger:
+    - platform: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.jasiu_chillout
+      state: 'off'
+    - condition: template
+      value_template: "{{ state_attr('light.yeelight_ceiling_7811dcab824a', 'brightness') < 100 }}"
+  action:
+    - service: script.moonlight_korytarz_off
+
+- alias: 'Moonlight switch on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.moonlight_korytarz
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'on'
+  action:
+    - service: script.moonlight_korytarz_on
+
+- alias: 'Moonlight switch off'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.moonlight_korytarz
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: light.yeelight_ceiling_7811dcab824a
+      state: 'on'
+  action:
+    - service: script.moonlight_korytarz_off

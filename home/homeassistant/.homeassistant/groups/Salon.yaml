@@ -1,8 +1,0 @@
-view: yes
-entities:
-  - binary_sensor.0x00158d000205b35f
-  - media_player.kd75xf9005
-  - vacuum.zmietekv2
-  - group.salon_przelaczniki
-  - group.salon_lampy
-  - group.dafang
