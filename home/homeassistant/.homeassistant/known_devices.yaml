@@ -536,3 +536,27 @@ android_f481f0d623e67c4f:
   name: android-f481f0d623e67c4f
   picture:
   track: false
+
+ping_kate:
+  hide_if_away: true
+  icon:
+  mac:
+  name: ping kate
+  picture:
+  track: false
+
+ping_zene:
+  hide_if_away: true
+  icon:
+  mac:
+  name: ping zene
+  picture:
+  track: false
+
+sonoff_basic_2_2706:
+  hide_if_away: true
+  icon:
+  mac: DC:4F:22:0E:4A:92
+  name: sonoff-basic-2-2706
+  picture:
+  track: false
