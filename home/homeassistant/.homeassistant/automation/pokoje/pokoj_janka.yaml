@@ -132,12 +132,12 @@
       data:
         entity_id: climate.pokoj_janka
         away_mode: 'on'
-#    - service: notify.mypushbullet
-#      data_template:
-#        title: 'Ogrzewanie przykręcone w pokóju Janka'
-#        message: |
-#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-#          Ogrzewanie przykręcone w pokóju Janka
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w pokóju Janka'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w pokóju Janka
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
   trigger:
@@ -149,12 +149,12 @@
       data:
         entity_id: climate.pokoj_janka
         away_mode: 'off'
-#    - service: notify.mypushbullet
-#      data_template:
-#        title: 'Ogrzewanie przywrócone w pokóju Janka'
-#        message: |
-#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-#          Ogrzewanie przywrócone w pokóju Janka
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w pokóju Janka'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w pokóju Janka
 
 - alias: 'Zgaś światło w pokoju Janka gdy chillout mode on'
   trigger:
