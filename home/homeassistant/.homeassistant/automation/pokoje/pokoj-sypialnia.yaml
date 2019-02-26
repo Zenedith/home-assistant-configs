@@ -188,12 +188,12 @@
       data:
         entity_id: climate.sypialnia
         away_mode: 'on'
-#    - service: notify.mypushbullet
-#      data_template:
-#        title: 'Ogrzewanie przykręcone w sypialni'
-#        message: |
-#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-#          Ogrzewanie przykręcone w sypialni
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w sypialni'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w sypialni
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
   trigger:
@@ -205,9 +205,9 @@
       data:
         entity_id: climate.sypialnia
         away_mode: 'off'
-#    - service: notify.mypushbullet
-#      data_template:
-#        title: 'Ogrzewanie przywrócone w sypialni'
-#        message: |
-#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-#          Ogrzewanie przywrócone w sypialni
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w sypialni'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w sypialni
