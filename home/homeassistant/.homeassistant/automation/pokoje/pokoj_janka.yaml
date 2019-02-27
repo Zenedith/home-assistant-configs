@@ -25,8 +25,9 @@
 
 - alias: 'Bedside Jan on'
   trigger:
-    platform: time
-    at: '16:30:00'
+    platform: sun
+    event: sunset
+    offset: '+00:00:00'
   condition:
     - condition: state
       entity_id: light.yeelight_bedside_7c49eb284fda
@@ -44,21 +45,13 @@
 
 - alias: 'Bedside Jan off'
   trigger:
-    platform: time
-    at: '08:00:00'
+    platform: sun
+    event: sunset
+    offset: '+00:00:00'
   action:
     - service: light.turn_off
       data:
         entity_id: light.yeelight_bedside_7c49eb284fda
-
-- alias: 'Lampa Jan off'
-  trigger:
-    platform: time
-    at: '22:30:00'
-  action:
-  - service: light.turn_off
-    data:
-      entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
   trigger:

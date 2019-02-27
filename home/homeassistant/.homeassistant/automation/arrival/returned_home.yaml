@@ -19,6 +19,4 @@
         entity_id: input_select.presence_status
         option: Just Returned
     - service: script.climate_on
-    - service: light.turn_on
-      data:
-        entity_id: light.yeelight_bedside_7c49eb284fda
+
