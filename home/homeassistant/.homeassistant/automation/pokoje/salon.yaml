@@ -102,8 +102,9 @@
 
 - alias: 'Ambient tv on'
   trigger:
-    platform: time
-    at: '16:10:00'
+    platform: sun
+    event: sunset
+    offset: '+00:00:00'
   action:
     - service: light.turn_on
       data:
@@ -134,9 +135,6 @@
       - mon
       - wed
       - fri
-    - condition: state
-      entity_id: vacuum.zmietekv2
-      state: 'docked'
   action:
     - service: vacuum.start
       data:
