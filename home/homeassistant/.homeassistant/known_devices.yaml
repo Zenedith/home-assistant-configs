@@ -560,3 +560,11 @@ sonoff_basic_2_2706:
   name: sonoff-basic-2-2706
   picture:
   track: false
+
+chromecast:
+  hide_if_away: true
+  icon:
+  mac: 54:60:09:F7:88:3A
+  name: Chromecast
+  picture:
+  track: false
