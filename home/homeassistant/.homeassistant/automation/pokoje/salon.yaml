@@ -193,3 +193,17 @@
     - service: switch.turn_off
       data:
         entity_id: switch.zmietek
+
+- alias: 'Włącz listwę przy włączeniu tv'
+  trigger:
+    - platform: state
+      entity_id: media_player.sony_bravia_tv
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_rtv
+      state: 'off'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_rtv

@@ -37,6 +37,8 @@ cards:
           - automation.chillout_mode_on_when_first_time_lights_turn_on
           - automation.moonlight_switch_on
           - automation.moonlight_switch_off
+  - type: vertical-stack
+    cards:
       - type: entities
         title: Pokój Janka
         show_header_toggle: false
@@ -64,6 +66,8 @@ cards:
           - automation.zalanie_kuchni
           - automation.wlacz_ladowanie_zmietka_po_sprzataniu
           - automation.wylacz_ladowanie_zmietka_przy_100_baterii
+  - type: vertical-stack
+    cards:
       - type: entities
         title: Sypialnia
         show_header_toggle: false
