@@ -25,6 +25,14 @@ cards:
               red: 4
           - type: gauge
             unit: '%'
+            entity: sensor.zmietekv2_battery
+            name: Zmietek
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
             entity: sensor.kuchnia_temp_battery
             name: Kuchnia temperatura
             severity:
@@ -59,6 +67,14 @@ cards:
               red: 15
           - type: gauge
             unit: '%'
+            entity: sensor.okno_sypialnia_contact_battery
+            name: Sypialnia okno
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
             entity: sensor.lazienka_motion_battery
             name: Łazienka ruch
             severity:
@@ -77,14 +93,6 @@ cards:
             unit: '%'
             entity: sensor.okno_janek_contact_battery
             name: Pokój janka okno
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.okno_sypialnia_contact_battery
-            name: Sypialnia okno
             severity:
               green: 90
               yellow: 45
@@ -135,14 +143,6 @@ cards:
             unit: '%'
             entity: sensor.lazienka_leak_battery
             name: Zalanie pralka
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.zmietekv2_battery
-            name: Zmietek
             severity:
               green: 90
               yellow: 45
