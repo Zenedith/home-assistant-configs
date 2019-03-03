@@ -3,145 +3,151 @@ icon: mdi:battery
 panel: true
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
-      - type: gauge
-        unit: '%'
-        entity: sensor.climate_pokoj_janka_battery
-        name: Pokój janka grzejnik
-        severity:
-          green: 90
-          yellow: 45
-          red: 4
-      - type: gauge
-        unit: '%'
-        entity: sensor.climate_sypialnia_battery
-        name: Sypialnia grzejnik
-        severity:
-          green: 90
-          yellow: 45
-          red: 4
-      - type: gauge
-        unit: '%'
-        entity: sensor.kuchnia_temp_battery
-        name: Kuchnia temperatura
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.korytarz_temp_battery
-        name:  Korytrz temperatura
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.drzwi_balkonowe_contact_battery
-        name: Drzwi balkonowe
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-  - type: vertical-stack
+      - type: vertical-stack
+        cards:
+          - type: gauge
+            unit: '%'
+            entity: sensor.climate_pokoj_janka_battery
+            name: Pokój janka grzejnik
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
+          - type: gauge
+            unit: '%'
+            entity: sensor.climate_sypialnia_battery
+            name: Sypialnia grzejnik
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
+          - type: gauge
+            unit: '%'
+            entity: sensor.kuchnia_temp_battery
+            name: Kuchnia temperatura
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.korytarz_temp_battery
+            name:  Korytrz temperatura
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.drzwi_balkonowe_contact_battery
+            name: Drzwi balkonowe
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+  - type: horizontal-stack
     cards:
-      - type: gauge
-        unit: '%'
-        entity: sensor.sypialnia_motion_battery
-        name: Sypialnia ruch
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.lazienka_motion_battery
-        name: Łazienka ruch
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.korytarz_motion_battery
-        name: Korytarz ruch
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.okno_janek_contact_battery
-        name: Pokój janka okno
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.okno_sypialnia_contact_battery
-        name: Sypialnia okno
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.janek_motion_battery
-        name: Pokój janka ruch
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-  - type: vertical-stack
+      - type: vertical-stack
+        cards:
+          - type: gauge
+            unit: '%'
+            entity: sensor.sypialnia_motion_battery
+            name: Sypialnia ruch
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.lazienka_motion_battery
+            name: Łazienka ruch
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.korytarz_motion_battery
+            name: Korytarz ruch
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.okno_janek_contact_battery
+            name: Pokój janka okno
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.okno_sypialnia_contact_battery
+            name: Sypialnia okno
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.janek_motion_battery
+            name: Pokój janka ruch
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+  - type: horizontal-stack
     cards:
-      - type: gauge
-        unit: '%'
-        entity: sensor.drzwi_wejsciowe_contact_battery
-        name: Drzwi wejściowe
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.drzwi_lazienka_contact_battery
-        name: Drzwi łazienka
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.drzwi_toaleta_contact_battery
-        name: Drzwi toaleta
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.kuchnia_leak_battery
-        name: Zalanie zmywarka
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.lazienka_leak_battery
-        name: Zalanie pralka
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
-      - type: gauge
-        unit: '%'
-        entity: sensor.zmietekv2_battery
-        name: Zmietek
-        severity:
-          green: 90
-          yellow: 45
-          red: 15
+      - type: vertical-stack
+        cards:
+          - type: gauge
+            unit: '%'
+            entity: sensor.drzwi_wejsciowe_contact_battery
+            name: Drzwi wejściowe
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.drzwi_lazienka_contact_battery
+            name: Drzwi łazienka
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.drzwi_toaleta_contact_battery
+            name: Drzwi toaleta
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.kuchnia_leak_battery
+            name: Zalanie zmywarka
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.lazienka_leak_battery
+            name: Zalanie pralka
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.zmietekv2_battery
+            name: Zmietek
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
