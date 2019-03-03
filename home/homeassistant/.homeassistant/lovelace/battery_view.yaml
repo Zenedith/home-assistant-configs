@@ -47,8 +47,6 @@ cards:
               green: 90
               yellow: 45
               red: 15
-  - type: horizontal-stack
-    cards:
       - type: vertical-stack
         cards:
           - type: gauge
@@ -99,8 +97,6 @@ cards:
               green: 90
               yellow: 45
               red: 15
-  - type: horizontal-stack
-    cards:
       - type: vertical-stack
         cards:
           - type: gauge
