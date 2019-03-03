@@ -204,6 +204,6 @@
       entity_id: switch.listwa_rtv
       state: 'off'
   action:
-    - service: switch.turn_off
+    - service: switch.turn_on
       data:
         entity_id: switch.listwa_rtv
