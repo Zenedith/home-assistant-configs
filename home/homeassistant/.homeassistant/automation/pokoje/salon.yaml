@@ -208,10 +208,14 @@
       data:
         entity_id: switch.listwa_rtv
 
+
 - alias: 'Włącz ampli przy włączonej listwie i tv'
   trigger:
     - platform: state
       entity_id: switch.listwa_rtv
+      to: 'on'
+    - platform: state
+      entity_id: media_player.sony_bravia_tv
       to: 'on'
   condition:
     - condition: state
