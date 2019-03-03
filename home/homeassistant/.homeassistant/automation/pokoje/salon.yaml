@@ -219,8 +219,8 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: media_player.sony_bravia_tv
-      state: 'on'
+      entity_id: input_boolean.broadlink_denon_receiver
+      state: 'off'
   action:
     - delay: 00:00:02
     - service: input_boolean.turn_on
@@ -232,6 +232,10 @@
     - platform: state
       entity_id: media_player.sony_bravia_tv
       to: 'off'
+  condition:
+    - condition: state
+      entity_id: input_boolean.broadlink_denon_receiver
+      state: 'on'
   action:
     - service: input_boolean.turn_off
       data:
