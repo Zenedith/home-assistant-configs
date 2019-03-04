@@ -217,7 +217,7 @@
     - condition: state
       entity_id: input_boolean.broadlink_denon_receiver
       state: 'off'
-    - platform: state
+    - condition: state
       entity_id: media_player.sony_bravia_tv
       to: 'on'
   action:
