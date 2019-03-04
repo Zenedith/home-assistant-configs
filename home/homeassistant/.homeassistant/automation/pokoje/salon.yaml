@@ -219,7 +219,7 @@
       state: 'off'
     - condition: state
       entity_id: media_player.sony_bravia_tv
-      to: 'on'
+      state: 'on'
   action:
     - delay: 00:00:02
     - service: input_boolean.turn_on
