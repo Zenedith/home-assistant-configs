@@ -235,9 +235,6 @@
     - condition: state
       entity_id: input_boolean.broadlink_denon_receiver
       state: 'off'
-    - platform: state
-      entity_id: switch.listwa_rtv
-      to: 'on'
   action:
     - service: input_boolean.turn_on
       data:
