@@ -208,12 +208,26 @@
       data:
         entity_id: switch.listwa_rtv
 
-
-- alias: 'Włącz ampli przy włączonej listwie i tv'
+- alias: 'Włącz ampli przy włączaniu listwy i wlaczonym tv'
   trigger:
     - platform: state
       entity_id: switch.listwa_rtv
       to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.broadlink_denon_receiver
+      state: 'off'
+    - platform: state
+      entity_id: media_player.sony_bravia_tv
+      to: 'on'
+  action:
+    - delay: 00:00:02
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.broadlink_denon_receiver
+
+- alias: 'Włącz ampli przy włączonej listwie i wlaczaniu tv'
+  trigger:
     - platform: state
       entity_id: media_player.sony_bravia_tv
       to: 'on'
@@ -221,8 +235,10 @@
     - condition: state
       entity_id: input_boolean.broadlink_denon_receiver
       state: 'off'
+    - platform: state
+      entity_id: switch.listwa_rtv
+      to: 'on'
   action:
-    - delay: 00:00:02
     - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.broadlink_denon_receiver
