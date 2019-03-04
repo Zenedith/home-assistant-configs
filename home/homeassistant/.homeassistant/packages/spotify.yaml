@@ -50,6 +50,9 @@ input_select:
   spotify_playlist:
     name: 'Playlist:'
     options:
+      - 'Feel good dinner'
+      - 'filmowa'
+      - 'Good Feeling'
       - 'Muzyka do pracy'
       - 'Zimowy power'
       - 'Songs to Sing in the Car'
@@ -57,8 +60,6 @@ input_select:
       - '#party #hard - Samuel Jarosiński'
       - 'Rammstein - Best of'
       - 'Mixed Rock'
-      - 'filmowa'
-      - 'Good Feeling'
       - 'Nightair'
       - 'Streetbangers'
       - 'Cinematic Chill-Out'
@@ -88,8 +89,7 @@ input_select:
       - 'The stress buster'
       - 'Sweet songs for sunny days'
       - 'Seize the day'
-      - 'My list'
-      - 'Feel good dinner'
+      - 'Dawnlord list'
       - 'Soulful dinner'
     icon: mdi:spotify
   spotify_source:
@@ -162,7 +162,7 @@ script:
             {% elif is_state("input_select.spotify_playlist", "The stress buster") %} spotify:user:spotify:playlist:37i9dQZF1DWUvQoIOFMFUT
             {% elif is_state("input_select.spotify_playlist", "Sweet songs for sunny days") %} spotify:user:spotify:playlist:37i9dQZF1DX1BzILRveYHb
             {% elif is_state("input_select.spotify_playlist", "Seize the day") %} spotify:album:4B4nVmQZWZ44Y4yzLDa5n1
-            {% elif is_state("input_select.spotify_playlist", "My list") %} spotify:user:dawnlord:playlist:6YrwtfevNdgc44vI2HiO5j
+            {% elif is_state("input_select.spotify_playlist", "Dawnlord list") %} spotify:user:dawnlord:playlist:6YrwtfevNdgc44vI2HiO5j
             {% elif is_state("input_select.spotify_playlist", "Feel good dinner") %} spotify:user:spotify:playlist:37i9dQZF1DXbm6HfkbMtFZ
             {% elif is_state("input_select.spotify_playlist", "Soulful dinner") %} spotify:user:spotify:playlist:37i9dQZF1DWZheHO7xislj
             {% endif %}
