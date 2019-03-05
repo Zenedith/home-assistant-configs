@@ -568,3 +568,19 @@ chromecast:
   name: Chromecast
   picture:
   track: false
+
+nova_0495e6453800:
+  hide_if_away: true
+  icon:
+  mac: 04:95:E6:45:38:07
+  name: NOVA-0495e6453800
+  picture:
+  track: false
+
+nova_0495e6453800_2:
+  hide_if_away: true
+  icon:
+  mac: 04:95:E6:45:38:00
+  name: NOVA-0495e6453800
+  picture:
+  track: false
