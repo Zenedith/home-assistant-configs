@@ -96,8 +96,9 @@ input_select:
     name: 'Source:'
     options:
       - tv
-      - 'Zenedith-macbook'
-      - 'Zene iPhone'
+#      - 'Zenedith-macbook'
+#      - 'Zene iPhone'
+      - Sypialnia
     initial: tv
     icon: mdi:speaker-wireless
 
@@ -115,8 +116,8 @@ script:
           entity_id: media_player.spotify
           source: >
             {% if is_state("input_select.spotify_source", "tv") %} tv
-#            {% elif is_state("input_select.spotify_source", "Zenedith-macbook") %} Zenedith-macbook
-#            {% elif is_state("input_select.spotify_source", "Zene iPhone") %} Zene iPhone
+            {% elif is_state("input_select.spotify_source", "Zenedith-macbook") %} Zenedith-macbook
+            {% elif is_state("input_select.spotify_source", "Zene iPhone") %} Zene iPhone
             {% elif is_state("input_select.spotify_source", "Sypialnia") %} Sypialnia
             {% endif %}
       - service: media_player.play_media
