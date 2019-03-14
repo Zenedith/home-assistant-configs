@@ -222,6 +222,7 @@
       entity_id: media_player.sony_bravia_tv
       state: 'on'
   action:
+    - delay: 00:00:10
     - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.broadlink_denon_receiver
