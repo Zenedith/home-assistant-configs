@@ -194,7 +194,7 @@
       data:
         entity_id: switch.zmietek
 
-- alias: 'Włącz listwę przy włączeniu tv'
+- alias: 'Włącz listwę i ampli przy włączeniu tv'
   trigger:
     - platform: state
       entity_id: media_player.sony_bravia_tv
@@ -207,6 +207,10 @@
     - service: switch.turn_on
       data:
         entity_id: switch.listwa_rtv
+    - delay: 00:00:02
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.broadlink_denon_receiver
 
 - alias: 'Włącz ampli przy włączaniu listwy i wlaczonym tv'
   trigger:
@@ -215,13 +219,9 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: input_boolean.broadlink_denon_receiver
-      state: 'off'
-    - condition: state
       entity_id: media_player.sony_bravia_tv
       state: 'on'
   action:
-    - delay: 00:00:02
     - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.broadlink_denon_receiver
