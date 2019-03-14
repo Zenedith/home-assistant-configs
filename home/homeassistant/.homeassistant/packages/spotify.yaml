@@ -115,8 +115,9 @@ script:
           entity_id: media_player.spotify
           source: >
             {% if is_state("input_select.spotify_source", "tv") %} tv
-            {% elif is_state("input_select.spotify_source", "Zenedith-macbook") %} Zenedith-macbook
-            {% elif is_state("input_select.spotify_source", "Zene iPhone") %} Zene iPhone
+#            {% elif is_state("input_select.spotify_source", "Zenedith-macbook") %} Zenedith-macbook
+#            {% elif is_state("input_select.spotify_source", "Zene iPhone") %} Zene iPhone
+            {% elif is_state("input_select.spotify_source", "Sypialnia") %} Sypialnia
             {% endif %}
       - service: media_player.play_media
         data_template:
