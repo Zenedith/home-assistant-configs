@@ -273,3 +273,5 @@ google_assistant:
       expose: false
     switch.dafang_yellow_led:
       expose: false
+
+stream:
