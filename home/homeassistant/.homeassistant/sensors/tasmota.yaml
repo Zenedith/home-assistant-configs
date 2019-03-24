@@ -36,7 +36,7 @@
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Rtv Jan Version"
-  state_topic: "zigbee2mqtt/sonoff5/STATUS2"
+  state_topic: "basic/sonoff-rtv-jan/cmnd/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Pralka Version"
