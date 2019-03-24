@@ -46,8 +46,8 @@
 - alias: 'Bedside Jan off'
   trigger:
     platform: sun
-    event: sunset
-    offset: '+00:00:00'
+    event: sunrise
+    offset: '+00:30:00'
   action:
     - service: light.turn_off
       data:
