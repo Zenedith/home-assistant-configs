@@ -89,8 +89,8 @@ class TasmotaTrackerCard extends HTMLElement {
       <div id='content'>
       </div>
       <div class='button'>
-        <paper-button raised id='update_tasmota'>` + cardConfig.update_all_text + `</paper-button>
-        <paper-button raised id='check_tasmota'>` + cardConfig.check_text + `</paper-button>
+        <mwc-button raised id='update_tasmota'>` + cardConfig.update_all_text + `</mwc-button>
+        <mwc-button raised id='check_tasmota'>` + cardConfig.check_text + `</mwc-button>
       </div>
     `;
     card.header = cardConfig.title
