@@ -136,7 +136,7 @@ class TasmotaTrackerCard extends HTMLElement {
         // attach handlers only once
         if (!this.handlers['tasmota_custom_updater']) {
           card.querySelector('#update_tasmota').addEventListener('click', event => {
-            this.myhass.callService('script', config.check_script, {});
+            this.myhass.callService('script', config.upgrade_script, {});
           });
           card.querySelector('#check_tasmota').addEventListener('click', event => {
             this.myhass.callService('script', config.check_script, {});
