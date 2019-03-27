@@ -136,6 +136,10 @@
       - wed
       - fri
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.zmietek
+    - delay: 00:00:30
     - service: vacuum.start
       data:
         entity_id: vacuum.zmietekv2
