@@ -58,24 +58,24 @@
       data:
         entity_id: switch.listwa_rtv
 
-- alias: 'Listwa RTV on'
-  trigger:
-    platform: time
-    at: '16:30:00'
-  condition:
-    - condition: state
-      entity_id: switch.listwa_rtv
-      state: 'off'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.listwa_rtv
-    - service: notify.mypushbullet
-      data_template:
-        title: "Listwa RTV salon on"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Listwa on
+#- alias: 'Listwa RTV on'
+#  trigger:
+#    platform: time
+#    at: '16:30:00'
+#  condition:
+#    - condition: state
+#      entity_id: switch.listwa_rtv
+#      state: 'off'
+#  action:
+#    - service: switch.turn_on
+#      data:
+#        entity_id: switch.listwa_rtv
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: "Listwa RTV salon on"
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Listwa on
 
 - alias: 'Listwa RTV (weekend) on'
   trigger:
@@ -100,11 +100,11 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa on
 
-- alias: 'Ambient tv on'
+- alias: 'Ambient on'
   trigger:
     platform: sun
     event: sunset
-    offset: '+00:00:00'
+    offset: '-00:01:00'
   action:
     - service: light.turn_on
       data:
@@ -113,7 +113,7 @@
       data:
         entity_id: light.yeelight_strip_7811dce2d84e
 
-- alias: 'Ambient tv off'
+- alias: 'Ambient off'
   trigger:
     platform: time
     at: '02:04:00'

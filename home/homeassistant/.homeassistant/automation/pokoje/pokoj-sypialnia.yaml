@@ -25,12 +25,16 @@
 
 - alias: 'Listwa sypialnia on'
   trigger:
-    platform: time
-    at: '20:00:00'
+    - platform: state
+      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      to: 'on'
   condition:
     - condition: state
       entity_id: switch.listwa_sypialnia
       state: 'off'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
   action:
     - service: switch.turn_on
       data:

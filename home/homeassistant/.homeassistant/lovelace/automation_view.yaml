@@ -55,10 +55,9 @@ cards:
         title: Salon
         show_header_toggle: false
         entities:
-          - automation.ambient_tv_on
-          - automation.ambient_tv_off
+          - automation.ambient_on
+          - automation.ambient_off
           - automation.dafang_motion_detected
-          - automation.listwa_rtv_on
           - automation.listwa_rtv_off
           - automation.zmietek_start
           - automation.zmietek_docked
