@@ -25,6 +25,10 @@ sequence:
       payload: "1"
   - service: mqtt.publish
     data:
+      topic: 'zigbee2mqtt/powr2_2/cmnd/upgrade'
+      payload: "1"
+  - service: mqtt.publish
+    data:
       topic: 'incan/incan1/cmnd/upgrade'
       payload: "1"
   - service: mqtt.publish

@@ -19,7 +19,7 @@ cards:
               - entity: switch.listwa_sypialnia
               - entity: input_boolean.sypialnia_chillout
               - entity: input_boolean.sypialnia_korki
-              - entity: automation.wlacz_swiatlo_w_sypialni_gdy_ruch
+              - entity: w.wlacz_swiatlo_w_sypialni_gdy_ruch
       - type: vertical-stack
         cards:
           - type: light
