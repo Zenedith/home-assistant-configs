@@ -18,6 +18,7 @@ cards:
             entities:
               - entity: switch.rtv_jan
               - entity: input_boolean.jasiu_chillout
+              - entity: automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
       - type: vertical-stack
         cards:
           - type: light

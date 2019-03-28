@@ -59,9 +59,9 @@
       entity_id: binary_sensor.janek_motion_occupancy
       to: 'on'
   condition:
-    - condition: time
-      after: '15:00:00'
-      before: '23:59:59'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
     - condition: state
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
@@ -79,9 +79,9 @@
       entity_id: binary_sensor.janek_motion_occupancy
       to: 'on'
   condition:
-    - condition: time
-      after: '15:00:00'
-      before: '23:59:59'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
     - condition: state
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
