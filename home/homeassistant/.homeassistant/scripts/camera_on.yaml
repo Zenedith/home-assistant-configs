@@ -1,4 +1,4 @@
 sequence:
   - service: switch.turn_on
     data:
-      entity_id: switch.kamera
+      entity_id: switch.listwa_salon_slot_4
