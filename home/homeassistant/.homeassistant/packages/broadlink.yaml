@@ -1,15 +1,15 @@
-#switch:
-#  - platform: broadlink
-#    friendly_name: broadlink
-#    timeout: 15
-#    host: 192.168.1.163
-#    mac: '78:0F:77:D9:23:FA'
-#    type: rm_mini
-#    switches:
-#      denon_volume:
-#        friendly_name: "Denon volume"
-#        command_on: "JgCIAAkZDDkLGAsXCxgLOgsXCxkKGAo7CjsKOwo7ChgLGAsABZ0OFwg9CBoJGggaCRoJPAg9CTwIGgkaCRoJGQk8CzoJAAWhChkJPAkaCRkKGQk8CBoKGQkZCjsKOw04CT0JGQoZCgAFoAoYCzoLGAsXCxkKGAo7CjsKOQ4XChgLGAoZCjoLOgsADQU="
-#        command_off: "JgCIAAoYCjsLGAgaChkIGwk8CBoJGgo7CD0IPQk8CBoJGggABaIJGQo7CxgKGAkaCjsLGAk8CTwIGgoZCRkJGgg9CD0IAAWiCRkKOw0WCRoJGQoZCTwKGAoZCD0MOQg9CD0IGwkZCgAFoAoZCjsJGQoZCRkKOwkaCTwKOwkZCxgKGQkZCzoKOwoADQU="
+switch:
+  - platform: broadlink
+    friendly_name: broadlink
+    timeout: 15
+    host: 192.168.1.163
+    mac: '78:0F:77:D9:23:FA'
+    type: rm_mini
+    switches:
+      denon_volume:
+        friendly_name: "Denon volume"
+        command_on: "JgCIAAkZDDkLGAsXCxgLOgsXCxkKGAo7CjsKOwo7ChgLGAsABZ0OFwg9CBoJGggaCRoJPAg9CTwIGgkaCRoJGQk8CzoJAAWhChkJPAkaCRkKGQk8CBoKGQkZCjsKOw04CT0JGQoZCgAFoAoYCzoLGAsXCxkKGAo7CjsKOQ4XChgLGAoZCjoLOgsADQU="
+        command_off: "JgCIAAoYCjsLGAgaChkIGwk8CBoJGgo7CD0IPQk8CBoJGggABaIJGQo7CxgKGAkaCjsLGAk8CTwIGgoZCRkJGgg9CD0IAAWiCRkKOw0WCRoJGQoZCTwKGAoZCD0MOQg9CD0IGwkZCgAFoAoZCjsJGQoZCRkKOwkaCTwKOwkZCxgKGQkZCzoKOwoADQU="
 #      tv_volume:
 #        friendly_name: "Tv volume"
 #        command_on: "JgBUAFASFhIpEhUSFhIpEhUSFRIpEhYSFRIVEhYAA2NQEhYSKRIVEhUSKRIWEhUSKRIWERYSFRIWAANkUBIWEikSFRIVEikSFhIVEikSFRIWEhUSFQANBQAAAAA="
