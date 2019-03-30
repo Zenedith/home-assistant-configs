@@ -256,7 +256,8 @@ cards:
           type: entities
           show_header_toggle: false
           entities:
-            - input_boolean.broadlink_denon_receiver
+#            - input_boolean.broadlink_denon_receiver
+            - switch.listwa_salon_slot_1
             - switch.denon_volume
         style:
           background-image: url("/local/lovelace/cardbackK.png")
