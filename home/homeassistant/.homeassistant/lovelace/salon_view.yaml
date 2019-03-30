@@ -88,14 +88,24 @@ cards:
     cards:
       - type: custom:card-modder
         card:
-          type: picture-entity
-          entity: switch.listwa_rtv
-          name: Listwa RTV
-          tap_action:
-            action: toggle
-#          image: /local/lovelace/downstairs/tv-switch_1.jpg
-          image: /local/lovelace/salon/rtv800.jpg
+          type: entities
+          show_header_toggle: false
+          entities:
+            - entity: switch.listwa_salon_slot_usb
+              name: USB
+            - entity: switch.listwa_salon_slot_1
+              name: Denon
+            - entity: switch.listwa_salon_slot_2
+              name: Playstation 4
+            - entity: switch.listwa_salon_slot_3
+              name: Xbox One S
+            - entity: switch.listwa_salon_slot_4
+              name: Kamera
         style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -248,11 +258,6 @@ cards:
           entities:
             - input_boolean.broadlink_denon_receiver
             - switch.denon_volume
-            - switch.listwa_salon_slot_usb
-            - switch.listwa_salon_slot_1
-            - switch.listwa_salon_slot_2
-            - switch.listwa_salon_slot_3
-            - switch.listwa_salon_slot_4
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
