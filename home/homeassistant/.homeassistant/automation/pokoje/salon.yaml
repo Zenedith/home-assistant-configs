@@ -30,7 +30,7 @@
     at: '02:00:00'
   condition:
     - condition: state
-      entity_id: switch.listwa_rtv
+      entity_id: switch.listwa_salon_slot_1
       state: 'on'
   action:
     - service: notify.mypushbullet
@@ -47,7 +47,7 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.listwa_rtv
+        entity_id: switch.listwa_salon_slot_1
 
 - alias: 'Listwa RTV off (for sure)'
   trigger:
@@ -56,7 +56,7 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.listwa_rtv
+        entity_id: switch.listwa_salon_slot_1
 
 #- alias: 'Listwa RTV on'
 #  trigger:
@@ -64,12 +64,12 @@
 #    at: '16:30:00'
 #  condition:
 #    - condition: state
-#      entity_id: switch.listwa_rtv
+#      entity_id: switch.listwa_salon_slot_1
 #      state: 'off'
 #  action:
 #    - service: switch.turn_on
 #      data:
-#        entity_id: switch.listwa_rtv
+#        entity_id: switch.listwa_salon_slot_1
 #    - service: notify.mypushbullet
 #      data_template:
 #        title: "Listwa RTV salon on"
@@ -87,12 +87,12 @@
         - sat
         - sun
     - condition: state
-      entity_id: switch.listwa_rtv
+      entity_id: switch.listwa_salon_slot_1
       state: 'off'
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.listwa_rtv
+        entity_id: switch.listwa_salon_slot_1
     - service: notify.mypushbullet
       data_template:
         title: "Listwa RTV salon on"
@@ -205,12 +205,12 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: switch.listwa_rtv
+      entity_id: switch.listwa_salon_slot_1
       state: 'off'
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.listwa_rtv
+        entity_id: switch.listwa_salon_slot_1
     - delay: 00:00:15
     - service: input_boolean.turn_on
       data:
@@ -219,7 +219,7 @@
 - alias: 'Włącz ampli przy włączaniu listwy i wlaczonym tv'
   trigger:
     - platform: state
-      entity_id: switch.listwa_rtv
+      entity_id: switch.listwa_salon_slot_1
       to: 'on'
   condition:
     - condition: state
