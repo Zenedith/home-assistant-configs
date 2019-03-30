@@ -9,7 +9,23 @@
         payload: ""
     - service: mqtt.publish
       data:
-        topic: 'listwa/listwa1/cmnd/POWER'
+        topic: 'listwa/listwa1/cmnd/POWER1'
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: 'listwa/listwa1/cmnd/POWER2'
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: 'listwa/listwa1/cmnd/POWER3'
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: 'listwa/listwa1/cmnd/POWER4'
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: 'listwa/listwa1/cmnd/POWER5'
         payload: ""
     - service: mqtt.publish
       data:
