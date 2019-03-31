@@ -30,7 +30,7 @@
     at: '02:00:00'
   condition:
     - condition: state
-      entity_id: switch.listwa_salon_slot_1
+      entity_id: switch.listwa_salon_slot_usb
       state: 'on'
   action:
     - service: notify.mypushbullet
@@ -47,7 +47,7 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.listwa_salon_slot_1
+        entity_id: switch.listwa_salon_slot_usb
 
 - alias: 'Listwa RTV off (for sure)'
   trigger:
@@ -56,7 +56,7 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.listwa_salon_slot_1
+        entity_id: switch.listwa_salon_slot_usb
 
 #- alias: 'Listwa RTV on'
 #  trigger:
@@ -87,12 +87,12 @@
         - sat
         - sun
     - condition: state
-      entity_id: switch.listwa_salon_slot_1
+      entity_id: switch.listwa_salon_slot_usb
       state: 'off'
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.listwa_salon_slot_1
+        entity_id: switch.listwa_salon_slot_usb
     - service: notify.mypushbullet
       data_template:
         title: "Listwa RTV salon on"

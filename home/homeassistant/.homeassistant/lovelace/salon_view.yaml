@@ -93,8 +93,8 @@ cards:
           entities:
             - entity: switch.listwa_salon_slot_usb
               name: USB
-            - entity: switch.listwa_salon_slot_1
-              name: Denon
+#            - entity: switch.listwa_salon_slot_1
+#              name: Denon
             - entity: switch.listwa_salon_slot_2
               name: Xbox One S
             - entity: switch.listwa_salon_slot_3
