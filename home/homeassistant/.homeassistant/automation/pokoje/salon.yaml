@@ -245,16 +245,16 @@
 #      data:
 #        entity_id: input_boolean.broadlink_denon_receiver
 #
-#- alias: 'Wyłącz ampli przy wyłączonym tv'
-#  trigger:
-#    - platform: state
-#      entity_id: media_player.sony_bravia_tv
-#      to: 'off'
-#  condition:
-#    - condition: state
-#      entity_id: input_boolean.broadlink_denon_receiver
-#      state: 'on'
-#  action:
-#    - service: input_boolean.turn_off
-#      data:
-#        entity_id: input_boolean.broadlink_denon_receiver
+- alias: 'Wyłącz ampli przy wyłączonym tv'
+  trigger:
+    - platform: state
+      entity_id: media_player.sony_bravia_tv
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_salon_slot_1
+      state: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_salon_slot_1
