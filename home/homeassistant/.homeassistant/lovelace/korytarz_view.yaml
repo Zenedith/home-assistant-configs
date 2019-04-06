@@ -24,4 +24,4 @@ cards:
           - type: light
             entity: light.yeelight_ceiling4_7c49ebb70c4a
           - type: light
-            entity: light.yeelight_ceiling_7811dcab824a
+            entity: light.yeelight_ceiling1_7811dcab824a

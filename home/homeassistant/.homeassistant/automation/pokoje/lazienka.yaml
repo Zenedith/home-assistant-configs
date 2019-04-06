@@ -5,12 +5,12 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling_7811dcab68e0
+      entity_id: light.yeelight_ceiling1_7811dcab68e0
       state: 'off'
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_ceiling_7811dcab68e0
+        entity_id: light.yeelight_ceiling1_7811dcab68e0
 
 - alias: 'Włącz timer w łazience gdy otwarte drzwi lub ruch'
   trigger:
@@ -34,13 +34,13 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_ceiling_7811dcab68e0
+        entity_id: light.yeelight_ceiling1_7811dcab68e0
 
 - alias: 'Wyzeruj timer w łazience gdy światło zgaszone'
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: light.yeelight_ceiling_7811dcab68e0
+      entity_id: light.yeelight_ceiling1_7811dcab68e0
       to: 'off'
   action:
     - service: timer.cancel

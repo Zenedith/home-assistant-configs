@@ -1,11 +1,11 @@
 sequence:
   - service: light.turn_on
-    entity_id: light.yeelight_ceiling_7811dcab824a
+    entity_id: light.yeelight_ceiling1_7811dcab824a
     data_template:
       brightness: 254
   - service: light.yeelight_set_mode
     data:
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.yeelight_ceiling1_7811dcab824a
       mode: normal
   - service: light.turn_on
     entity_id: light.yeelight_ceiling4_7c49ebb70c4a

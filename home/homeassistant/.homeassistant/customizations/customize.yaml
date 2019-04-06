@@ -8,13 +8,13 @@ light.yeelight_strip_7811dcda6e9e:
   friendly_name: Ambient Obraz
 light.yeelight_strip_7811dce2d84e:
   friendly_name: Ambient Regał
-light.yeelight_bedside_7c49eb284fda:
+light.yeelight_bslamp1_7c49eb284fda:
   friendly_name: bedside
 light.yeelight_ceiling3_04cf8c78d9f7:
   friendly_name: Yeelight Sypialnia
 light.swiatlo_sypialnia:
   friendly_name: Lampa Sypialnia
-light.yeelight_ceiling_7811dcab68e0:
+light.yeelight_ceiling1_7811dcab68e0:
   friendly_name: Lampa Łazienka
   icon: mdi:toilet
 light.yeelight_ceiling4_7c49ebb70c4a:
@@ -94,7 +94,7 @@ light.yeelight_color2_04cf8c7cc549:
   friendly_name: Salon 4
 light.yeelight_color2_7c49ebb76a3d:
   friendly_name: Salon 5
-light.yeelight_ceiling_7811dcab824a:
+light.yeelight_ceiling1_7811dcab824a:
   friendly_name: Lampa korytarz (drzwi)
 binary_sensor.drzwi_toaleta_contact:
   friendly_name: Drzwi
