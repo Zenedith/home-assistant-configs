@@ -59,7 +59,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.yeelight_strip_7811dce2d84e
+          entity: light.yeelight_strip1_7811dce2d84e
           name: Regał
           tap_action:
             action: toggle
@@ -73,7 +73,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.yeelight_strip_7811dcda6e9e
+          entity: light.yeelight_strip1_7811dcda6e9e
           name: Obraz
           tap_action:
             action: toggle

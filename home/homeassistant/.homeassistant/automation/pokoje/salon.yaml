@@ -108,10 +108,10 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_strip_7811dcda6e9e
+        entity_id: light.yeelight_strip1_7811dcda6e9e
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_strip_7811dce2d84e
+        entity_id: light.yeelight_strip1_7811dce2d84e
 
 - alias: 'Ambient off'
   trigger:
@@ -120,10 +120,10 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_strip_7811dcda6e9e
+        entity_id: light.yeelight_strip1_7811dcda6e9e
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_strip_7811dce2d84e
+        entity_id: light.yeelight_strip1_7811dce2d84e
 
 - alias: 'Zmietek start'
   trigger:
