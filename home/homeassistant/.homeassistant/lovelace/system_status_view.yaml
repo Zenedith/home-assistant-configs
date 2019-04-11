@@ -152,7 +152,6 @@ cards:
               type: glance
               columns: 2
               entities:
-                - sensor.holiday
                 - input_select.presence_status
             style:
               background-image: url("/local/lovelace/cardbackK.png")
