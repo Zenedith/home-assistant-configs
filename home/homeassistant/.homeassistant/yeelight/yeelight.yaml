@@ -47,3 +47,7 @@ devices:
     name: 'Lampa kuchnia 3'
     use_music_mode: false
     save_on_change: true
+  192.168.1.90:
+    name: 'Lampa Łazienka'
+    use_music_mode: false
+    save_on_change: true
