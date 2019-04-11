@@ -17,9 +17,6 @@ light.swiatlo_sypialnia:
 light.yeelight_ceiling1_7811dcab68e0:
   friendly_name: Lampa Łazienka
   icon: mdi:toilet
-light.yeelight_ceiling4_7c49ebb70c4a:
-  friendly_name: Lampa korytarz
-  supported_features: 3
 sensor.korytarz_motion_illuminance:
   friendly_name: Naświetlenie
 sensor.korytarz_motion_battery:
@@ -84,18 +81,7 @@ binary_sensor.drzwi_lazienka_contact:
   friendly_name: Drzwi
 sensor.drzwi_lazienka_contact_battery:
   friendly_name: Drzwi łazienka bateria
-light.yeelight_color2_04cf8c763997:
-  friendly_name: Salon 1
-light.yeelight_color2_04cf8c7bf2b3:
-  friendly_name: Salon 2
-light.yeelight_color2_04cf8c84a3ce:
-  friendly_name: Salon 3
-light.yeelight_color2_04cf8c7cc549:
-  friendly_name: Salon 4
-light.yeelight_color2_7c49ebb76a3d:
-  friendly_name: Salon 5
-light.yeelight_ceiling1_7811dcab824a:
-  friendly_name: Lampa korytarz (drzwi)
+
 binary_sensor.drzwi_toaleta_contact:
   friendly_name: Drzwi
 sensor.drzwi_toaleta_contact_battery:

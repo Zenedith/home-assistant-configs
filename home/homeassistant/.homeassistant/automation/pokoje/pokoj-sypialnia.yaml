@@ -160,7 +160,7 @@
       entity_id: light.yeelight_ceiling3_04cf8c78d9f7
       data_template:
         brightness: 254
-    - service: light.yeelight_set_mode
+    - service: yeelight.set_mode
       data:
         entity_id: light.yeelight_ceiling3_04cf8c78d9f7
         mode: normal

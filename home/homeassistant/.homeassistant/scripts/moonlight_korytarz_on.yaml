@@ -3,7 +3,7 @@ sequence:
     entity_id: light.yeelight_ceiling1_7811dcab824a
     data_template:
       brightness: 20
-  - service: light.yeelight_set_mode
+  - service: yeelight.set_mode
     data:
       entity_id: light.yeelight_ceiling1_7811dcab824a
       mode: moonlight
@@ -11,7 +11,7 @@ sequence:
     entity_id: light.yeelight_ceiling4_7c49ebb70c4a
     data_template:
       brightness: 20
-  - service: light.yeelight_set_mode
+  - service: yeelight.set_mode
     data:
       entity_id: light.yeelight_ceiling4_7c49ebb70c4a
       mode: moonlight
