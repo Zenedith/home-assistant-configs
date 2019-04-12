@@ -22,6 +22,6 @@ cards:
       - type: vertical-stack
         cards:
           - type: light
-            entity: light.yeelight_ceiling4_7c49ebb70c4a
+            entity: light.lampa_korytarz
           - type: light
-            entity: light.yeelight_ceiling1_7811dcab824a
+            entity: light.lampa_korytarz_drzwi

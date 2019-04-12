@@ -1,19 +1,19 @@
 sequence:
   - service: light.turn_on
-    entity_id: light.yeelight_ceiling1_7811dcab824a
+    entity_id: light.lampa_korytarz_drzwi
     data_template:
       brightness: 20
   - service: yeelight.set_mode
     data:
-      entity_id: light.yeelight_ceiling1_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       mode: moonlight
   - service: light.turn_on
-    entity_id: light.yeelight_ceiling4_7c49ebb70c4a
+    entity_id: light.lampa_korytarz
     data_template:
       brightness: 20
   - service: yeelight.set_mode
     data:
-      entity_id: light.yeelight_ceiling4_7c49ebb70c4a
+      entity_id: light.lampa_korytarz
       mode: moonlight
   - service: input_boolean.turn_on
     data:

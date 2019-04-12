@@ -30,12 +30,12 @@
     offset: '+00:00:00'
   condition:
     - condition: state
-      entity_id: light.yeelight_bslamp1_7c49eb284fda
+      entity_id: light.bedside
       state: 'off'
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_bslamp1_7c49eb284fda
+        entity_id: light.bedside
     - service: notify.mypushbullet
       data_template:
         title: 'Pokój janka bedside on'
@@ -51,7 +51,7 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_bslamp1_7c49eb284fda
+        entity_id: light.bedside
 
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
   trigger:

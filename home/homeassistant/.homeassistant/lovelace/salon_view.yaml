@@ -59,7 +59,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.yeelight_strip1_7811dce2d84e
+          entity: light.ambient_regal
           name: Regał
           tap_action:
             action: toggle
