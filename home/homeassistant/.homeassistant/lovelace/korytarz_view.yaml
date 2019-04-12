@@ -24,4 +24,6 @@ cards:
           - type: light
             entity: light.lampa_korytarz
           - type: light
+            entity: light.lampa_korytarz_ambilight
+          - type: light
             entity: light.lampa_korytarz_drzwi
