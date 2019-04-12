@@ -1,5 +1,5 @@
-- name: Zene
-  id: zene
+- name: Zenedith
+  id: zenedith
   user_id: 05b8f3c646084160a7ce5d5cdbbfd4a1
   device_trackers:
 #    - device_tracker.80b03dcda5eb
