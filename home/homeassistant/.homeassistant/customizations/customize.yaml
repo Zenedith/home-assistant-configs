@@ -4,14 +4,14 @@ light.lampa_kuchnia_2:
   friendly_name: Lampa kuchnia 2
 light.lampa_kuchnia_3:
   friendly_name: Lampa kuchnia 3
-light.yeelight_strip1_7811dcda6e9e:
+light.light.ambient_obraz:
   friendly_name: Ambient Obraz
 light.ambient_regal:
   friendly_name: Ambient Regał
 light.bedside:
   friendly_name: bedside
-light.yeelight_ceiling3_04cf8c78d9f7:
-  friendly_name: Yeelight Sypialnia
+light.yeelight_sypialnia:
+  friendly_name: Lampa Sypialnia
 light.swiatlo_sypialnia:
   friendly_name: Lampa Sypialnia
 light.lampa_lazienka:

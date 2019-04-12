@@ -83,17 +83,23 @@ custom_updater:
 # Discover some devices automatically
 discovery:
   ignore:
+    - yeelight
     - apple_tv
+    - axis
     - belkin_wemo
     - bluesound
     - bose_soundtouch
+    - directv
     - denonavr
+    - enigma2
     - frontier_silicon
     - harmony
     - ikea_tradfri
+    - igd
     - logitech_mediaserver
     - netgear_router
     - openhome
+    - octoprint
     - panasonic_viera
     - philips_hue
     - plex_mediaserver
@@ -106,6 +112,7 @@ discovery:
     - wink
     - yamaha
     - xiaomi_gw
+    - samsung_tv
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:

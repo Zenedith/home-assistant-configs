@@ -30,7 +30,7 @@ cards:
                 state: "on"
             card:
               - type: light
-                entity: light.yeelight_ceiling3_04cf8c78d9f7
+                entity: light.yeelight_sypialnia
       - type: vertical-stack
         cards:
           - type: thermostat

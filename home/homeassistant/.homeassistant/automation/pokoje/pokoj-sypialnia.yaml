@@ -26,7 +26,7 @@
 - alias: 'Listwa sypialnia on'
   trigger:
     - platform: state
-      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      entity_id: light.yeelight_sypialnia
       to: 'on'
   condition:
     - condition: state
@@ -90,7 +90,7 @@
         entity_id: light.swiatlo_sypialnia
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        entity_id: light.yeelight_sypialnia
 
 - alias: 'Włącz timer w sypialni gdy ruch'
   trigger:
@@ -137,7 +137,7 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      entity_id: light.yeelight_sypialnia
       to: 'off'
     - platform: state
       entity_id: light.swiatlo_sypialnia
@@ -157,12 +157,12 @@
     - service: light.turn_on
       entity_id: light.swiatlo_sypialnia
     - service: light.turn_on
-      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      entity_id: light.yeelight_sypialnia
       data_template:
         brightness: 254
     - service: yeelight.set_mode
       data:
-        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        entity_id: light.yeelight_sypialnia
         mode: normal
 
 - alias: 'Zgaś światło w sypialni gdy chillout mode on'
