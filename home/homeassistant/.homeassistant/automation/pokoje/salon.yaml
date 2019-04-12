@@ -108,7 +108,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.light.ambient_obraz
+        entity_id: light.ambient_obraz
     - service: light.turn_on
       data:
         entity_id: light.ambient_regal
@@ -120,7 +120,7 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.light.ambient_obraz
+        entity_id: light.ambient_obraz
     - service: light.turn_off
       data:
         entity_id: light.ambient_regal

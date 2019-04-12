@@ -73,7 +73,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.light.ambient_obraz
+          entity: light.ambient_obraz
           name: Obraz
           tap_action:
             action: toggle
