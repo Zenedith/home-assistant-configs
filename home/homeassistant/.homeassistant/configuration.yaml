@@ -218,6 +218,8 @@ climate:
         mac: '00:1A:22:0C:1A:F2'
       sypialnia:
         mac: '00:1A:22:0C:1A:EF'
+      salon:
+        mac: '00:1A:22:11:5D:B3'
 
 asuswrt:
   host: 192.168.1.1
