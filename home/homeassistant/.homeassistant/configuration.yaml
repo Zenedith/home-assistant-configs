@@ -178,7 +178,6 @@ input_select: !include_dir_merge_named input_selects
 weather: !include weather/darksky.yaml
 light: !include_dir_merge_list lights
 media_player: !include_dir_merge_list media_player
-person: !include person/person.yaml
 yeelight: !include yeelight/yeelight.yaml
 
 #shell_command:
