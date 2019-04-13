@@ -220,29 +220,25 @@ climate:
       sypialnia:
         mac: '00:1A:22:0C:1A:EF'
 
-#asuswrt:
-#  host: 192.168.1.1
-#  username: !secret device_tracker_asus_username
-#  password: !secret device_tracker_asus_password
-#  sensors:
-#    - upload
-#    - download
-#    - upload_speed
-#    - download_speed
+asuswrt:
+  host: 192.168.1.1
+  username: !secret device_tracker_asus_username
+  password: !secret device_tracker_asus_password
+  sensors:
+    - upload
+    - download
+    - upload_speed
+    - download_speed
 
 device_tracker:
-#  - platform: asuswrt
-#    host: 192.168.1.1
-#    username: !secret device_tracker_asus_username
-#    password: !secret device_tracker_asus_password
-#    interval_seconds: 60
-#    new_device_defaults:
-#      track_new_devices: false
-#      hide_if_away: true
-  - platform: ping
-    hosts:
-      ping_zene: 192.168.1.30
-      ping_kate: 192.168.1.68
+  - platform: asuswrt
+    host: 192.168.1.1
+    username: !secret device_tracker_asus_username
+    password: !secret device_tracker_asus_password
+    interval_seconds: 60
+    new_device_defaults:
+      track_new_devices: false
+      hide_if_away: true
 
 google_assistant:
   project_id: !secret google_assistant_project_id

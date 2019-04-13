@@ -2,12 +2,10 @@
   id: zenedith
   user_id: 05b8f3c646084160a7ce5d5cdbbfd4a1
   device_trackers:
-#    - device_tracker.80b03dcda5eb
-    - device_tracker.ping_zene
+    - device_tracker.80b03dcda5eb
 
 - name: Kate
   id: kate
   user_id: 96cbe07120f64c8283ed7f084ae7752f
   device_trackers:
-#    - device_tracker.e49a79e25678
-    - device_tracker.ping_kate
+    - device_tracker.e49a79e25678
