@@ -1,6 +1,5 @@
 title: Automation
 icon: mdi:robot
-panel: true
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: vertical-stack
@@ -37,6 +36,8 @@ cards:
           - automation.chillout_mode_on_when_first_time_lights_turn_on
           - automation.moonlight_switch_on
           - automation.moonlight_switch_off
+  - type: vertical-stack
+    cards:
       - type: entities
         title: Pokój Janka
         show_header_toggle: false
@@ -54,16 +55,17 @@ cards:
         title: Salon
         show_header_toggle: false
         entities:
-          - automation.ambient_tv_on
-          - automation.ambient_tv_off
+          - automation.ambient_on
+          - automation.ambient_off
           - automation.dafang_motion_detected
-          - automation.listwa_rtv_on
           - automation.listwa_rtv_off
           - automation.zmietek_start
           - automation.zmietek_docked
           - automation.zalanie_kuchni
           - automation.wlacz_ladowanie_zmietka_po_sprzataniu
           - automation.wylacz_ladowanie_zmietka_przy_100_baterii
+  - type: vertical-stack
+    cards:
       - type: entities
         title: Sypialnia
         show_header_toggle: false

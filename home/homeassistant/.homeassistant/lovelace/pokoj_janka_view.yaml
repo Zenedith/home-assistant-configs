@@ -18,10 +18,11 @@ cards:
             entities:
               - entity: switch.rtv_jan
               - entity: input_boolean.jasiu_chillout
+              - entity: automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
       - type: vertical-stack
         cards:
           - type: light
-            entity: light.yeelight_bedside_7c49eb284fda
+            entity: light.bedside
           - type: light
             entity: light.swiatlo_pokoj_janka
       - type: vertical-stack

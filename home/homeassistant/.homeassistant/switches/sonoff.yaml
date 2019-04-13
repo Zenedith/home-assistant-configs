@@ -78,3 +78,69 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
+- platform: mqtt
+  name: "Zmywarka"
+  state_topic: "zigbee2mqtt/powr2_2/POWER"
+  command_topic: "zigbee2mqtt/powr2_2/cmnd/POWER"
+  availability_topic: "zigbee2mqtt/powr2_2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Listwa salon slot 1"
+  state_topic: "listwa/listwa1/POWER1"
+  command_topic: "listwa/listwa1/cmnd/POWER1"
+  availability_topic: "listwa/listwa1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Listwa salon slot 2"
+  state_topic: "listwa/listwa1/POWER2"
+  command_topic: "listwa/listwa1/cmnd/POWER2"
+  availability_topic: "listwa/listwa1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Listwa salon slot 3"
+  state_topic: "listwa/listwa1/POWER3"
+  command_topic: "listwa/listwa1/cmnd/POWER3"
+  availability_topic: "listwa/listwa1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Listwa salon slot 4"
+  state_topic: "listwa/listwa1/POWER4"
+  command_topic: "listwa/listwa1/cmnd/POWER4"
+  availability_topic: "listwa/listwa1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Listwa salon slot usb"
+  state_topic: "listwa/listwa1/POWER5"
+  command_topic: "listwa/listwa1/cmnd/POWER5"
+  availability_topic: "listwa/listwa1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false

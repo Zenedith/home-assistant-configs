@@ -25,12 +25,16 @@
 
 - alias: 'Listwa sypialnia on'
   trigger:
-    platform: time
-    at: '20:00:00'
+    - platform: state
+      entity_id: light.yeelight_sypialnia
+      to: 'on'
   condition:
     - condition: state
       entity_id: switch.listwa_sypialnia
       state: 'off'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
   action:
     - service: switch.turn_on
       data:
@@ -71,9 +75,9 @@
       entity_id: binary_sensor.sypialnia_motion_occupancy
       to: 'on'
   condition:
-    - condition: time
-      after: '15:00:00'
-      before: '23:59:59'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
     - condition: state
       entity_id: input_boolean.sypialnia_chillout
       state: 'off'
@@ -86,7 +90,7 @@
         entity_id: light.swiatlo_sypialnia
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        entity_id: light.yeelight_sypialnia
 
 - alias: 'Włącz timer w sypialni gdy ruch'
   trigger:
@@ -94,9 +98,9 @@
       entity_id: binary_sensor.sypialnia_motion_occupancy
       to: 'on'
   condition:
-    - condition: time
-      after: '15:00:00'
-      before: '23:59:59'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
     - condition: state
       entity_id: input_boolean.sypialnia_chillout
       state: 'off'
@@ -133,7 +137,7 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      entity_id: light.yeelight_sypialnia
       to: 'off'
     - platform: state
       entity_id: light.swiatlo_sypialnia
@@ -153,16 +157,13 @@
     - service: light.turn_on
       entity_id: light.swiatlo_sypialnia
     - service: light.turn_on
-      entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+      entity_id: light.yeelight_sypialnia
       data_template:
         brightness: 254
-    - service: light.yeelight_set_mode
+    - service: yeelight.set_mode
       data:
-        entity_id: light.yeelight_ceiling3_04cf8c78d9f7
+        entity_id: light.yeelight_sypialnia
         mode: normal
-    - service: switch.turn_on
-      data:
-        entity_id: switch.listwa_sypialnia
 
 - alias: 'Zgaś światło w sypialni gdy chillout mode on'
   trigger:
@@ -183,10 +184,6 @@
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
     to: 'on'
-  condition:
-    - condition: state
-      entity_id: binary_sensor.okno_sypialnia_contact
-      state: 'off'
   action:
     - service: climate.set_away_mode
       data:
@@ -204,10 +201,6 @@
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
     to: 'off'
-  condition:
-    - condition: state
-      entity_id: binary_sensor.okno_sypialnia_contact
-      state: 'on'
   action:
     - service: climate.set_away_mode
       data:

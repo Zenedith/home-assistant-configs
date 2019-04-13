@@ -560,3 +560,27 @@ sonoff_basic_2_2706:
   name: sonoff-basic-2-2706
   picture:
   track: false
+
+chromecast:
+  hide_if_away: true
+  icon:
+  mac: 54:60:09:F7:88:3A
+  name: Chromecast
+  picture:
+  track: false
+
+nova_0495e6453800:
+  hide_if_away: true
+  icon:
+  mac: 04:95:E6:45:38:00
+  name: NOVA-0495e6453800
+  picture:
+  track: false
+
+newifi_d2:
+  hide_if_away: true
+  icon:
+  mac: 20:76:93:49:FD:7B
+  name: NEWIFI-D2
+  picture:
+  track: false

@@ -30,7 +30,7 @@
     at: '02:00:00'
   condition:
     - condition: state
-      entity_id: switch.listwa_rtv
+      entity_id: switch.listwa_salon_slot_usb
       state: 'on'
   action:
     - service: notify.mypushbullet
@@ -47,7 +47,7 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.listwa_rtv
+        entity_id: switch.listwa_salon_slot_usb
 
 - alias: 'Listwa RTV off (for sure)'
   trigger:
@@ -56,26 +56,26 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.listwa_rtv
+        entity_id: switch.listwa_salon_slot_usb
 
-- alias: 'Listwa RTV on'
-  trigger:
-    platform: time
-    at: '16:30:00'
-  condition:
-    - condition: state
-      entity_id: switch.listwa_rtv
-      state: 'off'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.listwa_rtv
-    - service: notify.mypushbullet
-      data_template:
-        title: "Listwa RTV salon on"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Listwa on
+#- alias: 'Listwa RTV on'
+#  trigger:
+#    platform: time
+#    at: '16:30:00'
+#  condition:
+#    - condition: state
+#      entity_id: switch.listwa_salon_slot_1
+#      state: 'off'
+#  action:
+#    - service: switch.turn_on
+#      data:
+#        entity_id: switch.listwa_salon_slot_1
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: "Listwa RTV salon on"
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Listwa on
 
 - alias: 'Listwa RTV (weekend) on'
   trigger:
@@ -87,12 +87,12 @@
         - sat
         - sun
     - condition: state
-      entity_id: switch.listwa_rtv
+      entity_id: switch.listwa_salon_slot_usb
       state: 'off'
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.listwa_rtv
+        entity_id: switch.listwa_salon_slot_usb
     - service: notify.mypushbullet
       data_template:
         title: "Listwa RTV salon on"
@@ -100,29 +100,30 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Listwa on
 
-- alias: 'Ambient tv on'
+- alias: 'Ambient on'
   trigger:
-    platform: time
-    at: '16:10:00'
+    platform: sun
+    event: sunset
+    offset: '-00:01:00'
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_strip_7811dcda6e9e
+        entity_id: light.ambient_obraz
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_strip_7811dce2d84e
+        entity_id: light.ambient_regal
 
-- alias: 'Ambient tv off'
+- alias: 'Ambient off'
   trigger:
     platform: time
     at: '02:04:00'
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_strip_7811dcda6e9e
+        entity_id: light.ambient_obraz
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_strip_7811dce2d84e
+        entity_id: light.ambient_regal
 
 - alias: 'Zmietek start'
   trigger:
@@ -134,10 +135,11 @@
       - mon
       - wed
       - fri
-    - condition: state
-      entity_id: vacuum.zmietekv2
-      state: 'docked'
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.zmietek
+    - delay: 00:00:30
     - service: vacuum.start
       data:
         entity_id: vacuum.zmietekv2
@@ -195,3 +197,64 @@
     - service: switch.turn_off
       data:
         entity_id: switch.zmietek
+
+- alias: 'Włącz listwę i ampli przy włączeniu tv'
+  trigger:
+    - platform: state
+      entity_id: media_player.sony_bravia_tv
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_salon_slot_1
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_1
+    - delay: 00:00:15
+#    - service: input_boolean.turn_on
+#      data:
+#        entity_id: input_boolean.broadlink_denon_receiver
+
+#- alias: 'Włącz ampli przy włączaniu listwy i wlaczonym tv'
+#  trigger:
+#    - platform: state
+#      entity_id: switch.listwa_salon_slot_1
+#      to: 'on'
+#  condition:
+#    - condition: state
+#      entity_id: media_player.sony_bravia_tv
+#      state: 'on'
+#  action:
+#    - delay: 00:00:10
+#    - service: input_boolean.turn_on
+#      data:
+#        entity_id: input_boolean.broadlink_denon_receiver
+#
+#- alias: 'Włącz ampli przy włączonej listwie i wlaczaniu tv'
+#  trigger:
+#    - platform: state
+#      entity_id: media_player.sony_bravia_tv
+#      to: 'on'
+#  condition:
+#    - condition: state
+#      entity_id: input_boolean.broadlink_denon_receiver
+#      state: 'off'
+#  action:
+#    - service: input_boolean.turn_on
+#      data:
+#        entity_id: input_boolean.broadlink_denon_receiver
+#
+- alias: 'Wyłącz ampli przy wyłączonym tv'
+  trigger:
+    - platform: state
+      entity_id: media_player.sony_bravia_tv
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_salon_slot_1
+      state: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_salon_slot_1

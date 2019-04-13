@@ -19,7 +19,7 @@ cards:
               - entity: sensor.lazienka_motion_illuminance
               - entity: binary_sensor.lazienka_leak_water_leak
           - type: light
-            entity: light.yeelight_ceiling_7811dcab68e0
+            entity: light.lampa_lazienka
 #          - type: entities
 #            title: Pralka
 #            show_header_toggle: false

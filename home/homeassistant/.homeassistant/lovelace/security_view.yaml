@@ -182,10 +182,10 @@ cards:
               image: /local/lovelace/security/alarm_3.jpg
               elements:
                 - type: state-icon
-                  entity: switch.kamera
+                  entity: switch.listwa_salon_slot_4
                   style: {color: white, left: 15%, top: 88%}
                 - type: state-label
-                  entity: switch.kamera
+                  entity: switch.listwa_salon_slot_4
                   prefix: 'Alarm: '
                   style: {color: white, left: 32%, top: 88%}
                   tap_action:
@@ -223,7 +223,7 @@ cards:
             card:
               type: conditional
               conditions:
-                - entity: switch.kamera
+                - entity: switch.listwa_salon_slot_4
                   state: "on"
               card:
                 type: picture-entity
@@ -242,7 +242,7 @@ cards:
             card:
               type: conditional
               conditions:
-                - entity: switch.kamera
+                - entity: switch.listwa_salon_slot_4
                   state: "on"
               card:
                 type: entities

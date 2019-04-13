@@ -8,7 +8,7 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       state: 'off'
   action:
     - service: light.turn_on
@@ -43,7 +43,7 @@
       entity_id: timer.korytarz
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       state: 'on'
   action:
     - service: light.turn_off
@@ -84,7 +84,7 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       state: 'on'
   action:
     - service: script.moonlight_korytarz_on
@@ -99,7 +99,7 @@
       to: 'off'
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       state: 'on'
   action:
     - service: script.moonlight_korytarz_off
@@ -107,11 +107,11 @@
 - alias: 'Chillout mode on when first time lights turn on'
   trigger:
     - platform: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       to: 'on'
   condition:
     - condition: template
-      value_template: "{{ state_attr('light.yeelight_ceiling_7811dcab824a', 'brightness') > 100 }}"
+      value_template: "{{ state_attr('light.lampa_korytarz_drzwi', 'brightness') > 100 }}"
     - condition: or
       conditions:
         - condition: state
@@ -126,7 +126,7 @@
 - alias: 'Chillout mode off when first time lights turn on'
   trigger:
     - platform: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       to: 'on'
   condition:
     - condition: state
@@ -136,7 +136,7 @@
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
     - condition: template
-      value_template: "{{ state_attr('light.yeelight_ceiling_7811dcab824a', 'brightness') < 100 }}"
+      value_template: "{{ state_attr('light.lampa_korytarz_drzwi', 'brightness') < 100 }}"
   action:
     - service: script.moonlight_korytarz_off
 
@@ -147,7 +147,7 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       state: 'on'
   action:
     - service: script.moonlight_korytarz_on
@@ -159,7 +159,7 @@
       to: 'off'
   condition:
     - condition: state
-      entity_id: light.yeelight_ceiling_7811dcab824a
+      entity_id: light.lampa_korytarz_drzwi
       state: 'on'
   action:
     - service: script.moonlight_korytarz_off

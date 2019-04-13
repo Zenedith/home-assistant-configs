@@ -25,16 +25,17 @@
 
 - alias: 'Bedside Jan on'
   trigger:
-    platform: time
-    at: '16:30:00'
+    platform: sun
+    event: sunset
+    offset: '+00:00:00'
   condition:
     - condition: state
-      entity_id: light.yeelight_bedside_7c49eb284fda
+      entity_id: light.bedside
       state: 'off'
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelight_bedside_7c49eb284fda
+        entity_id: light.bedside
     - service: notify.mypushbullet
       data_template:
         title: 'Pokój janka bedside on'
@@ -44,21 +45,13 @@
 
 - alias: 'Bedside Jan off'
   trigger:
-    platform: time
-    at: '08:00:00'
+    platform: sun
+    event: sunrise
+    offset: '+00:30:00'
   action:
     - service: light.turn_off
       data:
-        entity_id: light.yeelight_bedside_7c49eb284fda
-
-- alias: 'Lampa Jan off'
-  trigger:
-    platform: time
-    at: '22:30:00'
-  action:
-  - service: light.turn_off
-    data:
-      entity_id: light.swiatlo_pokoj_janka
+        entity_id: light.bedside
 
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
   trigger:
@@ -66,9 +59,9 @@
       entity_id: binary_sensor.janek_motion_occupancy
       to: 'on'
   condition:
-    - condition: time
-      after: '15:00:00'
-      before: '23:59:59'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
     - condition: state
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
@@ -86,9 +79,9 @@
       entity_id: binary_sensor.janek_motion_occupancy
       to: 'on'
   condition:
-    - condition: time
-      after: '15:00:00'
-      before: '23:59:59'
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
     - condition: state
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
@@ -127,10 +120,6 @@
     platform: state
     entity_id: binary_sensor.okno_janek_contact
     to: 'on'
-  condition:
-    - condition: state
-      entity_id: binary_sensor.okno_janek_contact
-      state: 'off'
   action:
     - service: climate.set_away_mode
       data:
@@ -148,10 +137,6 @@
     platform: state
     entity_id: binary_sensor.okno_janek_contact
     to: 'off'
-  condition:
-    - condition: state
-      entity_id: binary_sensor.okno_janek_contact
-      state: 'on'
   action:
     - service: climate.set_away_mode
       data:

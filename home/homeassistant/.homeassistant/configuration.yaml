@@ -83,17 +83,23 @@ custom_updater:
 # Discover some devices automatically
 discovery:
   ignore:
+    - yeelight
     - apple_tv
+    - axis
     - belkin_wemo
     - bluesound
     - bose_soundtouch
+    - directv
     - denonavr
+    - enigma2
     - frontier_silicon
     - harmony
     - ikea_tradfri
+    - igd
     - logitech_mediaserver
     - netgear_router
     - openhome
+    - octoprint
     - panasonic_viera
     - philips_hue
     - plex_mediaserver
@@ -106,6 +112,7 @@ discovery:
     - wink
     - yamaha
     - xiaomi_gw
+    - samsung_tv
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
@@ -172,6 +179,7 @@ weather: !include weather/darksky.yaml
 light: !include_dir_merge_list lights
 media_player: !include_dir_merge_list media_player
 person: !include person/person.yaml
+yeelight: !include yeelight/yeelight.yaml
 
 #shell_command:
 #  rename_snapshots_dafang: 'bash /home/homeassistant/.homeassistant/bash_scripts/renameSnapshotsDafang.sh'
@@ -212,25 +220,25 @@ climate:
       sypialnia:
         mac: '00:1A:22:0C:1A:EF'
 
-asuswrt:
-  host: 192.168.1.1
-  username: !secret device_tracker_asus_username
-  password: !secret device_tracker_asus_password
-  sensors:
-    - upload
-    - download
-    - upload_speed
-    - download_speed
+#asuswrt:
+#  host: 192.168.1.1
+#  username: !secret device_tracker_asus_username
+#  password: !secret device_tracker_asus_password
+#  sensors:
+#    - upload
+#    - download
+#    - upload_speed
+#    - download_speed
 
 device_tracker:
-  - platform: asuswrt
-    host: 192.168.1.1
-    username: !secret device_tracker_asus_username
-    password: !secret device_tracker_asus_password
-    interval_seconds: 60
-    new_device_defaults:
-      track_new_devices: false
-      hide_if_away: true
+#  - platform: asuswrt
+#    host: 192.168.1.1
+#    username: !secret device_tracker_asus_username
+#    password: !secret device_tracker_asus_password
+#    interval_seconds: 60
+#    new_device_defaults:
+#      track_new_devices: false
+#      hide_if_away: true
   - platform: ping
     hosts:
       ping_zene: 192.168.1.30
@@ -273,3 +281,6 @@ google_assistant:
       expose: false
     switch.dafang_yellow_led:
       expose: false
+
+stream:
+

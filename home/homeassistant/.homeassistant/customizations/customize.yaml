@@ -1,25 +1,26 @@
-light.yeelight_color2_7c49eb157b13:
+light.lampa_kuchnia_1:
   friendly_name: Lampa kuchnia 1
-light.yeelight_color2_7c49ebb35a83:
+light.lampa_kuchnia_2:
   friendly_name: Lampa kuchnia 2
-light.yeelight_color2_7c49eb1dbff7:
+light.lampa_kuchnia_3:
   friendly_name: Lampa kuchnia 3
-light.yeelight_strip_7811dcda6e9e:
+light.ambient_obraz:
   friendly_name: Ambient Obraz
-light.yeelight_strip_7811dce2d84e:
+light.ambient_regal:
   friendly_name: Ambient Regał
-light.yeelight_bedside_7c49eb284fda:
+light.bedside:
   friendly_name: bedside
-light.yeelight_ceiling3_04cf8c78d9f7:
-  friendly_name: Yeelight Sypialnia
+light.yeelight_sypialnia:
+  friendly_name: Lampa Sypialnia
 light.swiatlo_sypialnia:
   friendly_name: Lampa Sypialnia
-light.yeelight_ceiling_7811dcab68e0:
+light.lampa_lazienka:
   friendly_name: Lampa Łazienka
   icon: mdi:toilet
-light.yeelight_ceiling4_7c49ebb70c4a:
+light.lampa_korytarz:
   friendly_name: Lampa korytarz
-  supported_features: 3
+light.lampa_korytarz_ambilight:
+  friendly_name: Lampa korytarz ambilight
 sensor.korytarz_motion_illuminance:
   friendly_name: Naświetlenie
 sensor.korytarz_motion_battery:
@@ -84,17 +85,17 @@ binary_sensor.drzwi_lazienka_contact:
   friendly_name: Drzwi
 sensor.drzwi_lazienka_contact_battery:
   friendly_name: Drzwi łazienka bateria
-light.yeelight_color2_04cf8c763997:
+light.salon_1:
   friendly_name: Salon 1
-light.yeelight_color2_04cf8c7bf2b3:
+light.salon_2:
   friendly_name: Salon 2
-light.yeelight_color2_04cf8c84a3ce:
+light.salon_3:
   friendly_name: Salon 3
-light.yeelight_color2_04cf8c7cc549:
+light.salon_4:
   friendly_name: Salon 4
-light.yeelight_color2_7c49ebb76a3d:
+light.salon_5:
   friendly_name: Salon 5
-light.yeelight_ceiling_7811dcab824a:
+light.lampa_korytarz_drzwi:
   friendly_name: Lampa korytarz (drzwi)
 binary_sensor.drzwi_toaleta_contact:
   friendly_name: Drzwi

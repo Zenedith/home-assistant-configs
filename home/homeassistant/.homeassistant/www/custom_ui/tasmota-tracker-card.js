@@ -89,8 +89,8 @@ class TasmotaTrackerCard extends HTMLElement {
       <div id='content'>
       </div>
       <div class='button'>
-        <paper-button raised id='update_tasmota'>` + cardConfig.update_all_text + `</paper-button>
-        <paper-button raised id='check_tasmota'>` + cardConfig.check_text + `</paper-button>
+        <mwc-button raised id='update_tasmota'>` + cardConfig.update_all_text + `</mwc-button>
+        <mwc-button raised id='check_tasmota'>` + cardConfig.check_text + `</mwc-button>
       </div>
     `;
     card.header = cardConfig.title
@@ -136,7 +136,7 @@ class TasmotaTrackerCard extends HTMLElement {
         // attach handlers only once
         if (!this.handlers['tasmota_custom_updater']) {
           card.querySelector('#update_tasmota').addEventListener('click', event => {
-            this.myhass.callService('script', config.check_script, {});
+            this.myhass.callService('script', config.upgrade_script, {});
           });
           card.querySelector('#check_tasmota').addEventListener('click', event => {
             this.myhass.callService('script', config.check_script, {});
