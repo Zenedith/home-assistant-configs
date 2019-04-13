@@ -233,15 +233,15 @@ cards:
 
       - type: custom:card-modder
         card:
-          - type: thermostat
-            entity: climate.salon
-          - type: entities
-            show_header_toggle: false
-            title: Roleta
-            entities:
-              - entity: cover.kuchnia
-              - type: weblink
-                url: http://shellyswitch-135303
+          type: entities
+          show_header_toggle: false
+          title: Rolety
+          entities:
+            - type: thermostat
+              entity: climate.salon
+            - entity: cover.kuchnia
+            - type: weblink
+              url: http://shellyswitch-135303
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
