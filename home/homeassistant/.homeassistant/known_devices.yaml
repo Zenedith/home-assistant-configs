@@ -584,3 +584,27 @@ newifi_d2:
   name: NEWIFI-D2
   picture:
   track: false
+
+b8_27_eb_ac_e0_67:
+  hide_if_away: true
+  icon:
+  mac: B8:27:EB:AC:E0:67
+  name: b8 27 eb ac e0 67
+  picture:
+  track: false
+
+84_0d_8e_5f_4f_8e:
+  hide_if_away: true
+  icon:
+  mac: 84:0D:8E:5F:4F:8E
+  name: 84 0d 8e 5f 4f 8e
+  picture:
+  track: false
+
+b8_27_eb_f9_b5_32:
+  hide_if_away: true
+  icon:
+  mac: B8:27:EB:F9:B5:32
+  name: b8 27 eb f9 b5 32
+  picture:
+  track: false

@@ -25,7 +25,6 @@ views:
   - !include lovelace/pokoj_janka_view.yaml
   - !include lovelace/sypialnia_view.yaml
   - !include lovelace/lazienka_view.yaml
-  - !include lovelace/weather_view.yaml
   - !include lovelace/security_view.yaml
   - !include lovelace/automation_view.yaml
   - !include lovelace/system_status_view.yaml
