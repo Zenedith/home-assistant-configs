@@ -117,8 +117,9 @@
       entity_id: light.lampa_korytarz_drzwi
       to: 'on'
   condition:
-    - condition: template
-      value_template: "{{ state_attr('light.lampa_korytarz_drzwi', 'brightness') > 100 }}"
+    - condition: state
+      entity_id: light.lampa_korytarz
+      state: 'off'
     - condition: or
       conditions:
         - condition: state
@@ -143,8 +144,9 @@
     - condition: state
       entity_id: input_boolean.jasiu_chillout
       state: 'off'
-    - condition: template
-      value_template: "{{ state_attr('light.lampa_korytarz_drzwi', 'brightness') < 100 }}"
+    - condition: state
+      entity_id: light.lampa_korytarz
+      state: 'on'
   action:
     - service: script.moonlight_korytarz_off
 
@@ -159,7 +161,14 @@
       entity_id: light.lampa_korytarz_drzwi
       state: 'on'
   action:
-    - service: script.moonlight_korytarz_on
+    - service: yeelight.set_mode
+      data:
+        entity_id: light.lampa_korytarz_drzwi
+        mode: moonlight
+    - service: yeelight.set_mode
+      data:
+        entity_id: light.lampa_korytarz
+        mode: moonlight
 
 - alias: 'Moonlight switch off'
   initial_state: 'on'
@@ -172,4 +181,11 @@
       entity_id: light.lampa_korytarz_drzwi
       state: 'on'
   action:
-    - service: script.moonlight_korytarz_off
+    - service: yeelight.set_mode
+      data:
+        entity_id: light.lampa_korytarz_drzwi
+        mode: normal
+    - service: yeelight.set_mode
+      data:
+        entity_id: light.lampa_korytarz
+        mode: normal
