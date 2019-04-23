@@ -261,9 +261,9 @@ cards:
                   - cover.dafang_move_leftright
                   - cover.dafang_move_updown
                   - type: weblink
-                    url: http://dafang
+                    url: http://192.168.1.127
                   - type: weblink
-                    url: rtsp://dafang:8554/unicast
+                    url: rtsp://192.168.1.127:8554/unicast
             style:
               background-image: url("/local/lovelace/cardbackK.png")
               background-repeat: no-repeat
