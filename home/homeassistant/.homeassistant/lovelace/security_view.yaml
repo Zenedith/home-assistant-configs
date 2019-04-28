@@ -273,6 +273,7 @@ cards:
                 type: picture-entity
                 entity: camera.dafang
                 camera_image: camera.dafang
+                camera_view: live
             style:
               background-image: url("/local/lovelace/cardbackK.png")
               background-repeat: no-repeat

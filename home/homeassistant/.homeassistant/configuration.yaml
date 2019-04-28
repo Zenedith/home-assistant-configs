@@ -153,7 +153,7 @@ ffmpeg:
   ffmpeg_bin: /usr/bin/ffmpeg
 
 camera_view: live
-#stream:
+stream:
 
 # Text to speech
 tts:
