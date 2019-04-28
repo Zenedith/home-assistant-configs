@@ -14,10 +14,13 @@ cards:
                   type: picture-entity
                   entity: person.zenedith
                   show_name: false
-#                  show_state: false
+                  show_state: false
                   tap_action:
                     action: none
-                  image: /local/lovelace/home/zene.jpg
+#                  image: /local/lovelace/home/zene.jpg
+                  state_image:
+                    "on": /local/lovelace/home/zene.jpg
+                    "off": /local/lovelace/home/zene_not_home.jpg
                 style:
                   border-radius: 20px
                   border: solid 1px rgba(100,100,100,0.3)
@@ -27,10 +30,13 @@ cards:
                   type: picture-entity
                   entity: person.kate
                   show_name: false
-#                  show_state: false
+                  show_state: false
                   tap_action:
                     action: none
-                  image: /local/lovelace/home/kate2.jpg
+#                  image: /local/lovelace/home/kate2.jpg
+                  state_image:
+                    "on": /local/lovelace/home/kate2.jpg
+                    "off": /local/lovelace/home/kate2_not_home.jpg
                 style:
                   border-radius: 20px
                   border: solid 1px rgba(100,100,100,0.3)
