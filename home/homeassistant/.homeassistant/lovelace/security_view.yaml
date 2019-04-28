@@ -268,7 +268,7 @@ cards:
               type: conditional
               conditions:
                 - entity: switch.listwa_salon_slot_4
-                  state: "on"
+                  state: on
               card:
                 type: picture-entity
                 entity: camera.dafang
@@ -288,7 +288,7 @@ cards:
               type: conditional
               conditions:
                 - entity: switch.listwa_salon_slot_4
-                  state: "on"
+                  state: on
               card:
                 type: entities
                 entities:

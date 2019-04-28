@@ -152,7 +152,6 @@ sun:
 ffmpeg:
   ffmpeg_bin: /usr/bin/ffmpeg
 
-camera_view: live
 stream:
 
 # Text to speech
