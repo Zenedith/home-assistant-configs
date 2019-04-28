@@ -125,7 +125,7 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '-00:01:00'
+    offset: '-01:00:00'
   action:
     - service: light.turn_on
       data:
@@ -162,7 +162,7 @@
     - service: switch.turn_on
       data:
         entity_id: switch.zmietek
-    - delay: 00:00:30
+    - delay: 00:00:40
     - service: vacuum.start
       data:
         entity_id: vacuum.zmietekv2

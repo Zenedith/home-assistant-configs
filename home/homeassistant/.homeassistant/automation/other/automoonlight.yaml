@@ -27,7 +27,12 @@
     - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.moonlight_korytarz
-
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.jasiu_chillout
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.sypialnia_chillout
 
 - alias: 'Chillout mode on'
   initial_state: 'on'
@@ -73,7 +78,7 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: light.lampa_korytarz
+      entity_id:  binary_sensor.lampa_korytarz_drzwi_nightlight
       state: 'off'
     - condition: state
       entity_id: input_boolean.moonlight_korytarz
@@ -89,11 +94,11 @@
       to: 'on'
   condition:
     - condition: state
+      entity_id: binary_sensor.lampa_korytarz_drzwi_nightlight
+      state: 'on'
+    - condition: state
       entity_id: input_boolean.moonlight_korytarz
       state: 'off'
-    - condition: state
-      entity_id: light.lampa_korytarz
-      state: 'on'
   action:
     - service: script.moonlight_korytarz_off
 
