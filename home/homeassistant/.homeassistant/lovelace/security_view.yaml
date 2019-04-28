@@ -14,7 +14,7 @@ cards:
                   type: picture-entity
                   entity: person.zenedith
                   show_name: false
-                  show_state: false
+#                  show_state: false
                   tap_action:
                     action: none
                   image: /local/lovelace/home/zene.jpg
@@ -27,7 +27,7 @@ cards:
                   type: picture-entity
                   entity: person.kate
                   show_name: false
-                  show_state: false
+#                  show_state: false
                   tap_action:
                     action: none
                   image: /local/lovelace/home/kate2.jpg
