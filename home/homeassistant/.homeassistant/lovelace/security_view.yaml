@@ -17,7 +17,7 @@ cards:
                   show_state: false
                   tap_action:
                     action: none
-#                  image: /local/lovelace/home/zene.jpg
+                  image: /local/lovelace/home/zene.jpg
                   state_image:
                     "on": /local/lovelace/home/zene.jpg
                     "off": /local/lovelace/home/zene_not_home.jpg
@@ -33,7 +33,7 @@ cards:
                   show_state: false
                   tap_action:
                     action: none
-#                  image: /local/lovelace/home/kate2.jpg
+                  image: /local/lovelace/home/kate2.jpg
                   state_image:
                     "on": /local/lovelace/home/kate2.jpg
                     "off": /local/lovelace/home/kate2_not_home.jpg
