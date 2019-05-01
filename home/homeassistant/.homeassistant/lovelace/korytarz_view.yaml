@@ -1,29 +1,48 @@
 title: Korytarz
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
-panel: true
 cards:
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
-      - type: vertical-stack
-        cards:
-          - type: glance
-            columns: 4
-            card:
-              title: Korytarz
-            entities:
-              - entity: sensor.korytarz_temp_temperature
-              - entity: binary_sensor.drzwi_wejsciowe_contact
-              - entity: binary_sensor.korytarz_motion_occupancy
-              - entity: sensor.korytarz_motion_illuminance
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - entity: input_boolean.moonlight_korytarz
-      - type: vertical-stack
-        cards:
-          - type: light
-            entity: light.lampa_korytarz
-          - type: light
-            entity: light.lampa_korytarz_ambilight
-          - type: light
-            entity: light.lampa_korytarz_drzwi
+      - type: custom:card-modder
+        card:
+          type: entities
+          show_header_toggle: false
+          entities:
+            - entity: input_boolean.moonlight_korytarz
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: light.lampa_korytarz
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/korytarz_drzwi800.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: light.lampa_korytarz_drzwi
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/korytarz800.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: light
+          entity: light.lampa_korytarz_ambilight
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
