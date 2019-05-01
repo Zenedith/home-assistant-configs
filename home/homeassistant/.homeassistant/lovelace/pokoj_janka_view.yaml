@@ -45,6 +45,7 @@ cards:
         card:
           type: picture-entity
           entity: light.swiatlo_pokoj_janka
+          name: Lampa
           tap_action:
             action: toggle
           image: /local/lovelace/salon/pokoj_janka800.jpg

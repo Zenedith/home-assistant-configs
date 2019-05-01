@@ -1,44 +1,74 @@
 title: Sypialnia
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
-panel: true
 cards:
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
-      - type: vertical-stack
-        cards:
-          - type: glance
-            columns: 3
-            entities:
-              - entity: binary_sensor.sypialnia_motion_occupancy
-              - entity: sensor.sypialnia_motion_illuminance
-              - entity: binary_sensor.okno_sypialnia_contact
-          - type: entities
-            title: Listwa
-            show_header_toggle: false
-            entities:
-              - entity: switch.listwa_sypialnia
-              - entity: input_boolean.sypialnia_chillout
-              - entity: input_boolean.sypialnia_korki
-              - entity: automation.wlacz_swiatlo_w_sypialni_gdy_ruch
-      - type: vertical-stack
-        cards:
-          - type: light
-            entity: light.swiatlo_sypialnia
-          - type: conditional
-            conditions:
-              - entity: light.swiatlo_sypialnia
-                state: "on"
-            card:
-              - type: light
-                entity: light.yeelight_sypialnia
-      - type: vertical-stack
-        cards:
-          - type: thermostat
-            entity: climate.sypialnia
-          - type: entities
-            show_header_toggle: false
-            title: Roleta
-            entities:
-              - entity: cover.sypialnia
-              - type: weblink
-                url: http://shellyswitch-32B580
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Przełączniki
+          show_header_toggle: false
+          entities:
+            - entity: input_boolean.sypialnia_chillout
+            - entity: input_boolean.sypialnia_korki
+            - entity: automation.wlacz_swiatlo_w_sypialni_gdy_ruch
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: switch.listwa_sypialnia
+          name: Listwa
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/listwa_sypialnia800.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: light.swiatlo_sypialnia
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/swiatlo_sypialnia800.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: thermostat
+          entity: climate.sypialnia
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Roleta
+          show_header_toggle: false
+          entities:
+            - entity: cover.sypialnia
+            - type: weblink
+              url: http://shellyswitch-32B580
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
