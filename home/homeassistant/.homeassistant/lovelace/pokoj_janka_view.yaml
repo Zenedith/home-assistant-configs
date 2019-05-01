@@ -6,7 +6,6 @@ cards:
       - type: custom:card-modder
         card:
           type: entities
-          title: Przełączniki
           show_header_toggle: false
           entities:
             - entity: input_boolean.jasiu_chillout
@@ -41,6 +40,8 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
+  - type: vertical-stack
+    cards:
       - type: custom:card-modder
         card:
           type: picture-entity
