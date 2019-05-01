@@ -25,6 +25,14 @@ cards:
               red: 4
           - type: gauge
             unit: '%'
+            entity: sensor.climate_salon_battery
+            name: Salon grzejnik
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
+          - type: gauge
+            unit: '%'
             entity: sensor.zmietekv2_battery
             name: Zmietek
             severity:

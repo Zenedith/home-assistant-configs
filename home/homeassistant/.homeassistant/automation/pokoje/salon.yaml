@@ -287,3 +287,39 @@
     - service: switch.turn_off
       data:
         entity_id: switch.listwa_salon_slot_1
+
+- alias: 'Przykręć ogrzewanie przy otwartych drzwiach w salonie'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.drzwi_balkonowe_contact
+    to: 'on'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.salon
+        away_mode: 'on'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w salonie'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w salonie
+
+- alias: 'Przywróć ogrzewanie przy zamkniętych drzwiach w salonie'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.drzwi_balkonowe_contact
+    to: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.salon
+        away_mode: 'off'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w salonie'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w salonie
