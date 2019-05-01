@@ -3,19 +3,19 @@ resources:
     type: module
   - url: /local/custom_ui/tasmota-tracker-card.js?v=0.1.1
     type: js
-  - url: /local/custom_ui/dark-sky-weather-card.js?v=4
+  - url: /local/custom_ui/dark-sky-weather-card.js?track=true
     type: js
-  - url: /local/custom_ui/mini-media-player-bundle.js?v=1.0.2
+  - url: /local/custom_ui/mini-media-player-bundle.js?track=true
     type: module
-  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.3.0
+  - url: /local/custom_ui/mini-graph-card-bundle.js?track=true
     type: module
-  - url: /local/custom_ui/card-modder.js?v=f3d96f
+  - url: /local/custom_ui/card-modder.js?track=true
     type: module
-  - url: /local/custom_ui/card-tools.js?v=deb8e3
+  - url: /local/custom_ui/card-tools.js?track=true
     type: js
-  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?v=1.0.1b0
+  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?track=true
     type: module
-  - url: /local/custom_ui/kiosk.js?v=1.0.0
+  - url: /local/custom_ui/kiosk.js?track=true
     type: js
 
 title: Zene Home
