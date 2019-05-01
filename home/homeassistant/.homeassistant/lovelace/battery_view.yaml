@@ -1,6 +1,5 @@
 title: Battery Levels
 icon: mdi:battery
-panel: true
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: custom:compact-custom-header
