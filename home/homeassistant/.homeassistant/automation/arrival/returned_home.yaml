@@ -20,4 +20,6 @@
         entity_id: input_select.presence_status
         option: Just Returned
     - service: script.climate_on
-
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_usb

@@ -2,6 +2,9 @@ sequence:
   - service: switch.turn_off
     data:
       entity_id: group.all_switches
+  - service: switch.turn_on
+    data:
+      entity_id: group.all_switches
   - service: light.turn_off
     data:
       entity_id: group.all_lights
