@@ -5,12 +5,12 @@ cards:
     cards:
       - type: custom:card-modder
         card:
-          type: picture-entity
-          entity: switch.rtv_jan
-          name: Lights
-          tap_action:
-            action: toggle
-          image: /local/lovelace/salon/salon800.jpg
+          type: entities
+          title: Przełączniki
+          show_header_toggle: false
+          entities:
+            - entity: input_boolean.jasiu_chillout
+            - entity: automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
@@ -18,12 +18,12 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: entities
-          title: Przełączniki
-          show_header_toggle: false
-          entities:
-            - entity: input_boolean.jasiu_chillout
-            - entity: automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
+          type: picture-entity
+          entity: switch.rtv_jan
+          name: Lights
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/salon800.jpg
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
@@ -56,25 +56,7 @@ cards:
       - type: custom:card-modder
         card:
           type: thermostat
-          entity: climate.salon
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-
-      - type: custom:card-modder
-        card:
-          type: entities
-          title: Roleta
-          show_header_toggle: false
-          entities:
-            - entity: cover.pokoj_janka
-            - type: weblink
-              url: http://shellyswitch-5B28DA
+          entity: climate.pokoj_janka
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
