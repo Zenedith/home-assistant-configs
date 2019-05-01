@@ -14,9 +14,14 @@ cards:
             - entity: input_boolean.sypialnia_korki
             - entity: automation.wlacz_swiatlo_w_sypialni_gdy_ruch
         style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
+
 
       - type: custom:card-modder
         card:
