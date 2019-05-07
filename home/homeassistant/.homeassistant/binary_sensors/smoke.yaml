@@ -1,0 +1,8 @@
+- platform: "mqtt"
+  name: "kuchnia_smoke_detector"
+  state_topic: "zigbee2mqtt/0x00158d0002b0b23f"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: true
+  payload_off: false
+  value_template: "{{ value_json.smoke }}"
+  device_class: "smoke"

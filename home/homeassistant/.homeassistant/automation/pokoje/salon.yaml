@@ -1,4 +1,5 @@
 #- alias: 'Drzwi balkonowe otwarte'
+#initial_state: 'on'
 #  trigger:
 #    - platform: state
 #      entity_id: binary_sensor.drzwi_balkonowe_contact
@@ -12,6 +13,7 @@
 #          Odnotowano wyjście na fajkę
 
 - alias: 'Zalanie kuchni'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.kuchnia_leak_water_leak
@@ -24,39 +26,56 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Zalanie kuchni!!!
 
-- alias: 'Listwa RTV notification'
+- alias: 'Pozar w kuchni'
+  initial_state: 'on'
   trigger:
-    platform: time
-    at: '02:00:00'
-  condition:
-    - condition: state
-      entity_id: switch.listwa_salon_slot_usb
-      state: 'on'
+    - platform: state
+      entity_id: binary_sensor.kuchnia_smoke_detector
+      to: 'on'
   action:
     - service: notify.mypushbullet
       data_template:
-        title: "Salon listwa RTV off"
+        title: "!! Pożar w kuchni !!"
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Listwa za 5 minut się wyłączy
+          Pożar kuchni!!!
 
-- alias: 'Listwa RTV off'
-  trigger:
-    platform: time
-    at: '02:05:00'
-  action:
-    - service: switch.turn_off
-      data:
-        entity_id: switch.listwa_salon_slot_usb
+#- alias: 'Listwa RTV notification'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '02:00:00'
+#  condition:
+#    - condition: state
+#      entity_id: switch.listwa_salon_slot_usb
+#      state: 'on'
+#  action:
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: "Salon listwa RTV off"
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Listwa za 5 minut się wyłączy
+#
+#- alias: 'Listwa RTV off'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '02:05:00'
+#  action:
+#    - service: switch.turn_off
+#      data:
+#        entity_id: switch.listwa_salon_slot_usb
 
-- alias: 'Listwa RTV off (for sure)'
-  trigger:
-    platform: time
-    at: '07:30:00'
-  action:
-    - service: switch.turn_off
-      data:
-        entity_id: switch.listwa_salon_slot_usb
+#- alias: 'Listwa RTV off (for sure)'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '07:30:00'
+#  action:
+#    - service: switch.turn_off
+#      data:
+#        entity_id: switch.listwa_salon_slot_usb
 
 #- alias: 'Listwa RTV on'
 #  trigger:
@@ -76,35 +95,37 @@
 #        message: |
 #          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
 #          Listwa on
-
-- alias: 'Listwa RTV (weekend) on'
-  trigger:
-    platform: time
-    at: '07:32:00'
-  condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
-    - condition: state
-      entity_id: switch.listwa_salon_slot_usb
-      state: 'off'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.listwa_salon_slot_usb
-    - service: notify.mypushbullet
-      data_template:
-        title: "Listwa RTV salon on"
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Listwa on
+#
+#- alias: 'Listwa RTV (weekend) on'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '07:32:00'
+#  condition:
+#    - condition: time
+#      weekday:
+#        - sat
+#        - sun
+#    - condition: state
+#      entity_id: switch.listwa_salon_slot_usb
+#      state: 'off'
+#  action:
+#    - service: switch.turn_on
+#      data:
+#        entity_id: switch.listwa_salon_slot_usb
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: "Listwa RTV salon on"
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Listwa on
 
 - alias: 'Ambient on'
+  initial_state: 'on'
   trigger:
     platform: sun
     event: sunset
-    offset: '-00:01:00'
+    offset: '-01:00:00'
   action:
     - service: light.turn_on
       data:
@@ -114,6 +135,7 @@
         entity_id: light.ambient_regal
 
 - alias: 'Ambient off'
+  initial_state: 'on'
   trigger:
     platform: time
     at: '02:04:00'
@@ -126,6 +148,7 @@
         entity_id: light.ambient_regal
 
 - alias: 'Zmietek start'
+  initial_state: 'on'
   trigger:
     platform: time
     at: '11:00:00'
@@ -139,7 +162,7 @@
     - service: switch.turn_on
       data:
         entity_id: switch.zmietek
-    - delay: 00:00:30
+    - delay: 00:00:40
     - service: vacuum.start
       data:
         entity_id: vacuum.zmietekv2
@@ -151,6 +174,7 @@
           Zmietek start
 
 - alias: 'Zmietek docked'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: vacuum.zmietekv2
@@ -165,6 +189,7 @@
           Zmietek zakończył sprzątanie po {{ state_attr('vacuum.zmietekv2', 'cleaning_time') }} minutach, powierchnię {{ state_attr('vacuum.zmietekv2', 'cleaned_area') }} m2 z poziomem baterii {{ state_attr('vacuum.zmietekv2', 'battery_level') }} %.
 
 - alias: 'Zmietek error'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: vacuum.zmietekv2
@@ -179,6 +204,7 @@
           {{ state_attr('vacuum.zmietekv2', 'error') }}
 
 - alias: 'Włącz ładowanie zmietka po sprzątaniu'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.vacuum_status
@@ -189,6 +215,7 @@
         entity_id: switch.zmietek
 
 - alias: 'Wyłącz ładowanie zmietka przy 100% baterii'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.vacuum_battery
@@ -199,6 +226,7 @@
         entity_id: switch.zmietek
 
 - alias: 'Włącz listwę i ampli przy włączeniu tv'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: media_player.sony_bravia_tv
@@ -246,6 +274,7 @@
 #        entity_id: input_boolean.broadlink_denon_receiver
 #
 - alias: 'Wyłącz ampli przy wyłączonym tv'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: media_player.sony_bravia_tv
@@ -258,3 +287,39 @@
     - service: switch.turn_off
       data:
         entity_id: switch.listwa_salon_slot_1
+
+- alias: 'Przykręć ogrzewanie przy otwartych drzwiach w salonie'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.drzwi_balkonowe_contact
+    to: 'on'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.salon
+        away_mode: 'on'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przykręcone w salonie'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przykręcone w salonie
+
+- alias: 'Przywróć ogrzewanie przy zamkniętych drzwiach w salonie'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.drzwi_balkonowe_contact
+    to: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.salon
+        away_mode: 'off'
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Ogrzewanie przywrócone w salonie'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Ogrzewanie przywrócone w salonie

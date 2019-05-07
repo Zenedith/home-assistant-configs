@@ -19,7 +19,7 @@ devices:
     name: 'Salon 5'
     use_music_mode: false
     save_on_change: true
-  192.168.1.61:
+  192.168.1.63:
     name: 'Lampa korytarz (drzwi)'
     use_music_mode: false
     save_on_change: true
@@ -27,7 +27,7 @@ devices:
     name: 'Bedside'
     use_music_mode: false
     save_on_change: true
-  192.168.1.105:
+  192.168.1.223:
     name: 'Lampa korytarz'
     use_music_mode: false
     save_on_change: true

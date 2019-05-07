@@ -7,3 +7,7 @@ sequence:
     data:
       entity_id: climate.sypialnia
       away_mode: true
+  - service: climate.set_away_mode
+    data:
+      entity_id: climate.salon
+      away_mode: true

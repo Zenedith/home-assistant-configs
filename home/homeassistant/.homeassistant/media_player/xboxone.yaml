@@ -1,4 +1,4 @@
-- platform: xboxone
-  ip_address: 192.168.1.149
-  device: FD005BF1AE62BB85
-  name: Xbox One Poz
+#- platform: xboxone
+#  ip_address: 192.168.1.149
+#  device: FD005BF1AE62BB85
+#  name: Xbox One Poz

@@ -1,4 +1,5 @@
 - alias: 'Włącz światło w łazience gdy otwarte drzwi lub ruch'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.drzwi_lazienka_contact,binary_sensor.lazienka_motion_occupancy
@@ -13,6 +14,7 @@
         entity_id: light.lampa_lazienka
 
 - alias: 'Włącz timer w łazience gdy otwarte drzwi lub ruch'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.drzwi_lazienka_contact,binary_sensor.lazienka_motion_occupancy
@@ -26,6 +28,7 @@
         entity_id: timer.lazienka
 
 - alias: 'Wyłącz światło w łazience po upływie czasu'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: timer.finished
@@ -37,6 +40,7 @@
         entity_id: light.lampa_lazienka
 
 - alias: 'Wyzeruj timer w łazience gdy światło zgaszone'
+  initial_state: 'on'
   hide_entity: true
   trigger:
     - platform: state
@@ -48,6 +52,7 @@
         entity_id: timer.lazienka
 
 - alias: 'Zalanie łazienki'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.lazienka_leak_water_leak
@@ -61,6 +66,7 @@
           Zalanie łazienki!!!
 
 - alias: 'Włącz światło w toalecie gdy otwarte drzwi'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.drzwi_toaleta_contact
@@ -75,6 +81,7 @@
         entity_id: light.swiatlo_toaleta
 
 - alias: 'Wyłącz światło w toalecie przy wyjściu'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.drzwi_toaleta_contact
@@ -89,6 +96,7 @@
         entity_id: light.swiatlo_toaleta
 
 - alias: 'Włącz timer w toalecie gdy otwarte drzwi'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.drzwi_toaleta_contact
@@ -102,6 +110,7 @@
         entity_id: timer.toaleta
 
 - alias: 'Wyłącz światło w toalecie po upływie czasu'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: timer.finished
@@ -113,6 +122,7 @@
         entity_id: light.swiatlo_toaleta
 
 - alias: 'Wyzeruj timer w toalecie gdy światło zgaszone'
+  initial_state: 'on'
   hide_entity: true
   trigger:
     - platform: state

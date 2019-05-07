@@ -1,38 +1,141 @@
 title: Pokój Janka
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
-panel: true
 cards:
-  - type: horizontal-stack
+  - type: custom:compact-custom-header
+
+  - type: vertical-stack
     cards:
-      - type: vertical-stack
-        cards:
-          - type: glance
-            columns: 3
-            entities:
-              - entity: binary_sensor.okno_janek_contact
-              - entity: sensor.janek_motion_illuminance
-              - entity: binary_sensor.janek_motion_occupancy
-          - type: entities
-            title: Przełączniki
-            show_header_toggle: false
-            entities:
-              - entity: switch.rtv_jan
-              - entity: input_boolean.jasiu_chillout
-              - entity: automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
-      - type: vertical-stack
-        cards:
-          - type: light
-            entity: light.bedside
-          - type: light
-            entity: light.swiatlo_pokoj_janka
-      - type: vertical-stack
-        cards:
-          - type: thermostat
-            entity: climate.pokoj_janka
-          - type: entities
-            title: Roleta
-            show_header_toggle: false
-            entities:
-              - entity: cover.pokoj_janka
-              - type: weblink
-                url: http://shellyswitch-5B28DA
+      - type: custom:card-modder
+        card:
+          type: entities
+          show_header_toggle: false
+          entities:
+            - entity: input_boolean.jasiu_chillout
+            - entity: automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: light.bedside
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/bedside800.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: light.swiatlo_pokoj_janka
+          name: Lampa
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/pokoj_janka800.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
+          entity: switch.rtv_jan
+          name: RTV
+          tap_action:
+            action: toggle
+          image: /local/lovelace/salon/rtv-jan800.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: conditional
+          conditions:
+            - entity: switch.rtv_jan
+              state: 'on'
+          card:
+            type: custom:mini-media-player
+            entity: media_player.pokoj_janka
+            artwork: cover
+            power_color: true
+            show_source: true
+            show_progress: true
+            group: false
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100%
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+      - type: custom:card-modder
+        card:
+          type: conditional
+          conditions:
+            - entity: switch.rtv_jan
+              state: 'on'
+          card:
+            type: custom:mini-media-player
+            entity: media_player.sharp
+            artwork: cover
+            power_color: true
+            show_source: true
+            show_progress: true
+            group: false
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100%
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+  - type: vertical-stack
+    cards:
+      - type: custom:card-modder
+        card:
+          type: thermostat
+          entity: climate.pokoj_janka
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Roleta
+          show_header_toggle: false
+          entities:
+            - entity: cover.pokoj_janka
+            - type: weblink
+              url: http://shellyswitch-5B28DA
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)

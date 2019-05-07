@@ -1,4 +1,5 @@
 - alias: 'Jan RTV notification'
+  initial_state: 'on'
   trigger:
     platform: time
     at: '00:00:00'
@@ -15,6 +16,7 @@
           Listwa za 5 minut się wyłączy
 
 - alias: 'Jan RTV off'
+  initial_state: 'on'
   trigger:
     platform: time
     at: '00:05:00'
@@ -24,6 +26,7 @@
         entity_id: switch.rtv_jan
 
 - alias: 'Bedside Jan on'
+  initial_state: 'on'
   trigger:
     platform: sun
     event: sunset
@@ -44,6 +47,7 @@
           Bedside on
 
 - alias: 'Bedside Jan off'
+  initial_state: 'on'
   trigger:
     platform: sun
     event: sunrise
@@ -54,6 +58,7 @@
         entity_id: light.bedside
 
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.janek_motion_occupancy
@@ -74,6 +79,7 @@
         entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Włącz timer w pokoju Janka gdy ruch'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.janek_motion_occupancy
@@ -94,6 +100,7 @@
         entity_id: timer.pokoj_janka
 
 - alias: 'Wyłącz światło w pokoju Janka po upływie czasu'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: timer.finished
@@ -105,6 +112,7 @@
         entity_id: light.swiatlo_pokoj_janka
 
 - alias: 'Wyzeruj timer w pokoju Janka gdy światło zgaszone'
+  initial_state: 'on'
   hide_entity: true
   trigger:
     - platform: state
@@ -116,6 +124,7 @@
         entity_id: timer.pokoj_janka
 
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w pokoju Janka'
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_janek_contact
@@ -133,6 +142,7 @@
           Ogrzewanie przykręcone w pokóju Janka
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_janek_contact
@@ -150,6 +160,7 @@
           Ogrzewanie przywrócone w pokóju Janka
 
 - alias: 'Zgaś światło w pokoju Janka gdy chillout mode on'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: input_boolean.jasiu_chillout

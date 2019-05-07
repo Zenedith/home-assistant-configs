@@ -1,4 +1,5 @@
 - alias: 'Włącz światło w korytarzu gdy ruch'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.korytarz_motion_occupancy
@@ -20,6 +21,7 @@
 #        message: 'Movement in korytarz'
 
 - alias: 'Włącz timer w korytarzu gdy ruch'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.korytarz_motion_occupancy
@@ -36,6 +38,7 @@
         entity_id: timer.korytarz
 
 - alias: 'Wyłącz światło w korytarzu po upływie czasu'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: timer.finished
@@ -55,6 +58,7 @@
 #        message: 'Nobody here, going sleep'
 
 - alias: 'Otwarcie drzwi wejściowych'
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.drzwi_wejsciowe_contact
@@ -73,93 +77,3 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Drzwi wejściowe zostały otwarte.
-
-- alias: 'Chillout mode on'
-  trigger:
-    - platform: state
-      entity_id: input_boolean.jasiu_chillout
-      to: 'on'
-    - platform: state
-      entity_id: input_boolean.sypialnia_chillout
-      to: 'on'
-  condition:
-    - condition: state
-      entity_id: light.lampa_korytarz_drzwi
-      state: 'on'
-  action:
-    - service: script.moonlight_korytarz_on
-
-- alias: 'Chillout mode off'
-  trigger:
-    - platform: state
-      entity_id: input_boolean.jasiu_chillout
-      to: 'off'
-    - platform: state
-      entity_id: input_boolean.sypialnia_chillout
-      to: 'off'
-  condition:
-    - condition: state
-      entity_id: light.lampa_korytarz_drzwi
-      state: 'on'
-  action:
-    - service: script.moonlight_korytarz_off
-
-- alias: 'Chillout mode on when first time lights turn on'
-  trigger:
-    - platform: state
-      entity_id: light.lampa_korytarz_drzwi
-      to: 'on'
-  condition:
-    - condition: template
-      value_template: "{{ state_attr('light.lampa_korytarz_drzwi', 'brightness') > 100 }}"
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: input_boolean.sypialnia_chillout
-          state: 'on'
-        - condition: state
-          entity_id: input_boolean.jasiu_chillout
-          state: 'on'
-  action:
-    - service: script.moonlight_korytarz_on
-
-- alias: 'Chillout mode off when first time lights turn on'
-  trigger:
-    - platform: state
-      entity_id: light.lampa_korytarz_drzwi
-      to: 'on'
-  condition:
-    - condition: state
-      entity_id: input_boolean.sypialnia_chillout
-      state: 'off'
-    - condition: state
-      entity_id: input_boolean.jasiu_chillout
-      state: 'off'
-    - condition: template
-      value_template: "{{ state_attr('light.lampa_korytarz_drzwi', 'brightness') < 100 }}"
-  action:
-    - service: script.moonlight_korytarz_off
-
-- alias: 'Moonlight switch on'
-  trigger:
-    - platform: state
-      entity_id: input_boolean.moonlight_korytarz
-      to: 'on'
-  condition:
-    - condition: state
-      entity_id: light.lampa_korytarz_drzwi
-      state: 'on'
-  action:
-    - service: script.moonlight_korytarz_on
-
-- alias: 'Moonlight switch off'
-  trigger:
-    - platform: state
-      entity_id: input_boolean.moonlight_korytarz
-      to: 'off'
-  condition:
-    - condition: state
-      entity_id: light.lampa_korytarz_drzwi
-      state: 'on'
-  action:
-    - service: script.moonlight_korytarz_off
