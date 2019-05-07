@@ -18,10 +18,10 @@
   name: "Swiatło TODO5 Version"
   state_topic: "shellies/shelly_5/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
-- platform: mqtt
-  name: "Kamera Version"
-  state_topic: "basic/sonoff-basic-3/STATUS2"
-  value_template: "{{ value_json['StatusFWR'].Version }}"
+#- platform: mqtt
+#  name: "Kamera Version"
+#  state_topic: "basic/sonoff-basic-3/STATUS2"
+#  value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Listwa RTV Version"
   state_topic: "zigbee2mqtt/sonoff2/STATUS2"
