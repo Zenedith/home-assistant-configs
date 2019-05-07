@@ -1,0 +1,3 @@
+- platform: aquostv
+  host: 192.168.1.39
+  name: sharp
