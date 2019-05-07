@@ -64,7 +64,7 @@ cards:
           type: conditional
           conditions:
             - entity: switch.rtv_jan
-              state: on
+              state: 'on'
           card:
             type: custom:mini-media-player
             entity: media_player.pokoj_janka
@@ -88,7 +88,7 @@ cards:
           type: conditional
           conditions:
             - entity: switch.rtv_jan
-              state: on
+              state: 'on'
           card:
             type: custom:mini-media-player
             entity: media_player.sharp
