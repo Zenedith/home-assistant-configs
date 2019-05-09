@@ -8,4 +8,4 @@ sequence:
   - service: script.climate_off
   - service: switch.turn_on
     data:
-    entity_id: switch.listwa_salon_slot_usb
+      entity_id: switch.listwa_salon_slot_usb
