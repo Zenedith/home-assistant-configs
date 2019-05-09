@@ -1,5 +1,5 @@
 - platform: rest
-  scan_interval: 10
+  scan_interval: 86400
   name: Sonoff Firmware Version
   resource: https://api.github.com/repos/arendst/Sonoff-Tasmota/releases/latest
   value_template: '{{ value_json.tag_name }}'

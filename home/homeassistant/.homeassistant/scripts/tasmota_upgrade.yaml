@@ -1,6 +1,10 @@
 sequence:
   - service: mqtt.publish
     data:
+      topic: 'listwa/listwa1/cmnd/upgrade'
+      payload: "1"
+  - service: mqtt.publish
+    data:
       topic: 'zigbee2mqtt/sonoff2/cmnd/upgrade'
       payload: "1"
   - service: mqtt.publish

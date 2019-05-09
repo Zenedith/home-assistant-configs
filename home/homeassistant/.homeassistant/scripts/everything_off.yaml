@@ -6,3 +6,6 @@ sequence:
     data:
       entity_id: group.all_lights
   - service: script.climate_off
+  - service: switch.turn_on
+    data:
+    entity_id: switch.listwa_salon_slot_usb
