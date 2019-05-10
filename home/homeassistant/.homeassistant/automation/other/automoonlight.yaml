@@ -45,8 +45,8 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: light.lampa_korytarz_drzwi
-      state: 'on'
+      entity_id: input_boolean.moonlight_korytarz
+      state: 'off'
   action:
     - service: input_boolean.turn_on
       data:
