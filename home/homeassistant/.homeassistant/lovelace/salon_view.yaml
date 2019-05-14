@@ -55,7 +55,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.salon_regal
+          entity: light.ambient_regal
           name: Regał
           tap_action:
             action: toggle
