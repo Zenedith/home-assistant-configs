@@ -323,3 +323,25 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przywrócone w salonie
+
+- alias: 'Wyłącz ambient przyciskiem regału'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: light.salon_regal
+      to: 'off'
+  action:
+    - service: automation.trigger
+      data:
+        entity_id: automation.ambient_off
+
+- alias: 'Włącz ambient przyciskiem regału'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: light.salon_regal
+      to: 'on'
+  action:
+    - service: automation.trigger
+      data:
+        entity_id: automation.ambient_on
