@@ -3,12 +3,12 @@
   state_topic: "shellies/shelly_1/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
-  name: "Swiatło TODO2 Version"
-  state_topic: "shellies/shelly_2/STATUS2"
+  name: "Lampa Salon Version"
+  state_topic: "shellies/sonoff_lampa_salon/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
-  name: "Swiatło TODO3 Version"
-  state_topic: "shellies/shelly_3/STATUS2"
+  name: "Salon regał Version"
+  state_topic: "shellies/salon_regal/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Swiatło Sypialnia Version"

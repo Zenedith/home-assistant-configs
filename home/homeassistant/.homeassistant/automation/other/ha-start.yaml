@@ -114,11 +114,11 @@
         payload: 'true'
     - service: mqtt.publish
       data:
-        topic: 'shellies/shelly_2/online'
+        topic: 'shellies/sonoff_lampa_salon/online'
         payload: 'true'
     - service: mqtt.publish
       data:
-        topic: 'shellies/shelly_3/online'
+        topic: 'shellies/salon_regal/online'
         payload: 'true'
     - service: mqtt.publish
       data:

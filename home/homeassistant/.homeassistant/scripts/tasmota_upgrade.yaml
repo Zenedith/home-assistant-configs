@@ -53,11 +53,11 @@ sequence:
       payload: "1"
   - service: mqtt.publish
     data:
-      topic: 'shellies/shelly_2/cmnd/upgrade'
+      topic: 'shellies/sonoff_lampa_salon/cmnd/upgrade'
       payload: "1"
   - service: mqtt.publish
     data:
-      topic: 'shellies/shelly_3/cmnd/upgrade'
+      topic: 'shellies/salon_regal/cmnd/upgrade'
       payload: "1"
   - service: mqtt.publish
     data:
