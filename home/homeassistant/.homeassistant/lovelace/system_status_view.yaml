@@ -125,6 +125,8 @@ cards:
             - sensor.swiatlo_pokoj_janka_version
             - sensor.swiatlo_sypialnia_version
 #            - sensor.kamera_version
+            - sensor.lampa_salon_version
+            - sensor.salon_regal_version
             - sensor.listwa_rtv_version
             - sensor.listwa_sypialnia_version
             - sensor.zmietek_version

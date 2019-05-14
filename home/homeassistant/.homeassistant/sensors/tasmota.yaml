@@ -24,7 +24,7 @@
 #  value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Listwa RTV Version"
-  state_topic: "zigbee2mqtt/sonoff2/STATUS2"
+  state_topic: "listwa/listwa1/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Listwa Sypialnia Version"

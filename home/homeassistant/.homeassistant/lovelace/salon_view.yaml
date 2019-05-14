@@ -17,8 +17,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: group.salon_lampy
-          name: Lights
+          entity: light.lampa_salon
           tap_action:
             action: toggle
           image: /local/lovelace/salon/salon800.jpg
@@ -56,7 +55,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.ambient_regal
+          entity: light.salon_regal
           name: Regał
           tap_action:
             action: toggle
