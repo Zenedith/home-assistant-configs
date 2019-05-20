@@ -1,0 +1,5 @@
+- platform: ping
+  name: zen_pc_online
+  host: 192.168.1.2
+  count: 2
+  scan_interval: 60
