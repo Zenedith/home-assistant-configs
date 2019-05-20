@@ -150,7 +150,7 @@
   condition:
     - condition: state
       entity_id: binary_sensor.okno_janek_contact
-      state: 'off'
+      state: 'on'
   action:
     - service: climate.set_away_mode
       data:
