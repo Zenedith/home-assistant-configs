@@ -207,6 +207,22 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przykręcone w sypialni
 
+- alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w sypialni'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: climate.sypialnia
+    to: 'heat'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.okno_sypialnia_contact
+      state: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.sypialnia
+        away_mode: 'on'
+
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
   initial_state: 'on'
   trigger:

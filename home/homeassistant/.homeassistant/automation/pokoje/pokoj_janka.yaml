@@ -141,6 +141,22 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przykręcone w pokóju Janka
 
+- alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w pokoju Janka'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: climate.pokoj_janka
+    to: 'heat'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.okno_janek_contact
+      state: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.pokoj_janka
+        away_mode: 'on'
+
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
   initial_state: 'on'
   trigger:

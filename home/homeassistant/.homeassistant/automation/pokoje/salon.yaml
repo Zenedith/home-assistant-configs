@@ -306,6 +306,22 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przykręcone w salonie
 
+- alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartych drzwiach w salonie'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: climate.salon
+    to: 'heat'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.drzwi_balkonowe_contact
+      state: 'off'
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.salon
+        away_mode: 'on'
+
 - alias: 'Przywróć ogrzewanie przy zamkniętych drzwiach w salonie'
   initial_state: 'on'
   trigger:

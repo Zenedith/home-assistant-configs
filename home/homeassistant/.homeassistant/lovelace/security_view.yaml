@@ -250,8 +250,6 @@ cards:
           entities:
             - script.everything_off
             - script.everything_off_secure
-            - group.all_switches
-            - group.all_lights
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
