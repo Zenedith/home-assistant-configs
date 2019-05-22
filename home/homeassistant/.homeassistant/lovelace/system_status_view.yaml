@@ -1,6 +1,6 @@
 icon: mdi:settings
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
-binary_sensor.System Status
+name: System Status
 cards:
   - type: custom:compact-custom-header
   - type: vertical-stack
