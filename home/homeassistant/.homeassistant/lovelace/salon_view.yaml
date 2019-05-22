@@ -59,6 +59,7 @@ cards:
             - entity: binary_sensor.ambient_regal_online
               state: 'on'
           card:
+            type: picture-entity
             entity: light.ambient_regal
             name: Regał
             tap_action:
