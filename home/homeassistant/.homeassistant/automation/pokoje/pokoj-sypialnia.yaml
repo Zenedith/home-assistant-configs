@@ -23,7 +23,7 @@
   condition:
     - condition: state
       entity_id: binary_sensor.zen_pc_online
-      state: 'off'
+      state: 'offline'
   action:
     - service: switch.turn_off
       data:
