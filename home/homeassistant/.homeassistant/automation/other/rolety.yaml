@@ -13,7 +13,8 @@
     platform: time
     at: '17:00:00'
   action:
-    - service: cover.position
-      data:
-        entity_id: cover.kuchnia
-        position: 40
+    - service: mqtt.publish
+      data_template:
+        topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
+        retain: true
+        payload: "40"

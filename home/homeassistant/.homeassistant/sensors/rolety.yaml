@@ -1,0 +1,12 @@
+- platform: mqtt
+  name: 'Roleta Kuchnia power'
+  state_topic: 'shellies/shellyswitch-135303/roller/power'
+  unit_of_measurement: 'W'
+- platform: mqtt
+  name: 'Roleta pokój Janka power'
+  state_topic: 'shellies/shellyswitch-5B28DA/roller/power'
+  unit_of_measurement: 'W'
+- platform: mqtt
+  name: 'Roleta Sypialnia power'
+  state_topic: 'shellies/shellyswitch-32B580/roller/power'
+  unit_of_measurement: 'W'
