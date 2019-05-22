@@ -148,44 +148,35 @@ cards:
     
             - type: state-label
               entity: sensor.vacuum_cleaning_time
-              style: {color: white, left: 13%, top: 91%}
+              style: {color: white, left: 12%, top: 91%}
     
             - type: icon
               icon: mdi:blender
               entity: sensor.vacuum_main_brush
-              style: {color: white, left: 22%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+              style: {color: white, left: 23%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
     
             - type: state-label
               entity: sensor.vacuum_main_brush
-              style: {color: white, left: 36%, top: 92%}
+              style: {color: white, left: 35%, top: 92%}
     
             - type: icon
               icon: mdi:blender
               entity: sensor.vacuum_side_brush
-              style: {color: white, left: 47%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+              style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
     
             - type: state-label
               entity: sensor.vacuum_side_brush
-              style: {color: white, left: 56%, top: 92%}
+              style: {color: white, left: 58%, top: 92%}
     
             - type: icon
               icon: mdi:filter
               entity: sensor.vacuum_filter
-              style: {color: white, left: 67%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+              style: {color: white, left: 70%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
     
             - type: state-label
               entity: sensor.vacuum_filter
-              style: {color: white, left: 77%, top: 92%}
-    
-            - type: icon
-              icon: mdi:counter
-              entity: sensor.vacuum_cleaning_count
-              style: {color: white, left: 88%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-#
-#            - type: state-label
-#              entity: sensor.vacuum_cleaning_count
-#              style: {color: white, left: 93%, top: 92%}
-#
+              style: {color: white, left: 81%, top: 92%}
+
             - type: state-label
               entity: sensor.vacuum_status
               style:
