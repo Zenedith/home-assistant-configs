@@ -18,7 +18,7 @@
 
 - platform: ping
   name: ambient_obraz_online
-  host: 192.168.1.23
+  host: 192.168.1.237
   count: 2
   scan_interval: 60
 
