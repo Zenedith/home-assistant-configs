@@ -34,11 +34,11 @@
   count: 2
   scan_interval: 60
 
-- platform: ping
-  name: yeelink_light_ceil_online
-  host: 192.168.1.22
-  count: 2
-  scan_interval: 60
+#- platform: ping
+#  name: yeelink_light_ceil_online
+#  host: 192.168.1.22
+#  count: 2
+#  scan_interval: 60
 
 - platform: ping
   name: shelly_1_pokoj_jan_online
@@ -46,11 +46,11 @@
   count: 2
   scan_interval: 60
 
-- platform: ping
-  name: yeelink_light_ceil_online
-  host: 192.168.1.25
-  count: 2
-  scan_interval: 60
+#- platform: ping
+#  name: yeelink_light_ceil_online
+#  host: 192.168.1.25
+#  count: 2
+#  scan_interval: 60
 
 - platform: ping
   name: sonoff_rtv_jan_online
@@ -89,7 +89,7 @@
   scan_interval: 60
 
 - platform: ping
-  name: Zenedith_macbook_online
+  name: zenedith_macbook_online
   host: 192.168.1.67
   count: 2
   scan_interval: 60
@@ -149,13 +149,13 @@
   scan_interval: 60
 
 - platform: ping
-  name: NOVA_online
+  name: nova_online
   host: 192.168.1.157
   count: 2
   scan_interval: 60
 
 - platform: ping
-  name: RMMINI_online
+  name: rmmini_online
   host: 192.168.1.163
   count: 2
   scan_interval: 60

@@ -106,38 +106,43 @@ cards:
           title: Online
           show_header_toggle: false
           entities:
-            - binary_sensor.zen_pc_online
-            - binary_sensor.dafang_online
-            - binary_sensor.ambient_regal_online
-            - binary_sensor.ambient_obraz_online
-            - binary_sensor.salon_regal_switch_online
-            - binary_sensor.lampa_salon_switch_online
-            - binary_sensor.yeelink_light_ceil_online
-            - binary_sensor.shelly_1_pokoj_jan_online
-            - binary_sensor.yeelink_light_ceil_online
-            - binary_sensor.sonoff_rtv_jan_online
-            - binary_sensor.listwa_sypialnia_online
-            - binary_sensor.zmietek_switch_online
-            - binary_sensor.sharp_online
-            - binary_sensor.lampa_korytarz_drzwi_online
-            - binary_sensor.chromecast_pokoj_janka_online
-            - binary_sensor.Zenedith_macbook_online
-            - binary_sensor.bedside_online
-            - binary_sensor.listwa_salon_online
+            - binary_sensor.nova_online
+
             - binary_sensor.roleta_kuchnia_online
             - binary_sensor.roleta_sypialnia_online
             - binary_sensor.roleta_pokoj_janka_online
-            - binary_sensor.roborock_online
+
+            - binary_sensor.zmietek_switch_online
+            - binary_sensor.salon_regal_switch_online
+            - binary_sensor.lampa_salon_switch_online
+            - binary_sensor.shelly_1_pokoj_jan_online
             - binary_sensor.shelly_4_sypialnia_online
-            - binary_sensor.yeelight_biurko_online
             - binary_sensor.shelly1_toaleta_online
-            - binary_sensor.NOVA_online
-            - binary_sensor.RMMINI_online
+            - binary_sensor.sonoff_rtv_jan_online
+            - binary_sensor.listwa_sypialnia_online
+            - binary_sensor.listwa_salon_online
+            - binary_sensor.roborock_online
+
+            - binary_sensor.zen_pc_online
+            - binary_sensor.drukarka_online
+            - binary_sensor.dafang_online
+
+            - binary_sensor.sharp_online
+            - binary_sensor.chromecast_pokoj_janka_online
+            - binary_sensor.zenedith_macbook_online
+            - binary_sensor.rmmini_online
+
+            - binary_sensor.yeelight_biurko_online
+            - binary_sensor.bedside_online
+            - binary_sensor.lampa_korytarz_drzwi_online
+            - binary_sensor.ambient_regal_online
+            - binary_sensor.ambient_obraz_online
+
             - binary_sensor.lampa_kuchnia_1_online
             - binary_sensor.lampa_kuchnia_2_online
             - binary_sensor.lampa_kuchnia_3_online
             - binary_sensor.lampa_korytarz_online
-            - binary_sensor.drukarka_online
+
             - binary_sensor.yeelight_salon_1_online
             - binary_sensor.yeelight_salon_2_online
             - binary_sensor.yeelight_salon_3_online
