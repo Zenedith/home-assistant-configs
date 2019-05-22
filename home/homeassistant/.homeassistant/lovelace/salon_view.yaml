@@ -56,7 +56,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: binary_sensor.regal_online
+            - entity: binary_sensor.ambient_regal_online
               state: 'on'
           card:
             entity: light.ambient_regal
@@ -73,7 +73,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: binary_sensor.ambient-obraz_online
+            - entity: binary_sensor.ambient_obraz_online
               state: 'on'
           card:
             type: picture-entity

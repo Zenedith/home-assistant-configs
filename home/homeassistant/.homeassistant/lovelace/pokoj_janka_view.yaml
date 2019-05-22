@@ -64,7 +64,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: switch.rtv_jan
+            - entity: binary_sensor.chromecast_pokoj_janka_online
               state: 'on'
           card:
             type: custom:mini-media-player
