@@ -107,12 +107,11 @@ cards:
           show_header_toggle: false
           entities:
             - binary_sensor.nova_online
+            - binary_sensor.rmmini_online
 
             - binary_sensor.roleta_kuchnia_online
             - binary_sensor.roleta_sypialnia_online
             - binary_sensor.roleta_pokoj_janka_online
-
-            - binary_sensor.dafang_online
 
             - binary_sensor.zmietek_switch_online
             - binary_sensor.salon_regal_switch_online
@@ -139,12 +138,12 @@ cards:
           title: Support
           show_header_toggle: false
           entities:
+            - binary_sensor.dafang_online
             - binary_sensor.zen_pc_online
             - binary_sensor.drukarka_online
 
             - binary_sensor.sharp_online
             - binary_sensor.chromecast_pokoj_janka_online
-            - binary_sensor.rmmini_online
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
