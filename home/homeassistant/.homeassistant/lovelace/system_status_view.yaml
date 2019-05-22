@@ -103,7 +103,7 @@ cards:
       - type: custom:card-modder
         card:
           type: entities
-          title: Online
+          title: Core
           show_header_toggle: false
           entities:
             - binary_sensor.nova_online
@@ -111,6 +111,8 @@ cards:
             - binary_sensor.roleta_kuchnia_online
             - binary_sensor.roleta_sypialnia_online
             - binary_sensor.roleta_pokoj_janka_online
+
+            - binary_sensor.dafang_online
 
             - binary_sensor.zmietek_switch_online
             - binary_sensor.salon_regal_switch_online
@@ -122,27 +124,51 @@ cards:
             - binary_sensor.listwa_sypialnia_online
             - binary_sensor.listwa_salon_online
             - binary_sensor.roborock_online
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Support
+          show_header_toggle: false
+          entities:
             - binary_sensor.zen_pc_online
             - binary_sensor.drukarka_online
-            - binary_sensor.dafang_online
 
             - binary_sensor.sharp_online
             - binary_sensor.chromecast_pokoj_janka_online
-            - binary_sensor.zenedith_macbook_online
             - binary_sensor.rmmini_online
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Light
+          show_header_toggle: false
+          entities:
             - binary_sensor.yeelight_biurko_online
             - binary_sensor.bedside_online
             - binary_sensor.lampa_korytarz_drzwi_online
+            - binary_sensor.lampa_korytarz_online
             - binary_sensor.ambient_regal_online
             - binary_sensor.ambient_obraz_online
-
             - binary_sensor.lampa_kuchnia_1_online
             - binary_sensor.lampa_kuchnia_2_online
             - binary_sensor.lampa_kuchnia_3_online
-            - binary_sensor.lampa_korytarz_online
-
             - binary_sensor.yeelight_salon_1_online
             - binary_sensor.yeelight_salon_2_online
             - binary_sensor.yeelight_salon_3_online
