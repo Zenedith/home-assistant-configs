@@ -1,5 +1,5 @@
 title: Salon i kuchnia
-icon: mdi:sofa
+icon: mdi:theater
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: custom:compact-custom-header
