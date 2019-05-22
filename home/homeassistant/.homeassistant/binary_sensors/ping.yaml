@@ -155,12 +155,6 @@
   scan_interval: 60
 
 - platform: ping
-  name: hassbian3_online
-  host: 192.168.1.162
-  count: 2
-  scan_interval: 60
-
-- platform: ping
   name: RMMINI_online
   host: 192.168.1.163
   count: 2
