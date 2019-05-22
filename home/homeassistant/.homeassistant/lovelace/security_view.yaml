@@ -263,7 +263,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: switch.listwa_salon_slot_4
+            - entity: binary_sensor.dafang_online
               state: 'on'
           card:
             type: picture-entity
@@ -284,7 +284,7 @@ cards:
           type: conditional
           conditions:
             - entity: binary_sensor.dafang_online
-              state: 'online'
+              state: 'on'
           card:
             type: entities
             entities:

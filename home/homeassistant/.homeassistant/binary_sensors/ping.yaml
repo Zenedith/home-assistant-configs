@@ -29,6 +29,12 @@
   scan_interval: 60
 
 - platform: ping
+  name: lampa_salon_switch_online
+  host: 192.168.1.91
+  count: 2
+  scan_interval: 60
+
+- platform: ping
   name: yeelink-light-ceil_online
   host: 192.168.1.22
   count: 2
@@ -47,14 +53,8 @@
   scan_interval: 60
 
 - platform: ping
-  name: sonoff-rtv-jan-270_online
+  name: sonoff-rtv-jan_online
   host: 192.168.1.29
-  count: 2
-  scan_interval: 60
-
-- platform: ping
-  name: lampa-kuchnia-2_online
-  host: 192.168.1.34
   count: 2
   scan_interval: 60
 
@@ -95,18 +95,6 @@
   scan_interval: 60
 
 - platform: ping
-  name: lampa-kuchnia-3_online
-  host: 192.168.1.69
-  count: 2
-  scan_interval: 60
-
-- platform: ping
-  name: sonoff_lampa_salon_online
-  host: 192.168.1.91
-  count: 2
-  scan_interval: 60
-
-- platform: ping
   name: bedside_online
   host: 192.168.1.115
   count: 2
@@ -125,6 +113,18 @@
   scan_interval: 60
 
 - platform: ping
+  name: roleta-sypialnia_online
+  host: 192.168.1.141
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: roleta-pokoj-janka_online
+  host: 192.168.1.168
+  count: 2
+  scan_interval: 60
+
+- platform: ping
   name: roborock_online
   host: 192.168.1.133
   count: 2
@@ -133,12 +133,6 @@
 - platform: ping
   name: shelly_4_sypialnia_online
   host: 192.168.1.135
-  count: 2
-  scan_interval: 60
-
-- platform: ping
-  name: roleta-sypialnia_online
-  host: 192.168.1.141
   count: 2
   scan_interval: 60
 
@@ -173,14 +167,20 @@
   scan_interval: 60
 
 - platform: ping
-  name: roleta-pokoj-janka_online
-  host: 192.168.1.168
+  name: lampa-kuchnia-1_online
+  host: 192.168.1.181
   count: 2
   scan_interval: 60
 
 - platform: ping
-  name: lampa-kuchnia-1_online
-  host: 192.168.1.181
+  name: lampa-kuchnia-2_online
+  host: 192.168.1.34
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: lampa-kuchnia-3_online
+  host: 192.168.1.69
   count: 2
   scan_interval: 60
 
@@ -188,4 +188,40 @@
   name: lampa-korytarz_online
   host: 192.168.1.223
   count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: drukarka_online
+  host: 192.168.1.123
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight-salon-1_online
+  host: 192.168.1.167
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight-salon-2_online
+  host: 192.168.1.98
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight-salon-3_online
+  host: 192.168.1.118
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight-salon-4_online
+  host: 192.168.1.139
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight-salon-5_online
+  host: 192.168.1.48
+  count: 1
   scan_interval: 60

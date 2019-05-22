@@ -57,7 +57,7 @@ cards:
           type: conditional
           conditions:
             - entity: binary_sensor.regal_online
-              state: 'online'
+              state: 'on'
           card:
             entity: light.ambient_regal
             name: Regał
@@ -74,7 +74,7 @@ cards:
           type: conditional
           conditions:
             - entity: binary_sensor.ambient-obraz_online
-              state: 'online'
+              state: 'on'
           card:
             type: picture-entity
             entity: light.ambient_obraz
