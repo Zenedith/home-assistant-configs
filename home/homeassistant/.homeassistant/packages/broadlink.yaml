@@ -10,79 +10,49 @@ switch:
         friendly_name: "Denon volume"
         command_on: "JgCIAAkZDDkLGAsXCxgLOgsXCxkKGAo7CjsKOwo7ChgLGAsABZ0OFwg9CBoJGggaCRoJPAg9CTwIGgkaCRoJGQk8CzoJAAWhChkJPAkaCRkKGQk8CBoKGQkZCjsKOw04CT0JGQoZCgAFoAoYCzoLGAsXCxkKGAo7CjsKOQ4XChgLGAoZCjoLOgsADQU="
         command_off: "JgCIAAoYCjsLGAgaChkIGwk8CBoJGgo7CD0IPQk8CBoJGggABaIJGQo7CxgKGAkaCjsLGAk8CTwIGgoZCRkJGgg9CD0IAAWiCRkKOw0WCRoJGQoZCTwKGAoZCD0MOQg9CD0IGwkZCgAFoAoZCjsJGQoZCRkKOwkaCTwKOwkZCxgKGQkZCzoKOwoADQU="
-#      tv_volume:
-#        friendly_name: "Tv volume"
-#        command_on: "JgBUAFASFhIpEhUSFhIpEhUSFRIpEhYSFRIVEhYAA2NQEhYSKRIVEhUSKRIWEhUSKRIWERYSFRIWAANkUBIWEikSFRIVEikSFhIVEikSFRIWEhUSFQANBQAAAAA="
-#        command_off: "JgBwAFESKRIpEhUSFRIpEhYSFRIpEhYRFhIVEhYAA09REikSKRIVEhUSKRIWEhUSKRIWERYSFRIWAANPURIpEikSFRIWEikSFRIVEikSFhIVEhYRFgADUVASKRIpEhYRFhIpEhUSFhIpEhUSFRIWEhUADQUAAAAAAAAAAA=="
 
-#input_boolean:
-#  broadlink_denon_receiver:
-#    name: Denon
-#    icon: mdi:surround-sound
-#
-#  broadlink_tv_receiver:
-#    name: Tv
-#    icon: mdi:television
-
-#input_select:
-#  broadlink_denon_input:
-#    name: Denon Input
-#    initial: TV
-#    options:
-#      - 'TV'
+input_select:
+  broadlink_denon_input:
+    name: Denon Input
+    initial: TV
+    options:
+      - 'TV'
+      - 'Chromecast'
 #      - 'Tuner'
 
-#automation:
-#  - alias: Denon Receiver On
-#    trigger:
-#      - platform: state
-#        entity_id: input_boolean.broadlink_denon_receiver
-#        to: 'on'
-#    action:
-#      - service: switch.broadlink_send_packet_192_168_1_163
-#        data:
-#          packet:
-#            - "JgD6AAkaCD0JGgkaCBsIPQoZCRoIGwgaCT0IPgg9CBsIGwgABe8LGAk9ChkIGgkaCRoIPQk9CD4KOwoZCBsIGgk9CD4KAAYzChkIPQkaCBsIGwg9CRoIGwgaCRoJPQg9CT0IGwgaCQADywgAAhwKGQo8ChgJGgkaCBsIPQk9CD4KOwoZCBsIGgk9CD0LAAYzChkIPQoZCBsIGwg9ChkIGwoYCRoJPQo7CjwKGQgaCQAF7wsYCjwIGgoZChkIGwg9CjwKNg88ChkKGAkaCT0KOwoABjQKGQg3DxoIGwgbCD0KGQoZCBoJGgk9CjsKPAgbCBoJAAP3CQAGbAgADQUAAAAAAAAAAAAAAAAAAA=="
-#
-#  - alias: Denon Receiver Off
-#    trigger:
-#      - platform: state
-#        entity_id: input_boolean.broadlink_denon_receiver
-#        to: 'off'
-#    action:
-#      - service: switch.broadlink_send_packet_192_168_1_163
-#        data:
-#          packet:
-#            - "JgCIAAsXCjwJGAsYChkKGAs6CxgKGAsYCjsKOwo7ChgLGAoABaALGAo7CxcLGAoYCzoMFws6DDkMOQwXChgLGAo7CzoLAAWfCxcLOgsYCxcLGAsYCjoLGAsYChgLOgs6CzoLGAsXCwAFnwwXCzoMFwoYCxgKOwsXCzoLOgs6CxgLGAoYCzoLOgsADQU="
+automation:
+  - alias: Select Denon Input TV
+    trigger:
+      - platform: state
+        entity_id: input_select.broadlink_denon_input
+        to: 'TV'
+    action:
+      - service: broadlink.send
+        data:
+          host: "192.168.1.163"
+          packet:
+            - "JgCIAAgaCTwJGggaCRoJPAkZChkJPAkZChkJPAk8CRkKGQkABaAKGQk8CRoIGggbCRkJPAk8ChkJPAk8CRkLGAg9CTwJAAWgChkJPAkZChkKGQk8CRkKGQk8CRkKGQg9CTwJGQoZCQAFoAoZCD0JGQoZCBoJGgk8CTwJGgk8CTwJGQoZCD0JPAkADQU="
 
-#  - alias: Tv Receiver
-#    trigger:
-#      - platform: state
-#        entity_id: input_boolean.broadlink_tv_receiver
-#    action:
-#      - service: switch.broadlink_send_packet_192_168_1_163
-#        data:
-#          packet:
-#            - "JgBwAFESKRIVEikSFhIpEhUSFRIpEhYSFRIWERYAA1BQEikSFhEqERYSKRIVEhYSKRIVEhUSFhIVAANQURIpEhUSKRIWEikSFRIVEikSFhIVEhUSFgADT1ASKRIWEikSFRIpEhUSFhIpEhUSFRIWEhUADQUAAAAAAAAAAA=="
-
-#  - alias: Select Denon Input TV
-#    trigger:
-#      - platform: state
-#        entity_id: input_select.broadlink_denon_input
-#        to: 'TV'
-#    action:
-#      - service: switch.broadlink_send_packet_192_168_1_163
-#        data:
-#          packet:
-#            - "JgB8AAkaCV4IGgs6CF8IGgs6CjsGPwgaCQAFxAkcCDwKOwgaC34LXAk8Cl0IGgc+CDwLAAWiCRkHPggaCTwJGgleCTwIGgmACBoHHAgABccJPAYcCBsIXwg8Cl0MfQgbC1wIPAYABacKXQgaBxwHGwo7CD0IPQhfCDwJPAgADQUAAAAAAAAAAAAAAAA="
-#
 #  - alias: Select Denon Input Tuner
 #    trigger:
 #      - platform: state
 #        entity_id: input_select.broadlink_denon_input
 #        to: 'Tuner'
 #    action:
-#      - service: switch.broadlink_send_packet_192_168_1_163
+#      - service: broadlink.send
 #        data:
+#          host: "192.168.1.163"
 #          packet:
 #            - "JgCAAAgaCV4JGghfCF8IGgg9CDwKOwgaCQAFxgoZCDwKOwkaCV4JXgg8CToJGwgbBj4HPggABaQJGgg9CBoIPQg7CV8IPQgaCYEIGggbBgAFyQg8CBsGHAg9CDwJXgk8Bj8IGghfCDwIAAWlCl0KGAgbBhwJXgk8CD0IXwg8CjsIAA0FAAAAAAAAAAA="
+
+  - alias: Select Denon Input Chromecast
+    trigger:
+      - platform: state
+        entity_id: input_select.broadlink_denon_input
+        to: 'Chromecast'
+    action:
+      - service: broadlink.send
+        data:
+          host: "192.168.1.163"
+          packet:
+            - "JgCIAAgbCTwJGQoZCRkKGQkZCTwJGgoYChkKOwk8ChgKGQgABaELGAo7CBsJGQkaCTwJPAoYCjsJPAo7ChkKGAo7CjsKAAWgCRkKOwoZChgJGgkZChkKOwgaCRoIGwg9CTwJGQoZCQAFoAkaCTwJGQoZCRkJPAo7ChkKOwk8CD0IGgoZCD0IPQkADQU="

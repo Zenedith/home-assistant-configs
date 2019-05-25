@@ -293,6 +293,7 @@ cards:
             - entity: switch.listwa_salon_slot_1
               name: Denon
             - switch.denon_volume
+            - input_select.broadlink_denon_input
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
