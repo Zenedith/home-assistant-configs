@@ -239,10 +239,11 @@
     - service: switch.turn_on
       data:
         entity_id: switch.listwa_salon_slot_1
-    - delay: 00:00:15
-#    - service: input_boolean.turn_on
-#      data:
-#        entity_id: input_boolean.broadlink_denon_receiver
+    - delay: 00:00:05
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.broadlink_denon_input
+        option: 'TV'
 
 #- alias: 'Włącz ampli przy włączaniu listwy i wlaczonym tv'
 #  trigger:

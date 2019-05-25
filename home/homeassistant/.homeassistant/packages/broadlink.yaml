@@ -27,6 +27,9 @@ automation:
         entity_id: input_select.broadlink_denon_input
         to: 'TV'
     action:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.listwa_salon_slot_1
       - service: broadlink.send
         data:
           host: "192.168.1.163"
@@ -39,6 +42,9 @@ automation:
 #        entity_id: input_select.broadlink_denon_input
 #        to: 'Tuner'
 #    action:
+#      - service: switch.turn_on
+#        data:
+#          entity_id: switch.listwa_salon_slot_1
 #      - service: broadlink.send
 #        data:
 #          host: "192.168.1.163"
@@ -51,6 +57,9 @@ automation:
         entity_id: input_select.broadlink_denon_input
         to: 'Chromecast'
     action:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.listwa_salon_slot_1
       - service: broadlink.send
         data:
           host: "192.168.1.163"
