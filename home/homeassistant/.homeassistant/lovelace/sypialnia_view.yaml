@@ -71,8 +71,6 @@ cards:
           show_header_toggle: false
           entities:
             - entity: cover.sypialnia
-            - type: weblink
-              url: http://shellyswitch-32B580
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

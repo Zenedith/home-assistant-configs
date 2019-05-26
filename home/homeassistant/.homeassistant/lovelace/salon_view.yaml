@@ -271,8 +271,6 @@ cards:
           title: Rolety
           entities:
             - entity: cover.kuchnia
-            - type: weblink
-              url: http://shellyswitch-135303
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
