@@ -212,11 +212,11 @@ cards:
           title: Automation
           show_header_toggle: false
           entities:
-            - automation.power_state_on_ha_start_up
-            - automation.listwa_sypialnia_on
-            - automation.listwa_sypialnia_weekend_on
             - automation.bedside_jan_on
             - automation.ambient_on
+            - automation.listwa_sypialnia_on
+            - automation.listwa_sypialnia_weekend_on
+            - automation.power_state_on_ha_start_up
             - automation.dafang_motion_detected
             - automation.roleta_w_kuchni_40_po_poludniu
             - automation.rolety_100_rano
