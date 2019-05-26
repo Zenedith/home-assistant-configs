@@ -122,23 +122,86 @@ history:
   exclude:
     domains:
       - automation
+      - script
       - weblink
-
-recorder:
-  purge_interval: 3
-  purge_keep_days: 90
-  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
-  exclude:
-    domains:
-      - automation
-      - weblink
-      - updater
+      - input_boolean
+      - input_select
+      - light
     entities:
       - sun.sun # Don't record sun data
       - sensor.last_boot # Comes from 'systemmonitor' sensor platform
       - sensor.date
-
-
+      - sensor.swiatlo_pokoj_janka_version
+      - sensor.swiatlo_sypialnia_version
+      - sensor.lampa_salon_version
+      - sensor.salon_regal_version
+      - sensor.listwa_rtv_version
+      - sensor.listwa_sypialnia_version
+      - sensor.zmietek_version
+      - sensor.rtv_jan_version
+      - sensor.climate_pokoj_janka_battery
+      - sensor.climate_sypialnia_battery
+      - sensor.climate_salon_battery
+      - sensor.zmietekv2_battery
+      - sensor.kuchnia_temp_battery
+      - sensor.korytarz_temp_battery
+      - sensor.drzwi_balkonowe_contact_battery
+      - sensor.sypialnia_motion_battery
+      - sensor.okno_sypialnia_contact_battery
+      - sensor.lazienka_motion_battery
+      - sensor.korytarz_motion_battery
+      - sensor.okno_janek_contact_battery
+      - sensor.janek_motion_battery
+      - sensor.drzwi_wejsciowe_contact_battery
+      - sensor.drzwi_lazienka_contact_battery
+      - sensor.drzwi_toaleta_contact_battery
+      - sensor.kuchnia_leak_battery
+      - sensor.lazienka_leak_battery
+      - sensor.custom_component_tracker
+      - sensor.custom_python_script_tracker
+recorder:
+  purge_interval: 1
+  purge_keep_days: 3
+  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
+  exclude:
+    domains:
+      - automation
+      - script
+      - weblink
+      - updater
+      - light
+    entities:
+      - sun.sun # Don't record sun data
+      - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+      - sensor.date
+      - sensor.swiatlo_pokoj_janka_version
+      - sensor.swiatlo_sypialnia_version
+      - sensor.lampa_salon_version
+      - sensor.salon_regal_version
+      - sensor.listwa_rtv_version
+      - sensor.listwa_sypialnia_version
+      - sensor.zmietek_version
+      - sensor.rtv_jan_version
+      - sensor.climate_pokoj_janka_battery
+      - sensor.climate_sypialnia_battery
+      - sensor.climate_salon_battery
+      - sensor.zmietekv2_battery
+      - sensor.kuchnia_temp_battery
+      - sensor.korytarz_temp_battery
+      - sensor.drzwi_balkonowe_contact_battery
+      - sensor.sypialnia_motion_battery
+      - sensor.okno_sypialnia_contact_battery
+      - sensor.lazienka_motion_battery
+      - sensor.korytarz_motion_battery
+      - sensor.okno_janek_contact_battery
+      - sensor.janek_motion_battery
+      - sensor.drzwi_wejsciowe_contact_battery
+      - sensor.drzwi_lazienka_contact_battery
+      - sensor.drzwi_toaleta_contact_battery
+      - sensor.kuchnia_leak_battery
+      - sensor.lazienka_leak_battery
+      - sensor.custom_component_tracker
+      - sensor.custom_python_script_tracker
 # View all events in a logbook
 logbook:
 
