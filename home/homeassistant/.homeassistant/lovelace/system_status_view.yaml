@@ -122,7 +122,6 @@ cards:
             - binary_sensor.sonoff_rtv_jan_online
             - binary_sensor.listwa_sypialnia_online
             - binary_sensor.listwa_salon_online
-            - binary_sensor.roborock_online
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -138,12 +137,16 @@ cards:
           title: Support
           show_header_toggle: false
           entities:
+            - binary_sensor.roborock_online
             - binary_sensor.dafang_online
             - binary_sensor.zen_pc_online
             - binary_sensor.drukarka_online
 
             - binary_sensor.sharp_online
             - binary_sensor.chromecast_pokoj_janka_online
+            - binary_sensor.chromecast_salon_online
+            - binary_sensor.playstation_4_online
+            - binary_sensor.xbox_online
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

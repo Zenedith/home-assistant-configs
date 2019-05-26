@@ -319,16 +319,21 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
           overflow: hidden
+
       - type: custom:card-modder
         card:
-          type: custom:mini-media-player
-          entity: media_player.playstation_4
-          artwork: cover
-          power_color: true
-          show_source: true
-          show_progress: false
-          group: true
-          #background: /local/lovelace/downstairs/evening-tv_3.jpg
+          type: conditional
+          conditions:
+            - entity: binary_sensor.playstation_4_online
+              state: 'on'
+          card:
+            type: custom:mini-media-player
+            entity: media_player.playstation_4
+            artwork: cover
+            power_color: true
+            show_source: true
+            show_progress: false
+            group: true
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -402,26 +407,6 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-media-player
-          entity: media_player.salon
-          artwork: cover
-          power_color: true
-          show_source: true
-          show_progress: true
-          group: true
-          #background: /local/lovelace/downstairs/evening-tv_3.jpg
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100%
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-          overflow: hidden
-
-      - type: custom:card-modder
-        card:
-          type: custom:mini-media-player
           entity: media_player.spotify
           artwork: cover
           power_color: true
@@ -438,6 +423,7 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
           overflow: hidden
+
       - type: custom:card-modder
         card:
           type: entities

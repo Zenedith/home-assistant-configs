@@ -89,6 +89,12 @@
   scan_interval: 60
 
 - platform: ping
+  name: chromecast_salon_online
+  host: 192.168.1.28
+  count: 2
+  scan_interval: 60
+
+- platform: ping
   name: bedside_online
   host: 192.168.1.115
   count: 2
@@ -213,3 +219,16 @@
   host: 192.168.1.48
   count: 1
   scan_interval: 60
+
+- platform: ping
+  name: playstation_4_online
+  host: 192.168.1.128
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: xbox_online
+  host: 192.168.1.149
+  count: 1
+  scan_interval: 60
+
