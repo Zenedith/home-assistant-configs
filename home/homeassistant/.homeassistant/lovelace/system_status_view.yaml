@@ -218,6 +218,8 @@ cards:
             - automation.bedside_jan_on
             - automation.ambient_on
             - automation.dafang_motion_detected
+            - automation.roleta_w_kuchni_40_po_poludniu
+            - automation.rolety_100_rano
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
