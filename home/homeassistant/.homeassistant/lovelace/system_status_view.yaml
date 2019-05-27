@@ -119,6 +119,7 @@ cards:
             - binary_sensor.shelly_1_pokoj_jan_online
             - binary_sensor.shelly_4_sypialnia_online
             - binary_sensor.shelly1_toaleta_online
+            - binary_sensor.shelly_2_kuchnia_online
             - binary_sensor.sonoff_rtv_jan_online
             - binary_sensor.listwa_sypialnia_online
             - binary_sensor.listwa_salon_online
@@ -126,7 +127,7 @@ cards:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 800px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -151,7 +152,7 @@ cards:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 800px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -180,7 +181,7 @@ cards:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 800px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
