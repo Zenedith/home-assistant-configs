@@ -27,7 +27,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: switch.listwa_sypialnia
+          entity: input_boolean.listwa_sypialnia
           name: Listwa
           tap_action:
             action: toggle
