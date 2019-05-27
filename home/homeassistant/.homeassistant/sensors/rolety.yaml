@@ -10,3 +10,8 @@
   name: 'Roleta Sypialnia power'
   state_topic: 'shellies/shellyswitch-32B580/relay/power'
   unit_of_measurement: 'W'
+
+- platform: mqtt
+  name: 'Światło Kuchnia power'
+  state_topic: 'shellies/shellyswitch-55A0C8/relay/power'
+  unit_of_measurement: 'W'

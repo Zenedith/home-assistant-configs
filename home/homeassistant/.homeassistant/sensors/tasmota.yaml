@@ -14,10 +14,10 @@
   name: "Swiatło Sypialnia Version"
   state_topic: "shellies/shelly_4/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
-- platform: mqtt
-  name: "Swiatło TODO5 Version"
-  state_topic: "shellies/shelly_5/STATUS2"
-  value_template: "{{ value_json['StatusFWR'].Version }}"
+#- platform: mqtt
+#  name: "Swiatło TODO5 Version"
+#  state_topic: "shellies/shelly_5/STATUS2"
+#  value_template: "{{ value_json['StatusFWR'].Version }}"
 #- platform: mqtt
 #  name: "Kamera Version"
 #  state_topic: "basic/sonoff-basic-3/STATUS2"
