@@ -282,6 +282,9 @@
       entity_id: binary_sensor.zen_pc_online
       state: 'on'
   action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.listwa_sypialnia
     - service: notify.mypushbullet
       data_template:
         title: 'Listwa sypialnia off impossible'
