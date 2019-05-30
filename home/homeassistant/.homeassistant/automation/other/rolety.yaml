@@ -7,6 +7,7 @@
     - service: cover.open_cover
       data:
         entity_id: cover.pokoj_janka, cover.sypialnia, cover.kuchnia
+
 - alias: 'Roleta w kuchni 40% po południu'
   initial_state: 'on'
   trigger:
@@ -16,5 +17,5 @@
     - service: mqtt.publish
       data_template:
         topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
-        retain: true
-        payload: "40"
+        retain: false
+        payload: '40'
