@@ -21,17 +21,6 @@
   payload_not_available: "Offline"
   retain: false
 - platform: mqtt
-  name: "Salon regał"
-  state_topic: "shellies/salon_regal/POWER"
-  command_topic: "shellies/salon_regal/cmnd/POWER"
-  availability_topic: "shellies/salon_regal/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
-- platform: mqtt
   name: "Swiatło Sypialnia"
   state_topic: "shellies/shelly_4/POWER"
   command_topic: "shellies/shelly_4/cmnd/POWER"

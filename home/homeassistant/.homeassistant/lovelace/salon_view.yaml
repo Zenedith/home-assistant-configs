@@ -60,7 +60,7 @@ cards:
               state: 'on'
           card:
             type: picture-entity
-            entity: light.salon_regal
+            entity: switch.salon_regal
             name: Regał
             tap_action:
               action: toggle

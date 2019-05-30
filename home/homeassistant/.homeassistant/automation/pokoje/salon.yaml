@@ -129,7 +129,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.salon_regal
+        entity_id: switch.salon_regal
 
 - alias: 'Ambient off'
   initial_state: 'on'
@@ -139,7 +139,7 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.salon_regal
+        entity_id: switch.salon_regal
 
 - alias: 'Zmietek start'
   initial_state: 'on'
@@ -339,7 +339,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: light.salon_regal
+      entity_id: switch.salon_regal
       to: 'off'
   action:
     - service: automation.trigger
@@ -350,7 +350,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: light.salon_regal
+      entity_id: switch.salon_regal
       to: 'on'
   action:
     - service: automation.trigger
