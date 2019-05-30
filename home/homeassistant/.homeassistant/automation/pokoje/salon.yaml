@@ -342,9 +342,7 @@
       entity_id: switch.salon_regal
       to: 'off'
   action:
-    - service: automation.trigger
-      data:
-        entity_id: automation.ambient_off
+    - service: script.ambient_off
 
 - alias: 'Włącz ambient przyciskiem regału'
   initial_state: 'on'
@@ -353,6 +351,4 @@
       entity_id: switch.salon_regal
       to: 'on'
   action:
-    - service: automation.trigger
-      data:
-        entity_id: automation.ambient_on
+    - service: script.ambient_on
