@@ -289,6 +289,8 @@
     platform: state
     entity_id: binary_sensor.drzwi_balkonowe_contact
     to: 'on'
+    for:
+      seconds: 15
   action:
     - service: climate.set_away_mode
       data:

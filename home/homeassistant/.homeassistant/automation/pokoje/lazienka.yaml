@@ -86,6 +86,8 @@
     - platform: state
       entity_id: binary_sensor.drzwi_toaleta_contact
       to: 'on'
+      for:
+        seconds: 1
   condition:
     - condition: state
       entity_id: light.swiatlo_toaleta

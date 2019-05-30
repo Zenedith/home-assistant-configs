@@ -6,3 +6,9 @@
       to: 'Away'
   action:
     - service: script.everything_off
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Away home'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Wszyscy poza domem - wylacz wszystko.
