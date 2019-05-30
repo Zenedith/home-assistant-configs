@@ -129,10 +129,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.ambient_obraz
-    - service: light.turn_on
-      data:
-        entity_id: light.ambient_regal
+        entity_id: light.salon_regal
 
 - alias: 'Ambient off'
   initial_state: 'on'
@@ -142,10 +139,7 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.ambient_obraz
-    - service: light.turn_off
-      data:
-        entity_id: light.ambient_regal
+        entity_id: light.salon_regal
 
 - alias: 'Zmietek start'
   initial_state: 'on'
