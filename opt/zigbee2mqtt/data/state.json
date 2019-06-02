@@ -1,107 +1,115 @@
 {
     "0x00158d0001e0a7d3": {
-        "illuminance": 32,
-        "linkquality": 28,
+        "illuminance": 3,
+        "linkquality": 31,
         "occupancy": false,
         "battery": 100,
-        "voltage": 3055,
-        "elapsed": 20002
+        "voltage": 3065,
+        "elapsed": 3301501
     },
     "0x00158d00022cc215": {
         "temperature": 25.3,
-        "linkquality": 75,
-        "humidity": 32.9,
-        "pressure": 1022,
+        "linkquality": 92,
+        "humidity": 52.68,
+        "pressure": 1004.8,
         "battery": 100,
-        "voltage": 3045,
-        "elapsed": 36
+        "voltage": 3035,
+        "elapsed": 3148799
     },
     "0x00158d0001e5d112": {
-        "illuminance": 675,
-        "linkquality": 70,
+        "illuminance": 95,
+        "linkquality": 5,
         "occupancy": false,
         "battery": 100,
         "voltage": 3035,
-        "elapsed": 20005
+        "elapsed": 20000
     },
     "0x00158d000208e0c7": {
-        "contact": false,
-        "linkquality": 88,
+        "contact": true,
+        "linkquality": 49,
         "battery": 100,
-        "voltage": 3025,
-        "elapsed": 1071326
+        "voltage": 3045,
+        "elapsed": 3014756
     },
     "0x00158d00020b7b77": {
         "battery": 100,
         "voltage": 3025,
-        "linkquality": 13,
+        "linkquality": 70,
         "contact": true,
-        "elapsed": 3006024
+        "elapsed": 3006339
     },
     "0x00158d000205b35f": {
-        "contact": true,
-        "linkquality": 39,
+        "contact": false,
+        "linkquality": 99,
         "battery": 100,
-        "voltage": 3035,
-        "elapsed": 3013003
+        "voltage": 3045,
+        "elapsed": 3019003
     },
     "0x00158d000237ad9d": {
-        "illuminance": 458,
+        "illuminance": 39,
+        "linkquality": 63,
+        "occupancy": false,
+        "battery": 100,
+        "voltage": 3035,
+        "elapsed": 20000
+    },
+    "0x00158d0001e55705": {
+        "illuminance": 0,
         "linkquality": 0,
         "occupancy": false,
         "battery": 100,
-        "voltage": 3035,
-        "elapsed": 20002
-    },
-    "0x00158d0001e55705": {
-        "illuminance": 911,
-        "linkquality": 85,
-        "occupancy": false,
-        "battery": 100,
         "voltage": 3015,
-        "elapsed": 20001
+        "elapsed": 20000
     },
     "0x00158d00024e42b5": {
         "contact": true,
-        "linkquality": 67,
+        "linkquality": 86,
         "battery": 100,
         "voltage": 3025,
-        "elapsed": 8581
+        "elapsed": 3003366
     },
     "0x00158d0002b52fd0": {
         "battery": 97,
         "voltage": 2995,
-        "linkquality": 52,
+        "linkquality": 105,
         "contact": true,
-        "elapsed": 3791
+        "elapsed": 3013641
     },
     "0x00158d000272fe71": {
-        "temperature": 23.8,
-        "linkquality": 18,
-        "humidity": 35.08,
-        "pressure": 1022.1,
-        "battery": 86,
-        "voltage": 2975,
-        "elapsed": 1183914
+        "temperature": 25.2,
+        "linkquality": 52,
+        "humidity": 53.9,
+        "pressure": 1004,
+        "battery": 91,
+        "voltage": 2985,
+        "elapsed": 14
     },
     "0x00158d0002bfd324": {
         "contact": false,
-        "linkquality": 10,
-        "battery": 86,
-        "voltage": 2975,
-        "elapsed": 760491
+        "linkquality": 44,
+        "battery": 91,
+        "voltage": 2985,
+        "elapsed": 3005158
     },
     "0x00158d0001bb388f": {
         "water_leak": false,
         "linkquality": 0,
         "battery": 100,
         "voltage": 3025,
-        "elapsed": 3010020
+        "elapsed": 844
     },
     "0x00158d00021508b4": {
         "battery": 100,
         "voltage": 3015,
-        "linkquality": 0,
-        "elapsed": 3011326
+        "linkquality": 63,
+        "elapsed": 3011926
+    },
+    "0x00124b0014aa7950": {
+        "state": true,
+        "linkquality": 89,
+        "elapsed": 22,
+        "description": "63229/0x00158D0001E55705",
+        "type": "CHILD_RFD",
+        "rssi": 59
     }
 }
