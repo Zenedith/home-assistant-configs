@@ -107,6 +107,9 @@ cards:
             show_header_toggle: false
             entities:
               - entity: switch.zmietek
+              - entity: sensor.vacuum_main_brush
+              - entity: sensor.vacuum_side_brush
+              - entity: sensor.vacuum_filter
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

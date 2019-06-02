@@ -104,10 +104,13 @@ sensor.drzwi_toaleta_contact_battery:
 sensor.vacuum_cleaning_time:
   icon: mdi:clock-outline
 sensor.vacuum_main_brush:
+  friendly_name: Main brush
   icon: mdi:blender
 sensor.vacuum_side_brush:
+  friendly_name: Side brush
   icon: mdi:blender
 sensor.vacuum_filter:
+  friendly_name: Hepa filter
   icon: mdi:filter
 sensor.vacuum_cleaning_count:
   icon: mdi:counter

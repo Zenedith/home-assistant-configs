@@ -196,6 +196,8 @@ cards:
           entities:
             - script.climate_off
             - script.climate_on
+            - script.rolety_close
+            - script.rolety_open
             - group.all_switches
             - group.all_lights
         style:

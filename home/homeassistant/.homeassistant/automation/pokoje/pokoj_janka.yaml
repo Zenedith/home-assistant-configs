@@ -25,6 +25,24 @@
       data:
         entity_id: switch.rtv_jan
 
+- alias: 'Bedside offline notify'
+  initial_state: 'on'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:20:00'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.bedside_online
+      state: 'off'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Bedside offline'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Bedside offline
+
 - alias: 'Bedside Jan on'
   initial_state: 'on'
   trigger:
@@ -35,6 +53,9 @@
     - condition: state
       entity_id: light.bedside
       state: 'off'
+    - condition: state
+      entity_id: binary_sensor.bedside_online
+      state: 'on'
   action:
     - service: light.turn_on
       data:
