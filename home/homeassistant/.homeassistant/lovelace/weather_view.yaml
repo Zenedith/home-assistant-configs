@@ -7,9 +7,9 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:card-modder
-        title: Temperatura
         card:
           type: custom:mini-graph-card
+          title: Temperatura
           entities:
             - sensor.korytarz_temp_temperature
             - sensor.kuchnia_temp_temperature
@@ -64,9 +64,9 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:card-modder
-        title: Wilgotność
         card:
           type: custom:mini-graph-card
+          title: Wilgotność
           entities:
             - sensor.korytarz_temp_humidity
             - sensor.kuchnia_temp_humidity
@@ -98,9 +98,9 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:card-modder
-        title: Ciśnienie
         card:
           type: custom:mini-graph-card
+          title: Ciśnienie
           entities:
             - sensor.kuchnia_temp_pressure
           height: 65
