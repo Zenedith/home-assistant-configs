@@ -144,8 +144,8 @@
   action:
     - service: climate.set_temperature
       data:
-        temperature: 5,
-        operation_mode: "eco"
+        temperature: '4.5'
+        operation_mode: 'eco'
         entity_id: climate.pokoj_janka, climate.sypialnia, climate.salon
     - service: climate.set_away_mode
       data:
