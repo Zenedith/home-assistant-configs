@@ -56,7 +56,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: binary_sensor.ambient_regal_online
+            - entity: binary_sensor.salon_regal_switch_online
               state: 'on'
           card:
             type: picture-entity
