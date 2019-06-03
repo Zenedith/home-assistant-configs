@@ -9,7 +9,7 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
-          title: Temperatura
+          name: Temperatura
           entities:
             - sensor.korytarz_temp_temperature
             - sensor.kuchnia_temp_temperature
@@ -17,6 +17,9 @@ cards:
           line_width: 2
           font_size: 70
           hours_to_show: 24
+          more_info: false
+          points_per_hour: 1
+          hour24: true
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -82,7 +85,7 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
-          title: Wilgotność
+          name: Wilgotność
           entities:
             - sensor.korytarz_temp_humidity
             - sensor.kuchnia_temp_humidity
@@ -90,6 +93,9 @@ cards:
           line_width: 2
           font_size: 70
           hours_to_show: 24
+          more_info: false
+          points_per_hour: 1
+          hour24: true
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -116,13 +122,16 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
-          title: Ciśnienie
+          name: Ciśnienie
           entities:
             - sensor.kuchnia_temp_pressure
           height: 65
           line_width: 2
           font_size: 70
           hours_to_show: 24
+          more_info: false
+          points_per_hour: 1
+          hour24: true
           line_color: '#e74c3c'
         style:
           background-image: url("/local/lovelace/cardbackK.png")

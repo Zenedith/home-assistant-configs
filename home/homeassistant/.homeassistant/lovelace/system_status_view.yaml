@@ -8,6 +8,7 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
+          name: Traffic
           entities:
             - sensor.asuswrt_download_speed
             - sensor.asuswrt_upload_speed
@@ -15,6 +16,9 @@ cards:
           line_width: 2
           font_size: 70
           hours_to_show: 24
+          more_info: false
+          points_per_hour: 1
+          hour24: true
           line_color: '#3498db'
         style:
           background-image: url("/local/lovelace/cardbackK.png")
