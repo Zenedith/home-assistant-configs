@@ -152,6 +152,9 @@
     to: 'on'
     for:
       seconds: 15
+  condition:
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float %}"
   action:
     - service: climate.set_away_mode
       data:
@@ -174,6 +177,8 @@
     - condition: state
       entity_id: binary_sensor.okno_janek_contact
       state: 'on'
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float %}"
   action:
     - service: climate.set_away_mode
       data:
@@ -186,6 +191,9 @@
     platform: state
     entity_id: binary_sensor.okno_janek_contact
     to: 'off'
+  condition:
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float %}"
   action:
     - service: climate.set_away_mode
       data:
