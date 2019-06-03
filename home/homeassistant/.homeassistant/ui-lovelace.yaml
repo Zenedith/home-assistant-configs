@@ -3,7 +3,7 @@ resources:
     type: module
   - url: /local/custom_ui/tasmota-tracker-card.js?v=0.1.1
     type: js
-  - url: /local/custom_ui/dark-sky-weather-card.js?track=true
+  - url: /local/custom_ui/dark-sky-weather-card.js?v=7.1
     type: module
   - url: /local/custom_ui/mini-media-player-bundle.js?track=true
     type: module
