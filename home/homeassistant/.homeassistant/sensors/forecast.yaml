@@ -1,6 +1,18 @@
 - platform: darksky
   api_key: !secret darksky_api
   language: pl
+  static_icons: false
+  tooltip_bg_color: 'rgb( 75,155,239)'
+  tooltip_border_color: orange
+  tooltip_border_width: 3
+  tooltip_caret_size: 10
+  tooltip_fg_color: '#fff'
+  tooltip_left_offset: -12
+  tooltip_width: 100
+  tooltips: true
+  old_daily_format: false
+  time_format: 24
+  show_beaufort: true
   forecast:
     - 0
     - 1
