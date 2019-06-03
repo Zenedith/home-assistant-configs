@@ -17,7 +17,7 @@ resources:
     type: module
   - url: /local/custom_ui/kiosk.js?track=true
     type: js
-  - url: /local/custom_ui/weather-card.js?v=0.23
+  - url: /local/custom_ui/weather-card.js?track=true
     type: module
 
 
