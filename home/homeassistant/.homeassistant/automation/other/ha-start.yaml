@@ -140,7 +140,7 @@
     event: start
   condition:
     - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float %}"
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
   action:
     - service: climate.turn_off
       data:
