@@ -144,9 +144,11 @@ cards:
           hour24: true
           line_color: '#e74c3c'
           show:
-            labels: true
-            legend: true
-            points: true
+            extrema: true
+            fill: fade
+            labels: false
+            legend: false
+            points: false
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
