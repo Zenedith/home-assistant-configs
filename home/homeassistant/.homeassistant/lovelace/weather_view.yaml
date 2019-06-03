@@ -20,6 +20,11 @@ cards:
           more_info: false
           points_per_hour: 1
           hour24: true
+          show:
+            labels: true
+            extrema: true
+            legend: true
+            points: true
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -96,6 +101,11 @@ cards:
           more_info: false
           points_per_hour: 1
           hour24: true
+          show:
+            labels: true
+            extrema: true
+            legend: true
+            points: true
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -133,6 +143,10 @@ cards:
           points_per_hour: 1
           hour24: true
           line_color: '#e74c3c'
+          show:
+            labels: true
+            legend: true
+            points: true
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

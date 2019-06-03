@@ -20,6 +20,11 @@ cards:
           points_per_hour: 1
           hour24: true
           line_color: '#3498db'
+          show:
+            labels: true
+            extrema: true
+            legend: true
+            points: true
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
