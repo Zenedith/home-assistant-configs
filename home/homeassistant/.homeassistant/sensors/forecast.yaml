@@ -1,5 +1,6 @@
 - platform: darksky
   api_key: !secret darksky_api
+  language: pl
   forecast:
     - 0
     - 1
