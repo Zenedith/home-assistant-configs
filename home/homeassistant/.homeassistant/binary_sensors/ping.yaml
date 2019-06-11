@@ -1,0 +1,240 @@
+- platform: ping
+  name: zen_pc_online
+  host: 192.168.1.2
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: dafang_online
+  host: 192.168.1.127
+  count: 1
+  scan_interval: 30
+
+- platform: ping
+  name: ambient_regal_online
+  host: 192.168.1.112
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: ambient_obraz_online
+  host: 192.168.1.237
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: salon_regal_switch_online
+  host: 192.168.1.11
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: lampa_salon_switch_online
+  host: 192.168.1.91
+  count: 2
+  scan_interval: 60
+
+#- platform: ping
+#  name: yeelink_light_ceil_online
+#  host: 192.168.1.22
+#  count: 2
+#  scan_interval: 60
+
+- platform: ping
+  name: shelly_1_pokoj_jan_online
+  host: 192.168.1.24
+  count: 2
+  scan_interval: 60
+
+#- platform: ping
+#  name: yeelink_light_ceil_online
+#  host: 192.168.1.25
+#  count: 2
+#  scan_interval: 60
+
+- platform: ping
+  name: sonoff_rtv_jan_online
+  host: 192.168.1.29
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: listwa_sypialnia_online
+  host: 192.168.1.37
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: zmietek_switch_online
+  host: 192.168.1.38
+  count: 2
+  scan_interval: 60
+##
+- platform: ping
+  name: sharp_online
+  host: 192.168.1.39
+  count: 2
+  scan_interval: 60
+#
+- platform: ping
+  name: lampa_korytarz_drzwi_online
+  host: 192.168.1.63
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: chromecast_pokoj_janka_online
+  host: 192.168.1.64
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: chromecast_salon_online
+  host: 192.168.1.28
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: bedside_online
+  host: 192.168.1.115
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: listwa_salon_online
+  host: 192.168.1.125
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: roleta_kuchnia_online
+  host: 192.168.1.129
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: roleta_sypialnia_online
+  host: 192.168.1.141
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: roleta_pokoj_janka_online
+  host: 192.168.1.168
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: roborock_online
+  host: 192.168.1.133
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: shelly_4_sypialnia_online
+  host: 192.168.1.135
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight_biurko_online
+  host: 192.168.1.150
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: shelly1_toaleta_online
+  host: 192.168.1.156
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: shelly_2_kuchnia_online
+  host: 192.168.1.160
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: nova_online
+  host: 192.168.1.157
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: rmmini_online
+  host: 192.168.1.163
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: lampa_kuchnia_1_online
+  host: 192.168.1.181
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: lampa_kuchnia_2_online
+  host: 192.168.1.34
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: lampa_kuchnia_3_online
+  host: 192.168.1.69
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: lampa_korytarz_online
+  host: 192.168.1.223
+  count: 2
+  scan_interval: 60
+
+- platform: ping
+  name: drukarka_online
+  host: 192.168.1.123
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight_salon_1_online
+  host: 192.168.1.167
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight_salon_2_online
+  host: 192.168.1.98
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight_salon_3_online
+  host: 192.168.1.118
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight_salon_4_online
+  host: 192.168.1.139
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: yeelight_salon_5_online
+  host: 192.168.1.48
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: playstation_4_online
+  host: 192.168.1.128
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: xbox_online
+  host: 192.168.1.149
+  count: 1
+  scan_interval: 60
+

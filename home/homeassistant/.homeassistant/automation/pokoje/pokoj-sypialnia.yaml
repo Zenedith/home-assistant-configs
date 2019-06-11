@@ -2,10 +2,10 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '03:00:00'
+    at: '01:00:00'
   condition:
     - condition: state
-      entity_id: switch.listwa_sypialnia
+      entity_id: input_boolean.listwa_sypialnia
       state: 'on'
   action:
     - service: notify.mypushbullet
@@ -19,11 +19,15 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '03:05:00'
+    at: '01:05:00'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.zen_pc_online
+      state: 'off'
   action:
-    - service: switch.turn_off
+    - service: input_boolean.turn_on
       data:
-        entity_id: switch.listwa_sypialnia
+        entity_id: input_boolean.listwa_sypialnia
 
 - alias: 'Listwa sypialnia on'
   initial_state: 'on'
@@ -33,15 +37,15 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: switch.listwa_sypialnia
+      entity_id: input_boolean.listwa_sypialnia
       state: 'off'
     - condition: sun
       after: sunset
       after_offset: '-01:00:00'
   action:
-    - service: switch.turn_on
+    - service: input_boolean.turn_on
       data:
-        entity_id: switch.listwa_sypialnia
+        entity_id: input_boolean.listwa_sypialnia
     - service: notify.mypushbullet
       data_template:
         title: 'Sypialnia listwa on'
@@ -60,12 +64,12 @@
       - sat
       - sun
     - condition: state
-      entity_id: switch.listwa_sypialnia
+      entity_id: input_boolean.listwa_sypialnia
       state: 'off'
   action:
-    - service: switch.turn_off
+    - service: input_boolean.turn_off
       data:
-        entity_id: switch.listwa_sypialnia
+        entity_id: input_boolean.listwa_sypialnia
     - service: notify.mypushbullet
       data_template:
         title: 'Listwa sypialnia on'
@@ -195,6 +199,11 @@
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
     to: 'on'
+    for:
+      seconds: 15
+  condition:
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
   action:
     - service: climate.set_away_mode
       data:
@@ -207,12 +216,33 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przykręcone w sypialni
 
+- alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w sypialni'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: climate.sypialnia
+    to: 'heat'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.okno_sypialnia_contact
+      state: 'on'
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.sypialnia
+        away_mode: 'on'
+
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
   initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
     to: 'off'
+  condition:
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
   action:
     - service: climate.set_away_mode
       data:
@@ -224,3 +254,72 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przywrócone w sypialni
+
+- alias: 'Listwa sypialnia switch on'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.listwa_sypialnia
+      to: 'on'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_sypialnia
+
+- alias: 'Listwa sypialnia switch on synchro'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: switch.listwa_sypialnia
+      to: 'on'
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.listwa_sypialnia
+
+- alias: 'Listwa sypialnia switch off synchro'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: switch.listwa_sypialnia
+      to: 'off'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.listwa_sypialnia
+
+- alias: 'Listwa sypialnia switch off'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.listwa_sypialnia
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.zen_pc_online
+      state: 'off'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_sypialnia
+
+- alias: 'Listwa sypialnia switch off impossible'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.listwa_sypialnia
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.zen_pc_online
+      state: 'on'
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.listwa_sypialnia
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Listwa sypialnia off impossible'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Nie można wyłączyć listwy ponieważ zen-pc jest włączony.

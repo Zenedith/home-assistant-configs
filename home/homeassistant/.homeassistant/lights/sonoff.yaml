@@ -10,21 +10,10 @@
   payload_not_available: "Offline"
   retain: false
 - platform: mqtt
-  name: "Swiatło TODO2"
-  state_topic: "shellies/shelly_2/POWER"
-  command_topic: "shellies/shelly_2/cmnd/POWER"
-  availability_topic: "shellies/shelly_2/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
-- platform: mqtt
-  name: "Swiatło TODO3"
-  state_topic: "shellies/shelly_3/POWER"
-  command_topic: "shellies/shelly_3/cmnd/POWER"
-  availability_topic: "shellies/shelly_3/LWT"
+  name: "Lampa salon"
+  state_topic: "shellies/sonoff_lampa_salon/POWER"
+  command_topic: "shellies/sonoff_lampa_salon/cmnd/POWER"
+  availability_topic: "shellies/sonoff_lampa_salon/LWT"
   qos: 1
   payload_on: "ON"
   payload_off: "OFF"

@@ -3,28 +3,28 @@
   state_topic: "shellies/shelly_1/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
-  name: "Swiatło TODO2 Version"
-  state_topic: "shellies/shelly_2/STATUS2"
+  name: "Lampa Salon Version"
+  state_topic: "shellies/sonoff_lampa_salon/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
-  name: "Swiatło TODO3 Version"
-  state_topic: "shellies/shelly_3/STATUS2"
+  name: "Salon regał Version"
+  state_topic: "shellies/salon_regal/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Swiatło Sypialnia Version"
   state_topic: "shellies/shelly_4/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
-- platform: mqtt
-  name: "Swiatło TODO5 Version"
-  state_topic: "shellies/shelly_5/STATUS2"
-  value_template: "{{ value_json['StatusFWR'].Version }}"
-- platform: mqtt
-  name: "Kamera Version"
-  state_topic: "basic/sonoff-basic-3/STATUS2"
-  value_template: "{{ value_json['StatusFWR'].Version }}"
+#- platform: mqtt
+#  name: "Swiatło TODO5 Version"
+#  state_topic: "shellies/shelly_5/STATUS2"
+#  value_template: "{{ value_json['StatusFWR'].Version }}"
+#- platform: mqtt
+#  name: "Kamera Version"
+#  state_topic: "basic/sonoff-basic-3/STATUS2"
+#  value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Listwa RTV Version"
-  state_topic: "zigbee2mqtt/sonoff2/STATUS2"
+  state_topic: "listwa/listwa1/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 - platform: mqtt
   name: "Listwa Sypialnia Version"

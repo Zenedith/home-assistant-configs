@@ -25,16 +25,37 @@
       data:
         entity_id: switch.rtv_jan
 
+- alias: 'Bedside offline notify'
+  initial_state: 'on'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:20:00'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.bedside_online
+      state: 'off'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Bedside offline'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Bedside offline
+
 - alias: 'Bedside Jan on'
   initial_state: 'on'
   trigger:
     platform: sun
     event: sunset
-    offset: '+00:00:00'
+    offset: '-00:20:00'
   condition:
     - condition: state
       entity_id: light.bedside
       state: 'off'
+    - condition: state
+      entity_id: binary_sensor.bedside_online
+      state: 'on'
   action:
     - service: light.turn_on
       data:
@@ -129,6 +150,11 @@
     platform: state
     entity_id: binary_sensor.okno_janek_contact
     to: 'on'
+    for:
+      seconds: 15
+  condition:
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
   action:
     - service: climate.set_away_mode
       data:
@@ -141,12 +167,33 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przykręcone w pokóju Janka
 
+- alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w pokoju Janka'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: climate.pokoj_janka
+    to: 'heat'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.okno_janek_contact
+      state: 'on'
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+  action:
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.pokoj_janka
+        away_mode: 'on'
+
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
   initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_janek_contact
     to: 'off'
+  condition:
+    - condition: template
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
   action:
     - service: climate.set_away_mode
       data:

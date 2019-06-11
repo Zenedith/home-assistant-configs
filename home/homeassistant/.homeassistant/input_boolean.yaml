@@ -21,3 +21,5 @@ sypialnia_korki:
 moonlight_korytarz:
   name: Moonlight korytarz
   icon: mdi:weather-night
+listwa_sypialnia:
+  name: Stan listwa sypialnia

@@ -1,4 +1,6 @@
 sequence:
+  - condition: template
+    value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
   - service: climate.set_away_mode
     data:
       entity_id: climate.pokoj_janka

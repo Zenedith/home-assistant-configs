@@ -250,8 +250,6 @@ cards:
           entities:
             - script.everything_off
             - script.everything_off_secure
-            - group.all_switches
-            - group.all_lights
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -265,8 +263,8 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: switch.listwa_salon_slot_4
-              state: on
+            - entity: binary_sensor.dafang_online
+              state: 'on'
           card:
             type: picture-entity
             entity: camera.dafang
@@ -285,23 +283,11 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: switch.listwa_salon_slot_4
-              state: on
+            - entity: binary_sensor.dafang_online
+              state: 'on'
           card:
             type: entities
             entities:
-              - switch.dafang_h264_rtsp_server
-              - sensor.dafang
-              - device_tracker.dafang
-              - sensor.dafang_light_sensor
-              - switch.dafang_night_mode
-              - switch.dafang_night_mode_auto
-              - switch.dafang_motion_detection
-              - switch.dafang_motion_tracking
-              - camera.dafang_motion_snapshot
-              - binary_sensor.dafang_motion_sensor
-              - cover.dafang_move_leftright
-              - cover.dafang_move_updown
               - type: weblink
                 url: http://192.168.1.127
               - type: weblink

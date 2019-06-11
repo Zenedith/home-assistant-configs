@@ -1,0 +1,7 @@
+sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.ambient_obraz
+  - service: light.turn_on
+    data:
+      entity_id: light.ambient_regal

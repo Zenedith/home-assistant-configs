@@ -1,4 +1,5 @@
 title: Sypialnia
+icon: mdi:bed-empty
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: custom:compact-custom-header
@@ -26,7 +27,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: switch.listwa_sypialnia
+          entity: input_boolean.listwa_sypialnia
           name: Listwa
           tap_action:
             action: toggle
@@ -70,8 +71,6 @@ cards:
           show_header_toggle: false
           entities:
             - entity: cover.sypialnia
-            - type: weblink
-              url: http://shellyswitch-32B580
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

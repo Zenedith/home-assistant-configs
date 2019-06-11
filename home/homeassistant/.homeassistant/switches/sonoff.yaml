@@ -1,28 +1,28 @@
-- platform: mqtt
-  name: "Kamera"
-  state_topic: "basic/sonoff-basic-3/POWER"
-  command_topic: "basic/sonoff-basic-3/cmnd/POWER"
-  availability_topic: "basic/sonoff-basic-3/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
-- platform: mqtt
-  name: "Listwa RTV"
-  state_topic: "zigbee2mqtt/sonoff2/POWER"
-  command_topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-  availability_topic: "zigbee2mqtt/sonoff2/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  state_on: "ON"
-  state_off: "OFF"
-  optimistic: false
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
+#- platform: mqtt
+#  name: "Kamera"
+#  state_topic: "basic/sonoff-basic-3/POWER"
+#  command_topic: "basic/sonoff-basic-3/cmnd/POWER"
+#  availability_topic: "basic/sonoff-basic-3/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
+#- platform: mqtt
+#  name: "Listwa RTV"
+#  state_topic: "zigbee2mqtt/sonoff2/POWER"
+#  command_topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
+#  availability_topic: "zigbee2mqtt/sonoff2/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  state_on: "ON"
+#  state_off: "OFF"
+#  optimistic: false
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
 - platform: mqtt
   name: "Listwa Sypialnia"
   state_topic: "zigbee2mqtt/sonoff1/POWER"
@@ -56,39 +56,39 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
-- platform: mqtt
-  name: "Sonoff5"
-  state_topic: "zigbee2mqtt/sonoff5/POWER"
-  command_topic: "zigbee2mqtt/sonoff5/cmnd/POWER"
-  availability_topic: "zigbee2mqtt/sonoff5/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
-- platform: mqtt
-  name: "Pralka"
-  state_topic: "zigbee2mqtt/powr2_1/POWER"
-  command_topic: "zigbee2mqtt/powr2_1/cmnd/POWER"
-  availability_topic: "zigbee2mqtt/powr2_1/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
-- platform: mqtt
-  name: "Zmywarka"
-  state_topic: "zigbee2mqtt/powr2_2/POWER"
-  command_topic: "zigbee2mqtt/powr2_2/cmnd/POWER"
-  availability_topic: "zigbee2mqtt/powr2_2/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
+#- platform: mqtt
+#  name: "Sonoff5"
+#  state_topic: "zigbee2mqtt/sonoff5/POWER"
+#  command_topic: "zigbee2mqtt/sonoff5/cmnd/POWER"
+#  availability_topic: "zigbee2mqtt/sonoff5/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
+#- platform: mqtt
+#  name: "Pralka"
+#  state_topic: "zigbee2mqtt/powr2_1/POWER"
+#  command_topic: "zigbee2mqtt/powr2_1/cmnd/POWER"
+#  availability_topic: "zigbee2mqtt/powr2_1/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
+#- platform: mqtt
+#  name: "Zmywarka"
+#  state_topic: "zigbee2mqtt/powr2_2/POWER"
+#  command_topic: "zigbee2mqtt/powr2_2/cmnd/POWER"
+#  availability_topic: "zigbee2mqtt/powr2_2/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false
 - platform: mqtt
   name: "Listwa salon slot 1"
   state_topic: "listwa/listwa1/POWER1"
@@ -138,6 +138,17 @@
   state_topic: "listwa/listwa1/POWER5"
   command_topic: "listwa/listwa1/cmnd/POWER5"
   availability_topic: "listwa/listwa1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+- platform: mqtt
+  name: "Salon regał"
+  state_topic: "shellies/salon_regal/POWER"
+  command_topic: "shellies/salon_regal/cmnd/POWER"
+  availability_topic: "shellies/salon_regal/LWT"
   qos: 1
   payload_on: "ON"
   payload_off: "OFF"

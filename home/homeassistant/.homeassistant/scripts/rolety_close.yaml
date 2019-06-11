@@ -1,0 +1,18 @@
+sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
+      retain: false
+      payload: '0'
+
+  - service: mqtt.publish
+    data_template:
+      topic: 'shellies/shellyswitch-5B28DA/roller/0/command/pos'
+      retain: false
+      payload: '0'
+
+  - service: mqtt.publish
+    data_template:
+      topic: 'shellies/shellyswitch-32B580/roller/0/command/pos'
+      retain: false
+      payload: '0'

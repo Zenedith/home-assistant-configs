@@ -1,4 +1,5 @@
 title: Korytarz
+icon: mdi:home-floor-0
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
   - type: custom:compact-custom-header
@@ -23,19 +24,7 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: light.lampa_korytarz
-          tap_action:
-            action: toggle
-          image: /local/lovelace/salon/korytarz800.jpg
-        style:
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-
-      - type: custom:card-modder
-        card:
-          type: picture-entity
-          entity: light.lampa_korytarz_drzwi
+          entity: group.korytarz_lampy
           tap_action:
             action: toggle
           image: /local/lovelace/salon/korytarz_drzwi800.jpg
@@ -49,6 +38,10 @@ cards:
           type: light
           entity: light.lampa_korytarz_ambilight
         style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)

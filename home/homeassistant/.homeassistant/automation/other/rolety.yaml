@@ -1,0 +1,21 @@
+- alias: 'Rolety 100% rano'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '08:00:00'
+  action:
+    - service: cover.open_cover
+      data:
+        entity_id: cover.pokoj_janka, cover.sypialnia, cover.kuchnia
+
+- alias: 'Roleta w kuchni 40% po południu'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '17:00:00'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
+        retain: false
+        payload: '40'
