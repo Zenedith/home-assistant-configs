@@ -608,3 +608,11 @@ b8_27_eb_f9_b5_32:
   name: b8 27 eb f9 b5 32
   picture:
   track: false
+
+ipad_kasi:
+  hide_if_away: true
+  icon:
+  mac: 8C:FE:57:58:B9:3E
+  name: iPad-Kasi
+  picture:
+  track: false
