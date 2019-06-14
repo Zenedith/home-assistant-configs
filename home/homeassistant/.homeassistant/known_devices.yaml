@@ -616,3 +616,19 @@ ipad_kasi:
   name: iPad-Kasi
   picture:
   track: false
+
+chromecast_audio_salon:
+  hide_if_away: true
+  icon:
+  mac: 54:60:09:F7:81:66
+  name: Chromecast-Audio-Salon
+  picture:
+  track: false
+
+zene_iphone:
+  hide_if_away: true
+  icon:
+  mac:
+  name: Zene iPhone
+  picture:
+  track: false
