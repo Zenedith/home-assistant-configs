@@ -26,6 +26,10 @@ cards:
         card:
           type: picture-entity
           entity: light.bedside
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/bedside800.jpg
@@ -39,6 +43,10 @@ cards:
           type: picture-entity
           entity: light.swiatlo_pokoj_janka
           name: Lampa
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/pokoj_janka800.jpg
@@ -52,6 +60,10 @@ cards:
           type: picture-entity
           entity: switch.rtv_jan
           name: RTV
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/rtv-jan800.jpg

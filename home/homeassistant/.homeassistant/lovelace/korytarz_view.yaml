@@ -25,6 +25,10 @@ cards:
         card:
           type: picture-entity
           entity: group.korytarz_lampy
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/korytarz_drzwi800.jpg

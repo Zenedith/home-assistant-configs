@@ -18,6 +18,10 @@ cards:
         card:
           type: picture-entity
           entity: light.lampa_salon
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/salon800.jpg
@@ -31,6 +35,10 @@ cards:
           type: picture-entity
           entity: light.swiatlo_kuchnia_stol
           name: Dining
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/dining800.jpg
@@ -44,6 +52,10 @@ cards:
           type: picture-entity
           entity: light.swiatlo_kuchnia_szafki
           name: Kitchen
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/kuchnia800.jpg
@@ -62,6 +74,10 @@ cards:
             type: picture-entity
             entity: switch.salon_regal
             name: Regał
+            show_name: false
+            show_state: true
+            hold_action:
+              action: more-info
             tap_action:
               action: toggle
             image: /local/lovelace/salon/ambient_regal800.jpg
