@@ -86,6 +86,40 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          image: /local/lovelace/plants.jpg
+          elements:
+            - type: state-badge
+              entity: sensor.pierwszy_kwiat_moisture
+              style:
+                top: 27%
+                left: 10%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.pierwszy_kwiat_temperature
+              style:
+                top: 27%
+                left: 25%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.pierwszy_kwiat_conductivity
+              style:
+                top: 27%
+                left: 40%
+                --ha-label-badge-font-size: 1em
+            - type: state-label
+              entity: sensor.pierwszy_kwiat_light_intensity
+              style:
+                top: 15%
+                left: 92%
+                --ha-label-badge-font-size: 1em
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
   - type: vertical-stack
     cards:
       - type: custom:card-modder
