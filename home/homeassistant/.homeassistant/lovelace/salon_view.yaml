@@ -95,28 +95,28 @@ cards:
               entity: sensor.pierwszy_kwiat_light_intensity
               title: null
               style:
-                top: 27%
+                top: 35%
                 left: 10%
                 --ha-label-badge-font-size: 1em
             - type: state-badge
               entity: sensor.pierwszy_kwiat_temperature
               title: null
               style:
-                top: 27%
+                top: 35%
                 left: 25%
                 --ha-label-badge-font-size: 1em
             - type: state-badge
               entity: sensor.pierwszy_kwiat_conductivity
               title: null
               style:
-                top: 27%
+                top: 35%
                 left: 40%
                 --ha-label-badge-font-size: 1em
             - type: state-badge
               entity: sensor.pierwszy_kwiat_moisture
               title: null
               style:
-                top: 15%
+                top: 35%
                 left: 92%
                 --ha-label-badge-font-size: 1em
         style:
