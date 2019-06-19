@@ -138,4 +138,4 @@ sensor.pierwszy_kwiat_temperature:
 sensor.pierwszy_kwiat_conductivity:
   friendly_name: conductivity
 sensor.pierwszy_kwiat_moisture:
-  friendly_name: %
+  friendly_name: moisture
