@@ -105,13 +105,13 @@ cards:
                 top: 35%
                 left: 25%
                 --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.pierwszy_kwiat_conductivity
-              title: null
-              style:
-                top: 35%
-                left: 40%
-                --ha-label-badge-font-size: 1em
+#            - type: state-badge
+#              entity: sensor.pierwszy_kwiat_conductivity
+#              title: null
+#              style:
+#                top: 35%
+#                left: 40%
+#                --ha-label-badge-font-size: 1em
             - type: state-badge
               entity: sensor.pierwszy_kwiat_moisture
               title: null
