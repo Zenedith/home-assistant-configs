@@ -131,3 +131,11 @@ sensor.asuswrt_upload:
   icon: mdi:arrow-up-bold
 switch.denon_volume:
   icon: mdi:speaker
+sensor.pierwszy_kwiat_light_intensity:
+  friendly_name: lx
+sensor.pierwszy_kwiat_temperature:
+  friendly_name: temperature
+sensor.pierwszy_kwiat_conductivity:
+  friendly_name: conductivity
+sensor.pierwszy_kwiat_moisture:
+  friendly_name: %
