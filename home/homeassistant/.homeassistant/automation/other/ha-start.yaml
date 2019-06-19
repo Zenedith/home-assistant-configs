@@ -10,6 +10,10 @@
         payload: ""
     - service: mqtt.publish
       data:
+        topic: 'shellies/salon_regal/cmnd/POWER'
+        payload: ""
+    - service: mqtt.publish
+      data:
         topic: 'listwa/listwa1/cmnd/POWER1'
         payload: ""
     - service: mqtt.publish
