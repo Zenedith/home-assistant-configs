@@ -6,20 +6,20 @@ cards:
 
   - type: horizontal-stack
     cards:
+      - type: gauge
+          unit: '%'
+          entity: sensor.iphone_battery_level
+          name: Kasia iphone
+          severity:
+            green: 90
+            yellow: 45
+            red: 4
       - type: vertical-stack
         cards:
           - type: gauge
             unit: '%'
             entity: sensor.climate_pokoj_janka_battery
             name: Pokój janka grzejnik
-            severity:
-              green: 90
-              yellow: 45
-              red: 4
-          - type: gauge
-            unit: '%'
-            entity: sensor.iphone_battery_level
-            name: Kasia iphone
             severity:
               green: 90
               yellow: 45
@@ -40,14 +40,6 @@ cards:
               green: 90
               yellow: 45
               red: 4
-          - type: gauge
-            unit: '%'
-            entity: sensor.zmietekv2_battery
-            name: Zmietek
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
           - type: gauge
             unit: '%'
             entity: sensor.kuchnia_temp_battery
@@ -132,6 +124,14 @@ cards:
               red: 15
       - type: vertical-stack
         cards:
+          - type: gauge
+            unit: '%'
+            entity: sensor.zmietekv2_battery
+            name: Zmietek
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
           - type: gauge
             unit: '%'
             entity: sensor.drzwi_wejsciowe_contact_battery
