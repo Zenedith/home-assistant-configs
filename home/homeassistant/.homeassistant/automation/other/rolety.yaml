@@ -1,5 +1,5 @@
 - alias: 'Rolety 100% rano'
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '08:00:00'
@@ -9,10 +9,14 @@
         entity_id: cover.pokoj_janka, cover.sypialnia, cover.kuchnia
 
 - alias: 'Roleta w kuchni 40% po południu'
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '17:00:00'
+  condition:
+    - condition: state
+      entity_id: cover.kuchnia
+      state: 'open'
   action:
     - service: mqtt.publish
       data_template:
