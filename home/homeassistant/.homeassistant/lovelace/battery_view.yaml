@@ -6,36 +6,20 @@ cards:
 
   - type: horizontal-stack
     cards:
-      - type: gauge
-        unit: '%'
-        entity: sensor.iphone_battery_level
-        name: Kasia iphone
-        severity:
-          green: 90
-          yellow: 45
-          red: 4
       - type: vertical-stack
         cards:
           - type: gauge
             unit: '%'
+            entity: sensor.iphone_battery_level
+            name: Kasia iphone
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
+          - type: gauge
+            unit: '%'
             entity: sensor.climate_pokoj_janka_battery
             name: Pokój janka grzejnik
-            severity:
-              green: 90
-              yellow: 45
-              red: 4
-          - type: gauge
-            unit: '%'
-            entity: sensor.climate_sypialnia_battery
-            name: Sypialnia grzejnik
-            severity:
-              green: 90
-              yellow: 45
-              red: 4
-          - type: gauge
-            unit: '%'
-            entity: sensor.climate_salon_battery
-            name: Salon grzejnik
             severity:
               green: 90
               yellow: 45
@@ -70,6 +54,14 @@ cards:
             unit: '%'
             entity: sensor.zene_iphone_battery_level
             name: Zene iphone
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
+          - type: gauge
+            unit: '%'
+            entity: sensor.climate_sypialnia_battery
+            name: Sypialnia grzejnik
             severity:
               green: 90
               yellow: 45
@@ -124,6 +116,14 @@ cards:
               red: 15
       - type: vertical-stack
         cards:
+          - type: gauge
+            unit: '%'
+            entity: sensor.climate_salon_battery
+            name: Salon grzejnik
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
           - type: gauge
             unit: '%'
             entity: sensor.zmietekv2_battery
