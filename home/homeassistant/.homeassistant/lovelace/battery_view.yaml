@@ -7,13 +7,13 @@ cards:
   - type: horizontal-stack
     cards:
       - type: gauge
-          unit: '%'
-          entity: sensor.iphone_battery_level
-          name: Kasia iphone
-          severity:
-            green: 90
-            yellow: 45
-            red: 4
+        unit: '%'
+        entity: sensor.iphone_battery_level
+        name: Kasia iphone
+        severity:
+          green: 90
+          yellow: 45
+          red: 4
       - type: vertical-stack
         cards:
           - type: gauge
