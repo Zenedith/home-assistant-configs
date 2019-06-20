@@ -18,6 +18,14 @@ cards:
               red: 4
           - type: gauge
             unit: '%'
+            entity: sensor.iphone_battery_level
+            name: Kasia iphone
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
+          - type: gauge
+            unit: '%'
             entity: sensor.climate_sypialnia_battery
             name: Sypialnia grzejnik
             severity:
@@ -66,6 +74,14 @@ cards:
               red: 15
       - type: vertical-stack
         cards:
+          - type: gauge
+            unit: '%'
+            entity: sensor.zene_iphone_battery_level
+            name: Zene iphone
+            severity:
+              green: 90
+              yellow: 45
+              red: 4
           - type: gauge
             unit: '%'
             entity: sensor.sypialnia_motion_battery
@@ -152,6 +168,14 @@ cards:
             unit: '%'
             entity: sensor.lazienka_leak_battery
             name: Zalanie pralka
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.pierwszy_kwiat_battery
+            name: Pierwszy kwiat
             severity:
               green: 90
               yellow: 45
