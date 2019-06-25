@@ -632,3 +632,27 @@ zene_iphone:
   name: Zene iPhone
   picture:
   track: false
+
+polpc04789zene:
+  hide_if_away: true
+  icon:
+  mac: 00:14:3D:14:49:63
+  name: polpc04789zene
+  picture:
+  track: false
+
+sharp:
+  hide_if_away: true
+  icon:
+  mac: 88:25:2C:67:7B:A6
+  name: sharp
+  picture:
+  track: false
+
+wii:
+  hide_if_away: true
+  icon:
+  mac: 00:27:09:E8:19:7A
+  name: Wii
+  picture:
+  track: false
