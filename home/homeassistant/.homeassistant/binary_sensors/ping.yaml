@@ -131,6 +131,12 @@
   scan_interval: 60
 
 - platform: ping
+  name: airpurifier_online
+  host: 192.168.1.70
+  count: 2
+  scan_interval: 60
+
+- platform: ping
   name: shelly_4_sypialnia_online
   host: 192.168.1.135
   count: 2

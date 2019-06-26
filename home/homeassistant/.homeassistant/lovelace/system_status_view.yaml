@@ -148,6 +148,7 @@ cards:
           show_header_toggle: false
           entities:
             - binary_sensor.roborock_online
+            - binary_sensor.airpurifier_online
             - binary_sensor.dafang_online
             - binary_sensor.zen_pc_online
             - binary_sensor.drukarka_online
