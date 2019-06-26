@@ -272,6 +272,12 @@ vacuum:
     name: zmietekv2
     token: !secret vacuum
 
+fan:
+  - platform: xiaomi_miio
+    host: 192.168.1.70
+    name: purifier
+    token: !secret purifier
+
 notify:
   - name: mypushbullet
     platform: pushbullet
