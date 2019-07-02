@@ -656,3 +656,11 @@ wii:
   name: Wii
   picture:
   track: false
+
+zhimi_airpurifier_mc1_miio131411865:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:88:9E:C7
+  name: zhimi-airpurifier-mc1 miio131411865
+  picture:
+  track: false
