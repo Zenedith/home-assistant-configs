@@ -203,7 +203,7 @@
       seconds: 15
   condition:
     - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   action:
     - service: climate.set_away_mode
       data:
@@ -227,7 +227,7 @@
       entity_id: binary_sensor.okno_sypialnia_contact
       state: 'on'
     - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   action:
     - service: climate.set_away_mode
       data:
@@ -242,7 +242,7 @@
     to: 'off'
   condition:
     - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   action:
     - service: climate.set_away_mode
       data:
