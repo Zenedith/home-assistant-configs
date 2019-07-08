@@ -23,7 +23,7 @@ cch:
   menu: overflow
   voice: hide
   hide_help: true
-  header: true
+  header: false
   background: true
   notification: overflow
   options: show
