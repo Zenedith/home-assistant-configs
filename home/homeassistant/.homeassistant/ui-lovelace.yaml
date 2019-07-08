@@ -24,6 +24,7 @@ cch:
   voice: hide
   hide_help: true
   header: true
+  background: true
   notification: overflow
   options: show
   swipe: true
