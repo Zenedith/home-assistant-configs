@@ -28,6 +28,7 @@ cch:
   notification: overflow
   options: show
   swipe: true
+  kiosk_mode: true
 
 title: Zene Home
 views:
