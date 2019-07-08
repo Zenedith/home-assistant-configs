@@ -2,16 +2,6 @@ title: Salon i kuchnia
 icon: mdi:theater
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-    main_config: true
-    menu: overflow
-    voice: hide
-    header: true
-    notification: overflow
-    options: show
-    disable: false
-    background_image: true
-
   - type: vertical-stack
     cards:
       - type: custom:card-modder

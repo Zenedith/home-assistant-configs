@@ -19,7 +19,14 @@ resources:
     type: js
   - url: /local/custom_ui/weather-card.js?track=true
     type: module
-
+cch:
+  menu: overflow
+  voice: hide
+  hide_help: true
+  header: true
+  notification: overflow
+  options: show
+  swipe: true
 
 title: Zene Home
 views:

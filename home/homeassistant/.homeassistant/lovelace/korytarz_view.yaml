@@ -2,8 +2,6 @@ title: Korytarz
 icon: mdi:home-floor-0
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-
   - type: vertical-stack
     cards:
       - type: custom:card-modder

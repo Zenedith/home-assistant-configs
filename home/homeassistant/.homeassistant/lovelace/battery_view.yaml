@@ -2,8 +2,6 @@ title: Battery Levels
 icon: mdi:battery-50
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-
   - type: horizontal-stack
     cards:
       - type: vertical-stack

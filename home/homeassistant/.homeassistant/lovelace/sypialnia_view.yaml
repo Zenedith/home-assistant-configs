@@ -2,8 +2,6 @@ title: Sypialnia
 icon: mdi:bed-empty
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-
   - type: vertical-stack
     cards:
       - type: custom:card-modder
