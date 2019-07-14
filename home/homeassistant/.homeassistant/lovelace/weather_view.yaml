@@ -12,6 +12,7 @@ cards:
           entities:
             - sensor.korytarz_temp_temperature
             - sensor.kuchnia_temp_temperature
+            - sensor.purifier_temperature
           height: 65
           line_width: 2
           font_size: 70
@@ -93,6 +94,7 @@ cards:
           entities:
             - sensor.korytarz_temp_humidity
             - sensor.kuchnia_temp_humidity
+            - sensor.purifier_humidity
           height: 65
           line_width: 2
           font_size: 70
