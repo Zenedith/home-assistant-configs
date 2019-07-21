@@ -295,10 +295,10 @@
     - condition: template
       value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.salon
-        away_mode: 'on'
+        preset_mode: 'away'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w salonie'
@@ -319,10 +319,10 @@
     - condition: template
       value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.salon
-        away_mode: 'on'
+        preset_mode: 'away'
 
 - alias: 'Przywróć ogrzewanie przy zamkniętych drzwiach w salonie'
   initial_state: 'on'
@@ -334,10 +334,10 @@
     - condition: template
       value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.salon
-        away_mode: 'off'
+        preset_mode: 'heat'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w salonie'

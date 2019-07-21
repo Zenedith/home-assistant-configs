@@ -42,7 +42,6 @@ frontend:
 
 # Enables configuration UI
 config:
-zeroconf:
 
 lovelace:
   mode: yaml
@@ -252,7 +251,12 @@ yeelight: !include yeelight/yeelight.yaml
 #media_extractor:
 #  default_query: best
 
-default_config:
+mobile_app:
+person:
+system_health:
+#zeroconf:   //Zeroconf/Avahi/Bonjour
+#ssdp:  //SSDP - Simple Service Discovery Protocol
+
 
 speedtestdotnet:
   server_id: 7202

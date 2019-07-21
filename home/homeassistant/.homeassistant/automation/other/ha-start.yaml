@@ -146,16 +146,6 @@
     - condition: template
       value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   action:
-#    - service: climate.set_temperature
-#      data:
-#        temperature: 5
-##        target_temp_low: 5
-#        operation_mode: 'eco'
-#        entity_id: climate.pokoj_janka, climate.sypialnia, climate.salon
-#    - service: climate.set_away_mode
-#      data:
-#        away_mode: 'on'
-#        entity_id: climate.pokoj_janka, climate.sypialnia, climate.salon
     - service: climate.turn_off
       data:
         entity_id: climate.pokoj_janka, climate.sypialnia, climate.salon
