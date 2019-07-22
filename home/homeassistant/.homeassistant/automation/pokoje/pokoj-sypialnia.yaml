@@ -247,7 +247,7 @@
     - service: climate.set_preset_mode
       data:
         entity_id: climate.sypialnia
-        preset_mode: 'heat'
+        preset_mode: 'home'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w sypialni'
