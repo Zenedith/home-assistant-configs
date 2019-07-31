@@ -672,3 +672,11 @@ pawes_ipad:
   name: Pawes-iPad
   picture:
   track: false
+
+applewaatarzyna:
+  hide_if_away: true
+  icon:
+  mac: F8:6F:C1:B9:BF:FE
+  name: AppleWaatarzyna
+  picture:
+  track: false
