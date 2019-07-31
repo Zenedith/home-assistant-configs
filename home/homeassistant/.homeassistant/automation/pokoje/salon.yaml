@@ -274,6 +274,8 @@
     - platform: state
       entity_id: media_player.sony_bravia_tv
       to: 'off'
+      for:
+        seconds: 60
   condition:
     - condition: state
       entity_id: switch.listwa_salon_slot_1
