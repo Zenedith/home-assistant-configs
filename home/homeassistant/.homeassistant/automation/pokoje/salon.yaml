@@ -127,9 +127,7 @@
     event: sunset
     offset: '-01:00:00'
   action:
-    - service: light.turn_on
-      data:
-        entity_id: switch.salon_regal
+    - service: script.ambient_on
 
 - alias: 'Ambient off'
   initial_state: 'on'
@@ -137,9 +135,7 @@
     platform: time
     at: '02:04:00'
   action:
-    - service: light.turn_off
-      data:
-        entity_id: switch.salon_regal
+    - service: script.ambient_off
 
 - alias: 'Zmietek start'
   initial_state: 'on'
@@ -153,19 +149,7 @@
       - wed
       - fri
   action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.zmietek
-    - delay: 00:00:40
-    - service: vacuum.start
-      data:
-        entity_id: vacuum.zmietekv2
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Zmietek start'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Zmietek start
+    - service: script.zmietek_start
 
 - alias: 'Zmietek docked'
   initial_state: 'on'

@@ -6,6 +6,7 @@
       to: 'Away'
   action:
     - service: script.everything_off
+    - service: script.zmietek_start
     - service: notify.mypushbullet
       data_template:
         title: 'Away home'
