@@ -1,4 +1,4 @@
-- zamioculcas_zamiifolia:
+zamioculcas_zamiifolia:
   sensors:
     moisture: sensor.zamioculcas_zamiifolia_moisture
     battery: sensor.zamioculcas_zamiifolia_battery
@@ -12,7 +12,7 @@
   min_temperature: 10
   max_temperature: 32
 
-- sansevieria_trifasciata:
+sansevieria_trifasciata:
   sensors:
     moisture: sensor.sansevieria_trifasciata_moisture
     battery: sensor.sansevieria_trifasciata_battery
