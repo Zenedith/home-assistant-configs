@@ -19,7 +19,7 @@ resources:
     type: js
   - url: /local/custom_ui/weather-card.js?track=true
     type: module
-  - url: /local/custom_ui/flower-card/flower-card.js?v=0.1
+  - url: /local/custom_ui/flower-card/flower-card.js?v=0.2
     type: module
 cch:
   menu: overflow
