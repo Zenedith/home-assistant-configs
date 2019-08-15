@@ -76,10 +76,10 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
-      - type: custom:card-modder
-        card:
-          type: plant-status
-          entity: plant.zamioculcas_zamiifolia
+#      - type: custom:card-modder
+#        card:
+#          type: plant-status
+#          entity: plant.zamioculcas_zamiifolia
 
       - type: custom:card-modder
         card:
@@ -117,14 +117,18 @@ cards:
                 --ha-label-badge-font-size: 1em
 
         style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
-      - type: custom:card-modder
-        card:
-          type: plant-status
-          entity: plant.sansevieria_trifasciata
+#      - type: custom:card-modder
+#        card:
+#          type: plant-status
+#          entity: plant.sansevieria_trifasciata
 
       - type: custom:card-modder
         card:
@@ -161,6 +165,10 @@ cards:
                 left: 92%
                 --ha-label-badge-font-size: 1em
         style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
