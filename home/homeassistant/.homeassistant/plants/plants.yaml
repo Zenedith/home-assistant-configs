@@ -1,0 +1,27 @@
+- zamioculcas_zamiifolia:
+  sensors:
+    moisture: sensor.zamioculcas_zamiifolia_moisture
+    battery: sensor.zamioculcas_zamiifolia_battery
+    temperature: sensor.zamioculcas_zamiifolia_temperature
+    conductivity: sensor.zamioculcas_zamiifolia_conductivity
+    brightness: sensor.zamioculcas_zamiifolia_light_intensity
+  min_moisture: 15
+  max_moisture: 60
+  min_battery: 20
+  min_conductivity: 350
+  min_temperature: 10
+  max_temperature: 32
+
+- sansevieria_trifasciata:
+  sensors:
+    moisture: sensor.sansevieria_trifasciata_moisture
+    battery: sensor.sansevieria_trifasciata_battery
+    temperature: sensor.sansevieria_trifasciata_temperature
+    conductivity: sensor.sansevieria_trifasciata_conductivity
+    brightness: sensor.sansevieria_trifasciata_light_intensity
+  min_moisture: 15
+  max_moisture: 60
+  min_battery: 20
+  min_conductivity: 350
+  min_temperature: 10
+  max_temperature: 32

@@ -244,6 +244,7 @@ weather: !include weather/darksky.yaml
 light: !include_dir_merge_list lights
 media_player: !include_dir_merge_list media_player
 yeelight: !include yeelight/yeelight.yaml
+plant: !include plants/plants.yaml
 
 #shell_command:
 #  rename_snapshots_dafang: 'bash /home/homeassistant/.homeassistant/bash_scripts/renameSnapshotsDafang.sh'
