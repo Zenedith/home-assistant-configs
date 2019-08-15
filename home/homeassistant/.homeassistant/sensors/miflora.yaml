@@ -1,6 +1,7 @@
 - platform: miflora
   name: Zamioculcas zamiifolia
   mac: 'C4:7C:8D:6A:01:92'
+  scan_interval: 120
   monitored_conditions:
     - moisture
     - light
@@ -10,6 +11,7 @@
 - platform: miflora
   name: Sansevieria trifasciata
   mac: 'C4:7C:8D:69:FE:F0'
+  scan_interval: 60
   monitored_conditions:
     - moisture
     - light
