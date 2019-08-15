@@ -80,30 +80,71 @@ cards:
         card:
           type: picture-elements
           image: /local/lovelace/plants.jpg
+          title: Zamioculcas zamiifolia
           elements:
             - type: state-badge
-              entity: sensor.pierwszy_kwiat_light_intensity
+              entity: sensor.zamioculcas_zamiifolia_light_intensity
               title: null
               style:
                 top: 35%
                 left: 10%
                 --ha-label-badge-font-size: 1em
             - type: state-badge
-              entity: sensor.pierwszy_kwiat_temperature
+              entity: sensor.zamioculcas_zamiifolia_temperature
               title: null
               style:
                 top: 35%
                 left: 25%
                 --ha-label-badge-font-size: 1em
-#            - type: state-badge
-#              entity: sensor.pierwszy_kwiat_conductivity
-#              title: null
-#              style:
-#                top: 35%
-#                left: 40%
-#                --ha-label-badge-font-size: 1em
             - type: state-badge
-              entity: sensor.pierwszy_kwiat_moisture
+              entity: sensor.zamioculcas_zamiifolia_conductivity
+              title: null
+              style:
+                top: 35%
+                left: 40%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.zamioculcas_zamiifolia_moisture
+              title: null
+              style:
+                top: 35%
+                left: 92%
+                --ha-label-badge-font-size: 1em
+
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          image: /local/lovelace/plants.jpg
+          title: Sansevieria trifasciata
+          elements:
+            - type: state-badge
+              entity: sensor.sansevieria_trifasciata_light_intensity
+              title: null
+              style:
+                top: 35%
+                left: 10%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.sansevieria_trifasciata_temperature
+              title: null
+              style:
+                top: 35%
+                left: 25%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.sansevieria_trifasciata_conductivity
+              title: null
+              style:
+                top: 35%
+                left: 40%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.sansevieria_trifasciata_moisture
               title: null
               style:
                 top: 35%

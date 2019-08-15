@@ -166,8 +166,16 @@ cards:
               red: 15
           - type: gauge
             unit: '%'
-            entity: sensor.pierwszy_kwiat_battery
-            name: Pierwszy kwiat
+            entity: sensor.zamioculcas_zamiifolia_battery
+            name: Zamioculcas zamiifolia
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
+            entity: sensor.sansevieria_trifasciata_battery
+            name: Sansevieria trifasciata
             severity:
               green: 90
               yellow: 45
