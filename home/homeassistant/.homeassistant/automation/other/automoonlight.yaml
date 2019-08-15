@@ -22,7 +22,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '06:01:00'
+    at: '07:20:00'
   action:
     - service: input_boolean.turn_off
       data:
