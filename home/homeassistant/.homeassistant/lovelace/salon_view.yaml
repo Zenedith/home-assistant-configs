@@ -78,6 +78,11 @@ cards:
 
       - type: custom:card-modder
         card:
+          type: plant-status
+          entity: plant.zamioculcas_zamiifolia
+
+      - type: custom:card-modder
+        card:
           type: picture-elements
           image: /local/lovelace/plants.jpg
           title: Zamioculcas zamiifolia
@@ -115,6 +120,11 @@ cards:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+    - type: custom:card-modder
+      card:
+        type: plant-status
+        entity: plant.sansevieria_trifasciata
 
       - type: custom:card-modder
         card:
