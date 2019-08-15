@@ -1,15 +1,15 @@
-- alias: 'Rolety 100% rano'
-  initial_state: 'off'
+- alias: 'Rolety pokoje open at 12'
+  initial_state: 'on'
   trigger:
     platform: time
-    at: '08:00:00'
+    at: '12:00:00'
   action:
     - service: cover.open_cover
       data:
-        entity_id: cover.pokoj_janka, cover.sypialnia, cover.kuchnia
+        entity_id: cover.pokoj_janka, cover.sypialnia
 
-- alias: 'Roleta w kuchni 40% po południu'
-  initial_state: 'off'
+- alias: 'Roleta w kuchni 60% o 17'
+  initial_state: 'on'
   trigger:
     platform: time
     at: '17:00:00'
@@ -22,4 +22,4 @@
       data_template:
         topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
         retain: false
-        payload: '40'
+        payload: '60'

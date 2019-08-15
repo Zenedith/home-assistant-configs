@@ -118,8 +118,8 @@ cards:
             - automation.everything_off_when_gone
             - automation.rolety_close_when_gone
             - automation.rolety_open_when_home
-            - automation.roleta_w_kuchni_40_po_poludniu
-            - automation.rolety_100_rano
+            - automation.roleta_w_kuchni_60_o_17
+            - automation.Rolety_pokoje_open_at_12
             - automation.zmietek_start_when_gone_15_min_delay
             - automation.bedside_jan_on
             - automation.ambient_on
