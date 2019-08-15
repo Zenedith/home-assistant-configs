@@ -115,12 +115,12 @@ cards:
           show_header_toggle: false
           entities:
             - automation.power_state_on_ha_start_up
-            - automation.Everything_off_when_gone
-            - automation.Rolety_close_when_gone
-            - automation.Rolety_open_when_home
+            - automation.everything_off_when_gone
+            - automation.rolety_close_when_gone
+            - automation.rolety_open_when_home
             - automation.roleta_w_kuchni_40_po_poludniu
             - automation.rolety_100_rano
-            - automation.Zmietek_start_when_gone_15_min_delay
+            - automation.zmietek_start_when_gone_15_min_delay
             - automation.bedside_jan_on
             - automation.ambient_on
             - automation.listwa_sypialnia_on
