@@ -9,7 +9,7 @@
     - conductivity
     - battery
 - platform: miflora
-  name: Sansevieria trifasciata
+  name: spathiphyllum
   mac: 'C4:7C:8D:69:FE:F0'
 #  scan_interval: 100
   monitored_conditions:

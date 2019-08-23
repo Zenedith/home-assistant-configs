@@ -174,7 +174,7 @@ cards:
               red: 15
           - type: gauge
             unit: '%'
-            entity: sensor.sansevieria_trifasciata_battery
+            entity: sensor.spathiphyllum_battery
             name: Sansevieria trifasciata
             severity:
               green: 90

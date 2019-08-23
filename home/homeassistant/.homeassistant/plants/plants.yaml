@@ -13,67 +13,7 @@ zamioculcas_zamiifolia:
   min_temperature: 10
   max_temperature: 32
 
-sansevieria_trifasciata:
-  sensors:
-    moisture: sensor.sansevieria_trifasciata_moisture
-    battery: sensor.sansevieria_trifasciata_battery
-    temperature: sensor.sansevieria_trifasciata_temperature
-    conductivity: sensor.sansevieria_trifasciata_conductivity
-    brightness: sensor.sansevieria_trifasciata_light_intensity
-  min_moisture: 7
-  max_moisture: 50
-  min_battery: 20
-  min_conductivity: 300
-  max_conductivity: 1000
-  min_temperature: 10
-  max_temperature: 32
-
-#crassula_ovata:
-#  sensors:
-#    moisture: sensor.sansevieria_trifasciata_moisture
-#    battery: sensor.sansevieria_trifasciata_battery
-#    temperature: sensor.sansevieria_trifasciata_temperature
-#    conductivity: sensor.sansevieria_trifasciata_conductivity
-#    brightness: sensor.sansevieria_trifasciata_light_intensity
-#  min_moisture: 7
-#  max_moisture: 50
-#  min_battery: 20
-#  min_conductivity: 50
-#  max_conductivity: 1000
-#  min_temperature: 8
-#  max_temperature: 35
-
-#ficus_benjamina:
-#  sensors:
-#    moisture: sensor.sansevieria_trifasciata_moisture
-#    battery: sensor.sansevieria_trifasciata_battery
-#    temperature: sensor.sansevieria_trifasciata_temperature
-#    conductivity: sensor.sansevieria_trifasciata_conductivity
-#    brightness: sensor.sansevieria_trifasciata_light_intensity
-#  min_moisture: 20
-#  max_moisture: 60
-#  min_battery: 20
-#  min_conductivity: 350
-#  max_conductivity: 2000
-#  min_temperature: 8
-#  max_temperature: 32
-#
-#dracaena marginata:
-#  sensors:
-#    moisture: sensor.sansevieria_trifasciata_moisture
-#    battery: sensor.sansevieria_trifasciata_battery
-#    temperature: sensor.sansevieria_trifasciata_temperature
-#    conductivity: sensor.sansevieria_trifasciata_conductivity
-#    brightness: sensor.sansevieria_trifasciata_light_intensity
-#  min_moisture: 15
-#  max_moisture: 60
-#  min_battery: 20
-#  min_conductivity: 350
-#  max_conductivity: 2000
-#  min_temperature: 10
-#  max_temperature: 32
-
-#agave_univittata:
+#sansevieria_trifasciata:
 #  sensors:
 #    moisture: sensor.sansevieria_trifasciata_moisture
 #    battery: sensor.sansevieria_trifasciata_battery
@@ -85,20 +25,80 @@ sansevieria_trifasciata:
 #  min_battery: 20
 #  min_conductivity: 300
 #  max_conductivity: 1000
-#  min_temperature: 7
+#  min_temperature: 10
+#  max_temperature: 32
+
+#crassula_ovata:
+#  sensors:
+#    moisture: sensor.spathiphyllum_moisture
+#    battery: sensor.spathiphyllum_battery
+#    temperature: sensor.spathiphyllum_temperature
+#    conductivity: sensor.spathiphyllum_conductivity
+#    brightness: sensor.spathiphyllum_light_intensity
+#  min_moisture: 7
+#  max_moisture: 50
+#  min_battery: 20
+#  min_conductivity: 50
+#  max_conductivity: 1000
+#  min_temperature: 8
 #  max_temperature: 35
 
-#spathiphyllum:
+#ficus_benjamina:
 #  sensors:
-#    moisture: sensor.sansevieria_trifasciata_moisture
-#    battery: sensor.sansevieria_trifasciata_battery
-#    temperature: sensor.sansevieria_trifasciata_temperature
-#    conductivity: sensor.sansevieria_trifasciata_conductivity
-#    brightness: sensor.sansevieria_trifasciata_light_intensity
-#  min_moisture: 15
-#  max_moisture: 65
+#    moisture: sensor.spathiphyllum_moisture
+#    battery: sensor.spathiphyllum_battery
+#    temperature: sensor.spathiphyllum_temperature
+#    conductivity: sensor.spathiphyllum_conductivity
+#    brightness: sensor.spathiphyllum_light_intensity
+#  min_moisture: 20
+#  max_moisture: 60
 #  min_battery: 20
 #  min_conductivity: 350
 #  max_conductivity: 2000
-#  min_temperature: 15
+#  min_temperature: 8
 #  max_temperature: 32
+#
+#dracaena marginata:
+#  sensors:
+#    moisture: sensor.spathiphyllum_moisture
+#    battery: sensor.spathiphyllum_battery
+#    temperature: sensor.spathiphyllum_temperature
+#    conductivity: sensor.spathiphyllum_conductivity
+#    brightness: sensor.spathiphyllum_light_intensity
+#  min_moisture: 15
+#  max_moisture: 60
+#  min_battery: 20
+#  min_conductivity: 350
+#  max_conductivity: 2000
+#  min_temperature: 10
+#  max_temperature: 32
+
+#agave_univittata:
+#  sensors:
+#    moisture: sensor.spathiphyllum_moisture
+#    battery: sensor.spathiphyllum_battery
+#    temperature: sensor.spathiphyllum_temperature
+#    conductivity: sensor.spathiphyllum_conductivity
+#    brightness: sensor.spathiphyllum_light_intensity
+#  min_moisture: 7
+#  max_moisture: 50
+#  min_battery: 20
+#  min_conductivity: 300
+#  max_conductivity: 1000
+#  min_temperature: 7
+#  max_temperature: 35
+
+spathiphyllum:
+  sensors:
+    moisture: sensor.spathiphyllum_moisture
+    battery: sensor.spathiphyllum_battery
+    temperature: sensor.spathiphyllum_temperature
+    conductivity: sensor.spathiphyllum_conductivity
+    brightness: sensor.spathiphyllum_light_intensity
+  min_moisture: 15
+  max_moisture: 65
+  min_battery: 20
+  min_conductivity: 350
+  max_conductivity: 2000
+  min_temperature: 15
+  max_temperature: 32

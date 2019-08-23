@@ -137,8 +137,10 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:flower-card
-          species: "sansevieria trifasciata"
-          entity: plant.sansevieria_trifasciata
+#          species: "sansevieria trifasciata"
+#          entity: plant.sansevieria_trifasciata
+          species: "spathiphyllum kochii"
+          entity: plant.spathiphyllum
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -152,31 +154,31 @@ cards:
         card:
           type: picture-elements
           image: /local/lovelace/plants.jpg
-          title: Sansevieria trifasciata
+          title: spathiphyllum
           elements:
             - type: state-badge
-              entity: sensor.sansevieria_trifasciata_light_intensity
+              entity: sensor.spathiphyllum_light_intensity
               title: null
               style:
                 top: 35%
                 left: 10%
                 --ha-label-badge-font-size: 1em
             - type: state-badge
-              entity: sensor.sansevieria_trifasciata_temperature
+              entity: sensor.spathiphyllum_temperature
               title: null
               style:
                 top: 35%
                 left: 25%
                 --ha-label-badge-font-size: 1em
             - type: state-badge
-              entity: sensor.sansevieria_trifasciata_conductivity
+              entity: sensor.spathiphyllum_conductivity
               title: null
               style:
                 top: 35%
                 left: 40%
                 --ha-label-badge-font-size: 1em
             - type: state-badge
-              entity: sensor.sansevieria_trifasciata_moisture
+              entity: sensor.spathiphyllum_moisture
               title: null
               style:
                 top: 35%
