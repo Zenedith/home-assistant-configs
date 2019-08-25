@@ -680,3 +680,43 @@ applewaatarzyna:
   name: AppleWaatarzyna
   picture:
   track: false
+
+pawel_pc:
+  hide_if_away: true
+  icon:
+  mac: 94:B8:6D:F8:3F:E5
+  name: pawel-pc
+  picture:
+  track: false
+
+android_d0224c06dbb8a6e7:
+  hide_if_away: true
+  icon:
+  mac: B4:F1:DA:EF:76:66
+  name: android-d0224c06dbb8a6e7
+  picture:
+  track: false
+
+b4_f7_a1_e3_60_4f:
+  hide_if_away: true
+  icon:
+  mac: B4:F7:A1:E3:60:4F
+  name: b4 f7 a1 e3 60 4f
+  picture:
+  track: false
+
+d8_0d_17_6a_d9_0e:
+  hide_if_away: true
+  icon:
+  mac: D8:0D:17:6A:D9:0E
+  name: d8 0d 17 6a d9 0e
+  picture:
+  track: false
+
+00_40_f4_72_62_45:
+  hide_if_away: true
+  icon:
+  mac: 00:40:F4:72:62:45
+  name: 00 40 f4 72 62 45
+  picture:
+  track: false
