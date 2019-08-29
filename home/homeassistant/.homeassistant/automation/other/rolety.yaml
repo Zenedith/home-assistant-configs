@@ -3,6 +3,18 @@
   trigger:
     platform: time
     at: '12:00:00'
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.dark_sky_temperature
+      below: 28
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: cover.pokoj_janka
+          state: 'open'
+        - condition: state
+          entity_id: cover.sypialnia
+          state: 'open'
   action:
     - service: cover.open_cover
       data:
@@ -31,8 +43,16 @@
       entity_id: sensor.dark_sky_temperature
       above: 28
   condition:
-    - condition: state
-      entity_id: cover.pokoj_janka, cover.sypialnia
-      state: 'open'
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: cover.pokoj_janka
+        state: 'open'
+      - condition: state
+        entity_id: cover.sypialnia
+        state: 'open'
+      - condition: state
+        entity_id: cover.kuchnia
+        state: 'open'
   action:
     - service: script.rolety_close
