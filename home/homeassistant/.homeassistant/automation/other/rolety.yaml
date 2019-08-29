@@ -23,3 +23,16 @@
         topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
         retain: false
         payload: '60'
+
+- alias: 'Rolety close when temp high'
+  initial_state: 'on'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.dark_sky_temperature
+      above: 28
+  condition:
+    - condition: state
+      entity_id: cover.pokoj_janka, cover.sypialnia
+      state: 'open'
+  action:
+    - service: script.rolety_close

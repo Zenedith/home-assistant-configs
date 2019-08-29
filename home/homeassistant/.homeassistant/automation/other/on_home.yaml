@@ -5,8 +5,10 @@
       entity_id: input_select.presence_status
       to: 'Home'
   condition:
-    - condition: time
-      after: '07:00:00'
-      before: '19:00:00'
+    - condition: sun
+      before: sunset
+      before_offset: '02:00:00'
+    - condition: sun
+      after: sunrise
   action:
     - service: script.rolety_open

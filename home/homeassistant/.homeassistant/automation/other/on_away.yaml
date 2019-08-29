@@ -19,6 +19,15 @@
     - platform: state
       entity_id: input_select.presence_status
       to: 'Away'
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.dark_sky_temperature
+      above: 26
+    - condition: sun
+      before: sunset
+      before_offset: '01:00:00'
+    - condition: sun
+      after: sunrise
   action:
     - service: script.rolety_close
 
@@ -30,5 +39,11 @@
       to: 'Away'
       for:
         minutes: 15
+  condition:
+    - condition: sun
+      before: sunset
+      before_offset: '02:00:00'
+    - condition: sun
+      after: sunrise
   action:
     - service: script.zmietek_start

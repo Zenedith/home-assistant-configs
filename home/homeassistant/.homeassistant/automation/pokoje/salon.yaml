@@ -278,8 +278,9 @@
     for:
       seconds: 15
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
     - service: climate.set_preset_mode
       data:
@@ -302,8 +303,9 @@
     - condition: state
       entity_id: binary_sensor.drzwi_balkonowe_contact
       state: 'on'
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
     - service: climate.set_preset_mode
       data:
@@ -317,8 +319,9 @@
     entity_id: binary_sensor.drzwi_balkonowe_contact
     to: 'off'
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
     - service: climate.set_preset_mode
       data:

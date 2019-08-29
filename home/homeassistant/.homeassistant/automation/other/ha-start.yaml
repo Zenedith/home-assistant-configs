@@ -143,8 +143,9 @@
     platform: homeassistant
     event: start
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
     - service: climate.turn_off
       data:
