@@ -12,17 +12,17 @@
       icon_template: mdi:fan
     humidifier_temperature:
       value_template: "{{ states.fan.smartmi2.attributes.temperature }}"
-      friendly_name: "Temperature"
+      friendly_name: "Smartmi2"
       unit_of_measurement: "°C"
       entity_id: fan.smartmi2
     humidifier_humidity:
       value_template: "{{ states.fan.smartmi2.attributes.humidity }}"
-      friendly_name: "Humidity"
+      friendly_name: "Smartmi2"
       unit_of_measurement: "%"
       entity_id: fan.smartmi2
     humidifier_depth:
       value_template: "{{ states.fan.smartmi2.attributes.depth }}"
-      friendly_name: "depth"
+      friendly_name: "Depth"
       entity_id: fan.smartmi2
     humidifier_target_humidity:
       value_template: "{{ states.fan.smartmi2.attributes.target_humidity }}"

@@ -12,17 +12,17 @@
       icon_template: mdi:fan
     purifier_temperature:
       value_template: "{{ states.fan.purifier.attributes.temperature }}"
-      friendly_name: "Temperature"
+      friendly_name: "Purifier"
       unit_of_measurement: "°C"
       entity_id: fan.purifier
     purifier_humidity:
       value_template: "{{ states.fan.purifier.attributes.humidity }}"
-      friendly_name: "Humidity"
+      friendly_name: "Purifier"
       unit_of_measurement: "%"
       entity_id: fan.purifier
     purifier_illuminance:
       value_template: "{{ states.fan.purifier.attributes.illuminance }}"
-      friendly_name: "Illuminance"
+      friendly_name: "Purifier"
       unit_of_measurement: "lx"
       entity_id: fan.purifier
     purifier_aqi:
