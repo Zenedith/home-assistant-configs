@@ -133,7 +133,13 @@
 - platform: ping
   name: airpurifier_online
   host: 192.168.1.70
-  count: 2
+  count: 1
+  scan_interval: 60
+
+- platform: ping
+  name: smartmi2_online
+  host: 192.168.1.137
+  count: 1
   scan_interval: 60
 
 - platform: ping

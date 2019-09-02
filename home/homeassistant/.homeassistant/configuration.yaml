@@ -282,6 +282,10 @@ fan:
     host: 192.168.1.70
     name: purifier
     token: !secret purifier
+  - platform: xiaomi_miio
+    host: 192.168.1.137
+    name: smartmi2
+    token: !secret smartmi2
 
 notify:
   - name: mypushbullet
