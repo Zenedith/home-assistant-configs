@@ -5,7 +5,7 @@
       friendly_name: "Mode"
       entity_id: fan.smartmi2
       icon_template: mdi:fan
-    motor_speed:
+    humidifier_motor_speed:
       value_template: "{{ states.fan.smartmi2.attributes.motor_speed }}"
       friendly_name: "Motor speed"
       entity_id: fan.smartmi2
@@ -20,20 +20,11 @@
       friendly_name: "Humidity"
       unit_of_measurement: "%"
       entity_id: fan.smartmi2
-    humidifier_illuminance:
-      value_template: "{{ states.fan.smartmi2.attributes.illuminance }}"
-      friendly_name: "Illuminance"
-      unit_of_measurement: "lx"
+    humidifier_depth:
+      value_template: "{{ states.fan.smartmi2.attributes.depth }}"
+      friendly_name: "depth"
       entity_id: fan.smartmi2
-#    humidifier_aqi:
-#      value_template: "{{ states.fan.smartmi2.attributes.aqi }}"
-#      friendly_name: "aqi"
-#      entity_id: fan.smartmi2
-#    humidifier_filter_type:
-#      value_template: "{{ states.fan.smartmi2.attributes.filter_type }}"
-#      friendly_name: "Filter type"
-#      entity_id: fan.smartmi2
-#    humidifier_filter_life_remaining:
-#      friendly_name: "Filter life remaining"
-#      unit_of_measurement: "%"
-#      value_template: "{{ states.fan.smartmi2.attributes.filter_life_remaining }}"
+    humidifier_target_humidity:
+      value_template: "{{ states.fan.smartmi2.attributes.target_humidity }}"
+      friendly_name: "Target humidity"
+      entity_id: fan.smartmi2

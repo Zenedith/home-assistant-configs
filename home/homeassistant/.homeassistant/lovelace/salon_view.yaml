@@ -465,30 +465,30 @@ cards:
 
               - type: icon
                 icon: mdi:blender
-                entity: sensor.motor_speed
+                entity: sensor.humidifier_motor_speed
                 style: {color: white, left: 23%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: state-label
-                entity: sensor.motor_speed
+                entity: sensor.humidifier_motor_speed
                 style: {color: white, left: 35%, top: 92%}
 
-#              - type: icon
-#                icon: mdi:blender
-#                entity: sensor.humidifier_aqi
-#                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-#
-#              - type: state-label
-#                entity: sensor.humidifier_aqi
-#                style: {color: white, left: 58%, top: 92%}
+              - type: icon
+                icon: mdi:blender
+                entity: sensor.humidifier_depth
+                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
 
-#              - type: icon
-#                icon: mdi:filter
-#                entity: sensor.vacuum_filter
-#                style: {color: white, left: 70%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-#
-#              - type: state-label
-#                entity: sensor.vacuum_filter
-#                style: {color: white, left: 81%, top: 92%}
+              - type: state-label
+                entity: sensor.humidifier_depth
+                style: {color: white, left: 58%, top: 92%}
+
+              - type: icon
+                icon: mdi:filter
+                entity: sensor.humidifier_target_humidity
+                style: {color: white, left: 70%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+
+              - type: state-label
+                entity: sensor.humidifier_target_humidity
+                style: {color: white, left: 81%, top: 92%}
 
               - type: state-label
                 entity: sensor.humidifier_mode
