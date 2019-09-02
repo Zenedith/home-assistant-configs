@@ -1,6 +1,6 @@
 - platform: template
   sensors:
-    purifier_mode:
+    humidifier_mode:
       value_template: "{{ states.fan.smartmi2.attributes.mode }}"
       friendly_name: "Mode"
       entity_id: fan.smartmi2
@@ -10,30 +10,30 @@
       friendly_name: "Motor speed"
       entity_id: fan.smartmi2
       icon_template: mdi:fan
-    purifier_temperature:
+    humidifier_temperature:
       value_template: "{{ states.fan.smartmi2.attributes.temperature }}"
       friendly_name: "Temperature"
       unit_of_measurement: "°C"
       entity_id: fan.smartmi2
-    purifier_humidity:
+    humidifier_humidity:
       value_template: "{{ states.fan.smartmi2.attributes.humidity }}"
       friendly_name: "Humidity"
       unit_of_measurement: "%"
       entity_id: fan.smartmi2
-    purifier_illuminance:
+    humidifier_illuminance:
       value_template: "{{ states.fan.smartmi2.attributes.illuminance }}"
       friendly_name: "Illuminance"
       unit_of_measurement: "lx"
       entity_id: fan.smartmi2
-#    purifier_aqi:
+#    humidifier_aqi:
 #      value_template: "{{ states.fan.smartmi2.attributes.aqi }}"
 #      friendly_name: "aqi"
 #      entity_id: fan.smartmi2
-#    purifier_filter_type:
+#    humidifier_filter_type:
 #      value_template: "{{ states.fan.smartmi2.attributes.filter_type }}"
 #      friendly_name: "Filter type"
 #      entity_id: fan.smartmi2
-#    purifier_filter_life_remaining:
+#    humidifier_filter_life_remaining:
 #      friendly_name: "Filter life remaining"
 #      unit_of_measurement: "%"
 #      value_template: "{{ states.fan.smartmi2.attributes.filter_life_remaining }}"
