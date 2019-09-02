@@ -13,11 +13,12 @@ cards:
             - sensor.korytarz_temp_temperature
             - sensor.kuchnia_temp_temperature
             - sensor.purifier_temperature
+            - sensor.humidifier_temperature
           height: 65
           line_width: 2
           font_size: 70
           hours_to_show: 24
-          more_info: false
+          more_info: true
           points_per_hour: 1
           hour24: true
           show:
@@ -95,6 +96,7 @@ cards:
             - sensor.korytarz_temp_humidity
             - sensor.kuchnia_temp_humidity
             - sensor.purifier_humidity
+            - sensor.humidifier_humidity
           height: 65
           line_width: 2
           font_size: 70
