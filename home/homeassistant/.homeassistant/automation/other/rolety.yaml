@@ -39,20 +39,29 @@
 - alias: 'Rolety close when temp high'
   initial_state: 'on'
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.dark_sky_temperature
-      above: 28
+    platform: numeric_state
+    entity_id: sensor.dark_sky_temperature
+    above: 28
   condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: cover.pokoj_janka
-        state: 'open'
-      - condition: state
-        entity_id: cover.sypialnia
-        state: 'open'
-      - condition: state
-        entity_id: cover.kuchnia
-        state: 'open'
+    - condition: state
+      entity_id: input_select.presence_status
+      state: 'Away'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: cover.pokoj_janka
+          state: 'open'
+        - condition: state
+          entity_id: cover.sypialnia
+          state: 'open'
+        - condition: state
+          entity_id: cover.kuchnia
+          state: 'open'
   action:
     - service: script.rolety_close
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Rolety close when temp high'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Rolety close when temp high (above 28C)

@@ -24,12 +24,18 @@
       entity_id: sensor.dark_sky_temperature
       above: 26
     - condition: sun
-      before: sunset
-      before_offset: '01:00:00'
-    - condition: sun
       after: sunrise
+    - condition: sun
+      before: sunset
+      before_offset: '-01:00:00'
   action:
     - service: script.rolety_close
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Rolety close when gone'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Rolety close when gone.
 
 - alias: 'Zmietek start when gone 15 min delay'
   initial_state: 'on'
@@ -41,9 +47,10 @@
         minutes: 15
   condition:
     - condition: sun
-      before: sunset
-      before_offset: '02:00:00'
-    - condition: sun
       after: sunrise
+    - condition: sun
+      before: sunset
+      before_offset: '-02:00:00'
+
   action:
     - service: script.zmietek_start

@@ -12,9 +12,11 @@
       for:
         minutes: 8
   condition:
-    - condition: time
-      after: '06:00:00'
-      before: '23:59:59'
+    - condition: sun
+      after: sunrise
+    - condition: sun
+      before: sunset
+      before_offset: '02:00:00'
   action:
     - service: input_boolean.turn_off
       data:

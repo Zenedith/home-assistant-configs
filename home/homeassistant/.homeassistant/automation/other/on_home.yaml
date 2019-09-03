@@ -6,9 +6,9 @@
       to: 'Home'
   condition:
     - condition: sun
-      before: sunset
-      before_offset: '02:00:00'
-    - condition: sun
       after: sunrise
+    - condition: sun
+      before: sunset
+      before_offset: '-02:00:00'
   action:
     - service: script.rolety_open
