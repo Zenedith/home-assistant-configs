@@ -1,6 +1,4 @@
 sequence:
-  - condition: template
-    value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 22 | float }}"
   - service: climate.set_preset_mode
     data:
       entity_id: climate.sypialnia
