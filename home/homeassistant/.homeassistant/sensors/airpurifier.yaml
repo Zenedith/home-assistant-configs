@@ -20,11 +20,6 @@
       friendly_name: "Purifier"
       unit_of_measurement: "%"
       entity_id: fan.purifier
-    purifier_illuminance:
-      value_template: "{{ states.fan.purifier.attributes.illuminance }}"
-      friendly_name: "Purifier"
-      unit_of_measurement: "lx"
-      entity_id: fan.purifier
     purifier_aqi:
       value_template: "{{ states.fan.purifier.attributes.aqi }}"
       friendly_name: "aqi"

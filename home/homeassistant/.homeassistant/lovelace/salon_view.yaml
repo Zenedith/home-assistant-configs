@@ -454,14 +454,14 @@ cards:
             type: picture-elements
             image: /local/lovelace/appliances/smartmi2.png
             elements:
-#              - type: icon
-#                icon: mdi:clock-outline
-#                entity: sensor.humidifier_filter_life_remaining
-#                style: {color: white, left: 5%, top: 91%}
-#
-#              - type: state-label
-#                entity: sensor.humidifier_filter_life_remaining
-#                style: {color: white, left: 12%, top: 91%}
+              - type: icon
+                icon: mdi:clock-outline
+                entity: sensor.humidifier_depth
+                style: {color: white, left: 5%, top: 91%}
+
+              - type: state-label
+                entity: sensor.humidifier_depth
+                style: {color: white, left: 12%, top: 91%}
 
               - type: icon
                 icon: mdi:blender
@@ -472,14 +472,14 @@ cards:
                 entity: sensor.humidifier_motor_speed
                 style: {color: white, left: 35%, top: 92%}
 
-              - type: icon
-                icon: mdi:blender
-                entity: sensor.humidifier_depth
-                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-
-              - type: state-label
-                entity: sensor.humidifier_depth
-                style: {color: white, left: 58%, top: 92%}
+#              - type: icon
+#                icon: mdi:blender
+#                entity: sensor.humidifier_depth
+#                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+#
+#              - type: state-label
+#                entity: sensor.humidifier_depth
+#                style: {color: white, left: 58%, top: 92%}
 
               - type: icon
                 icon: mdi:filter
