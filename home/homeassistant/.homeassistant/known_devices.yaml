@@ -720,3 +720,19 @@ d8_0d_17_6a_d9_0e:
   name: 00 40 f4 72 62 45
   picture:
   track: false
+
+zhimi_humidifier_ca1_mibt13240466:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:97:C4:E2
+  name: zhimi-humidifier-ca1 mibt13240466
+  picture:
+  track: false
+
+doorbell:
+  hide_if_away: true
+  icon:
+  mac: 4C:11:AE:0D:52:08
+  name: doorbell
+  picture:
+  track: false
