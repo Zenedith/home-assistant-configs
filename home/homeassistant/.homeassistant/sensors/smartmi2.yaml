@@ -21,7 +21,7 @@
       unit_of_measurement: "%"
       entity_id: fan.smartmi2
     humidifier_depth:
-      value_template: "{{ states.fan.smartmi2.attributes.depth }}"
+      value_template: "{{ states.fan.smartmi2.attributes.depth / 1.2}}"
       friendly_name: "Depth"
       unit_of_measurement: "%"
       entity_id: fan.smartmi2
