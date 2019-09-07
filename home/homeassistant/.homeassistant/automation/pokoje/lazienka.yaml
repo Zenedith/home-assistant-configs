@@ -58,12 +58,15 @@
       entity_id: binary_sensor.lazienka_leak_water_leak
       to: 'on'
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_4
     - service: notify.mypushbullet
       data_template:
         title: "!! Zalanie łazienki !!"
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Zalanie łazienki!!!
+          Zalanie łazienki!!! Podgląd z kamery.
 
 - alias: 'Włącz światło w toalecie gdy otwarte drzwi'
   initial_state: 'on'

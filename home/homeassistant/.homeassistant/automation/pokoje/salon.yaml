@@ -19,12 +19,15 @@
       entity_id: binary_sensor.kuchnia_leak_water_leak
       to: 'on'
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_4
     - service: notify.mypushbullet
       data_template:
         title: "!! Zalanie kuchni !!"
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Zalanie kuchni!!!
+          Zalanie kuchni!!! Podgląd z kamery.
 
 - alias: 'Pozar w kuchni'
   initial_state: 'on'
@@ -33,12 +36,15 @@
       entity_id: binary_sensor.kuchnia_smoke_detector
       to: 'on'
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_4
     - service: notify.mypushbullet
       data_template:
         title: "!! Pożar w kuchni !!"
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Pożar kuchni!!!
+          Pożar kuchni!!! Podgląd z kamery.
 
 #- alias: 'Listwa RTV notification'
 #  initial_state: 'on'
