@@ -1,0 +1,14 @@
+- alias: 'Rolety open when home'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_select.presence_status
+      to: 'Home'
+  condition:
+    - condition: sun
+      after: sunrise
+    - condition: sun
+      before: sunset
+      before_offset: '-02:00:00'
+  action:
+    - service: script.rolety_open

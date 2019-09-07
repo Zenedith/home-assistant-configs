@@ -153,13 +153,14 @@
     for:
       seconds: 15
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.pokoj_janka
-        away_mode: 'on'
+        preset_mode: 'away'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w pokóju Janka'
@@ -177,13 +178,14 @@
     - condition: state
       entity_id: binary_sensor.okno_janek_contact
       state: 'on'
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.pokoj_janka
-        away_mode: 'on'
+        preset_mode: 'away'
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
   initial_state: 'on'
@@ -192,13 +194,14 @@
     entity_id: binary_sensor.okno_janek_contact
     to: 'off'
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.pokoj_janka
-        away_mode: 'off'
+        preset_mode: 'home'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w pokóju Janka'

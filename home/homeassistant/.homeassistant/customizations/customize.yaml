@@ -131,3 +131,27 @@ sensor.asuswrt_upload:
   icon: mdi:arrow-up-bold
 switch.denon_volume:
   icon: mdi:speaker
+sensor.zamioculcas_zamiifolia_light_intensity:
+  friendly_name: lx
+sensor.zamioculcas_zamiifolia_temperature:
+  friendly_name: C
+sensor.zamioculcas_zamiifolia_conductivity:
+  friendly_name: cond
+sensor.zamioculcas_zamiifolia_moisture:
+  friendly_name: moisture
+sensor.sansevieria_trifasciata_light_intensity:
+  friendly_name: lx
+sensor.sansevieria_trifasciata_temperature:
+  friendly_name: C
+sensor.sansevieria_trifasciata_conductivity:
+  friendly_name: cond
+sensor.sansevieria_trifasciata_moisture:
+  friendly_name: moisture
+sensor.spathiphyllum_light_intensity:
+  friendly_name: lx
+sensor.spathiphyllum_temperature:
+  friendly_name: C
+sensor.spathiphyllum_conductivity:
+  friendly_name: cond
+sensor.spathiphyllum_moisture:
+  friendly_name: moisture

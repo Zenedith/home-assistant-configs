@@ -2,22 +2,16 @@ title: Salon i kuchnia
 icon: mdi:theater
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-    main_config: true
-    menu: overflow
-    voice: hide
-    header: true
-    notification: overflow
-    options: show
-    disable: false
-    background_image: true
-
   - type: vertical-stack
     cards:
       - type: custom:card-modder
         card:
           type: picture-entity
           entity: light.lampa_salon
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/salon800.jpg
@@ -31,6 +25,10 @@ cards:
           type: picture-entity
           entity: light.swiatlo_kuchnia_stol
           name: Dining
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/dining800.jpg
@@ -44,6 +42,10 @@ cards:
           type: picture-entity
           entity: light.swiatlo_kuchnia_szafki
           name: Kitchen
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/kuchnia800.jpg
@@ -62,10 +64,131 @@ cards:
             type: picture-entity
             entity: switch.salon_regal
             name: Regał
+            show_name: false
+            show_state: true
+            hold_action:
+              action: more-info
             tap_action:
               action: toggle
             image: /local/lovelace/salon/ambient_regal800.jpg
         style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: custom:flower-card
+          species: "zamioculcas zamiifolia"
+          entity: plant.zamioculcas_zamiifolia
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          image: /local/lovelace/plants.jpg
+          title: Zamioculcas zamiifolia
+          elements:
+            - type: state-badge
+              entity: sensor.zamioculcas_zamiifolia_light_intensity
+              title: null
+              style:
+                top: 35%
+                left: 10%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.zamioculcas_zamiifolia_temperature
+              title: null
+              style:
+                top: 35%
+                left: 25%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.zamioculcas_zamiifolia_conductivity
+              title: null
+              style:
+                top: 35%
+                left: 40%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.zamioculcas_zamiifolia_moisture
+              title: null
+              style:
+                top: 35%
+                left: 92%
+                --ha-label-badge-font-size: 1em
+
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: custom:flower-card
+#          species: "sansevieria trifasciata"
+#          entity: plant.sansevieria_trifasciata
+          species: "spathiphyllum kochii"
+          entity: plant.spathiphyllum
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          image: /local/lovelace/plants.jpg
+          title: spathiphyllum
+          elements:
+            - type: state-badge
+              entity: sensor.spathiphyllum_light_intensity
+              title: null
+              style:
+                top: 35%
+                left: 10%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.spathiphyllum_temperature
+              title: null
+              style:
+                top: 35%
+                left: 25%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.spathiphyllum_conductivity
+              title: null
+              style:
+                top: 35%
+                left: 40%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.spathiphyllum_moisture
+              title: null
+              style:
+                top: 35%
+                left: 92%
+                --ha-label-badge-font-size: 1em
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -230,6 +353,176 @@ cards:
                   border-color: rgb(34, 154, 210)
                   background-color: rgb(54, 65, 78)
                   opacity: 0.8
+          style:
+            border-radius: 20px
+            border: solid 1px rgba(100,100,100,0.3)
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+            overflow: hidden
+
+      - type: custom:card-modder
+        card:
+          type: conditional
+          conditions:
+            - entity: binary_sensor.airpurifier_online
+              state: 'on'
+          card:
+            type: picture-elements
+            image: /local/lovelace/appliances/xiaomi-airpurifier-pic2.png
+            elements:
+              - type: icon
+                icon: mdi:clock-outline
+                entity: sensor.purifier_filter_life_remaining
+                style: {color: white, left: 5%, top: 91%}
+
+              - type: state-label
+                entity: sensor.purifier_filter_life_remaining
+                style: {color: white, left: 12%, top: 91%}
+
+              - type: icon
+                icon: mdi:blender
+                entity: sensor.motor_speed
+                style: {color: white, left: 23%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+
+              - type: state-label
+                entity: sensor.motor_speed
+                style: {color: white, left: 35%, top: 92%}
+
+#              - type: icon
+#                icon: mdi:blender
+#                entity: sensor.purifier_aqi
+#                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+
+              - type: state-label
+                entity: sensor.purifier_aqi
+                style: {color: white, left: 49%, top: 53%, font-size: 120px}
+
+#              - type: icon
+#                icon: mdi:filter
+#                entity: sensor.vacuum_filter
+#                style: {color: white, left: 70%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+#
+#              - type: state-label
+#                entity: sensor.vacuum_filter
+#                style: {color: white, left: 81%, top: 92%}
+
+              - type: state-label
+                entity: sensor.purifier_mode
+                style:
+                  top: 10%
+                  left: 5%
+                  color: rgb(255, 255, 255)
+                  transform: translate(0%,-50%)
+                  pointer-events: none
+                  text-shadow: 1px 1px black
+                  font-family: Trebuchet MS
+                  font-size: 90%
+                  font-weight: bold
+                  border-left-style: solid
+                  border-color: rgb(34, 154, 210)
+                  background-color: rgb(54, 65, 78)
+                  opacity: 0.8
+
+              - type: state-label
+                entity: sensor.purifier_filter_type
+                style:
+                  top: 10%
+                  right: 5%
+                  color: rgb(255, 255, 255)
+                  transform: translate(0%,-50%)
+                  pointer-events: none
+                  text-shadow: 1px 1px black
+                  font-family: Trebuchet MS
+                  font-size: 90%
+                  font-weight: bold
+                  border-right-style: solid
+                  border-color: rgb(34, 154, 210)
+                  background-color: rgb(54, 65, 78)
+                  opacity: 0.8
+          style:
+            border-radius: 20px
+            border: solid 1px rgba(100,100,100,0.3)
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+            overflow: hidden
+
+      - type: custom:card-modder
+        card:
+          type: conditional
+          conditions:
+            - entity: binary_sensor.smartmi2_online
+              state: 'on'
+          card:
+            type: picture-elements
+            image: /local/lovelace/appliances/smartmi2.png
+            elements:
+              - type: icon
+                icon: mdi:clock-outline
+                entity: sensor.humidifier_depth
+                style: {color: white, left: 5%, top: 91%}
+
+              - type: state-label
+                entity: sensor.humidifier_depth
+                style: {color: white, left: 12%, top: 91%}
+
+              - type: icon
+                icon: mdi:blender
+                entity: sensor.humidifier_motor_speed
+                style: {color: white, left: 23%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+
+              - type: state-label
+                entity: sensor.humidifier_motor_speed
+                style: {color: white, left: 35%, top: 92%}
+
+#              - type: icon
+#                icon: mdi:blender
+#                entity: sensor.humidifier_humidity
+#                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+#
+              - type: state-label
+                entity: sensor.humidifier_humidity
+                style: {color: white, left: 49%, top: 53%, font-size: 120px}
+
+              - type: icon
+                icon: mdi:filter
+                entity: sensor.humidifier_target_humidity
+                style: {color: white, left: 70%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+
+              - type: state-label
+                entity: sensor.humidifier_target_humidity
+                style: {color: white, left: 81%, top: 92%}
+
+              - type: state-label
+                entity: sensor.humidifier_mode
+                style:
+                  top: 10%
+                  left: 5%
+                  color: rgb(255, 255, 255)
+                  transform: translate(0%,-50%)
+                  pointer-events: none
+                  text-shadow: 1px 1px black
+                  font-family: Trebuchet MS
+                  font-size: 90%
+                  font-weight: bold
+                  border-left-style: solid
+                  border-color: rgb(34, 154, 210)
+                  background-color: rgb(54, 65, 78)
+                  opacity: 0.8
+
+#              - type: state-label
+#                entity: sensor.humidifier_filter_type
+#                style:
+#                  top: 10%
+#                  right: 5%
+#                  color: rgb(255, 255, 255)
+#                  transform: translate(0%,-50%)
+#                  pointer-events: none
+#                  text-shadow: 1px 1px black
+#                  font-family: Trebuchet MS
+#                  font-size: 90%
+#                  font-weight: bold
+#                  border-right-style: solid
+#                  border-color: rgb(34, 154, 210)
+#                  background-color: rgb(54, 65, 78)
+#                  opacity: 0.8
           style:
             border-radius: 20px
             border: solid 1px rgba(100,100,100,0.3)

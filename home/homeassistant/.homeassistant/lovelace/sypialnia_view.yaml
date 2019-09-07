@@ -2,8 +2,6 @@ title: Sypialnia
 icon: mdi:bed-empty
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -29,6 +27,10 @@ cards:
           type: picture-entity
           entity: input_boolean.listwa_sypialnia
           name: Listwa
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/listwa_sypialnia800.jpg
@@ -41,6 +43,10 @@ cards:
         card:
           type: picture-entity
           entity: light.swiatlo_sypialnia
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/swiatlo_sypialnia800.jpg

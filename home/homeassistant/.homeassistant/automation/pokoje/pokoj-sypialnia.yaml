@@ -25,7 +25,7 @@
       entity_id: binary_sensor.zen_pc_online
       state: 'off'
   action:
-    - service: input_boolean.turn_on
+    - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.listwa_sypialnia
 
@@ -67,7 +67,7 @@
       entity_id: input_boolean.listwa_sypialnia
       state: 'off'
   action:
-    - service: input_boolean.turn_off
+    - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.listwa_sypialnia
     - service: notify.mypushbullet
@@ -202,13 +202,14 @@
     for:
       seconds: 15
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.sypialnia
-        away_mode: 'on'
+        preset_mode: 'away'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w sypialni'
@@ -226,13 +227,14 @@
     - condition: state
       entity_id: binary_sensor.okno_sypialnia_contact
       state: 'on'
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.sypialnia
-        away_mode: 'on'
+        preset_mode: 'away'
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
   initial_state: 'on'
@@ -241,13 +243,14 @@
     entity_id: binary_sensor.okno_sypialnia_contact
     to: 'off'
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.sypialnia
-        away_mode: 'off'
+        preset_mode: 'home'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w sypialni'

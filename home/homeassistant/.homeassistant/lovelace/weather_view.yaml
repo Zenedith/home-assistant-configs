@@ -3,7 +3,6 @@ icon: mdi:weather-cloudy
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 name: System Status
 cards:
-  - type: custom:compact-custom-header
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -13,11 +12,13 @@ cards:
           entities:
             - sensor.korytarz_temp_temperature
             - sensor.kuchnia_temp_temperature
+            - sensor.purifier_temperature
+            - sensor.humidifier_temperature
           height: 65
           line_width: 2
           font_size: 70
           hours_to_show: 24
-          more_info: false
+          more_info: true
           points_per_hour: 1
           hour24: true
           show:
@@ -94,11 +95,13 @@ cards:
           entities:
             - sensor.korytarz_temp_humidity
             - sensor.kuchnia_temp_humidity
+            - sensor.purifier_humidity
+            - sensor.humidifier_humidity
           height: 65
           line_width: 2
           font_size: 70
           hours_to_show: 24
-          more_info: false
+          more_info: true
           points_per_hour: 1
           hour24: true
           show:
@@ -139,7 +142,7 @@ cards:
           line_width: 2
           font_size: 70
           hours_to_show: 24
-          more_info: false
+          more_info: true
           points_per_hour: 1
           hour24: true
           line_color: '#e74c3c'

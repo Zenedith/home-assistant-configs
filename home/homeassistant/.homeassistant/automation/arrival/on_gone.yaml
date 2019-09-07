@@ -1,11 +1,11 @@
-- alias: 'Gone for 8 minutes'
+- alias: 'Gone for 5 minutes'
   initial_state: 'on'
   trigger:
     - platform: state
       entity_id: group.mobiledevices
       to: not_home
       for:
-        minutes: 8
+        minutes: 5
   condition:
     - condition: time
       after: '06:00:00'

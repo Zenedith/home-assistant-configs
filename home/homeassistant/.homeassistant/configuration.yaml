@@ -42,7 +42,6 @@ frontend:
 
 # Enables configuration UI
 config:
-zeroconf:
 
 lovelace:
   mode: yaml
@@ -159,17 +158,67 @@ history:
       - sensor.lazienka_leak_battery
       - sensor.custom_component_tracker
       - sensor.custom_python_script_tracker
+      - sensor.humidifier_motor_speed
+      - sensor.motor_speed
+      - sensor.purifier_filter_type
+      - sensor.purifier_filter_life_remaining
+      - sensor.vacuum_fan
+      - sensor.vacuum_cleaned_area
+      - sensor.vacuum_battery
+      - sensor.vacuum_cleaning_time
+      - sensor.vacuum_main_brush
+      - sensor.vacuum_side_brush
+      - sensor.vacuum_filter
+      - sensor.vacuum_cleaning_count
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daytime_high_temperature_1d
+      - sensor.dark_sky_daytime_high_temperature_2d
+      - sensor.dark_sky_daytime_high_temperature_3d
+      - sensor.dark_sky_daytime_high_temperature_4d
+      - sensor.dark_sky_daytime_high_temperature_5d
+      - sensor.dark_sky_icon_0d
+      - sensor.dark_sky_icon_1d
+      - sensor.dark_sky_icon_2d
+      - sensor.dark_sky_icon_3d
+      - sensor.dark_sky_icon_4d
+      - sensor.dark_sky_icon_5d
+      - sensor.dark_sky_overnight_low_temperature_0d
+      - sensor.dark_sky_overnight_low_temperature_1d
+      - sensor.dark_sky_overnight_low_temperature_2d
+      - sensor.dark_sky_overnight_low_temperature_3d
+      - sensor.dark_sky_overnight_low_temperature_4d
+      - sensor.dark_sky_summary_0d
+      - sensor.dark_sky_summary_1d
+      - sensor.dark_sky_summary_2d
+      - sensor.dark_sky_summary_3d
+      - sensor.dark_sky_summary_4d
+      - sensor.dark_sky_summary_5d
+      - sensor.dark_sky_visibility
+      - sensor.dark_sky_daytime_high_temperature_0d
+      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_pressure
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_precip_probability_1d
+      - sensor.dark_sky_precip_probability_2d
+      - sensor.dark_sky_precip_probability_3d
+      - sensor.dark_sky_precip_probability_4d
+      - sensor.dark_sky_precip_probability_5d
+      - zigbee2mqtt_networkmap.map_last_update
 recorder:
   purge_interval: 1
-  purge_keep_days: 3
-  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
+  purge_keep_days: 5
+#  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
+  db_url: postgresql://@/homeassistant
   exclude:
     domains:
-      - automation
-      - script
       - weblink
       - updater
-      - light
     entities:
       - sun.sun # Don't record sun data
       - sensor.last_boot # Comes from 'systemmonitor' sensor platform
@@ -202,6 +251,56 @@ recorder:
       - sensor.lazienka_leak_battery
       - sensor.custom_component_tracker
       - sensor.custom_python_script_tracker
+      - sensor.humidifier_motor_speed
+      - sensor.motor_speed
+      - sensor.purifier_filter_type
+      - sensor.purifier_filter_life_remaining
+      - sensor.vacuum_fan
+      - sensor.vacuum_cleaned_area
+      - sensor.vacuum_battery
+      - sensor.vacuum_cleaning_time
+      - sensor.vacuum_main_brush
+      - sensor.vacuum_side_brush
+      - sensor.vacuum_filter
+      - sensor.vacuum_cleaning_count
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daytime_high_temperature_1d
+      - sensor.dark_sky_daytime_high_temperature_2d
+      - sensor.dark_sky_daytime_high_temperature_3d
+      - sensor.dark_sky_daytime_high_temperature_4d
+      - sensor.dark_sky_daytime_high_temperature_5d
+      - sensor.dark_sky_icon_1d
+      - sensor.dark_sky_icon_2d
+      - sensor.dark_sky_icon_3d
+      - sensor.dark_sky_icon_4d
+      - sensor.dark_sky_icon_5d
+      - sensor.dark_sky_overnight_low_temperature_0d
+      - sensor.dark_sky_overnight_low_temperature_1d
+      - sensor.dark_sky_overnight_low_temperature_2d
+      - sensor.dark_sky_overnight_low_temperature_3d
+      - sensor.dark_sky_overnight_low_temperature_4d
+      - sensor.dark_sky_summary_1d
+      - sensor.dark_sky_summary_2d
+      - sensor.dark_sky_summary_3d
+      - sensor.dark_sky_summary_4d
+      - sensor.dark_sky_summary_5d
+      - sensor.dark_sky_visibility
+      - sensor.dark_sky_daytime_high_temperature_0d
+      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_pressure
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_precip_probability_1d
+      - sensor.dark_sky_precip_probability_2d
+      - sensor.dark_sky_precip_probability_3d
+      - sensor.dark_sky_precip_probability_4d
+      - sensor.dark_sky_precip_probability_5d
+      - zigbee2mqtt_networkmap.map_last_update
 # View all events in a logbook
 logbook:
 
@@ -245,6 +344,7 @@ weather: !include weather/darksky.yaml
 light: !include_dir_merge_list lights
 media_player: !include_dir_merge_list media_player
 yeelight: !include yeelight/yeelight.yaml
+plant: !include plants/plants.yaml
 
 #shell_command:
 #  rename_snapshots_dafang: 'bash /home/homeassistant/.homeassistant/bash_scripts/renameSnapshotsDafang.sh'
@@ -252,7 +352,12 @@ yeelight: !include yeelight/yeelight.yaml
 #media_extractor:
 #  default_query: best
 
-default_config:
+mobile_app:
+person:
+system_health:
+#zeroconf:   //Zeroconf/Avahi/Bonjour
+#ssdp:  //SSDP - Simple Service Discovery Protocol
+
 
 speedtestdotnet:
   server_id: 7202
@@ -271,6 +376,17 @@ vacuum:
     host: 192.168.1.133
     name: zmietekv2
     token: !secret vacuum
+
+fan:
+  - platform: xiaomi_miio
+    host: 192.168.1.70
+    name: purifier
+    token: !secret purifier
+
+  - platform: xiaomi_miio
+    host: 192.168.1.137
+    name: smartmi2
+    token: !secret smartmi2
 
 notify:
   - name: mypushbullet

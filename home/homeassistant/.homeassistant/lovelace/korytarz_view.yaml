@@ -2,8 +2,6 @@ title: Korytarz
 icon: mdi:home-floor-0
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -25,6 +23,10 @@ cards:
         card:
           type: picture-entity
           entity: group.korytarz_lampy
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/korytarz_drzwi800.jpg

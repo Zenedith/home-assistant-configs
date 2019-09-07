@@ -4,9 +4,14 @@
     platform: homeassistant
     event: start
   action:
+    - service: script.tasmota_update_check
     - service: mqtt.publish
       data:
         topic: 'zigbee2mqtt/sonoff2/cmnd/POWER'
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/salon_regal/cmnd/POWER'
         payload: ""
     - service: mqtt.publish
       data:
@@ -133,29 +138,42 @@
         topic: 'shellies/command'
         payload: 'update'
 
-- alias: 'Climate on HA start up'
+- alias: 'Climate off when hot on HA start up'
   initial_state: 'on'
   trigger:
     platform: homeassistant
     event: start
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      above: 23
   action:
-#    - service: climate.set_temperature
-#      data:
-#        temperature: 5
-##        target_temp_low: 5
-#        operation_mode: 'eco'
-#        entity_id: climate.pokoj_janka, climate.sypialnia, climate.salon
-#    - service: climate.set_away_mode
-#      data:
-#        away_mode: 'on'
-#        entity_id: climate.pokoj_janka, climate.sypialnia, climate.salon
-    - service: climate.turn_off
-      data:
-        entity_id: climate.pokoj_janka, climate.sypialnia, climate.salon
+    - service: script.climate_off
     - service: automation.turn_off
+      data:
+        entity_id:
+          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartych_drzwiach_w_salonie
+          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_pokoju_janka
+          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_sypialni
+          - automation.przykrec_ogrzewanie_przy_otwartych_drzwiach_w_salonie
+          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_pokoju_janka
+          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_sypialni
+          - automation.przywroc_ogrzewanie_przy_zamknietych_drzwiach_w_salonie
+          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
+          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
+
+- alias: 'Climate on when cold on HA start up'
+  initial_state: 'on'
+  trigger:
+    platform: homeassistant
+    event: start
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
+  action:
+    - service: script.climate_on
+    - service: automation.turn_on
       data:
         entity_id:
           - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartych_drzwiach_w_salonie
@@ -172,11 +190,12 @@
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: updater.updater
+    entity_id: binary_sensor.updater
+    to: 'on'
   action:
     - service: notify.mypushbullet
       data_template:
         title: 'New Home Assistant Release'
         message: |
           {{now().strftime('%d.%m.%Y-%H:%M:%S')}}
-          Home Assistant {{ states.updater.updater.state }} is now available.
+          New Home Assistant release is now available.

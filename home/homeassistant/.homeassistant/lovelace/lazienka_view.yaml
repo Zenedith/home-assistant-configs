@@ -2,8 +2,6 @@ title: Łazienka i toaleta
 icon: mdi:toilet
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
-  - type: custom:compact-custom-header
-
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -29,6 +27,10 @@ cards:
           type: picture-entity
           entity: light.lampa_lazienka
           name: Lampa łazienka
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/lampa_lazienka800.jpg
@@ -61,6 +63,10 @@ cards:
           type: picture-entity
           entity: light.swiatlo_toaleta
           name: Lampa toaleta
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
           tap_action:
             action: toggle
           image: /local/lovelace/salon/lampa_toaleta800.jpg

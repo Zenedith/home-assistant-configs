@@ -19,12 +19,15 @@
       entity_id: binary_sensor.kuchnia_leak_water_leak
       to: 'on'
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_4
     - service: notify.mypushbullet
       data_template:
         title: "!! Zalanie kuchni !!"
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Zalanie kuchni!!!
+          Zalanie kuchni!!! Podgląd z kamery.
 
 - alias: 'Pozar w kuchni'
   initial_state: 'on'
@@ -33,12 +36,15 @@
       entity_id: binary_sensor.kuchnia_smoke_detector
       to: 'on'
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_4
     - service: notify.mypushbullet
       data_template:
         title: "!! Pożar w kuchni !!"
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Pożar kuchni!!!
+          Pożar kuchni!!! Podgląd z kamery.
 
 #- alias: 'Listwa RTV notification'
 #  initial_state: 'on'
@@ -127,9 +133,7 @@
     event: sunset
     offset: '-01:00:00'
   action:
-    - service: light.turn_on
-      data:
-        entity_id: switch.salon_regal
+    - service: script.ambient_on
 
 - alias: 'Ambient off'
   initial_state: 'on'
@@ -137,9 +141,7 @@
     platform: time
     at: '02:04:00'
   action:
-    - service: light.turn_off
-      data:
-        entity_id: switch.salon_regal
+    - service: script.ambient_off
 
 - alias: 'Zmietek start'
   initial_state: 'on'
@@ -153,19 +155,7 @@
       - wed
       - fri
   action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.zmietek
-    - delay: 00:00:40
-    - service: vacuum.start
-      data:
-        entity_id: vacuum.zmietekv2
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Zmietek start'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Zmietek start
+    - service: script.zmietek_start
 
 - alias: 'Zmietek docked'
   initial_state: 'on'
@@ -274,6 +264,8 @@
     - platform: state
       entity_id: media_player.sony_bravia_tv
       to: 'off'
+      for:
+        seconds: 45
   condition:
     - condition: state
       entity_id: switch.listwa_salon_slot_1
@@ -292,13 +284,14 @@
     for:
       seconds: 15
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.salon
-        away_mode: 'on'
+        preset_mode: 'away'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w salonie'
@@ -316,13 +309,14 @@
     - condition: state
       entity_id: binary_sensor.drzwi_balkonowe_contact
       state: 'on'
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.salon
-        away_mode: 'on'
+        preset_mode: 'away'
 
 - alias: 'Przywróć ogrzewanie przy zamkniętych drzwiach w salonie'
   initial_state: 'on'
@@ -331,13 +325,14 @@
     entity_id: binary_sensor.drzwi_balkonowe_contact
     to: 'off'
   condition:
-    - condition: template
-      value_template: "{{ states('sensor.korytarz_temp_temperature') | float < 25 | float }}"
+    - condition: numeric_state
+      entity_id: sensor.korytarz_temp_temperature
+      below: 22
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.salon
-        away_mode: 'off'
+        preset_mode: 'home'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w salonie'
