@@ -4,12 +4,6 @@
     - platform: state
       entity_id: group.mobiledevices
       to: not_home
-  condition:
-    - condition: sun
-      after: sunrise
-    - condition: sun
-      before: sunset
-      before_offset: '02:00:00'
   action:
     - service: input_boolean.turn_off
       data:

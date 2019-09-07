@@ -69,7 +69,7 @@
   host: 192.168.1.38
   count: 2
   scan_interval: 60
-##
+
 - platform: ping
   name: sharp_online
   host: 192.168.1.39
