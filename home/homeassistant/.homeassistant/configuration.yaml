@@ -210,14 +210,13 @@ history:
       - zigbee2mqtt_networkmap.map_last_update
 recorder:
   purge_interval: 1
-  purge_keep_days: 3
-  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
+  purge_keep_days: 5
+#  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
+  db_url: postgresql://@/homeassistant
   exclude:
     domains:
-      - script
       - weblink
       - updater
-      - light
     entities:
       - sun.sun # Don't record sun data
       - sensor.last_boot # Comes from 'systemmonitor' sensor platform
