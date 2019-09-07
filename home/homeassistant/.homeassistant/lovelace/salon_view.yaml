@@ -376,7 +376,7 @@ cards:
 
               - type: state-label
                 entity: sensor.purifier_filter_life_remaining
-                style: {color: white, left: 12%, top: 91%}
+                style: {color: white, left: 13%, top: 91%}
 
               - type: icon
                 icon: mdi:blender
@@ -457,16 +457,16 @@ cards:
               - type: icon
                 icon: mdi:clock-outline
                 entity: sensor.humidifier_depth
-                style: {color: white, left: 5%, top: 91%}
+                style: {color: white, left: 5%, top: 92%}
 
               - type: state-label
                 entity: sensor.humidifier_depth
-                style: {color: white, left: 12%, top: 91%}
+                style: {color: white, left: 13%, top: 92%}
 
               - type: icon
                 icon: mdi:blender
                 entity: sensor.humidifier_motor_speed
-                style: {color: white, left: 23%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+                style: {color: white, left: 23%, top: 92%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: state-label
                 entity: sensor.humidifier_motor_speed
@@ -484,7 +484,7 @@ cards:
               - type: icon
                 icon: mdi:filter
                 entity: sensor.humidifier_target_humidity
-                style: {color: white, left: 70%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
+                style: {color: white, left: 70%, top: 92%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: state-label
                 entity: sensor.humidifier_target_humidity
