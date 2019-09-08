@@ -21,9 +21,7 @@
     platform: time
     at: '00:05:00'
   action:
-    - service: switch.turn_off
-      data:
-        entity_id: switch.rtv_jan
+    - service: script.jan_listwa_rtv_off
 
 - alias: 'Bedside offline notify'
   initial_state: 'on'

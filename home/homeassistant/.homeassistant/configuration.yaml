@@ -158,10 +158,7 @@ history:
       - sensor.lazienka_leak_battery
       - sensor.custom_component_tracker
       - sensor.custom_python_script_tracker
-      - sensor.humidifier_motor_speed
-      - sensor.motor_speed
       - sensor.purifier_filter_type
-      - sensor.purifier_filter_life_remaining
       - sensor.vacuum_fan
       - sensor.vacuum_cleaned_area
       - sensor.vacuum_battery
@@ -213,7 +210,6 @@ history:
 recorder:
   purge_interval: 1
   purge_keep_days: 5
-#  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
   db_url: postgresql://@/homeassistant
   exclude:
     domains:
