@@ -66,6 +66,9 @@
     - condition: state
       entity_id: input_boolean.listwa_sypialnia
       state: 'off'
+    - condition: state
+      entity_id: group.mobiledevices
+      state: home
   action:
     - service: input_boolean.turn_on
       data:

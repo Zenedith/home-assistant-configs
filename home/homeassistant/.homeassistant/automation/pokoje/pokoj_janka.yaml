@@ -54,6 +54,9 @@
     - condition: state
       entity_id: binary_sensor.bedside_online
       state: 'on'
+    - condition: state
+      entity_id: group.mobiledevices
+      state: home
   action:
     - service: light.turn_on
       data:
