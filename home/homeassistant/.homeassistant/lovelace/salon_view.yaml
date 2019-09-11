@@ -338,6 +338,27 @@ cards:
                   opacity: 0.8
 
               - type: state-label
+                entity: vacuum.zmietekv2
+                tap_action:
+                  action: call-service
+                  entity: switch.zmietek
+                  service: switch.toggle
+                style:
+                  top: 25%
+                  left: 5%
+                  color: rgb(255, 255, 255)
+                  transform: translate(0%,-50%)
+                  pointer-events: none
+                  text-shadow: 1px 1px black
+                  font-family: Trebuchet MS
+                  font-size: 90%
+                  font-weight: bold
+                  border-left-style: solid
+                  border-color: rgb(34, 154, 210)
+                  background-color: rgb(54, 65, 78)
+                  opacity: 0.8
+
+              - type: state-label
                 entity: sensor.vacuum_battery
                 style:
                   top: 10%

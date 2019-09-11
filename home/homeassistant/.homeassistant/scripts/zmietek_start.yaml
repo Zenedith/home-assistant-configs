@@ -11,4 +11,4 @@ sequence:
       title: 'Zmietek start'
       message: |
         {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-        Zmietek start
+        Zmietek start z poziomem baterii {{ state_attr('vacuum.zmietekv2', 'battery_level') }} %.
