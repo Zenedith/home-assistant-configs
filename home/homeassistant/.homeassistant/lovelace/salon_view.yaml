@@ -423,6 +423,23 @@ cards:
                   opacity: 0.8
 
               - type: state-label
+                entity: fan.purifier
+                style:
+                  top: 25%
+                  left: 5%
+                  color: rgb(255, 255, 255)
+                  transform: translate(0%,-50%)
+                  pointer-events: none
+                  text-shadow: 1px 1px black
+                  font-family: Trebuchet MS
+                  font-size: 90%
+                  font-weight: bold
+                  border-left-style: solid
+                  border-color: rgb(34, 154, 210)
+                  background-color: rgb(54, 65, 78)
+                  opacity: 0.8
+
+              - type: state-label
                 entity: sensor.purifier_filter_type
                 style:
                   top: 10%
@@ -494,6 +511,23 @@ cards:
                 entity: sensor.humidifier_mode
                 style:
                   top: 10%
+                  left: 5%
+                  color: rgb(255, 255, 255)
+                  transform: translate(0%,-50%)
+                  pointer-events: none
+                  text-shadow: 1px 1px black
+                  font-family: Trebuchet MS
+                  font-size: 90%
+                  font-weight: bold
+                  border-left-style: solid
+                  border-color: rgb(34, 154, 210)
+                  background-color: rgb(54, 65, 78)
+                  opacity: 0.8
+
+              - type: state-label
+                entity: fan.smartmi2
+                style:
+                  top: 30%
                   left: 5%
                   color: rgb(255, 255, 255)
                   transform: translate(0%,-50%)

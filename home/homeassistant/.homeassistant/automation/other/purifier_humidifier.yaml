@@ -1,21 +1,88 @@
-- alias: 'Sleep mode for air purifier and humidifier'
+- alias: 'Sleep mode for air purifier'
   initial_state: 'on'
   trigger:
     platform: time
     at: '21:00:00'
+  condition:
+    - condition: state
+      entity_id: fan.purifier
+      state: 'on'
   action:
     - service: fan.set_speed
       data:
-        entity_id: fan.purifier, fan.smartmi2
+        entity_id: fan.purifier
         speed: 'Silent'
 
-- alias: 'Auto mode for air purifier and humidifier'
+- alias: 'Sleep mode for humidifier'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '21:00:00'
+  condition:
+    - condition: state
+      entity_id: fan.smartmi2
+      state: 'on'
+  action:
+    - service: fan.set_speed
+      data:
+        entity_id: fan.smartmi2
+        speed: 'Silent'
+
+- alias: 'Auto mode for air purifier'
   initial_state: 'on'
   trigger:
     platform: time
     at: '07:00:00'
+  condition:
+    - condition: state
+      entity_id: fan.purifier
+      state: 'on'
   action:
     - service: fan.set_speed
       data:
-        entity_id: fan.purifier, fan.smartmi2
+        entity_id: fan.purifier
         speed: 'Auto'
+
+- alias: 'Auto mode for humidifier'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '07:00:00'
+  condition:
+    - condition: state
+      entity_id: fan.smartmi2
+      state: 'on'
+  action:
+    - service: fan.set_speed
+      data:
+        entity_id: fan.smartmi2
+        speed: 'Auto'
+
+- alias: 'Power off humidifier when humidity above 50%'
+  initial_state: 'on'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.korytarz_temp_humidity
+      above: 50
+    - platform: numeric_state
+      entity_id: sensor.humidifier_depth
+      below: 10
+  action:
+    - service: fan.turn_off
+      data:
+        entity_id: fan.smartmi2
+
+- alias: 'Power on humidifier when humidity below 35%'
+  initial_state: 'on'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.korytarz_temp_humidity
+    below: 35
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.humidifier_depth
+      above: 15
+  action:
+    - service: fan.turn_off
+      data:
+        entity_id: fan.smartmi2
