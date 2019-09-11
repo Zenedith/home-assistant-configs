@@ -338,13 +338,14 @@ cards:
                   opacity: 0.8
 
               - type: state-label
-                entity: vacuum.zmietekv2
+                entity: switch.zmietek
                 tap_action:
                   action: call-service
-                  entity: switch.zmietek
+                  service_data:
+                    entity: switch.zmietek
                   service: switch.toggle
                 style:
-                  top: 25%
+                  top: 29%
                   left: 5%
                   color: rgb(255, 255, 255)
                   transform: translate(0%,-50%)
@@ -447,10 +448,11 @@ cards:
                 entity: fan.purifier
                 tap_action:
                   action: call-service
-                  entity: fan.purifier
+                  service_data:
+                    entity: fan.purifier
                   service: fan.toggle
                 style:
-                  top: 30%
+                  top: 29%
                   left: 5%
                   color: rgb(255, 255, 255)
                   transform: translate(0%,-50%)
@@ -553,7 +555,8 @@ cards:
                 entity: fan.smartmi2
                 tap_action:
                   action: call-service
-                  entity: fan.smartmi2
+                  service_data:
+                    entity: fan.smartmi2
                   service: fan.toggle
                 style:
                   top: 24%
