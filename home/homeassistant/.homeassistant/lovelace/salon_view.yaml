@@ -424,8 +424,12 @@ cards:
 
               - type: state-label
                 entity: fan.purifier
+                tap_action:
+                  action: call-service
+                  entity: fan.purifier
+                  service: fan.toggle
                 style:
-                  top: 25%
+                  top: 30%
                   left: 5%
                   color: rgb(255, 255, 255)
                   transform: translate(0%,-50%)
@@ -526,8 +530,12 @@ cards:
 
               - type: state-label
                 entity: fan.smartmi2
+                tap_action:
+                  action: call-service
+                  entity: fan.smartmi2
+                  service: fan.toggle
                 style:
-                  top: 30%
+                  top: 24%
                   left: 5%
                   color: rgb(255, 255, 255)
                   transform: translate(0%,-50%)
