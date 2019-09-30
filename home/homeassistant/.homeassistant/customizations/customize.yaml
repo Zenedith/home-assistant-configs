@@ -155,3 +155,11 @@ sensor.spathiphyllum_conductivity:
   friendly_name: cond
 sensor.spathiphyllum_moisture:
   friendly_name: moisture
+sensor.dracaena_marginata_light_intensity:
+  friendly_name: lx
+sensor.dracaena_marginata_temperature:
+  friendly_name: C
+sensor.dracaena_marginata_conductivity:
+  friendly_name: cond
+sensor.dracaena_marginata_moisture:
+  friendly_name: moisture
