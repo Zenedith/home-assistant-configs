@@ -196,6 +196,65 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:flower-card
+#          species: "sansevieria trifasciata"
+#          entity: plant.sansevieria_trifasciata
+          species: "spathiphyllum kochii"
+          entity: plant.spathiphyllum2
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-elements
+          image: /local/lovelace/plants.jpg
+          title: spathiphyllum2
+          elements:
+            - type: state-badge
+              entity: sensor.spathiphyllum2_light_intensity
+              title: null
+              style:
+                top: 35%
+                left: 10%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.spathiphyllum2_temperature
+              title: null
+              style:
+                top: 35%
+                left: 25%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.spathiphyllum2_conductivity
+              title: null
+              style:
+                top: 35%
+                left: 40%
+                --ha-label-badge-font-size: 1em
+            - type: state-badge
+              entity: sensor.spathiphyllum2_moisture
+              title: null
+              style:
+                top: 35%
+                left: 92%
+                --ha-label-badge-font-size: 1em
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: custom:flower-card
           species: "dracaena marginata"
           entity: plant.dracaena_marginata
         style:

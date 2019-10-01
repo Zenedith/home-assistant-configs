@@ -190,6 +190,14 @@ cards:
               red: 15
           - type: gauge
             unit: '%'
+            entity: sensor.spathiphyllum2_battery
+            name: Sansevieria trifasciata 2
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
             entity: sensor.okno_janek_contact_battery
             name: Pokój janka okno
             severity:

@@ -102,3 +102,18 @@ spathiphyllum:
   max_conductivity: 2000
   min_temperature: 15
   max_temperature: 32
+
+spathiphyllum2:
+  sensors:
+    moisture: sensor.spathiphyllum2_moisture
+    battery: sensor.spathiphyllum2_battery
+    temperature: sensor.spathiphyllum2_temperature
+    conductivity: sensor.spathiphyllum2_conductivity
+    brightness: sensor.spathiphyllum2_light_intensity
+  min_moisture: 15
+  max_moisture: 65
+  min_battery: 20
+  min_conductivity: 350
+  max_conductivity: 2000
+  min_temperature: 15
+  max_temperature: 32
