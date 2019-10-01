@@ -145,7 +145,7 @@
     event: start
   condition:
     - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
+      entity_id: sensor.dark_sky_temperature
       above: 23
   action:
     - service: script.climate_off
@@ -169,7 +169,7 @@
     event: start
   condition:
     - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
+      entity_id: sensor.dark_sky_temperature
       below: 22
   action:
     - service: script.climate_on

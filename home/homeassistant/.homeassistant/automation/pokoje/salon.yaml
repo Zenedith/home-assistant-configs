@@ -289,7 +289,7 @@
       seconds: 15
   condition:
     - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
+      entity_id: sensor.dark_sky_temperature
       below: 22
   action:
     - service: climate.set_preset_mode
@@ -314,7 +314,7 @@
       entity_id: binary_sensor.drzwi_balkonowe_contact
       state: 'on'
     - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
+      entity_id: sensor.dark_sky_temperature
       below: 22
   action:
     - service: climate.set_preset_mode
@@ -330,7 +330,7 @@
     to: 'off'
   condition:
     - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
+      entity_id: sensor.dark_sky_temperature
       below: 22
   action:
     - service: climate.set_preset_mode
