@@ -1,6 +1,6 @@
 sequence:
   - condition: numeric_state
-    entity_id: sensor.dark_sky_temperature
+    entity_id: sensor.korytarz_temp_temperature
     below: 22
   - service: climate.set_preset_mode
     data:
