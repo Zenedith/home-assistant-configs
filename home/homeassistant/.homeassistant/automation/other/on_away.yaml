@@ -21,7 +21,7 @@
           Wszyscy poza domem - wylacz wszystko.
 
 - alias: 'Rolety close when gone'
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: input_select.presence_status
@@ -45,7 +45,7 @@
           Rolety close when gone.
 
 - alias: 'Zmietek start when gone 15 min delay'
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: input_select.presence_status
@@ -58,6 +58,5 @@
     - condition: sun
       before: sunset
       before_offset: '-02:00:00'
-
   action:
     - service: script.zmietek_start
