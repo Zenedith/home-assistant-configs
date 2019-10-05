@@ -6,15 +6,20 @@ cards:
     cards:
       - type: custom:card-modder
         card:
-          type: picture-entity
-          entity: light.lampa_salon
-          show_name: false
-          show_state: true
-          hold_action:
-            action: more-info
-          tap_action:
-            action: toggle
-          image: /local/lovelace/salon/salon800.jpg
+          type: conditional
+          conditions:
+            - entity: binary_sensor.lampa_salon_switch_online
+              state: 'on'
+          card:
+            type: picture-entity
+            entity: light.lampa_salon
+            show_name: false
+            show_state: true
+            hold_action:
+              action: more-info
+            tap_action:
+              action: toggle
+            image: /local/lovelace/salon/salon800.jpg
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
@@ -80,19 +85,24 @@ cards:
     cards:
       - type: custom:card-modder
         card:
-          type: entities
-          show_header_toggle: false
-          entities:
-            - entity: switch.listwa_salon_slot_usb
-              name: USB
-#            - entity: switch.listwa_salon_slot_1
-#              name: Denon
-            - entity: switch.listwa_salon_slot_2
-              name: Xbox One S
-            - entity: switch.listwa_salon_slot_3
-              name: Playstation 4
-#            - entity: switch.listwa_salon_slot_4
-#              name: Kamera
+          type: conditional
+          conditions:
+            - entity: binary_sensor.listwa_salon_online
+              state: 'on'
+          card:
+            type: entities
+            show_header_toggle: false
+            entities:
+              - entity: switch.listwa_salon_slot_usb
+                name: USB
+  #            - entity: switch.listwa_salon_slot_1
+  #              name: Denon
+              - entity: switch.listwa_salon_slot_2
+                name: Xbox One S
+              - entity: switch.listwa_salon_slot_3
+                name: Playstation 4
+  #            - entity: switch.listwa_salon_slot_4
+  #              name: Kamera
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -386,11 +396,16 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: entities
-          show_header_toggle: false
-          title: Rolety
-          entities:
-            - entity: cover.kuchnia
+          type: conditional
+          conditions:
+            - entity: binary_sensor.roleta_kuchnia_online
+              state: 'on'
+          card:
+            type: entities
+            show_header_toggle: false
+            title: Rolety
+            entities:
+              - entity: cover.kuchnia
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

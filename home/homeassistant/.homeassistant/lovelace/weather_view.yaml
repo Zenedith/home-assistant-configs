@@ -37,57 +37,6 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: 'custom:dark-sky-weather-card'
-          entity_current_conditions: sensor.dark_sky_icon
-          entity_temperature: sensor.dark_sky_temperature
-          entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1d
-          entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2d
-          entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3d
-          entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4d
-          entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5d
-          entity_forecast_icon_1: sensor.dark_sky_icon_1d
-          entity_forecast_icon_2: sensor.dark_sky_icon_2d
-          entity_forecast_icon_3: sensor.dark_sky_icon_3d
-          entity_forecast_icon_4: sensor.dark_sky_icon_4d
-          entity_forecast_icon_5: sensor.dark_sky_icon_5d
-          entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_0d
-          entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1d
-          entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2d
-          entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3d
-          entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4d
-          entity_summary_1: sensor.dark_sky_summary_1d
-          entity_summary_2: sensor.dark_sky_summary_2d
-          entity_summary_3: sensor.dark_sky_summary_3d
-          entity_summary_4: sensor.dark_sky_summary_4d
-          entity_summary_5: sensor.dark_sky_summary_5d
-          entity_sun: sun.sun
-          entity_visibility: sensor.dark_sky_visibility
-          entity_daytime_high: sensor.dark_sky_daytime_high_temperature_0d
-          entity_wind_bearing: sensor.dark_sky_wind_bearing
-          entity_wind_speed: sensor.dark_sky_wind_speed
-          entity_humidity: sensor.dark_sky_humidity
-          entity_pressure: sensor.dark_sky_pressure
-          entity_apparent_temp: sensor.dark_sky_apparent_temperature
-          entity_daily_summary: sensor.dark_sky_daily_summary
-          entity_pop: sensor.dark_sky_precip_probability
-          entity_pop_intensity: sensor.dark_sky_precip_intensity
-          entity_pop_1: sensor.dark_sky_precip_probability_1d
-          entity_pop_2: sensor.dark_sky_precip_probability_2d
-          entity_pop_3: sensor.dark_sky_precip_probability_3d
-          entity_pop_4: sensor.dark_sky_precip_probability_4d
-          entity_pop_5: sensor.dark_sky_precip_probability_5d
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 400px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          color: "#999999"
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-
-      - type: custom:card-modder
-        card:
           type: custom:flower-card
           species: "zamioculcas zamiifolia"
           entity: plant.zamioculcas_zamiifolia
@@ -353,19 +302,6 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: weather-forecast
-          entity: weather.dark_sky
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-
-      - type: custom:card-modder
-        card:
           type: conditional
           conditions:
             - entity: binary_sensor.smartmi2_online
@@ -475,24 +411,60 @@ cards:
     cards:
       - type: custom:card-modder
         card:
-          type: custom:mini-graph-card
-          name: Ciśnienie
-          entities:
-            - sensor.kuchnia_temp_pressure
-          height: 65
-          line_width: 2
-          font_size: 70
-          hours_to_show: 24
-          more_info: true
-          points_per_hour: 1
-          hour24: true
-          line_color: '#e74c3c'
-          show:
-            extrema: true
-            fill: fade
-            labels: false
-            legend: false
-            points: false
+          type: 'custom:dark-sky-weather-card'
+          entity_current_conditions: sensor.dark_sky_icon
+          entity_temperature: sensor.dark_sky_temperature
+          entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1d
+          entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2d
+          entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3d
+          entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4d
+          entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5d
+          entity_forecast_icon_1: sensor.dark_sky_icon_1d
+          entity_forecast_icon_2: sensor.dark_sky_icon_2d
+          entity_forecast_icon_3: sensor.dark_sky_icon_3d
+          entity_forecast_icon_4: sensor.dark_sky_icon_4d
+          entity_forecast_icon_5: sensor.dark_sky_icon_5d
+          entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_0d
+          entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1d
+          entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2d
+          entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3d
+          entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4d
+          entity_summary_1: sensor.dark_sky_summary_1d
+          entity_summary_2: sensor.dark_sky_summary_2d
+          entity_summary_3: sensor.dark_sky_summary_3d
+          entity_summary_4: sensor.dark_sky_summary_4d
+          entity_summary_5: sensor.dark_sky_summary_5d
+          entity_sun: sun.sun
+          entity_visibility: sensor.dark_sky_visibility
+          entity_daytime_high: sensor.dark_sky_daytime_high_temperature_0d
+          entity_wind_bearing: sensor.dark_sky_wind_bearing
+          entity_wind_speed: sensor.dark_sky_wind_speed
+          entity_humidity: sensor.dark_sky_humidity
+          entity_pressure: sensor.dark_sky_pressure
+          entity_apparent_temp: sensor.dark_sky_apparent_temperature
+          entity_daily_summary: sensor.dark_sky_daily_summary
+          entity_pop: sensor.dark_sky_precip_probability
+          entity_pop_intensity: sensor.dark_sky_precip_intensity
+          entity_pop_1: sensor.dark_sky_precip_probability_1d
+          entity_pop_2: sensor.dark_sky_precip_probability_2d
+          entity_pop_3: sensor.dark_sky_precip_probability_3d
+          entity_pop_4: sensor.dark_sky_precip_probability_4d
+          entity_pop_5: sensor.dark_sky_precip_probability_5d
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 400px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          color: "#999999"
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: iframe
+          url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
+          aspect_ratio: 140%
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -501,11 +473,11 @@ cards:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
+
       - type: custom:card-modder
         card:
-          type: iframe
-          url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
-          aspect_ratio: 140%
+          type: weather-forecast
+          entity: weather.dark_sky
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
