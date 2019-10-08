@@ -1,7 +1,4 @@
 sequence:
-  - condition: state
-    entity_id: input_boolean.ogrzewanie
-    state: 'on'
   - service: climate.set_preset_mode
     data:
       entity_id: climate.sypialnia
