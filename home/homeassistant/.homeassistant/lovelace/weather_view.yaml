@@ -10,7 +10,6 @@ cards:
           type: custom:mini-graph-card
           name: Temperatura
           entities:
-            - input_boolean.ogrzewanie
             - sensor.korytarz_temp_temperature
             - sensor.kuchnia_temp_temperature
             - sensor.purifier_temperature

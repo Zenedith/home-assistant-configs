@@ -114,6 +114,7 @@ cards:
           title: Automation
           show_header_toggle: false
           entities:
+            - input_boolean.ogrzewanie
             - automation.power_state_on_ha_start_up
             - automation.everything_off_when_gone
             - automation.rolety_close_when_gone
