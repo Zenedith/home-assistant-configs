@@ -250,10 +250,10 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_hvac_mode
       data:
         entity_id: climate.sypialnia
-        preset_mode: 'none'
+        hvac_mode: 'auto'
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w sypialni'

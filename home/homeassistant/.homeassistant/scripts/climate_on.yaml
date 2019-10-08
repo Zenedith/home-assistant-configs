@@ -1,13 +1,13 @@
 sequence:
-  - service: climate.set_preset_mode
+  - service: climate.set_hvac_mode
     data:
       entity_id: climate.sypialnia
-      preset_mode: 'none'
-  - service: climate.set_preset_mode
+      hvac_mode: 'auto'
+  - service: climate.set_hvac_mode
     data:
       entity_id: climate.pokoj_janka
-      preset_mode: 'none'
-  - service: climate.set_preset_mode
+      hvac_mode: 'none'
+  - service: climate.set_hvac_mode
     data:
       entity_id: climate.salon
-      preset_mode: 'none'
+      hvac_mode: 'none'
