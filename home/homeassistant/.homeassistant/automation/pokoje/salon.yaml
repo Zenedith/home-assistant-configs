@@ -288,9 +288,9 @@
     for:
       seconds: 15
   condition:
-    - condition: numeric_state
-      entity_id: sensor.dark_sky_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
     - service: climate.set_preset_mode
       data:
@@ -313,9 +313,9 @@
     - condition: state
       entity_id: binary_sensor.drzwi_balkonowe_contact
       state: 'on'
-    - condition: numeric_state
-      entity_id: sensor.dark_sky_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
     - service: climate.set_preset_mode
       data:
@@ -329,9 +329,9 @@
     entity_id: binary_sensor.drzwi_balkonowe_contact
     to: 'off'
   condition:
-    - condition: numeric_state
-      entity_id: sensor.dark_sky_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
     - service: climate.set_preset_mode
       data:

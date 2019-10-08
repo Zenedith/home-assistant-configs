@@ -144,9 +144,9 @@
     platform: homeassistant
     event: start
   condition:
-    - condition: numeric_state
-      entity_id: sensor.dark_sky_temperature
-      above: 23
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'off'
   action:
     - service: script.climate_off
     - service: automation.turn_off
@@ -168,9 +168,9 @@
     platform: homeassistant
     event: start
   condition:
-    - condition: numeric_state
-      entity_id: sensor.dark_sky_temperature
-      below: 23
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
     - service: script.climate_on
     - service: automation.turn_on
