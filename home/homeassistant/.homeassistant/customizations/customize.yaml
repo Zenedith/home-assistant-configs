@@ -101,6 +101,8 @@ binary_sensor.drzwi_toaleta_contact:
   friendly_name: Drzwi
 sensor.drzwi_toaleta_contact_battery:
   friendly_name: Drzwi toaleta bateria
+sensor.okno_kuchnia_contact_battery:
+  friendly_name: Okno kuchnia bateria
 sensor.vacuum_cleaning_time:
   icon: mdi:clock-outline
 sensor.vacuum_main_brush:

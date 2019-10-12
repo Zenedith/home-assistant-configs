@@ -283,7 +283,7 @@
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.drzwi_balkonowe_contact
+    entity_id: binary_sensor.drzwi_balkonowe_contact, binary_sensor.okno_kuchnia_contact_battery
     to: 'on'
     for:
       seconds: 15
@@ -310,9 +310,14 @@
     entity_id: climate.salon
     to: 'heat'
   condition:
-    - condition: state
-      entity_id: binary_sensor.drzwi_balkonowe_contact
-      state: 'on'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: binary_sensor.drzwi_balkonowe_contact
+          state: 'on'
+        - condition: state
+          entity_id: binary_sensor.okno_kuchnia_contact_battery
+          state: 'on'
     - condition: state
       entity_id: input_boolean.ogrzewanie
       state: 'on'
@@ -326,7 +331,7 @@
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.drzwi_balkonowe_contact
+    entity_id: binary_sensor.drzwi_balkonowe_contact, binary_sensor.okno_kuchnia_contact_battery
     to: 'off'
   condition:
     - condition: state

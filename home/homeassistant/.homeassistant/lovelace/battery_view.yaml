@@ -132,6 +132,14 @@ cards:
               red: 15
           - type: gauge
             unit: '%'
+            entity: sensor.okno_kuchnia_contact_battery
+            name: Okno kuchnia
+            severity:
+              green: 90
+              yellow: 45
+              red: 15
+          - type: gauge
+            unit: '%'
             entity: sensor.kuchnia_leak_battery
             name: Zalanie zmywarka
             severity:
