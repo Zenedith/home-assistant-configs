@@ -81,3 +81,6 @@ devices:
   '0x00124b0014aa7950':
     friendly_name: '0x00124b0014aa7950'
     retain: false
+  '0x00158d00032169f8':
+    friendly_name: '0x00158d00032169f8'
+    retain: false
