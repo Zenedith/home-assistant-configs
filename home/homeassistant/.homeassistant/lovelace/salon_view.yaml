@@ -2,6 +2,20 @@ title: Salon i kuchnia
 icon: mdi:theater
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 cards:
+  - type: custom:card-modder
+    card:
+      type: entities
+      show_header_toggle: false
+      entities:
+        - entity: input_boolean.moonlight_kuchnia
+    style:
+      background-image: url("/local/lovelace/cardbackK.png")
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 200px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -83,12 +97,12 @@ cards:
 
   - type: vertical-stack
     cards:
-      - type: custom:card-modder
+      - type: conditional
+        conditions:
+          - entity: binary_sensor.listwa_salon_online
+            state: 'on'
         card:
-          type: conditional
-          conditions:
-            - entity: binary_sensor.listwa_salon_online
-              state: 'on'
+          type: custom:card-modder
           card:
             type: entities
             show_header_toggle: false
@@ -103,14 +117,14 @@ cards:
                 name: Playstation 4
   #            - entity: switch.listwa_salon_slot_4
   #              name: Kamera
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          style:
+            background-image: url("/local/lovelace/cardbackK.png")
+            background-repeat: no-repeat
+            background-color: rgba(50,50,50,0.3)
+            background-size: 100% 200px
+            border-radius: 20px
+            border: solid 1px rgba(100,100,100,0.3)
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: custom:card-modder
         card:
