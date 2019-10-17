@@ -335,7 +335,7 @@ cards:
               #
               - type: state-label
                 entity: sensor.korytarz_temp_humidity
-                style: {color: white, left: 49%, top: 53%, font-size: 120px}
+                style: {color: white, left: 49%, top: 53%, font-size: 100px}
 
               - type: icon
                 icon: mdi:filter
