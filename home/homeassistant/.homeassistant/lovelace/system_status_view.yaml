@@ -209,10 +209,12 @@ cards:
           title: Zigbee
           show_header_toggle: false
           entities:
-            - input_boolean.zigbee_permit_join
-            - sensor.bridge_state
-            - timer.zigbee_permit_join
-            - input_select.zigbee2mqtt_log_level
+            - entity: input_boolean.zigbee_permit_join
+            - entity: sensor.bridge_state
+            - entity: sensor.zigbee2mqtt_version
+            - entity: sensor.coordinator_version
+            - entity: timer.zigbee_permit_join
+            - entity: input_select.zigbee2mqtt_log_level
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
