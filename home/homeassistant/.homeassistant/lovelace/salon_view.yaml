@@ -353,11 +353,6 @@ cards:
 
               - type: state-label
                 entity: fan.purifier
-                tap_action:
-                  action: call-service
-                  service_data:
-                    entity: fan.purifier
-                  service: fan.toggle
                 style:
                   top: 29%
                   left: 5%

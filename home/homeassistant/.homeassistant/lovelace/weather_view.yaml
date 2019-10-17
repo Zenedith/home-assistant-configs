@@ -334,7 +334,7 @@ cards:
               #                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
               #
               - type: state-label
-                entity: sensor.humidifier_humidity
+                entity: sensor.korytarz_temp_humidity
                 style: {color: white, left: 49%, top: 53%, font-size: 120px}
 
               - type: icon
@@ -365,11 +365,6 @@ cards:
 
               - type: state-label
                 entity: fan.smartmi2
-                tap_action:
-                  action: call-service
-                  service_data:
-                    entity: fan.smartmi2
-                  service: fan.toggle
                 style:
                   top: 24%
                   left: 5%
