@@ -199,10 +199,13 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_hvac_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.pokoj_janka
-        hvac_mode: 'auto'
+        temperature: 23
+        target_temp_high: 24
+        target_temp_low: 20
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w pokóju Janka'
