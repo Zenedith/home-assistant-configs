@@ -64,6 +64,10 @@
     - platform: numeric_state
       entity_id: sensor.humidifier_depth
       below: 10
+  condition:
+    - condition: state
+      entity_id: fan.smartmi2
+      state: 'on'
   action:
     - service: fan.turn_off
       data:
@@ -81,6 +85,10 @@
     - platform: numeric_state
       entity_id: sensor.korytarz_temp_humidity
       above: 50
+  condition:
+    - condition: state
+      entity_id: fan.smartmi2
+      state: 'on'
   action:
     - service: fan.turn_off
       data:
@@ -99,6 +107,9 @@
     entity_id: sensor.korytarz_temp_humidity
     below: 35
   condition:
+    - condition: state
+      entity_id: fan.smartmi2
+      state: 'off'
     - condition: numeric_state
       entity_id: sensor.humidifier_depth
       above: 15
