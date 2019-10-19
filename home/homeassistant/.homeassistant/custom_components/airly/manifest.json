@@ -1,0 +1,9 @@
+{
+  "domain": "airly",
+  "name": "airly",
+  "documentation": "https://www.home-assistant.io/integrations/swisscom",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": []
+}
+
