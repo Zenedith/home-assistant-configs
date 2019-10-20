@@ -1,1 +1,1 @@
-"""The airly component."""
+"""The Airly.eu component."""

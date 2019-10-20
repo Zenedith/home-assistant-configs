@@ -1,6 +1,6 @@
 
 # Introduction  
-This is a sensor suite for Home Assistant, which provides useful data related to Air Quality. It utilizes [Airly.eu](http://www.airly.eu) as the data provider.  
+This is a sensor suite for [Home Assistant](https://www.home-assistant.io/), which provides useful data related to air quality. It utilizes [Airly.eu](http://www.airly.eu) as the data provider.  
   
 # Available sensors:  
 | Sensor | Description |

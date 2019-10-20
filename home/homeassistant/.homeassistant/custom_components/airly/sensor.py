@@ -58,7 +58,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 
     _LOGGER.debug("Using latitude and longitude: %s, %s", latitude, longitude)
     location_id = ",".join((str(latitude), str(longitude)))
-    data = AirVisualData(
+    data = AirlyData(
         session=websession,
         api_key=config[CONF_API_KEY],
         latitude=latitude,
@@ -78,16 +78,16 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
             unit = VOLUME_MICROGRAMS_PER_CUBIC_METER
 
         sensors.append(
-            AirVisualSensor(data, sensor_type, sensor_type, "mdi:chart-line", unit, sensor_type, location_id)
+            AirlySensor(data, sensor_type, sensor_type, "mdi:chart-line", unit, sensor_type, location_id)
         )
 
     async_add_entities(sensors, True)
 
 
-class AirVisualSensor(Entity):
+class AirlySensor(Entity):
     """Define an AirVisual sensor."""
 
-    def __init__(self, airvisual, kind, name, icon, unit, sensor_type, location_id):
+    def __init__(self, airly, kind, name, icon, unit, sensor_type, location_id):
         """Initialize."""
         self._attrs = {ATTR_ATTRIBUTION: DEFAULT_ATTRIBUTION}
         self._icon = icon
@@ -97,24 +97,24 @@ class AirVisualSensor(Entity):
         self._state = None
         self._type = kind
         self._unit = unit
-        self.airvisual = airvisual
+        self.airly = airly
 
     @property
     def device_state_attributes(self):
         """Return the device state attributes."""
-        if self.airvisual.show_on_map:
-            self._attrs[ATTR_LATITUDE] = self.airvisual.latitude
-            self._attrs[ATTR_LONGITUDE] = self.airvisual.longitude
+        if self.airly.show_on_map:
+            self._attrs[ATTR_LATITUDE] = self.airly.latitude
+            self._attrs[ATTR_LONGITUDE] = self.airly.longitude
         else:
-            self._attrs["lati"] = self.airvisual.latitude
-            self._attrs["long"] = self.airvisual.longitude
+            self._attrs["lati"] = self.airly.latitude
+            self._attrs["long"] = self.airly.longitude
 
         return self._attrs
 
     @property
     def available(self):
         """Return True if entity is available."""
-        return bool(self.airvisual.pollution_info)
+        return bool(self.airly.pollution_info)
 
     @property
     def icon(self):
@@ -143,8 +143,8 @@ class AirVisualSensor(Entity):
 
     async def async_update(self):
         """Update the sensor."""
-        await self.airvisual.async_update()
-        data = self.airvisual.pollution_info
+        await self.airly.async_update()
+        data = self.airly.pollution_info
 
         if not data:
             return
@@ -159,7 +159,7 @@ class AirVisualSensor(Entity):
             self._state = data["values"][2]["value"]
 
 
-class AirVisualData:
+class AirlyData:
     """Define an object to hold sensor data."""
 
     def __init__(self, session, api_key, **kwargs):
@@ -174,7 +174,7 @@ class AirVisualData:
         self.async_update = Throttle(kwargs[CONF_SCAN_INTERVAL])(self._async_update)
 
     async def _async_update(self):
-        """Update AirVisual data."""
+        """Update Airly data."""
 
         try:
             url = "https://airapi.airly.eu/v2/measurements/point"

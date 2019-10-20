@@ -1,7 +1,7 @@
 {
   "domain": "airly",
   "name": "airly",
-  "documentation": "https://www.home-assistant.io/integrations/swisscom",
+  "documentation": "https://github.com/pawelkw/hass_airly/blob/master/README.md",
   "requirements": [],
   "dependencies": [],
   "codeowners": []
