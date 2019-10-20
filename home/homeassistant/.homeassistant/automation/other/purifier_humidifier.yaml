@@ -124,12 +124,12 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Humidifier on humidity < 35 %
 
-- alias: 'Power off purifier when aqi below 5'
+- alias: 'Power off purifier when aqi below 10'
   initial_state: 'on'
   trigger:
     - platform: numeric_state
       entity_id: sensor.purifier_aqi
-      below: 5
+      below: 10
   condition:
     - condition: state
       entity_id: fan.purifier
@@ -140,10 +140,10 @@
         entity_id: fan.purifier
     - service: notify.mypushbullet
       data_template:
-        title: 'Purifier off aqi < 5'
+        title: 'Purifier off aqi < 10'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier off aqi < 5
+          Purifier off aqi < 10
 
 - alias: 'Power on purifier when aqi above 15'
   initial_state: 'on'
