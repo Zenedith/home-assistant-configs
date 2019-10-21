@@ -122,6 +122,7 @@ cards:
             - automation.roleta_w_kuchni_60_o_17
             - automation.rolety_pokoje_open_at_10
             - automation.zmietek_start_when_gone_15_min_delay
+            - automation.zmietek_start
             - automation.bedside_jan_on
             - automation.ambient_on
             - automation.listwa_sypialnia_on
@@ -147,7 +148,6 @@ cards:
             - script.climate_on
             - script.rolety_close
             - script.rolety_open
-            - script.zmietek_start
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
