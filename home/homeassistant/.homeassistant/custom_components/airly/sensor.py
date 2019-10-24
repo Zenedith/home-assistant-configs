@@ -31,7 +31,7 @@ DEFAULT_SCAN_INTERVAL = timedelta(minutes=5)
 
 VOLUME_MICROGRAMS_PER_CUBIC_METER = "µg/m3"
 
-SENSOR_VALUES = ["PM1", "PM2.5", "PM10", "CAQI"]
+SENSOR_VALUES = ["PM1", "PM2.5", "PM10", "CAQI", "PM2.5 percent", "PM10 percent", "CAQI level"]
 MESSAGE_LOCALES = {"en": "English", "pl": "Polish"}
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
@@ -74,8 +74,12 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 
         if sensor_type == "CAQI":
             unit = "CAQI"
-        else:
+        elif sensor_type.endswith("percent"):
+            unit = "%"
+        elif sensor_type.startswith("PM"):
             unit = VOLUME_MICROGRAMS_PER_CUBIC_METER
+        else:
+            unit = None
 
         sensors.append(
             AirlySensor(data, sensor_type, sensor_type, "mdi:chart-line", unit, sensor_type, location_id)
@@ -124,7 +128,7 @@ class AirlySensor(Entity):
     @property
     def name(self):
         """Return the name."""
-        return "{0}".format(self._name)
+        return "{0} {1}".format("Airly", self._name)
 
     @property
     def state(self):
@@ -134,7 +138,7 @@ class AirlySensor(Entity):
     @property
     def unique_id(self):
         """Return a unique, HASS-friendly identifier for this entity."""
-        return f"{self._location_id}_{self._sensor_type}_{self._type}"
+        return f"{self._location_id}_{self._sensor_type}_{self._type}_v2"
 
     @property
     def unit_of_measurement(self):
@@ -157,6 +161,12 @@ class AirlySensor(Entity):
             self._state = data["values"][1]["value"]
         elif self._type == "PM10":
             self._state = data["values"][2]["value"]
+        elif self._type == "PM2.5 percent":
+            self._state = data["standards"][0]["percent"]
+        elif self._type == "PM10 percent":
+            self._state = data["standards"][1]["percent"]
+        elif self._type == "CAQI level":
+            self._state = data["indexes"][0]["level"]
 
 
 class AirlyData:

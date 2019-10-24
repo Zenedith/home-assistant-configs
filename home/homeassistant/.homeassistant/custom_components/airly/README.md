@@ -6,9 +6,12 @@ This is a sensor suite for [Home Assistant](https://www.home-assistant.io/), whi
 | Sensor | Description |
 |--|--|
 | **CAQI** | Common Air Quality Index |
+| **CAQI level** | Discreet level of the index (e.g. HIGH, or LOW etc.) |
 | **PM 1** | Atmospheric particulate matter less than 1 μm in size. Expressed in µg/m3. |
 | **PM 2.5** | Atmospheric particulate matter less than 2.5 μm in size. Expressed in µg/m3. |
+| **PM 2.5 %** | PM 2.5 expressed as percentage of the WHO norm. Currently 100% is 25 µg/m3.|
 | **PM 10** | Atmospheric particulate matter less than 10 μm in size. Expressed in µg/m3.|
+| **PM 10 %** | PM 2.5 expressed as percentage of the WHO norm. Currently 100% is 50 µg/m3.|
   
   
 # CAQI  
