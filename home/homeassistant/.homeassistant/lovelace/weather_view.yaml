@@ -409,10 +409,13 @@ cards:
           type: entities
           show_header_toggle: false
           entities:
-            - entity: sensor.pm1
-            - entity: sensor.pm2_5
-            - entity: sensor.pm10
-            - entity: sensor.caqi
+            - entity: sensor.airly_pm1
+            - entity: sensor.airly_pm2_5
+            - entity: sensor.airly_pm2_5_percent
+            - entity: sensor.airly_pm10
+            - entity: sensor.airly_pm10_percent
+            - entity: sensor.airly_caqi
+            - entity: sensor.airly_caqi_level
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
