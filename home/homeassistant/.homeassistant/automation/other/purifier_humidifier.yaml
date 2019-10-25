@@ -100,13 +100,16 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Humidifier off humidity > 50%
 
-- alias: 'Power on humidifier when humidity below 35%'
+- alias: 'Power on humidifier when humidity below 45%'
   initial_state: 'on'
   trigger:
     platform: numeric_state
     entity_id: sensor.korytarz_temp_humidity
-    below: 35
+    below: 45
   condition:
+    - condition: state
+      entity_id: group.wietrzenie
+      state: off
     - condition: state
       entity_id: fan.smartmi2
       state: 'off'
@@ -119,17 +122,17 @@
         entity_id: fan.smartmi2
     - service: notify.mypushbullet
       data_template:
-        title: 'Humidifier on humidity < 35%'
+        title: 'Humidifier on humidity < 45%'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Humidifier on humidity < 35 %
+          Humidifier on humidity < 45 %
 
-- alias: 'Power off purifier when aqi below 10'
+- alias: 'Power off purifier when aqi below 14'
   initial_state: 'on'
   trigger:
     - platform: numeric_state
       entity_id: sensor.purifier_aqi
-      below: 10
+      below: 14
   condition:
     - condition: state
       entity_id: fan.purifier
@@ -140,10 +143,10 @@
         entity_id: fan.purifier
     - service: notify.mypushbullet
       data_template:
-        title: 'Purifier off aqi < 10'
+        title: 'Purifier off aqi < 14'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier off aqi < 10
+          Purifier off aqi < 14
 
 - alias: 'Power on purifier when aqi above 15'
   initial_state: 'on'
@@ -152,6 +155,9 @@
     entity_id: sensor.purifier_aqi
     above: 15
   condition:
+    - condition: state
+      entity_id: group.wietrzenie
+      state: off
     - condition: state
       entity_id: fan.purifier
       state: 'off'
