@@ -1,13 +1,22 @@
 sequence:
-  - service: climate.set_preset_mode
+  - service: climate.set_temperature
     data:
       entity_id: climate.sypialnia
-      preset_mode: 'away'
-  - service: climate.set_preset_mode
+      temperature: 18
+      target_temp_high: 18
+      target_temp_low: 18
+      hvac_mode: auto
+  - service: climate.set_temperature
     data:
       entity_id: climate.pokoj_janka
-      preset_mode: 'away'
-  - service: climate.set_preset_mode
+      temperature: 18
+      target_temp_high: 18
+      target_temp_low: 18
+      hvac_mode: auto
+  - service: climate.set_temperature
     data:
       entity_id: climate.salon
-      preset_mode: 'away'
+      temperature: 18
+      target_temp_high: 18
+      target_temp_low: 18
+      hvac_mode: auto

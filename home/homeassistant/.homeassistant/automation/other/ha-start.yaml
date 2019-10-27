@@ -138,7 +138,7 @@
         topic: 'shellies/command'
         payload: 'update'
 
-- alias: 'Climate off when hot on HA start up'
+- alias: 'Climate off when heat off and HA start up'
   initial_state: 'on'
   trigger:
     platform: homeassistant
@@ -162,7 +162,7 @@
           - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
           - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
 
-- alias: 'Climate on when cold on HA start up'
+- alias: 'Climate on when heat on and HA start up'
   initial_state: 'on'
   trigger:
     platform: homeassistant

@@ -4,9 +4,6 @@
     - platform: state
       entity_id: group.mobiledevices
       to: home
-    - platform: state
-      entity_id: device_tracker.e49a79e25678
-      to: home
   condition:
     - condition: state
       entity_id: input_select.presence_status
@@ -19,10 +16,25 @@
       data:
         entity_id: input_select.presence_status
         option: Just Returned
-    - service: script.climate_on
     - service: switch.turn_on
       data:
         entity_id: switch.listwa_salon_slot_usb
     - service: automation.turn_on
       data:
         entity_id: automation.bedside_jan_on, automation.ambient_on, automation.listwa_sypialnia_on, automation.listwa_sypialnia_weekend_on, automation.bedside_jan_on,automation.ambient_on
+
+- alias: 'Returned home climate'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: group.mobiledevices
+      to: home
+  condition:
+    - condition: state
+      entity_id: input_select.presence_status
+      state: 'Away'
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
+  action:
+    - service: script.climate_on

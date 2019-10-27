@@ -44,6 +44,28 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Rolety close when gone.
 
+- alias: 'Climate off when gone'
+  initial_state: 'off'
+  trigger:
+    - platform: state
+      entity_id: input_select.presence_status
+      to: 'Away'
+  condition:
+    - condition: sun
+      after: sunrise
+      after_offset: '-02:00:00'
+    - condition: sun
+      before: sunset
+      before_offset: '02:00:00'
+  action:
+    - service: script.climate_off
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Climate off when gone'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Climate off when gone.
+
 - alias: 'Zmietek start when gone 15 min delay'
   initial_state: 'off'
   trigger:

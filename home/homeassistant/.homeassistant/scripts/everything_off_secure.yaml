@@ -1,3 +1,4 @@
 sequence:
   - service: script.everything_off
   - service: script.camera_on
+  - service: script.climate_off
