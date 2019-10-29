@@ -212,9 +212,9 @@
     - service: climate.set_temperature
       data:
         entity_id: climate.sypialnia
-        temperature: 18
-        target_temp_high: 18
-        target_temp_low: 18
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
         hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
@@ -240,9 +240,9 @@
     - service: climate.set_temperature
       data:
         entity_id: climate.sypialnia
-        temperature: 18
-        target_temp_high: 18
-        target_temp_low: 18
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
         hvac_mode: auto
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
