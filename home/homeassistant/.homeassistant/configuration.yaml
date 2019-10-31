@@ -313,7 +313,7 @@ sun:
 ffmpeg:
   ffmpeg_bin: /usr/bin/ffmpeg
 
-stream:
+#stream:
 
 # Text to speech
 tts:
