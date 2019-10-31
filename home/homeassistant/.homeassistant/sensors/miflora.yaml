@@ -31,13 +31,13 @@
     - conductivity
     - battery
 
-- platform: miflora
-  name: Dracaena marginata
-  mac: 'C4:7C:8D:69:FE:F0'
-#  scan_interval: 100
-  monitored_conditions:
-    - moisture
-    - light
-    - temperature
-    - conductivity
-    - battery
+#- platform: miflora
+#  name: Dracaena marginata
+#  mac: 'C4:7C:8D:69:FE:F0'
+##  scan_interval: 100
+#  monitored_conditions:
+#    - moisture
+#    - light
+#    - temperature
+#    - conductivity
+#    - battery
