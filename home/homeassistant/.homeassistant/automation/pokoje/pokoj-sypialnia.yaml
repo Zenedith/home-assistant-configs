@@ -259,8 +259,8 @@
     - service: climate.set_temperature
       data:
         entity_id: climate.sypialnia
-        temperature: 21
-        target_temp_high: 21
+        temperature: 20
+        target_temp_high: 20
         target_temp_low: 18
         hvac_mode: auto
     - service: notify.mypushbullet
