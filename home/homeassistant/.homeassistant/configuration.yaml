@@ -63,20 +63,20 @@ updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
 
-custom_updater:
-  show_installable: false
-  hide_sensor: false
-  track:
-    - components
-    - cards
-    - python_scripts
-  component_urls:
-  #- https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
-  card_urls:
-    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
-    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
-    - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
-    - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
+#custom_updater:
+#  show_installable: false
+#  hide_sensor: false
+#  track:
+#    - components
+#    - cards
+#    - python_scripts
+#  component_urls:
+#  #- https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
+#  card_urls:
+#    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+#    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+#    - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
+#    - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
 
 
 # Discover some devices automatically
