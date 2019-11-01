@@ -138,53 +138,53 @@
         topic: 'shellies/command'
         payload: 'update'
 
-- alias: 'Climate off when heat off and HA start up'
-  initial_state: 'on'
-  trigger:
-    platform: homeassistant
-    event: start
-  condition:
-    - condition: state
-      entity_id: input_boolean.ogrzewanie
-      state: 'off'
-  action:
-    - service: script.climate_off
-    - service: automation.turn_off
-      data:
-        entity_id:
-          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartych_drzwiach_w_salonie
-          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_pokoju_janka
-          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_sypialni
-          - automation.przykrec_ogrzewanie_przy_otwartych_drzwiach_w_salonie
-          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_pokoju_janka
-          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_sypialni
-          - automation.przywroc_ogrzewanie_przy_zamknietych_drzwiach_w_salonie
-          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
-          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
-
-- alias: 'Climate on when heat on and HA start up'
-  initial_state: 'on'
-  trigger:
-    platform: homeassistant
-    event: start
-  condition:
-    - condition: state
-      entity_id: input_boolean.ogrzewanie
-      state: 'on'
-  action:
-    - service: script.climate_on
-    - service: automation.turn_on
-      data:
-        entity_id:
-          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartych_drzwiach_w_salonie
-          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_pokoju_janka
-          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_sypialni
-          - automation.przykrec_ogrzewanie_przy_otwartych_drzwiach_w_salonie
-          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_pokoju_janka
-          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_sypialni
-          - automation.przywroc_ogrzewanie_przy_zamknietych_drzwiach_w_salonie
-          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
-          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
+#- alias: 'Climate off when heat off and HA start up'
+#  initial_state: 'on'
+#  trigger:
+#    platform: homeassistant
+#    event: start
+#  condition:
+#    - condition: state
+#      entity_id: input_boolean.ogrzewanie
+#      state: 'off'
+#  action:
+#    - service: script.climate_off
+#    - service: automation.turn_off
+#      data:
+#        entity_id:
+#          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartych_drzwiach_w_salonie
+#          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_pokoju_janka
+#          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_sypialni
+#          - automation.przykrec_ogrzewanie_przy_otwartych_drzwiach_w_salonie
+#          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_pokoju_janka
+#          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_sypialni
+#          - automation.przywroc_ogrzewanie_przy_zamknietych_drzwiach_w_salonie
+#          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
+#          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
+#
+#- alias: 'Climate on when heat on and HA start up'
+#  initial_state: 'on'
+#  trigger:
+#    platform: homeassistant
+#    event: start
+#  condition:
+#    - condition: state
+#      entity_id: input_boolean.ogrzewanie
+#      state: 'on'
+#  action:
+#    - service: script.climate_on
+#    - service: automation.turn_on
+#      data:
+#        entity_id:
+#          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartych_drzwiach_w_salonie
+#          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_pokoju_janka
+#          - automation.przykrec_ogrzewanie_po_powrocie_przy_nadal_otwartym_oknie_w_sypialni
+#          - automation.przykrec_ogrzewanie_przy_otwartych_drzwiach_w_salonie
+#          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_pokoju_janka
+#          - automation.przykrec_ogrzewanie_przy_otwartym_oknie_w_sypialni
+#          - automation.przywroc_ogrzewanie_przy_zamknietych_drzwiach_w_salonie
+#          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_pokoju_janka
+#          - automation.przywroc_ogrzewanie_przy_zamknietym_oknie_w_sypialni
 
 - alias: 'Update notifications'
   initial_state: 'on'
