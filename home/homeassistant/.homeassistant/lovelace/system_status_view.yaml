@@ -141,13 +141,10 @@ cards:
       - type: custom:card-modder
         card:
           type: entities
-          title: Scripts
+          title: Status
           show_header_toggle: false
           entities:
-            - script.climate_off
-            - script.climate_on
-            - script.rolety_close
-            - script.rolety_open
+            - sensor.rpi_power_status
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
