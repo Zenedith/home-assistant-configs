@@ -37,9 +37,14 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: custom:flower-card
-          species: "zamioculcas zamiifolia"
-          entity: plant.zamioculcas_zamiifolia
+          type: conditional
+          conditions:
+            - entity: plant.zamioculcas_zamiifolia
+              state_not: 'unknown'
+          card:
+            type: custom:flower-card
+            species: "zamioculcas zamiifolia"
+            entity: plant.zamioculcas_zamiifolia
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -51,39 +56,43 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: picture-elements
-          image: /local/lovelace/plants.jpg
-          title: Zamioculcas zamiifolia
-          elements:
-            - type: state-badge
-              entity: sensor.zamioculcas_zamiifolia_light_intensity
-              title: null
-              style:
-                top: 35%
-                left: 10%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.zamioculcas_zamiifolia_temperature
-              title: null
-              style:
-                top: 35%
-                left: 25%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.zamioculcas_zamiifolia_conductivity
-              title: null
-              style:
-                top: 35%
-                left: 40%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.zamioculcas_zamiifolia_moisture
-              title: null
-              style:
-                top: 35%
-                left: 92%
-                --ha-label-badge-font-size: 1em
-
+          type: conditional
+          conditions:
+            - entity: plant.zamioculcas_zamiifolia
+              state_not: 'unknown'
+          card:
+            type: picture-elements
+            image: /local/lovelace/plants.jpg
+            title: Zamioculcas zamiifolia
+            elements:
+              - type: state-badge
+                entity: sensor.zamioculcas_zamiifolia_light_intensity
+                title: null
+                style:
+                  top: 35%
+                  left: 10%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.zamioculcas_zamiifolia_temperature
+                title: null
+                style:
+                  top: 35%
+                  left: 25%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.zamioculcas_zamiifolia_conductivity
+                title: null
+                style:
+                  top: 35%
+                  left: 40%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.zamioculcas_zamiifolia_moisture
+                title: null
+                style:
+                  top: 35%
+                  left: 92%
+                  --ha-label-badge-font-size: 1em
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -95,11 +104,14 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: custom:flower-card
-          #          species: "sansevieria trifasciata"
-          #          entity: plant.sansevieria_trifasciata
-          species: "spathiphyllum kochii"
-          entity: plant.spathiphyllum
+          type: conditional
+          conditions:
+            - entity: plant.spathiphyllum
+              state_not: 'unknown'
+          card:
+            type: custom:flower-card
+            species: "spathiphyllum kochii"
+            entity: plant.spathiphyllum
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -111,38 +123,43 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: picture-elements
-          image: /local/lovelace/plants.jpg
-          title: spathiphyllum
-          elements:
-            - type: state-badge
-              entity: sensor.spathiphyllum_light_intensity
-              title: null
-              style:
-                top: 35%
-                left: 10%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.spathiphyllum_temperature
-              title: null
-              style:
-                top: 35%
-                left: 25%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.spathiphyllum_conductivity
-              title: null
-              style:
-                top: 35%
-                left: 40%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.spathiphyllum_moisture
-              title: null
-              style:
-                top: 35%
-                left: 92%
-                --ha-label-badge-font-size: 1em
+          type: conditional
+          conditions:
+            - entity: plant.spathiphyllum
+              state_not: 'unknown'
+          card:
+            type: picture-elements
+            image: /local/lovelace/plants.jpg
+            title: spathiphyllum
+            elements:
+              - type: state-badge
+                entity: sensor.spathiphyllum_light_intensity
+                title: null
+                style:
+                  top: 35%
+                  left: 10%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.spathiphyllum_temperature
+                title: null
+                style:
+                  top: 35%
+                  left: 25%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.spathiphyllum_conductivity
+                title: null
+                style:
+                  top: 35%
+                  left: 40%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.spathiphyllum_moisture
+                title: null
+                style:
+                  top: 35%
+                  left: 92%
+                  --ha-label-badge-font-size: 1em
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -154,11 +171,14 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: custom:flower-card
-          #          species: "sansevieria trifasciata"
-          #          entity: plant.sansevieria_trifasciata
-          species: "spathiphyllum kochii"
-          entity: plant.spathiphyllum2
+          type: conditional
+          conditions:
+            - entity: plant.spathiphyllum2
+              state_not: 'unknown'
+          card:
+            type: custom:flower-card
+            species: "spathiphyllum kochii"
+            entity: plant.spathiphyllum2
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -170,38 +190,43 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: picture-elements
-          image: /local/lovelace/plants.jpg
-          title: spathiphyllum2
-          elements:
-            - type: state-badge
-              entity: sensor.spathiphyllum2_light_intensity
-              title: null
-              style:
-                top: 35%
-                left: 10%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.spathiphyllum2_temperature
-              title: null
-              style:
-                top: 35%
-                left: 25%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.spathiphyllum2_conductivity
-              title: null
-              style:
-                top: 35%
-                left: 40%
-                --ha-label-badge-font-size: 1em
-            - type: state-badge
-              entity: sensor.spathiphyllum2_moisture
-              title: null
-              style:
-                top: 35%
-                left: 92%
-                --ha-label-badge-font-size: 1em
+          type: conditional
+          conditions:
+            - entity: plant.spathiphyllum2
+              state_not: 'unknown'
+          card:
+            type: picture-elements
+            image: /local/lovelace/plants.jpg
+            title: spathiphyllum2
+            elements:
+              - type: state-badge
+                entity: sensor.spathiphyllum2_light_intensity
+                title: null
+                style:
+                  top: 35%
+                  left: 10%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.spathiphyllum2_temperature
+                title: null
+                style:
+                  top: 35%
+                  left: 25%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.spathiphyllum2_conductivity
+                title: null
+                style:
+                  top: 35%
+                  left: 40%
+                  --ha-label-badge-font-size: 1em
+              - type: state-badge
+                entity: sensor.spathiphyllum2_moisture
+                title: null
+                style:
+                  top: 35%
+                  left: 92%
+                  --ha-label-badge-font-size: 1em
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
