@@ -58,16 +58,6 @@
         title: 'Zigbee'
         message: 'Permit join is disabled'
 
-  - id: 'Zigbee Map Update'
-    alias: 'Zigbee Map Update'
-    initial_state: 'on'
-    hide_entity: true
-    trigger:
-      platform: time
-      at: '00:00:00'
-    action:
-      service: zigbee2mqtt_networkmap.update
-
   - id: 'Zigbee2mqtt Log Level'
     alias: Zigbee2mqtt Log Level
     initial_state: 'on'

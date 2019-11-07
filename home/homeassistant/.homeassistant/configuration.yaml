@@ -24,13 +24,6 @@ logger:
   default: info
 
 webhook:
-zigbee2mqtt_networkmap:
-
-panel_iframe:
-  networkmap:
-    title: 'Zigbee Map'
-    url: '/local/zigbee2mqtt_networkmap/map.html'
-    icon: 'mdi:graphql'
 
 # Enables the frontend
 frontend:
@@ -208,7 +201,6 @@ history:
       - sensor.dark_sky_precip_probability_3d
       - sensor.dark_sky_precip_probability_4d
       - sensor.dark_sky_precip_probability_5d
-      - zigbee2mqtt_networkmap.map_last_update
 recorder:
   purge_interval: 1
   purge_keep_days: 5
@@ -299,7 +291,6 @@ recorder:
       - sensor.dark_sky_precip_probability_3d
       - sensor.dark_sky_precip_probability_4d
       - sensor.dark_sky_precip_probability_5d
-      - zigbee2mqtt_networkmap.map_last_update
 # View all events in a logbook
 logbook:
 
