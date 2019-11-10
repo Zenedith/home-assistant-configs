@@ -132,10 +132,6 @@
     platform: sun
     event: sunset
     offset: '-01:00:00'
-  condition:
-    - condition: state
-      entity_id: group.mobiledevices
-      state: home
   action:
     - service: script.ambient_on
 
