@@ -24,13 +24,6 @@ logger:
   default: info
 
 webhook:
-zigbee2mqtt_networkmap:
-
-panel_iframe:
-  networkmap:
-    title: 'Zigbee Map'
-    url: '/local/zigbee2mqtt_networkmap/map.html'
-    icon: 'mdi:graphql'
 
 # Enables the frontend
 frontend:
@@ -63,55 +56,56 @@ updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
 
-custom_updater:
-  show_installable: false
-  hide_sensor: false
-  track:
-    - components
-    - cards
-    - python_scripts
-  component_urls:
-  #- https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
-  card_urls:
-    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
-    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
-    - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
-    - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
+#custom_updater:
+#  show_installable: false
+#  hide_sensor: false
+#  track:
+#    - components
+#    - cards
+#    - python_scripts
+#  component_urls:
+#  #- https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
+#  card_urls:
+#    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+#    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+#    - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
+#    - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
 
 
 # Discover some devices automatically
 discovery:
   ignore:
-    - yeelight
     - apple_tv
-    - axis
     - belkin_wemo
     - bluesound
     - bose_soundtouch
-    - directv
     - denonavr
+    - directv
     - enigma2
     - frontier_silicon
     - harmony
-    - ikea_tradfri
     - igd
     - logitech_mediaserver
     - netgear_router
-    - openhome
     - octoprint
+    - openhome
     - panasonic_viera
     - philips_hue
     - plex_mediaserver
     - roku
     - sabnzbd
     - samsung_printer
+    - samsung_tv
+    - axis
+    - yeelight
+    - ikea_tradfri
     - sonos
     - songpal
     - tellstick
     - wink
     - yamaha
     - xiaomi_gw
-    - samsung_tv
+    - homekit
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
@@ -154,14 +148,12 @@ history:
       - sensor.drzwi_wejsciowe_contact_battery
       - sensor.drzwi_lazienka_contact_battery
       - sensor.drzwi_toaleta_contact_battery
+      - sensor.okno_kuchnia_contact_battery
       - sensor.kuchnia_leak_battery
       - sensor.lazienka_leak_battery
       - sensor.custom_component_tracker
       - sensor.custom_python_script_tracker
-      - sensor.humidifier_motor_speed
-      - sensor.motor_speed
       - sensor.purifier_filter_type
-      - sensor.purifier_filter_life_remaining
       - sensor.vacuum_fan
       - sensor.vacuum_cleaned_area
       - sensor.vacuum_battery
@@ -209,11 +201,9 @@ history:
       - sensor.dark_sky_precip_probability_3d
       - sensor.dark_sky_precip_probability_4d
       - sensor.dark_sky_precip_probability_5d
-      - zigbee2mqtt_networkmap.map_last_update
 recorder:
   purge_interval: 1
   purge_keep_days: 5
-#  db_url: sqlite:////home/homeassistant/.homeassistant/home-assistant_v2_recorder.db
   db_url: postgresql://@/homeassistant
   exclude:
     domains:
@@ -247,6 +237,7 @@ recorder:
       - sensor.drzwi_wejsciowe_contact_battery
       - sensor.drzwi_lazienka_contact_battery
       - sensor.drzwi_toaleta_contact_battery
+      - sensor.okno_kuchnia_contact_battery
       - sensor.kuchnia_leak_battery
       - sensor.lazienka_leak_battery
       - sensor.custom_component_tracker
@@ -300,7 +291,6 @@ recorder:
       - sensor.dark_sky_precip_probability_3d
       - sensor.dark_sky_precip_probability_4d
       - sensor.dark_sky_precip_probability_5d
-      - zigbee2mqtt_networkmap.map_last_update
 # View all events in a logbook
 logbook:
 
@@ -314,7 +304,7 @@ sun:
 ffmpeg:
   ffmpeg_bin: /usr/bin/ffmpeg
 
-stream:
+#stream:
 
 # Text to speech
 tts:

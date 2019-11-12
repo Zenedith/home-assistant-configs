@@ -1,0 +1,4 @@
+- platform: airly
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  api_key: !secret airly

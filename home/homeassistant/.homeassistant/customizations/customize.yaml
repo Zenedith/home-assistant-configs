@@ -101,6 +101,8 @@ binary_sensor.drzwi_toaleta_contact:
   friendly_name: Drzwi
 sensor.drzwi_toaleta_contact_battery:
   friendly_name: Drzwi toaleta bateria
+sensor.okno_kuchnia_contact_battery:
+  friendly_name: Okno kuchnia bateria
 sensor.vacuum_cleaning_time:
   icon: mdi:clock-outline
 sensor.vacuum_main_brush:
@@ -154,4 +156,20 @@ sensor.spathiphyllum_temperature:
 sensor.spathiphyllum_conductivity:
   friendly_name: cond
 sensor.spathiphyllum_moisture:
+  friendly_name: moisture
+sensor.spathiphyllum2_light_intensity:
+  friendly_name: lx
+sensor.spathiphyllum2_temperature:
+  friendly_name: C
+sensor.spathiphyllum2_conductivity:
+  friendly_name: cond
+sensor.spathiphyllum2_moisture:
+  friendly_name: moisture
+sensor.dracaena_marginata_light_intensity:
+  friendly_name: lx
+sensor.dracaena_marginata_temperature:
+  friendly_name: C
+sensor.dracaena_marginata_conductivity:
+  friendly_name: cond
+sensor.dracaena_marginata_moisture:
   friendly_name: moisture

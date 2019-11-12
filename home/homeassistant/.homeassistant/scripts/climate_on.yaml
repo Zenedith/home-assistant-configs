@@ -1,16 +1,25 @@
 sequence:
-  - condition: numeric_state
-    entity_id: sensor.korytarz_temp_temperature
-    below: 22
-  - service: climate.set_preset_mode
+  - service: climate.turn_on
+    data:
+      entity_id: climate.sypialnia, climate.pokoj_janka, climate.sypialnia
+  - service: climate.set_temperature
     data:
       entity_id: climate.sypialnia
-      preset_mode: 'home'
-  - service: climate.set_preset_mode
+      temperature: 21
+      target_temp_high: 21
+      target_temp_low: 18
+      hvac_mode: auto
+  - service: climate.set_temperature
     data:
       entity_id: climate.pokoj_janka
-      preset_mode: 'home'
-  - service: climate.set_preset_mode
+      temperature: 21
+      target_temp_high: 21
+      target_temp_low: 18
+      hvac_mode: auto
+  - service: climate.set_temperature
     data:
       entity_id: climate.salon
-      preset_mode: 'home'
+      temperature: 21
+      target_temp_high: 21
+      target_temp_low: 18
+      hvac_mode: auto

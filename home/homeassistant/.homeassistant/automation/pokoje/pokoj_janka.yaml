@@ -21,9 +21,7 @@
     platform: time
     at: '00:05:00'
   action:
-    - service: switch.turn_off
-      data:
-        entity_id: switch.rtv_jan
+    - service: script.jan_listwa_rtv_off
 
 - alias: 'Bedside offline notify'
   initial_state: 'on'
@@ -56,6 +54,9 @@
     - condition: state
       entity_id: binary_sensor.bedside_online
       state: 'on'
+    - condition: state
+      entity_id: group.mobiledevices
+      state: home
   action:
     - service: light.turn_on
       data:
@@ -153,14 +154,17 @@
     for:
       seconds: 15
   condition:
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.pokoj_janka
-        preset_mode: 'away'
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w pokóju Janka'
@@ -178,14 +182,17 @@
     - condition: state
       entity_id: binary_sensor.okno_janek_contact
       state: 'on'
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.pokoj_janka
-        preset_mode: 'away'
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
+        hvac_mode: auto
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
   initial_state: 'on'
@@ -194,14 +201,17 @@
     entity_id: binary_sensor.okno_janek_contact
     to: 'off'
   condition:
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.pokoj_janka
-        preset_mode: 'home'
+        temperature: 20
+        target_temp_high: 20
+        target_temp_low: 18
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w pokóju Janka'

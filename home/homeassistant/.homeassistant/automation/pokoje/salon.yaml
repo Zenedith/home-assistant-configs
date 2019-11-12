@@ -279,19 +279,22 @@
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.drzwi_balkonowe_contact
+    entity_id: binary_sensor.drzwi_balkonowe_contact, binary_sensor.okno_kuchnia_contact
     to: 'on'
     for:
       seconds: 15
   condition:
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.salon
-        preset_mode: 'away'
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w salonie'
@@ -306,33 +309,44 @@
     entity_id: climate.salon
     to: 'heat'
   condition:
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: binary_sensor.drzwi_balkonowe_contact
+          state: 'on'
+        - condition: state
+          entity_id: binary_sensor.okno_kuchnia_contact
+          state: 'on'
     - condition: state
-      entity_id: binary_sensor.drzwi_balkonowe_contact
+      entity_id: input_boolean.ogrzewanie
       state: 'on'
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.salon
-        preset_mode: 'away'
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
+        hvac_mode: auto
 
 - alias: 'Przywróć ogrzewanie przy zamkniętych drzwiach w salonie'
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.drzwi_balkonowe_contact
+    entity_id: binary_sensor.drzwi_balkonowe_contact, binary_sensor.okno_kuchnia_contact
     to: 'off'
   condition:
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.salon
-        preset_mode: 'home'
+        temperature: 20
+        target_temp_high: 20
+        target_temp_low: 18
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w salonie'

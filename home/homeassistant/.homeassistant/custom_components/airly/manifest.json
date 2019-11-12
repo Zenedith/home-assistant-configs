@@ -1,0 +1,9 @@
+{
+  "domain": "airly",
+  "name": "airly",
+  "documentation": "https://github.com/pawelkw/hass_airly/blob/master/README.md",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": []
+}
+

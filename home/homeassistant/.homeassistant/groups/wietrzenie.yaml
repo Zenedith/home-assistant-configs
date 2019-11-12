@@ -1,0 +1,4 @@
+- binary_sensor.drzwi_balkonowe_contact
+- binary_sensor.okno_janek_contact
+- binary_sensor.okno_sypialnia_contact
+- binary_sensor.okno_kuchnia_contact

@@ -23,3 +23,8 @@ moonlight_korytarz:
   icon: mdi:weather-night
 listwa_sypialnia:
   name: Stan listwa sypialnia
+ogrzewanie:
+  name: Ogrzewanie
+moonlight_kuchnia:
+  name: Moonlight kuchnia
+  icon: mdi:weather-night

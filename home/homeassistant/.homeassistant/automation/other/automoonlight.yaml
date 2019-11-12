@@ -33,6 +33,10 @@
     - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.sypialnia_chillout
+    - service: light.turn_on
+      entity_id: group.kuchnia_lampa
+      data_template:
+        brightness: 255
 
 - alias: 'Chillout mode on'
   initial_state: 'on'
@@ -127,3 +131,35 @@
       state: 'on'
   action:
     - service: script.moonlight_korytarz_off
+
+- alias: 'Moonlight kuchnia switch on'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.moonlight_kuchnia
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: group.kuchnia_lampa
+      state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: group.kuchnia_lampa
+      data_template:
+        brightness: 1
+
+- alias: 'Moonlight kuchnia switch off'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.moonlight_kuchnia
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: group.kuchnia_lampa
+      state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: group.kuchnia_lampa
+      data_template:
+        brightness: 255

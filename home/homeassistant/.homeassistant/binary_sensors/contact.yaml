@@ -51,3 +51,12 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
+
+- platform: "mqtt"
+  name: "okno_kuchnia_contact"
+  state_topic: "zigbee2mqtt/0x00158d00032169f8"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.contact }}"
+  device_class: "door"

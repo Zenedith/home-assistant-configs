@@ -1,0 +1,7 @@
+sequence:
+  - condition: state
+    entity_id: binary_sensor.sharp_online
+    state: 'off'
+  - service: switch.turn_off
+    data:
+      entity_id: switch.rtv_jan

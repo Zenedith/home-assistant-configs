@@ -1,8 +1,8 @@
-- alias: 'Rolety pokoje open at 12'
+- alias: 'Rolety pokoje open at 10'
   initial_state: 'on'
   trigger:
     platform: time
-    at: '12:00:00'
+    at: '10:00:00'
   condition:
     - condition: numeric_state
       entity_id: sensor.dark_sky_temperature

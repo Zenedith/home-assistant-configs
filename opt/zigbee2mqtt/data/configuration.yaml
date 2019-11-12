@@ -10,8 +10,10 @@ serial:
   port: /dev/ttyACM0
   disable_led: true
 device_options:
-  occupancy_timeout: 20
+  occupancy_timeout: 60
   temperature_precision: 1
+  humidity_precision: 1
+  pressure_precision: 1
 advanced:
   log_level: debug
   rtscts: false
@@ -81,3 +83,7 @@ devices:
   '0x00124b0014aa7950':
     friendly_name: '0x00124b0014aa7950'
     retain: false
+  '0x00158d00032169f8':
+    friendly_name: '0x00158d00032169f8'
+    retain: false
+    qos: 1

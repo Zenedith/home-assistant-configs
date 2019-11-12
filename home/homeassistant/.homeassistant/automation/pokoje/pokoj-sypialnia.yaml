@@ -66,6 +66,9 @@
     - condition: state
       entity_id: input_boolean.listwa_sypialnia
       state: 'off'
+    - condition: state
+      entity_id: group.mobiledevices
+      state: home
   action:
     - service: input_boolean.turn_on
       data:
@@ -202,14 +205,17 @@
     for:
       seconds: 15
   condition:
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.sypialnia
-        preset_mode: 'away'
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w sypialni'
@@ -227,14 +233,17 @@
     - condition: state
       entity_id: binary_sensor.okno_sypialnia_contact
       state: 'on'
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.sypialnia
-        preset_mode: 'away'
+        temperature: 12
+        target_temp_high: 12
+        target_temp_low: 12
+        hvac_mode: auto
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
   initial_state: 'on'
@@ -243,14 +252,17 @@
     entity_id: binary_sensor.okno_sypialnia_contact
     to: 'off'
   condition:
-    - condition: numeric_state
-      entity_id: sensor.korytarz_temp_temperature
-      below: 22
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
-    - service: climate.set_preset_mode
+    - service: climate.set_temperature
       data:
         entity_id: climate.sypialnia
-        preset_mode: 'home'
+        temperature: 20
+        target_temp_high: 20
+        target_temp_low: 18
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w sypialni'

@@ -114,13 +114,15 @@ cards:
           title: Automation
           show_header_toggle: false
           entities:
+            - input_boolean.ogrzewanie
             - automation.power_state_on_ha_start_up
             - automation.everything_off_when_gone
             - automation.rolety_close_when_gone
             - automation.rolety_open_when_home
             - automation.roleta_w_kuchni_60_o_17
-            - automation.rolety_pokoje_open_at_12
+            - automation.rolety_pokoje_open_at_10
             - automation.zmietek_start_when_gone_15_min_delay
+            - automation.zmietek_start
             - automation.bedside_jan_on
             - automation.ambient_on
             - automation.listwa_sypialnia_on
@@ -139,14 +141,10 @@ cards:
       - type: custom:card-modder
         card:
           type: entities
-          title: Scripts
+          title: Status
           show_header_toggle: false
           entities:
-            - script.climate_off
-            - script.climate_on
-            - script.rolety_close
-            - script.rolety_open
-            - script.zmietek_start
+            - sensor.rpi_power_status
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
@@ -159,21 +157,21 @@ cards:
   - type: vertical-stack
     cards:
 
-      - type: custom:card-modder
-        card:
-          type: custom:tracker-card
-          trackers:
-            - sensor.custom_card_tracker
-            - sensor.custom_component_tracker
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 525px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          color: "#999999"
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
+#      - type: custom:card-modder
+#        card:
+#          type: custom:tracker-card
+#          trackers:
+#            - sensor.custom_card_tracker
+#            - sensor.custom_component_tracker
+#        style:
+#          background-image: url("/local/lovelace/cardbackK.png")
+#          background-repeat: no-repeat
+#          background-color: rgba(50,50,50,0.3)
+#          background-size: 100% 525px
+#          border-radius: 20px
+#          border: solid 1px rgba(100,100,100,0.3)
+#          color: "#999999"
+#          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: custom:card-modder
         card:
@@ -208,10 +206,12 @@ cards:
           title: Zigbee
           show_header_toggle: false
           entities:
-            - input_boolean.zigbee_permit_join
-            - sensor.bridge_state
-            - timer.zigbee_permit_join
-            - input_select.zigbee2mqtt_log_level
+            - entity: input_boolean.zigbee_permit_join
+            - entity: sensor.bridge_state
+            - entity: sensor.zigbee2mqtt_version
+            - entity: sensor.coordinator_version
+            - entity: timer.zigbee_permit_join
+            - entity: input_select.zigbee2mqtt_log_level
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
