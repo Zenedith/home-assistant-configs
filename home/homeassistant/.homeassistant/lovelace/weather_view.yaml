@@ -7,36 +7,6 @@ cards:
     cards:
       - type: custom:card-modder
         card:
-          type: custom:mini-graph-card
-          name: Temperatura
-          entities:
-            - sensor.korytarz_temp_temperature
-            - sensor.kuchnia_temp_temperature
-            - sensor.purifier_temperature
-            - sensor.humidifier_temperature
-          height: 65
-          line_width: 2
-          font_size: 70
-          hours_to_show: 24
-          more_info: true
-          points_per_hour: 1
-          hour24: true
-          show:
-            labels: true
-            extrema: true
-            legend: true
-            points: true
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-
-      - type: custom:card-modder
-        card:
           type: conditional
           conditions:
             - entity: plant.zamioculcas_zamiifolia
@@ -305,6 +275,36 @@ cards:
 
   - type: vertical-stack
     cards:
+      - type: custom:card-modder
+        card:
+          type: custom:mini-graph-card
+          name: Temperatura
+          entities:
+            - sensor.korytarz_temp_temperature
+            - sensor.kuchnia_temp_temperature
+            - sensor.purifier_temperature
+            - sensor.humidifier_temperature
+          height: 65
+          line_width: 2
+          font_size: 70
+          hours_to_show: 24
+          more_info: true
+          points_per_hour: 1
+          hour24: true
+          show:
+            labels: true
+            extrema: true
+            legend: true
+            points: true
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
