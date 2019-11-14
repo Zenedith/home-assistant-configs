@@ -118,7 +118,8 @@ cards:
             - automation.power_state_on_ha_start_up
             - automation.everything_off_when_gone
             - automation.rolety_close_when_gone
-            - automation.rolety_open_when_home
+            - automation.rolety_open_when_just_returned_home
+            - automation.returned_home_automation_on
             - automation.roleta_w_kuchni_60_o_17
             - automation.rolety_pokoje_open_at_10
             - automation.zmietek_start_when_gone_15_min_delay
