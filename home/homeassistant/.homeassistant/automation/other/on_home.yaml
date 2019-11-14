@@ -1,9 +1,9 @@
-- alias: 'Rolety open when home'
+- alias: 'Rolety open when just returned home'
   initial_state: 'on'
   trigger:
     - platform: state
       entity_id: input_select.presence_status
-      to: 'Home'
+      to: 'Just Returned'
   condition:
     - condition: sun
       after: sunrise
@@ -12,3 +12,42 @@
       before_offset: '-02:00:00'
   action:
     - service: script.rolety_open
+
+- alias: 'Returned home, automation on'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_select.presence_status
+      to: 'Home'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_usb
+    - service: automation.turn_on
+      data:
+        entity_id: automation.bedside_jan_on, automation.ambient_on, automation.listwa_sypialnia_on, automation.listwa_sypialnia_weekend_on, automation.bedside_jan_on,automation.ambient_on
+    - service: notify.mypushbullet
+      data_template:
+        title: Returned home, automation on
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Returned home, automation on.
+
+- alias: 'Just returned home, climate on'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: input_select.presence_status
+      to: 'Just Returned'
+  condition:
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
+  action:
+    - service: script.climate_on
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Just returned home, climate on'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Just returned home, climate on.

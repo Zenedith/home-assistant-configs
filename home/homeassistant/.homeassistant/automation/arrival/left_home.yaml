@@ -3,7 +3,7 @@
   trigger:
     - platform: state
       entity_id: group.mobiledevices
-      to: not_home
+      to: 'not_home'
   action:
     - service: input_boolean.turn_off
       data:
@@ -11,4 +11,4 @@
     - service: input_select.select_option
       data:
         entity_id: input_select.presence_status
-        option: Just Left
+        option: 'Just Left'

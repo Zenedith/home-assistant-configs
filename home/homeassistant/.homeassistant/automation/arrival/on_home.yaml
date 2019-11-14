@@ -3,12 +3,12 @@
   trigger:
     - platform: state
       entity_id: device_tracker.80b03dcda5eb
-      to: home
+      to: 'home'
       for:
         minutes: 1
     - platform: state
       entity_id: device_tracker.e49a79e25678
-      to: home
+      to: 'home'
       for:
         minutes: 1
   action:
@@ -18,4 +18,4 @@
     - service: input_select.select_option
       data:
         entity_id: input_select.presence_status
-        option: Home
+        option: 'Home'

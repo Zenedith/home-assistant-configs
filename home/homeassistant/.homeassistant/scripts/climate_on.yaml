@@ -2,6 +2,7 @@ sequence:
   - service: climate.turn_on
     data:
       entity_id: climate.sypialnia, climate.pokoj_janka, climate.sypialnia
+  - delay: 00:00:20
   - service: climate.set_temperature
     data:
       entity_id: climate.sypialnia
