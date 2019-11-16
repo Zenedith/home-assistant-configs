@@ -108,9 +108,6 @@
     below: 45
   condition:
     - condition: state
-      entity_id: group.wietrzenie
-      state: 'off'
-    - condition: state
       entity_id: fan.smartmi2
       state: 'off'
     - condition: numeric_state
@@ -133,6 +130,10 @@
     - platform: numeric_state
       entity_id: sensor.purifier_aqi
       below: 10
+  condition:
+    - condition: state
+      entity_id: sensor.purifier_mode
+      state_not: 'Silent'
   action:
     - service: fan.turn_on
       data:
@@ -156,8 +157,8 @@
     above: 15
   condition:
     - condition: state
-      entity_id: group.wietrzenie
-      state: 'off'
+      entity_id: sensor.purifier_mode
+      state_not: 'Favourite'
   action:
     - service: fan.turn_on
       data:
@@ -172,3 +173,43 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Purifier full power when aqi above 15
+
+- alias: 'Purifier and humidifier off when wietrzenie start'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: group.wietrzenie
+    to: 'on'
+  action:
+    - service: fan.turn_off
+      data:
+        entity_id: fan.purifier,fan.smartmi2
+    - service: automation.turn_off
+      data:
+        entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_10, automation.power_off_humidifier_when_humidity_above_55, automation.power_on_humidifier_when_humidity_below_45
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Purifier and humidifier automations off'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Purifier and humidifier off - wietrzenie
+
+- alias: 'Purifier on when wietrzenie end'
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: group.wietrzenie
+    to: 'off'
+  action:
+    - service: fan.turn_on
+      data:
+        entity_id: fan.purifier
+    - service: automation.turn_on
+      data:
+        entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_10, automation.power_off_humidifier_when_humidity_above_55, automation.power_on_humidifier_when_humidity_below_45
+    - service: notify.mypushbullet
+      data_template:
+        title: 'Purifier automations on'
+        message: |
+          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+          Purifier and humidifier off - wietrzenie

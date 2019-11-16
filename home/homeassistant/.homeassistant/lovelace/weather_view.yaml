@@ -568,6 +568,7 @@ cards:
           title: Automations
           show_header_toggle: false
           entities:
+            - group.wietrzenie
             - automation.purifier_full_power_when_aqi_above_15
             - automation.purifier_sleep_mode_when_aqi_below_10
             - automation.power_off_humidifier_when_humidity_above_55
