@@ -132,7 +132,7 @@
       below: 10
   condition:
     - condition: template
-      value_template: "{{ not is_state('sensor.purifier_mode', 'Silent') }}"
+      value_template: "{{ not is_state('sensor.purifier_mode', 'silent') }}"
   action:
     - service: fan.turn_on
       data:
@@ -156,7 +156,7 @@
     above: 15
   condition:
     - condition: template
-      value_template: "{{ not is_state('sensor.purifier_mode', 'Favourite') }}"
+      value_template: "{{ not is_state('sensor.purifier_mode', 'favorite') }}"
   action:
     - service: fan.turn_on
       data:
