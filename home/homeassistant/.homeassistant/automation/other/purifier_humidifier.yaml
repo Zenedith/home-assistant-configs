@@ -79,12 +79,12 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Humidifier off, no water
 
-- alias: 'Power off humidifier when humidity above 50%'
+- alias: 'Power off humidifier when humidity above 55%'
   initial_state: 'on'
   trigger:
     - platform: numeric_state
       entity_id: sensor.korytarz_temp_humidity
-      above: 50
+      above: 55
   condition:
     - condition: state
       entity_id: fan.smartmi2
@@ -95,10 +95,10 @@
         entity_id: fan.smartmi2
     - service: notify.mypushbullet
       data_template:
-        title: 'Humidifier off humidity > 50%'
+        title: 'Humidifier off humidity > 55%'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Humidifier off humidity > 50%
+          Humidifier off humidity > 55%
 
 - alias: 'Power on humidifier when humidity below 45%'
   initial_state: 'on'
@@ -127,47 +127,48 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Humidifier on humidity < 45 %
 
-- alias: 'Power off purifier when aqi below 14'
+- alias: 'Purifier sleep mode when aqi below 10'
   initial_state: 'on'
   trigger:
     - platform: numeric_state
       entity_id: sensor.purifier_aqi
-      below: 14
-  condition:
-    - condition: state
-      entity_id: fan.purifier
-      state: 'on'
+      below: 10
   action:
-    - service: fan.turn_off
+    - service: fan.turn_on
       data:
         entity_id: fan.purifier
+    - service: fan.set_speed
+      data:
+        entity_id: fan.purifier
+        speed: 'Silent'
     - service: notify.mypushbullet
       data_template:
-        title: 'Purifier off aqi < 14'
+        title: 'Purifier sleep mode aqi < 10'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier off aqi < 14
+          Purifier sleep mode aqi < 10
 
-- alias: 'Power on purifier when aqi above 20'
+- alias: 'Purifier full power when aqi above 15'
   initial_state: 'on'
   trigger:
     platform: numeric_state
     entity_id: sensor.purifier_aqi
-    above: 20
+    above: 15
   condition:
     - condition: state
       entity_id: group.wietrzenie
-      state: 'off'
-    - condition: state
-      entity_id: fan.purifier
       state: 'off'
   action:
     - service: fan.turn_on
       data:
         entity_id: fan.purifier
+    - service: fan.set_speed
+      data:
+        entity_id: fan.purifier
+        speed: 'Favourite'
     - service: notify.mypushbullet
       data_template:
-        title: 'Purifier on aqi > 20'
+        title: 'Purifier full power when aqi above 15'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier off aqi > 20
+          Purifier full power when aqi above 15
