@@ -131,9 +131,8 @@
       entity_id: sensor.purifier_aqi
       below: 10
   condition:
-    - condition: state
-      entity_id: sensor.purifier_mode
-      state_not: 'Silent'
+    - condition: template
+      value_template: "{{ not is_state('sensor.purifier_mode', 'Silent') }}"
   action:
     - service: fan.turn_on
       data:
@@ -156,9 +155,8 @@
     entity_id: sensor.purifier_aqi
     above: 15
   condition:
-    - condition: state
-      entity_id: sensor.purifier_mode
-      state_not: 'Favourite'
+    - condition: template
+      value_template: "{{ not is_state('sensor.purifier_mode', 'Favourite') }}"
   action:
     - service: fan.turn_on
       data:
