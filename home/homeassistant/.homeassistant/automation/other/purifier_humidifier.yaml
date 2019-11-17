@@ -11,7 +11,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.purifier
-        speed: 'Silent'
+        speed: 'silent'
 
 - alias: 'Sleep mode for humidifier'
   initial_state: 'on'
@@ -26,7 +26,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.smartmi2
-        speed: 'Silent'
+        speed: 'silent'
 
 - alias: 'Auto mode for air purifier'
   initial_state: 'on'
@@ -41,7 +41,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.purifier
-        speed: 'Auto'
+        speed: 'auto'
 
 - alias: 'Auto mode for humidifier'
   initial_state: 'on'
@@ -56,7 +56,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.smartmi2
-        speed: 'Auto'
+        speed: 'auto'
 
 - alias: 'Power off humidifier when no water'
   initial_state: 'on'
@@ -140,7 +140,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.purifier
-        speed: 'Silent'
+        speed: 'silent'
     - service: notify.mypushbullet
       data_template:
         title: 'Purifier sleep mode aqi < 10'
@@ -164,7 +164,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.purifier
-        speed: 'Favourite'
+        speed: 'favourite'
     - service: notify.mypushbullet
       data_template:
         title: 'Purifier full power when aqi above 15'
@@ -190,7 +190,7 @@
         title: 'Purifier and humidifier automations off'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier and humidifier off - wietrzenie
+          Purifier and humidifier automations off
 
 - alias: 'Purifier on when wietrzenie end'
   initial_state: 'on'
@@ -210,4 +210,4 @@
         title: 'Purifier automations on'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier and humidifier off - wietrzenie
+          Purifier automations on
