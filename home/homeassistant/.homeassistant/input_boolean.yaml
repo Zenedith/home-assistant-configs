@@ -28,3 +28,6 @@ ogrzewanie:
 moonlight_kuchnia:
   name: Moonlight kuchnia
   icon: mdi:weather-night
+plants_details:
+  name: Plants details
+  icon: mdi:flower

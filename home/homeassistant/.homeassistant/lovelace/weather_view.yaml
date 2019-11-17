@@ -3,6 +3,21 @@ icon: mdi:weather-cloudy
 background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
 name: System Status
 cards:
+  - type: custom:card-modder
+    card:
+      type: entities
+      show_header_toggle: false
+      entities:
+        - input_boolean.plants_details
+    style:
+      background-image: url("/local/lovelace/cardbackK.png")
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 200px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -30,6 +45,9 @@ cards:
           conditions:
             - entity: plant.zamioculcas_zamiifolia
               state_not: 'unknown'
+            - condition: state
+              entity_id: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
@@ -97,6 +115,9 @@ cards:
           conditions:
             - entity: plant.spathiphyllum
               state_not: 'unknown'
+            - condition: state
+              entity_id: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
@@ -164,6 +185,9 @@ cards:
           conditions:
             - entity: plant.spathiphyllum2
               state_not: 'unknown'
+            - condition: state
+              entity_id: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
@@ -231,6 +255,9 @@ cards:
           conditions:
             - entity: plant.dracaena_marginata
               state_not: 'unknown'
+            - condition: state
+              entity_id: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
