@@ -43,8 +43,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - condition: state
-              entity_id: input_boolean.plants_details
+            - entity_id: input_boolean.plants_details
               state: 'on'
           card:
             type: picture-elements
@@ -111,8 +110,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - condition: state
-              entity_id: input_boolean.plants_details
+            - entity_id: input_boolean.plants_details
               state: 'on'
           card:
             type: picture-elements
@@ -179,8 +177,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - condition: state
-              entity_id: input_boolean.plants_details
+            - entity_id: input_boolean.plants_details
               state: 'on'
           card:
             type: picture-elements
@@ -247,8 +244,7 @@ cards:
         card:
           type: conditional
           conditions:
-            - condition: state
-              entity_id: input_boolean.plants_details
+            - entity_id: input_boolean.plants_details
               state: 'on'
           card:
             type: picture-elements
