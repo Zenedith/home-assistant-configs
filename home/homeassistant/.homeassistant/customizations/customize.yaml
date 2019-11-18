@@ -157,13 +157,13 @@ sensor.spathiphyllum_conductivity:
   friendly_name: cond
 sensor.spathiphyllum_moisture:
   friendly_name: moisture
-sensor.spathiphyllum2_light_intensity:
+sensor.yucca_elephantipes_light_intensity:
   friendly_name: lx
-sensor.spathiphyllum2_temperature:
+sensor.yucca_elephantipes_temperature:
   friendly_name: C
-sensor.spathiphyllum2_conductivity:
+sensor.yucca_elephantipes_conductivity:
   friendly_name: cond
-sensor.spathiphyllum2_moisture:
+sensor.yucca_elephantipes_moisture:
   friendly_name: moisture
 sensor.dracaena_marginata_light_intensity:
   friendly_name: lx

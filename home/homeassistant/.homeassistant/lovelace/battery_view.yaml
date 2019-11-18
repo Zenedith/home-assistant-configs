@@ -198,8 +198,8 @@ cards:
               red: 15
           - type: gauge
             unit: '%'
-            entity: sensor.spathiphyllum2_battery
-            name: Sansevieria trifasciata 2
+            entity: sensor.yucca_elephantipes_battery
+            name: Yucca elephantipes
             severity:
               green: 90
               yellow: 45

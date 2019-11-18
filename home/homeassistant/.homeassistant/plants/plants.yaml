@@ -103,17 +103,17 @@ spathiphyllum:
   min_temperature: 15
   max_temperature: 32
 
-spathiphyllum2:
+yucca_elephantipes:
   sensors:
-    moisture: sensor.spathiphyllum2_moisture
-    battery: sensor.spathiphyllum2_battery
-    temperature: sensor.spathiphyllum2_temperature
-    conductivity: sensor.spathiphyllum2_conductivity
-    brightness: sensor.spathiphyllum2_light_intensity
+    moisture: sensor.yucca_elephantipes_moisture
+    battery: sensor.yucca_elephantipes_battery
+    temperature: sensor.yucca_elephantipes_temperature
+    conductivity: sensor.yucca_elephantipes_conductivity
+    brightness: sensor.yucca_elephantipes_light_intensity
   min_moisture: 15
-  max_moisture: 65
+  max_moisture: 60
   min_battery: 20
   min_conductivity: 350
   max_conductivity: 2000
-  min_temperature: 15
+  min_temperature: 8
   max_temperature: 32

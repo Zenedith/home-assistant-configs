@@ -1,6 +1,6 @@
 title: Weather
 icon: mdi:weather-cloudy
-background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
+background: center / cover no-repeat url('/local/lovelace/background-15.gif') fixed
 name: System Status
 cards:
   - type: custom:card-modder
@@ -10,7 +10,7 @@ cards:
       entities:
         - input_boolean.plants_details
     style:
-      background-image: url("/local/lovelace/cardbackK.png")
+      background-image: url('/local/lovelace/cardbackK.png')
       background-repeat: no-repeat
       background-color: rgba(50,50,50,0.3)
       background-size: 100% 200px
@@ -28,10 +28,10 @@ cards:
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "zamioculcas zamiifolia"
+            species: 'zamioculcas zamiifolia'
             entity: plant.zamioculcas_zamiifolia
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -43,8 +43,6 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.zamioculcas_zamiifolia
-              state_not: 'unknown'
             - condition: state
               entity_id: input_boolean.plants_details
               state: 'on'
@@ -82,7 +80,7 @@ cards:
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -98,10 +96,10 @@ cards:
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "spathiphyllum kochii"
+            species: 'spathiphyllum kochii'
             entity: plant.spathiphyllum
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -113,8 +111,6 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.spathiphyllum
-              state_not: 'unknown'
             - condition: state
               entity_id: input_boolean.plants_details
               state: 'on'
@@ -152,7 +148,7 @@ cards:
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -164,14 +160,14 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.spathiphyllum2
+            - entity: plant.yucca_elephantipes
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "spathiphyllum kochii"
-            entity: plant.spathiphyllum2
+            species: 'yucca elephantipes'
+            entity: plant.yucca_elephantipes
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -183,46 +179,44 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.spathiphyllum2
-              state_not: 'unknown'
             - condition: state
               entity_id: input_boolean.plants_details
               state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
-            title: spathiphyllum2
+            title: yucca_elephantipes
             elements:
               - type: state-badge
-                entity: sensor.spathiphyllum2_light_intensity
+                entity: sensor.yucca_elephantipes_light_intensity
                 title: null
                 style:
                   top: 35%
                   left: 10%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum2_temperature
+                entity: sensor.yucca_elephantipes_temperature
                 title: null
                 style:
                   top: 35%
                   left: 25%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum2_conductivity
+                entity: sensor.yucca_elephantipes_conductivity
                 title: null
                 style:
                   top: 35%
                   left: 40%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum2_moisture
+                entity: sensor.yucca_elephantipes_moisture
                 title: null
                 style:
                   top: 35%
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -238,10 +232,10 @@ cards:
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "dracaena marginata"
+            species: 'dracaena marginata'
             entity: plant.dracaena_marginata
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -253,8 +247,6 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.dracaena_marginata
-              state_not: 'unknown'
             - condition: state
               entity_id: input_boolean.plants_details
               state: 'on'
@@ -292,7 +284,7 @@ cards:
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -324,7 +316,7 @@ cards:
             legend: true
             points: true
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -354,7 +346,7 @@ cards:
             legend: true
             points: true
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -479,7 +471,7 @@ cards:
             - entity: sensor.airly_caqi
             - entity: sensor.airly_caqi_level
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -601,7 +593,7 @@ cards:
             - automation.power_off_humidifier_when_humidity_above_55
             - automation.power_on_humidifier_when_humidity_below_45
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -620,7 +612,7 @@ cards:
             - script.rolety_close
             - script.rolety_open
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -670,13 +662,13 @@ cards:
           entity_pop_4: sensor.dark_sky_precip_probability_4d
           entity_pop_5: sensor.dark_sky_precip_probability_5d
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 400px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
-          color: "#999999"
+          color: '#999999'
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: custom:card-modder
@@ -685,7 +677,7 @@ cards:
           url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
           aspect_ratio: 140%
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -698,7 +690,7 @@ cards:
           type: weather-forecast
           entity: weather.dark_sky
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
