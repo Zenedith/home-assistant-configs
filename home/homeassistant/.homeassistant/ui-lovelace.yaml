@@ -22,7 +22,7 @@ resources:
   - url: /local/custom_ui/xiaomi_vacuum_map_card/xiaomi-vacuum-map-card.js?v=c6c80c7
     type: module
   - url: /community_plugin/check-button-card/check-button-card.js
-    type:
+    type: module
 cch:
   menu: overflow
   voice: hide
