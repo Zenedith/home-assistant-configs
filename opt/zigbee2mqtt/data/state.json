@@ -1,22 +1,22 @@
 {
     "0x00158d0001e0a7d3": {
-        "illuminance": 44,
-        "linkquality": 63,
+        "illuminance": 3,
+        "linkquality": 57,
         "occupancy": false,
         "battery": 100,
-        "voltage": 3045
+        "voltage": 3055
     },
     "0x00158d00022cc215": {
         "temperature": 22.3,
-        "linkquality": 99,
-        "humidity": 51.8,
-        "pressure": 1000.4,
+        "linkquality": 94,
+        "humidity": 51.7,
+        "pressure": 1000.2,
         "battery": 57,
         "voltage": 2925
     },
     "0x00158d0001e5d112": {
         "illuminance": 0,
-        "linkquality": 34,
+        "linkquality": 39,
         "occupancy": false,
         "battery": 100,
         "voltage": 3025
@@ -40,7 +40,7 @@
         "voltage": 3035
     },
     "0x00158d000237ad9d": {
-        "illuminance": 25,
+        "illuminance": 12,
         "linkquality": 65,
         "occupancy": false,
         "battery": 100,
@@ -48,14 +48,14 @@
     },
     "0x00158d0001e55705": {
         "illuminance": 0,
-        "linkquality": 15,
+        "linkquality": 0,
         "occupancy": false,
         "battery": 100,
         "voltage": 3015
     },
     "0x00158d00024e42b5": {
         "contact": true,
-        "linkquality": 78,
+        "linkquality": 86,
         "battery": 100,
         "voltage": 3015
     },
@@ -66,16 +66,16 @@
         "contact": true
     },
     "0x00158d000272fe71": {
-        "temperature": 21.9,
+        "temperature": 21.7,
         "linkquality": 84,
-        "humidity": 54.8,
-        "pressure": 1000.5,
+        "humidity": 53.8,
+        "pressure": 1000.2,
         "battery": 91,
         "voltage": 2985
     },
     "0x00158d0002bfd324": {
         "contact": true,
-        "linkquality": 60,
+        "linkquality": 52,
         "battery": 80,
         "voltage": 2965
     },
@@ -101,7 +101,7 @@
     "0x00158d00032169f8": {
         "contact": true,
         "linkquality": 110,
-        "battery": 97,
-        "voltage": 2995
+        "battery": 91,
+        "voltage": 2985
     }
 }
