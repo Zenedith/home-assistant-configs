@@ -452,6 +452,31 @@ cards:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
             overflow: hidden
 
+      - type: custom:xiaomi-vacuum-map-card
+        entity: vacuum.zmietekv2
+        debug: true
+        language: pl
+        map_image: '/local/custom_ui/xiaomi_vacuum_map_card/map.png'
+        calibration_points:
+          - vacuum:
+              x: 25500
+              y: 25500
+            map:
+              x: 466
+              y: 889
+          - vacuum:
+              x: 26500
+              y: 26500
+            map:
+              x: 730
+              y: 625
+          - vacuum:
+              x: 25500
+              y: 26500
+            map:
+              x: 466
+              y: 625
+
   - type: vertical-stack
     cards:
       - type: custom:card-modder

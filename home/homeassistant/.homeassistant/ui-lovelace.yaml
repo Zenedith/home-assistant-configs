@@ -21,6 +21,8 @@ resources:
     type: module
   - url: /local/custom_ui/flower-card/flower-card.js?v=0.2
     type: module
+  - url: /local/custom_ui/xiaomi_vacuum_map_card/xiaomi-vacuum-map-card.js?v=c6c80c7
+    type: module
 cch:
   menu: overflow
   voice: hide
