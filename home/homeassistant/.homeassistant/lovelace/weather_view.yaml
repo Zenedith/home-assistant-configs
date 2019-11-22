@@ -646,7 +646,7 @@ cards:
           type: 'custom:weather-card'
           entity: weather.dark_sky
           current: true
-          details: false
+          details: true
           forecast: true
         style:
           background-image: url('/local/lovelace/cardbackK.png')

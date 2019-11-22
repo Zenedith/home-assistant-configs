@@ -173,7 +173,39 @@ cards:
 #          border: solid 1px rgba(100,100,100,0.3)
 #          color: "#999999"
 #          box-shadow: 3px 3px rgba(0,0,0,0.4)
+      - type: custom:check-button-card
+        title: Humidifier maintenance
+        entity: sensor.maintenance_humidifier
+        severity:
+          - value: 7 days
+            hue: '120'
+          - value: 14 days
+            hue: '0'
+      - type: custom:check-button-card
+        title: Kratki maintenance
+        entity: sensor.maintenance_kratki
+        severity:
+          - value: 21 days
+            hue: '120'
+          - value: 31 days
+            hue: '0'
+        card_style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
+      - type: custom:check-button-card
+        title: Kratki
+        entity: sensor.maintenance_kratki
+        severity:
+          - value: 21 days
+            hue: '120'
+          - value: 31 days
+            hue: '0'
       - type: custom:card-modder
         card:
           type: custom:tasmota-tracker-card
