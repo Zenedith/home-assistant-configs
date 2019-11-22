@@ -28,6 +28,7 @@ webhook:
 # Enables the frontend
 frontend:
   javascript_version: latest
+  themes: !include_dir_merge_named themes
   extra_html_url:
     - /local/custom_ui/fontawesome/hass-fontawesome-solid.html
     - /local/custom_ui/fontawesome/hass-fontawesome-regular.html
