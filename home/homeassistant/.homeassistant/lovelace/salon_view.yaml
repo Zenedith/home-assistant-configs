@@ -301,6 +301,13 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
+      - type: 'custom:simple-thermostat'
+        entity: climate.salon
+        step_size: 1
+#        sensors:
+#          - attribute: min_temp
+#            name: Min temp
+
       - type: custom:card-modder
         card:
           type: conditional
@@ -465,3 +472,8 @@ cards:
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
           overflow: hidden
+
+      - type: 'custom:spotify-card'
+        client_id: !secret spotify_client_id
+        limit: 10
+#        device:
