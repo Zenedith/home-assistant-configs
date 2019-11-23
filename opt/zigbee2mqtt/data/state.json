@@ -16,7 +16,7 @@
     },
     "0x00158d0001e5d112": {
         "illuminance": 0,
-        "linkquality": 34,
+        "linkquality": 36,
         "occupancy": false,
         "battery": 100,
         "voltage": 3025
@@ -62,7 +62,7 @@
     "0x00158d0002b52fd0": {
         "battery": 91,
         "voltage": 2985,
-        "linkquality": 84,
+        "linkquality": 86,
         "contact": true
     },
     "0x00158d000272fe71": {
