@@ -1,6 +1,8 @@
 - platform: mqtt
   name: maintenance_humidifier
   state_topic: 'homeassistant/sensor/maintenance_humidifier/state'
+  unit_of_measurement: timestamp
 - platform: mqtt
   name: maintenance_kratki
   state_topic: 'homeassistant/sensor/maintenance_kratki/state'
+  unit_of_measurement: timestamp
