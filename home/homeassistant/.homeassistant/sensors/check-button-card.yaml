@@ -1,6 +1,6 @@
 - platform: mqtt
-  name: Humidifier maintenance
+  name: maintenance_humidifier
   state_topic: 'homeassistant/sensor/maintenance_humidifier/state'
 - platform: mqtt
-  name: Kratki maintenance
+  name: maintenance_kratki
   state_topic: 'homeassistant/sensor/maintenance_kratki/state'
