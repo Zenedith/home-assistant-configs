@@ -1,0 +1,4 @@
+- platform: mqtt
+  state_topic: "homeassistant/sensor/maintenance_humidifier"
+- platform: mqtt
+  state_topic: "homeassistant/sensor/maintenance_kratki"

@@ -176,7 +176,6 @@ cards:
       - type: custom:check-button-card
         title: Humidifier maintenance
         entity: sensor.maintenance_humidifier
-        discovery_prefix: ''
         severity:
           - value: 7 days
             hue: '120'
@@ -185,7 +184,6 @@ cards:
       - type: custom:check-button-card
         title: Kratki maintenance
         entity: sensor.maintenance_kratki
-        discovery_prefix: zigbee2mqtt
         severity:
           - value: 21 days
             hue: '120'
