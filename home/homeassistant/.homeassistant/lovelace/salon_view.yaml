@@ -474,6 +474,6 @@ cards:
           overflow: hidden
 
       - type: 'custom:spotify-card'
-        client_id: !secret spotify_client_id
+        client_id: !secret spotcast
         limit: 10
 #        device:
