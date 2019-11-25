@@ -175,7 +175,7 @@ cards:
 #          box-shadow: 3px 3px rgba(0,0,0,0.4)
       - type: custom:check-button-card
         title: Humidifier maintenance
-        entity: sensor.maintenance_humidifier
+        entity: sensor.maintenance_check_humidifier
         severity:
           - value: 7 days
             hue: '120'
@@ -183,7 +183,7 @@ cards:
             hue: '0'
       - type: custom:check-button-card
         title: Kratki maintenance
-        entity: sensor.maintenance_kratki
+        entity: sensor.maintenance_check_kratki
         severity:
           - value: 21 days
             hue: '120'
