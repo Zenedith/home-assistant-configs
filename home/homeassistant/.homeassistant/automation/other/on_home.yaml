@@ -44,7 +44,7 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: script.climate_on
+    - service: script.climate_turn_on
     - service: notify.mypushbullet
       data_template:
         title: 'Just returned home, climate on'
