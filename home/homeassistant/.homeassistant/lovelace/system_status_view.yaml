@@ -260,7 +260,7 @@ cards:
           title: Core
           show_header_toggle: false
           entities:
-            - binary_sensor.nova_online
+            - binary_sensor.tenda_online
             - binary_sensor.rmmini_online
 
             - binary_sensor.roleta_kuchnia_online
