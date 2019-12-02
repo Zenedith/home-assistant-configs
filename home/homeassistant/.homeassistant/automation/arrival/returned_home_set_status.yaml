@@ -3,12 +3,12 @@
   trigger:
     - platform: state
       entity_id: device_tracker.80b03dcda5eb
-      to: home
+      to: 'home'
       for:
         minutes: 1
     - platform: state
       entity_id: device_tracker.e49a79e25678
-      to: home
+      to: 'home'
       for:
         minutes: 1
   condition:
@@ -17,6 +17,9 @@
       before: '23:59:59'
     - condition: state
       entity_id: input_boolean.just_left
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.just_returned_home
       state: 'off'
   action:
     - service: input_boolean.turn_on
