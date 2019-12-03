@@ -1,5 +1,6 @@
 - alias: 'Everything off when gone'
-  initial_state: 'on'
+#  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: input_select.presence_status
@@ -45,7 +46,8 @@
           Rolety close when gone.
 
 - alias: 'Climate off when gone'
-  initial_state: 'on'
+#  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: input_select.presence_status

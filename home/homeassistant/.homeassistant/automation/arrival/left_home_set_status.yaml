@@ -1,5 +1,6 @@
 - alias: 'Left home - Set status'
-  initial_state: 'on'
+#  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: group.mobiledevices

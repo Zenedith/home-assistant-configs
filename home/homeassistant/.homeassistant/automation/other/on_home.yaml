@@ -1,5 +1,6 @@
 - alias: 'Rolety open when just returned home'
-  initial_state: 'on'
+#  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: input_select.presence_status
@@ -14,7 +15,8 @@
     - service: script.rolety_open
 
 - alias: 'Returned home, automation on'
-  initial_state: 'on'
+#  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: input_select.presence_status
@@ -34,7 +36,8 @@
           Returned home, automation on.
 
 - alias: 'Just returned home, climate on'
-  initial_state: 'on'
+#  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     - platform: state
       entity_id: input_select.presence_status
