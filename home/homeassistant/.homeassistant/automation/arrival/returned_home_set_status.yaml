@@ -1,6 +1,5 @@
 - alias: 'Returned home - Set status'
-#  initial_state: 'on'
-  initial_state: 'off'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: device_tracker.80b03dcda5eb

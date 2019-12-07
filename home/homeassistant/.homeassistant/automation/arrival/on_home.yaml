@@ -1,6 +1,5 @@
 - alias: 'Home for 1 minute'
-#  initial_state: 'on'
-  initial_state: 'off'
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: device_tracker.80b03dcda5eb
