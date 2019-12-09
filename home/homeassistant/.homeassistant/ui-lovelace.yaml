@@ -21,8 +21,8 @@ resources:
     type: module
   - url: /community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
     type: module
-  - url: /community_plugin/check-button-card/check-button-card.js
-    type: module
+#  - url: /community_plugin/check-button-card/check-button-card.js
+#    type: module
   - url: /community_plugin/simple-thermostat/simple-thermostat.js
     type: module
   - url: /community_plugin/spotify-card/spotify-card.js
