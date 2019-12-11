@@ -511,6 +511,8 @@ system_health:
 #zeroconf:   //Zeroconf/Avahi/Bonjour
 #ssdp:  //SSDP - Simple Service Discovery Protocol
 
+transmission:
+  host: 192.168.1.1
 
 speedtestdotnet:
   server_id: 7202
