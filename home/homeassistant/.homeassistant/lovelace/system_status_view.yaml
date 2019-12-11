@@ -72,25 +72,24 @@ cards:
           elements:
             - type: state-icon
               entity: sensor.transmission_active_torrents
-              style: {color: white, left: 25%, top: 85%}
-
+              style: {color: white, left: 3%, top: 75%}
             - type: state-label
               entity: sensor.transmission_active_torrents
-              style: {color: white, left: 20%, top: 93%, font-size: 90%, font-weight: bold}
+              style: {color: white, left: 3%, top: 93%, font-size: 90%, font-weight: bold}
 
             - type: state-icon
               entity: sensor.transmission_down_speed
-              style: {color: white, left: 50%, top: 85%}
+              style: {color: white, left: 15%, top: 75%}
             - type: state-label
               entity: sensor.transmission_down_speed
-              style: {color: white, left: 50%, top: 93%, font-size: 90%, font-weight: bold}
+              style: {color: white, left: 15%, top: 93%, font-size: 90%, font-weight: bold}
 
             - type: state-icon
               entity: sensor.transmission_up_speed
-              style: {color: white, left: 75%, top: 85%}
+              style: {color: white, left: 27%, top: 75%}
             - type: state-label
               entity: sensor.transmission_up_speed
-              style: {color: white, left: 75%, top: 93%, font-size: 90%, font-weight: bold}
+              style: {color: white, left: 27%, top: 93%, font-size: 90%, font-weight: bold}
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)

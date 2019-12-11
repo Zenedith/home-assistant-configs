@@ -131,6 +131,12 @@ sensor.asuswrt_download:
 sensor.asuswrt_upload:
   friendly_name: Upload
   icon: mdi:arrow-up-bold
+sensor.transmission_down_speed:
+  friendly_name: Download
+  icon: mdi:arrow-down-bold
+sensor.transmission_up_speed:
+  friendly_name: Upload
+  icon: mdi:arrow-up-bold
 switch.denon_volume:
   icon: mdi:speaker
 sensor.zamioculcas_zamiifolia_light_intensity:
