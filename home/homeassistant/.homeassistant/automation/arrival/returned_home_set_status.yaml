@@ -2,12 +2,12 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: device_tracker.80b03dcda5eb
+      entity_id: person.zenedith
       to: 'home'
       for:
         minutes: 1
     - platform: state
-      entity_id: device_tracker.e49a79e25678
+      entity_id: person.kate
       to: 'home'
       for:
         minutes: 1
