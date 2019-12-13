@@ -2,7 +2,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '21:00:00'
+    at: '23:00:00'
   condition:
     - condition: state
       entity_id: fan.purifier
@@ -17,7 +17,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '21:00:00'
+    at: '23:00:00'
   condition:
     - condition: state
       entity_id: fan.smartmi2
@@ -157,6 +157,9 @@
   condition:
     - condition: template
       value_template: "{{ not is_state('sensor.purifier_mode', 'favorite') }}"
+    - condition: time
+      after: '06:00:00'
+      before: '22:59:59'
   action:
     - service: fan.turn_on
       data:
