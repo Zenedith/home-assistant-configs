@@ -164,7 +164,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.purifier
-        speed: 'favourite'
+        speed: 'Favorite'
     - service: notify.mypushbullet
       data_template:
         title: 'Purifier full power when aqi above 15'
