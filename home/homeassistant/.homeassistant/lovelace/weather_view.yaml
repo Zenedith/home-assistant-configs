@@ -378,13 +378,8 @@ cards:
                 entity: sensor.humidifier_motor_speed
                 style: {color: white, left: 35%, top: 93%}
 
-              #              - type: icon
-              #                icon: mdi:blender
-              #                entity: sensor.humidifier_humidity
-              #                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-              #
               - type: state-label
-                entity: sensor.korytarz_temp_humidity
+                entity: sensor.humidifier_humidity
                 style: {color: white, left: 49%, top: 53%, font-size: 100px}
 
               - type: icon
