@@ -8,7 +8,7 @@ cards:
       type: entities
       show_header_toggle: false
       entities:
-        - input_boolean.plants_details
+        - entity: input_boolean.plants_details
     style:
       background-image: url('/local/lovelace/cardbackK.png')
       background-repeat: no-repeat
@@ -295,10 +295,10 @@ cards:
           type: custom:mini-graph-card
           name: Temperatura
           entities:
-            - sensor.korytarz_temp_temperature
-            - sensor.kuchnia_temp_temperature
-            - sensor.purifier_temperature
-            - sensor.humidifier_temperature
+            - entity: sensor.korytarz_temp_temperature
+            - entity: sensor.kuchnia_temp_temperature
+            - entity: sensor.purifier_temperature
+            - entity: sensor.humidifier_temperature
           height: 65
           line_width: 2
           font_size: 70
@@ -325,10 +325,10 @@ cards:
           type: custom:mini-graph-card
           name: Wilgotność
           entities:
-            - sensor.korytarz_temp_humidity
-            - sensor.kuchnia_temp_humidity
-            - sensor.purifier_humidity
-            - sensor.humidifier_humidity
+            - entity: sensor.korytarz_temp_humidity
+            - entity: sensor.kuchnia_temp_humidity
+            - entity: sensor.purifier_humidity
+            - entity: sensor.humidifier_humidity
           height: 65
           line_width: 2
           font_size: 70
@@ -603,11 +603,11 @@ cards:
           title: Automations
           show_header_toggle: false
           entities:
-            - group.wietrzenie
-            - automation.purifier_full_power_when_aqi_above_15
-            - automation.purifier_sleep_mode_when_aqi_below_8
-            - automation.power_off_humidifier_when_humidity_above_55
-            - automation.power_on_humidifier_when_humidity_below_45
+            - entity: group.wietrzenie
+            - entity: automation.purifier_full_power_when_aqi_above_15
+            - entity: automation.purifier_sleep_mode_when_aqi_below_8
+            - entity: automation.power_off_humidifier_when_humidity_above_60
+            - entity: automation.power_on_humidifier_when_humidity_below_45
         style:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
@@ -623,10 +623,10 @@ cards:
           title: Scripts
           show_header_toggle: false
           entities:
-            - script.climate_off
-            - script.climate_turn_on
-            - script.rolety_close
-            - script.rolety_open
+            - entity: script.climate_off
+            - entity: script.climate_turn_on
+            - entity: script.rolety_close
+            - entity: script.rolety_open
         style:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat

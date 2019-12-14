@@ -79,12 +79,12 @@
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Humidifier off, no water
 
-- alias: 'Power off humidifier when humidity above 55%'
+- alias: 'Power off humidifier when humidity above 60%'
   initial_state: 'on'
   trigger:
     - platform: numeric_state
       entity_id: sensor.korytarz_temp_humidity
-      above: 55
+      above: 60
   condition:
     - condition: state
       entity_id: fan.smartmi2
@@ -95,10 +95,10 @@
         entity_id: fan.smartmi2
     - service: notify.mypushbullet
       data_template:
-        title: 'Humidifier off humidity > 55%'
+        title: 'Humidifier off humidity > 60%'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Humidifier off humidity > 55%
+          Humidifier off humidity > 60%
 
 - alias: 'Power on humidifier when humidity below 45%'
   initial_state: 'on'
@@ -187,7 +187,7 @@
         entity_id: fan.purifier,fan.smartmi2
     - service: automation.turn_off
       data:
-        entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_55, automation.power_on_humidifier_when_humidity_below_45
+        entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_60, automation.power_on_humidifier_when_humidity_below_45
     - service: notify.mypushbullet
       data_template:
         title: 'Purifier and humidifier automations off'
@@ -207,7 +207,7 @@
         entity_id: fan.purifier
     - service: automation.turn_on
       data:
-        entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_55, automation.power_on_humidifier_when_humidity_below_45
+        entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_60, automation.power_on_humidifier_when_humidity_below_45
     - service: notify.mypushbullet
       data_template:
         title: 'Purifier automations on'
