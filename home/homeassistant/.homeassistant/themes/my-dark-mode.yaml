@@ -2,7 +2,7 @@
 #
 # my Dark Mode Theme
 #
-ios-dark-mode:
+my-dark-mode:
   # Global
   primary-color: '#363941'
   light-primary-color: "#B6B6C1"  # light gray
