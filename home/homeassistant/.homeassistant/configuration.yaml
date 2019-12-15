@@ -72,6 +72,7 @@ updater:
 #    - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
 #    - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
 
+python_script:
 
 # Discover some devices automatically
 discovery:
