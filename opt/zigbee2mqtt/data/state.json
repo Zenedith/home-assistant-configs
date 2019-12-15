@@ -7,7 +7,7 @@
         "voltage": 3055
     },
     "0x00158d00022cc215": {
-        "temperature": 23.3,
+        "temperature": 23.2,
         "linkquality": 94,
         "humidity": 54.3,
         "pressure": 986,
@@ -15,7 +15,7 @@
         "voltage": 2915
     },
     "0x00158d0001e5d112": {
-        "illuminance": 29,
+        "illuminance": 28,
         "linkquality": 31,
         "occupancy": true,
         "battery": 100,
@@ -40,22 +40,22 @@
         "voltage": 3025
     },
     "0x00158d000237ad9d": {
-        "illuminance": 289,
+        "illuminance": 15,
         "linkquality": 76,
-        "occupancy": false,
+        "occupancy": true,
         "battery": 100,
         "voltage": 3025
     },
     "0x00158d0001e55705": {
         "illuminance": 0,
-        "linkquality": 13,
-        "occupancy": false,
+        "linkquality": 15,
+        "occupancy": true,
         "battery": 100,
         "voltage": 3005
     },
     "0x00158d00024e42b5": {
-        "contact": true,
-        "linkquality": 70,
+        "contact": false,
+        "linkquality": 65,
         "battery": 100,
         "voltage": 3015
     },
