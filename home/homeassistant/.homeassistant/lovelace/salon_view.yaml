@@ -42,6 +42,23 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
+          entity: switch.choinka
+          name: Choinka
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
+          tap_action:
+            action: toggle
+          image: /local/lovelace/downstairs/xmas-lights_1.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
           entity: light.swiatlo_kuchnia_stol
           name: Dining
           show_name: false

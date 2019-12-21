@@ -9,20 +9,20 @@
 #  payload_available: "Online"
 #  payload_not_available: "Offline"
 #  retain: false
-#- platform: mqtt
-#  name: "Listwa RTV"
-#  state_topic: "zigbee2mqtt/sonoff2/POWER"
-#  command_topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
-#  availability_topic: "zigbee2mqtt/sonoff2/LWT"
-#  qos: 1
-#  payload_on: "ON"
-#  payload_off: "OFF"
-#  state_on: "ON"
-#  state_off: "OFF"
-#  optimistic: false
-#  payload_available: "Online"
-#  payload_not_available: "Offline"
-#  retain: false
+- platform: mqtt
+  name: "Choinka"
+  state_topic: "zigbee2mqtt/sonoff2/POWER"
+  command_topic: "zigbee2mqtt/sonoff2/cmnd/POWER"
+  availability_topic: "zigbee2mqtt/sonoff2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+  optimistic: false
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
 - platform: mqtt
   name: "Listwa Sypialnia"
   state_topic: "zigbee2mqtt/sonoff1/POWER"
