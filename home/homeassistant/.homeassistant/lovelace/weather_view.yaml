@@ -299,6 +299,7 @@ cards:
             - entity: sensor.kuchnia_temp_temperature
             - entity: sensor.purifier_temperature
             - entity: sensor.humidifier_temperature
+            - entity: sensor.mi_t_e72e017168dc
           height: 65
           line_width: 2
           font_size: 70
@@ -329,6 +330,7 @@ cards:
             - entity: sensor.kuchnia_temp_humidity
             - entity: sensor.purifier_humidity
             - entity: sensor.humidifier_humidity
+            - entity: sensor.mi_h_e72e017168dc
           height: 65
           line_width: 2
           font_size: 70

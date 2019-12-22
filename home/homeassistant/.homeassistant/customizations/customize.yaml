@@ -179,3 +179,7 @@ sensor.dracaena_marginata_conductivity:
   friendly_name: cond
 sensor.dracaena_marginata_moisture:
   friendly_name: moisture
+sensor.mi_h_e72e017168dc:
+  friendly_name: rtv humidity
+sensor.mi_t_e72e017168dc:
+  friendly_name: rtv temperature
