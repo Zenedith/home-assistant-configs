@@ -266,7 +266,7 @@ cards:
             - entity: sensor.birthday_paulina
               secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
               type: 'custom:secondaryinfo-entity-row'
-            - entity: sensor.birthday_paulina
+            - entity: sensor.birthday_rodzice
               secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
               type: 'custom:secondaryinfo-entity-row'
         style:
