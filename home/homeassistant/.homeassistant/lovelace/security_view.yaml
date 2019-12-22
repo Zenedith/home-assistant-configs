@@ -258,6 +258,17 @@ cards:
             - entity: sensor.birthday_jan
               secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
               type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_zene
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_martyna
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+            - entity: sensor.birthday_paulina
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_paulina
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
