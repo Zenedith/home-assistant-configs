@@ -182,6 +182,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.locate
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 80%, top: 81%}
 
               - type: icon
@@ -190,6 +192,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.return_to_base
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 60%, top: 81%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: icon
@@ -198,6 +202,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.start
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 40%, top: 81%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: icon
@@ -206,6 +212,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.stop
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 20%, top: 81%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: icon
