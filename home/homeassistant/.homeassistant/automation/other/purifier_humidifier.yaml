@@ -93,12 +93,12 @@
     - service: fan.turn_off
       data:
         entity_id: fan.smartmi2
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Humidifier off humidity > 60%'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Humidifier off humidity > 60%
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Humidifier off humidity > 60%'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Humidifier off humidity > 60%
 
 - alias: 'Power on humidifier when humidity below 45%'
   initial_state: 'on'
@@ -117,12 +117,12 @@
     - service: fan.turn_on
       data:
         entity_id: fan.smartmi2
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Humidifier on humidity < 45%'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Humidifier on humidity < 45 %
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Humidifier on humidity < 45%'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Humidifier on humidity < 45 %
 
 - alias: 'Purifier sleep mode when aqi below 8'
   initial_state: 'on'
@@ -141,12 +141,12 @@
       data:
         entity_id: fan.purifier
         speed: 'silent'
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Purifier sleep mode aqi < 8'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier sleep mode aqi < 8
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Purifier sleep mode aqi < 8'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Purifier sleep mode aqi < 8
 
 - alias: 'Purifier full power when aqi above 15'
   initial_state: 'on'
@@ -168,12 +168,12 @@
       data:
         entity_id: fan.purifier
         speed: 'Favorite'
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Purifier full power when aqi above 15'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier full power when aqi above 15
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Purifier full power when aqi above 15'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Purifier full power when aqi above 15
 
 - alias: 'Purifier and humidifier off when wietrzenie start'
   initial_state: 'on'
@@ -188,12 +188,12 @@
     - service: automation.turn_off
       data:
         entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_60, automation.power_on_humidifier_when_humidity_below_45
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Purifier and humidifier automations off'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier and humidifier automations off
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Purifier and humidifier automations off'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Purifier and humidifier automations off
 
 - alias: 'Purifier on when wietrzenie end'
   initial_state: 'on'
@@ -208,9 +208,9 @@
     - service: automation.turn_on
       data:
         entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_60, automation.power_on_humidifier_when_humidity_below_45
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Purifier automations on'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Purifier automations on
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Purifier automations on'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Purifier automations on

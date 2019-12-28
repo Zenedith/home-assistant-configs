@@ -209,13 +209,9 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_off
       data:
         entity_id: climate.sypialnia
-        temperature: 12
-        target_temp_high: 12
-        target_temp_low: 12
-        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w sypialni'
@@ -237,13 +233,9 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_off
       data:
         entity_id: climate.sypialnia
-        temperature: 12
-        target_temp_high: 12
-        target_temp_low: 12
-        hvac_mode: auto
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
   initial_state: 'on'
@@ -256,13 +248,9 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_on
       data:
         entity_id: climate.sypialnia
-        temperature: 20
-        target_temp_high: 20
-        target_temp_low: 18
-        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w sypialni'
