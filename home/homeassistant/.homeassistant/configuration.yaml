@@ -482,6 +482,7 @@ tts:
 #whitelist_external_dirs:
 #  - /config
 
+date_notifier: !include date_notifiers.yaml
 camera: !include cameras/dafang.yaml
 timer: !include timer/timer.yaml
 group: !include_dir_named groups
