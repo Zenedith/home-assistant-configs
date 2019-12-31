@@ -319,12 +319,14 @@
       entity_id: input_boolean.listwa_sypialnia
       to: 'off'
   condition:
-    - condition: state
-      entity_id: binary_sensor.zen_pc_online
-      state: 'on'
-    - condition: state
-      entity_id: media_player.sypialnia_chromecast
-      state: 'playing'
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.zen_pc_online
+        state: 'on'
+      - condition: state
+        entity_id: media_player.sypialnia_chromecast
+        state: 'playing'
   action:
     - service: input_boolean.turn_on
       data:
