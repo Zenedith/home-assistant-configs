@@ -270,10 +270,50 @@
     - condition: state
       entity_id: switch.listwa_salon_slot_1
       state: 'on'
+    - condition: state
+      entity_id: media_player.chromecastaudio9772
+      state: 'off'
   action:
     - service: switch.turn_off
       data:
         entity_id: switch.listwa_salon_slot_1
+
+- alias: 'Wyłącz ampli przy wyłączonym chromecast'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: media_player.chromecastaudio9772
+      to: 'off'
+      for:
+        seconds: 15
+  condition:
+    - condition: state
+      entity_id: switch.listwa_salon_slot_1
+      state: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_salon_slot_1
+
+- alias: 'Włącz ampli przy włączonym chromecast'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: media_player.chromecastaudio9772
+      to: 'playing'
+  condition:
+    - condition: state
+      entity_id: switch.listwa_salon_slot_1
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_salon_slot_1
+    - delay: 00:00:05
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.broadlink_denon_input
+        option: 'Chromecast'
 
 - alias: 'Przykręć ogrzewanie przy otwartych drzwiach w salonie'
   initial_state: 'on'

@@ -333,6 +333,7 @@ cards:
             - binary_sensor.sharp_online
             - binary_sensor.chromecast_pokoj_janka_online
             - binary_sensor.chromecast_salon_online
+            - binary_sensor.chromecast_sypialnia_online
             - binary_sensor.playstation_4_online
             - binary_sensor.xbox_online
         style:

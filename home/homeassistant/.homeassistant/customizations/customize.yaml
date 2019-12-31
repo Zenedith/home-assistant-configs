@@ -183,3 +183,5 @@ sensor.mi_h_e72e017168dc:
   friendly_name: rtv
 sensor.mi_t_e72e017168dc:
   friendly_name: rtv
+media_player.chromecastaudio9772:
+  friendly_name: salon

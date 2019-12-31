@@ -1,19 +1,19 @@
-- alias: 'Listwa sypialnia notification'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '01:00:00'
-  condition:
-    - condition: state
-      entity_id: input_boolean.listwa_sypialnia
-      state: 'on'
-  action:
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Listwa sypialnia off'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Listwa za 5 minut się wyłączy
+#- alias: 'Listwa sypialnia notification'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '01:00:00'
+#  condition:
+#    - condition: state
+#      entity_id: input_boolean.listwa_sypialnia
+#      state: 'on'
+#  action:
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Listwa sypialnia off'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Listwa za 5 minut się wyłączy
 
 - alias: 'Listwa sypialnia off'
   initial_state: 'on'
@@ -23,6 +23,9 @@
   condition:
     - condition: state
       entity_id: binary_sensor.zen_pc_online
+      state: 'off'
+    - condition: state
+      entity_id: media_player.sypialnia_chromecast
       state: 'off'
   action:
     - service: input_boolean.turn_off
@@ -301,6 +304,9 @@
     - condition: state
       entity_id: binary_sensor.zen_pc_online
       state: 'off'
+    - condition: state
+      entity_id: media_player.sypialnia_chromecast
+      state: 'off'
   action:
     - service: switch.turn_off
       data:
@@ -316,6 +322,9 @@
     - condition: state
       entity_id: binary_sensor.zen_pc_online
       state: 'on'
+    - condition: state
+      entity_id: media_player.sypialnia_chromecast
+      state: 'playing'
   action:
     - service: input_boolean.turn_on
       data:
@@ -325,4 +334,4 @@
         title: 'Listwa sypialnia off impossible'
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Nie można wyłączyć listwy ponieważ zen-pc jest włączony.
+          Nie można wyłączyć listwy ponieważ zen-pc lub chromecast jest włączony.
