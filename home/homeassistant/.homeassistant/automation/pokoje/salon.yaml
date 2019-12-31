@@ -288,6 +288,9 @@
         seconds: 15
   condition:
     - condition: state
+      entity_id: media_player.sony_bravia_tv
+      state: 'off'
+    - condition: state
       entity_id: switch.listwa_salon_slot_1
       state: 'on'
   action:
