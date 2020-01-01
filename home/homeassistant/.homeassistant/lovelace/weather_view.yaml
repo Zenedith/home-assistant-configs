@@ -296,11 +296,22 @@ cards:
           name: Temperatura
           entities:
             - entity: sensor.korytarz_temp_temperature
+              name: Korytarz
             - entity: sensor.kuchnia_temp_temperature
+              name: Kuchnia
             - entity: sensor.purifier_temperature
+              name: Sypialnia
             - entity: sensor.humidifier_temperature
               show_legend: false
             - entity: sensor.mi_t_e72e017168dc
+              name: Salon
+            - color: gray
+              entity: input_number.nighttime
+              name: Night
+              show_line: false
+              show_points: false
+              show_legend: false
+              y_axis: secondary
           aggregate_func: avg
           cache: true
           height: 65
@@ -319,6 +330,7 @@ cards:
             extrema: true
             legend: true
             points: true
+            fill: false
         style:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
@@ -334,11 +346,22 @@ cards:
           name: Wilgotność
           entities:
             - entity: sensor.korytarz_temp_humidity
+              name: Korytarz
             - entity: sensor.kuchnia_temp_humidity
+              name: Kuchnia
             - entity: sensor.purifier_humidity
+              name: Sypialnia
             - entity: sensor.humidifier_humidity
               show_legend: false
             - entity: sensor.mi_h_e72e017168dc
+              name: Salon
+            - color: gray
+              entity: input_number.nighttime
+              name: Night
+              show_line: false
+              show_points: false
+              show_legend: false
+              y_axis: secondary
           aggregate_func: avg
           cache: true
           decimals: 1
@@ -357,6 +380,7 @@ cards:
             extrema: true
             legend: true
             points: true
+            fill: false
         style:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat

@@ -494,6 +494,7 @@ weblink: !include weblink.yaml
 switch: !include_dir_merge_list switches
 cover: !include cover/shellys.yaml
 input_boolean: !include input_boolean.yaml
+input_number: !include input_number.yaml
 input_select: !include_dir_merge_named input_selects
 weather: !include weather/darksky.yaml
 light: !include_dir_merge_list lights

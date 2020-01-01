@@ -1,0 +1,6 @@
+nighttime:
+  name: Night
+  initial: 7
+  min: 7
+  max: 16
+  step: 1
