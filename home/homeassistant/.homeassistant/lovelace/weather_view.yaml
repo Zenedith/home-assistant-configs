@@ -312,7 +312,7 @@ cards:
 #              show_points: false
 #              show_legend: false
 #              y_axis: secondary
-          aggregate_func: avg
+          aggregate_func: min
           cache: true
           height: 65
           decimals: 1
@@ -326,11 +326,11 @@ cards:
           points_per_hour: 1
           hour24: true
           show:
-            labels: false
+            labels: true
             extrema: false
             legend: true
             points: true
-            fill: false
+            fill: true
         style:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
@@ -362,7 +362,7 @@ cards:
 #              show_points: false
 #              show_legend: false
 #              y_axis: secondary
-          aggregate_func: avg
+          aggregate_func: min
           cache: true
           decimals: 1
           height: 65
@@ -378,9 +378,9 @@ cards:
           show:
             labels: true
             extrema: false
-            legend: false
+            legend: true
             points: true
-            fill: false
+            fill: true
         style:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
