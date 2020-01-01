@@ -305,13 +305,13 @@ cards:
               show_legend: false
             - entity: sensor.mi_t_e72e017168dc
               name: Salon
-            - color: gray
-              entity: input_number.nighttime
-              name: Night
-              show_line: false
-              show_points: false
-              show_legend: false
-              y_axis: secondary
+#            - color: gray
+#              entity: input_number.nighttime
+#              name: Night
+#              show_line: false
+#              show_points: false
+#              show_legend: false
+#              y_axis: secondary
           aggregate_func: avg
           cache: true
           height: 65
@@ -355,13 +355,13 @@ cards:
               show_legend: false
             - entity: sensor.mi_h_e72e017168dc
               name: Salon
-            - color: gray
-              entity: input_number.nighttime
-              name: Night
-              show_line: false
-              show_points: false
-              show_legend: false
-              y_axis: secondary
+#            - color: gray
+#              entity: input_number.nighttime
+#              name: Night
+#              show_line: false
+#              show_points: false
+#              show_legend: false
+#              y_axis: secondary
           aggregate_func: avg
           cache: true
           decimals: 1
