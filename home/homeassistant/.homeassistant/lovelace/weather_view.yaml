@@ -326,8 +326,8 @@ cards:
           points_per_hour: 1
           hour24: true
           show:
-            labels: true
-            extrema: true
+            labels: false
+            extrema: false
             legend: true
             points: true
             fill: false
@@ -377,8 +377,8 @@ cards:
           hour24: true
           show:
             labels: true
-            extrema: true
-            legend: true
+            extrema: false
+            legend: false
             points: true
             fill: false
         style:
