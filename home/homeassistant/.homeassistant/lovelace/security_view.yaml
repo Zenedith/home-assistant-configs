@@ -247,6 +247,7 @@ cards:
           title: Security
           show_header_toggle: false
           entities:
+            - entity: input_boolean.guest_mode
             - entity: script.everything_off
             - entity: script.everything_off_secure
             - entity: sensor.anniversary_our_wedding

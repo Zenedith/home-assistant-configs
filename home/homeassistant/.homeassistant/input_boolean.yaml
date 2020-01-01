@@ -1,6 +1,9 @@
 guest_mode:
   name: Guest Mode
-  icon: mdi:account-multiple
+  icon: mdi:human-handsup
+holiday_mode:
+  name: Holiday mode
+  icon: mdi:airplane
 just_returned_home:
   name: Just Returned Home
 just_left:
