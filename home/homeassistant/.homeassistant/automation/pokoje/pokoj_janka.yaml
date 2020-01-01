@@ -200,6 +200,11 @@
     - service: climate.turn_on
       data:
         entity_id: climate.pokoj_janka
+    - delay: 00:00:10
+    - service: climate.set_hvac_mode
+      data:
+        entity_id: climate.sypialnia
+        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przywrócone w pokóju Janka'
