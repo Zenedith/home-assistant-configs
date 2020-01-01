@@ -299,10 +299,17 @@ cards:
             - entity: sensor.kuchnia_temp_temperature
             - entity: sensor.purifier_temperature
             - entity: sensor.humidifier_temperature
+              show_legend: false
             - entity: sensor.mi_t_e72e017168dc
+          aggregate_func: avg
+          cache: true
           height: 65
+          decimals: 1
           line_width: 2
           font_size: 70
+          font_size_header: 14
+          lower_bound: 18
+          upper_bound: 30
           hours_to_show: 24
           more_info: true
           points_per_hour: 1
@@ -330,10 +337,17 @@ cards:
             - entity: sensor.kuchnia_temp_humidity
             - entity: sensor.purifier_humidity
             - entity: sensor.humidifier_humidity
+              show_legend: false
             - entity: sensor.mi_h_e72e017168dc
+          aggregate_func: avg
+          cache: true
+          decimals: 1
           height: 65
           line_width: 2
           font_size: 70
+          font_size_header: 14
+          lower_bound: 35
+          upper_bound: 65
           hours_to_show: 24
           more_info: true
           points_per_hour: 1
