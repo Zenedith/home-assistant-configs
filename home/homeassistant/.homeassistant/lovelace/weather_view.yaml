@@ -309,7 +309,7 @@ cards:
           font_size: 70
           font_size_header: 14
           lower_bound: 18
-          upper_bound: 30
+          upper_bound: 25
           hours_to_show: 24
           more_info: true
           points_per_hour: 1
@@ -346,8 +346,8 @@ cards:
           line_width: 2
           font_size: 70
           font_size_header: 14
-          lower_bound: 35
-          upper_bound: 65
+          lower_bound: 40
+          upper_bound: 60
           hours_to_show: 24
           more_info: true
           points_per_hour: 1
