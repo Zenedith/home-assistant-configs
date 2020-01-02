@@ -31,7 +31,7 @@
         data:
           entity_id: switch.listwa_salon_slot_3
     listwa_sypialnia_switch:
-      friendly_name: Xbox power switch
+      friendly_name: Listwa sypialnia switch
       entity_id:
         - binary_sensor.listwa_sypiania_used
         - switch.listwa_sypialnia
