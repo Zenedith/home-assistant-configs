@@ -287,6 +287,22 @@
         entity_id: input_select.broadlink_denon_input
         option: 'Chromecast'
 
+- alias: 'Ustaw zrodło ampli na tv gdy chromecast juz nie gra'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: media_player.chromecastaudio9772
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: media_player.sony_bravia_tv
+      state: 'on'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.broadlink_denon_input
+        option: 'TV'
+
 - alias: 'Przykręć ogrzewanie przy otwartych drzwiach w salonie'
   initial_state: 'on'
   trigger:
