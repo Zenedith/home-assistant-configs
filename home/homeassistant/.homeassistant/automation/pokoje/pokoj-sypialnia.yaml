@@ -22,10 +22,7 @@
     at: '01:05:00'
   condition:
     - condition: state
-      entity_id: binary_sensor.zen_pc_online
-      state: 'off'
-    - condition: state
-      entity_id: media_player.sypialnia_chromecast
+      entity_id: binary_sensor.listwa_sypiania_used
       state: 'off'
   action:
     - service: input_boolean.turn_off
@@ -57,7 +54,7 @@
           Listwa on
 
 - alias: 'Listwa sypialnia (weekend) on'
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '08:00:00'
@@ -70,8 +67,8 @@
       entity_id: input_boolean.listwa_sypialnia
       state: 'off'
     - condition: state
-      entity_id: group.mobiledevices
-      state: home
+      entity_id: binary_sensor.home_occupied
+      state: on
   action:
     - service: input_boolean.turn_on
       data:
@@ -307,10 +304,7 @@
       to: 'off'
   condition:
     - condition: state
-      entity_id: binary_sensor.zen_pc_online
-      state: 'off'
-    - condition: state
-      entity_id: media_player.sypialnia_chromecast
+      entity_id: binary_sensor.listwa_sypiania_used
       state: 'off'
   action:
     - service: switch.turn_off
@@ -324,14 +318,9 @@
       entity_id: input_boolean.listwa_sypialnia
       to: 'off'
   condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.zen_pc_online
-        state: 'on'
-      - condition: state
-        entity_id: media_player.sypialnia_chromecast
-        state: 'playing'
+    - condition: state
+      entity_id: binary_sensor.listwa_sypiania_used
+      state: 'on'
   action:
     - service: input_boolean.turn_on
       data:
