@@ -309,7 +309,7 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: switch.listwa_sypialnia
+        entity_id: switch.listwa_sypialnia_switch
 
 - alias: 'Listwa sypialnia switch off impossible'
   initial_state: 'on'

@@ -128,9 +128,11 @@ cards:
                 name: USB
   #            - entity: switch.listwa_salon_slot_1
   #              name: Denon
-              - entity: switch.listwa_salon_slot_2
+#              - entity: switch.listwa_salon_slot_2
+              - entity: switch.xbox_power_switch
                 name: Xbox One S
-              - entity: switch.listwa_salon_slot_3
+#              - entity: switch.listwa_salon_slot_3
+              - entity: switch.ps4_power_switch
                 name: Playstation 4
   #            - entity: switch.listwa_salon_slot_4
   #              name: Kamera

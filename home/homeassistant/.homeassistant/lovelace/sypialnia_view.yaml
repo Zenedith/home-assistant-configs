@@ -29,7 +29,7 @@ cards:
               state: 'on'
           card:
             type: picture-entity
-            entity: input_boolean.listwa_sypialnia
+            entity: switch.listwa_sypialnia_switch
             name: Listwa
             show_name: false
             show_state: true
