@@ -1,27 +1,12 @@
-- alias: 'Jan RTV notification'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '00:00:00'
-  condition:
-    - condition: state
-      entity_id: switch.rtv_jan
-      state: 'on'
-  action:
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Listwa RTV Jan off'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Listwa za 5 minut się wyłączy
-
 - alias: 'Jan RTV off'
   initial_state: 'on'
   trigger:
     platform: time
     at: '00:05:00'
   action:
-    - service: script.jan_listwa_rtv_off
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_jan_switch
 
 - alias: 'Bedside offline notify'
   initial_state: 'on'
