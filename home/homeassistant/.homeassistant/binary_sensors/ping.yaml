@@ -173,8 +173,8 @@
   scan_interval: 60
 
 - platform: ping
-  name: tenda_online
-  host: 192.168.1.46
+  name: ac_point_online
+  host: 192.168.1.110
   count: 1
   scan_interval: 30
 
