@@ -11,7 +11,7 @@ resources:
     type: module
   - url: /community_plugin/lovelace-card-tools/card-tools.js
     type: module
-  - url: /community_plugin/compact-custom-header/compact-custom-header.js
+  - url: /community_plugin/custom-header/custom-header.js
     type: module
   - url: /local/custom_ui/kiosk.js?track=true
     type: js
