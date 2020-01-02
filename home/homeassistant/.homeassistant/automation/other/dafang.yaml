@@ -7,7 +7,7 @@
   condition:
     - condition: state
       entity_id: binary_sensor.home_occupied
-      state: off
+      state: 'off'
   action:
     service: notify.mypushbullet
     data_template:

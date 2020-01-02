@@ -68,7 +68,7 @@
       state: 'off'
     - condition: state
       entity_id: binary_sensor.home_occupied
-      state: on
+      state: 'on'
   action:
     - service: input_boolean.turn_on
       data:

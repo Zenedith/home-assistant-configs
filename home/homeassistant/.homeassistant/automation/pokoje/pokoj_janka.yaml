@@ -56,7 +56,7 @@
       state: 'on'
     - condition: state
       entity_id: binary_sensor.home_occupied
-      state: on
+      state: 'on'
   action:
     - service: light.turn_on
       data:
