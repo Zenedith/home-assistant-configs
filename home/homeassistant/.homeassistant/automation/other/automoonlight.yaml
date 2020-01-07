@@ -1,8 +1,28 @@
+- alias: 'korytarz ambilight on'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '23:30:00'
+  action:
+    - service: light.turn_on
+      entity_id: light.lampa_korytarz_ambilight
+      data_template:
+        brightness: 1
+
+- alias: 'korytarz ambilight off'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '07:00:00'
+  action:
+    - service: light.turn_off
+      entity_id: light.lampa_korytarz_ambilight
+
 - alias: 'Auto chillout Jas on'
   initial_state: 'on'
   trigger:
     platform: time
-    at: '21:30:00'
+    at: '21:29:00'
   action:
     - service: input_boolean.turn_on
       data:
@@ -12,7 +32,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '23:30:00'
+    at: '21:29:15'
   action:
     - service: input_boolean.turn_on
       data:
