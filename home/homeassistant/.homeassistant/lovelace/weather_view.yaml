@@ -419,7 +419,7 @@ cards:
                 style: {color: white, left: 35%, top: 93%}
 
               - type: state-label
-                entity: sensor.humidifier_humidity
+                entity: sensor.purifier_humidity
                 style: {color: white, left: 49%, top: 53%, font-size: 100px}
 
               - type: icon

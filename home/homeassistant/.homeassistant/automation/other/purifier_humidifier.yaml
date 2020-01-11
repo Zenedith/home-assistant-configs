@@ -83,7 +83,7 @@
   initial_state: 'on'
   trigger:
     - platform: numeric_state
-      entity_id: sensor.korytarz_temp_humidity
+      entity_id: sensor.purifier_humidity
       above: 60
   condition:
     - condition: state
@@ -104,7 +104,7 @@
   initial_state: 'on'
   trigger:
     platform: numeric_state
-    entity_id: sensor.korytarz_temp_humidity
+    entity_id: sensor.purifier_humidity
     below: 45
   condition:
     - condition: state
