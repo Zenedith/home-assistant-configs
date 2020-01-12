@@ -245,3 +245,19 @@
         message: |
           {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
           Ogrzewanie przywrócone w sypialni
+
+- alias: 'Turn off media (listwa) if switch is available'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: switch.listwa_sypialnia_switch
+      from: 'unavailable'
+      to: 'on'
+    - platform: state
+      entity_id: switch.listwa_sypialnia_switch
+      from: 'unknown'
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_sypialnia_switch

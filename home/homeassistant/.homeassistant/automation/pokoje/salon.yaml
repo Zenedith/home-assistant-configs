@@ -392,3 +392,35 @@
       to: 'on'
   action:
     - service: script.ambient_on
+
+- alias: 'Turn off media (ps4) if switch is available'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: switch.ps4_power_switch
+      from: 'unavailable'
+      to: 'on'
+    - platform: state
+      entity_id: switch.ps4_power_switch
+      from: 'unknown'
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ps4_power_switch
+
+- alias: 'Turn off media (xbox) if switch is available'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: switch.xbox_power_switch
+      from: 'unavailable'
+      to: 'on'
+    - platform: state
+      entity_id: switch.xbox_power_switch
+      from: 'unknown'
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.xbox_power_switch
