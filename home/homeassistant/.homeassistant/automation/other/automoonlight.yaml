@@ -8,6 +8,13 @@
       entity_id: light.lampa_korytarz_ambilight
       data_template:
         brightness: 1
+
+- alias: 'korytarz automations off'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '00:30:00'
+  action:
     - service: automation.turn_off
       data:
         entity_id: automation.wlacz_swiatlo_w_korytarzu_gdy_ruch,automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch,automation.wlacz_swiatlo_w_sypialni_gdy_ruch
