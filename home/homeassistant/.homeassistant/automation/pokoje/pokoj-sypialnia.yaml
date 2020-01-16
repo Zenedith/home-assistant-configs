@@ -178,6 +178,12 @@
     - service: light.turn_off
       data:
         entity_id: light.swiatlo_sypialnia
+    - service: automation.trigger
+      data:
+        entity_id: automation.sleep_mode_for_air_purifier, automation.sleep_mode_for_humidifier
+    - service: automation.turn_off
+      data:
+        entity_id: automation.sleep_mode_for_air_purifier, automation.sleep_mode_for_humidifier
 
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
   initial_state: 'on'

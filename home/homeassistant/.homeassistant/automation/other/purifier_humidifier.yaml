@@ -157,9 +157,9 @@
   condition:
     - condition: template
       value_template: "{{ not is_state('sensor.purifier_mode', 'favorite') }}"
-    - condition: time
-      after: '08:00:00'
-      before: '21:30:00'
+    - condition: state
+      entity_id: input_boolean.sypialnia_chillout
+      state: 'off'
   action:
     - service: fan.turn_on
       data:
