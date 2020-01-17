@@ -643,6 +643,27 @@ cards:
           title: Automations
           show_header_toggle: false
           entities:
+            - entity: fan.purifier
+            - entity: input_select.xiaomi_airpurifier_mode
+            - entity: input_number.xiaomi_airpurifier_favorite_level
+            - entity: switch.xiaomi_airpurifier_child_lock
+            - entity: switch.xiaomi_airpurifier_led
+            - entity: switch.xiaomi_airpurifier_buzzer
+        style:
+          background-image: url('/local/lovelace/cardbackK.png')
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: entities
+          title: Automations
+          show_header_toggle: false
+          entities:
             - entity: group.wietrzenie
             - entity: automation.purifier_full_power_when_aqi_above_15
             - entity: automation.purifier_sleep_mode_when_aqi_below_8

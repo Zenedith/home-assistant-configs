@@ -214,3 +214,43 @@
 #        message: |
 #          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
 #          Purifier automations on
+
+- alias: 'Air Purifier mode change'
+  trigger:
+    entity_id: input_select.xiaomi_airpurifier_mode
+    platform: state
+  action:
+    service: fan.set_speed
+    data_template:
+      entity_id: fan.purifier
+      speed: '{{ states.input_select.xiaomi_airpurifier_mode.state }}'
+
+- alias: 'Air Purifier mode changed'
+  trigger:
+    platform: state
+    entity_id: fan.purifier
+  action:
+    service: input_select.select_option
+    entity_id: input_select.xiaomi_airpurifier_mode
+    data_template:
+      option: '{{ states.fan.xiaomi_miio_device.attributes.mode }}'
+
+- alias: 'Air Purifier favorite level change'
+  trigger:
+    entity_id: input_number.xiaomi_airpurifier_favorite_level
+    platform: state
+  action:
+    service: fan.xiaomi_miio_set_favorite_level
+    data_template:
+      entity_id: fan.purifier
+      level: '{{ states.input_number.xiaomi_airpurifier_favorite_level.state | int }}'
+
+- alias: 'Air Purifier favorite level changed'
+  trigger:
+    platform: state
+    entity_id: fan.purifier
+  action:
+    service: input_number.set_value
+    entity_id: input_number.xiaomi_airpurifier_favorite_level
+    data_template:
+      value: '{{ states.fan.xiaomi_miio_device.attributes.favorite_level }}'
