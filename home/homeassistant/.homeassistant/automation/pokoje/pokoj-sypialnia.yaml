@@ -178,12 +178,14 @@
     - service: light.turn_off
       data:
         entity_id: light.swiatlo_sypialnia
-    - service: automation.trigger
+    - service: fan.set_speed
       data:
-        entity_id: automation.sleep_mode_for_air_purifier, automation.sleep_mode_for_humidifier
-    - service: automation.turn_off
+        entity_id: fan.purifier
+        speed: 'silent'
+    - service: fan.set_speed
       data:
-        entity_id: automation.sleep_mode_for_air_purifier, automation.sleep_mode_for_humidifier
+        entity_id: fan.smartmi2
+        speed: 'silent'
 
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
   initial_state: 'on'
