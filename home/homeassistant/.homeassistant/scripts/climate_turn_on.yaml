@@ -1,0 +1,35 @@
+sequence:
+  - service: climate.turn_on
+    data:
+      entity_id: climate.salon, climate.pokoj_janka, climate.sypialnia
+  - delay: 00:00:10
+  - service: climate.set_hvac_mode
+    data:
+      entity_id: climate.sypialnia
+      hvac_mode: auto
+  - service: climate.set_hvac_mode
+    data:
+      entity_id: climate.pokoj_janka
+      hvac_mode: auto
+  - service: climate.set_hvac_mode
+    data:
+      entity_id: climate.salon
+      hvac_mode: auto
+#  - service: climate.set_temperature
+#    data:
+#      entity_id: climate.sypialnia
+#      temperature: 21
+#      target_temp_high: 21
+#      target_temp_low: 18
+#  - service: climate.set_temperature
+#    data:
+#      entity_id: climate.pokoj_janka
+#      temperature: 21
+#      target_temp_high: 21
+#      target_temp_low: 18
+#  - service: climate.set_temperature
+#    data:
+#      entity_id: climate.salon
+#      temperature: 20
+#      target_temp_high: 20
+#      target_temp_low: 18

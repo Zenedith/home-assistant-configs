@@ -1,11 +1,11 @@
 sequence:
   - service: climate.turn_off
     data:
-      entity_id: climate.sypialnia, climate.pokoj_janka, climate.sypialnia
+      entity_id: climate.salon, climate.pokoj_janka, climate.sypialnia
 
 #  - service: climate.set_temperature
 #    data:
-#      entity_id:
+#      entity_id: climate.sypialnia
 #      temperature: 18
 #      target_temp_high: 18
 #      target_temp_low: 18

@@ -247,8 +247,29 @@ cards:
           title: Security
           show_header_toggle: false
           entities:
-            - script.everything_off
-            - script.everything_off_secure
+            - entity: input_boolean.guest_mode
+            - entity: script.everything_off
+            - entity: script.everything_off_secure
+            - entity: sensor.anniversary_our_wedding
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_kasia
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_jan
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_zene
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_martyna
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+            - entity: sensor.birthday_paulina
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
+            - entity: sensor.birthday_rodzice
+              secondary_info: '[[ {entity}.attributes.nextoccur ]]  ( [[ {entity}.attributes.years ]] Years )'
+              type: 'custom:secondaryinfo-entity-row'
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

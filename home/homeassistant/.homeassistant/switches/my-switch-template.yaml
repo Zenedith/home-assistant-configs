@@ -1,0 +1,62 @@
+- platform: template
+  switches:
+    xbox_power_switch:
+      friendly_name: Xbox power switch
+      entity_id:
+        - binary_sensor.xbox_online
+        - switch.listwa_salon_slot_2
+      value_template: "{{ is_state('switch.listwa_salon_slot_2', 'on') }}"
+      availability_template: "{{ is_state('binary_sensor.xbox_online', 'off') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.listwa_salon_slot_2
+      turn_off:
+        service: switch.turn_off
+        data:
+          entity_id: switch.listwa_salon_slot_2
+    ps4_power_switch:
+      friendly_name: PS4 power switch
+      entity_id:
+        - binary_sensor.playstation_4_online
+        - switch.listwa_salon_slot_3
+      value_template: "{{ is_state('switch.listwa_salon_slot_3', 'on') }}"
+      availability_template: "{{ is_state('binary_sensor.playstation_4_online', 'off') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.listwa_salon_slot_3
+      turn_off:
+        service: switch.turn_off
+        data:
+          entity_id: switch.listwa_salon_slot_3
+    listwa_sypialnia_switch:
+      friendly_name: Listwa sypialnia switch
+      entity_id:
+        - binary_sensor.listwa_sypiania_used
+        - switch.listwa_sypialnia
+      value_template: "{{ is_state('switch.listwa_sypialnia', 'on') }}"
+      availability_template: "{{ is_state('binary_sensor.listwa_sypiania_used', 'off') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.listwa_sypialnia
+      turn_off:
+        service: switch.turn_off
+        data:
+          entity_id: switch.listwa_sypialnia
+    listwa_jan_switch:
+      friendly_name: Listwa jan switch
+      entity_id:
+        - binary_sensor.sharp_online
+        - switch.rtv_jan
+      value_template: "{{ is_state('switch.rtv_jan', 'on') }}"
+      availability_template: "{{ is_state('binary_sensor.sharp_online', 'off') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.rtv_jan
+      turn_off:
+        service: switch.turn_off
+        data:
+          entity_id: switch.rtv_jan

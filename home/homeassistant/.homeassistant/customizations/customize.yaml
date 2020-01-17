@@ -131,6 +131,12 @@ sensor.asuswrt_download:
 sensor.asuswrt_upload:
   friendly_name: Upload
   icon: mdi:arrow-up-bold
+sensor.transmission_down_speed:
+  friendly_name: Download
+  icon: mdi:arrow-down-bold
+sensor.transmission_up_speed:
+  friendly_name: Upload
+  icon: mdi:arrow-up-bold
 switch.denon_volume:
   icon: mdi:speaker
 sensor.zamioculcas_zamiifolia_light_intensity:
@@ -157,13 +163,13 @@ sensor.spathiphyllum_conductivity:
   friendly_name: cond
 sensor.spathiphyllum_moisture:
   friendly_name: moisture
-sensor.spathiphyllum2_light_intensity:
+sensor.yucca_elephantipes_light_intensity:
   friendly_name: lx
-sensor.spathiphyllum2_temperature:
+sensor.yucca_elephantipes_temperature:
   friendly_name: C
-sensor.spathiphyllum2_conductivity:
+sensor.yucca_elephantipes_conductivity:
   friendly_name: cond
-sensor.spathiphyllum2_moisture:
+sensor.yucca_elephantipes_moisture:
   friendly_name: moisture
 sensor.dracaena_marginata_light_intensity:
   friendly_name: lx
@@ -173,3 +179,9 @@ sensor.dracaena_marginata_conductivity:
   friendly_name: cond
 sensor.dracaena_marginata_moisture:
   friendly_name: moisture
+sensor.mi_h_e72e017168dc:
+  friendly_name: rtv
+sensor.mi_t_e72e017168dc:
+  friendly_name: rtv
+media_player.chromecastaudio9772:
+  friendly_name: salon

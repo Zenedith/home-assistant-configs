@@ -1,40 +1,25 @@
 title: Weather
 icon: mdi:weather-cloudy
-background: center / cover no-repeat url("/local/lovelace/background-15.gif") fixed
+background: center / cover no-repeat url('/local/lovelace/background-15.gif') fixed
 name: System Status
 cards:
+  - type: custom:card-modder
+    card:
+      type: entities
+      show_header_toggle: false
+      entities:
+        - entity: input_boolean.plants_details
+    style:
+      background-image: url('/local/lovelace/cardbackK.png')
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 200px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+
   - type: vertical-stack
     cards:
-      - type: custom:card-modder
-        card:
-          type: custom:mini-graph-card
-          name: Temperatura
-          entities:
-            - sensor.korytarz_temp_temperature
-            - sensor.kuchnia_temp_temperature
-            - sensor.purifier_temperature
-            - sensor.humidifier_temperature
-          height: 65
-          line_width: 2
-          font_size: 70
-          hours_to_show: 24
-          more_info: true
-          points_per_hour: 1
-          hour24: true
-          show:
-            labels: true
-            extrema: true
-            legend: true
-            points: true
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-
       - type: custom:card-modder
         card:
           type: conditional
@@ -43,10 +28,10 @@ cards:
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "zamioculcas zamiifolia"
+            species: 'zamioculcas zamiifolia'
             entity: plant.zamioculcas_zamiifolia
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -58,8 +43,8 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.zamioculcas_zamiifolia
-              state_not: 'unknown'
+            - entity: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
@@ -94,7 +79,7 @@ cards:
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -110,10 +95,10 @@ cards:
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "spathiphyllum kochii"
+            species: 'spathiphyllum kochii'
             entity: plant.spathiphyllum
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -125,8 +110,8 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.spathiphyllum
-              state_not: 'unknown'
+            - entity: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
@@ -161,7 +146,7 @@ cards:
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -173,14 +158,14 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.spathiphyllum2
+            - entity: plant.yucca_elephantipes
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "spathiphyllum kochii"
-            entity: plant.spathiphyllum2
+            species: 'yucca elephantipes'
+            entity: plant.yucca_elephantipes
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -192,43 +177,43 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.spathiphyllum2
-              state_not: 'unknown'
+            - entity: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
-            title: spathiphyllum2
+            title: yucca_elephantipes
             elements:
               - type: state-badge
-                entity: sensor.spathiphyllum2_light_intensity
+                entity: sensor.yucca_elephantipes_light_intensity
                 title: null
                 style:
                   top: 35%
                   left: 10%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum2_temperature
+                entity: sensor.yucca_elephantipes_temperature
                 title: null
                 style:
                   top: 35%
                   left: 25%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum2_conductivity
+                entity: sensor.yucca_elephantipes_conductivity
                 title: null
                 style:
                   top: 35%
                   left: 40%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum2_moisture
+                entity: sensor.yucca_elephantipes_moisture
                 title: null
                 style:
                   top: 35%
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -244,10 +229,10 @@ cards:
               state_not: 'unknown'
           card:
             type: custom:flower-card
-            species: "dracaena marginata"
+            species: 'dracaena marginata'
             entity: plant.dracaena_marginata
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -259,8 +244,8 @@ cards:
         card:
           type: conditional
           conditions:
-            - entity: plant.dracaena_marginata
-              state_not: 'unknown'
+            - entity: input_boolean.plants_details
+              state: 'on'
           card:
             type: picture-elements
             image: /local/lovelace/plants.jpg
@@ -295,7 +280,7 @@ cards:
                   left: 92%
                   --ha-label-badge-font-size: 1em
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -308,26 +293,96 @@ cards:
       - type: custom:card-modder
         card:
           type: custom:mini-graph-card
-          name: Wilgotność
+          name: Temperatura
           entities:
-            - sensor.korytarz_temp_humidity
-            - sensor.kuchnia_temp_humidity
-            - sensor.purifier_humidity
-            - sensor.humidifier_humidity
+            - entity: sensor.korytarz_temp_temperature
+              name: Korytarz
+            - entity: sensor.kuchnia_temp_temperature
+              name: Kuchnia
+            - entity: sensor.purifier_temperature
+              name: Sypialnia
+            - entity: sensor.humidifier_temperature
+              show_legend: false
+            - entity: sensor.mi_t_e72e017168dc
+              name: Salon
+#            - color: gray
+#              entity: input_number.nighttime
+#              name: Night
+#              show_line: false
+#              show_points: false
+#              show_legend: false
+#              y_axis: secondary
+          aggregate_func: min
+          cache: true
           height: 65
+          decimals: 1
           line_width: 2
           font_size: 70
+          font_size_header: 14
+          lower_bound: 18
+          upper_bound: 25
           hours_to_show: 24
           more_info: true
           points_per_hour: 1
           hour24: true
           show:
             labels: true
-            extrema: true
+            extrema: false
             legend: true
             points: true
+            fill: true
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: custom:mini-graph-card
+          name: Wilgotność
+          entities:
+            - entity: sensor.korytarz_temp_humidity
+              name: Korytarz
+            - entity: sensor.kuchnia_temp_humidity
+              name: Kuchnia
+            - entity: sensor.purifier_humidity
+              name: Sypialnia
+            - entity: sensor.humidifier_humidity
+              show_legend: false
+            - entity: sensor.mi_h_e72e017168dc
+              name: Salon
+#            - color: gray
+#              entity: input_number.nighttime
+#              name: Night
+#              show_line: false
+#              show_points: false
+#              show_legend: false
+#              y_axis: secondary
+          aggregate_func: min
+          cache: true
+          decimals: 1
+          height: 65
+          line_width: 2
+          font_size: 70
+          font_size_header: 14
+          lower_bound: 40
+          upper_bound: 60
+          hours_to_show: 24
+          more_info: true
+          points_per_hour: 1
+          hour24: true
+          show:
+            labels: true
+            extrema: false
+            legend: true
+            points: true
+            fill: true
+        style:
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -363,13 +418,8 @@ cards:
                 entity: sensor.humidifier_motor_speed
                 style: {color: white, left: 35%, top: 93%}
 
-              #              - type: icon
-              #                icon: mdi:blender
-              #                entity: sensor.humidifier_humidity
-              #                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-              #
               - type: state-label
-                entity: sensor.korytarz_temp_humidity
+                entity: sensor.purifier_humidity
                 style: {color: white, left: 49%, top: 53%, font-size: 100px}
 
               - type: icon
@@ -437,6 +487,31 @@ cards:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
             overflow: hidden
 
+#      - type: custom:xiaomi-vacuum-map-card
+#        entity: vacuum.zmietekv2
+#        debug: true
+#        language: pl
+#        map_image: '/local/custom_ui/xiaomi_vacuum_map_card/map.png'
+#        calibration_points:
+#          - vacuum:
+#              x: 25500
+#              y: 25500
+#            map:
+#              x: 466
+#              y: 889
+#          - vacuum:
+#              x: 26500
+#              y: 26500
+#            map:
+#              x: 730
+#              y: 625
+#          - vacuum:
+#              x: 25500
+#              y: 26500
+#            map:
+#              x: 466
+#              y: 625
+
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -452,7 +527,7 @@ cards:
             - entity: sensor.airly_caqi
             - entity: sensor.airly_caqi_level
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -565,15 +640,16 @@ cards:
       - type: custom:card-modder
         card:
           type: entities
-          title: Scripts
+          title: Automations
           show_header_toggle: false
           entities:
-            - script.climate_off
-            - script.climate_on
-            - script.rolety_close
-            - script.rolety_open
+            - entity: group.wietrzenie
+            - entity: automation.purifier_full_power_when_aqi_above_15
+            - entity: automation.purifier_sleep_mode_when_aqi_below_8
+            - entity: automation.power_off_humidifier_when_humidity_above_60
+            - entity: automation.power_on_humidifier_when_humidity_below_45
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -583,53 +659,38 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: 'custom:dark-sky-weather-card'
-          entity_current_conditions: sensor.dark_sky_icon
-          entity_temperature: sensor.dark_sky_temperature
-          entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1d
-          entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2d
-          entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3d
-          entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4d
-          entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5d
-          entity_forecast_icon_1: sensor.dark_sky_icon_1d
-          entity_forecast_icon_2: sensor.dark_sky_icon_2d
-          entity_forecast_icon_3: sensor.dark_sky_icon_3d
-          entity_forecast_icon_4: sensor.dark_sky_icon_4d
-          entity_forecast_icon_5: sensor.dark_sky_icon_5d
-          entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_0d
-          entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1d
-          entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2d
-          entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3d
-          entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4d
-          entity_summary_1: sensor.dark_sky_summary_1d
-          entity_summary_2: sensor.dark_sky_summary_2d
-          entity_summary_3: sensor.dark_sky_summary_3d
-          entity_summary_4: sensor.dark_sky_summary_4d
-          entity_summary_5: sensor.dark_sky_summary_5d
-          entity_sun: sun.sun
-          entity_visibility: sensor.dark_sky_visibility
-          entity_daytime_high: sensor.dark_sky_daytime_high_temperature_0d
-          entity_wind_bearing: sensor.dark_sky_wind_bearing
-          entity_wind_speed: sensor.dark_sky_wind_speed
-          entity_humidity: sensor.dark_sky_humidity
-          entity_pressure: sensor.dark_sky_pressure
-          entity_apparent_temp: sensor.dark_sky_apparent_temperature
-          entity_daily_summary: sensor.dark_sky_daily_summary
-          entity_pop: sensor.dark_sky_precip_probability
-          entity_pop_intensity: sensor.dark_sky_precip_intensity
-          entity_pop_1: sensor.dark_sky_precip_probability_1d
-          entity_pop_2: sensor.dark_sky_precip_probability_2d
-          entity_pop_3: sensor.dark_sky_precip_probability_3d
-          entity_pop_4: sensor.dark_sky_precip_probability_4d
-          entity_pop_5: sensor.dark_sky_precip_probability_5d
+          type: entities
+          title: Scripts
+          show_header_toggle: false
+          entities:
+            - entity: script.climate_off
+            - entity: script.climate_turn_on
+            - entity: script.rolety_close
+            - entity: script.rolety_open
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 200px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: 'custom:weather-card'
+          entity: weather.dark_sky
+          current: true
+          details: true
+          forecast: true
+        style:
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 400px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
-          color: "#999999"
+          color: '#999999'
           box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: custom:card-modder
@@ -638,7 +699,7 @@ cards:
           url: https://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&row=400&col=180&lang=pl
           aspect_ratio: 140%
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px
@@ -651,7 +712,7 @@ cards:
           type: weather-forecast
           entity: weather.dark_sky
         style:
-          background-image: url("/local/lovelace/cardbackK.png")
+          background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
           background-size: 100% 200px

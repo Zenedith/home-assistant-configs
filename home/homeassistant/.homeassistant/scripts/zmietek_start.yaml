@@ -2,7 +2,7 @@ sequence:
   - service: switch.turn_on
     data:
       entity_id: switch.zmietek
-  - delay: 00:00:40
+  - delay: 00:15:00
   - service: vacuum.start
     data:
       entity_id: vacuum.zmietekv2

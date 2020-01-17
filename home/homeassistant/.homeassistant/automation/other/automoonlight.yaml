@@ -1,8 +1,41 @@
+- alias: 'korytarz ambilight on'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '23:30:00'
+  action:
+    - service: light.turn_on
+      entity_id: light.lampa_korytarz_ambilight
+      data_template:
+        brightness: 1
+
+- alias: 'korytarz automations off'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '00:30:00'
+  action:
+    - service: automation.turn_off
+      data:
+        entity_id: automation.wlacz_swiatlo_w_korytarzu_gdy_ruch,automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch,automation.wlacz_swiatlo_w_sypialni_gdy_ruch
+
+- alias: 'korytarz ambilight off'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '07:00:00'
+  action:
+    - service: light.turn_off
+      entity_id: light.lampa_korytarz_ambilight
+    - service: automation.turn_on
+      data:
+        entity_id: automation.wlacz_swiatlo_w_korytarzu_gdy_ruch,automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch,automation.wlacz_swiatlo_w_sypialni_gdy_ruch
+
 - alias: 'Auto chillout Jas on'
   initial_state: 'on'
   trigger:
     platform: time
-    at: '21:30:00'
+    at: '21:29:00'
   action:
     - service: input_boolean.turn_on
       data:
@@ -12,7 +45,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '23:30:00'
+    at: '21:29:15'
   action:
     - service: input_boolean.turn_on
       data:

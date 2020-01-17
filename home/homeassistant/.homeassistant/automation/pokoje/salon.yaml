@@ -149,6 +149,9 @@
     platform: time
     at: '11:00:00'
   condition:
+    - condition: state
+      entity_id: binary_sensor.home_occupied
+      state: 'off'
     - condition: time
       weekday:
       - mon
@@ -198,12 +201,12 @@
       data:
         entity_id: switch.zmietek
 
-- alias: 'Wyłącz ładowanie zmietka przy 100% baterii'
+- alias: 'Wyłącz ładowanie zmietka przy 90% baterii'
   initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.vacuum_battery
-      to: '100'
+      to: '90'
   action:
     - service: switch.turn_off
       data:
@@ -258,11 +261,11 @@
 #      data:
 #        entity_id: input_boolean.broadlink_denon_receiver
 #
-- alias: 'Wyłącz ampli przy wyłączonym tv'
+- alias: 'Wyłącz ampli przy wyłączonym tv i chromecast'
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: media_player.sony_bravia_tv
+      entity_id: binary_sensor.rtv_used
       to: 'off'
       for:
         seconds: 45
@@ -274,6 +277,34 @@
     - service: switch.turn_off
       data:
         entity_id: switch.listwa_salon_slot_1
+
+- alias: 'Ustaw zrodło ampli na chromecast gdy gra'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: media_player.chromecastaudio9772
+      to: 'playing'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.broadlink_denon_input
+        option: 'Chromecast'
+
+- alias: 'Ustaw zrodło ampli na tv gdy chromecast juz nie gra'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: media_player.chromecastaudio9772
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: media_player.sony_bravia_tv
+      state: 'on'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.broadlink_denon_input
+        option: 'TV'
 
 - alias: 'Przykręć ogrzewanie przy otwartych drzwiach w salonie'
   initial_state: 'on'
@@ -288,13 +319,9 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_off
       data:
         entity_id: climate.salon
-        temperature: 12
-        target_temp_high: 12
-        target_temp_low: 12
-        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w salonie'
@@ -321,13 +348,9 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_off
       data:
         entity_id: climate.salon
-        temperature: 12
-        target_temp_high: 12
-        target_temp_low: 12
-        hvac_mode: auto
 
 - alias: 'Przywróć ogrzewanie przy zamkniętych drzwiach w salonie'
   initial_state: 'on'
@@ -340,12 +363,13 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_on
       data:
         entity_id: climate.salon
-        temperature: 20
-        target_temp_high: 20
-        target_temp_low: 18
+    - delay: 00:00:10
+    - service: climate.set_hvac_mode
+      data:
+        entity_id: climate.salon
         hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
@@ -371,3 +395,35 @@
       to: 'on'
   action:
     - service: script.ambient_on
+
+- alias: 'Turn off media (ps4) if switch is available'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: switch.ps4_power_switch
+      from: 'unavailable'
+      to: 'on'
+    - platform: state
+      entity_id: switch.ps4_power_switch
+      from: 'unknown'
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ps4_power_switch
+
+- alias: 'Turn off media (xbox) if switch is available'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: switch.xbox_power_switch
+      from: 'unavailable'
+      to: 'on'
+    - platform: state
+      entity_id: switch.xbox_power_switch
+      from: 'unknown'
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.xbox_power_switch

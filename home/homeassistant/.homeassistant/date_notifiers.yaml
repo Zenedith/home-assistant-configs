@@ -1,0 +1,16 @@
+- kratki:
+  name: 'kratki'
+  hour: 19
+  minute: 40
+  day: 28
+  message: 'kratki'
+  days_notice: 0
+  notifier: 'mypushbullet'
+- kwiatki_nawoz:
+  name: 'kwiatki nazwoz'
+  hour: 19
+  minute: 40
+  day: 28
+  message: 'kwiatki nazwoz'
+  days_notice: 0
+  notifier: 'mypushbullet'

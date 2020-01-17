@@ -1,0 +1,42 @@
+- alias: Reminder - Refresh date countdown sensors
+  trigger:
+    - platform: time
+      at: '00:00:01'
+    - platform: homeassistant
+      event: start
+  action:
+    - service: python_script.date_countdown
+      data:
+        name: Kasia
+        type: birthday
+        date: 20/11/1982
+    - service: python_script.date_countdown
+      data:
+        name: Zene
+        type: birthday
+        date: 15/02/1982
+    - service: python_script.date_countdown
+      data:
+        name: Martyna
+        type: birthday
+        date: 10/08/1986
+    - service: python_script.date_countdown
+      data:
+        name: Rodzice
+        type: birthday
+        date: 13/10/1954
+    - service: python_script.date_countdown
+      data:
+        name: Paulina
+        type: birthday
+        date: 23/02/1991
+    - service: python_script.date_countdown
+      data:
+        name: Jan
+        type: birthday
+        date: 28/05/2015
+    - service: python_script.date_countdown
+      data:
+        name: Our wedding
+        type: anniversary
+        date: 18/07/2009

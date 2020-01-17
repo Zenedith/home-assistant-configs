@@ -1,27 +1,12 @@
-- alias: 'Jan RTV notification'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '00:00:00'
-  condition:
-    - condition: state
-      entity_id: switch.rtv_jan
-      state: 'on'
-  action:
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Listwa RTV Jan off'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Listwa za 5 minut się wyłączy
-
 - alias: 'Jan RTV off'
   initial_state: 'on'
   trigger:
     platform: time
     at: '00:05:00'
   action:
-    - service: script.jan_listwa_rtv_off
+    - service: switch.turn_off
+      data:
+        entity_id: switch.listwa_jan_switch
 
 - alias: 'Bedside offline notify'
   initial_state: 'on'
@@ -55,8 +40,8 @@
       entity_id: binary_sensor.bedside_online
       state: 'on'
     - condition: state
-      entity_id: group.mobiledevices
-      state: home
+      entity_id: binary_sensor.home_occupied
+      state: 'on'
   action:
     - service: light.turn_on
       data:
@@ -158,13 +143,9 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_off
       data:
         entity_id: climate.pokoj_janka
-        temperature: 12
-        target_temp_high: 12
-        target_temp_low: 12
-        hvac_mode: auto
     - service: notify.mypushbullet
       data_template:
         title: 'Ogrzewanie przykręcone w pokóju Janka'
@@ -186,13 +167,9 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_off
       data:
         entity_id: climate.pokoj_janka
-        temperature: 12
-        target_temp_high: 12
-        target_temp_low: 12
-        hvac_mode: auto
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
   initial_state: 'on'
@@ -205,12 +182,13 @@
       entity_id: input_boolean.ogrzewanie
       state: 'on'
   action:
-    - service: climate.set_temperature
+    - service: climate.turn_on
       data:
         entity_id: climate.pokoj_janka
-        temperature: 20
-        target_temp_high: 20
-        target_temp_low: 18
+    - delay: 00:00:10
+    - service: climate.set_hvac_mode
+      data:
+        entity_id: climate.sypialnia
         hvac_mode: auto
     - service: notify.mypushbullet
       data_template:

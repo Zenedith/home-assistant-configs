@@ -68,6 +68,37 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-elements
+          image: /local/lovelace/settings/transmission.png
+          elements:
+            - type: state-icon
+              entity: sensor.transmission_active_torrents
+              style: {color: white, left: 3%, top: 75%}
+            - type: state-label
+              entity: sensor.transmission_active_torrents
+              style: {color: white, left: 3%, top: 93%, font-size: 90%, font-weight: bold}
+
+            - type: state-icon
+              entity: sensor.transmission_down_speed
+              style: {color: white, left: 15%, top: 75%}
+            - type: state-label
+              entity: sensor.transmission_down_speed
+              style: {color: white, left: 15%, top: 93%, font-size: 90%, font-weight: bold}
+
+            - type: state-icon
+              entity: sensor.transmission_up_speed
+              style: {color: white, left: 27%, top: 75%}
+            - type: state-label
+              entity: sensor.transmission_up_speed
+              style: {color: white, left: 27%, top: 93%, font-size: 90%, font-weight: bold}
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          overflow: hidden
+
+      - type: custom:card-modder
+        card:
+          type: picture-elements
           image: /local/lovelace/settings/rpi.png
           elements:
             - type: state-label
@@ -118,7 +149,8 @@ cards:
             - automation.power_state_on_ha_start_up
             - automation.everything_off_when_gone
             - automation.rolety_close_when_gone
-            - automation.rolety_open_when_home
+            - automation.rolety_open_when_just_returned_home
+            - automation.returned_home_automation_on
             - automation.roleta_w_kuchni_60_o_17
             - automation.rolety_pokoje_open_at_10
             - automation.zmietek_start_when_gone_15_min_delay
@@ -171,6 +203,38 @@ cards:
 #          border-radius: 20px
 #          border: solid 1px rgba(100,100,100,0.3)
 #          color: "#999999"
+#          box-shadow: 3px 3px rgba(0,0,0,0.4)
+#      - type: custom:check-button-card
+#        title: Humidifier maintenance
+#        entity: sensor.maintenance_check_humidifier
+#        severity:
+#          - value: 7 days
+#            hue: '120'
+#          - value: 14 days
+#            hue: '0'
+#        card_style:
+#          background-image: url("/local/lovelace/cardbackK.png")
+#          background-repeat: no-repeat
+#          background-color: rgba(50,50,50,0.3)
+#          background-size: 100% 200px
+#          border-radius: 20px
+#          border: solid 1px rgba(100,100,100,0.3)
+#          box-shadow: 3px 3px rgba(0,0,0,0.4)
+#      - type: custom:check-button-card
+#        title: Kratki maintenance
+#        entity: sensor.maintenance_check_kratki
+#        severity:
+#          - value: 21 days
+#            hue: '120'
+#          - value: 31 days
+#            hue: '0'
+#        card_style:
+#          background-image: url("/local/lovelace/cardbackK.png")
+#          background-repeat: no-repeat
+#          background-color: rgba(50,50,50,0.3)
+#          background-size: 100% 200px
+#          border-radius: 20px
+#          border: solid 1px rgba(100,100,100,0.3)
 #          box-shadow: 3px 3px rgba(0,0,0,0.4)
 
       - type: custom:card-modder
@@ -227,7 +291,7 @@ cards:
           title: Core
           show_header_toggle: false
           entities:
-            - binary_sensor.nova_online
+            - binary_sensor.ac_point_online
             - binary_sensor.rmmini_online
 
             - binary_sensor.roleta_kuchnia_online
@@ -269,6 +333,7 @@ cards:
             - binary_sensor.sharp_online
             - binary_sensor.chromecast_pokoj_janka_online
             - binary_sensor.chromecast_salon_online
+            - binary_sensor.chromecast_sypialnia_online
             - binary_sensor.playstation_4_online
             - binary_sensor.xbox_online
         style:

@@ -95,6 +95,12 @@
   scan_interval: 60
 
 - platform: ping
+  name: chromecast_sypialnia_online
+  host: 192.168.1.42
+  count: 2
+  scan_interval: 60
+
+- platform: ping
   name: bedside_online
   host: 192.168.1.115
   count: 2
@@ -167,10 +173,10 @@
   scan_interval: 60
 
 - platform: ping
-  name: nova_online
-  host: 192.168.1.157
-  count: 2
-  scan_interval: 60
+  name: ac_point_online
+  host: 192.168.1.110
+  count: 1
+  scan_interval: 30
 
 - platform: ping
   name: rmmini_online

@@ -1,247 +1,247 @@
-group:
-  home_spotify_player:
-    name: Spotify Player
-    entities:
-      - media_player.spotify
-
-  home_spotify_controls:
-    name: Spotify Controls
-    control: hidden
-    entities:
-      - input_select.spotify_playlist
-      - input_select.spotify_source
-      - script.spotify_music
-#      - input_number.spotify_volume
-#      - input_boolean.spotify_shuffle
-
-homeassistant:
-  customize:
-    script.spotify_music:
-      friendly_name: 'Play'
-      icon: mdi:play
-
-sensor:
-#  - platform: template
-#    sensors:
-#      spotify_volume:
-#        friendly_name: "Spotify Volume"
-#        value_template: "{{ states.media_player.spotify.attributes.volume_level }}"
-#  - platform: template
-#    sensors:
-#      spotify_shuffle:
-#        friendly_name: "Spotify Shuffle"
-#        value_template: "{{ states.media_player.spotify.attributes.shuffle }}"
-  - platform: template
-    sensors:
-      spotify_source:
-        friendly_name: "Spotify Source"
-        value_template: "{{ states.media_player.spotify.attributes.source }}"
-
-input_number:
-  spotify_volume:
-    name: Volume
-    icon: mdi:volume-high
-    initial: 100
-    min: 0
-    max: 100
-    step: 1
-
-input_select:
-  spotify_playlist:
-    name: 'Playlist:'
-    options:
-      - 'Feel good dinner'
-      - 'filmowa'
-      - 'Good Feeling'
-      - 'Muzyka do pracy'
-      - 'Zimowy power'
-      - 'Songs to Sing in the Car'
-      - '#throwback #party - Samuel Jarosiński'
-      - '#party #hard - Samuel Jarosiński'
-      - 'Rammstein - Best of'
-      - 'Mixed Rock'
-      - 'Nightair'
-      - 'Streetbangers'
-      - 'Cinematic Chill-Out'
-      - 'From a Smokey Bar'
-      - 'Piano in the Background'
-      - 'Productive morning'
-      - 'Morning motivation'
-      - 'Morning stroll'
-      - 'Soft pop hits'
-      - 'Deep focus'
-      - 'Peaceful piano'
-      - 'Wake up happy'
-      - 'Feeling good'
-      - 'Comfort zone'
-      - 'Wake up and smell the coffee'
-      - 'Have a great day'
-      - 'Confidence boost'
-      - 'Soulful morning'
-      - 'Another one fights the dust'
-      - 'Lounge soft house'
-      - 'Cocktails'
-      - 'Happy beats'
-      - 'Soul coffee'
-      - 'Just smile'
-      - 'Soft morning'
-      - 'Smooth morning'
-      - 'The stress buster'
-      - 'Sweet songs for sunny days'
-      - 'Seize the day'
-      - 'Dawnlord list'
-      - 'Soulful dinner'
-    icon: mdi:spotify
-  spotify_source:
-    name: 'Source:'
-    options:
-      - 'Bravia tv'
-#      - 'Zenedith-macbook'
-#      - 'Zene iPhone'
-      - 'Sypialnia'
-      - 'Salon Denon'
-    initial: Bravia tv
-    icon: mdi:speaker-wireless
-
-input_boolean:
-  spotify_shuffle:
-    name: Shuffle
-    icon: mdi:shuffle-variant
-
-script:
-  spotify_music:
-    alias: "Play selected spotify playlist"
-    sequence:
-      - service: media_player.select_source
-        data_template:
-          entity_id: media_player.spotify
-          source: >
-            {% if is_state("input_select.spotify_source", "Bravia tv") %} Bravia tv
-            {% elif is_state("input_select.spotify_source", "Zenedith-macbook") %} Zenedith-macbook
-            {% elif is_state("input_select.spotify_source", "Zene iPhone") %} Zene iPhone
-            {% elif is_state("input_select.spotify_source", "Sypialnia") %} Sypialnia
-            {% elif is_state("input_select.spotify_source", "Salon Denon") %} Salon Denon
-            {% endif %}
-      - service: media_player.play_media
-        data_template:
-          entity_id: media_player.spotify
-          media_content_type: playlist
-          media_content_id: >
-            {% if is_state("input_select.spotify_playlist", "Muzyka do pracy") %} spotify:user:spotify:playlist:37i9dQZF1DX4WKDmViNbrh
-            {% elif is_state("input_select.spotify_playlist", "Zimowy power") %} spotify:user:spotify:playlist:37i9dQZF1DXdmgtdl82XHM
-            {% elif is_state("input_select.spotify_playlist", "Songs to Sing in the Car") %} spotify:user:spotify:playlist:37i9dQZF1DWWMOmoXKqHTD
-            {% elif is_state("input_select.spotify_playlist", "#throwback #party - Samuel Jarosiński") %} spotify:user:1167044577:playlist:2cIeVeyYXI6nrQdNl1PJVp
-            {% elif is_state("input_select.spotify_playlist", "#party #hard - Samuel Jarosiński") %} spotify:user:1167044577:playlist:1X4K8PfZlX2hsEfTsCofZM
-            {% elif is_state("input_select.spotify_playlist", "Rammstein - Best of") %} spotify:user:facerlp:playlist:7u2DUW2FQjh1LnTRsAGnO2
-            {% elif is_state("input_select.spotify_playlist", "Mixed Rock") %} spotify:user:1143893613:playlist:2ECMyR5ovezJBGQDnL3w23
-            {% elif is_state("input_select.spotify_playlist", "filmowa") %} spotify:user:zenedith:playlist:2igRDJONj69kaIlHJO4LtQ
-            {% elif is_state("input_select.spotify_playlist", "Good Feeling") %} spotify:user:1143893613:playlist:0rHdZMqeSR4XVvPf6QmFM4
-            {% elif is_state("input_select.spotify_playlist", "Nightair") %} spotify:user:1143893613:playlist:2C4xXSYKJp0CYwIyWhODpD
-            {% elif is_state("input_select.spotify_playlist", "Streetbangers") %} spotify:user:1143893613:playlist:1JzR2qe9P3EOjgSyVNJ80R
-            {% elif is_state("input_select.spotify_playlist", "Morning Commute") %} spotify:user:spotify:playlist:37i9dQZF1DX2MyUCsl25eb
-            {% elif is_state("input_select.spotify_playlist", "Cinematic Chill-Out") %} spotify:user:spotify:playlist:37i9dQZF1DWVFJtzvDHN4L
-            {% elif is_state("input_select.spotify_playlist", "From a Smokey Bar") %} spotify:user:spotify:playlist:37i9dQZF1DWTlzJXLRpd4a
-            {% elif is_state("input_select.spotify_playlist", "Piano in the Background") %} spotify:user:spotify:playlist:37i9dQZF1DX7K31D69s4M1
-            {% elif is_state("input_select.spotify_playlist", "Productive morning") %} spotify:user:spotify:playlist:37i9dQZF1DX6T5dWVv97mp
-            {% elif is_state("input_select.spotify_playlist", "Morning motivation") %} spotify:user:spotify:playlist:37i9dQZF1DXc5e2bJhV6pu
-            {% elif is_state("input_select.spotify_playlist", "Morning stroll") %} spotify:user:spotify:playlist:37i9dQZF1DWWLToO3EeTtX
-            {% elif is_state("input_select.spotify_playlist", "Soft pop hits") %} spotify:user:spotify:playlist:37i9dQZF1DWTwnEm1IYyoj
-            {% elif is_state("input_select.spotify_playlist", "Deep focus") %} spotify:user:spotify:playlist:37i9dQZF1DWZeKCadgRdKQ
-            {% elif is_state("input_select.spotify_playlist", "Peaceful piano") %} spotify:user:spotify:playlist:37i9dQZF1DX4sWSpwq3LiO
-            {% elif is_state("input_select.spotify_playlist", "Wake up happy") %} spotify:user:spotify:playlist:37i9dQZF1DX0UrRvztWcAU
-            {% elif is_state("input_select.spotify_playlist", "Feeling good") %} spotify:user:spotify:playlist:37i9dQZF1DX9XIFQuFvzM4
-            {% elif is_state("input_select.spotify_playlist", "Comfort zone") %} spotify:user:spotify:playlist:37i9dQZF1DWYWddJiPzbvb
-            {% elif is_state("input_select.spotify_playlist", "Wake up and smell the coffee") %} spotify:user:spotify:playlist:37i9dQZF1DXcxacyAXkQDu
-            {% elif is_state("input_select.spotify_playlist", "Have a great day") %} spotify:user:spotify:playlist:37i9dQZF1DX7KNKjOK0o75
-            {% elif is_state("input_select.spotify_playlist", "Confidence boost") %} spotify:user:spotify:playlist:37i9dQZF1DX4fpCWaHOned
-            {% elif is_state("input_select.spotify_playlist", "Soulful morning") %} spotify:user:spotify:playlist:37i9dQZF1DX8Md3JnnrexB
-            {% elif is_state("input_select.spotify_playlist", "Another one fights the dust") %} spotify:user:spotify:playlist:37i9dQZF1DXcI5whHzonSg
-            {% elif is_state("input_select.spotify_playlist", "Lounge soft house") %} spotify:user:spotify:playlist:37i9dQZF1DX82pCGH5USnM
-            {% elif is_state("input_select.spotify_playlist", "Cocktails") %} spotify:user:spotify:playlist:37i9dQZF1DWWzhxZzVxMP3
-            {% elif is_state("input_select.spotify_playlist", "Happy beats") %} spotify:user:spotify:playlist:37i9dQZF1DWSf2RDTDayIx
-            {% elif is_state("input_select.spotify_playlist", "Soul coffee") %} spotify:user:spotify:playlist:37i9dQZF1DXaXDsfv6nvZ5
-            {% elif is_state("input_select.spotify_playlist", "Just smile") %} spotify:user:spotify:playlist:37i9dQZF1DWVu0D7Y8cYcs
-            {% elif is_state("input_select.spotify_playlist", "Soft morning") %} spotify:user:spotify:playlist:37i9dQZF1DXb5Mq0JeBbIw
-            {% elif is_state("input_select.spotify_playlist", "Smooth morning") %} spotify:user:spotify:playlist:37i9dQZF1DX6FpuSJJgdDF
-            {% elif is_state("input_select.spotify_playlist", "The stress buster") %} spotify:user:spotify:playlist:37i9dQZF1DWUvQoIOFMFUT
-            {% elif is_state("input_select.spotify_playlist", "Sweet songs for sunny days") %} spotify:user:spotify:playlist:37i9dQZF1DX1BzILRveYHb
-            {% elif is_state("input_select.spotify_playlist", "Seize the day") %} spotify:album:4B4nVmQZWZ44Y4yzLDa5n1
-            {% elif is_state("input_select.spotify_playlist", "Dawnlord list") %} spotify:user:dawnlord:playlist:6YrwtfevNdgc44vI2HiO5j
-            {% elif is_state("input_select.spotify_playlist", "Feel good dinner") %} spotify:user:spotify:playlist:37i9dQZF1DXbm6HfkbMtFZ
-            {% elif is_state("input_select.spotify_playlist", "Soulful dinner") %} spotify:user:spotify:playlist:37i9dQZF1DWZheHO7xislj
-            {% endif %}
-
-automation:
-#  - alias: 'Spotify Volume (Set)'
-#    initial_state: 'on'
-#    trigger:
-#      platform: state
-#      entity_id: input_number.spotify_volume
-#    action:
-#      service: media_player.volume_set
-#      data_template:
-#        entity_id: media_player.spotify
-#        volume_level: '{{  states.input_number.spotify_volume.state | int / 100  }}'
-
-#  - alias: 'Spotify Volume (Sync)'
-#    initial_state: 'on'
-#    trigger:
-#      - platform: homeassistant
-#        event: start
-#      - platform: state
-#        entity_id: sensor.spotify_volume
-#    action:
-#      - delay:
-#          seconds: 5
-#      - service: input_number.set_value
-#        data_template:
-#          entity_id: input_number.spotify_volume
-#          value: '{{  states.sensor.spotify_volume.state | float | round(2) * 100  }}'
-
-#  - alias: 'Spotify Shuffle (Set)'
-#    initial_state: 'on'
-#    trigger:
-#      platform: state
-#      entity_id: input_boolean.spotify_shuffle
-#    action:
-#      service: media_player.shuffle_set
-#      data_template:
-#        entity_id: media_player.spotify
-#        shuffle: >
-#          {% if is_state('input_boolean.spotify_shuffle', 'off') %}
-#          false
-#          {% elif is_state('input_boolean.spotify_shuffle', 'on') %}
-#          true
-#          {% endif %}
+#group:
+#  home_spotify_player:
+#    name: Spotify Player
+#    entities:
+#      - media_player.spotify
 #
-#  - alias: 'Spotify Shuffle (Sync)'
+#  home_spotify_controls:
+#    name: Spotify Controls
+#    control: hidden
+#    entities:
+#      - input_select.spotify_playlist
+#      - input_select.spotify_source
+#      - script.spotify_music
+##      - input_number.spotify_volume
+##      - input_boolean.spotify_shuffle
+#
+#homeassistant:
+#  customize:
+#    script.spotify_music:
+#      friendly_name: 'Play'
+#      icon: mdi:play
+#
+#sensor:
+##  - platform: template
+##    sensors:
+##      spotify_volume:
+##        friendly_name: "Spotify Volume"
+##        value_template: "{{ states.media_player.spotify.attributes.volume_level }}"
+##  - platform: template
+##    sensors:
+##      spotify_shuffle:
+##        friendly_name: "Spotify Shuffle"
+##        value_template: "{{ states.media_player.spotify.attributes.shuffle }}"
+#  - platform: template
+#    sensors:
+#      spotify_source:
+#        friendly_name: "Spotify Source"
+#        value_template: "{{ states.media_player.spotify.attributes.source }}"
+#
+#input_number:
+#  spotify_volume:
+#    name: Volume
+#    icon: mdi:volume-high
+#    initial: 100
+#    min: 0
+#    max: 100
+#    step: 1
+#
+#input_select:
+#  spotify_playlist:
+#    name: 'Playlist:'
+#    options:
+#      - 'Feel good dinner'
+#      - 'filmowa'
+#      - 'Good Feeling'
+#      - 'Muzyka do pracy'
+#      - 'Zimowy power'
+#      - 'Songs to Sing in the Car'
+#      - '#throwback #party - Samuel Jarosiński'
+#      - '#party #hard - Samuel Jarosiński'
+#      - 'Rammstein - Best of'
+#      - 'Mixed Rock'
+#      - 'Nightair'
+#      - 'Streetbangers'
+#      - 'Cinematic Chill-Out'
+#      - 'From a Smokey Bar'
+#      - 'Piano in the Background'
+#      - 'Productive morning'
+#      - 'Morning motivation'
+#      - 'Morning stroll'
+#      - 'Soft pop hits'
+#      - 'Deep focus'
+#      - 'Peaceful piano'
+#      - 'Wake up happy'
+#      - 'Feeling good'
+#      - 'Comfort zone'
+#      - 'Wake up and smell the coffee'
+#      - 'Have a great day'
+#      - 'Confidence boost'
+#      - 'Soulful morning'
+#      - 'Another one fights the dust'
+#      - 'Lounge soft house'
+#      - 'Cocktails'
+#      - 'Happy beats'
+#      - 'Soul coffee'
+#      - 'Just smile'
+#      - 'Soft morning'
+#      - 'Smooth morning'
+#      - 'The stress buster'
+#      - 'Sweet songs for sunny days'
+#      - 'Seize the day'
+#      - 'Dawnlord list'
+#      - 'Soulful dinner'
+#    icon: mdi:spotify
+#  spotify_source:
+#    name: 'Source:'
+#    options:
+#      - 'Bravia tv'
+##      - 'Zenedith-macbook'
+##      - 'Zene iPhone'
+#      - 'Sypialnia'
+#      - 'Salon Denon'
+#    initial: Bravia tv
+#    icon: mdi:speaker-wireless
+#
+#input_boolean:
+#  spotify_shuffle:
+#    name: Shuffle
+#    icon: mdi:shuffle-variant
+#
+#script:
+#  spotify_music:
+#    alias: "Play selected spotify playlist"
+#    sequence:
+#      - service: media_player.select_source
+#        data_template:
+#          entity_id: media_player.spotify
+#          source: >
+#            {% if is_state("input_select.spotify_source", "Bravia tv") %} Bravia tv
+#            {% elif is_state("input_select.spotify_source", "Zenedith-macbook") %} Zenedith-macbook
+#            {% elif is_state("input_select.spotify_source", "Zene iPhone") %} Zene iPhone
+#            {% elif is_state("input_select.spotify_source", "Sypialnia") %} Sypialnia
+#            {% elif is_state("input_select.spotify_source", "Salon Denon") %} Salon Denon
+#            {% endif %}
+#      - service: media_player.play_media
+#        data_template:
+#          entity_id: media_player.spotify
+#          media_content_type: playlist
+#          media_content_id: >
+#            {% if is_state("input_select.spotify_playlist", "Muzyka do pracy") %} spotify:user:spotify:playlist:37i9dQZF1DX4WKDmViNbrh
+#            {% elif is_state("input_select.spotify_playlist", "Zimowy power") %} spotify:user:spotify:playlist:37i9dQZF1DXdmgtdl82XHM
+#            {% elif is_state("input_select.spotify_playlist", "Songs to Sing in the Car") %} spotify:user:spotify:playlist:37i9dQZF1DWWMOmoXKqHTD
+#            {% elif is_state("input_select.spotify_playlist", "#throwback #party - Samuel Jarosiński") %} spotify:user:1167044577:playlist:2cIeVeyYXI6nrQdNl1PJVp
+#            {% elif is_state("input_select.spotify_playlist", "#party #hard - Samuel Jarosiński") %} spotify:user:1167044577:playlist:1X4K8PfZlX2hsEfTsCofZM
+#            {% elif is_state("input_select.spotify_playlist", "Rammstein - Best of") %} spotify:user:facerlp:playlist:7u2DUW2FQjh1LnTRsAGnO2
+#            {% elif is_state("input_select.spotify_playlist", "Mixed Rock") %} spotify:user:1143893613:playlist:2ECMyR5ovezJBGQDnL3w23
+#            {% elif is_state("input_select.spotify_playlist", "filmowa") %} spotify:user:zenedith:playlist:2igRDJONj69kaIlHJO4LtQ
+#            {% elif is_state("input_select.spotify_playlist", "Good Feeling") %} spotify:user:1143893613:playlist:0rHdZMqeSR4XVvPf6QmFM4
+#            {% elif is_state("input_select.spotify_playlist", "Nightair") %} spotify:user:1143893613:playlist:2C4xXSYKJp0CYwIyWhODpD
+#            {% elif is_state("input_select.spotify_playlist", "Streetbangers") %} spotify:user:1143893613:playlist:1JzR2qe9P3EOjgSyVNJ80R
+#            {% elif is_state("input_select.spotify_playlist", "Morning Commute") %} spotify:user:spotify:playlist:37i9dQZF1DX2MyUCsl25eb
+#            {% elif is_state("input_select.spotify_playlist", "Cinematic Chill-Out") %} spotify:user:spotify:playlist:37i9dQZF1DWVFJtzvDHN4L
+#            {% elif is_state("input_select.spotify_playlist", "From a Smokey Bar") %} spotify:user:spotify:playlist:37i9dQZF1DWTlzJXLRpd4a
+#            {% elif is_state("input_select.spotify_playlist", "Piano in the Background") %} spotify:user:spotify:playlist:37i9dQZF1DX7K31D69s4M1
+#            {% elif is_state("input_select.spotify_playlist", "Productive morning") %} spotify:user:spotify:playlist:37i9dQZF1DX6T5dWVv97mp
+#            {% elif is_state("input_select.spotify_playlist", "Morning motivation") %} spotify:user:spotify:playlist:37i9dQZF1DXc5e2bJhV6pu
+#            {% elif is_state("input_select.spotify_playlist", "Morning stroll") %} spotify:user:spotify:playlist:37i9dQZF1DWWLToO3EeTtX
+#            {% elif is_state("input_select.spotify_playlist", "Soft pop hits") %} spotify:user:spotify:playlist:37i9dQZF1DWTwnEm1IYyoj
+#            {% elif is_state("input_select.spotify_playlist", "Deep focus") %} spotify:user:spotify:playlist:37i9dQZF1DWZeKCadgRdKQ
+#            {% elif is_state("input_select.spotify_playlist", "Peaceful piano") %} spotify:user:spotify:playlist:37i9dQZF1DX4sWSpwq3LiO
+#            {% elif is_state("input_select.spotify_playlist", "Wake up happy") %} spotify:user:spotify:playlist:37i9dQZF1DX0UrRvztWcAU
+#            {% elif is_state("input_select.spotify_playlist", "Feeling good") %} spotify:user:spotify:playlist:37i9dQZF1DX9XIFQuFvzM4
+#            {% elif is_state("input_select.spotify_playlist", "Comfort zone") %} spotify:user:spotify:playlist:37i9dQZF1DWYWddJiPzbvb
+#            {% elif is_state("input_select.spotify_playlist", "Wake up and smell the coffee") %} spotify:user:spotify:playlist:37i9dQZF1DXcxacyAXkQDu
+#            {% elif is_state("input_select.spotify_playlist", "Have a great day") %} spotify:user:spotify:playlist:37i9dQZF1DX7KNKjOK0o75
+#            {% elif is_state("input_select.spotify_playlist", "Confidence boost") %} spotify:user:spotify:playlist:37i9dQZF1DX4fpCWaHOned
+#            {% elif is_state("input_select.spotify_playlist", "Soulful morning") %} spotify:user:spotify:playlist:37i9dQZF1DX8Md3JnnrexB
+#            {% elif is_state("input_select.spotify_playlist", "Another one fights the dust") %} spotify:user:spotify:playlist:37i9dQZF1DXcI5whHzonSg
+#            {% elif is_state("input_select.spotify_playlist", "Lounge soft house") %} spotify:user:spotify:playlist:37i9dQZF1DX82pCGH5USnM
+#            {% elif is_state("input_select.spotify_playlist", "Cocktails") %} spotify:user:spotify:playlist:37i9dQZF1DWWzhxZzVxMP3
+#            {% elif is_state("input_select.spotify_playlist", "Happy beats") %} spotify:user:spotify:playlist:37i9dQZF1DWSf2RDTDayIx
+#            {% elif is_state("input_select.spotify_playlist", "Soul coffee") %} spotify:user:spotify:playlist:37i9dQZF1DXaXDsfv6nvZ5
+#            {% elif is_state("input_select.spotify_playlist", "Just smile") %} spotify:user:spotify:playlist:37i9dQZF1DWVu0D7Y8cYcs
+#            {% elif is_state("input_select.spotify_playlist", "Soft morning") %} spotify:user:spotify:playlist:37i9dQZF1DXb5Mq0JeBbIw
+#            {% elif is_state("input_select.spotify_playlist", "Smooth morning") %} spotify:user:spotify:playlist:37i9dQZF1DX6FpuSJJgdDF
+#            {% elif is_state("input_select.spotify_playlist", "The stress buster") %} spotify:user:spotify:playlist:37i9dQZF1DWUvQoIOFMFUT
+#            {% elif is_state("input_select.spotify_playlist", "Sweet songs for sunny days") %} spotify:user:spotify:playlist:37i9dQZF1DX1BzILRveYHb
+#            {% elif is_state("input_select.spotify_playlist", "Seize the day") %} spotify:album:4B4nVmQZWZ44Y4yzLDa5n1
+#            {% elif is_state("input_select.spotify_playlist", "Dawnlord list") %} spotify:user:dawnlord:playlist:6YrwtfevNdgc44vI2HiO5j
+#            {% elif is_state("input_select.spotify_playlist", "Feel good dinner") %} spotify:user:spotify:playlist:37i9dQZF1DXbm6HfkbMtFZ
+#            {% elif is_state("input_select.spotify_playlist", "Soulful dinner") %} spotify:user:spotify:playlist:37i9dQZF1DWZheHO7xislj
+#            {% endif %}
+#
+#automation:
+##  - alias: 'Spotify Volume (Set)'
+##    initial_state: 'on'
+##    trigger:
+##      platform: state
+##      entity_id: input_number.spotify_volume
+##    action:
+##      service: media_player.volume_set
+##      data_template:
+##        entity_id: media_player.spotify
+##        volume_level: '{{  states.input_number.spotify_volume.state | int / 100  }}'
+#
+##  - alias: 'Spotify Volume (Sync)'
+##    initial_state: 'on'
+##    trigger:
+##      - platform: homeassistant
+##        event: start
+##      - platform: state
+##        entity_id: sensor.spotify_volume
+##    action:
+##      - delay:
+##          seconds: 5
+##      - service: input_number.set_value
+##        data_template:
+##          entity_id: input_number.spotify_volume
+##          value: '{{  states.sensor.spotify_volume.state | float | round(2) * 100  }}'
+#
+##  - alias: 'Spotify Shuffle (Set)'
+##    initial_state: 'on'
+##    trigger:
+##      platform: state
+##      entity_id: input_boolean.spotify_shuffle
+##    action:
+##      service: media_player.shuffle_set
+##      data_template:
+##        entity_id: media_player.spotify
+##        shuffle: >
+##          {% if is_state('input_boolean.spotify_shuffle', 'off') %}
+##          false
+##          {% elif is_state('input_boolean.spotify_shuffle', 'on') %}
+##          true
+##          {% endif %}
+##
+##  - alias: 'Spotify Shuffle (Sync)'
+##    initial_state: 'on'
+##    trigger:
+##      - platform: homeassistant
+##        event: start
+##      - platform: state
+##        entity_id: sensor.spotify_shuffle
+##    action:
+##      - delay:
+##          seconds: 5
+##      - service_template: >
+##          {% if states.sensor.spotify_shuffle.state == 'False' %}
+##            input_boolean.turn_off
+##          {% else %}
+##            input_boolean.turn_on
+##          {% endif %}
+##        data:
+##          entity_id: input_boolean.spotify_shuffle
+#
+#  - alias: 'Spotify Source (Sync)'
 #    initial_state: 'on'
 #    trigger:
 #      - platform: homeassistant
 #        event: start
 #      - platform: state
-#        entity_id: sensor.spotify_shuffle
+#        entity_id: sensor.spotify_source
 #    action:
-#      - delay:
-#          seconds: 5
-#      - service_template: >
-#          {% if states.sensor.spotify_shuffle.state == 'False' %}
-#            input_boolean.turn_off
-#          {% else %}
-#            input_boolean.turn_on
-#          {% endif %}
-#        data:
-#          entity_id: input_boolean.spotify_shuffle
-
-  - alias: 'Spotify Source (Sync)'
-    initial_state: 'on'
-    trigger:
-      - platform: homeassistant
-        event: start
-      - platform: state
-        entity_id: sensor.spotify_source
-    action:
-      service: input_select.select_option
-      entity_id: input_select.spotify_source
-      data_template:
-        option: '{{  states.sensor.spotify_source.state  }}'
+#      service: input_select.select_option
+#      entity_id: input_select.spotify_source
+#      data_template:
+#        option: '{{  states.sensor.spotify_source.state  }}'

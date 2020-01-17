@@ -42,6 +42,23 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
+          entity: switch.choinka
+          name: Choinka
+          show_name: false
+          show_state: true
+          hold_action:
+            action: more-info
+          tap_action:
+            action: toggle
+          image: /local/lovelace/downstairs/xmas-lights_1.jpg
+        style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - type: custom:card-modder
+        card:
+          type: picture-entity
           entity: light.swiatlo_kuchnia_stol
           name: Dining
           show_name: false
@@ -111,9 +128,11 @@ cards:
                 name: USB
   #            - entity: switch.listwa_salon_slot_1
   #              name: Denon
-              - entity: switch.listwa_salon_slot_2
+#              - entity: switch.listwa_salon_slot_2
+              - entity: switch.xbox_power_switch
                 name: Xbox One S
-              - entity: switch.listwa_salon_slot_3
+#              - entity: switch.listwa_salon_slot_3
+              - entity: switch.ps4_power_switch
                 name: Playstation 4
   #            - entity: switch.listwa_salon_slot_4
   #              name: Kamera
@@ -165,6 +184,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.locate
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 80%, top: 81%}
 
               - type: icon
@@ -173,6 +194,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.return_to_base
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 60%, top: 81%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: icon
@@ -181,6 +204,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.start
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 40%, top: 81%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: icon
@@ -189,6 +214,8 @@ cards:
                   action: call-service
                   entity: vacuum.zmietekv2
                   service: vacuum.stop
+                  service_data:
+                    entity_id: vacuum.zmietekv2
                 style: {color: white, left: 20%, top: 81%, --paper-item-icon-color: rgb(115, 122, 130)}
 
               - type: icon
@@ -426,42 +453,47 @@ cards:
 #          box-shadow: 3px 3px rgba(0,0,0,0.4)
 #          overflow: hidden
 
-      - type: custom:card-modder
-        card:
-          type: custom:mini-media-player
-          entity: media_player.spotify
-          artwork: cover
-          power_color: true
-          show_source: true
-          show_progress: true
-          group: true
-          #background: /local/lovelace/downstairs/evening-tv_3.jpg
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100%
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-          overflow: hidden
-
-      - type: custom:card-modder
-        card:
-          type: entities
-          show_header_toggle: false
-          entities:
-            - input_select.spotify_playlist
-            - input_select.spotify_source
-            - script.spotify_music
-            - input_number.spotify_volume
-            - input_boolean.spotify_shuffle
-        style:
-          background-image: url("/local/lovelace/cardbackK.png")
-          background-repeat: no-repeat
-          background-color: rgba(50,50,50,0.3)
-          background-size: 100%
-          border-radius: 20px
-          border: solid 1px rgba(100,100,100,0.3)
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-          overflow: hidden
+#      - type: custom:card-modder
+#        card:
+#          type: custom:mini-media-player
+#          entity: media_player.spotify
+#          artwork: cover
+#          power_color: true
+#          show_source: true
+#          show_progress: true
+#          group: true
+#          #background: /local/lovelace/downstairs/evening-tv_3.jpg
+#        style:
+#          background-image: url("/local/lovelace/cardbackK.png")
+#          background-repeat: no-repeat
+#          background-color: rgba(50,50,50,0.3)
+#          background-size: 100%
+#          border-radius: 20px
+#          border: solid 1px rgba(100,100,100,0.3)
+#          box-shadow: 3px 3px rgba(0,0,0,0.4)
+#          overflow: hidden
+#
+#      - type: custom:card-modder
+#        card:
+#          type: entities
+#          show_header_toggle: false
+#          entities:
+#            - input_select.spotify_playlist
+#            - input_select.spotify_source
+#            - script.spotify_music
+#            - input_number.spotify_volume
+#            - input_boolean.spotify_shuffle
+#        style:
+#          background-image: url("/local/lovelace/cardbackK.png")
+#          background-repeat: no-repeat
+#          background-color: rgba(50,50,50,0.3)
+#          background-size: 100%
+#          border-radius: 20px
+#          border: solid 1px rgba(100,100,100,0.3)
+#          box-shadow: 3px 3px rgba(0,0,0,0.4)
+#          overflow: hidden
+#
+#      - type: 'custom:spotify-card'
+#        client_id: !secret spotcast
+#        limit: 10
+#        device:

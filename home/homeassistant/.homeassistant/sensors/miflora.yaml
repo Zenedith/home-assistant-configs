@@ -21,7 +21,7 @@
     - battery
 
 - platform: miflora
-  name: spathiphyllum2
+  name: yucca_elephantipes
   mac: 'C4:7C:8D:6B:1A:B3'
 #  scan_interval: 100
   monitored_conditions:

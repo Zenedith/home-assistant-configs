@@ -1,6 +1,9 @@
 guest_mode:
   name: Guest Mode
-  icon: mdi:account-multiple
+  icon: mdi:human-handsup
+holiday_mode:
+  name: Holiday mode
+  icon: mdi:airplane
 just_returned_home:
   name: Just Returned Home
 just_left:
@@ -21,10 +24,11 @@ sypialnia_korki:
 moonlight_korytarz:
   name: Moonlight korytarz
   icon: mdi:weather-night
-listwa_sypialnia:
-  name: Stan listwa sypialnia
 ogrzewanie:
   name: Ogrzewanie
 moonlight_kuchnia:
   name: Moonlight kuchnia
   icon: mdi:weather-night
+plants_details:
+  name: Plants details
+  icon: mdi:flower

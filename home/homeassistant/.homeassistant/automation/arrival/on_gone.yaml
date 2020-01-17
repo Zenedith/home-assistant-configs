@@ -2,8 +2,8 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: group.mobiledevices
-      to: not_home
+      entity_id: binary_sensor.home_occupied
+      to: 'off'
       for:
         minutes: 5
   condition:
@@ -17,4 +17,4 @@
     - service: input_select.select_option
       data:
         entity_id: input_select.presence_status
-        option: Away
+        option: 'Away'

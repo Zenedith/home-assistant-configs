@@ -1,25 +1,33 @@
 resources:
-  - url: /local/custom_ui/tracker-card.js?track=true
-    type: module
   - url: /local/custom_ui/tasmota-tracker-card.js?v=0.1.1
     type: js
   - url: /local/custom_ui/dark-sky-weather-card.js?v=7.1
     type: module
-  - url: /local/custom_ui/mini-media-player-bundle.js?track=true
+  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
     type: module
-  - url: /local/custom_ui/mini-graph-card-bundle.js?track=true
+  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
     type: module
   - url: /local/custom_ui/card-modder.js?track=true
     type: module
-  - url: /local/custom_ui/card-tools.js?track=true
-    type: js
-  - url: /local/custom_ui/compact-custom-header/compact-custom-header.js?track=true
+  - url: /community_plugin/lovelace-card-tools/card-tools.js
+    type: module
+  - url: /community_plugin/custom-header/custom-header.js
     type: module
   - url: /local/custom_ui/kiosk.js?track=true
     type: js
-  - url: /local/custom_ui/weather-card.js?track=true
+  - url: /community_plugin/weather-card/weather-card.js
     type: module
   - url: /local/custom_ui/flower-card/flower-card.js?v=0.2
+    type: module
+  - url: /community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
+    type: module
+#  - url: /community_plugin/check-button-card/check-button-card.js
+#    type: module
+#  - url: /community_plugin/simple-thermostat/simple-thermostat.js
+#    type: module
+  - url: /community_plugin/spotify-card/spotify-card.js
+    type: module
+  - url: /community_plugin/secondaryinfo-entity-row/secondaryinfo-entity-row.js
     type: module
 cch:
   menu: overflow

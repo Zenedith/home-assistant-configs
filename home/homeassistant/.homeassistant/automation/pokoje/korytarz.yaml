@@ -68,8 +68,8 @@
       after: '05:00:00'
       before: '23:59:59'
     - condition: state
-      entity_id: group.mobiledevices
-      state: not_home
+      entity_id: binary_sensor.home_occupied
+      state: 'off'
   action:
     - service: notify.mypushbullet
       data_template:

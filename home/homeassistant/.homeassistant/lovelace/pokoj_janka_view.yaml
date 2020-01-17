@@ -66,8 +66,8 @@ cards:
       - type: custom:card-modder
         card:
           type: picture-entity
-          entity: switch.rtv_jan
-          name: RTV
+          entity: switch.listwa_jan_switch
+          name: Listwa
           show_name: false
           show_state: true
           hold_action:
