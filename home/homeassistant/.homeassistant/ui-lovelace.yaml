@@ -1,4 +1,11 @@
+custom_header:
+  compact_mode: true
+  swipe_animate: fade
+  swipe_prevent_default: true
+
 resources:
+  - url: /community_plugin/custom-header/custom-header.js
+    type: module
   - url: /local/custom_ui/tasmota-tracker-card.js?v=0.1.1
     type: js
   - url: /local/custom_ui/dark-sky-weather-card.js?v=7.1
