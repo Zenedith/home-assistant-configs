@@ -545,29 +545,6 @@ cards:
             type: picture-elements
             image: /local/lovelace/appliances/xiaomi-airpurifier-pic2.png
             elements:
-              - type: icon
-                icon: mdi:clock-outline
-                entity: sensor.purifier_filter_life_remaining
-                style: {color: white, left: 5%, top: 91%}
-
-              - type: state-label
-                entity: sensor.purifier_filter_life_remaining
-                style: {color: white, left: 13%, top: 91%}
-
-              - type: icon
-                icon: mdi:blender
-                entity: sensor.motor_speed
-                style: {color: white, left: 23%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-
-              - type: state-label
-                entity: sensor.motor_speed
-                style: {color: white, left: 35%, top: 92%}
-
-              #              - type: icon
-              #                icon: mdi:blender
-              #                entity: sensor.purifier_aqi
-              #                style: {color: white, left: 45%, top: 91%, --paper-item-icon-color: rgb(115, 122, 130)}
-
               - type: state-label
                 entity: sensor.purifier_aqi
                 style: {color: white, left: 49%, top: 53%, font-size: 120px}
@@ -599,9 +576,9 @@ cards:
                   opacity: 0.8
 
               - type: state-label
-                entity: fan.purifier
+                entity: sensor.purifier_filter_life_remaining
                 style:
-                  top: 29%
+                  top: 90%
                   left: 5%
                   color: rgb(255, 255, 255)
                   transform: translate(0%,-50%)
@@ -631,6 +608,23 @@ cards:
                   border-color: rgb(34, 154, 210)
                   background-color: rgb(54, 65, 78)
                   opacity: 0.8
+
+              - type: state-label
+                entity: sensor.motor_speed
+                style:
+                  top: 90%
+                  right: 5%
+                  color: rgb(255, 255, 255)
+                  transform: translate(0%,-50%)
+                  pointer-events: none
+                  text-shadow: 1px 1px black
+                  font-family: Trebuchet MS
+                  font-size: 90%
+                  font-weight: bold
+                  border-right-style: solid
+                  border-color: rgb(34, 154, 210)
+                  background-color: rgb(54, 65, 78)
+                  opacity: 0.8
           style:
             border-radius: 20px
             border: solid 1px rgba(100,100,100,0.3)
@@ -640,15 +634,13 @@ cards:
       - type: custom:card-modder
         card:
           type: entities
-          title: Automations
+          title: Purifier
           show_header_toggle: false
           entities:
             - entity: fan.purifier
             - entity: input_select.xiaomi_airpurifier_mode
             - entity: input_number.xiaomi_airpurifier_favorite_level
             - entity: switch.xiaomi_airpurifier_child_lock
-            - entity: switch.xiaomi_airpurifier_led
-            - entity: switch.xiaomi_airpurifier_buzzer
         style:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
