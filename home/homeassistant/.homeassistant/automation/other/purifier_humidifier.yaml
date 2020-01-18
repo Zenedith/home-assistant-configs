@@ -229,6 +229,9 @@
   trigger:
     platform: state
     entity_id: fan.purifier
+  condition:
+    - condition: template
+      value_template: "{{ (state_attr('fan.purifier', 'mode') | string) != (states('input_select.xiaomi_airpurifier_mode') | string) }}"
   action:
     service: input_select.select_option
     entity_id: input_select.xiaomi_airpurifier_mode
@@ -240,7 +243,7 @@
     entity_id: input_number.xiaomi_airpurifier_favorite_level
     platform: state
   action:
-    service: fan.xiaomi_miio_set_favorite_level
+    service: xiaomi_miio.fan_set_favorite_level
     data_template:
       entity_id: fan.purifier
       level: '{{ states.input_number.xiaomi_airpurifier_favorite_level.state | int }}'
@@ -249,6 +252,9 @@
   trigger:
     platform: state
     entity_id: fan.purifier
+  condition:
+    - condition: template
+      value_template: "{{ (state_attr('fan.purifier', 'favorite_level') | int) != (states('input_number.xiaomi_airpurifier_favorite_level') | int) }}"
   action:
     service: input_number.set_value
     entity_id: input_number.xiaomi_airpurifier_favorite_level
