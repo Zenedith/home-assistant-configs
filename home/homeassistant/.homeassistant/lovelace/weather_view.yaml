@@ -401,6 +401,10 @@ cards:
             image: /local/lovelace/appliances/smartmi2.png
             elements:
               - type: state-label
+                entity: sensor.purifier_humidity
+                style: {color: white, left: 49%, top: 53%, font-size: 100px}
+
+              - type: state-label
                 entity: sensor.humidifier_mode
                 style:
                   top: 10%
