@@ -293,7 +293,7 @@
     service: xiaomi_miio.fan_set_target_humidity
     data_template:
       entity_id: fan.smartmi2
-      level: '{{ states.input_number.xiaomi_humidifier_target_humidity_level.state | int }}'
+      humidity: '{{ states.input_number.xiaomi_humidifier_target_humidity_level.state | int }}'
 
 - alias: 'Humidifier target humidity level changed'
   trigger:
@@ -306,4 +306,4 @@
     service: input_number.set_value
     entity_id: input_number.xiaomi_humidifier_target_humidity_level
     data_template:
-      value: '{{ states.fan.smartmi2.attributes.favorite_level }}'
+      value: '{{ states.fan.smartmi2.attributes.target_humidity }}'
