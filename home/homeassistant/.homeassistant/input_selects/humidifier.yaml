@@ -1,0 +1,8 @@
+xiaomi_humidifier_mode:
+  name: Mode
+  options:
+    - Auto
+    - Silent
+    - Medium
+    - High
+  icon: "mdi:animation-outline"
