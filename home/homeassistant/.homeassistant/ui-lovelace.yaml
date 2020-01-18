@@ -13,6 +13,8 @@ custom_header:
         query_string: kiosk
       config:
         kiosk_mode: true
+        disable_sidebar: true
+        menu_hide: true
 resources:
   - url: /community_plugin/custom-header/custom-header.js
     type: module
