@@ -32,8 +32,6 @@ resources:
     type: module
   - url: /community_plugin/custom-header/custom-header.js
     type: module
-  - url: /local/custom_ui/kiosk.js?track=true
-    type: js
   - url: /community_plugin/weather-card/weather-card.js
     type: module
   - url: /local/custom_ui/flower-card/flower-card.js?v=0.2
@@ -48,18 +46,8 @@ resources:
     type: module
   - url: /community_plugin/secondaryinfo-entity-row/secondaryinfo-entity-row.js
     type: module
-cch:
-  menu: overflow
-  voice: hide
-  hide_help: true
-  header: true
-  background: true
-  notification: overflow
-  options: show
-  swipe: false
-  kiosk_mode: false
 
-title: Zene Home
+title: Home
 views:
   - !include lovelace/salon_view.yaml
   - !include lovelace/korytarz_view.yaml
