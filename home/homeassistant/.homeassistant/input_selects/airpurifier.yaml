@@ -1,7 +1,7 @@
 xiaomi_airpurifier_mode:
   name: Mode
   options:
-    - Auto
-    - Silent
-    - Favorite
+    - auto
+    - silent
+    - favorite
   icon: "mdi:animation-outline"

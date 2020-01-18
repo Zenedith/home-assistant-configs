@@ -231,12 +231,12 @@
     entity_id: fan.purifier
   condition:
     - condition: template
-      value_template: "{{ (state_attr('fan.purifier', 'speed') | string) != (states('input_select.xiaomi_airpurifier_mode') | string) }}"
+      value_template: "{{ (state_attr('fan.purifier', 'mode') | string) != (states('input_select.xiaomi_airpurifier_mode') | string) }}"
   action:
     service: input_select.select_option
     entity_id: input_select.xiaomi_airpurifier_mode
     data_template:
-      option: '{{ states.fan.purifier.attributes.speed }}'
+      option: '{{ states.fan.purifier.attributes.mode }}'
 
 - alias: 'Air purifier favorite level change'
   trigger:
@@ -277,12 +277,12 @@
     entity_id: fan.smartmi2
   condition:
     - condition: template
-      value_template: "{{ (state_attr('fan.smartmi2', 'speed') | string) != (states('input_select.xiaomi_humidifier_mode') | string) }}"
+      value_template: "{{ (state_attr('fan.smartmi2', 'mode') | string) != (states('input_select.xiaomi_humidifier_mode') | string) }}"
   action:
     service: input_select.select_option
     entity_id: input_select.xiaomi_humidifier_mode
     data_template:
-      option: '{{ states.fan.smartmi2.attributes.speed }}'
+      option: '{{ states.fan.smartmi2.attributes.mode }}'
 
 
 - alias: 'Humidifier target humidity level change'
