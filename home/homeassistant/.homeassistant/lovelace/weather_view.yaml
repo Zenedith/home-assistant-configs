@@ -530,7 +530,7 @@ cards:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 380px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -645,7 +645,7 @@ cards:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 304px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -665,7 +665,7 @@ cards:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 340px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -684,7 +684,7 @@ cards:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 280px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
@@ -728,7 +728,7 @@ cards:
           background-image: url('/local/lovelace/cardbackK.png')
           background-repeat: no-repeat
           background-color: rgba(50,50,50,0.3)
-          background-size: 100% 200px
+          background-size: 100% 365px
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
           box-shadow: 3px 3px rgba(0,0,0,0.4)
