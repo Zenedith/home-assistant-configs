@@ -322,12 +322,12 @@
     - service: climate.turn_off
       data:
         entity_id: climate.salon
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Ogrzewanie przykręcone w salonie'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Ogrzewanie przykręcone w salonie
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Ogrzewanie przykręcone w salonie'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Ogrzewanie przykręcone w salonie
 
 - alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartych drzwiach w salonie'
   initial_state: 'on'
@@ -371,12 +371,12 @@
       data:
         entity_id: climate.salon
         hvac_mode: auto
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Ogrzewanie przywrócone w salonie'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Ogrzewanie przywrócone w salonie
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Ogrzewanie przywrócone w salonie'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Ogrzewanie przywrócone w salonie
 
 - alias: 'Wyłącz ambient przyciskiem regału'
   initial_state: 'on'

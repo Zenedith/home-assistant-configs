@@ -184,7 +184,7 @@
   action:
     - service: fan.turn_off
       data:
-        entity_id: fan.purifier,fan.smartmi2
+        entity_id: fan.purifier, fan.smartmi2
     - service: automation.turn_off
       data:
         entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_60, automation.power_on_humidifier_when_humidity_below_45
@@ -204,7 +204,7 @@
   action:
     - service: fan.turn_on
       data:
-        entity_id: fan.purifier
+        entity_id: fan.purifier, fan.smartmi2
     - service: automation.turn_on
       data:
         entity_id: automation.purifier_full_power_when_aqi_above_15, automation.purifier_sleep_mode_when_aqi_below_8, automation.power_off_humidifier_when_humidity_above_60, automation.power_on_humidifier_when_humidity_below_45

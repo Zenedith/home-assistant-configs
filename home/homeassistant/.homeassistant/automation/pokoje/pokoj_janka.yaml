@@ -8,24 +8,6 @@
       data:
         entity_id: switch.listwa_jan_switch
 
-- alias: 'Bedside offline notify'
-  initial_state: 'on'
-  trigger:
-    platform: sun
-    event: sunset
-    offset: '-00:20:00'
-  condition:
-    - condition: state
-      entity_id: binary_sensor.bedside_online
-      state: 'off'
-  action:
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Bedside offline'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Bedside offline
-
 - alias: 'Bedside Jan on'
   initial_state: 'on'
   trigger:
@@ -46,12 +28,12 @@
     - service: light.turn_on
       data:
         entity_id: light.bedside
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Pokój janka bedside on'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Bedside on
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Pokój janka bedside on'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Bedside on
 
 - alias: 'Bedside Jan off'
   initial_state: 'on'
@@ -146,12 +128,12 @@
     - service: climate.turn_off
       data:
         entity_id: climate.pokoj_janka
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Ogrzewanie przykręcone w pokóju Janka'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Ogrzewanie przykręcone w pokóju Janka
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Ogrzewanie przykręcone w pokóju Janka'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Ogrzewanie przykręcone w pokóju Janka
 
 - alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w pokoju Janka'
   initial_state: 'on'
@@ -190,12 +172,12 @@
       data:
         entity_id: climate.sypialnia
         hvac_mode: auto
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Ogrzewanie przywrócone w pokóju Janka'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Ogrzewanie przywrócone w pokóju Janka
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Ogrzewanie przywrócone w pokóju Janka'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Ogrzewanie przywrócone w pokóju Janka
 
 - alias: 'Zgaś światło w pokoju Janka gdy chillout mode on'
   initial_state: 'on'

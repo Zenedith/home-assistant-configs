@@ -26,12 +26,12 @@
     - service: automation.turn_on
       data:
         entity_id: automation.bedside_jan_on, automation.ambient_on, automation.listwa_sypialnia_on, automation.listwa_sypialnia_weekend_on, automation.bedside_jan_on,automation.ambient_on
-    - service: notify.mypushbullet
-      data_template:
-        title: Returned home, automation on
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Returned home, automation on.
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: Returned home, automation on
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Returned home, automation on.
 
 - alias: 'Just returned home, climate on'
   initial_state: 'on'
@@ -45,9 +45,9 @@
       state: 'on'
   action:
     - service: script.climate_turn_on
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Just returned home, climate on'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Just returned home, climate on.
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Just returned home, climate on'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Just returned home, climate on.

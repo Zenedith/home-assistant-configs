@@ -203,12 +203,12 @@
     - service: climate.turn_off
       data:
         entity_id: climate.sypialnia
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Ogrzewanie przykręcone w sypialni'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Ogrzewanie przykręcone w sypialni
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Ogrzewanie przykręcone w sypialni'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Ogrzewanie przykręcone w sypialni
 
 - alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w sypialni'
   initial_state: 'on'
@@ -247,12 +247,12 @@
       data:
         entity_id: climate.sypialnia
         hvac_mode: auto
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Ogrzewanie przywrócone w sypialni'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Ogrzewanie przywrócone w sypialni
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Ogrzewanie przywrócone w sypialni'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Ogrzewanie przywrócone w sypialni
 
 - alias: 'Turn off media (listwa) if switch is available'
   initial_state: 'on'

@@ -62,12 +62,12 @@
       before_offset: '02:00:00'
   action:
     - service: script.climate_off
-    - service: notify.mypushbullet
-      data_template:
-        title: 'Climate off when gone'
-        message: |
-          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-          Climate off when gone.
+#    - service: notify.mypushbullet
+#      data_template:
+#        title: 'Climate off when gone'
+#        message: |
+#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
+#          Climate off when gone.
 
 - alias: 'Zmietek start when gone 15 min delay'
   initial_state: 'off'
