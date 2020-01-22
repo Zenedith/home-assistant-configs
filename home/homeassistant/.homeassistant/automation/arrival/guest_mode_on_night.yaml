@@ -1,0 +1,36 @@
+- alias: 'Guest mode on when night'
+  initial_state: 'on'
+  trigger:
+    - platform: time_pattern
+      minutes: "/30"
+  condition:
+    - condition: time
+      after: '01:00:00'
+      before: '06:00:00'
+    - condition: state
+      entity_id: binary_sensor.home_occupied
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'off'
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.guest_mode
+
+- alias: 'Guest mode off when day'
+  initial_state: 'on'
+  trigger:
+    - platform: time
+      at: '06:05:01'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.home_occupied
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'on'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.guest_mode
