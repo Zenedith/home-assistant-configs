@@ -185,3 +185,35 @@ sensor.mi_t_e72e017168dc:
   friendly_name: rtv
 media_player.chromecastaudio9772:
   friendly_name: salon
+sensor.mi_m_c47c8d6a0192:
+  friendly_name: moisture
+sensor.mi_t_c47c8d6a0192:
+  friendly_name: C
+sensor.mi_c_c47c8d6a0192:
+  friendly_name: cond
+sensor.mi_l_c47c8d6a0192:
+  friendly_name: lx
+sensor.mi_m_c47c8d69fef0:
+  friendly_name: moisture
+sensor.mi_t_c47c8d69fef0:
+  friendly_name: C
+sensor.mi_c_c47c8d69fef0:
+  friendly_name: cond
+sensor.mi_l_c47c8d69fef0:
+  friendly_name: lx
+sensor.mi_m_c47c8d6b24c7:
+  friendly_name: moisture
+sensor.mi_t_c47c8d6b24c7:
+  friendly_name: C
+sensor.mi_c_c47c8d6b24c7:
+  friendly_name: cond
+sensor.mi_l_c47c8d6b24c7:
+  friendly_name: lx
+sensor.mi_m_c47c8d6b1ab3:
+  friendly_name: moisture
+sensor.mi_t_c47c8d6b1ab3:
+  friendly_name: C
+sensor.mi_c_c47c8d6b1ab3:
+  friendly_name: cond
+sensor.mi_l_c47c8d6b1ab3:
+  friendly_name: lx
