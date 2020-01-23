@@ -1,10 +1,10 @@
 zamioculcas_zamiifolia:
   sensors:
-    moisture: sensor.zamioculcas_zamiifolia_moisture
+    moisture: sensor.mi_m_c47c8d6a0192
     battery: sensor.zamioculcas_zamiifolia_battery
-    temperature: sensor.zamioculcas_zamiifolia_temperature
-    conductivity: sensor.zamioculcas_zamiifolia_conductivity
-    brightness: sensor.zamioculcas_zamiifolia_light_intensity
+    temperature: sensor.mi_t_c47c8d6a0192
+    conductivity: sensor.mi_c_c47c8d6a0192
+    brightness: sensor.mi_l_c47c8d6a0192
   min_moisture: 15
   max_moisture: 60
   min_battery: 20
@@ -60,11 +60,11 @@ zamioculcas_zamiifolia:
 #
 dracaena_marginata:
   sensors:
-    moisture: sensor.dracaena_marginata_moisture
+    moisture: sensor.mi_m_c47c8d69fef0
     battery: sensor.dracaena_marginata_battery
-    temperature: sensor.dracaena_marginata_temperature
-    conductivity: sensor.dracaena_marginata_conductivity
-    brightness: sensor.dracaena_marginata_light_intensity
+    temperature: sensor.mi_t_c47c8d69fef0
+    conductivity: sensor.mi_c_c47c8d69fef0
+    brightness: sensor.mi_l_c47c8d69fef0
   min_moisture: 15
   max_moisture: 60
   min_battery: 20
@@ -90,11 +90,11 @@ dracaena_marginata:
 
 spathiphyllum:
   sensors:
-    moisture: sensor.spathiphyllum_moisture
+    moisture: sensor.mi_m_c47c8d6b24c7
     battery: sensor.spathiphyllum_battery
-    temperature: sensor.spathiphyllum_temperature
-    conductivity: sensor.spathiphyllum_conductivity
-    brightness: sensor.spathiphyllum_light_intensity
+    temperature: sensor.mi_t_c47c8d6b24c7
+    conductivity: sensor.mi_c_c47c8d6b24c7
+    brightness: sensor.mi_l_c47c8d6b24c7
   min_moisture: 15
   max_moisture: 65
   min_battery: 20
@@ -105,11 +105,11 @@ spathiphyllum:
 
 yucca_elephantipes:
   sensors:
-    moisture: sensor.yucca_elephantipes_moisture
+    moisture: sensor.mi_m_c47c8d6b1ab3
     battery: sensor.yucca_elephantipes_battery
-    temperature: sensor.yucca_elephantipes_temperature
-    conductivity: sensor.yucca_elephantipes_conductivity
-    brightness: sensor.yucca_elephantipes_light_intensity
+    temperature: sensor.mi_t_c47c8d6b1ab3
+    conductivity: sensor.mi_c_c47c8d6b1ab3
+    brightness: sensor.mi_l_c47c8d6b1ab3
   min_moisture: 15
   max_moisture: 60
   min_battery: 20

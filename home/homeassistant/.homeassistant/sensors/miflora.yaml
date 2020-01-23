@@ -1,43 +1,43 @@
-- platform: miflora
-  name: Zamioculcas zamiifolia
-  mac: 'C4:7C:8D:6A:01:92'
-#  scan_interval: 120
-  monitored_conditions:
-    - moisture
-    - light
-    - temperature
-    - conductivity
-    - battery
-
-- platform: miflora
-  name: spathiphyllum
-  mac: 'C4:7C:8D:6B:24:C7'
-#  scan_interval: 100
-  monitored_conditions:
-    - moisture
-    - light
-    - temperature
-    - conductivity
-    - battery
-
-- platform: miflora
-  name: yucca_elephantipes
-  mac: 'C4:7C:8D:6B:1A:B3'
-#  scan_interval: 100
-  monitored_conditions:
-    - moisture
-    - light
-    - temperature
-    - conductivity
-    - battery
-
-- platform: miflora
-  name: Dracaena marginata
-  mac: 'C4:7C:8D:69:FE:F0'
-#  scan_interval: 100
-  monitored_conditions:
-    - moisture
-    - light
-    - temperature
-    - conductivity
-    - battery
+#- platform: miflora
+#  name: Zamioculcas zamiifolia
+#  mac: 'C4:7C:8D:6A:01:92'
+##  scan_interval: 120
+#  monitored_conditions:
+#    - moisture
+#    - light
+#    - temperature
+#    - conductivity
+#    - battery
+#
+#- platform: miflora
+#  name: spathiphyllum
+#  mac: 'C4:7C:8D:6B:24:C7'
+##  scan_interval: 100
+#  monitored_conditions:
+#    - moisture
+#    - light
+#    - temperature
+#    - conductivity
+#    - battery
+#
+#- platform: miflora
+#  name: yucca_elephantipes
+#  mac: 'C4:7C:8D:6B:1A:B3'
+##  scan_interval: 100
+#  monitored_conditions:
+#    - moisture
+#    - light
+#    - temperature
+#    - conductivity
+#    - battery
+#
+#- platform: miflora
+#  name: Dracaena marginata
+#  mac: 'C4:7C:8D:69:FE:F0'
+##  scan_interval: 100
+#  monitored_conditions:
+#    - moisture
+#    - light
+#    - temperature
+#    - conductivity
+#    - battery
