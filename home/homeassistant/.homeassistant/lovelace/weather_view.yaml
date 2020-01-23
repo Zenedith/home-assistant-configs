@@ -51,28 +51,28 @@ cards:
             title: Zamioculcas zamiifolia
             elements:
               - type: state-badge
-                entity: sensor.zamioculcas_zamiifolia_light_intensity
+                entity: sensor.mi_l_c47c8d6a0192
                 title: null
                 style:
                   top: 35%
                   left: 10%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.zamioculcas_zamiifolia_temperature
+                entity: sensor.mi_t_c47c8d6a0192
                 title: null
                 style:
                   top: 35%
                   left: 25%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.zamioculcas_zamiifolia_conductivity
+                entity: sensor.mi_c_c47c8d6a0192
                 title: null
                 style:
                   top: 35%
                   left: 40%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.zamioculcas_zamiifolia_moisture
+                entity: sensor.mi_m_c47c8d6a0192
                 title: null
                 style:
                   top: 35%
@@ -118,28 +118,28 @@ cards:
             title: spathiphyllum
             elements:
               - type: state-badge
-                entity: sensor.spathiphyllum_light_intensity
+                entity: sensor.mi_l_c47c8d6b24c7
                 title: null
                 style:
                   top: 35%
                   left: 10%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum_temperature
+                entity: sensor.mi_t_c47c8d6b24c7
                 title: null
                 style:
                   top: 35%
                   left: 25%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum_conductivity
+                entity: sensor.mi_c_c47c8d6b24c7
                 title: null
                 style:
                   top: 35%
                   left: 40%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.spathiphyllum_moisture
+                entity: sensor.mi_m_c47c8d6b24c7
                 title: null
                 style:
                   top: 35%
@@ -185,28 +185,28 @@ cards:
             title: yucca_elephantipes
             elements:
               - type: state-badge
-                entity: sensor.yucca_elephantipes_light_intensity
+                entity: sensor.mi_l_c47c8d6b1ab3
                 title: null
                 style:
                   top: 35%
                   left: 10%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.yucca_elephantipes_temperature
+                entity: sensor.mi_t_c47c8d6b1ab3
                 title: null
                 style:
                   top: 35%
                   left: 25%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.yucca_elephantipes_conductivity
+                entity: sensor.mi_c_c47c8d6b1ab3
                 title: null
                 style:
                   top: 35%
                   left: 40%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.yucca_elephantipes_moisture
+                entity: sensor.mi_m_c47c8d6b1ab3
                 title: null
                 style:
                   top: 35%
@@ -252,28 +252,28 @@ cards:
             title: Dracaena marginata
             elements:
               - type: state-badge
-                entity: sensor.dracaena_marginata_light_intensity
+                entity: sensor.mi_l_c47c8d69fef0
                 title: null
                 style:
                   top: 35%
                   left: 10%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.dracaena_marginata_temperature
+                entity: sensor.mi_t_c47c8d69fef0
                 title: null
                 style:
                   top: 35%
                   left: 25%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.dracaena_marginata_conductivity
+                entity: sensor.mi_c_c47c8d69fef0
                 title: null
                 style:
                   top: 35%
                   left: 40%
                   --ha-label-badge-font-size: 1em
               - type: state-badge
-                entity: sensor.dracaena_marginata_moisture
+                entity: sensor.mi_m_c47c8d69fef0
                 title: null
                 style:
                   top: 35%
