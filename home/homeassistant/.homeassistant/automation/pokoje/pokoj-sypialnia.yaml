@@ -261,10 +261,6 @@
       entity_id: switch.listwa_sypialnia_switch
       from: 'unavailable'
       to: 'on'
-    - platform: state
-      entity_id: switch.listwa_sypialnia_switch
-      from: 'unknown'
-      to: 'on'
   action:
     - service: switch.turn_off
       data:
