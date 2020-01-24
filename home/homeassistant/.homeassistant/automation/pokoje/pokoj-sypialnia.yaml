@@ -261,6 +261,8 @@
       entity_id: switch.listwa_sypialnia_switch
       from: 'unavailable'
       to: 'on'
+      for:
+        seconds: 15
   action:
     - service: switch.turn_off
       data:
