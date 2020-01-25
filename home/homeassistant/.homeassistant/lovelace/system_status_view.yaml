@@ -128,11 +128,15 @@ cards:
               style: {color: white, left: 63%, top: 93%, font-size: 90%, font-weight: bold}
 
             - type: state-icon
-              entity: sensor.cpu_temperature
+              entity: sensor.swap_use_percent
               style: {color: white, left: 80%, top: 84%}
             - type: state-label
-              entity: sensor.cpu_temperature
+              entity: sensor.swap_use_percent
               style: {color: white, left: 81%, top: 93%, font-size: 90%, font-weight: bold}
+
+            - type: state-label
+              entity: sensor.cpu_temperature
+              style: {color: white, left: 81%, top: 93%, font-size: 80px, font-weight: bold}
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
