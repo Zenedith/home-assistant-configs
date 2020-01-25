@@ -99,7 +99,6 @@ discovery:
     - samsung_printer
     - samsung_tv
     - axis
-    - yeelight
     - ikea_tradfri
     - sonos
     - songpal

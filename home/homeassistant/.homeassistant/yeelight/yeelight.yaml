@@ -59,3 +59,15 @@ devices:
     name: 'Lampa Łazienka'
     use_music_mode: false
     save_on_change: true
+  192.168.1.150:
+    name: 'Lampa biurko'
+    use_music_mode: false
+    save_on_change: true
+  192.168.1.71:
+    name: '192.168.1.71'
+    use_music_mode: false
+    save_on_change: true
+  192.168.1.22:
+    name: '192.168.1.22'
+    use_music_mode: false
+    save_on_change: true
