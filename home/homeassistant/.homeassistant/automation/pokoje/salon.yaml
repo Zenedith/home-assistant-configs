@@ -296,6 +296,8 @@
     - platform: state
       entity_id: media_player.chromecastaudio9772
       to: 'off'
+      for:
+        seconds: 5
   condition:
     - condition: state
       entity_id: media_player.sony_bravia_tv
