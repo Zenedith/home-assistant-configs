@@ -136,7 +136,7 @@ cards:
 
             - type: state-label
               entity: sensor.cpu_temperature
-              style: {color: white, left: 81%, top: 93%, font-size: 80px, font-weight: bold}
+              style: {color: white, left: 50%, top: 50%, font-size: 80px, font-weight: bold}
         style:
           border-radius: 20px
           border: solid 1px rgba(100,100,100,0.3)
