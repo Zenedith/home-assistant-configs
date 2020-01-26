@@ -13,20 +13,20 @@
         entity_id: fan.purifier
         speed: 'silent'
 
-- alias: 'Sleep mode for humidifier'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '23:00:00'
-  condition:
-    - condition: state
-      entity_id: fan.smartmi2
-      state: 'on'
-  action:
-    - service: fan.set_speed
-      data:
-        entity_id: fan.smartmi2
-        speed: 'silent'
+#- alias: 'Sleep mode for humidifier'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '23:00:00'
+#  condition:
+#    - condition: state
+#      entity_id: fan.smartmi2
+#      state: 'on'
+#  action:
+#    - service: fan.set_speed
+#      data:
+#        entity_id: fan.smartmi2
+#        speed: 'silent'
 
 - alias: 'Auto mode for Air purifier'
   initial_state: 'on'
