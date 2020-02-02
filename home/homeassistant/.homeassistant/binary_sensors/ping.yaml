@@ -185,6 +185,12 @@
   scan_interval: 60
 
 - platform: ping
+  name: rmmini4_online
+  host: 192.168.1.84
+  count: 2
+  scan_interval: 60
+
+- platform: ping
   name: lampa_kuchnia_1_online
   host: 192.168.1.181
   count: 2
