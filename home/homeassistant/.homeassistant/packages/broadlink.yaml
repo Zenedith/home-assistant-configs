@@ -2,8 +2,7 @@ switch:
   - platform: broadlink
     friendly_name: broadlink
     timeout: 15
-#    host: 192.168.1.163
-    host: 192.168.1.84
+    host: 192.168.1.163
     mac: '78:0F:77:D9:23:FA'
     type: rm_mini
     switches:
@@ -33,8 +32,7 @@ automation:
           entity_id: switch.listwa_salon_slot_1
       - service: broadlink.send
         data:
-#          host: "192.168.1.163"
-          host: "192.168.1.84"
+          host: "192.168.1.163"
           packet:
             - "JgCIAAgaCTwJGggaCRoJPAkZChkJPAkZChkJPAk8CRkKGQkABaAKGQk8CRoIGggbCRkJPAk8ChkJPAk8CRkLGAg9CTwJAAWgChkJPAkZChkKGQk8CRkKGQk8CRkKGQg9CTwJGQoZCQAFoAoZCD0JGQoZCBoJGgk8CTwJGgk8CTwJGQoZCD0JPAkADQU="
 
@@ -64,7 +62,6 @@ automation:
           entity_id: switch.listwa_salon_slot_1
       - service: broadlink.send
         data:
-#          host: "192.168.1.163"
-          host: "192.168.1.84"
+          host: "192.168.1.163"
           packet:
             - "JgCIAAgbCTwJGQoZCRkKGQkZCTwJGgoYChkKOwk8ChgKGQgABaELGAo7CBsJGQkaCTwJPAoYCjsJPAo7ChkKGAo7CjsKAAWgCRkKOwoZChgJGgkZChkKOwgaCRoIGwg9CTwJGQoZCQAFoAkaCTwJGQoZCRkJPAo7ChkKOwk8CD0IGgoZCD0IPQkADQU="
