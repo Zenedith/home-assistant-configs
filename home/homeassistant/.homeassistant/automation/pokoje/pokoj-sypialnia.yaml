@@ -262,7 +262,7 @@
       from: 'unavailable'
       to: 'on'
       for:
-        seconds: 15
+        seconds: 60
   action:
     - service: switch.turn_off
       data:

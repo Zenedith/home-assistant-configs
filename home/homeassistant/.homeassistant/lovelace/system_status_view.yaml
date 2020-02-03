@@ -332,6 +332,7 @@ cards:
             - binary_sensor.smartmi2_online
             - binary_sensor.dafang_online
             - binary_sensor.zen_pc_online
+            - binary_sensor.zen_pc_old_online
             - binary_sensor.drukarka_online
 
             - binary_sensor.sharp_online
