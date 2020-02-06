@@ -6,7 +6,7 @@ Config files used for my install of Home Assistant (https://home-assistant.io)
 Raspberry Pi 3 Model B Plus Rev 1.3pi
 
 ```
-Home Assistant:        0.105.0b6
+Home Assistant:        0.105.1
 Home Assistant Python: 3.7.3
 hassbian-config:       0.13.1
 Suite:                 Hassbian
