@@ -4,4 +4,5 @@
   period: 60
   log_spikes: False
   use_median: False
-  hcitool_active: False
+  active_scan: False
+  hci_interface: 0
