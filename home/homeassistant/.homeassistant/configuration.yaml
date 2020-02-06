@@ -97,7 +97,6 @@ discovery:
     - roku
     - sabnzbd
     - samsung_printer
-    - samsung_tv
     - axis
     - ikea_tradfri
     - sonos
