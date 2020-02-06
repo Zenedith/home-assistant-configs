@@ -117,7 +117,6 @@ history:
     domains:
       - automation
       - script
-      - weblink
       - input_boolean
       - input_select
       - light
@@ -288,7 +287,6 @@ recorder:
   db_url: !secret db_url
   exclude:
     domains:
-      - weblink
       - weather
       - updater
       - group
@@ -489,7 +487,6 @@ automation: !include_dir_merge_list automation
 script: !include_dir_named scripts
 sensor: !include_dir_merge_list sensors
 binary_sensor: !include_dir_merge_list binary_sensors
-weblink: !include weblink.yaml
 switch: !include_dir_merge_list switches
 cover: !include cover/shellys.yaml
 input_boolean: !include input_boolean.yaml

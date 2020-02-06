@@ -41,7 +41,6 @@
 
 - alias: 'Wyzeruj timer w łazience gdy światło zgaszone'
   initial_state: 'on'
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: light.lampa_lazienka
@@ -127,7 +126,6 @@
 
 - alias: 'Wyzeruj timer w toalecie gdy światło zgaszone'
   initial_state: 'on'
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: light.swiatlo_toaleta

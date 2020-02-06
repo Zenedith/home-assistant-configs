@@ -34,11 +34,9 @@
     - data:
         entity_id: timer.zigbee_permit_join
       service: timer.cancel
-    hide_entity: true
 
   - id: 'Disable zigbee join timer'
     alias: Disable Zigbee joining by timer
-    hide_entity: true
     initial_state: 'on'
     trigger:
     - platform: event
@@ -61,7 +59,6 @@
   - id: 'Zigbee2mqtt Log Level'
     alias: Zigbee2mqtt Log Level
     initial_state: 'on'
-    hide_entity: true
     trigger:
       - platform: state
         entity_id: input_select.zigbee2mqtt_log_level

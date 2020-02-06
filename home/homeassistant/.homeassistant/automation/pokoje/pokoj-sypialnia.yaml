@@ -132,7 +132,6 @@
 
 - alias: 'Wyzeruj timer w sypialni gdy światło zgaszone'
   initial_state: 'on'
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: light.yeelight_sypialnia
@@ -147,7 +146,6 @@
 
 - alias: 'Korki mode on'
   initial_state: 'on'
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: input_boolean.sypialnia_korki

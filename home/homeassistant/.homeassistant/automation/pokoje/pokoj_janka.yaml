@@ -102,7 +102,6 @@
 
 - alias: 'Wyzeruj timer w pokoju Janka gdy światło zgaszone'
   initial_state: 'on'
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: light.swiatlo_pokoj_janka
