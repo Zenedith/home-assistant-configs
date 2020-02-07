@@ -509,8 +509,8 @@ system_health:
 #zeroconf:   //Zeroconf/Avahi/Bonjour
 #ssdp:  //SSDP - Simple Service Discovery Protocol
 
-transmission:
-  host: 192.168.1.1
+#transmission:
+#  host: 192.168.1.1
 
 speedtestdotnet:
   server_id: 7202
@@ -574,7 +574,6 @@ device_tracker:
     interval_seconds: 60
     new_device_defaults:
       track_new_devices: false
-      hide_if_away: true
 
 #google_assistant:
 #  project_id: !secret google_assistant_project_id

@@ -1,13 +1,13 @@
 - platform: ping
   name: zen_pc_old_online
   host: 192.168.1.2
-  count: 6
+  count: 2
   scan_interval: 60
 
 - platform: ping
   name: zen_pc_online
   host: 192.168.1.90
-  count: 6
+  count: 2
   scan_interval: 60
 
 - platform: ping
