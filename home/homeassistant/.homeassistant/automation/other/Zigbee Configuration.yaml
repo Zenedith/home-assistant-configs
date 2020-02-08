@@ -1,6 +1,5 @@
   - id: 'Enable zigbee join'
     alias: Enable Zigbee joining
-    hide_entity: true
     initial_state: 'on'
     trigger:
       platform: state
