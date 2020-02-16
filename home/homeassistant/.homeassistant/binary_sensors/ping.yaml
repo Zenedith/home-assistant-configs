@@ -68,7 +68,7 @@
   name: listwa_sypialnia_online
   host: 192.168.1.37
   count: 2
-  scan_interval: 60
+  scan_interval: 30
 
 - platform: ping
   name: zmietek_switch_online
