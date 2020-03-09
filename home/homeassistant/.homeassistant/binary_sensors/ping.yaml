@@ -250,11 +250,11 @@
   count: 1
   scan_interval: 60
 
-- platform: ping
-  name: playstation_4_online
-  host: 192.168.1.128
-  count: 1
-  scan_interval: 60
+#- platform: ping
+#  name: playstation_4_online
+#  host: 192.168.1.128
+#  count: 1
+#  scan_interval: 60
 
 - platform: ping
   name: xbox_online

@@ -15,21 +15,21 @@
         service: switch.turn_off
         data:
           entity_id: switch.listwa_salon_slot_2
-    ps4_power_switch:
-      friendly_name: PS4 power switch
-      entity_id:
-        - binary_sensor.playstation_4_online
-        - switch.listwa_salon_slot_3
-      value_template: "{{ is_state('switch.listwa_salon_slot_3', 'on') }}"
-      availability_template: "{{ is_state('binary_sensor.playstation_4_online', 'off') }}"
-      turn_on:
-        service: switch.turn_on
-        data:
-          entity_id: switch.listwa_salon_slot_3
-      turn_off:
-        service: switch.turn_off
-        data:
-          entity_id: switch.listwa_salon_slot_3
+#    ps4_power_switch:
+#      friendly_name: PS4 power switch
+#      entity_id:
+#        - binary_sensor.playstation_4_online
+#        - switch.listwa_salon_slot_3
+#      value_template: "{{ is_state('switch.listwa_salon_slot_3', 'on') }}"
+#      availability_template: "{{ is_state('binary_sensor.playstation_4_online', 'off') }}"
+#      turn_on:
+#        service: switch.turn_on
+#        data:
+#          entity_id: switch.listwa_salon_slot_3
+#      turn_off:
+#        service: switch.turn_off
+#        data:
+#          entity_id: switch.listwa_salon_slot_3
     listwa_sypialnia_switch:
       friendly_name: Listwa sypialnia switch
       entity_id:

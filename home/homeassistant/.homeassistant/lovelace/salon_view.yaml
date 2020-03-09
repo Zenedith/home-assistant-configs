@@ -132,8 +132,8 @@ cards:
               - entity: switch.xbox_power_switch
                 name: Xbox One S
 #              - entity: switch.listwa_salon_slot_3
-              - entity: switch.ps4_power_switch
-                name: Playstation 4
+#              - entity: switch.ps4_power_switch
+#                name: Playstation 4
   #            - entity: switch.listwa_salon_slot_4
   #              name: Kamera
           style:
