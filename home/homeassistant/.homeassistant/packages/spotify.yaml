@@ -99,6 +99,7 @@ input_select:
 #      - 'Zene iPhone'
       - 'Sypialnia'
       - 'Salon Denon'
+      - 'unavailable'
     initial: Bravia tv
     icon: mdi:speaker-wireless
 
