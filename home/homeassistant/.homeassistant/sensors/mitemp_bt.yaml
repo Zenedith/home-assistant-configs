@@ -26,4 +26,4 @@
   batt_entities: True
 #  encryptors:
 #    'A4:C1:38:A3:70:35': '217C568CF5D22808DA20181502D84C1B'
-  report_unknown: True
+  report_unknown: False
