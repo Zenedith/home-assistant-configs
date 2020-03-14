@@ -121,6 +121,7 @@ script:
             {% elif is_state("input_select.spotify_source", "Zene iPhone") %} Zene iPhone
             {% elif is_state("input_select.spotify_source", "Sypialnia") %} Sypialnia
             {% elif is_state("input_select.spotify_source", "Salon Denon") %} Salon Denon
+            {% elif is_state("input_select.spotify_source", "unavailable") %} unavailable
             {% endif %}
       - service: media_player.play_media
         data_template:
