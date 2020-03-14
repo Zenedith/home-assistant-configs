@@ -1,10 +1,10 @@
-- platform: mitemp_bt
-  rounding: True
-  decimals: 2
-  period: 60
-  log_spikes: False
-  use_median: False
-  hcitool_active: False
+#- platform: mitemp_bt
+#  rounding: True
+#  decimals: 2
+#  period: 60
+#  log_spikes: False
+#  use_median: False
+#  hcitool_active: False
 
 #- platform: mitemp_bt
 #  rounding: True
@@ -14,3 +14,16 @@
 #  use_median: False
 #  active_scan: False
 #  hci_interface: 0
+
+- platform: mitemp_bt
+  rounding: True
+  decimals: 2
+  period: 60
+  log_spikes: False
+  use_median: False
+  active_scan: True
+  hci_interface: 0
+  batt_entities: True
+#  encryptors:
+#    'A4:C1:38:A3:70:35': '217C568CF5D22808DA20181502D84C1B'
+  report_unknown: True
