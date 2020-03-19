@@ -9,36 +9,34 @@ CREDITS:
 - Original code: https://github.com/home-assistant/home-assistant/blob/dev/homeassistant/components/media_player/firetv.py
 """
 import logging
-
+import functools
 import requests
 import voluptuous as vol
 from urllib.parse import urljoin
 
 from homeassistant.components.media_player import (
-    MediaPlayerDevice, MEDIA_PLAYER_SCHEMA, PLATFORM_SCHEMA)
+    MediaPlayerDevice, PLATFORM_SCHEMA)
 
 from homeassistant.components.media_player.const import (
     SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK,
     SUPPORT_SELECT_SOURCE, SUPPORT_TURN_OFF, SUPPORT_TURN_ON,
     SUPPORT_VOLUME_STEP, SUPPORT_VOLUME_MUTE, SUPPORT_PLAY,
     MEDIA_TYPE_MUSIC, MEDIA_TYPE_VIDEO, MEDIA_TYPE_TVSHOW, MEDIA_TYPE_CHANNEL)
-
 from homeassistant.const import (
     STATE_IDLE, STATE_OFF, STATE_PAUSED, STATE_PLAYING, STATE_UNKNOWN, STATE_ON,
     CONF_HOST, CONF_PORT, CONF_SSL, CONF_NAME, CONF_DEVICE, CONF_AUTHENTICATION,
     CONF_IP_ADDRESS)
-
 import homeassistant.util.dt as dt_util
 import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
 
 SUPPORT_XBOXONE = SUPPORT_PAUSE | \
-                  SUPPORT_TURN_ON | SUPPORT_TURN_OFF | SUPPORT_PREVIOUS_TRACK | \
-                  SUPPORT_NEXT_TRACK | SUPPORT_SELECT_SOURCE | SUPPORT_PLAY | \
-                  SUPPORT_VOLUME_STEP | SUPPORT_VOLUME_MUTE
+    SUPPORT_TURN_ON | SUPPORT_TURN_OFF | SUPPORT_PREVIOUS_TRACK | \
+    SUPPORT_NEXT_TRACK | SUPPORT_SELECT_SOURCE | SUPPORT_PLAY | \
+    SUPPORT_VOLUME_STEP | SUPPORT_VOLUME_MUTE
 
-REQUIRED_SERVER_VERSION = '0.9.6'
+REQUIRED_SERVER_VERSION = '1.1.2'
 
 DEFAULT_SSL = False
 DEFAULT_HOST = 'localhost'
@@ -317,7 +315,11 @@ class XboxOne:
 
     def poweron(self):
         try:
-            response = self.get('/device/<liveid>/poweron').json()
+            url = '/device/<liveid>/poweron'
+            params = None
+            if self._ip:
+                params = { 'addr': self._ip }
+            response = self.get(url, params=params).json()
             if not response.get('success'):
                 _LOGGER.error('Failed to poweron {0}'.format(self.liveid))
                 return None
@@ -445,10 +447,10 @@ class XboxOne:
 
         try:
             resp = self.get('/versions').json()
-            version = resp['versions']['xbox-smartglass-rest']
+            version = resp['versions']['xbox-smartglass-core']
             if version != REQUIRED_SERVER_VERSION:
                 self.is_server_correct_version = False
-                _LOGGER.error("Invalid xbox-smartglass-rest version: %s. Required: %s",
+                _LOGGER.error("Invalid xbox-smartglass-core version: %s. Required: %s",
                               version, REQUIRED_SERVER_VERSION)
         except requests.exceptions.RequestException:
             self.is_server_up = False
@@ -526,7 +528,7 @@ class XboxOneDevice(MediaPlayerDevice):
     def supported_features(self):
         """Flag media player features that are supported."""
         active_support = SUPPORT_XBOXONE
-        if self.state not in [STATE_PLAYING, STATE_PAUSED] \
+        if self.state not in [STATE_PLAYING, STATE_PAUSED]\
                 and (self._xboxone.active_app_type not in ['Application', 'App'] or self._xboxone.active_app == 'Home'):
             active_support &= ~SUPPORT_NEXT_TRACK & ~SUPPORT_PREVIOUS_TRACK
         if not self._xboxone.volume_controls:
@@ -547,7 +549,7 @@ class XboxOneDevice(MediaPlayerDevice):
         if playback_state:
             state = playback_state
         elif self._xboxone.connected or self._xboxone.available:
-            if self._xboxone.active_app_type not in ['Application', 'App'] or self._xboxone.active_app == 'Home':
+            if self._xboxone.active_app_type in ['Application', 'App'] or self._xboxone.active_app == 'Home':
                 state = STATE_ON
             else:
                 state = STATE_UNKNOWN
