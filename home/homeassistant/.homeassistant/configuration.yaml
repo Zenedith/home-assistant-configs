@@ -559,6 +559,8 @@ asuswrt:
   host: 192.168.1.1
   username: !secret device_tracker_asus_username
   password: !secret device_tracker_asus_password
+  interface: 'eth2'
+  dnsmasq: '/tmp'
   sensors:
     - upload
     - download
