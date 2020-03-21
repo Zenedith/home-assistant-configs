@@ -42,21 +42,7 @@ resources:
 #    type: module
 #  - url: /hacsfiles/simple-thermostat/simple-thermostat.js
 #    type: module
-  - url: /hacsfiles/spotify-card
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /spotify-card.js
+  - url: /hacsfiles/spotify-card/spotify-card.js
     type: module
   - url: /hacsfiles/secondaryinfo-entity-row/secondaryinfo-entity-row.js
     type: module
