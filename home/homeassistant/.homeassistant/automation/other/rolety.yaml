@@ -21,7 +21,7 @@
     - service: mqtt.publish
       data_template:
         topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
-        retain: false
+        retain: true
         payload: '60'
 
 - alias: 'Rolety close when temp high'

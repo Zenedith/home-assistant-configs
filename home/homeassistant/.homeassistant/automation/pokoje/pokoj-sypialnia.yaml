@@ -20,6 +20,9 @@
       to: 'on'
   condition:
     - condition: state
+      entity_id: binary_sensor.home_occupied
+      state: 'on'
+    - condition: state
       entity_id: switch.listwa_sypialnia_switch
       state: 'off'
     - condition: sun

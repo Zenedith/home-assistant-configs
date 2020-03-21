@@ -1,10 +1,11 @@
 sequence:
   - service: switch.turn_off
     data:
-      entity_id: group.all_switches
+      entity_id: all
   - service: light.turn_off
     data:
-      entity_id: group.all_lights
+      entity_id: all
+  - delay: 00:00:10
   - service: switch.turn_on
     data:
       entity_id: switch.listwa_salon_slot_usb
