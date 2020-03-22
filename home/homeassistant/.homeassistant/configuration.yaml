@@ -85,24 +85,6 @@ lovelace:
       type: module
     - url: /hacsfiles/secondaryinfo-entity-row/secondaryinfo-entity-row.js
       type: module
-  dashboards:
-    lovelace-all: # Needs to contain a hyphen (-)
-      mode: yaml
-      filename: all.yaml
-      title: All
-      icon: mdi:tools
-      show_in_sidebar: true
-    lovelace-default-view: # Needs to contain a hyphen (-)
-      mode: yaml
-      filename: default_view.yaml
-      title: default_view
-      icon: mdi:tools
-      show_in_sidebar: true
-#    lovelace-all:
-#      mode: yaml
-#      title: hidden
-#      show_in_sidebar: true
-#      filename: lovelace/all.yaml
 #customizer:
 #  custom_ui: local
 
