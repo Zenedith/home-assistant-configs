@@ -71,8 +71,6 @@ lovelace:
       type: module
     - url: /hacsfiles/lovelace-card-tools/card-tools.js
       type: module
-    - url: /hacsfiles/custom-header/custom-header.js
-      type: module
     - url: /hacsfiles/weather-card/weather-card.js
       type: module
     - url: /local/custom_ui/flower-card/flower-card.js?v=0.2
@@ -88,17 +86,17 @@ lovelace:
     - url: /hacsfiles/secondaryinfo-entity-row/secondaryinfo-entity-row.js
       type: module
   dashboards:
-    lovelace-generated: # Needs to contain a hyphen (-)
+    lovelace-all: # Needs to contain a hyphen (-)
       mode: yaml
       filename: all.yaml
       title: Generated
       icon: mdi:tools
       show_in_sidebar: true
-    lovelace-all:
-      mode: yaml
-      title: hidden
-      show_in_sidebar: true
-      filename: lovelace/all.yaml
+#    lovelace-all:
+#      mode: yaml
+#      title: hidden
+#      show_in_sidebar: true
+#      filename: lovelace/all.yaml
 #customizer:
 #  custom_ui: local
 

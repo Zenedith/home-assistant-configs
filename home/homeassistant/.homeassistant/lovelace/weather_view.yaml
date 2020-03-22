@@ -1,4 +1,5 @@
 title: Weather
+path: weather
 icon: mdi:weather-cloudy
 background: center / cover no-repeat url('/local/lovelace/background-15.gif') fixed
 name: System Status
