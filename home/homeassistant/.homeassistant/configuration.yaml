@@ -39,26 +39,9 @@ config:
 
 lovelace:
   mode: yaml
-#  custom_header:
-#    compact_mode: true
-#    swipe_animate: fade
-#    swipe_prevent_default: true
-#    voice_hide: true
-#    hide_help: true
-#    hide_unused: true
-#    hide_config: true
-#    hide_raw: true
-#    chevrons: false
-#    exceptions:
-#      - conditions:
-#          query_string: kiosk
-#        config:
-#          kiosk_mode: true
-#          disable_sidebar: true
-#          menu_hide: true
   resources:
-#    - url: /hacsfiles/custom-header/custom-header.js
-#      type: module
+    - url: /hacsfiles/custom-header/custom-header.js
+      type: module
     - url: /local/custom_ui/tasmota-tracker-card.js?v=0.1.1
       type: js
     - url: /local/custom_ui/dark-sky-weather-card.js?v=7.1
