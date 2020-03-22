@@ -1,7 +1,7 @@
-title: Home
+title: Home default all
 views:
   - path: default_view
-    title: Home
+    title: Default all
     badges:
       - entity: binary_sensor.home_occupied
       - entity: binary_sensor.listwa_sypiania_used
