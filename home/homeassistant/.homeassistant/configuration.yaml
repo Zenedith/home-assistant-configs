@@ -92,7 +92,7 @@ lovelace:
       title: All
       icon: mdi:tools
       show_in_sidebar: true
-    lovelace-default_view: # Needs to contain a hyphen (-)
+    lovelace-default-view: # Needs to contain a hyphen (-)
       mode: yaml
       filename: default_view.yaml
       title: default_view
