@@ -31,7 +31,19 @@ automation:
         data:
           title: 'HA Server'
           message: 'Warning - disk use percent is {{states.sensor.disk_use_percent.state}} %'
-          
+
+  - alias: Swap Use Percent Alarm
+    initial_state: 'on'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.swap_use_percent
+      above: 75
+    action:
+      - service: notify.mypushbullet
+        data:
+          title: 'HA Server'
+          message: 'Warning - swap use percent is {{states.sensor.swap_use_percent.state}} %'
+
   - alias: CPU Use Alarm
     initial_state: 'on'
     trigger:
