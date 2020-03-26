@@ -222,10 +222,11 @@ def parse_raw_message(data, aeskeyslist, report_unknown=False):
     source_mac_reversed = data[adv_index - 7:adv_index - 1]
     if xiaomi_mac_reversed != source_mac_reversed:
         return None
-    # check if RSSI is valid
+    # extract RSSI byte
     (rssi,) = struct.unpack("<b", data[msg_length - 1:msg_length])
-    if not 0 >= rssi >= -127:
-        return None
+    #strange positive RSSI workaround
+    if rssi > 0:
+        rssi = -rssi
     try:
         sensor_type = XIAOMI_TYPE_DICT[
             data[xiaomi_index + 5:xiaomi_index + 7]
@@ -386,6 +387,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
             return cntr
 
     _LOGGER.debug("Starting")
+    firstrun = True
     scanner = BLEScanner()
     hass.bus.listen("homeassistant_stop", scanner.shutdown_handler)
     scanner.start(config)
@@ -400,6 +402,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         p_mac = bytes.fromhex(reverse_mac(mac.replace(":", "")).lower())
         p_key = bytes.fromhex(config[CONF_ENCRYPTORS][mac].lower())
         aeskeys[p_mac] = p_key
+    _LOGGER.debug("%s encryptors mac:key pairs loaded.", len(aeskeys))
     lpacket.cntr = {}
     sleep(1)
 
@@ -454,6 +457,11 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
     def discover_ble_devices(config, aeskeyslist):
         """Discover Bluetooth LE devices."""
+        nonlocal firstrun
+        if firstrun:
+            firstrun = False
+            _LOGGER.debug("First run, skip parsing.")
+            return []
         _LOGGER.debug("Discovering Bluetooth LE devices")
         log_spikes = config[CONF_LOG_SPIKES]
         _LOGGER.debug("Time to analyze...")
@@ -526,6 +534,9 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
                     rssi[data["mac"]] = []
                 rssi[data["mac"]].append(int(data["rssi"]))
                 stype[data["mac"]] = data["type"]
+            else:
+                # "empty" loop high cpu usage workaround
+                sleep(0.0001)
         # for every seen device
         for mac in macs:
             # fixed entity index for every measurement type
@@ -645,6 +656,8 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         )
 
     update_ble(dt_util.utcnow())
+    # Return successful setup
+    return True
 
 
 class TemperatureSensor(Entity):
