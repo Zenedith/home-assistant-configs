@@ -81,14 +81,14 @@ cards:
               green: 90
               yellow: 45
               red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.lazienka_motion_battery
-            name: Łazienka ruch
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
+#          - type: gauge
+#            unit: '%'
+#            entity: sensor.lazienka_motion_battery
+#            name: Łazienka ruch
+#            severity:
+#              green: 90
+#              yellow: 45
+#              red: 15
           - type: gauge
             unit: '%'
             entity: sensor.korytarz_motion_battery
@@ -173,38 +173,38 @@ cards:
               green: 90
               yellow: 45
               red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.zamioculcas_zamiifolia_battery
-            name: Zamioculcas zamiifolia
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.dracaena_marginata_battery
-            name: Dracaena marginata
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.spathiphyllum_battery
-            name: Sansevieria trifasciata
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.yucca_elephantipes_battery
-            name: Yucca elephantipes
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
+#          - type: gauge
+#            unit: '%'
+#            entity: sensor.zamioculcas_zamiifolia_battery
+#            name: Zamioculcas zamiifolia
+#            severity:
+#              green: 90
+#              yellow: 45
+#              red: 15
+#          - type: gauge
+#            unit: '%'
+#            entity: sensor.dracaena_marginata_battery
+#            name: Dracaena marginata
+#            severity:
+#              green: 90
+#              yellow: 45
+#              red: 15
+#          - type: gauge
+#            unit: '%'
+#            entity: sensor.spathiphyllum_battery
+#            name: Sansevieria trifasciata
+#            severity:
+#              green: 90
+#              yellow: 45
+#              red: 15
+#          - type: gauge
+#            unit: '%'
+#            entity: sensor.yucca_elephantipes_battery
+#            name: Yucca elephantipes
+#            severity:
+#              green: 90
+#              yellow: 45
+#              red: 15
           - type: gauge
             unit: '%'
             entity: sensor.okno_janek_contact_battery
