@@ -1,0 +1,364 @@
+
+sonoff_rtv_jan:
+  icon:
+  mac: DC:4F:22:0E:4A:92
+  name: sonoff-rtv-jan
+  picture:
+  track: false
+
+rmmini_d9_23_fa:
+  icon:
+  mac: 78:0F:77:D9:23:FA
+  name: RMMINI-d9-23-fa
+  picture:
+  track: false
+
+salon_regal_switch:
+  icon:
+  mac: CC:50:E3:25:AA:20
+  name: salon_regal_switch
+  picture:
+  track: false
+
+shelly_4_sypialnia:
+  icon:
+  mac: CC:50:E3:25:AB:47
+  name: shelly_4_sypialnia
+  picture:
+  track: false
+
+lampa_salon_switch:
+  icon:
+  mac: 3C:71:BF:2B:DE:35
+  name: lampa_salon_switch
+  picture:
+  track: false
+
+shelly_1_pokoj_janka:
+  icon:
+  mac: 3C:71:BF:2C:6D:A5
+  name: shelly_1_pokoj_janka
+  picture:
+  track: false
+
+listwa_sypialnia:
+  icon:
+  mac: B4:E6:2D:24:CD:C0
+  name: listwa-sypialnia
+  picture:
+  track: false
+
+zmietek_switch:
+  icon:
+  mac: 80:7D:3A:32:74:FF
+  name: zmietek_switch
+  picture:
+  track: false
+
+android_4944093bed6ea74:
+  icon:
+  mac: 08:60:6E:9F:6D:FF
+  name: android-4944093bed6ea74
+  picture:
+  track: false
+
+zhimi_airpurifier_mc1_miio131411865:
+  icon:
+  mac: 04:CF:8C:88:9E:C7
+  name: zhimi-airpurifier-mc1_miio131411865
+  picture:
+  track: false
+
+roborock:
+  icon:
+  mac: 7C:49:EB:9E:97:08
+  name: roborock
+  picture:
+  track: false
+
+bedside:
+  icon:
+  mac: 7C:49:EB:28:4F:DA
+  name: bedside
+  picture:
+  track: false
+
+hassbian3:
+  icon:
+  mac: B8:27:EB:AC:E0:67
+  name: hassbian3
+  picture:
+  track: false
+
+yeelink_light_strip1_miio81036751:
+  icon:
+  mac: 78:11:DC:E2:D8:4E
+  name: yeelink-light-strip1_miio81036751
+  picture:
+  track: false
+
+yeelink_light_strip1_miio80485407:
+  icon:
+  mac: 78:11:DC:DA:6E:9E
+  name: yeelink-light-strip1_miio80485407
+  picture:
+  track: false
+
+listwa_rtv_salon:
+  icon:
+  mac: 84:0D:8E:5F:4F:8E
+  name: listwa-rtv-salon
+  picture:
+  track: false
+
+lampa_korytarz:
+  icon:
+  mac: 7C:49:EB:B7:0C:4A
+  name: lampa-korytarz
+  picture:
+  track: false
+
+lampa_korytarz_drzwi:
+  icon:
+  mac: 78:11:DC:AB:82:4A
+  name: lampa-korytarz-drzwi
+  picture:
+  track: false
+
+chromecast_audio_salon:
+  icon:
+  mac: 54:60:09:F7:81:66
+  name: Chromecast-Audio-Salon
+  picture:
+  track: false
+
+macbook_pro_zene:
+  icon:
+  mac: AC:BC:32:C2:AA:C7
+  name: MacBook-Pro-Zene
+  picture:
+  track: false
+
+hassbian:
+  icon:
+  mac: B8:27:EB:F9:B5:32
+  name: hassbian
+  picture:
+  track: false
+
+smartmi:
+  icon:
+  mac: 04:CF:8C:97:C4:E2
+  name: smartmi
+  picture:
+  track: false
+
+e0_1a_ea_3b_3a_5c:
+  icon:
+  mac: E0:1A:EA:3B:3A:5C
+  name: e0_1a_ea_3b_3a_5c
+  picture:
+  track: false
+
+sony_bravia:
+  icon:
+  mac: CC:98:8B:4C:4B:C4
+  name: sony-bravia
+  picture:
+  track: false
+
+shellyswitch_32b580:
+  icon:
+  mac: 84:F3:EB:32:B5:80
+  name: shellyswitch-32B580
+  picture:
+  track: false
+
+ambient_regal:
+  icon:
+  mac: CC:50:E3:25:A3:EB
+  name: ambient-regal
+  picture:
+  track: false
+
+zene_iphone:
+  icon:
+  mac: 80:B0:3D:CD:A5:EB
+  name: Zene-iPhone
+  picture:
+  track: false
+
+yeelink_light_lamp1_miapda6d:
+  icon:
+  mac: 78:11:DC:0E:DA:6D
+  name: yeelink-light-lamp1_miapDA6D
+  picture:
+  track: false
+
+shellyswitch_55a0c8:
+  icon:
+  mac: CC:50:E3:55:A0:C8
+  name: shellyswitch-55A0C8
+  picture:
+  track: false
+
+shellyswitch_5b28da:
+  icon:
+  mac: 80:7D:3A:5B:28:DA
+  name: shellyswitch-5B28DA
+  picture:
+  track: false
+
+shellyswitch_135303:
+  icon:
+  mac: CC:50:E3:13:53:03
+  name: shellyswitch-135303
+  picture:
+  track: false
+
+zen_pc:
+  icon:
+  mac: 04:D9:F5:D5:7A:94
+  name: zen-pc
+  picture:
+  track: false
+
+portal:
+  icon:
+  mac: 00:78:CD:02:F2:20
+  name: PORTAL
+  picture:
+  track: false
+
+ignition_rw:
+  icon:
+  mac: 00:78:CD:06:08:5C
+  name: IGNITION_RW
+  picture:
+  track: false
+
+ipad_kasi:
+  icon:
+  mac: 8C:FE:57:58:B9:3E
+  name: iPad-Kasi
+  picture:
+  track: false
+
+yeelink_light_color2_miap7b13:
+  icon:
+  mac: 7C:49:EB:15:7B:13
+  name: yeelink-light-color2_miap7b13
+  picture:
+  track: false
+
+yeelink_light_color2_miap5a83:
+  icon:
+  mac: 7C:49:EB:B3:5A:83
+  name: yeelink-light-color2_miap5a83
+  picture:
+  track: false
+
+yeelink_light_color2_miapbff7:
+  icon:
+  mac: 7C:49:EB:1D:BF:F7
+  name: yeelink-light-color2_miapbff7
+  picture:
+  track: false
+
+yeelight_salon_4:
+  icon:
+  mac: 04:CF:8C:7C:C5:49
+  name: yeelight-salon-4
+  picture:
+  track: false
+
+yeelight_salon_1:
+  icon:
+  mac: 04:CF:8C:76:39:97
+  name: yeelight-salon-1
+  picture:
+  track: false
+
+yeelight_salon_3:
+  icon:
+  mac: 04:CF:8C:84:A3:CE
+  name: yeelight-salon-3
+  picture:
+  track: false
+
+yeelight_salon_5:
+  icon:
+  mac: 7C:49:EB:B7:6A:3D
+  name: yeelight-salon-5
+  picture:
+  track: false
+
+yeelight_salon_2:
+  icon:
+  mac: 04:CF:8C:7B:F2:B3
+  name: yeelight-salon-2
+  picture:
+  track: false
+
+yeelink_light_ceiling3_mibt28807454:
+  icon:
+  mac: 44:23:7C:88:55:F8
+  name: yeelink-light-ceiling3_mibt28807454
+  picture:
+  track: false
+
+applewatchzene:
+  icon:
+  mac: 08:66:98:80:FC:5D
+  name: AppleWatchZene
+  picture:
+  track: false
+
+xboxonepoz:
+  icon:
+  mac: 28:16:A8:D5:13:B9
+  name: XBOXONEPOZ
+  picture:
+  track: false
+
+polpc04789zene:
+  icon:
+  mac: 8C:85:90:83:0A:1E
+  name: polpc04789zene
+  picture:
+  track: false
+
+yeelink_light_ceiling3_mibt13037844:
+  icon:
+  mac: 04:CF:8C:78:D9:F7
+  name: yeelink-light-ceiling3_mibt13037844
+  picture:
+  track: false
+
+brn30055c9a3593:
+  icon:
+  mac: 30:05:5C:9A:35:93
+  name: BRN30055C9A3593
+  picture:
+  track: false
+
+chromecast_ultra:
+  icon:
+  mac: F4:F5:D8:1F:B9:52
+  name: Chromecast-Ultra
+  picture:
+  track: false
+
+macbook_pro_zene_2:
+  icon:
+  mac: 38:C9:86:4B:2B:FB
+  name: MacBook-Pro-Zene
+  picture:
+  track: false
+
+f0_a3_5a_2c_db_79:
+  icon:
+  mac: F0:A3:5A:2C:DB:79
+  name: f0_a3_5a_2c_db_79
+  picture:
+  track: false
