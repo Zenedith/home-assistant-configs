@@ -185,8 +185,8 @@ zene_iphone:
   icon:
   mac: 80:B0:3D:CD:A5:EB
   name: Zene-iPhone
-  picture:
-  track: false
+  gravatar: zenedith@wp.pl
+  track: true
 
 yeelink_light_lamp1_miapda6d:
   icon:
@@ -359,6 +359,6 @@ macbook_pro_zene_2:
 f0_a3_5a_2c_db_79:
   icon:
   mac: F0:A3:5A:2C:DB:79
-  name: f0_a3_5a_2c_db_79
-  picture:
-  track: false
+  name: iPhone11Katarzyna
+  gravatar: katarzyna.rozala@wp.pl
+  track: true
