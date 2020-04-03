@@ -51,7 +51,7 @@
         "battery": 100,
         "voltage": 3025,
         "contact": true,
-        "linkquality": 49
+        "linkquality": 55
     },
     "0x00158d0001e55705": {
         "battery": 100,
