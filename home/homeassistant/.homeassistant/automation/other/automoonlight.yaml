@@ -17,7 +17,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '00:30:00'
+    at: '21:30:00'
   action:
     - service: automation.turn_off
       data:
