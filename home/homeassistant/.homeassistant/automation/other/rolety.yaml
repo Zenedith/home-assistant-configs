@@ -6,7 +6,10 @@
   action:
     - service: cover.open_cover
       data:
-        entity_id: cover.pokoj_janka, cover.sypialnia
+        entity_id: cover.pokoj_janka
+#    - service: cover.open_cover
+#      data:
+#        entity_id: cover.sypialnia
 
 - alias: 'Roleta w kuchni 60% o 17'
   initial_state: 'on'
