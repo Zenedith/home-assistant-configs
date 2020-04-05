@@ -2,32 +2,32 @@
     "0x00158d0001e5d112": {
         "battery": 100,
         "voltage": 3025,
-        "illuminance": 45,
-        "illuminance_lux": 45,
+        "illuminance": 80,
+        "illuminance_lux": 80,
         "linkquality": 73,
         "occupancy": false
     },
     "0x00158d000237ad9d": {
         "battery": 100,
         "voltage": 3025,
-        "illuminance": 61,
-        "illuminance_lux": 61,
-        "linkquality": 44,
+        "illuminance": 53,
+        "illuminance_lux": 53,
+        "linkquality": 49,
         "occupancy": false
     },
     "0x00158d0001bb388f": {
         "battery": 100,
         "voltage": 3015,
-        "linkquality": 15,
+        "linkquality": 18,
         "water_leak": false
     },
     "0x00158d000272fe71": {
         "battery": 74,
         "voltage": 2955,
-        "temperature": 21.7,
-        "humidity": 49.8,
-        "pressure": 998.7,
-        "linkquality": 49
+        "temperature": 22.1,
+        "humidity": 51.9,
+        "pressure": 1018.8,
+        "linkquality": 47
     },
     "0x00158d0002bfd324": {
         "contact": true,
@@ -45,7 +45,7 @@
         "battery": 100,
         "voltage": 3015,
         "contact": true,
-        "linkquality": 78
+        "linkquality": 89
     },
     "0x00158d000208e0c7": {
         "battery": 100,
@@ -56,41 +56,41 @@
     "0x00158d0001e55705": {
         "battery": 100,
         "voltage": 3005,
-        "illuminance": 147,
-        "illuminance_lux": 147,
-        "linkquality": 13,
+        "illuminance": 31,
+        "illuminance_lux": 31,
+        "linkquality": 23,
         "occupancy": false
     },
     "0x00158d00020b7b77": {
         "battery": 100,
         "voltage": 3025,
         "contact": true,
-        "linkquality": 39
+        "linkquality": 55
     },
     "0x00158d000205b35f": {
         "battery": 100,
         "voltage": 3035,
         "contact": true,
-        "linkquality": 102
+        "linkquality": 86
     },
     "0x00158d00021508b4": {
         "battery": 100,
         "voltage": 3005,
-        "linkquality": 63,
+        "linkquality": 52,
         "water_leak": false
     },
     "0x00158d00032169f8": {
         "battery": 97,
         "voltage": 2995,
         "contact": true,
-        "linkquality": 99
+        "linkquality": 105
     },
     "0x00158d00022cc215": {
         "battery": 100,
-        "voltage": 3125,
-        "temperature": 22.9,
-        "humidity": 45.5,
-        "pressure": 998.5,
-        "linkquality": 84
+        "voltage": 3095,
+        "temperature": 23.4,
+        "humidity": 49.2,
+        "pressure": 1018.7,
+        "linkquality": 63
     }
 }
