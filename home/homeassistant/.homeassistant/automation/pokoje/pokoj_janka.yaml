@@ -11,9 +11,8 @@
 - alias: 'Bedside Jan on'
   initial_state: 'on'
   trigger:
-    platform: sun
-    event: sunset
-    offset: '-00:20:00'
+    platform: time
+    at: '18:05:00'
   condition:
     - condition: state
       entity_id: light.bedside
@@ -28,19 +27,12 @@
     - service: light.turn_on
       data:
         entity_id: light.bedside
-#    - service: notify.mypushbullet
-#      data_template:
-#        title: 'Pokój janka bedside on'
-#        message: |
-#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-#          Bedside on
 
 - alias: 'Bedside Jan off'
   initial_state: 'on'
   trigger:
-    platform: sun
-    event: sunrise
-    offset: '+00:30:00'
+    platform: time
+    at: '10:00:00'
   action:
     - service: light.turn_off
       data:

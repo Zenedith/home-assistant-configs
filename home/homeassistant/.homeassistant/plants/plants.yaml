@@ -45,11 +45,11 @@ zamioculcas_zamiifolia:
 
 #ficus_benjamina:
 #  sensors:
-#    moisture: sensor.spathiphyllum_moisture
-#    battery: sensor.spathiphyllum_battery
-#    temperature: sensor.spathiphyllum_temperature
-#    conductivity: sensor.spathiphyllum_conductivity
-#    brightness: sensor.spathiphyllum_light_intensity
+#    moisture: sensor.ficus_moisture
+#    battery: sensor.ficus_battery
+#    temperature: sensor.ficus_temperature
+#    conductivity: sensor.ficus_conductivity
+#    brightness: sensor.ficus_light_intensity
 #  min_moisture: 20
 #  max_moisture: 60
 #  min_battery: 20
@@ -75,11 +75,11 @@ dracaena_marginata:
 
 #agave_univittata:
 #  sensors:
-#    moisture: sensor.spathiphyllum_moisture
-#    battery: sensor.spathiphyllum_battery
-#    temperature: sensor.spathiphyllum_temperature
-#    conductivity: sensor.spathiphyllum_conductivity
-#    brightness: sensor.spathiphyllum_light_intensity
+#    moisture: sensor.agave_moisture
+#    battery: sensor.agave_battery
+#    temperature: sensor.agave_temperature
+#    conductivity: sensor.agave_conductivity
+#    brightness: sensor.agave_light_intensity
 #  min_moisture: 7
 #  max_moisture: 50
 #  min_battery: 20
