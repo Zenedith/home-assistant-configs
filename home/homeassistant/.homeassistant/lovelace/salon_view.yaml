@@ -319,8 +319,13 @@ cards:
 
       - type: custom:card-modder
         card:
-          type: thermostat
-          entity: climate.salon
+          type: conditional
+          conditions:
+            - entity: input_boolean.ogrzewanie
+              state: 'on'
+          card:
+            type: thermostat
+            entity: climate.salon
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

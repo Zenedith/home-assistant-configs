@@ -189,7 +189,7 @@
         speed: 'silent'
 
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
-  initial_state: 'on'
+#  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
@@ -212,7 +212,7 @@
 #          Ogrzewanie przykręcone w sypialni
 
 - alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w sypialni'
-  initial_state: 'on'
+#  initial_state: 'on'
   trigger:
     platform: state
     entity_id: climate.sypialnia
@@ -230,7 +230,7 @@
         entity_id: climate.sypialnia
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
-  initial_state: 'on'
+#  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact

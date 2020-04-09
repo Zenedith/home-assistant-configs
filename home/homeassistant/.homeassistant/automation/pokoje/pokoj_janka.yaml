@@ -104,7 +104,7 @@
         entity_id: timer.pokoj_janka
 
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w pokoju Janka'
-  initial_state: 'on'
+#  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_janek_contact
@@ -127,7 +127,7 @@
 #          Ogrzewanie przykręcone w pokóju Janka
 
 - alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w pokoju Janka'
-  initial_state: 'on'
+#  initial_state: 'on'
   trigger:
     platform: state
     entity_id: climate.pokoj_janka
@@ -145,7 +145,7 @@
         entity_id: climate.pokoj_janka
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w pokoju Janka'
-  initial_state: 'on'
+#  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_janek_contact
