@@ -230,6 +230,10 @@
     platform: state
     entity_id: group.wietrzenie
     to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.ogrzewanie
+      state: 'on'
   action:
     - service: fan.turn_off
       data:
