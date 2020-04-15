@@ -541,6 +541,8 @@ system_health:
 
 speedtestdotnet:
   server_id: 7202
+  scan_interval:
+    minutes: 30
   monitored_conditions:
     - ping
 
