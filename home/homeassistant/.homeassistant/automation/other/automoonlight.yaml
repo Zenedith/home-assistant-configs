@@ -21,7 +21,7 @@
   action:
     - service: automation.turn_off
       data:
-        entity_id: automation.wlacz_swiatlo_w_korytarzu_gdy_ruch,automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch,automation.wlacz_swiatlo_w_sypialni_gdy_ruch
+        entity_id: automation.wlacz_swiatlo_w_korytarzu_gdy_ruch,automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
 
 - alias: 'korytarz ambilight off'
   initial_state: 'on'
@@ -33,7 +33,7 @@
       entity_id: light.lampa_korytarz_ambilight
     - service: automation.turn_on
       data:
-        entity_id: automation.wlacz_swiatlo_w_korytarzu_gdy_ruch,automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch,automation.wlacz_swiatlo_w_sypialni_gdy_ruch
+        entity_id: automation.wlacz_swiatlo_w_korytarzu_gdy_ruch,automation.wlacz_swiatlo_w_pokoju_janka_gdy_ruch
 
 - alias: 'Auto chillout Jas on'
   initial_state: 'on'
