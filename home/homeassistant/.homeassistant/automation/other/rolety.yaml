@@ -1,31 +1,31 @@
-- alias: 'Rolety pokoje open at 10'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '10:00:00'
-  action:
-    - service: cover.open_cover
-      data:
-        entity_id: cover.pokoj_janka
+#- alias: 'Rolety pokoje open at 10'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '10:00:00'
+#  action:
 #    - service: cover.open_cover
 #      data:
-#        entity_id: cover.sypialnia
+#        entity_id: cover.pokoj_janka
+##    - service: cover.open_cover
+##      data:
+##        entity_id: cover.sypialnia
 
-- alias: 'Roleta w kuchni 60% o 17'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '17:00:00'
-  condition:
-    - condition: state
-      entity_id: cover.kuchnia
-      state: 'open'
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
-        retain: true
-        payload: '60'
+#- alias: 'Roleta w kuchni 60% o 17'
+#  initial_state: 'on'
+#  trigger:
+#    platform: time
+#    at: '17:00:00'
+#  condition:
+#    - condition: state
+#      entity_id: cover.kuchnia
+#      state: 'open'
+#  action:
+#    - service: mqtt.publish
+#      data_template:
+#        topic: 'shellies/shellyswitch-135303/roller/0/command/pos'
+#        retain: true
+#        payload: '60'
 
 - alias: 'Rolety close when temp high'
   initial_state: 'on'
