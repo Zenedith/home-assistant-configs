@@ -51,8 +51,8 @@ cards:
         cards:
           - type: gauge
             unit: '%'
-            entity: sensor.zene_iphone_battery_level_2
-            name: Zene iphone
+            entity: sensor.iphone_battery_level_2
+            name: Kate iphone
             severity:
               green: 90
               yellow: 45
