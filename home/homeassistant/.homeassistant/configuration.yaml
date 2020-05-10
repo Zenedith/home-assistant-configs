@@ -653,3 +653,9 @@ device_tracker:
 spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
+
+synology_dsm:
+  - host: !secret synology_host
+    port: 5001
+    username: !secret synology_username
+    password: !secret synology_password
