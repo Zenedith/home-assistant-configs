@@ -3,7 +3,7 @@ include_device_information: true
 permit_join: true
 mqtt:
   base_topic: zigbee2mqtt
-  server: 'mqtt://127.0.0.1:1883'
+  server: 'mqtt://mqtt.lan:1883'
   user: zigbee2mqtt
   password: matekzene
 serial:
