@@ -1,12 +1,12 @@
 - platform: ping
   name: zen_pc_old_online
-  host: 192.168.1.2
+  host: ping synology.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: zen_pc_online
-  host: 192.168.1.90
+  host: ZEN-PC.lan
   count: 2
   scan_interval: 60
 
@@ -18,25 +18,25 @@
 
 - platform: ping
   name: ambient_regal_online
-  host: 192.168.1.112
+  host: ambient-regal.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: ambient_obraz_online
-  host: 192.168.1.237
+  host: ambient-obraz.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: salon_regal_switch_online
-  host: 192.168.1.11
+  host: salon_regal_switch.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: lampa_salon_switch_online
-  host: 192.168.1.91
+  host: lampa_salon_switch.lan
   count: 2
   scan_interval: 60
 
@@ -48,7 +48,7 @@
 
 - platform: ping
   name: shelly_1_pokoj_jan_online
-  host: 192.168.1.24
+  host: shelly_1_pokoj_janka.lan
   count: 2
   scan_interval: 60
 
@@ -60,19 +60,19 @@
 
 - platform: ping
   name: sonoff_rtv_jan_online
-  host: 192.168.1.29
+  host: sonoff-rtv-jan.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: listwa_sypialnia_online
-  host: 192.168.1.37
+  host: listwa-sypialnia.lan
   count: 2
   scan_interval: 30
 
 - platform: ping
   name: zmietek_switch_online
-  host: 192.168.1.38
+  host: zmietek_switch.lan
   count: 2
   scan_interval: 60
 
@@ -84,7 +84,7 @@
 #
 - platform: ping
   name: lampa_korytarz_drzwi_online
-  host: 192.168.1.63
+  host: lampa-korytarz-drzwi.lan
   count: 2
   scan_interval: 60
 
@@ -96,7 +96,7 @@
 
 - platform: ping
   name: chromecast_salon_online
-  host: 192.168.1.28
+  host: Chromecast-Audio-Salon.lan
   count: 2
   scan_interval: 60
 
@@ -108,109 +108,109 @@
 
 - platform: ping
   name: bedside_online
-  host: 192.168.1.115
+  host: bedside.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: listwa_salon_online
-  host: 192.168.1.31
+  host: listwa-rtv-salon.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: roleta_kuchnia_online
-  host: 192.168.1.129
+  host: roleta-kuchnia.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: roleta_sypialnia_online
-  host: 192.168.1.141
+  host: roleta-sypialnia.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: roleta_pokoj_janka_online
-  host: 192.168.1.168
+  host: roleta-pokoj-janka.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: roborock_online
-  host: 192.168.1.133
+  host: roborock.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: airpurifier_online
-  host: 192.168.1.70
+  host: airpurifier.lan
   count: 1
   scan_interval: 60
 
 - platform: ping
   name: smartmi2_online
-  host: 192.168.1.137
+  host: smartmi.lan
   count: 1
   scan_interval: 60
 
 - platform: ping
   name: shelly_4_sypialnia_online
-  host: 192.168.1.135
+  host: shelly_4_sypialnia.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: yeelight_biurko_online
-  host: 192.168.1.150
+  host: yeelight_biurko.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: shelly1_toaleta_online
-  host: 192.168.1.156
+  host: shelly1-toaleta.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: shelly_2_kuchnia_online
-  host: 192.168.1.160
+  host: shelly_2_kuchnia.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: ac_point_online
-  host: 192.168.1.110
+  host: PORTAL.lan
   count: 1
   scan_interval: 30
 
 - platform: ping
   name: rmmini_online
-  host: 192.168.1.163
+  host: RMMINI-d9-23-fa.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: lampa_kuchnia_1_online
-  host: 192.168.1.181
+  host: lampa-kuchnia-1.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: lampa_kuchnia_2_online
-  host: 192.168.1.34
+  host: lampa-kuchnia-2.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: lampa_kuchnia_3_online
-  host: 192.168.1.69
+  host: lampa-kuchnia-3.lan
   count: 2
   scan_interval: 60
 
 - platform: ping
   name: lampa_korytarz_online
-  host: 192.168.1.223
+  host: lampa-korytarz.lan
   count: 2
   scan_interval: 60
 
@@ -222,39 +222,33 @@
 
 - platform: ping
   name: yeelight_salon_1_online
-  host: 192.168.1.167
+  host: yeelight-salon-1.lan
   count: 1
   scan_interval: 60
 
 - platform: ping
   name: yeelight_salon_2_online
-  host: 192.168.1.98
+  host: yeelight-salon-2.lan
   count: 1
   scan_interval: 60
 
 - platform: ping
   name: yeelight_salon_3_online
-  host: 192.168.1.118
+  host: yeelight-salon-3.lan
   count: 1
   scan_interval: 60
 
 - platform: ping
   name: yeelight_salon_4_online
-  host: 192.168.1.139
+  host: yeelight-salon-4.lan
   count: 1
   scan_interval: 60
 
 - platform: ping
   name: yeelight_salon_5_online
-  host: 192.168.1.48
+  host: yeelight-salon-5.lan
   count: 1
   scan_interval: 60
-
-#- platform: ping
-#  name: playstation_4_online
-#  host: 192.168.1.128
-#  count: 1
-#  scan_interval: 60
 
 - platform: ping
   name: xbox_online
