@@ -550,18 +550,18 @@ mqtt:
 
 vacuum:
   - platform: xiaomi_miio
-    host: 192.168.1.133
+    host: roborock.lan
     name: zmietekv2
     token: !secret vacuum
 
 fan:
   - platform: xiaomi_miio
-    host: 192.168.1.70
+    host: airpurifier.lan
     name: purifier
     token: !secret purifier
 
   - platform: xiaomi_miio
-    host: 192.168.1.137
+    host: smartmi.lan
     name: smartmi2
     token: !secret smartmi2
 
@@ -581,7 +581,7 @@ notify:
 #        mac: '00:1A:22:11:5D:B3'
 
 asuswrt:
-  host: 192.168.1.1
+  host: router.lan
   username: !secret device_tracker_asus_username
   ssh_key: /home/homeassistant/.ssh/id_rsa
 #  password: !secret device_tracker_asus_password
@@ -597,7 +597,7 @@ asuswrt:
 
 device_tracker:
   - platform: asuswrt
-    host: 192.168.1.1
+    host: router.lan
     username: !secret device_tracker_asus_username
     password: !secret device_tracker_asus_password
     interval_seconds: 60
