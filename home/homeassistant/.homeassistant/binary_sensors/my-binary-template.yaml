@@ -25,10 +25,7 @@
       friendly_name: Listwa sypialnia used
       entity_id:
         - media_player.sypialnia_chromecast
-        - binary_sensor.zen_pc_old_online
       value_template: >-
         {{- is_state('media_player.sypialnia_chromecast','playing')
           or
-        is_state('media_player.sypialnia_chromecast','paused')
-          or
-        is_state('binary_sensor.zen_pc_old_online','on') -}}
+        is_state('media_player.sypialnia_chromecast','paused') -}}
