@@ -1,6 +1,6 @@
 - platform: ffmpeg
   name: dafang
-  input: -rtsp_transport tcp -i rtsp://192.168.1.127:8554/unicast
+  input: -rtsp_transport tcp -i rtsp://dafang.lan:8554/unicast
 #- platform: mqtt
 #  name: dafang
 #  topic: camera/dafang

@@ -2,7 +2,7 @@ switch:
   - platform: broadlink
     friendly_name: broadlink
     timeout: 15
-    host: 192.168.1.163
+    host: RMMINI-d9-23-fa.lan
     mac: '78:0F:77:D9:23:FA'
     type: rm_mini
     switches:
