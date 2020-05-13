@@ -1,6 +1,6 @@
 - platform: ping
   name: zen_pc_old_online
-  host: ping synology.lan
+  host: synology.lan
   count: 2
   scan_interval: 60
 
