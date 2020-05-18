@@ -125,6 +125,12 @@
   scan_interval: 60
 
 - platform: ping
+  name: roleta_salon_online
+  host: shellyswitch25-B94328.lan
+  count: 2
+  scan_interval: 60
+
+- platform: ping
   name: roleta_sypialnia_online
   host: roleta-sypialnia.lan
   count: 2

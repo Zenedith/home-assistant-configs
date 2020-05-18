@@ -347,6 +347,7 @@ cards:
             title: Rolety
             entities:
               - entity: cover.kuchnia
+              - entity: cover.salon
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
