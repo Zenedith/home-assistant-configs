@@ -658,3 +658,8 @@ synology_dsm:
     port: 5001
     username: !secret synology_username
     password: !secret synology_password
+    disks:
+      - sda
+      - sdb
+    volumes:
+      - volume_1
