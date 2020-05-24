@@ -18,7 +18,7 @@ homeassistant:
   customize: !include_dir_merge_named customizations
   packages: !include_dir_named packages
   external_url: !secret base_url
-  internal_url: https://hassbian.lan:8123
+  internal_url: http://hassbian.lan:8123
 
 # Show links to resources in log and frontend
 #introduction:
@@ -73,10 +73,10 @@ lovelace:
 #customizer:
 #  custom_ui: local
 
-http:
+#http:
 #  base_url: !secret base_url
-  ssl_certificate: !secret ssl_certificate_path
-  ssl_key: !secret ssl_key_path
+#  ssl_certificate: !secret ssl_certificate_path
+#  ssl_key: !secret ssl_key_path
 
 # Checks for available updates
 # Note: This component will send some information about your system to
