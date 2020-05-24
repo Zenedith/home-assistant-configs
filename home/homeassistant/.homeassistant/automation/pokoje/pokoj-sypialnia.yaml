@@ -12,32 +12,19 @@
       data:
         entity_id: switch.listwa_sypialnia_switch
 
-#- alias: 'Listwa sypialnia on'
-#  initial_state: 'on'
-#  trigger:
-#    - platform: state
-#      entity_id: light.yeelight_sypialnia
-#      to: 'on'
-#  condition:
-#    - condition: state
-#      entity_id: binary_sensor.home_occupied
-#      state: 'on'
-#    - condition: state
-#      entity_id: switch.listwa_sypialnia_switch
-#      state: 'off'
-#    - condition: sun
-#      after: sunset
-#      after_offset: '-01:00:00'
-#  action:
-#    - service: switch.turn_on
-#      data:
-#        entity_id: switch.listwa_sypialnia_switch
-#    - service: notify.mypushbullet
-#      data_template:
-#        title: 'Sypialnia listwa on'
-#        message: |
-#          {{now().strftime("%d.%m.%Y-%H:%M:%S")}}
-#          Listwa on
+- alias: 'Listwa sypialnia on'
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '07:05:00'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.home_occupied
+      state: 'on'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.listwa_sypialnia_switch
 
 #- alias: 'Listwa sypialnia (weekend) on'
 #  initial_state: 'off'
