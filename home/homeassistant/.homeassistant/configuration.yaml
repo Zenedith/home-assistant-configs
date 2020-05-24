@@ -113,7 +113,6 @@ discovery:
     - enigma2
     - frontier_silicon
     - harmony
-    - igd
     - logitech_mediaserver
     - netgear_router
     - octoprint
