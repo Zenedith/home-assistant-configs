@@ -139,14 +139,6 @@ cards:
               green: 90
               yellow: 45
               red: 15
-          - type: gauge
-            unit: '%'
-            entity: sensor.kuchnia_leak_battery
-            name: Zalanie zmywarka
-            severity:
-              green: 90
-              yellow: 45
-              red: 15
       - type: vertical-stack
         cards:
           - type: gauge
