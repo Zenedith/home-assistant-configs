@@ -29,7 +29,7 @@
   payload_on: false
   payload_off: true
   value_template: "{{ value_json.contact }}"
-  device_class: "door"
+  device_class: "window"
 
 - platform: "mqtt"
   name: "okno_sypialnia_contact"
@@ -40,7 +40,7 @@
   payload_on: false
   payload_off: true
   value_template: "{{ value_json.contact }}"
-  device_class: "door"
+  device_class: "window"
 
 - platform: "mqtt"
   name: "drzwi_lazienka_contact"
@@ -73,4 +73,4 @@
   payload_on: false
   payload_off: true
   value_template: "{{ value_json.contact }}"
-  device_class: "door"
+  device_class: "window"

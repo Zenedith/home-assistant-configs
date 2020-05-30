@@ -1,0 +1,141 @@
+- platform: "mqtt"
+  name: "kuchnia_leak_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d00021508b4"
+  availability_topic: "zigbee2mqtt/0x00158d00021508b4/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "lazienka_leak_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d0001bb388f"
+  availability_topic: "zigbee2mqtt/0x00158d0001bb388f/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "drzwi_balkonowe_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d000205b35f"
+  availability_topic: "zigbee2mqtt/0x00158d000205b35f/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "drzwi_wejsciowe_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d00020b7b77"
+  availability_topic: "zigbee2mqtt/0x00158d00020b7b77/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "okno_janek_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d000208e0c7"
+  availability_topic: "zigbee2mqtt/0x00158d000208e0c7/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "okno_sypialnia_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d0002bfd324"
+  availability_topic: "zigbee2mqtt/0x00158d0002bfd324/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "drzwi_lazienka_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d00024e42b5"
+  availability_topic: "zigbee2mqtt/0x00158d00024e42b5/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "drzwi_toaleta_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d0002b52fd0"
+  availability_topic: "zigbee2mqtt/0x00158d0002b52fd0/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "okno_kuchnia_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d00032169f8"
+  availability_topic: "zigbee2mqtt/0x00158d00032169f8/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "lazienka_motion_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d0001e0a7d3"
+  availability_topic: "zigbee2mqtt/0x00158d0001e0a7d3/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "sypialnia_motion_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d0001e55705"
+  availability_topic: "zigbee2mqtt/0x00158d0001e55705/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "janek_motion_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d0001e5d112"
+  availability_topic: "zigbee2mqtt/0x00158d0001e5d112/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "korytarz_motion_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d000237ad9d"
+  availability_topic: "zigbee2mqtt/0x00158d000237ad9d/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "korytarz_temp_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d00022cc215"
+  availability_topic: "zigbee2mqtt/0x00158d00022cc215/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "kuchnia_temp_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d000272fe71"
+  availability_topic: "zigbee2mqtt/0x00158d000272fe71/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "router_linkquality"
+  state_topic: "zigbee2mqtt/0x00124b0014aa7950"
+  availability_topic: "zigbee2mqtt/0x00124b0014aa7950/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"

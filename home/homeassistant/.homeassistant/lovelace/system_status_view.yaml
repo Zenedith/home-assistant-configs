@@ -281,21 +281,22 @@ cards:
             - entity: sensor.coordinator_version
             - entity: timer.zigbee_permit_join
             - entity: input_select.zigbee2mqtt_log_level
-            - entity: sensor.janek_motion_battery
-            - entity: sensor.okno_janek_contact_battery
-            - entity: sensor.lazienka_leak_battery
-            - entity: sensor.kuchnia_leak_battery
-            - entity: sensor.okno_kuchnia_contact_battery
-            - entity: sensor.drzwi_toaleta_contact_battery
-            - entity: sensor.drzwi_lazienka_contact_battery
-            - entity: sensor.drzwi_wejsciowe_contact_battery
-            - entity: sensor.korytarz_motion_battery
-            - entity: sensor.lazienka_motion_battery
-            - entity: sensor.okno_sypialnia_contact_battery
-            - entity: sensor.sypialnia_motion_battery
-            - entity: sensor.drzwi_balkonowe_contact_battery
-            - entity: sensor.korytarz_temp_battery
-            - entity: sensor.kuchnia_temp_battery
+            - entity: sensor.router_linkquality
+            - entity: sensor.janek_motion_linkquality
+            - entity: sensor.okno_janek_linkquality
+            - entity: sensor.lazienka_leak_linkquality
+            - entity: sensor.kuchnia_leak_linkquality
+            - entity: sensor.okno_kuchnia_linkquality
+            - entity: sensor.drzwi_toaleta_linkquality
+            - entity: sensor.drzwi_lazienka_linkquality
+            - entity: sensor.drzwi_wejsciowe_linkquality
+            - entity: sensor.korytarz_motion_linkquality
+            - entity: sensor.lazienka_motion_linkquality
+            - entity: sensor.okno_sypialnia_linkquality
+            - entity: sensor.sypialnia_motion_linkquality
+            - entity: sensor.drzwi_balkonowe_linkquality
+            - entity: sensor.korytarz_temp_linkquality
+            - entity: sensor.kuchnia_temp_linkquality
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat
