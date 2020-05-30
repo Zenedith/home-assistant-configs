@@ -2,6 +2,7 @@ homeassistant: false
 include_device_information: true
 keepalive: 60
 #permit_join: false
+permit_join: true
 mqtt:
   base_topic: zigbee2mqtt
   server: 'mqtt://mqtt.lan:1883'
