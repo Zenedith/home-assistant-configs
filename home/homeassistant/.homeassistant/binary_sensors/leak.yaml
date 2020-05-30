@@ -1,7 +1,9 @@
 - platform: "mqtt"
   name: "kuchnia_leak_water_leak"
   state_topic: "zigbee2mqtt/0x00158d00021508b4"
-  availability_topic: "zigbee2mqtt/bridge/state"
+  availability_topic: "zigbee2mqtt/0x00158d00021508b4/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
   payload_on: true
   payload_off: false
   value_template: "{{ value_json.water_leak }}"
@@ -10,7 +12,9 @@
 - platform: "mqtt"
   name: "lazienka_leak_water_leak"
   state_topic: "zigbee2mqtt/0x00158d0001bb388f"
-  availability_topic: "zigbee2mqtt/bridge/state"
+  availability_topic: "zigbee2mqtt/0x00158d0001bb388f/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
   payload_on: true
   payload_off: false
   value_template: "{{ value_json.water_leak }}"

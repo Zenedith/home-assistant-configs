@@ -1,7 +1,9 @@
 - platform: "mqtt"
   name: "lazienka_motion_occupancy"
   state_topic: "zigbee2mqtt/0x00158d0001e0a7d3"
-  availability_topic: "zigbee2mqtt/bridge/state"
+  availability_topic: "zigbee2mqtt/0x00158d0001e0a7d3/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
   payload_on: true
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
@@ -10,7 +12,9 @@
 - platform: "mqtt"
   name: "sypialnia_motion_occupancy"
   state_topic: "zigbee2mqtt/0x00158d0001e55705"
-  availability_topic: "zigbee2mqtt/bridge/state"
+  availability_topic: "zigbee2mqtt/0x00158d0001e55705/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
   payload_on: true
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
@@ -19,7 +23,9 @@
 - platform: "mqtt"
   name: "janek_motion_occupancy"
   state_topic: "zigbee2mqtt/0x00158d0001e5d112"
-  availability_topic: "zigbee2mqtt/bridge/state"
+  availability_topic: "zigbee2mqtt/0x00158d0001e5d112/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
   payload_on: true
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
@@ -28,7 +34,9 @@
 - platform: "mqtt"
   name: "korytarz_motion_occupancy"
   state_topic: "zigbee2mqtt/0x00158d000237ad9d"
-  availability_topic: "zigbee2mqtt/bridge/state"
+  availability_topic: "zigbee2mqtt/0x00158d000237ad9d/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
   payload_on: true
   payload_off: false
   value_template: "{{ value_json.occupancy }}"
