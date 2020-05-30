@@ -1,8 +1,8 @@
 homeassistant: false
 include_device_information: true
 keepalive: 60
-#permit_join: false
-permit_join: true
+permit_join: false
+#permit_join: true
 mqtt:
   base_topic: zigbee2mqtt
   server: 'mqtt://mqtt.lan:1883'
@@ -17,7 +17,7 @@ device_options:
   humidity_precision: 1
   pressure_precision: 1
 advanced:
-#  pan_id: 0x6754
+#  pan_id: 6754
 #  ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
   channel: 11
   log_level: debug
@@ -25,24 +25,24 @@ advanced:
   elapsed: true
   availability_timeout: 60
   cache_state: true
-whitelist:
-  - '0x00158d000272fe71'
-  - '0x00158d00021508b4'
-  - '0x00158d000205b35f'
-  - '0x00158d0002b52fd0'
-  - '0x00158d00024e42b5'
-  - '0x00158d0001e0a7d3'
-  - '0x00158d000237ad9d'
-  - '0x00158d000208e0c7'
-  - '0x00158d0001e5d112'
-  - '0x00158d0001e55705'
-  - '0x00158d0002bfd324'
-  - '0x00158d0001bb388f'
-  - '0x00158d00022cc215'
-  - '0x00158d00020b7b77'
-  - '0x00158d0002b0b23f'
-  - '0x00124b0014aa7950'
-  - '0x00158d00032169f8'
+#whitelist:
+#  - '0x00158d000272fe71'
+#  - '0x00158d00021508b4'
+#  - '0x00158d000205b35f'
+#  - '0x00158d0002b52fd0'
+#  - '0x00158d00024e42b5'
+#  - '0x00158d0001e0a7d3'
+#  - '0x00158d000237ad9d'
+#  - '0x00158d000208e0c7'
+#  - '0x00158d0001e5d112'
+#  - '0x00158d0001e55705'
+#  - '0x00158d0002bfd324'
+#  - '0x00158d0001bb388f'
+#  - '0x00158d00022cc215'
+#  - '0x00158d00020b7b77'
+#  - '0x00158d0002b0b23f'
+#  - '0x00124b0014aa7950'
+#  - '0x00158d00032169f8'
 
 devices:
   '0x00158d000272fe71':
