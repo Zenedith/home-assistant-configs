@@ -18,6 +18,13 @@
     platform: time
     at: '07:05:00'
   condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
     - condition: state
       entity_id: binary_sensor.home_occupied
       state: 'on'
@@ -54,7 +61,7 @@
 #          Listwa on
 
 - alias: 'Włącz światło w sypialni gdy ruch'
-#  initial_state: 'on'
+  #  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.sypialnia_motion_occupancy
@@ -176,7 +183,7 @@
         speed: 'silent'
 
 - alias: 'Przykręć ogrzewanie przy otwartym oknie w sypialni'
-#  initial_state: 'on'
+  #  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
@@ -199,7 +206,7 @@
 #          Ogrzewanie przykręcone w sypialni
 
 - alias: 'Przykręć ogrzewanie po powrocie przy nadal otwartym oknie w sypialni'
-#  initial_state: 'on'
+  #  initial_state: 'on'
   trigger:
     platform: state
     entity_id: climate.sypialnia
@@ -217,7 +224,7 @@
         entity_id: climate.sypialnia
 
 - alias: 'Przywróć ogrzewanie przy zamkniętym oknie w sypialni'
-#  initial_state: 'on'
+  #  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.okno_sypialnia_contact
