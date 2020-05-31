@@ -297,6 +297,7 @@ cards:
             - entity: sensor.drzwi_balkonowe_linkquality
             - entity: sensor.korytarz_temp_linkquality
             - entity: sensor.kuchnia_temp_linkquality
+            - entity: sensor.smoke_linkquality
         style:
           background-image: url("/local/lovelace/cardbackK.png")
           background-repeat: no-repeat

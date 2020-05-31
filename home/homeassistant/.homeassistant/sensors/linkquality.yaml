@@ -125,3 +125,11 @@
   payload_available: "online"
   payload_not_available: "offline"
   value_template: "{{ value_json.linkquality }}"
+
+- platform: "mqtt"
+  name: "smoke_linkquality"
+  state_topic: "zigbee2mqtt/0x00158d0002b0b23f"
+  availability_topic: "zigbee2mqtt/0x00158d0002b0b23f/availability"
+  payload_available: "online"
+  payload_not_available: "offline"
+  value_template: "{{ value_json.linkquality }}"
