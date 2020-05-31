@@ -103,7 +103,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.humidifier_depth
-      below: 15
+      below: 25
   condition:
     - condition: state
       entity_id: fan.smartmi2
