@@ -96,7 +96,7 @@
     - service: fan.set_speed
       data:
         entity_id: fan.smartmi2
-        speed: 'auto'
+        speed: 'high'
 
 - alias: 'Power off humidifier when no water'
   initial_state: 'on'
