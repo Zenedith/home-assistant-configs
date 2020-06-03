@@ -1,24 +1,4 @@
 - platform: ffmpeg
   name: dafang
-  input: -rtsp_transport tcp -i rtsp://dafang.lan:8554/unicast
-#- platform: mqtt
-#  name: dafang
-#  topic: camera/dafang
-#- platform: local_file
-#  name: Dafang Latest
-#  file_path: '/images/dafang/snapshot1.jpg'
-#- platform: local_file
-#  name: Dafang Snapshot 1
-#  file_path: '/images/dafang/snapshot1.jpg'
-#- platform: local_file
-#  name: Dafang Snapshot 2
-#  file_path: '/images/dafang/snapshot2.jpg'
-#- platform: local_file
-#  name: Dafang Snapshot 3
-#  file_path: '/images/dafang/snapshot3.jpg'
-#- platform: local_file
-#  name: Dafang Snapshot 4
-#  file_path: '/images/dafang/snapshot4.jpg'
-#- platform: local_file
-#  name: Dafang Snapshot 5
-#  file_path: '/images/dafang/snapshot5.jpg'
+  input: rtsp://dafang.lan:8554/unicast
+
