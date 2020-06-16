@@ -22,10 +22,7 @@
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.listwa_salon_slot_usb
-    - service: automation.turn_on
-      data:
-        entity_id: automation.bedside_jan_on, automation.ambient_on, automation.listwa_sypialnia_on, automation.listwa_sypialnia_weekend_on, automation.bedside_jan_on,automation.ambient_on
+        entity_id: switch.listwa_salon_slot_3
 #    - service: notify.mypushbullet
 #      data_template:
 #        title: Returned home, automation on

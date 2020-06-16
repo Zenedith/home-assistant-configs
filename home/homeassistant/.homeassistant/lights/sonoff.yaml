@@ -31,14 +31,14 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
-- platform: mqtt
-  name: "Swiatło TODO5"
-  state_topic: "shellies/shelly_5/POWER"
-  command_topic: "shellies/shelly_5/cmnd/POWER"
-  availability_topic: "shellies/shelly_5/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
+#- platform: mqtt
+#  name: "Swiatło TODO5"
+#  state_topic: "shellies/shelly_5/POWER"
+#  command_topic: "shellies/shelly_5/cmnd/POWER"
+#  availability_topic: "shellies/shelly_5/LWT"
+#  qos: 1
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  payload_available: "Online"
+#  payload_not_available: "Offline"
+#  retain: false

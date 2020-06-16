@@ -1,14 +1,33 @@
 sequence:
   - service: switch.turn_off
     data:
-      entity_id: all
+      entity_id:
+        - 'switch.choinka'
+        - 'switch.listwa_jan_switch'
+        - 'switch.listwa_salon_slot_1'
+        - 'switch.listwa_salon_slot_3'
+        - 'switch.listwa_salon_slot_4'
+        - 'switch.rtv_jan'
+        - 'switch.salon_regal'
+#        - 'switch.xbox_power_switch'
+        - 'switch.listwa_sypialnia_switch'
   - service: light.turn_off
     data:
-      entity_id: all
-  - delay: 00:00:10
-  - service: switch.turn_on
+      entity_id:
+        - 'light.ambient_obraz'
+        - 'light.ambient_regal'
+        - 'light.bedside'
+        - 'light.lampa_biurko'
+        - 'light.lampa_korytarz'
+        - 'light.lampa_korytarz_ambilight'
+        - 'light.lampa_korytarz_drzwi'
+        - 'light.lampa_salon'
+        - 'light.swiatlo_kuchnia_stol'
+        - 'light.swiatlo_kuchnia_szafki'
+        - 'light.swiatlo_pokoj_janka'
+        - 'light.swiatlo_sypialnia'
+        - 'light.swiatlo_toaleta'
+  - service: media_player.turn_off
     data:
-      entity_id: switch.listwa_salon_slot_usb
-  - service: automation.turn_off
-    data:
-      entity_id: automation.bedside_jan_on, automation.ambient_on, automation.listwa_sypialnia_on, automation.listwa_sypialnia_weekend_on, automation.bedside_jan_on,automation.ambient_on
+      entity_id:
+        - all
