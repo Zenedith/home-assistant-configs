@@ -8,36 +8,6 @@
       data:
         entity_id: switch.listwa_jan_switch
 
-- alias: 'Bedside Jan on'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '18:05:00'
-  condition:
-    - condition: state
-      entity_id: light.bedside
-      state: 'off'
-    - condition: state
-      entity_id: binary_sensor.bedside_online
-      state: 'on'
-    - condition: state
-      entity_id: binary_sensor.home_occupied
-      state: 'on'
-  action:
-    - service: light.turn_on
-      data:
-        entity_id: light.bedside
-
-- alias: 'Bedside Jan off'
-  initial_state: 'on'
-  trigger:
-    platform: time
-    at: '10:00:00'
-  action:
-    - service: light.turn_off
-      data:
-        entity_id: light.bedside
-
 - alias: 'Włącz światło w pokoju Janka gdy ruch'
   initial_state: 'on'
   trigger:
